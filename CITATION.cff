@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+type: dataset
+title: "World Risk Poll Data"
+abstract: >
+  Harmonised respondent-level microdata from the Lloyd's Register
+  Foundation World Risk Poll, covering four waves (2019, 2021, 2023 and
+  2025). Provided in SPSS (.sav), Apache Parquet and CSV formats, with a
+  data dictionary and methodology report for each wave.
+authors:
+  - name: "Lloyd's Register Foundation"
+repository-code: "https://github.com/lrfoundation/world_risk_poll_data"
+url: "https://wrp.lrfoundation.org.uk/"
+license: CC-BY-SA-4.0
+version: "2025"
+date-released: "2026-09-01"
+keywords:
+  - world risk poll
+  - survey data
+  - risk perception
+  - safety
+  - public opinion
+  - Lloyd's Register Foundation

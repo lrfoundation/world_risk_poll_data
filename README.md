@@ -41,10 +41,15 @@ Per folder (`YYYY` = 2019, 2021, 2023, 2025):
 
 Note on trends: country coverage differs by wave, and some questions and published indices are not comparable across waves. See any wave's `_README.txt` for details before combining waves.
 
+## Getting started
+
+- [`docs/CODEBOOK.md`](docs/CODEBOOK.md) — the 37-variable harmonised block that lets the four waves stack into one trend file, documented once with value labels and cross-wave comparability notes.
+- `examples/quickstart.*` — load one wave, stack all four into a pooled weighted trend, and trend one question that sits outside the harmonised block (climate-change threat). Same worked example in [Python](examples/quickstart.py), [R](examples/quickstart.R), [SQL / DuckDB](examples/quickstart.sql) and [Julia](examples/quickstart.jl).
+
 ## More information
 
 For more information about Lloyd’s Register Foundation, please visit lrfoundation.org.uk.
 
 To learn more about the World Risk Poll, please visit wrp.lrfoundation.org.uk.
 
-This work is licensed under CC BY-SA 4.0
+This work is licensed under [CC BY-SA 4.0](LICENSE). See [`CITATION.cff`](CITATION.cff) for how to cite this dataset.
