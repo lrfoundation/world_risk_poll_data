@@ -1,0 +1,21 @@
+# Text files: normalize to LF so contributors on different OSes don't
+# generate spurious whole-file diffs.
+*.md          text eol=lf
+*.txt         text eol=lf
+*.cff         text eol=lf
+.gitattributes text eol=lf
+
+# Data files are generated outputs, not hand-edited text: treat as binary
+# so git never rewrites line endings in them and never tries to render a
+# line-by-line diff for a multi-million-row CSV.
+*.csv         -text -diff binary
+*.sav         -text -diff binary
+*.parquet     -text -diff binary
+*.zip         -text -diff binary
+*.pdf         -text -diff binary
+
+# Keep generated data files out of GitHub's "Languages" bar and out of
+# search results by default.
+*.csv         linguist-generated=true
+*.sav         linguist-generated=true
+*.parquet     linguist-generated=true
