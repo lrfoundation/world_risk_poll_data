@@ -222,9 +222,15 @@ finding <- function(report, finding_id, fn) {
   invisible(report)
 }
 
+# Published IDs that a failing finding stands for: its own ID and its "<id>_<key>"
+# values, minus those that belong to another registered finding with a longer ID
+# (for example "X_lo" when both "X" and "X_lo" are registered).
 .ids_for <- function(report, finding_id) {
   ids <- report$published$finding_id
   hit <- ids[ids == finding_id | startsWith(ids, paste0(finding_id, "_"))]
+  registered <- vapply(report$functions, function(f) f$id, character(1))
+  longer <- registered[registered != finding_id & startsWith(registered, paste0(finding_id, "_"))]
+  for (l in longer) hit <- hit[!(hit == l | startsWith(hit, paste0(l, "_")))]
   if (length(hit)) hit else finding_id
 }
 
