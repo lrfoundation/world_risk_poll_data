@@ -22,19 +22,19 @@ report = Report(__file__)
 df = load_wave(2019, ["WPID_RANDOM", "PROJWT", "Gender", "L5"])
 
 
-@report.finding("F01")
+@report.finding("X01")
 def climate_very_serious():
     # L5: 1 = very serious threat. DK/refused stay in the base.
     return pct(df, "L5", [1])
 
 
-@report.finding("F02")
+@report.finding("C1_1")
 def climate_very_serious_by_gender():
-    # Returns one value per group -> recorded as F02_1 (men), F02_2 (women).
+    # Returns one value per group -> recorded as C1_1_1 (men), C1_1_2 (women).
     return pct(df, "L5", [1], by="Gender")
 
 
-@report.finding("F03")
+@report.finding("X02")
 def needs_gallup_item():
     # Needs a Gallup World Poll item that is not in the public release.
     # Without GALLUP_WP_PATH this is reported as GALLUP_ONLY.

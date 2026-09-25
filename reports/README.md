@@ -5,18 +5,29 @@ Focus On report from the public data in this repository. Each report has its own
 folder with Python and R scripts, the report's published figures, and a
 generated comparison of published and reproduced values.
 
-> **Status:** the shared tooling below is in place, and report folders are being
-> added. [`report_inventory.csv`](report_inventory.csv) lists every report and
-> its progress. The list is provisional until it has been checked against the
-> reports on lrfoundation.org.uk.
+## Reports
+
+All 16 World Risk Poll core and Focus On reports published up to September 2026 are
+reproduced, one folder per report inside one folder per poll wave:
+
+| Wave | Reports |
+| --- | --- |
+| [`WRP_2019/`](WRP_2019/README.md) | The 2019 full report |
+| [`WRP_2021/`](WRP_2021/README.md) | 4 core reports and 4 Focus On reports |
+| [`WRP_2023/`](WRP_2023/README.md) | 4 core reports (the *World Risk Poll 2024* reports) and 1 Focus On report |
+| [`WRP_2025/`](WRP_2025/README.md) | 2 core reports (the *World Risk Poll 2026* reports) |
+
+[`REPRODUCTION_SUMMARY.md`](REPRODUCTION_SUMMARY.md) has the result for every report,
+and [`report_inventory.csv`](report_inventory.csv) lists each report with its PDF link.
 
 ## Quick start
 
 From the repository root:
 
 ```
-pip install -r reports/requirements.txt           # pandas, pyarrow
+pip install -r reports/requirements.txt           # pandas, pyarrow, statsmodels, openpyxl
 Rscript -e 'install.packages(c("arrow", "dplyr"))' # for the R scripts
+python reports/external/fetch_external.py          # optional: non-poll data that is not committed
 
 python reports/WRP_2021/<report>/reproduce.py      # one report, Python
 Rscript reports/WRP_2021/<report>/reproduce.R      # the same report, R
@@ -35,9 +46,10 @@ per report.
 reports/
   wrp/                 shared Python helpers (import wrp)
   R/wrp.R              the same helpers in R, with the same function names
-  external/            snapshots of public non-poll data some reports use (World Bank
-                       indicators and similar), named <report_folder>__<source>.csv; each
-                       report's README gives the source, licence and download date
+  external/            public non-poll data some reports use (World Bank indicators and
+                       similar), named <report_folder>__<source>.csv, plus
+                       fetch_external.py for sources whose licence does not allow
+                       committing them; see external/README.md
   _template/           starting point for a new report folder
   WRP_2019/ … WRP_2025/
     <core|focus_on>_<name>/
@@ -66,17 +78,29 @@ data and live in `WRP_2023/`.
   `examples/quickstart.py`).
 - **Country coverage.** Coverage differs by wave (142, 121, 142 and 140
   countries). Trend findings use the country set the report states.
-- **Matching.** A finding is `MATCH` when the reproduced value rounds to the
-  published figure. It is `WITHIN_TOLERANCE` when it is within the row's
-  `tolerance` (default ±1 point, to allow for rounding in the published charts).
-  `DIFFERENT` findings stay in the table, with the reason in the report's README
-  where it is known.
+- **Regions and income groups in trends.** Several reports compare waves using each
+  country's region and income group in the latest wave, and the scripts do the same
+  where that is what reproduces the report. `GlobalRegion` is the same in every wave
+  for every country except Iran: Middle East in 2019 and 2021, Southern Asia in 2023.
+- **Rounding.** Some reports compute gaps, sums or ratios from already-rounded
+  percentages. Where that is what reproduces the report, the script does the same and
+  the report's README says so.
+- **Statuses.** Each finding in a `RESULTS.md` has one of these statuses:
+  - `MATCH`: the reproduced value rounds to the published figure.
+  - `WITHIN_TOLERANCE`: within the row's `tolerance` (default ±1 point, to allow for
+    rounding in the published charts), but not an exact match.
+  - `DIFFERENT`: further off. These stay in the table, and every one has a reason (or
+    "not explained") in the report's README. Many are errors in the report itself,
+    such as swapped chart labels or text that contradicts its own chart.
+  - `GALLUP_ONLY`: needs Gallup World Poll data that is not public (see below).
+  - `EXTERNAL_ONLY`: needs non-poll data that is not committed. Run
+    `reports/external/fetch_external.py` to download it.
 
 ## `published_figures.csv`
 
 | Column | Meaning |
 | --- | --- |
-| `finding_id` | `F01`, `F02` …; a chart or table with several values uses `F07_<key>` (for example `F07_1` for group code 1) |
+| `finding_id` | `X..` for numbers in the text, `C<chapter>_<n>_<key>` for chart values and `T<chapter>_<n>_<key>` for table values, where the key is readable (`women_very`, `high_income`, `KEN`). A function that returns several values (a dict in Python, a named vector in R) fills `<id>_<key>` |
 | `page`, `section` | Where the figure appears in the report |
 | `description` | What the figure is, in words |
 | `published_value` | The number as printed (percentages as 0–100), or a text answer for rankings |
