@@ -1,0 +1,723 @@
+finding_id,page,section,description,published_value,unit,tolerance,source,requires_gallup,gallup_items,note
+X01,5,Executive summary,Respondents in the 2021 World Risk Poll,125911,count,0,text,N,,
+X02,"5, 10, 16, 27",Executive summary,Countries and territories surveyed,121,count,0,text,N,,
+X03_yes,"6, 11",Chapter 1,Anything you could do to protect yourself or your family from a disaster (global): % yes,52,pct,,text,N,,
+X03_no,"6, 11",Chapter 1,Anything you could do to protect yourself or your family from a disaster (global): % no,36,pct,,text,N,,
+X03_depends,"6, 11",Chapter 1,Anything you could do to protect yourself or your family from a disaster (global): % it depends,6,pct,,text,N,,
+X03_dk,"6, 11",Chapter 1,Anything you could do to protect yourself or your family from a disaster (global): % don't know,6,pct,,text,N,,Don't know includes refused (0.2%).
+C1_1_yes,12,Chart 1.1,"Could protect yourself or family from a disaster, global: % yes",52,pct,,chart,N,,
+C1_1_no,12,Chart 1.1,"Could protect yourself or family from a disaster, global: % no",36,pct,,chart,N,,
+C1_1_depends,12,Chart 1.1,"Could protect yourself or family from a disaster, global: % it depends",6,pct,,chart,N,,
+C1_1_dk,12,Chart 1.1,"Could protect yourself or family from a disaster, global: % don't know",6,pct,,chart,N,,Don't know includes refused (0.2%).
+X04_high_income,12,Chapter 1,Could protect yourself or family from a disaster: % yes by country income: high-income countries,61,pct,,text,N,,Middle income is lower-middle and upper-middle combined.
+X04_middle_income,12,Chapter 1,Could protect yourself or family from a disaster: % yes by country income: middle-income countries,51,pct,,text,N,,Middle income is lower-middle and upper-middle combined.
+X04_low_income,12,Chapter 1,Could protect yourself or family from a disaster: % yes by country income: low-income countries,40,pct,,text,N,,Middle income is lower-middle and upper-middle combined.
+X05,12,Chapter 1,"Could protect yourself or family: % yes, Southern Africa ('only a quarter')",25,pct,,text,N,,
+X06,12,Chapter 1,"Could protect yourself or family: % yes, Southeastern Asia",70,pct,,text,N,,
+C1_2_northern_america,13,Chart 1.2,Could protect yourself or family from a disaster: % yes: Northern America,74,pct,,chart,N,,
+C1_2_southeastern_asia,13,Chart 1.2,Could protect yourself or family from a disaster: % yes: Southeastern Asia,70,pct,,chart,N,,
+C1_2_australia_nz,13,Chart 1.2,Could protect yourself or family from a disaster: % yes: Australia & New Zealand,64,pct,,chart,N,,
+C1_2_southern_europe,13,Chart 1.2,Could protect yourself or family from a disaster: % yes: Southern Europe,54,pct,,chart,N,,
+C1_2_eastern_europe,13,Chart 1.2,Could protect yourself or family from a disaster: % yes: Eastern Europe,54,pct,,chart,N,,
+C1_2_eastern_asia,13,Chart 1.2,Could protect yourself or family from a disaster: % yes: Eastern Asia,51,pct,,chart,N,,
+C1_2_northern_western_europe,13,Chart 1.2,Could protect yourself or family from a disaster: % yes: Northern/Western Europe,51,pct,,chart,N,,
+C1_2_southern_asia,13,Chart 1.2,Could protect yourself or family from a disaster: % yes: Southern Asia,51,pct,,chart,N,,
+C1_2_latin_america,13,Chart 1.2,Could protect yourself or family from a disaster: % yes: Latin America & Caribbean,50,pct,,chart,N,,
+C1_2_middle_east,13,Chart 1.2,Could protect yourself or family from a disaster: % yes: Middle East,46,pct,,chart,N,,
+C1_2_eastern_africa,13,Chart 1.2,Could protect yourself or family from a disaster: % yes: Eastern Africa,43,pct,,chart,N,,
+C1_2_central_asia,13,Chart 1.2,Could protect yourself or family from a disaster: % yes: Central Asia,42,pct,,chart,N,,
+C1_2_central_western_africa,13,Chart 1.2,Could protect yourself or family from a disaster: % yes: Central/Western Africa,34,pct,,chart,N,,
+C1_2_northern_africa,13,Chart 1.2,Could protect yourself or family from a disaster: % yes: Northern Africa,31,pct,,chart,N,,
+C1_2_southern_africa,13,Chart 1.2,Could protect yourself or family from a disaster: % yes: Southern Africa,25,pct,,chart,N,,
+X07,"6, 13",Chapter 1,Could cover basic needs for less than a month if all income was lost (global),34,pct,,text,N,,
+X08,"6, 13",Chapter 1,Could cover basic needs for less than a week if all income was lost (global),12,pct,,text,N,,
+X09_southern_asia,13,Chapter 1,Could cover basic needs for less than a month: Southern Asia,57,pct,,text,N,,
+X09_northern_africa,13,Chapter 1,Could cover basic needs for less than a month: Northern Africa,49,pct,,text,N,,49.6% in the data. The two rounded chart segments (24 + 25) sum to 49.
+C1_3_northern_western_europe_week_to_month,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one week to less than a month, Northern/Western Europe",11,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_northern_western_europe_month_to_3,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one month to three months, Northern/Western Europe",33,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_northern_western_europe_4_plus,14,Chart 1.3,"Ability to cover basic needs if income was lost: % four months or more, Northern/Western Europe",48,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_southern_europe_lt_week,14,Chart 1.3,"Ability to cover basic needs if income was lost: % less than a week, Southern Europe",5,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_southern_europe_week_to_month,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one week to less than a month, Southern Europe",11,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_southern_europe_month_to_3,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one month to three months, Southern Europe",36,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_southern_europe_4_plus,14,Chart 1.3,"Ability to cover basic needs if income was lost: % four months or more, Southern Europe",44,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_australia_nz_week_to_month,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one week to less than a month, Australia & New Zealand",14,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_australia_nz_month_to_3,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one month to three months, Australia & New Zealand",30,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_australia_nz_4_plus,14,Chart 1.3,"Ability to cover basic needs if income was lost: % four months or more, Australia & New Zealand",51,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_northern_america_week_to_month,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one week to less than a month, Northern America",14,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_northern_america_month_to_3,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one month to three months, Northern America",30,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_northern_america_4_plus,14,Chart 1.3,"Ability to cover basic needs if income was lost: % four months or more, Northern America",51,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_eastern_asia_lt_week,14,Chart 1.3,"Ability to cover basic needs if income was lost: % less than a week, Eastern Asia",5,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_eastern_asia_week_to_month,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one week to less than a month, Eastern Asia",16,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_eastern_asia_month_to_3,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one month to three months, Eastern Asia",29,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_eastern_asia_4_plus,14,Chart 1.3,"Ability to cover basic needs if income was lost: % four months or more, Eastern Asia",36,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_eastern_asia_dk,14,Chart 1.3,"Ability to cover basic needs if income was lost: % don't know, Eastern Asia",14,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_eastern_africa_lt_week,14,Chart 1.3,"Ability to cover basic needs if income was lost: % less than a week, Eastern Africa",10,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_eastern_africa_week_to_month,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one week to less than a month, Eastern Africa",19,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_eastern_africa_month_to_3,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one month to three months, Eastern Africa",23,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_eastern_africa_4_plus,14,Chart 1.3,"Ability to cover basic needs if income was lost: % four months or more, Eastern Africa",35,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_eastern_africa_dk,14,Chart 1.3,"Ability to cover basic needs if income was lost: % don't know, Eastern Africa",12,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_southeastern_asia_lt_week,14,Chart 1.3,"Ability to cover basic needs if income was lost: % less than a week, Southeastern Asia",7,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_southeastern_asia_week_to_month,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one week to less than a month, Southeastern Asia",23,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_southeastern_asia_month_to_3,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one month to three months, Southeastern Asia",33,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_southeastern_asia_4_plus,14,Chart 1.3,"Ability to cover basic needs if income was lost: % four months or more, Southeastern Asia",28,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_southeastern_asia_dk,14,Chart 1.3,"Ability to cover basic needs if income was lost: % don't know, Southeastern Asia",10,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_central_asia_lt_week,14,Chart 1.3,"Ability to cover basic needs if income was lost: % less than a week, Central Asia",8,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_central_asia_week_to_month,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one week to less than a month, Central Asia",22,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_central_asia_month_to_3,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one month to three months, Central Asia",27,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_central_asia_4_plus,14,Chart 1.3,"Ability to cover basic needs if income was lost: % four months or more, Central Asia",20,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_central_asia_dk,14,Chart 1.3,"Ability to cover basic needs if income was lost: % don't know, Central Asia",22,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_eastern_europe_lt_week,14,Chart 1.3,"Ability to cover basic needs if income was lost: % less than a week, Eastern Europe",9,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_eastern_europe_week_to_month,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one week to less than a month, Eastern Europe",22,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_eastern_europe_month_to_3,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one month to three months, Eastern Europe",36,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_eastern_europe_4_plus,14,Chart 1.3,"Ability to cover basic needs if income was lost: % four months or more, Eastern Europe",26,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_eastern_europe_dk,14,Chart 1.3,"Ability to cover basic needs if income was lost: % don't know, Eastern Europe",7,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_central_western_africa_lt_week,14,Chart 1.3,"Ability to cover basic needs if income was lost: % less than a week, Central/Western Africa",15,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_central_western_africa_week_to_month,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one week to less than a month, Central/Western Africa",17,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_central_western_africa_month_to_3,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one month to three months, Central/Western Africa",23,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_central_western_africa_4_plus,14,Chart 1.3,"Ability to cover basic needs if income was lost: % four months or more, Central/Western Africa",28,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_central_western_africa_dk,14,Chart 1.3,"Ability to cover basic needs if income was lost: % don't know, Central/Western Africa",17,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_southern_africa_lt_week,14,Chart 1.3,"Ability to cover basic needs if income was lost: % less than a week, Southern Africa",12,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_southern_africa_week_to_month,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one week to less than a month, Southern Africa",21,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_southern_africa_month_to_3,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one month to three months, Southern Africa",26,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_southern_africa_4_plus,14,Chart 1.3,"Ability to cover basic needs if income was lost: % four months or more, Southern Africa",28,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_southern_africa_dk,14,Chart 1.3,"Ability to cover basic needs if income was lost: % don't know, Southern Africa",12,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_latin_america_lt_week,14,Chart 1.3,"Ability to cover basic needs if income was lost: % less than a week, Latin America & Caribbean",9,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_latin_america_week_to_month,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one week to less than a month, Latin America & Caribbean",27,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_latin_america_month_to_3,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one month to three months, Latin America & Caribbean",37,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_latin_america_4_plus,14,Chart 1.3,"Ability to cover basic needs if income was lost: % four months or more, Latin America & Caribbean",21,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_latin_america_dk,14,Chart 1.3,"Ability to cover basic needs if income was lost: % don't know, Latin America & Caribbean",6,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_middle_east_lt_week,14,Chart 1.3,"Ability to cover basic needs if income was lost: % less than a week, Middle East",12,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_middle_east_week_to_month,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one week to less than a month, Middle East",26,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_middle_east_month_to_3,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one month to three months, Middle East",33,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_middle_east_4_plus,14,Chart 1.3,"Ability to cover basic needs if income was lost: % four months or more, Middle East",24,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_middle_east_dk,14,Chart 1.3,"Ability to cover basic needs if income was lost: % don't know, Middle East",5,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_northern_africa_lt_week,14,Chart 1.3,"Ability to cover basic needs if income was lost: % less than a week, Northern Africa",24,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_northern_africa_week_to_month,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one week to less than a month, Northern Africa",25,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_northern_africa_month_to_3,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one month to three months, Northern Africa",22,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_northern_africa_4_plus,14,Chart 1.3,"Ability to cover basic needs if income was lost: % four months or more, Northern Africa",11,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_northern_africa_dk,14,Chart 1.3,"Ability to cover basic needs if income was lost: % don't know, Northern Africa",17,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_southern_asia_lt_week,14,Chart 1.3,"Ability to cover basic needs if income was lost: % less than a week, Southern Asia",26,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_southern_asia_week_to_month,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one week to less than a month, Southern Asia",31,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_southern_asia_month_to_3,14,Chart 1.3,"Ability to cover basic needs if income was lost: % one month to three months, Southern Asia",25,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_southern_asia_4_plus,14,Chart 1.3,"Ability to cover basic needs if income was lost: % four months or more, Southern Asia",8,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+C1_3_southern_asia_dk,14,Chart 1.3,"Ability to cover basic needs if income was lost: % don't know, Southern Asia",9,pct,,chart,N,,Values under 5% are not displayed. 'Don't know' includes refused and 'a month or more' with no follow-up answer.
+X10_low_income,"6, 14",Chapter 1,Have access to the internet: low-income countries,27,pct,,text,Y,WP16056,
+X10_lower_middle,"6, 14",Chapter 1,Have access to the internet: lower-middle-income countries,43,pct,,text,Y,WP16056,
+X10_upper_middle,"6, 14",Chapter 1,Have access to the internet: upper-middle-income countries,81,pct,,text,Y,WP16056,
+X10_high_income,"6, 14",Chapter 1,Have access to the internet: high-income countries,91,pct,,text,Y,WP16056,
+C1_4_low_income_internet,15,Chart 1.4,"% have internet access, low-income countries",27,pct,,chart,Y,WP16056,
+C1_4_low_income_mobile,15,Chart 1.4,"% have a mobile phone, low-income countries",67,pct,,chart,Y,WP17626,
+C1_4_lower_middle_internet,15,Chart 1.4,"% have internet access, lower-middle-income countries",43,pct,,chart,Y,WP16056,
+C1_4_lower_middle_mobile,15,Chart 1.4,"% have a mobile phone, lower-middle-income countries",76,pct,,chart,Y,WP17626,
+C1_4_upper_middle_internet,15,Chart 1.4,"% have internet access, upper-middle-income countries",81,pct,,chart,Y,WP16056,
+C1_4_upper_middle_mobile,15,Chart 1.4,"% have a mobile phone, upper-middle-income countries",97,pct,,chart,Y,WP17626,
+C1_4_high_income_internet,15,Chart 1.4,"% have internet access, high-income countries",91,pct,,chart,Y,WP16056,
+C1_4_high_income_mobile,15,Chart 1.4,"% have a mobile phone, high-income countries",96,pct,,chart,Y,WP17626,
+C1_5_low_income_internet,16,Chart 1.5,"Could protect yourself or family: % yes among those with internet access, low-income countries",52,pct,,chart,Y,WP16056,
+C1_5_low_income_no_internet,16,Chart 1.5,"Could protect yourself or family: % yes among those without internet access, low-income countries",36,pct,,chart,Y,WP16056,
+C1_5_lower_middle_internet,16,Chart 1.5,"Could protect yourself or family: % yes among those with internet access, lower-middle-income countries",61,pct,,chart,Y,WP16056,
+C1_5_lower_middle_no_internet,16,Chart 1.5,"Could protect yourself or family: % yes among those without internet access, lower-middle-income countries",47,pct,,chart,Y,WP16056,
+C1_5_upper_middle_internet,16,Chart 1.5,"Could protect yourself or family: % yes among those with internet access, upper-middle-income countries",50,pct,,chart,Y,WP16056,
+C1_5_upper_middle_no_internet,16,Chart 1.5,"Could protect yourself or family: % yes among those without internet access, upper-middle-income countries",41,pct,,chart,Y,WP16056,
+C1_5_high_income_internet,16,Chart 1.5,"Could protect yourself or family: % yes among those with internet access, high-income countries",62,pct,,chart,Y,WP16056,
+C1_5_high_income_no_internet,16,Chart 1.5,"Could protect yourself or family: % yes among those without internet access, high-income countries",45,pct,,chart,Y,WP16056,
+X11,"6, 16",Chapter 1,Countries where a majority have a household disaster plan,14,count,0,text,N,,
+X12,16,Chapter 1,"Of those countries, number in Southeastern Asia",7,count,0,text,N,,
+X13,16,Chapter 1,Countries where at least 70% have a household disaster plan,3,count,0,text,N,,
+C1_6_PHL,17,Chart 1.6,"Have a disaster plan all household members know about: % yes, PHL",86,pct,,chart,N,,
+C1_6_KHM,17,Chart 1.6,"Have a disaster plan all household members know about: % yes, KHM",81,pct,,chart,N,,
+C1_6_VNM,17,Chart 1.6,"Have a disaster plan all household members know about: % yes, VNM",70,pct,,chart,N,,
+C1_6_AUT,17,Chart 1.6,"Have a disaster plan all household members know about: % yes, AUT",64,pct,,chart,N,,
+C1_6_DEU,17,Chart 1.6,"Have a disaster plan all household members know about: % yes, DEU",61,pct,,chart,N,,
+C1_6_LAO,17,Chart 1.6,"Have a disaster plan all household members know about: % yes, LAO",59,pct,,chart,N,,
+C1_6_USA,17,Chart 1.6,"Have a disaster plan all household members know about: % yes, USA",57,pct,,chart,N,,
+C1_6_IDN,17,Chart 1.6,"Have a disaster plan all household members know about: % yes, IDN",56,pct,,chart,N,,
+C1_6_MOZ,17,Chart 1.6,"Have a disaster plan all household members know about: % yes, MOZ",55,pct,,chart,N,,
+C1_6_THA,17,Chart 1.6,"Have a disaster plan all household members know about: % yes, THA",55,pct,,chart,N,,
+C1_6_NIC,17,Chart 1.6,"Have a disaster plan all household members know about: % yes, NIC",53,pct,,chart,N,,
+C1_6_NZL,17,Chart 1.6,"Have a disaster plan all household members know about: % yes, NZL",52,pct,,chart,N,,
+C1_6_CHE,17,Chart 1.6,"Have a disaster plan all household members know about: % yes, CHE",52,pct,,chart,N,,
+C1_6_MYS,17,Chart 1.6,"Have a disaster plan all household members know about: % yes, MYS",52,pct,,chart,N,,
+X14_a_lot,"6, 19",Chapter 2,Neighbours care about you and your wellbeing (global): % a lot,23,pct,,text,N,,
+X14_somewhat,"6, 19",Chapter 2,Neighbours care about you and your wellbeing (global): % somewhat,43,pct,,text,N,,
+X14_not_at_all,"6, 19",Chapter 2,Neighbours care about you and your wellbeing (global): % not at all,32,pct,,text,N,,
+X15_low_income,6,Chapter 2,Neighbours care about you 'a lot': low-income countries,35,pct,,text,N,,
+X15_high_income,6,Chapter 2,Neighbours care about you 'a lot': high-income countries,20,pct,,text,N,,
+C2_1_low_income,20,Chart 2.1,Neighbours care about you 'a lot': low-income countries,35,pct,,chart,N,,
+C2_1_lower_middle,20,Chart 2.1,Neighbours care about you 'a lot': lower-middle-income countries,28,pct,,chart,N,,
+C2_1_upper_middle,20,Chart 2.1,Neighbours care about you 'a lot': upper-middle-income countries,19,pct,,chart,N,,
+C2_1_high_income,20,Chart 2.1,Neighbours care about you 'a lot': high-income countries,20,pct,,chart,N,,
+C2_1_rural,20,Chart 2.1,Neighbours care about you 'a lot': rural areas,29,pct,,chart,N,,
+C2_1_small_town,20,Chart 2.1,Neighbours care about you 'a lot': small towns,24,pct,,chart,N,,
+C2_1_large_city,20,Chart 2.1,Neighbours care about you 'a lot': large cities/suburbs,18,pct,,chart,N,,Large cities and suburbs (Urbanicity 3 and 6) give 19.0%; large cities alone give 17.6%.
+X16_low_income,20,Chapter 2,Experienced a disaster in the past five years: low-income countries,42,pct,,text,N,,
+X16_upper_middle,20,Chapter 2,Experienced a disaster in the past five years: upper-middle-income countries,25,pct,,text,N,,
+X16_high_income,20,Chapter 2,Experienced a disaster in the past five years: high-income countries,23,pct,,text,N,,
+X17_latin_america,20,Chapter 2,Helped a stranger in the past month: Latin America & Caribbean,75,pct,,text,Y,WP110,
+X17_northern_america,20,Chapter 2,Helped a stranger in the past month: Northern America,72,pct,,text,Y,WP110,
+X17_northern_western_europe,20,Chapter 2,Helped a stranger in the past month: Northern/Western Europe,47,pct,,text,Y,WP110,
+X17_eastern_asia,20,Chapter 2,Helped a stranger in the past month: Eastern Asia,31,pct,,text,Y,WP110,
+C2_2_latin_america,21,Chart 2.2,Helped a stranger in the past month: % yes: Latin America & Caribbean,75,pct,,chart,Y,WP110,Not asked in China.
+C2_2_northern_america,21,Chart 2.2,Helped a stranger in the past month: % yes: Northern America,72,pct,,chart,Y,WP110,Not asked in China.
+C2_2_central_western_africa,21,Chart 2.2,Helped a stranger in the past month: % yes: Central/Western Africa,70,pct,,chart,Y,WP110,Not asked in China.
+C2_2_eastern_europe,21,Chart 2.2,Helped a stranger in the past month: % yes: Eastern Europe,70,pct,,chart,Y,WP110,Not asked in China.
+C2_2_middle_east,21,Chart 2.2,Helped a stranger in the past month: % yes: Middle East,67,pct,,chart,Y,WP110,Not asked in China.
+C2_2_southern_africa,21,Chart 2.2,Helped a stranger in the past month: % yes: Southern Africa,64,pct,,chart,Y,WP110,Not asked in China.
+C2_2_eastern_africa,21,Chart 2.2,Helped a stranger in the past month: % yes: Eastern Africa,64,pct,,chart,Y,WP110,Not asked in China.
+C2_2_australia_nz,21,Chart 2.2,Helped a stranger in the past month: % yes: Australia & New Zealand,64,pct,,chart,Y,WP110,Not asked in China.
+C2_2_southeastern_asia,21,Chart 2.2,Helped a stranger in the past month: % yes: Southeastern Asia,58,pct,,chart,Y,WP110,Not asked in China.
+C2_2_southern_asia,21,Chart 2.2,Helped a stranger in the past month: % yes: Southern Asia,57,pct,,chart,Y,WP110,Not asked in China.
+C2_2_northern_africa,21,Chart 2.2,Helped a stranger in the past month: % yes: Northern Africa,57,pct,,chart,Y,WP110,Not asked in China.
+C2_2_central_asia,21,Chart 2.2,Helped a stranger in the past month: % yes: Central Asia,55,pct,,chart,Y,WP110,Not asked in China.
+C2_2_southern_europe,21,Chart 2.2,Helped a stranger in the past month: % yes: Southern Europe,51,pct,,chart,Y,WP110,Not asked in China.
+C2_2_northern_western_europe,21,Chart 2.2,Helped a stranger in the past month: % yes: Northern/Western Europe,47,pct,,chart,Y,WP110,Not asked in China.
+C2_2_eastern_asia,21,Chart 2.2,Helped a stranger in the past month: % yes: Eastern Asia,31,pct,,chart,Y,WP110,Not asked in China.
+C2_3_median_helped,22,Chart 2.3,Median across countries: % helped a stranger in the past month,62,pct,,chart,Y,WP110,
+C2_3_median_neighbours,22,Chart 2.3,Median across countries: % neighbours care 'a lot',20,pct,,chart,N,,Median of the country percentages (all 121 countries).
+X18,22,Chapter 2,Japan: % helped a stranger in the past month,20,pct,,text,Y,WP110,
+X19,22,Chapter 2,Japan: % neighbours care about them 'a lot',5,pct,,text,N,,
+T2_1_healthcare_VEN,23,Table 2.1,"% dissatisfied with availability of quality healthcare, VEN",87,pct,,table,Y,WP97,
+T2_1_healthcare_LBN,23,Table 2.1,"% dissatisfied with availability of quality healthcare, LBN",77,pct,,table,Y,WP97,
+T2_1_healthcare_GAB,23,Table 2.1,"% dissatisfied with availability of quality healthcare, GAB",76,pct,,table,Y,WP97,
+T2_1_healthcare_AFG,23,Table 2.1,"% dissatisfied with availability of quality healthcare, AFG",74,pct,,table,Y,WP97,
+T2_1_healthcare_ZMB,23,Table 2.1,"% dissatisfied with availability of quality healthcare, ZMB",69,pct,,table,Y,WP97,
+T2_1_healthcare_TGO,23,Table 2.1,"% dissatisfied with availability of quality healthcare, TGO",69,pct,,table,Y,WP97,
+T2_1_healthcare_MAR,23,Table 2.1,"% dissatisfied with availability of quality healthcare, MAR",69,pct,,table,Y,WP97,
+T2_1_healthcare_MNG,23,Table 2.1,"% dissatisfied with availability of quality healthcare, MNG",68,pct,,table,Y,WP97,
+T2_1_healthcare_RUS,23,Table 2.1,"% dissatisfied with availability of quality healthcare, RUS",67,pct,,table,Y,WP97,
+T2_1_healthcare_MLI,23,Table 2.1,"% dissatisfied with availability of quality healthcare, MLI",67,pct,,table,Y,WP97,
+T2_1_education_VEN,23,Table 2.1,"% dissatisfied with education system or schools, VEN",78,pct,,table,Y,WP93,
+T2_1_education_MLI,23,Table 2.1,"% dissatisfied with education system or schools, MLI",74,pct,,table,Y,WP93,
+T2_1_education_LBN,23,Table 2.1,"% dissatisfied with education system or schools, LBN",68,pct,,table,Y,WP93,
+T2_1_education_AFG,23,Table 2.1,"% dissatisfied with education system or schools, AFG",65,pct,,table,Y,WP93,
+T2_1_education_GAB,23,Table 2.1,"% dissatisfied with education system or schools, GAB",65,pct,,table,Y,WP93,
+T2_1_education_ZWE,23,Table 2.1,"% dissatisfied with education system or schools, ZWE",65,pct,,table,Y,WP93,
+T2_1_education_UGA,23,Table 2.1,"% dissatisfied with education system or schools, UGA",63,pct,,table,Y,WP93,
+T2_1_education_IRQ,23,Table 2.1,"% dissatisfied with education system or schools, IRQ",62,pct,,table,Y,WP93,
+T2_1_education_MNG,23,Table 2.1,"% dissatisfied with education system or schools, MNG",62,pct,,table,Y,WP93,
+T2_1_education_GIN,23,Table 2.1,"% dissatisfied with education system or schools, GIN",60,pct,,table,Y,WP93,
+T2_1_roads_VEN,23,Table 2.1,"% dissatisfied with roads and highways, VEN",79,pct,,table,Y,WP92,
+T2_1_roads_MNG,23,Table 2.1,"% dissatisfied with roads and highways, MNG",76,pct,,table,Y,WP92,
+T2_1_roads_SLE,23,Table 2.1,"% dissatisfied with roads and highways, SLE",75,pct,,table,Y,WP92,
+T2_1_roads_GAB,23,Table 2.1,"% dissatisfied with roads and highways, GAB",75,pct,,table,Y,WP92,
+T2_1_roads_TGO,23,Table 2.1,"% dissatisfied with roads and highways, TGO",75,pct,,table,Y,WP92,
+T2_1_roads_GIN,23,Table 2.1,"% dissatisfied with roads and highways, GIN",74,pct,,table,Y,WP92,
+T2_1_roads_ZMB,23,Table 2.1,"% dissatisfied with roads and highways, ZMB",74,pct,,table,Y,WP92,
+T2_1_roads_LBN,23,Table 2.1,"% dissatisfied with roads and highways, LBN",74,pct,,table,Y,WP92,
+T2_1_roads_MLI,23,Table 2.1,"% dissatisfied with roads and highways, MLI",73,pct,,table,Y,WP92,
+T2_1_roads_ZWE,23,Table 2.1,"% dissatisfied with roads and highways, ZWE",70,pct,,table,Y,WP92,
+X20,24,Chapter 2,Experienced discrimination for one or more of five characteristics (global),21,pct,,text,N,,"Respondents in the three countries not asked (China, Saudi Arabia, United Arab Emirates) count as 'no'."
+X21_low,24,Chapter 2,"Discrimination by nationality/ethnicity, religion, sex or skin colour ('between 10% and 12%'): lowest of the four",10,pct,,text,N,,
+X21_high,24,Chapter 2,"Discrimination by nationality/ethnicity, religion, sex or skin colour ('between 10% and 12%'): highest of the four",12,pct,,text,N,,
+X22,24,Chapter 2,Experienced discrimination because of a disability (global),6,pct,,text,N,,
+X23_nationality,6,Chapter 2,Experienced discrimination (global): % nationality or ethnic group,12,pct,,text,N,,
+X23_religion,6,Chapter 2,Experienced discrimination (global): % religion,12,pct,,text,N,,
+X23_sex,6,Chapter 2,Experienced discrimination (global): % sex,11,pct,,text,N,,
+C2_4_nationality,24,Chart 2.4,"Experienced discrimination: % yes, global: nationality/ethnic group",12,pct,,chart,N,,
+C2_4_religion,24,Chart 2.4,"Experienced discrimination: % yes, global: religion",12,pct,,chart,N,,
+C2_4_sex,24,Chart 2.4,"Experienced discrimination: % yes, global: sex",11,pct,,chart,N,,
+C2_4_skin,24,Chart 2.4,"Experienced discrimination: % yes, global: colour of your skin",10,pct,,chart,N,,
+C2_4_disability,24,Chart 2.4,"Experienced discrimination: % yes, global: disability",6,pct,,chart,N,,
+T2_2_nationality_AFG,25,Table 2.2,"% experienced discrimination because of nationality/ethnic group, AFG",34,pct,,table,N,,
+T2_2_nationality_ZMB,25,Table 2.2,"% experienced discrimination because of nationality/ethnic group, ZMB",32,pct,,table,N,,
+T2_2_nationality_CMR,25,Table 2.2,"% experienced discrimination because of nationality/ethnic group, CMR",29,pct,,table,N,,
+T2_2_nationality_BOL,25,Table 2.2,"% experienced discrimination because of nationality/ethnic group, BOL",28,pct,,table,N,,
+T2_2_nationality_KEN,25,Table 2.2,"% experienced discrimination because of nationality/ethnic group, KEN",28,pct,,table,N,,
+T2_2_religion_ZMB,25,Table 2.2,"% experienced discrimination because of religion, ZMB",32,pct,,table,N,,
+T2_2_religion_BRA,25,Table 2.2,"% experienced discrimination because of religion, BRA",27,pct,,table,N,,
+T2_2_religion_UGA,25,Table 2.2,"% experienced discrimination because of religion, UGA",26,pct,,table,N,,
+T2_2_religion_CMR,25,Table 2.2,"% experienced discrimination because of religion, CMR",26,pct,,table,N,,
+T2_2_religion_BOL,25,Table 2.2,"% experienced discrimination because of religion, BOL",25,pct,,table,N,,
+T2_2_sex_ZMB,25,Table 2.2,"% experienced discrimination because of sex, ZMB",31,pct,,table,N,,
+T2_2_sex_BOL,25,Table 2.2,"% experienced discrimination because of sex, BOL",25,pct,,table,N,,
+T2_2_sex_AFG,25,Table 2.2,"% experienced discrimination because of sex, AFG",23,pct,,table,N,,
+T2_2_sex_USA,25,Table 2.2,"% experienced discrimination because of sex, USA",23,pct,,table,N,,
+T2_2_sex_AUS,25,Table 2.2,"% experienced discrimination because of sex, AUS",21,pct,,table,N,,
+T2_2_skin_ZMB,25,Table 2.2,"% experienced discrimination because of colour of your skin, ZMB",28,pct,,table,N,,
+T2_2_skin_USA,25,Table 2.2,"% experienced discrimination because of colour of your skin, USA",24,pct,,table,N,,
+T2_2_skin_BOL,25,Table 2.2,"% experienced discrimination because of colour of your skin, BOL",23,pct,,table,N,,
+T2_2_skin_BRA,25,Table 2.2,"% experienced discrimination because of colour of your skin, BRA",23,pct,,table,N,,
+T2_2_skin_MOZ,25,Table 2.2,"% experienced discrimination because of colour of your skin, MOZ",21,pct,,table,N,,
+T2_2_disability_BGD,25,Table 2.2,"% experienced discrimination because of disability, BGD",18,pct,,table,N,,
+T2_2_disability_MOZ,25,Table 2.2,"% experienced discrimination because of disability, MOZ",16,pct,,table,N,,
+T2_2_disability_CMR,25,Table 2.2,"% experienced discrimination because of disability, CMR",13,pct,,table,N,,
+T2_2_disability_COG,25,Table 2.2,"% experienced discrimination because of disability, COG",12,pct,,table,N,,
+T2_2_disability_GIN,25,Table 2.2,"% experienced discrimination because of disability, GIN",12,pct,,table,N,,
+X24_skin,26,Chapter 2,United States: experienced discrimination: % skin colour,24,pct,,text,N,,
+X24_nationality,26,Chapter 2,United States: experienced discrimination: % race/ethnicity,24,pct,,text,N,,
+X24_sex,26,Chapter 2,United States: experienced discrimination: % sex,23,pct,,text,N,,
+X25,26,Chapter 2,High-income countries among the 10 where discrimination was most common ('the only'),1,count,0,text,N,,Number of high-income countries among the 10 with the highest % experiencing any discrimination.
+X26_ZMB,6,Chapter 2,Experienced one or more forms of discrimination: Zambia,52,pct,,text,N,,
+X26_BOL,6,Chapter 2,Experienced one or more forms of discrimination: Bolivia,49,pct,,text,N,,
+X26_CMR,6,Chapter 2,Experienced one or more forms of discrimination: Cameroon,49,pct,,text,N,,
+X26_UGA,6,Chapter 2,Experienced one or more forms of discrimination: Uganda,49,pct,,text,N,,
+X26_BRA,6,Chapter 2,Experienced one or more forms of discrimination: Brazil,48,pct,,text,N,,
+X26_USA,6,Chapter 2,Experienced one or more forms of discrimination: United States,46,pct,,text,N,,
+C2_5_USA,26,Chart 2.5,Experienced one or more forms of discrimination (map labels): United States,46,pct,,chart,N,,
+C2_5_AFG,26,Chart 2.5,Experienced one or more forms of discrimination (map labels): Afghanistan,45,pct,,chart,N,,
+C2_5_BRA,26,Chart 2.5,Experienced one or more forms of discrimination (map labels): Brazil,48,pct,,chart,N,,
+C2_5_CMR,26,Chart 2.5,Experienced one or more forms of discrimination (map labels): Cameroon,49,pct,,chart,N,,
+C2_5_UGA,26,Chart 2.5,Experienced one or more forms of discrimination (map labels): Uganda,49,pct,,chart,N,,
+C2_5_ZMB,26,Chart 2.5,Experienced one or more forms of discrimination (map labels): Zambia,52,pct,,chart,N,,
+C2_5_BOL,26,Chart 2.5,Experienced one or more forms of discrimination (map labels): Bolivia,49,pct,,chart,N,,
+C2_5_COG,26,Chart 2.5,Experienced one or more forms of discrimination (map labels): Congo Brazzaville,45,pct,,chart,N,,
+C2_5_MOZ,26,Chart 2.5,Experienced one or more forms of discrimination (map labels): Mozambique,43,pct,,chart,N,,
+C2_5_ZWE,26,Chart 2.5,Experienced one or more forms of discrimination (map labels): Zimbabwe,43,pct,,chart,N,,
+C2_5_max,26,Chart 2.5,Experienced one or more forms of discrimination (map labels): top of the colour scale (highest country),52,pct,,chart,N,,
+X27_a_lot,"6, 27",Chapter 2,Government of your country cares about you and your wellbeing (global): % a lot,19,pct,,text,N,,
+X27_somewhat,"6, 27",Chapter 2,Government of your country cares about you and your wellbeing (global): % somewhat,40,pct,,text,N,,
+X27_not_at_all,"6, 27",Chapter 2,Government of your country cares about you and your wellbeing (global): % not at all,37,pct,,text,N,,
+X28_central_western_africa,6,Chapter 2,Government does not care about them at all: Central/Western Africa,56,pct,,text,N,,
+X28_latin_america,6,Chapter 2,Government does not care about them at all: Latin America & Caribbean,55,pct,,text,N,,
+C2_6_central_asia_a_lot,27,Chart 2.6,"Government cares about your wellbeing: % a lot, Central Asia",27,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_central_asia_somewhat,27,Chart 2.6,"Government cares about your wellbeing: % somewhat, Central Asia",47,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_central_asia_not_at_all,27,Chart 2.6,"Government cares about your wellbeing: % not at all, Central Asia",20,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_central_asia_dk,27,Chart 2.6,"Government cares about your wellbeing: % don't know/refused, Central Asia",5,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_northern_africa_a_lot,27,Chart 2.6,"Government cares about your wellbeing: % a lot, Northern Africa",30,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_northern_africa_somewhat,27,Chart 2.6,"Government cares about your wellbeing: % somewhat, Northern Africa",39,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_northern_africa_not_at_all,27,Chart 2.6,"Government cares about your wellbeing: % not at all, Northern Africa",24,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_northern_africa_dk,27,Chart 2.6,"Government cares about your wellbeing: % don't know/refused, Northern Africa",7,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_southeastern_asia_a_lot,27,Chart 2.6,"Government cares about your wellbeing: % a lot, Southeastern Asia",26,pct,,chart,N,,"Includes Vietnam's and Myanmar's alternative wordings of the question (WP22469, WP22525)."
+C2_6_southeastern_asia_somewhat,27,Chart 2.6,"Government cares about your wellbeing: % somewhat, Southeastern Asia",43,pct,,chart,N,,"Includes Vietnam's and Myanmar's alternative wordings of the question (WP22469, WP22525)."
+C2_6_southeastern_asia_not_at_all,27,Chart 2.6,"Government cares about your wellbeing: % not at all, Southeastern Asia",26,pct,,chart,N,,"Includes Vietnam's and Myanmar's alternative wordings of the question (WP22469, WP22525)."
+C2_6_southeastern_asia_dk,27,Chart 2.6,"Government cares about your wellbeing: % don't know/refused, Southeastern Asia",5,pct,,chart,N,,"Includes Vietnam's and Myanmar's alternative wordings of the question (WP22469, WP22525)."
+C2_6_eastern_africa_a_lot,27,Chart 2.6,"Government cares about your wellbeing: % a lot, Eastern Africa",28,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_eastern_africa_somewhat,27,Chart 2.6,"Government cares about your wellbeing: % somewhat, Eastern Africa",41,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_eastern_africa_not_at_all,27,Chart 2.6,"Government cares about your wellbeing: % not at all, Eastern Africa",28,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_australia_nz_a_lot,27,Chart 2.6,"Government cares about your wellbeing: % a lot, Australia & New Zealand",13,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_australia_nz_somewhat,27,Chart 2.6,"Government cares about your wellbeing: % somewhat, Australia & New Zealand",57,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_australia_nz_not_at_all,27,Chart 2.6,"Government cares about your wellbeing: % not at all, Australia & New Zealand",29,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_southern_asia_a_lot,27,Chart 2.6,"Government cares about your wellbeing: % a lot, Southern Asia",27,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_southern_asia_somewhat,27,Chart 2.6,"Government cares about your wellbeing: % somewhat, Southern Asia",40,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_southern_asia_not_at_all,27,Chart 2.6,"Government cares about your wellbeing: % not at all, Southern Asia",30,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_northern_western_europe_a_lot,27,Chart 2.6,"Government cares about your wellbeing: % a lot, Northern/Western Europe",17,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_northern_western_europe_somewhat,27,Chart 2.6,"Government cares about your wellbeing: % somewhat, Northern/Western Europe",48,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_northern_western_europe_not_at_all,27,Chart 2.6,"Government cares about your wellbeing: % not at all, Northern/Western Europe",34,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_middle_east_a_lot,27,Chart 2.6,"Government cares about your wellbeing: % a lot, Middle East",22,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_middle_east_somewhat,27,Chart 2.6,"Government cares about your wellbeing: % somewhat, Middle East",36,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_middle_east_not_at_all,27,Chart 2.6,"Government cares about your wellbeing: % not at all, Middle East",38,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_southern_europe_a_lot,27,Chart 2.6,"Government cares about your wellbeing: % a lot, Southern Europe",12,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_southern_europe_somewhat,27,Chart 2.6,"Government cares about your wellbeing: % somewhat, Southern Europe",43,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_southern_europe_not_at_all,27,Chart 2.6,"Government cares about your wellbeing: % not at all, Southern Europe",44,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_northern_america_a_lot,27,Chart 2.6,"Government cares about your wellbeing: % a lot, Northern America",9,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_northern_america_somewhat,27,Chart 2.6,"Government cares about your wellbeing: % somewhat, Northern America",46,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_northern_america_not_at_all,27,Chart 2.6,"Government cares about your wellbeing: % not at all, Northern America",45,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_eastern_asia_a_lot,27,Chart 2.6,"Government cares about your wellbeing: % a lot, Eastern Asia",6,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_eastern_asia_somewhat,27,Chart 2.6,"Government cares about your wellbeing: % somewhat, Eastern Asia",46,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_eastern_asia_not_at_all,27,Chart 2.6,"Government cares about your wellbeing: % not at all, Eastern Asia",46,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_eastern_europe_a_lot,27,Chart 2.6,"Government cares about your wellbeing: % a lot, Eastern Europe",8,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_eastern_europe_somewhat,27,Chart 2.6,"Government cares about your wellbeing: % somewhat, Eastern Europe",44,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_eastern_europe_not_at_all,27,Chart 2.6,"Government cares about your wellbeing: % not at all, Eastern Europe",46,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_southern_africa_a_lot,27,Chart 2.6,"Government cares about your wellbeing: % a lot, Southern Africa",19,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_southern_africa_somewhat,27,Chart 2.6,"Government cares about your wellbeing: % somewhat, Southern Africa",33,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_southern_africa_not_at_all,27,Chart 2.6,"Government cares about your wellbeing: % not at all, Southern Africa",46,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_latin_america_a_lot,27,Chart 2.6,"Government cares about your wellbeing: % a lot, Latin America & Caribbean",8,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_latin_america_somewhat,27,Chart 2.6,"Government cares about your wellbeing: % somewhat, Latin America & Caribbean",34,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_latin_america_not_at_all,27,Chart 2.6,"Government cares about your wellbeing: % not at all, Latin America & Caribbean",55,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_central_western_africa_a_lot,27,Chart 2.6,"Government cares about your wellbeing: % a lot, Central/Western Africa",13,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_central_western_africa_somewhat,27,Chart 2.6,"Government cares about your wellbeing: % somewhat, Central/Western Africa",27,pct,,chart,N,,Values under 5% are not displayed.
+C2_6_central_western_africa_not_at_all,27,Chart 2.6,"Government cares about your wellbeing: % not at all, Central/Western Africa",56,pct,,chart,N,,Values under 5% are not displayed.
+T2_3_ROU,28,Table 2.3,"% national government does not care 'at all', ROU",80,pct,,table,N,,
+T2_3_IRQ,28,Table 2.3,"% national government does not care 'at all', IRQ",79,pct,,table,N,,
+T2_3_HND,28,Table 2.3,"% national government does not care 'at all', HND",77,pct,,table,N,,
+T2_3_PRY,28,Table 2.3,"% national government does not care 'at all', PRY",76,pct,,table,N,,
+T2_3_BIH,28,Table 2.3,"% national government does not care 'at all', BIH",74,pct,,table,N,,
+T2_3_LBN,28,Table 2.3,"% national government does not care 'at all', LBN",69,pct,,table,N,,
+T2_3_VEN,28,Table 2.3,"% national government does not care 'at all', VEN",68,pct,,table,N,,
+T2_3_SEN,28,Table 2.3,"% national government does not care 'at all', SEN",67,pct,,table,N,,
+T2_3_ALB,28,Table 2.3,"% national government does not care 'at all', ALB",66,pct,,table,N,,
+T2_3_PAN,28,Table 2.3,"% national government does not care 'at all', PAN",64,pct,,table,N,,
+T2_3_NGA,28,Table 2.3,"% national government does not care 'at all', NGA",64,pct,,table,N,,
+T2_3_COL,28,Table 2.3,"% national government does not care 'at all', COL",64,pct,,table,N,,
+X29,27,Chapter 2,Table 2.3 countries in Latin America ('half' of 12),6,count,0,text,N,,"The report says 'half'. Its own Table 2.3 lists five Latin American countries: Honduras, Paraguay, Venezuela, Panama, Colombia."
+X30_eastern_europe,28,Chapter 2,Countries in the region where more than 50% say the government does not care at all: Eastern Europe,6,count,0,text,N,,
+X30_southern_europe,28,Chapter 2,Countries in the region where more than 50% say the government does not care at all: Southern Europe,5,count,0,text,N,,"Six in the data: Portugal is at 50.4%, which the report may have counted as 50%."
+X30_northern_western_europe,28,Chapter 2,Countries in the region where more than 50% say the government does not care at all: Northern/Western Europe ('none'),0,count,0,text,N,,
+X31_eastern_europe,28,Chapter 2,Countries in the study: Eastern Europe,10,count,0,text,N,,
+X31_southern_europe,28,Chapter 2,Countries in the study: Southern Europe,12,count,0,text,N,,
+C2_7_southern_asia,29,Chart 2.7,Gallup World Poll National Institutions Index (0-100): Southern Asia,77.6,mean,,chart,Y,INDEX_NI,INDEX_NI is a placeholder name for Gallup's National Institutions Index; see README.
+C2_7_australia_nz,29,Chart 2.7,Gallup World Poll National Institutions Index (0-100): Australia & New Zealand,67.4,mean,,chart,Y,INDEX_NI,INDEX_NI is a placeholder name for Gallup's National Institutions Index; see README.
+C2_7_southeastern_asia,29,Chart 2.7,Gallup World Poll National Institutions Index (0-100): Southeastern Asia,66.2,mean,,chart,Y,INDEX_NI,INDEX_NI is a placeholder name for Gallup's National Institutions Index; see README.
+C2_7_northern_western_europe,29,Chart 2.7,Gallup World Poll National Institutions Index (0-100): Northern/Western Europe,66.0,mean,,chart,Y,INDEX_NI,INDEX_NI is a placeholder name for Gallup's National Institutions Index; see README.
+C2_7_central_asia,29,Chart 2.7,Gallup World Poll National Institutions Index (0-100): Central Asia,65.9,mean,,chart,Y,INDEX_NI,INDEX_NI is a placeholder name for Gallup's National Institutions Index; see README.
+C2_7_eastern_africa,29,Chart 2.7,Gallup World Poll National Institutions Index (0-100): Eastern Africa,65.7,mean,,chart,Y,INDEX_NI,INDEX_NI is a placeholder name for Gallup's National Institutions Index; see README.
+C2_7_northern_africa,29,Chart 2.7,Gallup World Poll National Institutions Index (0-100): Northern Africa,63.1,mean,,chart,Y,INDEX_NI,INDEX_NI is a placeholder name for Gallup's National Institutions Index; see README.
+C2_7_middle_east,29,Chart 2.7,Gallup World Poll National Institutions Index (0-100): Middle East,58.9,mean,,chart,Y,INDEX_NI,INDEX_NI is a placeholder name for Gallup's National Institutions Index; see README.
+C2_7_northern_america,29,Chart 2.7,Gallup World Poll National Institutions Index (0-100): Northern America,56.8,mean,,chart,Y,INDEX_NI,INDEX_NI is a placeholder name for Gallup's National Institutions Index; see README.
+C2_7_eastern_asia,29,Chart 2.7,Gallup World Poll National Institutions Index (0-100): Eastern Asia,56.2,mean,,chart,Y,INDEX_NI,INDEX_NI is a placeholder name for Gallup's National Institutions Index; see README.
+C2_7_southern_europe,29,Chart 2.7,Gallup World Poll National Institutions Index (0-100): Southern Europe,53.4,mean,,chart,Y,INDEX_NI,INDEX_NI is a placeholder name for Gallup's National Institutions Index; see README.
+C2_7_central_western_africa,29,Chart 2.7,Gallup World Poll National Institutions Index (0-100): Central/Western Africa,50.3,mean,,chart,Y,INDEX_NI,INDEX_NI is a placeholder name for Gallup's National Institutions Index; see README.
+C2_7_southern_africa,29,Chart 2.7,Gallup World Poll National Institutions Index (0-100): Southern Africa,48.4,mean,,chart,Y,INDEX_NI,INDEX_NI is a placeholder name for Gallup's National Institutions Index; see README.
+C2_7_eastern_europe,29,Chart 2.7,Gallup World Poll National Institutions Index (0-100): Eastern Europe,44.2,mean,,chart,Y,INDEX_NI,INDEX_NI is a placeholder name for Gallup's National Institutions Index; see README.
+C2_7_latin_america,29,Chart 2.7,Gallup World Poll National Institutions Index (0-100): Latin America & Caribbean,39.1,mean,,chart,Y,INDEX_NI,INDEX_NI is a placeholder name for Gallup's National Institutions Index; see README.
+C3_1_australia_nz,32,Chart 3.1,Resilience Index score: Australia & New Zealand,0.66,index,0.01,chart,N,,
+C3_1_northern_america,32,Chart 3.1,Resilience Index score: Northern America,0.65,index,0.01,chart,N,,
+C3_1_southeastern_asia,32,Chart 3.1,Resilience Index score: Southeastern Asia,0.65,index,0.01,chart,N,,"0.640 in the data. Excluding Cambodia, Laos and Vietnam (indicative scores) gives 0.630; WGT gives 0.636."
+C3_1_northern_western_europe,32,Chart 3.1,Resilience Index score: Northern/Western Europe,0.64,index,0.01,chart,N,,
+C3_1_eastern_asia,32,Chart 3.1,Resilience Index score: Eastern Asia,0.62,index,0.01,chart,N,,
+C3_1_central_asia,32,Chart 3.1,Resilience Index score: Central Asia,0.61,index,0.01,chart,N,,
+C3_1_southern_europe,32,Chart 3.1,Resilience Index score: Southern Europe,0.57,index,0.01,chart,N,,
+C3_1_eastern_europe,32,Chart 3.1,Resilience Index score: Eastern Europe,0.56,index,0.01,chart,N,,
+C3_1_middle_east,32,Chart 3.1,Resilience Index score: Middle East,0.55,index,0.01,chart,N,,
+C3_1_southern_asia,32,Chart 3.1,Resilience Index score: Southern Asia,0.51,index,0.01,chart,N,,
+C3_1_northern_africa,32,Chart 3.1,Resilience Index score: Northern Africa,0.51,index,0.01,chart,N,,
+C3_1_eastern_africa,32,Chart 3.1,Resilience Index score: Eastern Africa,0.5,index,0.01,chart,N,,
+C3_1_latin_america,32,Chart 3.1,Resilience Index score: Latin America & Caribbean,0.49,index,0.01,chart,N,,
+C3_1_southern_africa,32,Chart 3.1,Resilience Index score: Southern Africa,0.49,index,0.01,chart,N,,
+C3_1_central_western_africa,32,Chart 3.1,Resilience Index score: Central/Western Africa,0.44,index,0.01,chart,N,,
+X32_bottom,32,Chapter 3,Resilience Index score by income quintile within country: bottom quintile,0.51,index,0.01,text,N,,
+X32_top,32,Chapter 3,Resilience Index score by income quintile within country: top quintile,0.61,index,0.01,text,N,,
+C3_2_men,33,Chart 3.2,Resilience Index score: men,0.57,index,0.01,chart,N,,
+C3_2_women,33,Chart 3.2,Resilience Index score: women,0.53,index,0.01,chart,N,,
+C3_2_rural,33,Chart 3.2,Resilience Index score: rural areas,0.54,index,0.01,chart,N,,
+C3_2_small_town,33,Chart 3.2,Resilience Index score: small towns/villages,0.54,index,0.01,chart,N,,
+C3_2_large_city,33,Chart 3.2,Resilience Index score: large cities/suburbs,0.58,index,0.01,chart,N,,
+C3_2_q1,33,Chart 3.2,Resilience Index score: country's lowest income quintile,0.51,index,0.01,chart,N,,
+C3_2_q2,33,Chart 3.2,Resilience Index score: second quintile,0.53,index,0.01,chart,N,,
+C3_2_q3,33,Chart 3.2,Resilience Index score: third quintile,0.55,index,0.01,chart,N,,
+C3_2_q4,33,Chart 3.2,Resilience Index score: fourth quintile,0.57,index,0.01,chart,N,,
+C3_2_q5,33,Chart 3.2,Resilience Index score: country's highest income quintile,0.61,index,0.01,chart,N,,
+X33_women,33,Chapter 3,Afghanistan: Resilience Index score: women,0.27,index,0.01,text,N,,
+X33_men,33,Chapter 3,Afghanistan: Resilience Index score: men,0.4,index,0.01,text,N,,
+X34,33,Chapter 3,Other countries where men score more than 0.07 higher than women,Croatia; Slovenia; Mexico; Argentina; Pakistan,text,,text,N,,Listed in descending order of the gap; Afghanistan (mentioned separately) is excluded.
+X35_ZAF_large_city,33,Chapter 3,"Resilience Index score, large cities/suburbs vs rural areas: South Africa, large cities",0.53,index,0.01,text,N,,
+X35_ZAF_rural,33,Chapter 3,"Resilience Index score, large cities/suburbs vs rural areas: South Africa, rural areas",0.42,index,0.01,text,N,,
+X35_NGA_large_city,33,Chapter 3,"Resilience Index score, large cities/suburbs vs rural areas: Nigeria, large cities",0.49,index,0.01,text,N,,
+X35_NGA_rural,33,Chapter 3,"Resilience Index score, large cities/suburbs vs rural areas: Nigeria, rural areas",0.39,index,0.01,text,N,,
+X36,33,Chapter 3,Other countries with urban/rural gaps of 0.08 or more (besides South Africa and Nigeria),Algeria; Ghana; Sierra Leone,text,,text,N,,The data also puts the United Arab Emirates (0.10) above the threshold; the report does not name it.
+X37_NGA_rural,33,Chapter 3,"Primary education or less: Nigeria, rural areas",62,pct,,text,N,,
+X37_NGA_large_city,33,Chapter 3,"Primary education or less: Nigeria, large cities or suburbs",37,pct,,text,N,,
+X37_ZAF_rural,33,Chapter 3,"Primary education or less: South Africa, rural areas",39,pct,,text,N,,
+X37_ZAF_large_city,33,Chapter 3,"Primary education or less: South Africa, city-dwellers",20,pct,,text,N,,
+T3_3_AFG_bottom,34,Table 3.3,"Resilience Index score, bottom income quintile, AFG",0.25,index,0.01,table,N,,
+T3_3_AFG_top,34,Table 3.3,"Resilience Index score, top income quintile, AFG",0.41,index,0.01,table,N,,
+T3_3_AFG_difference,34,Table 3.3,"Resilience Index score, top minus bottom quintile, AFG",0.16,index,0.01,table,N,,The published difference is computed from the rounded scores; the reproduction uses unrounded ones.
+T3_3_EGY_bottom,34,Table 3.3,"Resilience Index score, bottom income quintile, EGY",0.43,index,0.01,table,N,,
+T3_3_EGY_top,34,Table 3.3,"Resilience Index score, top income quintile, EGY",0.58,index,0.01,table,N,,
+T3_3_EGY_difference,34,Table 3.3,"Resilience Index score, top minus bottom quintile, EGY",0.15,index,0.01,table,N,,The published difference is computed from the rounded scores; the reproduction uses unrounded ones.
+T3_3_USA_bottom,34,Table 3.3,"Resilience Index score, bottom income quintile, USA",0.58,index,0.01,table,N,,
+T3_3_USA_top,34,Table 3.3,"Resilience Index score, top income quintile, USA",0.72,index,0.01,table,N,,
+T3_3_USA_difference,34,Table 3.3,"Resilience Index score, top minus bottom quintile, USA",0.14,index,0.01,table,N,,The published difference is computed from the rounded scores; the reproduction uses unrounded ones.
+T3_3_BOL_bottom,34,Table 3.3,"Resilience Index score, bottom income quintile, BOL",0.42,index,0.01,table,N,,
+T3_3_BOL_top,34,Table 3.3,"Resilience Index score, top income quintile, BOL",0.56,index,0.01,table,N,,
+T3_3_BOL_difference,34,Table 3.3,"Resilience Index score, top minus bottom quintile, BOL",0.14,index,0.01,table,N,,The published difference is computed from the rounded scores; the reproduction uses unrounded ones.
+T3_3_MEX_bottom,34,Table 3.3,"Resilience Index score, bottom income quintile, MEX",0.47,index,0.01,table,N,,
+T3_3_MEX_top,34,Table 3.3,"Resilience Index score, top income quintile, MEX",0.6,index,0.01,table,N,,
+T3_3_MEX_difference,34,Table 3.3,"Resilience Index score, top minus bottom quintile, MEX",0.13,index,0.01,table,N,,The published difference is computed from the rounded scores; the reproduction uses unrounded ones.
+T3_3_ZMB_bottom,34,Table 3.3,"Resilience Index score, bottom income quintile, ZMB",0.39,index,0.01,table,N,,
+T3_3_ZMB_top,34,Table 3.3,"Resilience Index score, top income quintile, ZMB",0.52,index,0.01,table,N,,
+T3_3_ZMB_difference,34,Table 3.3,"Resilience Index score, top minus bottom quintile, ZMB",0.13,index,0.01,table,N,,The published difference is computed from the rounded scores; the reproduction uses unrounded ones.
+T3_3_LBN_bottom,34,Table 3.3,"Resilience Index score, bottom income quintile, LBN",0.35,index,0.01,table,N,,
+T3_3_LBN_top,34,Table 3.3,"Resilience Index score, top income quintile, LBN",0.48,index,0.01,table,N,,
+T3_3_LBN_difference,34,Table 3.3,"Resilience Index score, top minus bottom quintile, LBN",0.13,index,0.01,table,N,,The published difference is computed from the rounded scores; the reproduction uses unrounded ones.
+T3_3_EST_bottom,34,Table 3.3,"Resilience Index score, bottom income quintile, EST",0.57,index,0.01,table,N,,
+T3_3_EST_top,34,Table 3.3,"Resilience Index score, top income quintile, EST",0.7,index,0.01,table,N,,
+T3_3_EST_difference,34,Table 3.3,"Resilience Index score, top minus bottom quintile, EST",0.13,index,0.01,table,N,,The published difference is computed from the rounded scores; the reproduction uses unrounded ones.
+T3_3_IND_bottom,34,Table 3.3,"Resilience Index score, bottom income quintile, IND",0.47,index,0.01,table,N,,
+T3_3_IND_top,34,Table 3.3,"Resilience Index score, top income quintile, IND",0.6,index,0.01,table,N,,
+T3_3_IND_difference,34,Table 3.3,"Resilience Index score, top minus bottom quintile, IND",0.13,index,0.01,table,N,,The published difference is computed from the rounded scores; the reproduction uses unrounded ones.
+T3_3_ECU_bottom,34,Table 3.3,"Resilience Index score, bottom income quintile, ECU",0.45,index,0.01,table,N,,
+T3_3_ECU_top,34,Table 3.3,"Resilience Index score, top income quintile, ECU",0.57,index,0.01,table,N,,
+T3_3_ECU_difference,34,Table 3.3,"Resilience Index score, top minus bottom quintile, ECU",0.12,index,0.01,table,N,,The published difference is computed from the rounded scores; the reproduction uses unrounded ones.
+X38,35,Chapter 3,Feel less safe than five years ago (global),34,pct,,text,N,,The report quotes this from 'A Changed World?'; it is a World Risk Poll 2021 figure.
+X39_less_safe,35,Chapter 3,Resilience Index score by feeling of safety compared with five years ago: less safe,0.5,index,0.01,text,N,,
+X39_about_as_safe,35,Chapter 3,Resilience Index score by feeling of safety compared with five years ago: about as safe,0.58,index,0.01,text,N,,
+X39_more_safe,35,Chapter 3,Resilience Index score by feeling of safety compared with five years ago: more safe,0.59,index,0.01,text,N,,
+X40_not_at_all,35,Chapter 3,"Feel less safe than five years ago, by whether the government cares: government cares 'not at all'",44,pct,,text,N,,44.7% with the merged government-cares variable used for Chart 2.6; WP22231 alone gives 44.4%.
+X40_a_lot,35,Chapter 3,"Feel less safe than five years ago, by whether the government cares: government cares 'a lot'",23,pct,,text,N,,
+X41_yes,35,Chapter 3,"Feel less safe than five years ago, by discrimination due to race or nationality: experienced",45,pct,,text,N,,
+X41_no,35,Chapter 3,"Feel less safe than five years ago, by discrimination due to race or nationality: not experienced",33,pct,,text,N,,
+X42_population,36,Chapter 3,Women in Afghanistan's lower income quintiles: population size,7634000,count,1000,text,N,,Printed to the nearest thousand.
+X42_score,36,Chapter 3,Women in Afghanistan's lower income quintiles: Resilience Index score,0.25,index,0.01,text,N,,
+X43_women,36,Chapter 3,Afghanistan: primary education or less: women,89,pct,,text,N,,
+X43_men,36,Chapter 3,Afghanistan: primary education or less: men,60,pct,,text,N,,
+X44_population,36,Chapter 3,Rural women in lower income quintiles in Central/Western Africa: population size,27882000,count,1000,text,N,,Printed to the nearest thousand.
+X44_score,36,Chapter 3,Rural women in lower income quintiles in Central/Western Africa: Resilience Index score,0.37,index,0.01,text,N,,
+X45_women,36,Chapter 3,"Central/Western Africa, rural areas: primary education or less: women",77,pct,,text,N,,
+X45_men,36,Chapter 3,"Central/Western Africa, rural areas: primary education or less: men",57,pct,,text,N,,
+X46,"7, 38",Chapter 4,Experienced a disaster in the past five years (global),27,pct,,text,N,,
+X47_flood,"7, 38",Chapter 4,Type of the last disaster experienced (% of all people): flood/heavy rain,10,pct,,text,N,,
+X47_hurricane,"7, 38",Chapter 4,Type of the last disaster experienced (% of all people): hurricane/cyclone,7,pct,,text,N,,
+X47_earthquake,"7, 38",Chapter 4,Type of the last disaster experienced (% of all people): earthquake,5,pct,,text,N,,
+X48_drought,38,Chapter 4,Type of the last disaster experienced (% of all people): drought,0.8,pct,0.1,text,N,,
+X48_wildfire,38,Chapter 4,Type of the last disaster experienced (% of all people): wildfire,0.7,pct,0.1,text,N,,
+X48_thunder,38,Chapter 4,Type of the last disaster experienced (% of all people): thunder or lightning storm,0.7,pct,0.1,text,N,,
+C4_1_flood,38,Chart 4.1,Last disaster experienced was a flood/heavy rain (% of all people),10,pct,,chart,N,,
+C4_1_hurricane,38,Chart 4.1,Last disaster experienced was a hurricane/cyclone (% of all people),7,pct,,chart,N,,
+C4_1_earthquake,38,Chart 4.1,Last disaster experienced was a earthquake (% of all people),5,pct,,chart,N,,
+C4_1_drought,38,Chart 4.1,Last disaster experienced was a drought (% of all people),0.8,pct,0.1,chart,N,,
+C4_1_wildfire,38,Chart 4.1,Last disaster experienced was a wildfire (% of all people),0.7,pct,0.1,chart,N,,
+C4_1_thunder,38,Chart 4.1,Last disaster experienced was a thunder or lightning storm (% of all people),0.7,pct,0.1,chart,N,,
+C4_1_tornado,38,Chart 4.1,Last disaster experienced was a tornado (% of all people),0.6,pct,0.1,chart,N,,
+C4_1_blizzard,38,Chart 4.1,Last disaster experienced was a blizzard or snowstorm (% of all people),0.5,pct,0.1,chart,N,,
+C4_1_mudslide,38,Chart 4.1,Last disaster experienced was a mudslide (% of all people),0.3,pct,0.1,chart,N,,
+C4_1_volcano,38,Chart 4.1,Last disaster experienced was a volcano eruption (% of all people),0.1,pct,0.1,chart,N,,
+C4_1_tsunami,38,Chart 4.1,Last disaster experienced was a tsunami (% of all people),0.03,pct,0.01,chart,N,,
+X49_middle_east,"7, 38",Chapter 4,Experienced a disaster in the past five years: Middle East,36,pct,,text,N,,
+X49_southeastern_asia,"7, 38",Chapter 4,Experienced a disaster in the past five years: Southeastern Asia,36,pct,,text,N,,
+X50_middle_east,38,Chapter 4,Last disaster experienced was an earthquake: Middle East,19,pct,,text,N,,
+X50_IRN,38,Chapter 4,Last disaster experienced was an earthquake: Iran,36,pct,,text,N,,
+X50_TUR,38,Chapter 4,Last disaster experienced was an earthquake: Turkey,23,pct,,text,N,,
+X51_flood,39,Chapter 4,Southeastern Asia: last disaster experienced: flood/heavy rain,15,pct,,text,N,,
+X51_hurricane,39,Chapter 4,Southeastern Asia: last disaster experienced: cyclone,8,pct,,text,N,,
+X51_earthquake,39,Chapter 4,Southeastern Asia: last disaster experienced: earthquake,7,pct,,text,N,,
+C4_2_middle_east_flood,39,Chart 4.2,"Type of disaster last experienced: % flood/heavy rain, Middle East",10,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_middle_east_hurricane,39,Chart 4.2,"Type of disaster last experienced: % hurricane/cyclone, Middle East",1,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_middle_east_earthquake,39,Chart 4.2,"Type of disaster last experienced: % earthquake, Middle East",19,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_middle_east_drought,39,Chart 4.2,"Type of disaster last experienced: % drought, Middle East",4,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_middle_east_other,39,Chart 4.2,"Type of disaster last experienced: % other, Middle East",1,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_middle_east_none,39,Chart 4.2,"Type of disaster last experienced: % did not experience disaster, Middle East",64,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southeastern_asia_flood,39,Chart 4.2,"Type of disaster last experienced: % flood/heavy rain, Southeastern Asia",15,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southeastern_asia_hurricane,39,Chart 4.2,"Type of disaster last experienced: % hurricane/cyclone, Southeastern Asia",8,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southeastern_asia_earthquake,39,Chart 4.2,"Type of disaster last experienced: % earthquake, Southeastern Asia",7,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southeastern_asia_drought,39,Chart 4.2,"Type of disaster last experienced: % drought, Southeastern Asia",1,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southeastern_asia_other,39,Chart 4.2,"Type of disaster last experienced: % other, Southeastern Asia",4,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southeastern_asia_none,39,Chart 4.2,"Type of disaster last experienced: % did not experience disaster, Southeastern Asia",64,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_eastern_africa_flood,39,Chart 4.2,"Type of disaster last experienced: % flood/heavy rain, Eastern Africa",12,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_eastern_africa_hurricane,39,Chart 4.2,"Type of disaster last experienced: % hurricane/cyclone, Eastern Africa",3,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_eastern_africa_drought,39,Chart 4.2,"Type of disaster last experienced: % drought, Eastern Africa",5,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_eastern_africa_wildfire,39,Chart 4.2,"Type of disaster last experienced: % wildfire, Eastern Africa",1,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_eastern_africa_other,39,Chart 4.2,"Type of disaster last experienced: % other, Eastern Africa",7,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_eastern_africa_none,39,Chart 4.2,"Type of disaster last experienced: % did not experience disaster, Eastern Africa",69,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_australia_nz_flood,39,Chart 4.2,"Type of disaster last experienced: % flood/heavy rain, Australia & New Zealand",11,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_australia_nz_earthquake,39,Chart 4.2,"Type of disaster last experienced: % earthquake, Australia & New Zealand",2,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_australia_nz_wildfire,39,Chart 4.2,"Type of disaster last experienced: % wildfire, Australia & New Zealand",6,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_australia_nz_other,39,Chart 4.2,"Type of disaster last experienced: % other, Australia & New Zealand",11,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_australia_nz_none,39,Chart 4.2,"Type of disaster last experienced: % did not experience disaster, Australia & New Zealand",70,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southern_asia_flood,39,Chart 4.2,"Type of disaster last experienced: % flood/heavy rain, Southern Asia",13,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southern_asia_hurricane,39,Chart 4.2,"Type of disaster last experienced: % hurricane/cyclone, Southern Asia",9,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southern_asia_earthquake,39,Chart 4.2,"Type of disaster last experienced: % earthquake, Southern Asia",4,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southern_asia_other,39,Chart 4.2,"Type of disaster last experienced: % other, Southern Asia",2,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southern_asia_none,39,Chart 4.2,"Type of disaster last experienced: % did not experience disaster, Southern Asia",70,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_northern_america_flood,39,Chart 4.2,"Type of disaster last experienced: % flood/heavy rain, Northern America",6,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_northern_america_hurricane,39,Chart 4.2,"Type of disaster last experienced: % hurricane/cyclone, Northern America",11,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_northern_america_earthquake,39,Chart 4.2,"Type of disaster last experienced: % earthquake, Northern America",3,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_northern_america_wildfire,39,Chart 4.2,"Type of disaster last experienced: % wildfire, Northern America",1,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_northern_america_other,39,Chart 4.2,"Type of disaster last experienced: % other, Northern America",6,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_northern_america_none,39,Chart 4.2,"Type of disaster last experienced: % did not experience disaster, Northern America",72,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_eastern_europe_flood,39,Chart 4.2,"Type of disaster last experienced: % flood/heavy rain, Eastern Europe",8,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_eastern_europe_hurricane,39,Chart 4.2,"Type of disaster last experienced: % hurricane/cyclone, Eastern Europe",2,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_eastern_europe_earthquake,39,Chart 4.2,"Type of disaster last experienced: % earthquake, Eastern Europe",1,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_eastern_europe_drought,39,Chart 4.2,"Type of disaster last experienced: % drought, Eastern Europe",3,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_eastern_europe_wildfire,39,Chart 4.2,"Type of disaster last experienced: % wildfire, Eastern Europe",6,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_eastern_europe_other,39,Chart 4.2,"Type of disaster last experienced: % other, Eastern Europe",7,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_eastern_europe_none,39,Chart 4.2,"Type of disaster last experienced: % did not experience disaster, Eastern Europe",73,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_eastern_asia_flood,39,Chart 4.2,"Type of disaster last experienced: % flood/heavy rain, Eastern Asia",7,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_eastern_asia_hurricane,39,Chart 4.2,"Type of disaster last experienced: % hurricane/cyclone, Eastern Asia",9,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_eastern_asia_earthquake,39,Chart 4.2,"Type of disaster last experienced: % earthquake, Eastern Asia",6,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_eastern_asia_other,39,Chart 4.2,"Type of disaster last experienced: % other, Eastern Asia",4,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_eastern_asia_none,39,Chart 4.2,"Type of disaster last experienced: % did not experience disaster, Eastern Asia",74,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_central_western_africa_flood,39,Chart 4.2,"Type of disaster last experienced: % flood/heavy rain, Central/Western Africa",17,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_central_western_africa_hurricane,39,Chart 4.2,"Type of disaster last experienced: % hurricane/cyclone, Central/Western Africa",1,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_central_western_africa_drought,39,Chart 4.2,"Type of disaster last experienced: % drought, Central/Western Africa",3,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_central_western_africa_wildfire,39,Chart 4.2,"Type of disaster last experienced: % wildfire, Central/Western Africa",1,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_central_western_africa_other,39,Chart 4.2,"Type of disaster last experienced: % other, Central/Western Africa",4,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_central_western_africa_none,39,Chart 4.2,"Type of disaster last experienced: % did not experience disaster, Central/Western Africa",74,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_latin_america_flood,39,Chart 4.2,"Type of disaster last experienced: % flood/heavy rain, Latin America & Caribbean",10,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_latin_america_hurricane,39,Chart 4.2,"Type of disaster last experienced: % hurricane/cyclone, Latin America & Caribbean",3,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_latin_america_earthquake,39,Chart 4.2,"Type of disaster last experienced: % earthquake, Latin America & Caribbean",7,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_latin_america_drought,39,Chart 4.2,"Type of disaster last experienced: % drought, Latin America & Caribbean",1,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_latin_america_wildfire,39,Chart 4.2,"Type of disaster last experienced: % wildfire, Latin America & Caribbean",1,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_latin_america_other,39,Chart 4.2,"Type of disaster last experienced: % other, Latin America & Caribbean",2,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_latin_america_none,39,Chart 4.2,"Type of disaster last experienced: % did not experience disaster, Latin America & Caribbean",75,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southern_europe_flood,39,Chart 4.2,"Type of disaster last experienced: % flood/heavy rain, Southern Europe",4,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southern_europe_hurricane,39,Chart 4.2,"Type of disaster last experienced: % hurricane/cyclone, Southern Europe",1,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southern_europe_earthquake,39,Chart 4.2,"Type of disaster last experienced: % earthquake, Southern Europe",4,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southern_europe_drought,39,Chart 4.2,"Type of disaster last experienced: % drought, Southern Europe",1,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southern_europe_wildfire,39,Chart 4.2,"Type of disaster last experienced: % wildfire, Southern Europe",3,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southern_europe_other,39,Chart 4.2,"Type of disaster last experienced: % other, Southern Europe",7,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southern_europe_none,39,Chart 4.2,"Type of disaster last experienced: % did not experience disaster, Southern Europe",79,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southern_africa_flood,39,Chart 4.2,"Type of disaster last experienced: % flood/heavy rain, Southern Africa",9,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southern_africa_hurricane,39,Chart 4.2,"Type of disaster last experienced: % hurricane/cyclone, Southern Africa",2,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southern_africa_wildfire,39,Chart 4.2,"Type of disaster last experienced: % wildfire, Southern Africa",1,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southern_africa_other,39,Chart 4.2,"Type of disaster last experienced: % other, Southern Africa",4,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_southern_africa_none,39,Chart 4.2,"Type of disaster last experienced: % did not experience disaster, Southern Africa",82,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_northern_africa_flood,39,Chart 4.2,"Type of disaster last experienced: % flood/heavy rain, Northern Africa",11,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_northern_africa_earthquake,39,Chart 4.2,"Type of disaster last experienced: % earthquake, Northern Africa",1,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_northern_africa_drought,39,Chart 4.2,"Type of disaster last experienced: % drought, Northern Africa",2,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_northern_africa_wildfire,39,Chart 4.2,"Type of disaster last experienced: % wildfire, Northern Africa",1,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_northern_africa_other,39,Chart 4.2,"Type of disaster last experienced: % other, Northern Africa",1,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_northern_africa_none,39,Chart 4.2,"Type of disaster last experienced: % did not experience disaster, Northern Africa",84,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_northern_western_europe_flood,39,Chart 4.2,"Type of disaster last experienced: % flood/heavy rain, Northern/Western Europe",3,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_northern_western_europe_hurricane,39,Chart 4.2,"Type of disaster last experienced: % hurricane/cyclone, Northern/Western Europe",1,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_northern_western_europe_earthquake,39,Chart 4.2,"Type of disaster last experienced: % earthquake, Northern/Western Europe",1,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_northern_western_europe_wildfire,39,Chart 4.2,"Type of disaster last experienced: % wildfire, Northern/Western Europe",1,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_northern_western_europe_other,39,Chart 4.2,"Type of disaster last experienced: % other, Northern/Western Europe",7,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_northern_western_europe_none,39,Chart 4.2,"Type of disaster last experienced: % did not experience disaster, Northern/Western Europe",86,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_central_asia_flood,39,Chart 4.2,"Type of disaster last experienced: % flood/heavy rain, Central Asia",2,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_central_asia_hurricane,39,Chart 4.2,"Type of disaster last experienced: % hurricane/cyclone, Central Asia",1,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_central_asia_earthquake,39,Chart 4.2,"Type of disaster last experienced: % earthquake, Central Asia",4,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_central_asia_other,39,Chart 4.2,"Type of disaster last experienced: % other, Central Asia",2,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+C4_2_central_asia_none,39,Chart 4.2,"Type of disaster last experienced: % did not experience disaster, Central Asia",91,pct,,chart,N,,Values under 1% are not displayed. 'Other' is every other named type; 'did not experience' includes don't know/refused to the first question.
+X52_central_western_africa,"7, 39",Chapter 4,Last disaster experienced was a flood/heavy rain: Central/Western Africa,17,pct,,text,N,,
+X52_BFA,"7, 39",Chapter 4,Last disaster experienced was a flood/heavy rain: Burkina Faso,27,pct,,text,N,,
+X52_BEN,"7, 39",Chapter 4,Last disaster experienced was a flood/heavy rain: Benin,21,pct,,text,N,,
+X52_SLE,"7, 39",Chapter 4,Last disaster experienced was a flood/heavy rain: Sierra Leone,21,pct,,text,N,,
+X52_TGO,"7, 39",Chapter 4,Last disaster experienced was a flood/heavy rain: Togo,20,pct,,text,N,,
+X53,40,Chapter 4,Smallest gap (disaster minus no disaster) across the five essential services ('at least 10 points'),10,pct,,text,N,,The smallest gap is drinking water: 32.1% vs 22.4% (9.7 points); the rounded chart values differ by 10.
+C4_3_electricity_disaster,40,Chart 4.3,"% gone without electricity for more than a day, among those who experienced a disaster",53,pct,,chart,N,,
+C4_3_electricity_no_disaster,40,Chart 4.3,"% gone without electricity for more than a day, among those who did not",38,pct,,chart,N,,
+C4_3_water_disaster,40,Chart 4.3,"% been without clean drinking water for more than a day, among those who experienced a disaster",32,pct,,chart,N,,
+C4_3_water_no_disaster,40,Chart 4.3,"% been without clean drinking water for more than a day, among those who did not",22,pct,,chart,N,,
+C4_3_food_disaster,40,Chart 4.3,"% unable to obtain food because of shortages for more than a day, among those who experienced a disaster",23,pct,,chart,N,,
+C4_3_food_no_disaster,40,Chart 4.3,"% unable to obtain food because of shortages for more than a day, among those who did not",13,pct,,chart,N,,
+C4_3_medical_disaster,40,Chart 4.3,"% unable to obtain medical assistance or medicine for more than a day, among those who experienced a disaster",29,pct,,chart,N,,
+C4_3_medical_no_disaster,40,Chart 4.3,"% unable to obtain medical assistance or medicine for more than a day, among those who did not",18,pct,,chart,N,,
+C4_3_telephone_disaster,40,Chart 4.3,"% unable to access a telephone for more than a day, among those who experienced a disaster",31,pct,,chart,N,,
+C4_3_telephone_no_disaster,40,Chart 4.3,"% unable to access a telephone for more than a day, among those who did not",20,pct,,chart,N,,
+C4_4_low_lower_middle_electricity_disaster,41,Chart 4.4,"% gone without electricity, low/lower-middle-income countries, experienced a disaster",68,pct,,chart,N,,
+C4_4_low_lower_middle_electricity_no_disaster,41,Chart 4.4,"% gone without electricity, low/lower-middle-income countries, did not experience a disaster",53,pct,,chart,N,,
+C4_4_low_lower_middle_water_disaster,41,Chart 4.4,"% been without clean drinking water, low/lower-middle-income countries, experienced a disaster",38,pct,,chart,N,,
+C4_4_low_lower_middle_water_no_disaster,41,Chart 4.4,"% been without clean drinking water, low/lower-middle-income countries, did not experience a disaster",29,pct,,chart,N,,
+C4_4_low_lower_middle_food_disaster,41,Chart 4.4,"% unable to obtain food because of shortages, low/lower-middle-income countries, experienced a disaster",37,pct,,chart,N,,
+C4_4_low_lower_middle_food_no_disaster,41,Chart 4.4,"% unable to obtain food because of shortages, low/lower-middle-income countries, did not experience a disaster",23,pct,,chart,N,,
+C4_4_low_lower_middle_medical_disaster,41,Chart 4.4,"% unable to obtain medical assistance or medicine, low/lower-middle-income countries, experienced a disaster",41,pct,,chart,N,,
+C4_4_low_lower_middle_medical_no_disaster,41,Chart 4.4,"% unable to obtain medical assistance or medicine, low/lower-middle-income countries, did not experience a disaster",28,pct,,chart,N,,
+C4_4_low_lower_middle_telephone_disaster,41,Chart 4.4,"% unable to access a telephone, low/lower-middle-income countries, experienced a disaster",41,pct,,chart,N,,
+C4_4_low_lower_middle_telephone_no_disaster,41,Chart 4.4,"% unable to access a telephone, low/lower-middle-income countries, did not experience a disaster",30,pct,,chart,N,,
+C4_4_upper_middle_high_electricity_disaster,41,Chart 4.4,"% gone without electricity, upper-middle/high-income countries, experienced a disaster",37,pct,,chart,N,,
+C4_4_upper_middle_high_electricity_no_disaster,41,Chart 4.4,"% gone without electricity, upper-middle/high-income countries, did not experience a disaster",27,pct,,chart,N,,
+C4_4_upper_middle_high_water_disaster,41,Chart 4.4,"% been without clean drinking water, upper-middle/high-income countries, experienced a disaster",25,pct,,chart,N,,
+C4_4_upper_middle_high_water_no_disaster,41,Chart 4.4,"% been without clean drinking water, upper-middle/high-income countries, did not experience a disaster",17,pct,,chart,N,,
+C4_4_upper_middle_high_food_disaster,41,Chart 4.4,"% unable to obtain food because of shortages, upper-middle/high-income countries, experienced a disaster",10,pct,,chart,N,,
+C4_4_upper_middle_high_food_no_disaster,41,Chart 4.4,"% unable to obtain food because of shortages, upper-middle/high-income countries, did not experience a disaster",5,pct,,chart,N,,
+C4_4_upper_middle_high_medical_disaster,41,Chart 4.4,"% unable to obtain medical assistance or medicine, upper-middle/high-income countries, experienced a disaster",16,pct,,chart,N,,
+C4_4_upper_middle_high_medical_no_disaster,41,Chart 4.4,"% unable to obtain medical assistance or medicine, upper-middle/high-income countries, did not experience a disaster",10,pct,,chart,N,,
+C4_4_upper_middle_high_telephone_disaster,41,Chart 4.4,"% unable to access a telephone, upper-middle/high-income countries, experienced a disaster",21,pct,,chart,N,,
+C4_4_upper_middle_high_telephone_no_disaster,41,Chart 4.4,"% unable to access a telephone, upper-middle/high-income countries, did not experience a disaster",13,pct,,chart,N,,
+X54,"7, 41",Chapter 4,You and your family are well prepared to deal with a disaster (global),54,pct,,text,N,,
+X55_southern_asia,"7, 41",Chapter 4,You and your family are well prepared to deal with a disaster: Southern Asia,71,pct,,text,N,,
+X55_northern_america,"7, 41",Chapter 4,You and your family are well prepared to deal with a disaster: Northern America,69,pct,,text,N,,
+X55_australia_nz,"7, 41",Chapter 4,You and your family are well prepared to deal with a disaster: Australia/New Zealand,68,pct,,text,N,,
+X55_southeastern_asia,"7, 41",Chapter 4,You and your family are well prepared to deal with a disaster: Southeastern Asia,66,pct,,text,N,,
+X55_central_western_africa,"7, 41",Chapter 4,You and your family are well prepared to deal with a disaster: Central/Western Africa,29,pct,,text,N,,
+X55_latin_america,"7, 41",Chapter 4,You and your family are well prepared to deal with a disaster: Latin America/Caribbean,29,pct,,text,N,,
+X55_northern_africa,"7, 41",Chapter 4,You and your family are well prepared to deal with a disaster: Northern Africa,27,pct,,text,N,,
+X55_southern_africa,"7, 41",Chapter 4,You and your family are well prepared to deal with a disaster: Southern Africa,27,pct,,text,N,,
+X56,"7, 41",Chapter 4,Southern Asia: Resilience Index score,0.51,index,0.01,text,N,,
+C4_5_southern_asia,42,Chart 4.5,You and your family are well prepared to deal with a disaster: % yes: Southern Asia,71,pct,,chart,N,,
+C4_5_northern_america,42,Chart 4.5,You and your family are well prepared to deal with a disaster: % yes: Northern America,69,pct,,chart,N,,
+C4_5_australia_nz,42,Chart 4.5,You and your family are well prepared to deal with a disaster: % yes: Australia & New Zealand,68,pct,,chart,N,,
+C4_5_southeastern_asia,42,Chart 4.5,You and your family are well prepared to deal with a disaster: % yes: Southeastern Asia,66,pct,,chart,N,,
+C4_5_middle_east,42,Chart 4.5,You and your family are well prepared to deal with a disaster: % yes: Middle East,51,pct,,chart,N,,
+C4_5_southern_europe,42,Chart 4.5,You and your family are well prepared to deal with a disaster: % yes: Southern Europe,46,pct,,chart,N,,
+C4_5_eastern_africa,42,Chart 4.5,You and your family are well prepared to deal with a disaster: % yes: Eastern Africa,45,pct,,chart,N,,
+C4_5_central_asia,42,Chart 4.5,You and your family are well prepared to deal with a disaster: % yes: Central Asia,45,pct,,chart,N,,
+C4_5_northern_western_europe,42,Chart 4.5,You and your family are well prepared to deal with a disaster: % yes: Northern/Western Europe,43,pct,,chart,N,,
+C4_5_eastern_asia,42,Chart 4.5,You and your family are well prepared to deal with a disaster: % yes: Eastern Asia,41,pct,,chart,N,,
+C4_5_eastern_europe,42,Chart 4.5,You and your family are well prepared to deal with a disaster: % yes: Eastern Europe,35,pct,,chart,N,,
+C4_5_central_western_africa,42,Chart 4.5,You and your family are well prepared to deal with a disaster: % yes: Central/Western Africa,29,pct,,chart,N,,
+C4_5_latin_america,42,Chart 4.5,You and your family are well prepared to deal with a disaster: % yes: Latin America & Caribbean,29,pct,,chart,N,,
+C4_5_northern_africa,42,Chart 4.5,You and your family are well prepared to deal with a disaster: % yes: Northern Africa,27,pct,,chart,N,,
+C4_5_southern_africa,42,Chart 4.5,You and your family are well prepared to deal with a disaster: % yes: Southern Africa,27,pct,,chart,N,,
+C4_6_southeastern_asia_hospitals,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: hospitals, Southeastern Asia",69,pct,,chart,N,,
+C4_6_southeastern_asia_local,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: local government, Southeastern Asia",66,pct,,chart,N,,
+C4_6_southeastern_asia_national,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: national government, Southeastern Asia",68,pct,,chart,N,,WP22241 only. Adding Myanmar's 'government in power' wording (WP22526) gives 65%.
+C4_6_southern_asia_hospitals,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: hospitals, Southern Asia",65,pct,,chart,N,,
+C4_6_southern_asia_local,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: local government, Southern Asia",61,pct,,chart,N,,
+C4_6_southern_asia_national,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: national government, Southern Asia",63,pct,,chart,N,,
+C4_6_eastern_africa_hospitals,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: hospitals, Eastern Africa",47,pct,,chart,N,,
+C4_6_eastern_africa_local,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: local government, Eastern Africa",48,pct,,chart,N,,
+C4_6_eastern_africa_national,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: national government, Eastern Africa",60,pct,,chart,N,,
+C4_6_australia_nz_hospitals,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: hospitals, Australia & New Zealand",68,pct,,chart,N,,
+C4_6_australia_nz_local,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: local government, Australia & New Zealand",55,pct,,chart,N,,
+C4_6_australia_nz_national,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: national government, Australia & New Zealand",58,pct,,chart,N,,
+C4_6_northern_africa_hospitals,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: hospitals, Northern Africa",25,pct,,chart,N,,
+C4_6_northern_africa_local,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: local government, Northern Africa",39,pct,,chart,N,,
+C4_6_northern_africa_national,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: national government, Northern Africa",56,pct,,chart,N,,
+C4_6_central_asia_hospitals,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: hospitals, Central Asia",47,pct,,chart,N,,
+C4_6_central_asia_local,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: local government, Central Asia",47,pct,,chart,N,,
+C4_6_central_asia_national,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: national government, Central Asia",55,pct,,chart,N,,
+C4_6_northern_america_hospitals,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: hospitals, Northern America",71,pct,,chart,N,,
+C4_6_northern_america_local,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: local government, Northern America",56,pct,,chart,N,,
+C4_6_northern_america_national,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: national government, Northern America",50,pct,,chart,N,,
+C4_6_middle_east_hospitals,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: hospitals, Middle East",54,pct,,chart,N,,
+C4_6_middle_east_local,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: local government, Middle East",42,pct,,chart,N,,
+C4_6_middle_east_national,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: national government, Middle East",45,pct,,chart,N,,
+C4_6_eastern_asia_hospitals,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: hospitals, Eastern Asia",54,pct,,chart,N,,
+C4_6_eastern_asia_local,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: local government, Eastern Asia",43,pct,,chart,N,,
+C4_6_eastern_asia_national,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: national government, Eastern Asia",40,pct,,chart,N,,
+C4_6_southern_europe_hospitals,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: hospitals, Southern Europe",56,pct,,chart,N,,
+C4_6_southern_europe_local,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: local government, Southern Europe",36,pct,,chart,N,,
+C4_6_southern_europe_national,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: national government, Southern Europe",39,pct,,chart,N,,
+C4_6_southern_africa_hospitals,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: hospitals, Southern Africa",40,pct,,chart,N,,
+C4_6_southern_africa_local,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: local government, Southern Africa",30,pct,,chart,N,,
+C4_6_southern_africa_national,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: national government, Southern Africa",38,pct,,chart,N,,
+C4_6_northern_western_europe_hospitals,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: hospitals, Northern/Western Europe",62,pct,,chart,N,,
+C4_6_northern_western_europe_local,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: local government, Northern/Western Europe",40,pct,,chart,N,,
+C4_6_northern_western_europe_national,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: national government, Northern/Western Europe",37,pct,,chart,N,,
+C4_6_eastern_europe_hospitals,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: hospitals, Eastern Europe",34,pct,,chart,N,,
+C4_6_eastern_europe_local,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: local government, Eastern Europe",29,pct,,chart,N,,
+C4_6_eastern_europe_national,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: national government, Eastern Europe",36,pct,,chart,N,,
+C4_6_central_western_africa_hospitals,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: hospitals, Central/Western Africa",31,pct,,chart,N,,
+C4_6_central_western_africa_local,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: local government, Central/Western Africa",27,pct,,chart,N,,
+C4_6_central_western_africa_national,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: national government, Central/Western Africa",35,pct,,chart,N,,
+C4_6_latin_america_hospitals,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: hospitals, Latin America & Caribbean",29,pct,,chart,N,,
+C4_6_latin_america_local,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: local government, Latin America & Caribbean",23,pct,,chart,N,,
+C4_6_latin_america_national,43,Chart 4.6,"Well prepared to deal with a disaster: % yes: national government, Latin America & Caribbean",30,pct,,chart,N,,
+X57_local_news,"7, 43",Chapter 4,Source trusted most for information about a disaster (global): local news,31,pct,,text,N,,
+X57_weather_service,"7, 43",Chapter 4,Source trusted most for information about a disaster (global): national weather service,16,pct,,text,N,,
+X57_internet,"7, 43",Chapter 4,Source trusted most for information about a disaster (global): internet/social media,15,pct,,text,N,,
+X58,43,Chapter 4,Low-income countries: trust local religious leaders most for disaster information,14,pct,,text,N,,
+T4_1_local_news_all,44,Table 4.1,"Trust local news most for disaster information, all countries",31,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_local_news_low_income,44,Table 4.1,"Trust local news most for disaster information, low-income countries",41,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_local_news_lower_middle,44,Table 4.1,"Trust local news most for disaster information, lower-middle-income countries",37,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_local_news_upper_middle,44,Table 4.1,"Trust local news most for disaster information, upper-middle-income countries",21,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_local_news_high_income,44,Table 4.1,"Trust local news most for disaster information, high-income countries",28,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_weather_service_all,44,Table 4.1,"Trust national weather service most for disaster information, all countries",16,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_weather_service_low_income,44,Table 4.1,"Trust national weather service most for disaster information, low-income countries",10,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_weather_service_lower_middle,44,Table 4.1,"Trust national weather service most for disaster information, lower-middle-income countries",16,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_weather_service_upper_middle,44,Table 4.1,"Trust national weather service most for disaster information, upper-middle-income countries",14,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_weather_service_high_income,44,Table 4.1,"Trust national weather service most for disaster information, high-income countries",18,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_internet_all,44,Table 4.1,"Trust internet/social media most for disaster information, all countries",15,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_internet_low_income,44,Table 4.1,"Trust internet/social media most for disaster information, low-income countries",8,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_internet_lower_middle,44,Table 4.1,"Trust internet/social media most for disaster information, lower-middle-income countries",14,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_internet_upper_middle,44,Table 4.1,"Trust internet/social media most for disaster information, upper-middle-income countries",20,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_internet_high_income,44,Table 4.1,"Trust internet/social media most for disaster information, high-income countries",12,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_emergency_all,44,Table 4.1,"Trust emergency services most for disaster information, all countries",13,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_emergency_low_income,44,Table 4.1,"Trust emergency services most for disaster information, low-income countries",5,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_emergency_lower_middle,44,Table 4.1,"Trust emergency services most for disaster information, lower-middle-income countries",8,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_emergency_upper_middle,44,Table 4.1,"Trust emergency services most for disaster information, upper-middle-income countries",16,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_emergency_high_income,44,Table 4.1,"Trust emergency services most for disaster information, high-income countries",21,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_disaster_agency_all,44,Table 4.1,"Trust national disaster management agency most for disaster information, all countries",10,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_disaster_agency_low_income,44,Table 4.1,"Trust national disaster management agency most for disaster information, low-income countries",9,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_disaster_agency_lower_middle,44,Table 4.1,"Trust national disaster management agency most for disaster information, lower-middle-income countries",6,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_disaster_agency_upper_middle,44,Table 4.1,"Trust national disaster management agency most for disaster information, upper-middle-income countries",16,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_disaster_agency_high_income,44,Table 4.1,"Trust national disaster management agency most for disaster information, high-income countries",12,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_religious_all,44,Table 4.1,"Trust local religious leaders most for disaster information, all countries",4,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_religious_low_income,44,Table 4.1,"Trust local religious leaders most for disaster information, low-income countries",14,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_religious_lower_middle,44,Table 4.1,"Trust local religious leaders most for disaster information, lower-middle-income countries",6,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_religious_upper_middle,44,Table 4.1,"Trust local religious leaders most for disaster information, upper-middle-income countries",1,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_religious_high_income,44,Table 4.1,"Trust local religious leaders most for disaster information, high-income countries",1,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_famous_all,44,Table 4.1,"Trust a famous or influential person most for disaster information, all countries",2,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_famous_low_income,44,Table 4.1,"Trust a famous or influential person most for disaster information, low-income countries",4,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_famous_lower_middle,44,Table 4.1,"Trust a famous or influential person most for disaster information, lower-middle-income countries",2,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_famous_upper_middle,44,Table 4.1,"Trust a famous or influential person most for disaster information, upper-middle-income countries",1,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+T4_1_famous_high_income,44,Table 4.1,"Trust a famous or influential person most for disaster information, high-income countries",1,pct,,table,N,,Base: respondents asked the question (those who would look to two or more sources).
+X59,44,Chapter 4,The two countries where people were most likely to have experienced a disaster,Philippines; Iceland,text,,text,N,,
+X60_disaster,"7, 45",Chapter 4,Climate change a very or somewhat serious threat to the country: experienced a disaster,74,pct,,text,N,,
+X60_no_disaster,"7, 45",Chapter 4,Climate change a very or somewhat serious threat to the country: did not,65,pct,,text,N,,
+X61_disaster,45,Chapter 4,Climate change a very serious threat to the country: experienced a disaster,47,pct,,text,N,,
+X61_no_disaster,45,Chapter 4,Climate change a very serious threat to the country: did not,39,pct,,text,N,,
+X62_hurricane,46,Chapter 4,Climate change a very serious threat to the country: experienced a hurricane/cyclone disaster,45,pct,,text,N,,
+X62_no_hurricane,46,Chapter 4,Climate change a very serious threat to the country: had not,41,pct,,text,N,,
+T4_2_any_experienced,46,Table 4.2,Climate change a very serious threat: % among those who experienced a any type of natural hazard disaster,47,pct,,table,N,,
+T4_2_any_not,46,Table 4.2,Climate change a very serious threat: % among those who had not (any type of natural hazard),39,pct,,table,N,,
+T4_2_any_difference,46,Table 4.2,Climate change a very serious threat: difference in points (any type of natural hazard),8,pct,,table,N,,The published difference is computed from the rounded percentages; the reproduction uses unrounded ones.
+T4_2_drought_experienced,46,Table 4.2,Climate change a very serious threat: % among those who experienced a drought disaster,61,pct,,table,N,,
+T4_2_drought_not,46,Table 4.2,Climate change a very serious threat: % among those who had not (drought),41,pct,,table,N,,
+T4_2_drought_difference,46,Table 4.2,Climate change a very serious threat: difference in points (drought),20,pct,,table,N,,The published difference is computed from the rounded percentages; the reproduction uses unrounded ones.
+T4_2_wildfire_experienced,46,Table 4.2,Climate change a very serious threat: % among those who experienced a wildfire disaster,54,pct,,table,N,,
+T4_2_wildfire_not,46,Table 4.2,Climate change a very serious threat: % among those who had not (wildfire),41,pct,,table,N,,
+T4_2_wildfire_difference,46,Table 4.2,Climate change a very serious threat: difference in points (wildfire),13,pct,,table,N,,The published difference is computed from the rounded percentages; the reproduction uses unrounded ones.
+T4_2_flood_experienced,46,Table 4.2,Climate change a very serious threat: % among those who experienced a flood/heavy rain disaster,47,pct,,table,N,,
+T4_2_flood_not,46,Table 4.2,Climate change a very serious threat: % among those who had not (flood/heavy rain),40,pct,,table,N,,
+T4_2_flood_difference,46,Table 4.2,Climate change a very serious threat: difference in points (flood/heavy rain),7,pct,,table,N,,The published difference is computed from the rounded percentages; the reproduction uses unrounded ones.
+T4_2_hurricane_experienced,46,Table 4.2,Climate change a very serious threat: % among those who experienced a hurricane/cyclone disaster,45,pct,,table,N,,
+T4_2_hurricane_not,46,Table 4.2,Climate change a very serious threat: % among those who had not (hurricane/cyclone),41,pct,,table,N,,
+T4_2_hurricane_difference,46,Table 4.2,Climate change a very serious threat: difference in points (hurricane/cyclone),4,pct,,table,N,,The published difference is computed from the rounded percentages; the reproduction uses unrounded ones.
+T4_2_earthquake_experienced,46,Table 4.2,Climate change a very serious threat: % among those who experienced a earthquake disaster,45,pct,,table,N,,
+T4_2_earthquake_not,46,Table 4.2,Climate change a very serious threat: % among those who had not (earthquake),41,pct,,table,N,,
+T4_2_earthquake_difference,46,Table 4.2,Climate change a very serious threat: difference in points (earthquake),4,pct,,table,N,,The published difference is computed from the rounded percentages; the reproduction uses unrounded ones.
+X63,59,Appendix 3,Countries with no Resilience Index score (China and Saudi Arabia),2,count,0,text,N,,
+X64,59,Appendix 3,Countries systematically missing one or more society-dimension items (indicative scores),8,count,0,text,Y,INDEX_NI,Identifying the countries without the National Institutions Index needs the Gallup item.

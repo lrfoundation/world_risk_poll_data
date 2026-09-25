@@ -45,6 +45,7 @@ Note on trends: country coverage differs by wave, and some questions and publish
 
 - [`docs/CODEBOOK.md`](docs/CODEBOOK.md) — the 37-variable harmonised block that lets the four waves stack into one trend file, documented once with value labels and cross-wave comparability notes.
 - `examples/quickstart.*` — load one wave, stack all four into a pooled weighted trend, and trend one question that sits outside the harmonised block (climate-change threat). Same worked example in [Python](examples/quickstart.py), [R](examples/quickstart.R), [SQL / DuckDB](examples/quickstart.sql) and [Julia](examples/quickstart.jl).
+- [`reports/`](reports/README.md) — Python and R scripts that reproduce the findings of each World Risk Poll core report and Focus On report from this data, one folder per wave and per report. Findings that need Gallup World Poll data outside this release are flagged; that data must be obtained from Gallup directly.
 
 ## More information
 

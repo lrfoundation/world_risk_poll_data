@@ -1,0 +1,502 @@
+finding_id,page,section,description,published_value,unit,tolerance,source,requires_gallup,gallup_items,note
+X01,5,Executive summary,Respondents in the 2021 study,125911,count,0,text,N,,
+X02,"5, 9",Executive summary,Countries and territories surveyed,121,count,0,text,N,,
+X03,"5, 12",Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, world",39,pct,,text,N,,
+X04,"5, 12",Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, world",28,pct,,text,N,,
+X05,"5, 12",Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion or don't know, world",30,pct,,text,N,,The report adds the rounded 22% and 8%; unrounded the sum is 30.6.
+X06,"5, 12",Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, world",22,pct,,text,N,,
+X07,"5, 12",Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't know/refused, world",8,pct,,text,N,,
+X08_women,"5, 12",Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, women",35,pct,,text,N,,
+X08_men,"5, 12",Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, men",42,pct,,text,N,,
+X09_women,12,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, women",29,pct,,text,N,,
+X09_men,12,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, men",27,pct,,text,N,,
+X10_2019,12,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, 2019",40,pct,,text,N,,Countries surveyed in both 2019 and 2021 (119).
+X10_2021,12,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, 2021",39,pct,,text,N,,Countries surveyed in both 2019 and 2021 (119).
+X11_2019,12,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, 2019",30,pct,,text,N,,Countries surveyed in both 2019 and 2021 (119).
+X11_2021,12,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, 2021",28,pct,,text,N,,Countries surveyed in both 2019 and 2021 (119).
+C1_1_world_help,12,Chart 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, world",39,pct,,chart,N,,
+C1_1_world_harm,12,Chart 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, world",28,pct,,chart,N,,
+C1_1_world_neither,12,Chart 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % neither, world",2,pct,,chart,N,,
+C1_1_world_no_opinion,12,Chart 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, world",22,pct,,chart,N,,
+C1_1_world_dk,12,Chart 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't know/refused, world",8,pct,,chart,N,,
+C1_1_women_help,12,Chart 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, women",35,pct,,chart,N,,
+C1_1_women_harm,12,Chart 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, women",29,pct,,chart,N,,
+C1_1_women_neither,12,Chart 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % neither, women",2,pct,,chart,N,,
+C1_1_women_no_opinion,12,Chart 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, women",24,pct,,chart,N,,
+C1_1_women_dk,12,Chart 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't know/refused, women",9,pct,,chart,N,,
+C1_1_men_help,12,Chart 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, men",42,pct,,chart,N,,
+C1_1_men_harm,12,Chart 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, men",27,pct,,chart,N,,
+C1_1_men_neither,12,Chart 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % neither, men",2,pct,,chart,N,,
+C1_1_men_no_opinion,12,Chart 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, men",20,pct,,chart,N,,
+C1_1_men_dk,12,Chart 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't know/refused, men",8,pct,,chart,N,,
+X12_help,"5, 13",Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Eastern Asia",57,pct,,text,N,,
+X12_harm,"5, 13",Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Eastern Asia",13,pct,,text,N,,
+X13,13,Chapter 1,"Ratio mostly help / mostly harm, Eastern Asia ('4.4:1')",4.4,ratio,0.1,text,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+X14_harm,13,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Eastern Africa",51,pct,,text,N,,
+X14_help,13,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Eastern Africa",22,pct,,text,N,,
+X15_TZA,13,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, TZA",62,pct,,text,N,,
+X15_KEN,13,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, KEN",57,pct,,text,N,,
+X15_UGA,13,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, UGA",57,pct,,text,N,,
+X16,13,Chapter 1,"Highest % mostly help among Tanzania, Kenya and Uganda ('no more than 25%')",25,pct,,text,N,,
+C1_2_east_asia_help,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Eastern Asia",57,pct,,chart,N,,
+C1_2_east_asia_no_opinion,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, Eastern Asia",18,pct,,chart,N,,
+C1_2_east_asia_harm,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Eastern Asia",13,pct,,chart,N,,
+C1_2_east_asia_dk,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't know/refused, Eastern Asia",9,pct,,chart,N,,
+C1_2_east_asia_ratio,13,Chart 1.2,"Ratio mostly help / mostly harm, Eastern Asia",4.4,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+C1_2_north_west_europe_help,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Northern/Western Europe",48,pct,,chart,N,,
+C1_2_north_west_europe_neither,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % neither, Northern/Western Europe",6,pct,,chart,N,,
+C1_2_north_west_europe_no_opinion,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, Northern/Western Europe",18,pct,,chart,N,,
+C1_2_north_west_europe_harm,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Northern/Western Europe",27,pct,,chart,N,,
+C1_2_north_west_europe_ratio,13,Chart 1.2,"Ratio mostly help / mostly harm, Northern/Western Europe",1.8,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+C1_2_south_europe_help,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Southern Europe",44,pct,,chart,N,,
+C1_2_south_europe_neither,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % neither, Southern Europe",6,pct,,chart,N,,
+C1_2_south_europe_no_opinion,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, Southern Europe",13,pct,,chart,N,,
+C1_2_south_europe_harm,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Southern Europe",35,pct,,chart,N,,
+C1_2_south_europe_ratio,13,Chart 1.2,"Ratio mostly help / mostly harm, Southern Europe",1.3,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+C1_2_aus_nz_help,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Australia & New Zealand",43,pct,,chart,N,,
+C1_2_aus_nz_no_opinion,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, Australia & New Zealand",29,pct,,chart,N,,
+C1_2_aus_nz_harm,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Australia & New Zealand",26,pct,,chart,N,,
+C1_2_aus_nz_ratio,13,Chart 1.2,"Ratio mostly help / mostly harm, Australia & New Zealand",1.7,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+C1_2_east_europe_help,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Eastern Europe",38,pct,,chart,N,,
+C1_2_east_europe_no_opinion,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, Eastern Europe",29,pct,,chart,N,,
+C1_2_east_europe_harm,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Eastern Europe",27,pct,,chart,N,,
+C1_2_east_europe_ratio,13,Chart 1.2,"Ratio mostly help / mostly harm, Eastern Europe",1.4,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+C1_2_north_america_help,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Northern America",33,pct,,chart,N,,
+C1_2_north_america_no_opinion,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, Northern America",31,pct,,chart,N,,
+C1_2_north_america_harm,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Northern America",34,pct,,chart,N,,
+C1_2_north_america_ratio,13,Chart 1.2,"Ratio mostly help / mostly harm, Northern America",1.0,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+C1_2_central_asia_help,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Central Asia",33,pct,,chart,N,,
+C1_2_central_asia_no_opinion,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, Central Asia",21,pct,,chart,N,,
+C1_2_central_asia_harm,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Central Asia",28,pct,,chart,N,,
+C1_2_central_asia_dk,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't know/refused, Central Asia",16,pct,,chart,N,,
+C1_2_central_asia_ratio,13,Chart 1.2,"Ratio mostly help / mostly harm, Central Asia",1.2,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+C1_2_southeast_asia_help,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Southeastern Asia",33,pct,,chart,N,,
+C1_2_southeast_asia_no_opinion,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, Southeastern Asia",30,pct,,chart,N,,
+C1_2_southeast_asia_harm,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Southeastern Asia",27,pct,,chart,N,,
+C1_2_southeast_asia_dk,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't know/refused, Southeastern Asia",8,pct,,chart,N,,
+C1_2_southeast_asia_ratio,13,Chart 1.2,"Ratio mostly help / mostly harm, Southeastern Asia",1.2,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+C1_2_middle_east_help,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Middle East",32,pct,,chart,N,,
+C1_2_middle_east_no_opinion,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, Middle East",17,pct,,chart,N,,
+C1_2_middle_east_harm,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Middle East",32,pct,,chart,N,,
+C1_2_middle_east_dk,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't know/refused, Middle East",17,pct,,chart,N,,
+C1_2_middle_east_ratio,13,Chart 1.2,"Ratio mostly help / mostly harm, Middle East",1.0,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+C1_2_south_asia_help,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Southern Asia",31,pct,,chart,N,,
+C1_2_south_asia_no_opinion,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, Southern Asia",18,pct,,chart,N,,
+C1_2_south_asia_harm,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Southern Asia",36,pct,,chart,N,,
+C1_2_south_asia_dk,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't know/refused, Southern Asia",13,pct,,chart,N,,
+C1_2_south_asia_ratio,13,Chart 1.2,"Ratio mostly help / mostly harm, Southern Asia",0.9,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+C1_2_latin_america_help,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Latin America & Caribbean",30,pct,,chart,N,,
+C1_2_latin_america_no_opinion,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, Latin America & Caribbean",32,pct,,chart,N,,
+C1_2_latin_america_harm,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Latin America & Caribbean",34,pct,,chart,N,,
+C1_2_latin_america_ratio,13,Chart 1.2,"Ratio mostly help / mostly harm, Latin America & Caribbean",0.9,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+C1_2_central_west_africa_help,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Central/Western Africa",30,pct,,chart,N,,
+C1_2_central_west_africa_no_opinion,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, Central/Western Africa",26,pct,,chart,N,,
+C1_2_central_west_africa_harm,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Central/Western Africa",37,pct,,chart,N,,
+C1_2_central_west_africa_dk,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't know/refused, Central/Western Africa",5,pct,,chart,N,,
+C1_2_central_west_africa_ratio,13,Chart 1.2,"Ratio mostly help / mostly harm, Central/Western Africa",0.8,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+C1_2_southern_africa_help,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Southern Africa",24,pct,,chart,N,,
+C1_2_southern_africa_no_opinion,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, Southern Africa",27,pct,,chart,N,,
+C1_2_southern_africa_harm,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Southern Africa",37,pct,,chart,N,,
+C1_2_southern_africa_dk,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't know/refused, Southern Africa",8,pct,,chart,N,,
+C1_2_southern_africa_ratio,13,Chart 1.2,"Ratio mostly help / mostly harm, Southern Africa",0.6,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+C1_2_north_africa_help,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Northern Africa",23,pct,,chart,N,,
+C1_2_north_africa_no_opinion,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, Northern Africa",27,pct,,chart,N,,
+C1_2_north_africa_harm,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Northern Africa",33,pct,,chart,N,,
+C1_2_north_africa_dk,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't know/refused, Northern Africa",13,pct,,chart,N,,
+C1_2_north_africa_ratio,13,Chart 1.2,"Ratio mostly help / mostly harm, Northern Africa",0.7,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+C1_2_east_africa_help,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Eastern Africa",22,pct,,chart,N,,
+C1_2_east_africa_no_opinion,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, Eastern Africa",22,pct,,chart,N,,
+C1_2_east_africa_harm,13,Chart 1.2,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Eastern Africa",51,pct,,chart,N,,
+C1_2_east_africa_ratio,13,Chart 1.2,"Ratio mostly help / mostly harm, Eastern Africa",0.4,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+M1_1_east_asia,14,Map 1.1,"Ratio mostly help / mostly harm, Eastern Asia",4.4,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+M1_1_north_west_europe,14,Map 1.1,"Ratio mostly help / mostly harm, Northern/Western Europe",1.8,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+M1_1_south_europe,14,Map 1.1,"Ratio mostly help / mostly harm, Southern Europe",1.3,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+M1_1_aus_nz,14,Map 1.1,"Ratio mostly help / mostly harm, Australia & New Zealand",1.7,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+M1_1_east_europe,14,Map 1.1,"Ratio mostly help / mostly harm, Eastern Europe",1.4,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+M1_1_north_america,14,Map 1.1,"Ratio mostly help / mostly harm, Northern America",1.0,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+M1_1_central_asia,14,Map 1.1,"Ratio mostly help / mostly harm, Central Asia",1.2,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+M1_1_southeast_asia,14,Map 1.1,"Ratio mostly help / mostly harm, Southeastern Asia",1.2,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+M1_1_middle_east,14,Map 1.1,"Ratio mostly help / mostly harm, Middle East",1.0,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+M1_1_south_asia,14,Map 1.1,"Ratio mostly help / mostly harm, Southern Asia",0.9,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+M1_1_latin_america,14,Map 1.1,"Ratio mostly help / mostly harm, Latin America & Caribbean",0.9,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+M1_1_central_west_africa,14,Map 1.1,"Ratio mostly help / mostly harm, Central/Western Africa",0.8,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+M1_1_southern_africa,14,Map 1.1,"Ratio mostly help / mostly harm, Southern Africa",0.6,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+M1_1_north_africa,14,Map 1.1,"Ratio mostly help / mostly harm, Northern Africa",0.7,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+M1_1_east_africa,14,Map 1.1,"Ratio mostly help / mostly harm, Eastern Africa",0.4,ratio,0.1,chart,N,,"Ratio of the rounded percentages (mostly help / mostly harm), as in the report."
+X17_help,14,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, China",56,pct,,text,N,,
+X17_harm,14,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, China",13,pct,,text,N,,
+T1_1_KOR_help,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, South Korea",70,pct,,table,N,,
+T1_1_KOR_harm,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, South Korea",15,pct,,table,N,,
+T1_1_KOR_net,15,Table 1.1,"Net 'mostly help' (points), South Korea",55,pct,,table,N,,"Net = mostly help minus mostly harm, computed from unrounded values; the report subtracts the rounded percentages."
+T1_1_KOR_no_opinion_dk,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % no opinion/don't know, South Korea",14,pct,,table,N,,
+T1_1_JPN_help,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Japan",62,pct,,table,N,,
+T1_1_JPN_harm,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Japan",13,pct,,table,N,,
+T1_1_JPN_net,15,Table 1.1,"Net 'mostly help' (points), Japan",49,pct,,table,N,,"Net = mostly help minus mostly harm, computed from unrounded values; the report subtracts the rounded percentages."
+T1_1_JPN_no_opinion_dk,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % no opinion/don't know, Japan",20,pct,,table,N,,
+T1_1_FIN_help,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Finland",67,pct,,table,N,,
+T1_1_FIN_harm,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Finland",19,pct,,table,N,,
+T1_1_FIN_net,15,Table 1.1,"Net 'mostly help' (points), Finland",48,pct,,table,N,,"Net = mostly help minus mostly harm, computed from unrounded values; the report subtracts the rounded percentages."
+T1_1_FIN_no_opinion_dk,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % no opinion/don't know, Finland",14,pct,,table,N,,
+T1_1_SWE_help,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Sweden",58,pct,,table,N,,
+T1_1_SWE_harm,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Sweden",14,pct,,table,N,,
+T1_1_SWE_net,15,Table 1.1,"Net 'mostly help' (points), Sweden",44,pct,,table,N,,"Net = mostly help minus mostly harm, computed from unrounded values; the report subtracts the rounded percentages."
+T1_1_SWE_no_opinion_dk,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % no opinion/don't know, Sweden",28,pct,,table,N,,
+T1_1_CHN_help,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, China",56,pct,,table,N,,
+T1_1_CHN_harm,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, China",13,pct,,table,N,,
+T1_1_CHN_net,15,Table 1.1,"Net 'mostly help' (points), China",43,pct,,table,N,,"Net = mostly help minus mostly harm, computed from unrounded values; the report subtracts the rounded percentages."
+T1_1_CHN_no_opinion_dk,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % no opinion/don't know, China",28,pct,,table,N,,
+T1_1_DEU_help,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Germany",59,pct,,table,N,,
+T1_1_DEU_harm,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Germany",20,pct,,table,N,,
+T1_1_DEU_net,15,Table 1.1,"Net 'mostly help' (points), Germany",39,pct,,table,N,,"Net = mostly help minus mostly harm, computed from unrounded values; the report subtracts the rounded percentages."
+T1_1_DEU_no_opinion_dk,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % no opinion/don't know, Germany",11,pct,,table,N,,
+T1_1_NOR_help,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Norway",56,pct,,table,N,,
+T1_1_NOR_harm,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Norway",18,pct,,table,N,,
+T1_1_NOR_net,15,Table 1.1,"Net 'mostly help' (points), Norway",38,pct,,table,N,,"Net = mostly help minus mostly harm, computed from unrounded values; the report subtracts the rounded percentages."
+T1_1_NOR_no_opinion_dk,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % no opinion/don't know, Norway",26,pct,,table,N,,
+T1_1_EST_help,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Estonia",57,pct,,table,N,,
+T1_1_EST_harm,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Estonia",20,pct,,table,N,,
+T1_1_EST_net,15,Table 1.1,"Net 'mostly help' (points), Estonia",37,pct,,table,N,,"Net = mostly help minus mostly harm, computed from unrounded values; the report subtracts the rounded percentages."
+T1_1_EST_no_opinion_dk,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % no opinion/don't know, Estonia",20,pct,,table,N,,
+T1_1_DNK_help,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Denmark",54,pct,,table,N,,
+T1_1_DNK_harm,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Denmark",18,pct,,table,N,,
+T1_1_DNK_net,15,Table 1.1,"Net 'mostly help' (points), Denmark",36,pct,,table,N,,"Net = mostly help minus mostly harm, computed from unrounded values; the report subtracts the rounded percentages."
+T1_1_DNK_no_opinion_dk,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % no opinion/don't know, Denmark",27,pct,,table,N,,
+T1_1_ISL_help,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, Iceland",48,pct,,table,N,,
+T1_1_ISL_harm,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, Iceland",14,pct,,table,N,,
+T1_1_ISL_net,15,Table 1.1,"Net 'mostly help' (points), Iceland",34,pct,,table,N,,"Net = mostly help minus mostly harm, computed from unrounded values; the report subtracts the rounded percentages."
+T1_1_ISL_no_opinion_dk,15,Table 1.1,"AI will mostly help or mostly harm people in this country in the next 20 years: % no opinion/don't know, Iceland",36,pct,,table,N,,
+X18_access,16,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, have access to the internet",44,pct,,text,Y,WP16056,"Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+X18_no_access,16,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, no access to the internet",28,pct,,text,Y,WP16056,"Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+X19,16,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, primary education or less",34,pct,,text,N,,
+X20,16,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, primary education or less with internet access",43,pct,,text,Y,WP16056,"Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+C1_3_access_help,16,Chart 1.3,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, access to the internet",44,pct,,chart,Y,WP16056,"Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+C1_3_access_no_opinion,16,Chart 1.3,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, access to the internet",22,pct,,chart,Y,WP16056,"Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+C1_3_access_harm,16,Chart 1.3,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, access to the internet",26,pct,,chart,Y,WP16056,"Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+C1_3_access_dk,16,Chart 1.3,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't know/refused, access to the internet",5,pct,,chart,Y,WP16056,"Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+C1_3_no_access_help,16,Chart 1.3,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, no access to the internet",28,pct,,chart,Y,WP16056,"Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+C1_3_no_access_no_opinion,16,Chart 1.3,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, no access to the internet",23,pct,,chart,Y,WP16056,"Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+C1_3_no_access_harm,16,Chart 1.3,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, no access to the internet",32,pct,,chart,Y,WP16056,"Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+C1_3_no_access_dk,16,Chart 1.3,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't know/refused, no access to the internet",15,pct,,chart,Y,WP16056,"Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+X21_help,16,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, United States",32,pct,,text,N,,
+X21_harm,16,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, United States",34,pct,,text,N,,
+X22_USA,16,Chapter 1,"% religion an important part of daily life, United States",58,pct,,text,Y,WP119,Gallup World Poll item 'Is religion an important part of your daily life?' (WP119).
+X22_north_west_europe,16,Chapter 1,"% religion an important part of daily life, Northern/Western Europe",31,pct,,text,Y,WP119,Gallup World Poll item 'Is religion an important part of your daily life?' (WP119).
+X22_east_asia,16,Chapter 1,"% religion an important part of daily life, Eastern Asia",17,pct,,text,Y,WP119,Gallup World Poll item 'Is religion an important part of your daily life?' (WP119).
+X23_important,16,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, United States, religion important",25,pct,,text,Y,WP119,Gallup World Poll item 'Is religion an important part of your daily life?' (WP119).
+X23_not_important,16,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, United States, religion not important",43,pct,,text,Y,WP119,Gallup World Poll item 'Is religion an important part of your daily life?' (WP119).
+X24_important_harm,16,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, religion important",34,pct,,text,Y,WP119,Gallup World Poll item 'Is religion an important part of your daily life?' (WP119).
+X24_important_help,"5, 16",Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, religion important",32,pct,,text,Y,WP119,Gallup World Poll item 'Is religion an important part of your daily life?' (WP119).
+X24_not_important_help,"5, 16",Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, religion not important",48,pct,,text,Y,WP119,Gallup World Poll item 'Is religion an important part of your daily life?' (WP119).
+X24_not_important_harm,16,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, religion not important",21,pct,,text,Y,WP119,Gallup World Poll item 'Is religion an important part of your daily life?' (WP119).
+C1_4_important_help,17,Chart 1.4,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, religion important in daily life",32,pct,,chart,Y,WP119,Gallup World Poll item 'Is religion an important part of your daily life?' (WP119).
+C1_4_important_no_opinion,17,Chart 1.4,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, religion important in daily life",24,pct,,chart,Y,WP119,Gallup World Poll item 'Is religion an important part of your daily life?' (WP119).
+C1_4_important_harm,17,Chart 1.4,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, religion important in daily life",34,pct,,chart,Y,WP119,Gallup World Poll item 'Is religion an important part of your daily life?' (WP119).
+C1_4_important_dk,17,Chart 1.4,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't know/refused, religion important in daily life",9,pct,,chart,Y,WP119,Gallup World Poll item 'Is religion an important part of your daily life?' (WP119).
+C1_4_not_important_help,17,Chart 1.4,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, religion not important in daily life",48,pct,,chart,Y,WP119,Gallup World Poll item 'Is religion an important part of your daily life?' (WP119).
+C1_4_not_important_no_opinion,17,Chart 1.4,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, religion not important in daily life",20,pct,,chart,Y,WP119,Gallup World Poll item 'Is religion an important part of your daily life?' (WP119).
+C1_4_not_important_harm,17,Chart 1.4,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, religion not important in daily life",21,pct,,chart,Y,WP119,Gallup World Poll item 'Is religion an important part of your daily life?' (WP119).
+C1_4_not_important_dk,17,Chart 1.4,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't know/refused, religion not important in daily life",7,pct,,chart,Y,WP119,Gallup World Poll item 'Is religion an important part of your daily life?' (WP119).
+X25_important,17,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, internet access and post-secondary education, religion important",47,pct,,text,Y,"WP119, WP16056","Gallup World Poll item 'Is religion an important part of your daily life?' (WP119). Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+X25_not_important,17,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, internet access and post-secondary education, religion not important",64,pct,,text,Y,"WP119, WP16056","Gallup World Poll item 'Is religion an important part of your daily life?' (WP119). Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+X26_help,"5, 17",Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, experienced discrimination",35,pct,,text,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded."
+X26_harm,"5, 17",Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, experienced discrimination",35,pct,,text,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded."
+X27_help,17,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, not experienced discrimination",33,pct,,text,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded."
+X27_harm,17,Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, not experienced discrimination",32,pct,,text,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded."
+X28_not_experienced,"5, 17",Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % no opinion or don't know, not experienced discrimination",32,pct,,text,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded."
+X28_experienced,"5, 17",Chapter 1,"AI will mostly help or mostly harm people in this country in the next 20 years: % no opinion or don't know, experienced discrimination",27,pct,,text,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded."
+C1_5_experienced_help,18,Chart 1.5,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, experienced discrimination",35,pct,,chart,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded."
+C1_5_experienced_no_opinion,18,Chart 1.5,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, experienced discrimination",21,pct,,chart,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded."
+C1_5_experienced_harm,18,Chart 1.5,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, experienced discrimination",35,pct,,chart,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded."
+C1_5_experienced_dk,18,Chart 1.5,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't know/refused, experienced discrimination",6,pct,,chart,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded."
+C1_5_not_experienced_help,18,Chart 1.5,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly help, not experienced discrimination",33,pct,,chart,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded."
+C1_5_not_experienced_no_opinion,18,Chart 1.5,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't have an opinion, not experienced discrimination",24,pct,,chart,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded."
+C1_5_not_experienced_harm,18,Chart 1.5,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, not experienced discrimination",32,pct,,chart,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded."
+C1_5_not_experienced_dk,18,Chart 1.5,"AI will mostly help or mostly harm people in this country in the next 20 years: % don't know/refused, not experienced discrimination",9,pct,,chart,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded."
+X29,"5, 18",Chapter 1,Countries where % mostly harm is at least 10 points higher among those who experienced discrimination,16,count,0,text,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded. Count of countries with an unrounded gap of 10 points or more. 13 of the 16 countries the report names meet the rule. Afghanistan, Switzerland and Sweden have gaps of 9.7-9.9 points; Armenia and Uzbekistan (13.4 and 14.9) meet it but are not named."
+C1_6_DNK_experienced,19,Chart 1.6,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, experienced discrimination, Denmark",26,pct,,chart,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded."
+C1_6_DNK_not_experienced,19,Chart 1.6,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, not experienced discrimination, Denmark",15,pct,,chart,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded."
+C1_6_NOR_experienced,19,Chart 1.6,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, experienced discrimination, Norway",26,pct,,chart,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded."
+C1_6_NOR_not_experienced,19,Chart 1.6,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, not experienced discrimination, Norway",14,pct,,chart,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded."
+C1_6_SWE_experienced,19,Chart 1.6,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, experienced discrimination, Sweden",21,pct,,chart,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded."
+C1_6_SWE_not_experienced,19,Chart 1.6,"AI will mostly help or mostly harm people in this country in the next 20 years: % mostly harm, not experienced discrimination, Sweden",11,pct,,chart,N,,"Discrimination based on skin colour, ethnic group/nationality or gender (WP22259, WP22261, WP22262); China, Saudi Arabia and the UAE were not asked and are excluded."
+X30_yes,"6, 20",Chapter 1,Would feel safe in a car without a human driver: % yes,27,pct,,text,N,,
+X30_no,"6, 20",Chapter 1,Would feel safe in a car without a human driver: % no,65,pct,,text,N,,
+C1_7_yes,21,Chart 1.7,Would feel safe in a car without a human driver: % yes,27,pct,,chart,N,,
+C1_7_no,21,Chart 1.7,Would feel safe in a car without a human driver: % no,65,pct,,chart,N,,
+C1_7_dk,21,Chart 1.7,Would feel safe in a car without a human driver: % don't know/refused,8,pct,,chart,N,,
+X31,"6, 21",Chapter 1,Would feel safe in a car without a human driver: highest % yes in any country ('no more than 45%'; Denmark 45%),45,pct,,text,N,,
+X32,21,Chapter 1,Would feel safe in a car without a human driver: country with the highest % yes,Denmark,text,,text,N,,
+X33_men,21,Chapter 1,"Would feel safe in a car without a human driver: % yes, Afghanistan, men",54,pct,,text,N,,
+X33_women,21,Chapter 1,"Would feel safe in a car without a human driver: % yes, Afghanistan, women",34,pct,,text,N,,
+T1_2_DNK,21,Table 1.2,"Would feel safe in a car without a human driver: % yes, Denmark",45,pct,,table,N,,
+T1_2_ARE,21,Table 1.2,"Would feel safe in a car without a human driver: % yes, United Arab Emirates",44,pct,,table,N,,
+T1_2_AFG,21,Table 1.2,"Would feel safe in a car without a human driver: % yes, Afghanistan",44,pct,,table,N,,
+T1_2_ITA,21,Table 1.2,"Would feel safe in a car without a human driver: % yes, Italy",43,pct,,table,N,,
+T1_2_ESP,21,Table 1.2,"Would feel safe in a car without a human driver: % yes, Spain",41,pct,,table,N,,
+T1_2_KGZ,21,Table 1.2,"Would feel safe in a car without a human driver: % yes, Kyrgyzstan",41,pct,,table,N,,
+T1_2_SWE,21,Table 1.2,"Would feel safe in a car without a human driver: % yes, Sweden",40,pct,,table,N,,
+T1_2_SAU,21,Table 1.2,"Would feel safe in a car without a human driver: % yes, Saudi Arabia",39,pct,,table,N,,
+T1_2_IRN,21,Table 1.2,"Would feel safe in a car without a human driver: % yes, Iran",38,pct,,table,N,,
+T1_2_NPL,21,Table 1.2,"Would feel safe in a car without a human driver: % yes, Nepal",38,pct,,table,N,,
+X34_post_secondary,22,Chapter 1,"Would feel safe in a car without a human driver: % yes, post-secondary education",35,pct,,text,N,,
+X34_secondary,22,Chapter 1,"Would feel safe in a car without a human driver: % yes, secondary education",28,pct,,text,N,,
+X34_primary,22,Chapter 1,"Would feel safe in a car without a human driver: % yes, primary education or less",25,pct,,text,N,,
+X35,22,Chapter 1,Would feel safe in a car without a human driver: smallest gap (with minus without internet access) within an education level ('at least nine points'),9,pct,,text,Y,WP16056,"Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+C1_8_world_primary,22,Chart 1.8,"Would feel safe in a car without a human driver: % yes, world, primary education or less",25,pct,,chart,N,,
+C1_8_world_secondary,22,Chart 1.8,"Would feel safe in a car without a human driver: % yes, world, secondary education",28,pct,,chart,N,,
+C1_8_world_post_secondary,22,Chart 1.8,"Would feel safe in a car without a human driver: % yes, world, post-secondary education",35,pct,,chart,N,,
+C1_8_internet_primary,22,Chart 1.8,"Would feel safe in a car without a human driver: % yes, internet, primary education or less",31,pct,,chart,Y,WP16056,"Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+C1_8_internet_secondary,22,Chart 1.8,"Would feel safe in a car without a human driver: % yes, internet, secondary education",30,pct,,chart,Y,WP16056,"Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+C1_8_internet_post_secondary,22,Chart 1.8,"Would feel safe in a car without a human driver: % yes, internet, post-secondary education",35,pct,,chart,Y,WP16056,"Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+C1_8_no_internet_primary,22,Chart 1.8,"Would feel safe in a car without a human driver: % yes, no internet, primary education or less",21,pct,,chart,Y,WP16056,"Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+C1_8_no_internet_secondary,22,Chart 1.8,"Would feel safe in a car without a human driver: % yes, no internet, secondary education",20,pct,,chart,Y,WP16056,"Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+C1_8_no_internet_post_secondary,22,Chart 1.8,"Would feel safe in a car without a human driver: % yes, no internet, post-secondary education",26,pct,,chart,Y,WP16056,"Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+X36,"6, 23",Chapter 2,Countries and territories surveyed in both 2019 and 2021,119,count,0,text,N,,
+X37_2019,"6, 23",Chapter 2,"Used the internet in the past 30 days: %, world, 2019",54,pct,,text,N,,Countries grouped by their 2021 World Bank income group in both years; 119 countries surveyed in both waves.
+X37_2021,"6, 23",Chapter 2,"Used the internet in the past 30 days: %, world, 2021",63,pct,,text,N,,Countries grouped by their 2021 World Bank income group in both years; 119 countries surveyed in both waves.
+X38_2019,"6, 23",Chapter 2,"Used the internet in the past 30 days: %, lower-middle-income countries, 2019",31,pct,,text,N,,Countries grouped by their 2021 World Bank income group in both years; 119 countries surveyed in both waves.
+X38_2021,"6, 23",Chapter 2,"Used the internet in the past 30 days: %, lower-middle-income countries, 2021",41,pct,,text,N,,Countries grouped by their 2021 World Bank income group in both years; 119 countries surveyed in both waves.
+X39_2019,"6, 23",Chapter 2,"Used the internet in the past 30 days: %, upper-middle-income countries, 2019",65,pct,,text,N,,Countries grouped by their 2021 World Bank income group in both years; 119 countries surveyed in both waves.
+X39_2021,"6, 23",Chapter 2,"Used the internet in the past 30 days: %, upper-middle-income countries, 2021",76,pct,,text,N,,Countries grouped by their 2021 World Bank income group in both years; 119 countries surveyed in both waves.
+X40_2019,"6, 23",Chapter 2,"Used the internet in the past 30 days: %, low-income countries, 2019",20,pct,,text,N,,Countries grouped by their 2021 World Bank income group in both years; 119 countries surveyed in both waves.
+X40_2021,"6, 23",Chapter 2,"Used the internet in the past 30 days: %, low-income countries, 2021",22,pct,,text,N,,Countries grouped by their 2021 World Bank income group in both years; 119 countries surveyed in both waves.
+X41_south_asia,6,Executive summary,"Used the internet in the past 30 days: %, Southern Asia",31,pct,,text,N,,
+X41_east_africa,6,Executive summary,"Used the internet in the past 30 days: %, Eastern Africa",29,pct,,text,N,,
+X41_central_west_africa,6,Executive summary,"Used the internet in the past 30 days: %, Central/Western Africa",27,pct,,text,N,,
+X42_primary,"6, 25",Chapter 2,"Used the internet in the past 30 days: %, primary education or less",38,pct,,text,N,,
+X42_secondary,"6, 25",Chapter 2,"Used the internet in the past 30 days: %, secondary education",78,pct,,text,N,,
+X42_post_secondary,"6, 25",Chapter 2,"Used the internet in the past 30 days: %, post-secondary education",94,pct,,text,N,,
+X43_men,"6, 25",Chapter 2,"Used the internet in the past 30 days: %, men",66,pct,,text,N,,
+X43_women,"6, 25",Chapter 2,"Used the internet in the past 30 days: %, women",59,pct,,text,N,,
+X44,6,Executive summary,Used the internet in the past 30 days: region with the widest gap between men and women,Southern Asia,text,,text,N,,
+X45,6,Executive summary,"Used the internet in the past 30 days: gap (men minus women), Southern Asia",23,pct,,text,N,,
+X46,"6, 25",Chapter 2,"Used the internet in the past 30 days: %, women with primary education or less, Southern Asia",10,pct,,text,N,,
+X47_2019,"6, 26",Chapter 2,"Used the internet in the past 30 days: %, aged 65+, 2019",28,pct,,text,N,,Countries surveyed in both 2019 and 2021 (119).
+X47_2021,"6, 26",Chapter 2,"Used the internet in the past 30 days: %, aged 65+, 2021",46,pct,,text,N,,Countries surveyed in both 2019 and 2021 (119).
+C2_1_world_2019,23,Chart 2.1,"Used the internet in the past 30 days: %, World, 2019",54,pct,,chart,N,,Countries grouped by their 2021 World Bank income group in both years; 119 countries surveyed in both waves.
+C2_1_world_2021,23,Chart 2.1,"Used the internet in the past 30 days: %, World, 2021",63,pct,,chart,N,,Countries grouped by their 2021 World Bank income group in both years; 119 countries surveyed in both waves.
+C2_1_low_2019,23,Chart 2.1,"Used the internet in the past 30 days: %, Low-income countries, 2019",20,pct,,chart,N,,Countries grouped by their 2021 World Bank income group in both years; 119 countries surveyed in both waves.
+C2_1_low_2021,23,Chart 2.1,"Used the internet in the past 30 days: %, Low-income countries, 2021",22,pct,,chart,N,,Countries grouped by their 2021 World Bank income group in both years; 119 countries surveyed in both waves.
+C2_1_lower_middle_2019,23,Chart 2.1,"Used the internet in the past 30 days: %, Lower-middle-income countries, 2019",31,pct,,chart,N,,Countries grouped by their 2021 World Bank income group in both years; 119 countries surveyed in both waves.
+C2_1_lower_middle_2021,23,Chart 2.1,"Used the internet in the past 30 days: %, Lower-middle-income countries, 2021",41,pct,,chart,N,,Countries grouped by their 2021 World Bank income group in both years; 119 countries surveyed in both waves.
+C2_1_upper_middle_2019,23,Chart 2.1,"Used the internet in the past 30 days: %, Upper-middle-income countries, 2019",65,pct,,chart,N,,Countries grouped by their 2021 World Bank income group in both years; 119 countries surveyed in both waves.
+C2_1_upper_middle_2021,23,Chart 2.1,"Used the internet in the past 30 days: %, Upper-middle-income countries, 2021",76,pct,,chart,N,,Countries grouped by their 2021 World Bank income group in both years; 119 countries surveyed in both waves.
+C2_1_high_2019,23,Chart 2.1,"Used the internet in the past 30 days: %, High-income countries, 2019",85,pct,,chart,N,,Countries grouped by their 2021 World Bank income group in both years; 119 countries surveyed in both waves.
+C2_1_high_2021,23,Chart 2.1,"Used the internet in the past 30 days: %, High-income countries, 2021",89,pct,,chart,N,,Countries grouped by their 2021 World Bank income group in both years; 119 countries surveyed in both waves.
+C2_2_north_america,24,Chart 2.2,"Used the internet in the past 30 days: %, Northern America",93,pct,,chart,N,,
+C2_2_aus_nz,24,Chart 2.2,"Used the internet in the past 30 days: %, Australia & New Zealand",93,pct,,chart,N,,
+C2_2_east_europe,24,Chart 2.2,"Used the internet in the past 30 days: %, Eastern Europe",91,pct,,chart,N,,
+C2_2_north_west_europe,24,Chart 2.2,"Used the internet in the past 30 days: %, Northern/Western Europe",89,pct,,chart,N,,
+C2_2_south_europe,24,Chart 2.2,"Used the internet in the past 30 days: %, Southern Europe",88,pct,,chart,N,,
+C2_2_latin_america,24,Chart 2.2,"Used the internet in the past 30 days: %, Latin America & Caribbean",80,pct,,chart,N,,
+C2_2_middle_east,24,Chart 2.2,"Used the internet in the past 30 days: %, Middle East",80,pct,,chart,N,,
+C2_2_east_asia,24,Chart 2.2,"Used the internet in the past 30 days: %, Eastern Asia",73,pct,,chart,N,,
+C2_2_southeast_asia,24,Chart 2.2,"Used the internet in the past 30 days: %, Southeastern Asia",70,pct,,chart,N,,
+C2_2_southern_africa,24,Chart 2.2,"Used the internet in the past 30 days: %, Southern Africa",66,pct,,chart,N,,
+C2_2_central_asia,24,Chart 2.2,"Used the internet in the past 30 days: %, Central Asia",63,pct,,chart,N,,
+C2_2_north_africa,24,Chart 2.2,"Used the internet in the past 30 days: %, Northern Africa",55,pct,,chart,N,,
+C2_2_south_asia,24,Chart 2.2,"Used the internet in the past 30 days: %, Southern Asia",31,pct,,chart,N,,
+C2_2_east_africa,24,Chart 2.2,"Used the internet in the past 30 days: %, Eastern Africa",29,pct,,chart,N,,
+C2_2_central_west_africa,24,Chart 2.2,"Used the internet in the past 30 days: %, Central/Western Africa",27,pct,,chart,N,,
+X48_south_asia,25,Chapter 2,"% with primary education or less, Southern Asia",65,pct,,text,N,,
+X48_central_west_africa,25,Chapter 2,"% with primary education or less, Central/Western Africa",57,pct,,text,N,,
+X48_east_africa,25,Chapter 2,"% with primary education or less, Eastern Africa",55,pct,,text,N,,
+X48_east_asia,25,Chapter 2,"% with primary education or less, Eastern Asia",55,pct,,text,N,,
+X48_north_africa,25,Chapter 2,"% with primary education or less, Northern Africa",53,pct,,text,N,,
+X49,25,Chapter 2,Regions where people with primary education or less are a majority,5,count,0,text,N,,
+X50_south_asia,25,Chapter 2,"Used the internet in the past 30 days: %, primary education or less, Southern Asia",17,pct,,text,N,,
+X50_east_africa,25,Chapter 2,"Used the internet in the past 30 days: %, primary education or less, Eastern Africa",12,pct,,text,N,,
+X50_central_west_africa,25,Chapter 2,"Used the internet in the past 30 days: %, primary education or less, Central/Western Africa",12,pct,,text,N,,
+C2_3_world_primary,25,Chart 2.3,"Used the internet in the past 30 days: %, world, primary education or less",38,pct,,chart,N,,
+C2_3_world_secondary,25,Chart 2.3,"Used the internet in the past 30 days: %, world, secondary education",78,pct,,chart,N,,
+C2_3_world_post_secondary,25,Chart 2.3,"Used the internet in the past 30 days: %, world, post-secondary education",94,pct,,chart,N,,
+C2_3_south_asia_primary,25,Chart 2.3,"Used the internet in the past 30 days: %, south asia, primary education or less",17,pct,,chart,N,,
+C2_3_south_asia_secondary,25,Chart 2.3,"Used the internet in the past 30 days: %, south asia, secondary education",53,pct,,chart,N,,
+C2_3_south_asia_post_secondary,25,Chart 2.3,"Used the internet in the past 30 days: %, south asia, post-secondary education",78,pct,,chart,N,,
+C2_3_central_west_africa_primary,25,Chart 2.3,"Used the internet in the past 30 days: %, central west africa, primary education or less",12,pct,,chart,N,,
+C2_3_central_west_africa_secondary,25,Chart 2.3,"Used the internet in the past 30 days: %, central west africa, secondary education",45,pct,,chart,N,,
+C2_3_central_west_africa_post_secondary,25,Chart 2.3,"Used the internet in the past 30 days: %, central west africa, post-secondary education",73,pct,,chart,N,,
+C2_3_east_africa_primary,25,Chart 2.3,"Used the internet in the past 30 days: %, east africa, primary education or less",12,pct,,chart,N,,
+C2_3_east_africa_secondary,25,Chart 2.3,"Used the internet in the past 30 days: %, east africa, secondary education",47,pct,,chart,N,,
+C2_3_east_africa_post_secondary,25,Chart 2.3,"Used the internet in the past 30 days: %, east africa, post-secondary education",81,pct,,chart,N,,
+X51_lowest,25,Chapter 2,"Used the internet in the past 30 days: %, lowest per-capita income quintile",51,pct,,text,N,,
+X51_highest,25,Chapter 2,"Used the internet in the past 30 days: %, highest per-capita income quintile",77,pct,,text,N,,
+X52_men,25,Chapter 2,"Used the internet in the past 30 days: %, men, Southern Asia",42,pct,,text,N,,
+X52_women,25,Chapter 2,"Used the internet in the past 30 days: %, women, Southern Asia",19,pct,,text,N,,
+X53,25,Chapter 2,"Used the internet in the past 30 days: gap (men minus women), all regions except Southern Asia",2,pct,,text,N,,
+X54_men,25,Chapter 2,"Used the internet in the past 30 days: %, men, all regions except Southern Asia",74,pct,,text,N,,
+X54_women,25,Chapter 2,"Used the internet in the past 30 days: %, women, all regions except Southern Asia",72,pct,,text,N,,
+X55_women,25,Chapter 2,"% with primary education or less, women, Southern Asia",72,pct,,text,N,,
+X55_men,25,Chapter 2,"% with primary education or less, men, Southern Asia",57,pct,,text,N,,
+X56_men,25,Chapter 2,"Used the internet in the past 30 days: %, men with secondary education, Southern Asia",61,pct,,text,N,,
+X56_women,25,Chapter 2,"Used the internet in the past 30 days: %, women with secondary education, Southern Asia",43,pct,,text,N,,India alone gives 43.0%; the Southern Asia figure in the data is 40.8%.
+X57,25,Chapter 2,"Used the internet in the past 30 days: %, men with primary education or less, Southern Asia",25,pct,,text,N,,
+X58_15_29,26,Chapter 2,"Used the internet in the past 30 days: %, aged 15-29",71,pct,,text,N,,
+X58_65plus,26,Chapter 2,"Used the internet in the past 30 days: %, aged 65+",46,pct,,text,N,,
+X59_65plus,26,Chapter 2,"Used the internet in the past 30 days: increase 2019 to 2021 (points), aged 65+",18,pct,,text,N,,Countries surveyed in both 2019 and 2021 (119). Computed from unrounded values.
+X59_15_29,26,Chapter 2,"Used the internet in the past 30 days: increase 2019 to 2021 (points), aged 15-29",6,pct,,text,N,,Countries surveyed in both 2019 and 2021 (119). Computed from unrounded values.
+X59_30_49,26,Chapter 2,"Used the internet in the past 30 days: increase 2019 to 2021 (points), aged 30-49",6,pct,,text,N,,Countries surveyed in both 2019 and 2021 (119). Computed from unrounded values.
+C2_4_15_29_2019,26,Chart 2.4,"Used the internet in the past 30 days: %, aged 15-29, 2019",65,pct,,chart,N,,Countries surveyed in both 2019 and 2021 (119).
+C2_4_15_29_2021,26,Chart 2.4,"Used the internet in the past 30 days: %, aged 15-29, 2021",71,pct,,chart,N,,Countries surveyed in both 2019 and 2021 (119).
+C2_4_30_49_2019,26,Chart 2.4,"Used the internet in the past 30 days: %, aged 30-49, 2019",59,pct,,chart,N,,Countries surveyed in both 2019 and 2021 (119).
+C2_4_30_49_2021,26,Chart 2.4,"Used the internet in the past 30 days: %, aged 30-49, 2021",65,pct,,chart,N,,Countries surveyed in both 2019 and 2021 (119).
+C2_4_50_64_2019,26,Chart 2.4,"Used the internet in the past 30 days: %, aged 50-64, 2019",42,pct,,chart,N,,Countries surveyed in both 2019 and 2021 (119).
+C2_4_50_64_2021,26,Chart 2.4,"Used the internet in the past 30 days: %, aged 50-64, 2021",53,pct,,chart,N,,Countries surveyed in both 2019 and 2021 (119).
+C2_4_65plus_2019,26,Chart 2.4,"Used the internet in the past 30 days: %, aged 65+, 2019",28,pct,,chart,N,,Countries surveyed in both 2019 and 2021 (119).
+C2_4_65plus_2021,26,Chart 2.4,"Used the internet in the past 30 days: %, aged 65+, 2021",46,pct,,chart,N,,Countries surveyed in both 2019 and 2021 (119).
+X60_access,26,Chapter 2,"Could protect yourself or your family in a future disaster (WP22252): % yes, low-income countries, have internet access",52,pct,,text,Y,WP16056,"Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+X60_no_access,26,Chapter 2,"Could protect yourself or your family in a future disaster (WP22252): % yes, low-income countries, no internet access",36,pct,,text,Y,WP16056,"Gallup World Poll item WP16056 'Do you have access to the internet in any way, whether on a mobile phone, a computer, or some other device?'; not the public WP22222 (used the internet in the past 30 days), see README."
+X61,"6, 27",Chapter 3,Internet users: % very or somewhat worried personal information could be stolen,77,pct,,text,N,,
+X62,6,Executive summary,Internet users: % very or somewhat worried personal information could be used by companies for marketing without permission,74,pct,,text,N,,
+X63,27,Chapter 3,Internet users: % very or somewhat worried personal information could be used by companies for marketing without permission,75,pct,,text,N,,The executive summary gives 74% for the same figure.
+X64,"6, 27",Chapter 3,Internet users: % very or somewhat worried personal information could be used by the government without permission,68,pct,,text,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+X65,"6, 28",Chapter 3,Regions where a majority of internet users are very worried personal information could be stolen,5,count,0,text,N,,
+X66_central_west_africa,6,Executive summary,"Internet users: % very worried personal information could be stolen, Central/Western Africa",62,pct,,text,N,,
+X66_southeast_asia,6,Executive summary,"Internet users: % very worried personal information could be stolen, Southeastern Asia",61,pct,,text,N,,
+X66_southern_africa,6,Executive summary,"Internet users: % very worried personal information could be stolen, Southern Africa",60,pct,,text,N,,
+X66_latin_america,6,Executive summary,"Internet users: % very worried personal information could be stolen, Latin America & Caribbean",56,pct,,text,N,,
+X66_east_africa,6,Executive summary,"Internet users: % very worried personal information could be stolen, Eastern Africa",54,pct,,text,N,,
+C3_1_stolen_very,28,Chart 3.1,Internet users: % very worried: personal information stolen,44,pct,,chart,N,,
+C3_1_stolen_somewhat,28,Chart 3.1,Internet users: % somewhat worried: personal information stolen,33,pct,,chart,N,,
+C3_1_stolen_not,28,Chart 3.1,Internet users: % not worried: personal information stolen,22,pct,,chart,N,,
+C3_1_companies_very,28,Chart 3.1,Internet users: % very worried: personal information used by companies for marketing without permission,41,pct,,chart,N,,
+C3_1_companies_somewhat,28,Chart 3.1,Internet users: % somewhat worried: personal information used by companies for marketing without permission,34,pct,,chart,N,,
+C3_1_companies_not,28,Chart 3.1,Internet users: % not worried: personal information used by companies for marketing without permission,24,pct,,chart,N,,
+C3_1_government_very,28,Chart 3.1,Internet users: % very worried: personal information used by the government without permission,37,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_1_government_somewhat,28,Chart 3.1,Internet users: % somewhat worried: personal information used by the government without permission,31,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_1_government_not,28,Chart 3.1,Internet users: % not worried: personal information used by the government without permission,31,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_2_central_west_africa_very,29,Chart 3.2,"Internet users: % very worried: personal information stolen, Central/Western Africa",62,pct,,chart,N,,
+C3_2_central_west_africa_somewhat,29,Chart 3.2,"Internet users: % somewhat worried: personal information stolen, Central/Western Africa",20,pct,,chart,N,,
+C3_2_central_west_africa_not,29,Chart 3.2,"Internet users: % not worried: personal information stolen, Central/Western Africa",18,pct,,chart,N,,
+C3_2_southeast_asia_very,29,Chart 3.2,"Internet users: % very worried: personal information stolen, Southeastern Asia",61,pct,,chart,N,,
+C3_2_southeast_asia_somewhat,29,Chart 3.2,"Internet users: % somewhat worried: personal information stolen, Southeastern Asia",25,pct,,chart,N,,
+C3_2_southeast_asia_not,29,Chart 3.2,"Internet users: % not worried: personal information stolen, Southeastern Asia",14,pct,,chart,N,,
+C3_2_southern_africa_very,29,Chart 3.2,"Internet users: % very worried: personal information stolen, Southern Africa",60,pct,,chart,N,,
+C3_2_southern_africa_somewhat,29,Chart 3.2,"Internet users: % somewhat worried: personal information stolen, Southern Africa",17,pct,,chart,N,,
+C3_2_southern_africa_not,29,Chart 3.2,"Internet users: % not worried: personal information stolen, Southern Africa",22,pct,,chart,N,,
+C3_2_latin_america_very,29,Chart 3.2,"Internet users: % very worried: personal information stolen, Latin America & Caribbean",56,pct,,chart,N,,
+C3_2_latin_america_somewhat,29,Chart 3.2,"Internet users: % somewhat worried: personal information stolen, Latin America & Caribbean",29,pct,,chart,N,,
+C3_2_latin_america_not,29,Chart 3.2,"Internet users: % not worried: personal information stolen, Latin America & Caribbean",15,pct,,chart,N,,
+C3_2_east_africa_very,29,Chart 3.2,"Internet users: % very worried: personal information stolen, Eastern Africa",54,pct,,chart,N,,
+C3_2_east_africa_somewhat,29,Chart 3.2,"Internet users: % somewhat worried: personal information stolen, Eastern Africa",22,pct,,chart,N,,
+C3_2_east_africa_not,29,Chart 3.2,"Internet users: % not worried: personal information stolen, Eastern Africa",24,pct,,chart,N,,
+C3_2_south_europe_very,29,Chart 3.2,"Internet users: % very worried: personal information stolen, Southern Europe",43,pct,,chart,N,,
+C3_2_south_europe_somewhat,29,Chart 3.2,"Internet users: % somewhat worried: personal information stolen, Southern Europe",35,pct,,chart,N,,
+C3_2_south_europe_not,29,Chart 3.2,"Internet users: % not worried: personal information stolen, Southern Europe",22,pct,,chart,N,,
+C3_2_south_asia_very,29,Chart 3.2,"Internet users: % very worried: personal information stolen, Southern Asia",42,pct,,chart,N,,
+C3_2_south_asia_somewhat,29,Chart 3.2,"Internet users: % somewhat worried: personal information stolen, Southern Asia",26,pct,,chart,N,,
+C3_2_south_asia_not,29,Chart 3.2,"Internet users: % not worried: personal information stolen, Southern Asia",29,pct,,chart,N,,
+C3_2_east_asia_very,29,Chart 3.2,"Internet users: % very worried: personal information stolen, Eastern Asia",41,pct,,chart,N,,
+C3_2_east_asia_somewhat,29,Chart 3.2,"Internet users: % somewhat worried: personal information stolen, Eastern Asia",47,pct,,chart,N,,
+C3_2_east_asia_not,29,Chart 3.2,"Internet users: % not worried: personal information stolen, Eastern Asia",12,pct,,chart,N,,
+C3_2_north_america_very,29,Chart 3.2,"Internet users: % very worried: personal information stolen, Northern America",40,pct,,chart,N,,
+C3_2_north_america_somewhat,29,Chart 3.2,"Internet users: % somewhat worried: personal information stolen, Northern America",45,pct,,chart,N,,
+C3_2_north_america_not,29,Chart 3.2,"Internet users: % not worried: personal information stolen, Northern America",15,pct,,chart,N,,
+C3_2_middle_east_very,29,Chart 3.2,"Internet users: % very worried: personal information stolen, Middle East",38,pct,,chart,N,,
+C3_2_middle_east_somewhat,29,Chart 3.2,"Internet users: % somewhat worried: personal information stolen, Middle East",28,pct,,chart,N,,
+C3_2_middle_east_not,29,Chart 3.2,"Internet users: % not worried: personal information stolen, Middle East",33,pct,,chart,N,,
+C3_2_north_africa_very,29,Chart 3.2,"Internet users: % very worried: personal information stolen, Northern Africa",33,pct,,chart,N,,
+C3_2_north_africa_somewhat,29,Chart 3.2,"Internet users: % somewhat worried: personal information stolen, Northern Africa",30,pct,,chart,N,,
+C3_2_north_africa_not,29,Chart 3.2,"Internet users: % not worried: personal information stolen, Northern Africa",34,pct,,chart,N,,
+C3_2_east_europe_very,29,Chart 3.2,"Internet users: % very worried: personal information stolen, Eastern Europe",32,pct,,chart,N,,
+C3_2_east_europe_somewhat,29,Chart 3.2,"Internet users: % somewhat worried: personal information stolen, Eastern Europe",39,pct,,chart,N,,
+C3_2_east_europe_not,29,Chart 3.2,"Internet users: % not worried: personal information stolen, Eastern Europe",29,pct,,chart,N,,
+C3_2_aus_nz_very,29,Chart 3.2,"Internet users: % very worried: personal information stolen, Australia & New Zealand",24,pct,,chart,N,,
+C3_2_aus_nz_somewhat,29,Chart 3.2,"Internet users: % somewhat worried: personal information stolen, Australia & New Zealand",57,pct,,chart,N,,
+C3_2_aus_nz_not,29,Chart 3.2,"Internet users: % not worried: personal information stolen, Australia & New Zealand",18,pct,,chart,N,,
+C3_2_north_west_europe_very,29,Chart 3.2,"Internet users: % very worried: personal information stolen, Northern/Western Europe",23,pct,,chart,N,,
+C3_2_north_west_europe_somewhat,29,Chart 3.2,"Internet users: % somewhat worried: personal information stolen, Northern/Western Europe",50,pct,,chart,N,,
+C3_2_north_west_europe_not,29,Chart 3.2,"Internet users: % not worried: personal information stolen, Northern/Western Europe",26,pct,,chart,N,,
+C3_2_central_asia_very,29,Chart 3.2,"Internet users: % very worried: personal information stolen, Central Asia",16,pct,,chart,N,,
+C3_2_central_asia_somewhat,29,Chart 3.2,"Internet users: % somewhat worried: personal information stolen, Central Asia",25,pct,,chart,N,,
+C3_2_central_asia_not,29,Chart 3.2,"Internet users: % not worried: personal information stolen, Central Asia",55,pct,,chart,N,,
+X67_women,30,Chapter 3,"Internet users: % very worried personal information could be stolen, women",46,pct,,text,N,,
+X67_men,30,Chapter 3,"Internet users: % very worried personal information could be stolen, men",42,pct,,text,N,,
+X68_primary,30,Chapter 3,"Internet users: % very worried personal information could be stolen, primary education or less",47,pct,,text,N,,
+X68_secondary,30,Chapter 3,"Internet users: % very worried personal information could be stolen, secondary education",44,pct,,text,N,,
+X68_post_secondary,30,Chapter 3,"Internet users: % very worried personal information could be stolen, post-secondary education",40,pct,,text,N,,
+X69_under_50,30,Chapter 3,"Internet users: % very worried personal information could be stolen, aged under 50",46,pct,,text,N,,
+X69_65plus,30,Chapter 3,"Internet users: % very worried personal information could be stolen, aged 65+",32,pct,,text,N,,
+X70_comfortable,31,Chapter 3,"Internet users: % very worried personal information could be stolen, 'living comfortably' on current income",35,pct,,text,N,,
+X70_very_difficult,31,Chapter 3,"Internet users: % very worried personal information could be stolen, 'finding it very difficult' on current income",56,pct,,text,N,,
+C3_4_15_29,31,Chart 3.4,"Internet users: % very worried personal information could be stolen, aged 15-29",46,pct,,chart,N,,
+C3_4_30_49,31,Chart 3.4,"Internet users: % very worried personal information could be stolen, aged 30-49",46,pct,,chart,N,,
+C3_4_50_64,31,Chart 3.4,"Internet users: % very worried personal information could be stolen, aged 50-64",40,pct,,chart,N,,
+C3_4_65plus,31,Chart 3.4,"Internet users: % very worried personal information could be stolen, aged 65+",32,pct,,chart,N,,
+C3_4_comfortable,31,Chart 3.4,"Internet users: % very worried personal information could be stolen, 'living comfortably' on current income",35,pct,,chart,N,,
+C3_4_getting_by,31,Chart 3.4,"Internet users: % very worried personal information could be stolen, 'getting by' on current income",44,pct,,chart,N,,
+C3_4_difficult,31,Chart 3.4,"Internet users: % very worried personal information could be stolen, 'finding it difficult' on current income",48,pct,,chart,N,,
+C3_4_very_difficult,31,Chart 3.4,"Internet users: % very worried personal information could be stolen, 'finding it very difficult' on current income",56,pct,,chart,N,,
+C3_5_central_west_africa_companies,32,Chart 3.5,"Internet users: % very worried personal information could be used by companies for marketing without permission, Central/Western Africa",56,pct,,chart,N,,
+C3_5_central_west_africa_government,32,Chart 3.5,"Internet users: % very worried personal information could be used by the government without permission, Central/Western Africa",55,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_5_southeast_asia_companies,32,Chart 3.5,"Internet users: % very worried personal information could be used by companies for marketing without permission, Southeastern Asia",56,pct,,chart,N,,
+C3_5_southeast_asia_government,32,Chart 3.5,"Internet users: % very worried personal information could be used by the government without permission, Southeastern Asia",52,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_5_southern_africa_companies,32,Chart 3.5,"Internet users: % very worried personal information could be used by companies for marketing without permission, Southern Africa",56,pct,,chart,N,,
+C3_5_southern_africa_government,32,Chart 3.5,"Internet users: % very worried personal information could be used by the government without permission, Southern Africa",51,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_5_east_africa_companies,32,Chart 3.5,"Internet users: % very worried personal information could be used by companies for marketing without permission, Eastern Africa",48,pct,,chart,N,,
+C3_5_east_africa_government,32,Chart 3.5,"Internet users: % very worried personal information could be used by the government without permission, Eastern Africa",47,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_5_latin_america_companies,32,Chart 3.5,"Internet users: % very worried personal information could be used by companies for marketing without permission, Latin America & Caribbean",47,pct,,chart,N,,
+C3_5_latin_america_government,32,Chart 3.5,"Internet users: % very worried personal information could be used by the government without permission, Latin America & Caribbean",45,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_5_north_america_companies,32,Chart 3.5,"Internet users: % very worried personal information could be used by companies for marketing without permission, Northern America",43,pct,,chart,N,,
+C3_5_north_america_government,32,Chart 3.5,"Internet users: % very worried personal information could be used by the government without permission, Northern America",33,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_5_middle_east_companies,32,Chart 3.5,"Internet users: % very worried personal information could be used by companies for marketing without permission, Middle East",43,pct,,chart,N,,
+C3_5_middle_east_government,32,Chart 3.5,"Internet users: % very worried personal information could be used by the government without permission, Middle East",31,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_5_south_europe_companies,32,Chart 3.5,"Internet users: % very worried personal information could be used by companies for marketing without permission, Southern Europe",41,pct,,chart,N,,
+C3_5_south_europe_government,32,Chart 3.5,"Internet users: % very worried personal information could be used by the government without permission, Southern Europe",36,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_5_south_asia_companies,32,Chart 3.5,"Internet users: % very worried personal information could be used by companies for marketing without permission, Southern Asia",35,pct,,chart,N,,
+C3_5_south_asia_government,32,Chart 3.5,"Internet users: % very worried personal information could be used by the government without permission, Southern Asia",36,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_5_east_asia_companies,32,Chart 3.5,"Internet users: % very worried personal information could be used by companies for marketing without permission, Eastern Asia",33,pct,,chart,N,,
+C3_5_east_asia_government,32,Chart 3.5,"Internet users: % very worried personal information could be used by the government without permission, Eastern Asia",29,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_5_aus_nz_companies,32,Chart 3.5,"Internet users: % very worried personal information could be used by companies for marketing without permission, Australia & New Zealand",31,pct,,chart,N,,
+C3_5_aus_nz_government,32,Chart 3.5,"Internet users: % very worried personal information could be used by the government without permission, Australia & New Zealand",19,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_5_east_europe_companies,32,Chart 3.5,"Internet users: % very worried personal information could be used by companies for marketing without permission, Eastern Europe",29,pct,,chart,N,,
+C3_5_east_europe_government,32,Chart 3.5,"Internet users: % very worried personal information could be used by the government without permission, Eastern Europe",29,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_5_north_west_europe_companies,32,Chart 3.5,"Internet users: % very worried personal information could be used by companies for marketing without permission, Northern/Western Europe",29,pct,,chart,N,,
+C3_5_north_west_europe_government,32,Chart 3.5,"Internet users: % very worried personal information could be used by the government without permission, Northern/Western Europe",17,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_5_north_africa_companies,32,Chart 3.5,"Internet users: % very worried personal information could be used by companies for marketing without permission, Northern Africa",28,pct,,chart,N,,
+C3_5_north_africa_government,32,Chart 3.5,"Internet users: % very worried personal information could be used by the government without permission, Northern Africa",31,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_5_central_asia_companies,32,Chart 3.5,"Internet users: % very worried personal information could be used by companies for marketing without permission, Central Asia",15,pct,,chart,N,,
+C3_5_central_asia_government,32,Chart 3.5,"Internet users: % very worried personal information could be used by the government without permission, Central Asia",16,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+X71_no_confidence,33,Chapter 3,"Internet users: % very worried personal information could be used by the government without permission, no confidence in national government",43,pct,,text,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+X71_confidence,33,Chapter 3,"Internet users: % very worried personal information could be used by the government without permission, confidence in national government",31,pct,,text,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+C3_6_MUS_confidence,33,Chart 3.6,"Internet users: % very worried personal information could be used by the government without permission, confidence in national government, Mauritius",44,pct,,chart,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+C3_6_MUS_no_confidence,33,Chart 3.6,"Internet users: % very worried personal information could be used by the government without permission, no confidence in national government, Mauritius",70,pct,,chart,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+C3_6_TUR_confidence,33,Chart 3.6,"Internet users: % very worried personal information could be used by the government without permission, confidence in national government, Türkiye",36,pct,,chart,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+C3_6_TUR_no_confidence,33,Chart 3.6,"Internet users: % very worried personal information could be used by the government without permission, no confidence in national government, Türkiye",61,pct,,chart,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+C3_6_POL_confidence,33,Chart 3.6,"Internet users: % very worried personal information could be used by the government without permission, confidence in national government, Poland",35,pct,,chart,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+C3_6_POL_no_confidence,33,Chart 3.6,"Internet users: % very worried personal information could be used by the government without permission, no confidence in national government, Poland",69,pct,,chart,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+C3_6_HND_confidence,33,Chart 3.6,"Internet users: % very worried personal information could be used by the government without permission, confidence in national government, Honduras",26,pct,,chart,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+C3_6_HND_no_confidence,33,Chart 3.6,"Internet users: % very worried personal information could be used by the government without permission, no confidence in national government, Honduras",49,pct,,chart,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+C3_6_SLV_confidence,33,Chart 3.6,"Internet users: % very worried personal information could be used by the government without permission, confidence in national government, El Salvador",25,pct,,chart,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+C3_6_SLV_no_confidence,33,Chart 3.6,"Internet users: % very worried personal information could be used by the government without permission, no confidence in national government, El Salvador",50,pct,,chart,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+C3_6_GRC_confidence,33,Chart 3.6,"Internet users: % very worried personal information could be used by the government without permission, confidence in national government, Greece",18,pct,,chart,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+C3_6_GRC_no_confidence,33,Chart 3.6,"Internet users: % very worried personal information could be used by the government without permission, no confidence in national government, Greece",46,pct,,chart,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+C3_6_USA_confidence,33,Chart 3.6,"Internet users: % very worried personal information could be used by the government without permission, confidence in national government, United States",17,pct,,chart,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+C3_6_USA_no_confidence,33,Chart 3.6,"Internet users: % very worried personal information could be used by the government without permission, no confidence in national government, United States",46,pct,,chart,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+C3_6_JPN_confidence,33,Chart 3.6,"Internet users: % very worried personal information could be used by the government without permission, confidence in national government, Japan",12,pct,,chart,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+C3_6_JPN_no_confidence,33,Chart 3.6,"Internet users: % very worried personal information could be used by the government without permission, no confidence in national government, Japan",36,pct,,chart,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+C3_6_HKG_confidence,33,Chart 3.6,"Internet users: % very worried personal information could be used by the government without permission, confidence in national government, Hong Kong SAR of China",10,pct,,chart,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+C3_6_HKG_no_confidence,33,Chart 3.6,"Internet users: % very worried personal information could be used by the government without permission, no confidence in national government, Hong Kong SAR of China",52,pct,,chart,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+C3_6_IRN_confidence,33,Chart 3.6,"Internet users: % very worried personal information could be used by the government without permission, confidence in national government, Iran",8,pct,,chart,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+C3_6_IRN_no_confidence,33,Chart 3.6,"Internet users: % very worried personal information could be used by the government without permission, no confidence in national government, Iran",32,pct,,chart,Y,WP139,Gallup World Poll item 'confidence in the national government' (WP139).
+X72_government,34,Chapter 3,"Internet users: % very worried personal information could be used by the government without permission, 'finding it very difficult' on current income",48,pct,,text,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+X72_companies,34,Chapter 3,"Internet users: % very worried personal information could be used by companies for marketing without permission, 'finding it very difficult' on current income",52,pct,,text,N,,"Companies series: don't know/refused excluded from the base, which reproduces all four bars; with them kept in, the values are 33.5, 40.2, 45.1 and 50.7."
+C3_7_comfortable_companies,34,Chart 3.7,"Internet users: % very worried personal information could be used by companies for marketing without permission, 'living comfortably' on current income",34,pct,,chart,N,,"Companies series: don't know/refused excluded from the base, which reproduces all four bars; with them kept in, the values are 33.5, 40.2, 45.1 and 50.7."
+C3_7_comfortable_government,34,Chart 3.7,"Internet users: % very worried personal information could be used by the government without permission, 'living comfortably' on current income",28,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_7_getting_by_companies,34,Chart 3.7,"Internet users: % very worried personal information could be used by companies for marketing without permission, 'getting by' on current income",41,pct,,chart,N,,"Companies series: don't know/refused excluded from the base, which reproduces all four bars; with them kept in, the values are 33.5, 40.2, 45.1 and 50.7."
+C3_7_getting_by_government,34,Chart 3.7,"Internet users: % very worried personal information could be used by the government without permission, 'getting by' on current income",36,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_7_difficult_companies,34,Chart 3.7,"Internet users: % very worried personal information could be used by companies for marketing without permission, 'finding it difficult' on current income",46,pct,,chart,N,,"Companies series: don't know/refused excluded from the base, which reproduces all four bars; with them kept in, the values are 33.5, 40.2, 45.1 and 50.7."
+C3_7_difficult_government,34,Chart 3.7,"Internet users: % very worried personal information could be used by the government without permission, 'finding it difficult' on current income",42,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_7_very_difficult_companies,34,Chart 3.7,"Internet users: % very worried personal information could be used by companies for marketing without permission, 'finding it very difficult' on current income",52,pct,,chart,N,,"Companies series: don't know/refused excluded from the base, which reproduces all four bars; with them kept in, the values are 33.5, 40.2, 45.1 and 50.7."
+C3_7_very_difficult_government,34,Chart 3.7,"Internet users: % very worried personal information could be used by the government without permission, 'finding it very difficult' on current income",48,pct,,chart,N,,"Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."
+C3_8_stolen_none,35,Chart 3.8,"Internet users: % very worried personal information could be stolen, no discrimination",42,pct,,chart,N,,"Forms of discrimination: skin colour, religion, ethnic group/nationality, gender, disability (WP22259-WP22263); countries not asked are excluded."
+C3_8_stolen_one,35,Chart 3.8,"Internet users: % very worried personal information could be stolen, one form of discrimination",46,pct,,chart,N,,"Forms of discrimination: skin colour, religion, ethnic group/nationality, gender, disability (WP22259-WP22263); countries not asked are excluded."
+C3_8_stolen_two_plus,35,Chart 3.8,"Internet users: % very worried personal information could be stolen, two or more forms of discrimination",54,pct,,chart,N,,"Forms of discrimination: skin colour, religion, ethnic group/nationality, gender, disability (WP22259-WP22263); countries not asked are excluded."
+C3_8_companies_none,35,Chart 3.8,"Internet users: % very worried personal information could be used by companies for marketing without permission, no discrimination",38,pct,,chart,N,,"Forms of discrimination: skin colour, religion, ethnic group/nationality, gender, disability (WP22259-WP22263); countries not asked are excluded."
+C3_8_companies_one,35,Chart 3.8,"Internet users: % very worried personal information could be used by companies for marketing without permission, one form of discrimination",45,pct,,chart,N,,"Forms of discrimination: skin colour, religion, ethnic group/nationality, gender, disability (WP22259-WP22263); countries not asked are excluded."
+C3_8_companies_two_plus,35,Chart 3.8,"Internet users: % very worried personal information could be used by companies for marketing without permission, two or more forms of discrimination",52,pct,,chart,N,,"Forms of discrimination: skin colour, religion, ethnic group/nationality, gender, disability (WP22259-WP22263); countries not asked are excluded."
+C3_8_government_none,35,Chart 3.8,"Internet users: % very worried personal information could be used by the government without permission, no discrimination",34,pct,,chart,N,,"Forms of discrimination: skin colour, religion, ethnic group/nationality, gender, disability (WP22259-WP22263); countries not asked are excluded."
+C3_8_government_one,35,Chart 3.8,"Internet users: % very worried personal information could be used by the government without permission, one form of discrimination",38,pct,,chart,N,,"Forms of discrimination: skin colour, religion, ethnic group/nationality, gender, disability (WP22259-WP22263); countries not asked are excluded."
+C3_8_government_two_plus,35,Chart 3.8,"Internet users: % very worried personal information could be used by the government without permission, two or more forms of discrimination",48,pct,,chart,N,,"Forms of discrimination: skin colour, religion, ethnic group/nationality, gender, disability (WP22259-WP22263); countries not asked are excluded."
+X73_stolen,35,Chapter 3,"Internet users: % very worried personal information could be stolen, experienced discrimination and 'finding it very difficult' on current income",64,pct,,text,N,,"Forms of discrimination: skin colour, religion, ethnic group/nationality, gender, disability (WP22259-WP22263); countries not asked are excluded."
+X73_government,35,Chapter 3,"Internet users: % very worried personal information could be used by the government without permission, experienced discrimination and 'finding it very difficult' on current income",56,pct,,text,N,,"Forms of discrimination: skin colour, religion, ethnic group/nationality, gender, disability (WP22259-WP22263); countries not asked are excluded. Government item combines WP22224 with the country wordings WP22468 (Tajikistan, Vietnam) and WP22524 (Myanmar)."

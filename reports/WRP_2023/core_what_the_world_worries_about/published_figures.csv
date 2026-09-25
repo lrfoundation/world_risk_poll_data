@@ -1,0 +1,706 @@
+finding_id,page,section,description,published_value,unit,tolerance,source,requires_gallup,gallup_items,note
+X01,3,Executive summary,"Interviews in 2023 ('nearly 147,000')",147000,count,500,text,N,,"Approximate wording: 'nearly 147,000'."
+X02,"3, 15, 22",Executive summary,Countries and territories surveyed in 2023,142,count,0,text,N,,
+X03,"3, 12, 15",Executive summary,"Climate change a very or somewhat serious threat to the country in the next 20 years, 2023",72,pct,,text,N,,
+X04,"3, 19",Executive summary,"Odds ratio, climate change a very serious threat: very worried vs not worried about harm from severe weather",3.6,odds_ratio,0.1,text,N,,"Logistic regression (glm) with country fixed effects, WGT-weighted; see README for the specification. The report used a multi-level model that also controlled for two Gallup World Poll items."
+X05,"3, 7",Executive summary,"Road-related accidents named as the greatest risk to safety in daily life, 2023",16,pct,,text,N,,
+X06,"3, 7",Executive summary,"Road-related accidents named as the greatest risk to safety in daily life, 2021",13,pct,,text,N,,2021 respondents in the 120 countries also surveyed in 2023 (report footnote ii).
+X07,"3, 7",Executive summary,"Road-related accidents named as the greatest risk to safety in daily life, 2019",16,pct,,text,N,,"2019 L3_A code 1, in the 137 countries also surveyed in 2023."
+X08,"4, 27",Executive summary,"Feel more safe than five years ago, 2023",37,pct,,text,N,,
+X09,"4, 27",Executive summary,"Feel about as safe as five years ago, 2023",37,pct,,text,N,,
+X10,"4, 27",Executive summary,"Feel less safe than five years ago, 2023",26,pct,,text,N,,
+X11,"4, 29",Executive summary,"Very or somewhat worried about harm from mental health issues, 2019",48,pct,,text,N,,Chart 4.4 prints 45% for the same figure (C4_4_mental_2019).
+X12,"4, 29",Executive summary,"Very or somewhat worried about harm from mental health issues, 2021",52,pct,,text,N,,
+X13,"4, 9, 29",Executive summary,"Very or somewhat worried about harm from mental health issues, 2023",55,pct,,text,N,,
+X14,7,Chapter 2,"Crime/violence named as the greatest risk to safety in daily life, 2023",13,pct,,text,N,,
+X15,7,Chapter 2,"Personal health condition named as the greatest risk to safety in daily life, 2023",11,pct,,text,N,,
+X16,7,Chapter 2,"Climate change or severe weather named as the greatest risk to safety in daily life, 2023",6,pct,,text,N,,
+X17,7,Chapter 2,"Climate change or severe weather named as the greatest risk to safety in daily life, 2021",3,pct,,text,N,,
+X18,7,Chapter 2,"Climate change or severe weather named as the greatest risk to safety in daily life, 2019",3,pct,,text,N,,"2019 L3_A code 16, 'Climate change, natural disasters or weather-related events', which also includes non-weather disasters."
+C2_1_road,7,Chart 2.1,"Greatest risk to safety in daily life, 2023: % Road-related accidents/injuries",16,pct,,chart,N,,
+C2_1_road_chg,7,Chart 2.1,"Greatest risk to safety in daily life: change vs 2021 (pp), Road-related accidents/injuries",3,pp,,chart,N,,
+C2_1_crime,7,Chart 2.1,"Greatest risk to safety in daily life, 2023: % Crime/violence",13,pct,,chart,N,,
+C2_1_crime_chg,7,Chart 2.1,"Greatest risk to safety in daily life: change vs 2021 (pp), Crime/violence",1,pp,,chart,N,,
+C2_1_health,7,Chart 2.1,"Greatest risk to safety in daily life, 2023: % Personal health",11,pct,,chart,N,,
+C2_1_health_chg,7,Chart 2.1,"Greatest risk to safety in daily life: change vs 2021 (pp), Personal health",1,pp,,chart,N,,
+C2_1_dk,7,Chart 2.1,"Greatest risk to safety in daily life, 2023: % Don't know",8,pct,,chart,N,,
+C2_1_dk_chg,7,Chart 2.1,"Greatest risk to safety in daily life: change vs 2021 (pp), Don't know",-8,pp,,chart,N,,
+C2_1_nothing,7,Chart 2.1,"Greatest risk to safety in daily life, 2023: % Nothing/no risk",7,pct,,chart,N,,
+C2_1_nothing_chg,7,Chart 2.1,"Greatest risk to safety in daily life: change vs 2021 (pp), Nothing/no risk",0,pp,,chart,N,,'No change' recorded as 0.
+C2_1_economy,7,Chart 2.1,"Greatest risk to safety in daily life, 2023: % Economy",7,pct,,chart,N,,
+C2_1_economy_chg,7,Chart 2.1,"Greatest risk to safety in daily life: change vs 2021 (pp), Economy",2,pp,,chart,N,,
+C2_1_climate,7,Chart 2.1,"Greatest risk to safety in daily life, 2023: % Climate change or severe weather",6,pct,,chart,N,,
+C2_1_climate_chg,7,Chart 2.1,"Greatest risk to safety in daily life: change vs 2021 (pp), Climate change or severe weather",3,pp,,chart,N,,
+C2_1_financial,7,Chart 2.1,"Greatest risk to safety in daily life, 2023: % Financial",6,pct,,chart,N,,
+C2_1_financial_chg,7,Chart 2.1,"Greatest risk to safety in daily life: change vs 2021 (pp), Financial",0,pp,,chart,N,,'No change' recorded as 0.
+C2_1_other,7,Chart 2.1,"Greatest risk to safety in daily life, 2023: % Other",6,pct,,chart,N,,
+C2_1_other_chg,7,Chart 2.1,"Greatest risk to safety in daily life: change vs 2021 (pp), Other",1,pp,,chart,N,,
+C2_1_war,7,Chart 2.1,"Greatest risk to safety in daily life, 2023: % War/terrorism",3,pct,,chart,N,,
+C2_1_war_chg,7,Chart 2.1,"Greatest risk to safety in daily life: change vs 2021 (pp), War/terrorism",1,pp,,chart,N,,
+X19,8,Chapter 2,"High-income countries: road-related accidents named as the greatest risk, 2023",21,pct,,text,N,,
+X20,8,Chapter 2,"Low-income countries: road-related accidents named as the greatest risk, 2023",9,pct,,text,N,,
+X21,8,Chapter 2,"Australia & New Zealand: road-related accidents named as the greatest risk, 2023",35,pct,,text,N,,
+X22,8,Chapter 2,"Northern America: road-related accidents named as the greatest risk, 2023",25,pct,,text,N,,
+X23,8,Chapter 2,"Southeastern Asia: road-related accidents named as the greatest risk, 2023",24,pct,,text,N,,
+X24,8,Chapter 2,"Central Asia: road-related accidents named as the greatest risk, 2023",7,pct,,text,N,,
+X25,8,Chapter 2,"Southern Africa: road-related accidents named as the greatest risk, 2023",6,pct,,text,N,,
+X26,8,Chapter 2,"Gap (pp), road-related accidents minus personal health conditions as the greatest risk, 2023",5,pp,,text,N,,'Personal health conditions' read as WP22331 code 5 (personal health condition/illness).
+C2_2_anz,8,Chart 2.2,"Road-related accidents named as the greatest risk to safety, 2023: % Australia & New Zealand",35,pct,,chart,N,,
+C2_2_anz_chg,8,Chart 2.2,"Road-related accidents named as the greatest risk: change vs 2021 (pp), Australia & New Zealand",3,pp,,chart,N,,
+C2_2_north_america,8,Chart 2.2,"Road-related accidents named as the greatest risk to safety, 2023: % Northern America",25,pct,,chart,N,,
+C2_2_north_america_chg,8,Chart 2.2,"Road-related accidents named as the greatest risk: change vs 2021 (pp), Northern America",-4,pp,,chart,N,,
+C2_2_se_asia,8,Chart 2.2,"Road-related accidents named as the greatest risk to safety, 2023: % Southeastern Asia",24,pct,,chart,N,,
+C2_2_se_asia_chg,8,Chart 2.2,"Road-related accidents named as the greatest risk: change vs 2021 (pp), Southeastern Asia",10,pp,,chart,N,,
+C2_2_south_asia,8,Chart 2.2,"Road-related accidents named as the greatest risk to safety, 2023: % Southern Asia",21,pct,,chart,N,,
+C2_2_south_asia_chg,8,Chart 2.2,"Road-related accidents named as the greatest risk: change vs 2021 (pp), Southern Asia",13,pp,,chart,N,,
+C2_2_south_europe,8,Chart 2.2,"Road-related accidents named as the greatest risk to safety, 2023: % Southern Europe",19,pct,,chart,N,,
+C2_2_south_europe_chg,8,Chart 2.2,"Road-related accidents named as the greatest risk: change vs 2021 (pp), Southern Europe",0,pp,,chart,N,,'No change' recorded as 0.
+C2_2_nw_europe,8,Chart 2.2,"Road-related accidents named as the greatest risk to safety, 2023: % Northern/Western Europe",18,pct,,chart,N,,
+C2_2_nw_europe_chg,8,Chart 2.2,"Road-related accidents named as the greatest risk: change vs 2021 (pp), Northern/Western Europe",-3,pp,,chart,N,,
+C2_2_cw_africa,8,Chart 2.2,"Road-related accidents named as the greatest risk to safety, 2023: % Central/Western Africa",16,pct,,chart,N,,
+C2_2_cw_africa_chg,8,Chart 2.2,"Road-related accidents named as the greatest risk: change vs 2021 (pp), Central/Western Africa",-1,pp,,chart,N,,
+C2_2_middle_east,8,Chart 2.2,"Road-related accidents named as the greatest risk to safety, 2023: % Middle East",12,pct,,chart,N,,
+C2_2_middle_east_chg,8,Chart 2.2,"Road-related accidents named as the greatest risk: change vs 2021 (pp), Middle East",0,pp,,chart,N,,'No change' recorded as 0.
+C2_2_east_asia,8,Chart 2.2,"Road-related accidents named as the greatest risk to safety, 2023: % Eastern Asia",11,pct,,chart,N,,
+C2_2_east_asia_chg,8,Chart 2.2,"Road-related accidents named as the greatest risk: change vs 2021 (pp), Eastern Asia",-14,pp,,chart,N,,
+C2_2_latam,8,Chart 2.2,"Road-related accidents named as the greatest risk to safety, 2023: % Latin America & the Caribbean",10,pct,,chart,N,,
+C2_2_latam_chg,8,Chart 2.2,"Road-related accidents named as the greatest risk: change vs 2021 (pp), Latin America & the Caribbean",0,pp,,chart,N,,'No change' recorded as 0.
+C2_2_east_africa,8,Chart 2.2,"Road-related accidents named as the greatest risk to safety, 2023: % Eastern Africa",9,pct,,chart,N,,
+C2_2_east_africa_chg,8,Chart 2.2,"Road-related accidents named as the greatest risk: change vs 2021 (pp), Eastern Africa",2,pp,,chart,N,,
+C2_2_north_africa,8,Chart 2.2,"Road-related accidents named as the greatest risk to safety, 2023: % Northern Africa",9,pct,,chart,N,,
+C2_2_north_africa_chg,8,Chart 2.2,"Road-related accidents named as the greatest risk: change vs 2021 (pp), Northern Africa",2,pp,,chart,N,,
+C2_2_east_europe,8,Chart 2.2,"Road-related accidents named as the greatest risk to safety, 2023: % Eastern Europe",8,pct,,chart,N,,
+C2_2_east_europe_chg,8,Chart 2.2,"Road-related accidents named as the greatest risk: change vs 2021 (pp), Eastern Europe",-5,pp,,chart,N,,
+C2_2_central_asia,8,Chart 2.2,"Road-related accidents named as the greatest risk to safety, 2023: % Central Asia",7,pct,,chart,N,,
+C2_2_central_asia_chg,8,Chart 2.2,"Road-related accidents named as the greatest risk: change vs 2021 (pp), Central Asia",2,pp,,chart,N,,
+C2_2_south_africa,8,Chart 2.2,"Road-related accidents named as the greatest risk to safety, 2023: % Southern Africa",6,pct,,chart,N,,
+C2_2_south_africa_chg,8,Chart 2.2,"Road-related accidents named as the greatest risk: change vs 2021 (pp), Southern Africa",0,pp,,chart,N,,'No change' recorded as 0.
+C2_3_traffic_very,9,Chart 2.3,"Worried that traffic/roadside accidents could cause serious harm, 2023: % very worried",39,pct,,chart,N,,
+C2_3_traffic_somewhat,9,Chart 2.3,"Worried that traffic/roadside accidents could cause serious harm, 2023: % somewhat worried",37,pct,,chart,N,,
+C2_3_traffic_total,9,Chart 2.3,"Worried that traffic/roadside accidents could cause serious harm, 2023: % total worried (very + somewhat)",76,pct,,chart,N,,
+C2_3_weather_very,9,Chart 2.3,"Worried that severe weather events could cause serious harm, 2023: % very worried",37,pct,,chart,N,,
+C2_3_weather_somewhat,9,Chart 2.3,"Worried that severe weather events could cause serious harm, 2023: % somewhat worried",35,pct,,chart,N,,
+C2_3_weather_total,9,Chart 2.3,"Worried that severe weather events could cause serious harm, 2023: % total worried (very + somewhat)",71,pct,,chart,N,,
+C2_3_crime_very,9,Chart 2.3,"Worried that violent crime could cause serious harm, 2023: % very worried",34,pct,,chart,N,,
+C2_3_crime_somewhat,9,Chart 2.3,"Worried that violent crime could cause serious harm, 2023: % somewhat worried",31,pct,,chart,N,,
+C2_3_crime_total,9,Chart 2.3,"Worried that violent crime could cause serious harm, 2023: % total worried (very + somewhat)",65,pct,,chart,N,,
+C2_3_food_very,9,Chart 2.3,"Worried that the food you eat could cause serious harm, 2023: % very worried",21,pct,,chart,N,,
+C2_3_food_somewhat,9,Chart 2.3,"Worried that the food you eat could cause serious harm, 2023: % somewhat worried",37,pct,,chart,N,,
+C2_3_food_total,9,Chart 2.3,"Worried that the food you eat could cause serious harm, 2023: % total worried (very + somewhat)",59,pct,,chart,N,,
+C2_3_mental_very,9,Chart 2.3,"Worried that mental health issues could cause serious harm, 2023: % very worried",23,pct,,chart,N,,
+C2_3_mental_somewhat,9,Chart 2.3,"Worried that mental health issues could cause serious harm, 2023: % somewhat worried",32,pct,,chart,N,,
+C2_3_mental_total,9,Chart 2.3,"Worried that mental health issues could cause serious harm, 2023: % total worried (very + somewhat)",55,pct,,chart,N,,
+C2_3_work_very,9,Chart 2.3,"Worried that work could cause serious harm, 2023: % very worried",19,pct,,chart,N,,Asked only of those who work (WP22214).
+C2_3_work_somewhat,9,Chart 2.3,"Worried that work could cause serious harm, 2023: % somewhat worried",32,pct,,chart,N,,Asked only of those who work (WP22214).
+C2_3_work_total,9,Chart 2.3,"Worried that work could cause serious harm, 2023: % total worried (very + somewhat)",51,pct,,chart,N,,Asked only of those who work (WP22214).
+C2_3_water_very,9,Chart 2.3,"Worried that the water you drink could cause serious harm, 2023: % very worried",19,pct,,chart,N,,
+C2_3_water_somewhat,9,Chart 2.3,"Worried that the water you drink could cause serious harm, 2023: % somewhat worried",30,pct,,chart,N,,
+C2_3_water_total,9,Chart 2.3,"Worried that the water you drink could cause serious harm, 2023: % total worried (very + somewhat)",49,pct,,chart,N,,
+X27,"9, 29",Chapter 2,"Very or somewhat worried about harm from traffic/roadside accidents, 2023",76,pct,,text,N,,
+X28,9,Chapter 2,"Very worried about harm from traffic/roadside accidents, 2023",39,pct,,text,N,,
+X29,9,Chapter 2,"Somewhat worried about harm from traffic/roadside accidents, 2023",37,pct,,text,N,,
+X30,9,Chapter 2,"Increase (pp) in worry (very or somewhat) about traffic accidents, 2021 to 2023",5,pp,,text,N,,
+X31,"9, 29",Chapter 2,"Very or somewhat worried about harm from traffic/roadside accidents, 2021",71,pct,,text,N,,
+X32,9,Chapter 2,"Very or somewhat worried about harm from severe weather events, 2023",71,pct,,text,N,,
+X33,9,Chapter 2,"Very or somewhat worried about harm from violent crime, 2023",65,pct,,text,N,,
+X34,9,Chapter 2,"Very or somewhat worried about harm from the food you eat, 2023",59,pct,,text,N,,
+X35,9,Chapter 2,"Very or somewhat worried about harm from the water you drink, 2023",49,pct,,text,N,,
+X36,9,Chapter 2,"Very or somewhat worried about harm from the work you do, 2023",51,pct,,text,N,,Asked only of those who work.
+X37,10,Chapter 2,"Personally experienced serious harm from traffic/roadside accidents in the past two years, 2023",15,pct,,text,N,,"Personally = 'yes, personally' or 'both' (WP22446 1, 3)."
+X38,10,Chapter 2,"Know someone who has experienced serious harm from traffic accidents (not personally), 2023",25,pct,,text,N,,
+X39,10,Chapter 2,"Experienced or know someone who has experienced harm from traffic accidents, 2023",40,pct,,text,N,,
+X40,10,Chapter 2,"Personally experienced serious harm from traffic accidents, 2021",13,pct,,text,N,,
+X41,10,Chapter 2,"Know someone who has experienced harm from traffic accidents (not personally), 2021",20,pct,,text,N,,
+X42,10,Chapter 2,"Latin America & the Caribbean: very or somewhat worried about traffic accidents, 2023",80,pct,,text,N,,
+X43,10,Chapter 2,"Latin America & the Caribbean: personally experienced harm from traffic accidents, 2023",10,pct,,text,N,,
+X44,10,Chapter 2,"Northern/Western Europe: personally experienced harm from traffic accidents, 2023",6,pct,,text,N,,
+X45,10,Chapter 2,"Northern/Western Europe: very or somewhat worried about traffic accidents, 2023",55,pct,,text,N,,
+X46,10,Chapter 2,"Countries with an increase of 4 points or more in personal experience of traffic harm, 2021-2023",17,count,0,text,N,,
+X47,10,Chapter 2,"Countries with a decrease of 4 points or more in personal experience of traffic harm, 2021-2023",16,count,0,text,N,,
+X48,10,Chapter 2,Average margin of error across countries (points),3.9,pp,0.1,text,N,,Approximated here as the mean over countries of 1.96 x sqrt(deff x 0.25 / n) with the Kish design effect of WGT.
+C2_5_experience_decrease,10,Chart 2.5,"Number of countries with a change of 4 points or more vs 2021 in traffic accidents: personal experience, decrease",16,count,0,chart,N,,Changes between country figures rounded to whole numbers; 120 countries in both waves.
+C2_5_experience_increase,10,Chart 2.5,"Number of countries with a change of 4 points or more vs 2021 in traffic accidents: personal experience, increase",17,count,0,chart,N,,Changes between country figures rounded to whole numbers; 120 countries in both waves.
+C2_5_worry_decrease,10,Chart 2.5,"Number of countries with a change of 4 points or more vs 2021 in traffic accidents: worry, decrease",29,count,0,chart,N,,Changes between country figures rounded to whole numbers; 120 countries in both waves.
+C2_5_worry_increase,10,Chart 2.5,"Number of countries with a change of 4 points or more vs 2021 in traffic accidents: worry, increase",36,count,0,chart,N,,Changes between country figures rounded to whole numbers; 120 countries in both waves.
+C2_6_worry_ITA_2021,11,Chart 2.6,"ITA: % very or somewhat worried about traffic accidents, 2021",64,pct,,chart,N,,
+C2_6_worry_ITA_2023,11,Chart 2.6,"ITA: % very or somewhat worried about traffic accidents, 2023",85,pct,,chart,N,,
+C2_6_worry_ITA_chg,11,Chart 2.6,"ITA: change (pp) in % very or somewhat worried about traffic accidents, 2021-2023",21,pp,,chart,N,,
+C2_6_worry_ARE_2021,11,Chart 2.6,"ARE: % very or somewhat worried about traffic accidents, 2021",40,pct,,chart,N,,
+C2_6_worry_ARE_2023,11,Chart 2.6,"ARE: % very or somewhat worried about traffic accidents, 2023",58,pct,,chart,N,,
+C2_6_worry_ARE_chg,11,Chart 2.6,"ARE: change (pp) in % very or somewhat worried about traffic accidents, 2021-2023",18,pp,,chart,N,,
+C2_6_worry_FRA_2021,11,Chart 2.6,"FRA: % very or somewhat worried about traffic accidents, 2021",46,pct,,chart,N,,
+C2_6_worry_FRA_2023,11,Chart 2.6,"FRA: % very or somewhat worried about traffic accidents, 2023",60,pct,,chart,N,,
+C2_6_worry_FRA_chg,11,Chart 2.6,"FRA: change (pp) in % very or somewhat worried about traffic accidents, 2021-2023",14,pp,,chart,N,,
+C2_6_worry_CHN_2021,11,Chart 2.6,"CHN: % very or somewhat worried about traffic accidents, 2021",56,pct,,chart,N,,
+C2_6_worry_CHN_2023,11,Chart 2.6,"CHN: % very or somewhat worried about traffic accidents, 2023",70,pct,,chart,N,,
+C2_6_worry_CHN_chg,11,Chart 2.6,"CHN: change (pp) in % very or somewhat worried about traffic accidents, 2021-2023",14,pp,,chart,N,,
+C2_6_worry_VNM_2021,11,Chart 2.6,"VNM: % very or somewhat worried about traffic accidents, 2021",78,pct,,chart,N,,
+C2_6_worry_VNM_2023,11,Chart 2.6,"VNM: % very or somewhat worried about traffic accidents, 2023",91,pct,,chart,N,,
+C2_6_worry_VNM_chg,11,Chart 2.6,"VNM: change (pp) in % very or somewhat worried about traffic accidents, 2021-2023",13,pp,,chart,N,,
+C2_6_worry_SLE_2021,11,Chart 2.6,"SLE: % very or somewhat worried about traffic accidents, 2021",86,pct,,chart,N,,
+C2_6_worry_SLE_2023,11,Chart 2.6,"SLE: % very or somewhat worried about traffic accidents, 2023",77,pct,,chart,N,,
+C2_6_worry_SLE_chg,11,Chart 2.6,"SLE: change (pp) in % very or somewhat worried about traffic accidents, 2021-2023",-9,pp,,chart,N,,
+C2_6_worry_THA_2021,11,Chart 2.6,"THA: % very or somewhat worried about traffic accidents, 2021",68,pct,,chart,N,,
+C2_6_worry_THA_2023,11,Chart 2.6,"THA: % very or somewhat worried about traffic accidents, 2023",58,pct,,chart,N,,
+C2_6_worry_THA_chg,11,Chart 2.6,"THA: change (pp) in % very or somewhat worried about traffic accidents, 2021-2023",-10,pp,,chart,N,,
+C2_6_worry_HRV_2021,11,Chart 2.6,"HRV: % very or somewhat worried about traffic accidents, 2021",70,pct,,chart,N,,
+C2_6_worry_HRV_2023,11,Chart 2.6,"HRV: % very or somewhat worried about traffic accidents, 2023",59,pct,,chart,N,,
+C2_6_worry_HRV_chg,11,Chart 2.6,"HRV: change (pp) in % very or somewhat worried about traffic accidents, 2021-2023",-11,pp,,chart,N,,
+C2_6_worry_MDA_2021,11,Chart 2.6,"MDA: % very or somewhat worried about traffic accidents, 2021",87,pct,,chart,N,,
+C2_6_worry_MDA_2023,11,Chart 2.6,"MDA: % very or somewhat worried about traffic accidents, 2023",70,pct,,chart,N,,
+C2_6_worry_MDA_chg,11,Chart 2.6,"MDA: change (pp) in % very or somewhat worried about traffic accidents, 2021-2023",-17,pp,,chart,N,,
+C2_6_worry_POL_2021,11,Chart 2.6,"POL: % very or somewhat worried about traffic accidents, 2021",80,pct,,chart,N,,
+C2_6_worry_POL_2023,11,Chart 2.6,"POL: % very or somewhat worried about traffic accidents, 2023",59,pct,,chart,N,,
+C2_6_worry_POL_chg,11,Chart 2.6,"POL: change (pp) in % very or somewhat worried about traffic accidents, 2021-2023",-21,pp,,chart,N,,
+C2_6_experience_CHN_2021,11,Chart 2.6,"CHN: % personally experienced harm from traffic accidents, 2021",7,pct,,chart,N,,
+C2_6_experience_CHN_2023,11,Chart 2.6,"CHN: % personally experienced harm from traffic accidents, 2023",17,pct,,chart,N,,
+C2_6_experience_CHN_chg,11,Chart 2.6,"CHN: change (pp) in % personally experienced harm from traffic accidents, 2021-2023",10,pp,,chart,N,,
+C2_6_experience_SLE_2021,11,Chart 2.6,"SLE: % personally experienced harm from traffic accidents, 2021",18,pct,,chart,N,,
+C2_6_experience_SLE_2023,11,Chart 2.6,"SLE: % personally experienced harm from traffic accidents, 2023",28,pct,,chart,N,,
+C2_6_experience_SLE_chg,11,Chart 2.6,"SLE: change (pp) in % personally experienced harm from traffic accidents, 2021-2023",10,pp,,chart,N,,
+C2_6_experience_PAN_2021,11,Chart 2.6,"PAN: % personally experienced harm from traffic accidents, 2021",6,pct,,chart,N,,
+C2_6_experience_PAN_2023,11,Chart 2.6,"PAN: % personally experienced harm from traffic accidents, 2023",14,pct,,chart,N,,
+C2_6_experience_PAN_chg,11,Chart 2.6,"PAN: change (pp) in % personally experienced harm from traffic accidents, 2021-2023",8,pp,,chart,N,,
+C2_6_experience_TUR_2021,11,Chart 2.6,"TUR: % personally experienced harm from traffic accidents, 2021",8,pct,,chart,N,,
+C2_6_experience_TUR_2023,11,Chart 2.6,"TUR: % personally experienced harm from traffic accidents, 2023",15,pct,,chart,N,,
+C2_6_experience_TUR_chg,11,Chart 2.6,"TUR: change (pp) in % personally experienced harm from traffic accidents, 2021-2023",7,pp,,chart,N,,
+C2_6_experience_USA_2021,11,Chart 2.6,"USA: % personally experienced harm from traffic accidents, 2021",9,pct,,chart,N,,
+C2_6_experience_USA_2023,11,Chart 2.6,"USA: % personally experienced harm from traffic accidents, 2023",15,pct,,chart,N,,
+C2_6_experience_USA_chg,11,Chart 2.6,"USA: change (pp) in % personally experienced harm from traffic accidents, 2021-2023",6,pp,,chart,N,,
+C2_6_experience_CMR_2021,11,Chart 2.6,"CMR: % personally experienced harm from traffic accidents, 2021",21,pct,,chart,N,,
+C2_6_experience_CMR_2023,11,Chart 2.6,"CMR: % personally experienced harm from traffic accidents, 2023",13,pct,,chart,N,,
+C2_6_experience_CMR_chg,11,Chart 2.6,"CMR: change (pp) in % personally experienced harm from traffic accidents, 2021-2023",-8,pp,,chart,N,,
+C2_6_experience_BRA_2021,11,Chart 2.6,"BRA: % personally experienced harm from traffic accidents, 2021",15,pct,,chart,N,,
+C2_6_experience_BRA_2023,11,Chart 2.6,"BRA: % personally experienced harm from traffic accidents, 2023",7,pct,,chart,N,,
+C2_6_experience_BRA_chg,11,Chart 2.6,"BRA: change (pp) in % personally experienced harm from traffic accidents, 2021-2023",-9,pp,,chart,N,,
+C2_6_experience_THA_2021,11,Chart 2.6,"THA: % personally experienced harm from traffic accidents, 2021",26,pct,,chart,N,,
+C2_6_experience_THA_2023,11,Chart 2.6,"THA: % personally experienced harm from traffic accidents, 2023",16,pct,,chart,N,,
+C2_6_experience_THA_chg,11,Chart 2.6,"THA: change (pp) in % personally experienced harm from traffic accidents, 2021-2023",-10,pp,,chart,N,,
+C2_6_experience_MLI_2021,11,Chart 2.6,"MLI: % personally experienced harm from traffic accidents, 2021",25,pct,,chart,N,,
+C2_6_experience_MLI_2023,11,Chart 2.6,"MLI: % personally experienced harm from traffic accidents, 2023",13,pct,,chart,N,,
+C2_6_experience_MLI_chg,11,Chart 2.6,"MLI: change (pp) in % personally experienced harm from traffic accidents, 2021-2023",-12,pp,,chart,N,,
+C2_6_experience_ZMB_2021,11,Chart 2.6,"ZMB: % personally experienced harm from traffic accidents, 2021",25,pct,,chart,N,,
+C2_6_experience_ZMB_2023,11,Chart 2.6,"ZMB: % personally experienced harm from traffic accidents, 2023",11,pct,,chart,N,,
+C2_6_experience_ZMB_chg,11,Chart 2.6,"ZMB: change (pp) in % personally experienced harm from traffic accidents, 2021-2023",-14,pp,,chart,N,,
+C2_6_worry_up_top5,11,Chart 2.6,"Five countries with the largest increase in worry about traffic accidents, 2021-2023 (ISO3, sorted)",ARE; CHN; FRA; ITA; VNM,text,,chart,N,,
+C2_6_worry_down_top5,11,Chart 2.6,"Five countries with the largest decrease in worry about traffic accidents, 2021-2023 (ISO3, sorted)",HRV; MDA; POL; SLE; THA,text,,chart,N,,
+C2_6_experience_up_top5,11,Chart 2.6,"Five countries with the largest increase in personal experience of traffic harm, 2021-2023 (ISO3, sorted)",CHN; PAN; SLE; TUR; USA,text,,chart,N,,
+C2_6_experience_down_top5,11,Chart 2.6,"Five countries with the largest decrease in personal experience of traffic harm, 2021-2023 (ISO3, sorted)",BRA; CMR; MLI; THA; ZMB,text,,chart,N,,
+X49,11,Chapter 2,"China: change (pp) in personal experience of traffic harm, 2021-2023",10,pp,,text,N,,
+X50,11,Chapter 2,"Sierra Leone: change (pp) in personal experience of traffic harm, 2021-2023",10,pp,,text,N,,
+X51,11,Chapter 2,"Sierra Leone: change (pp) in worry about traffic accidents, 2021-2023",-9,pp,,text,N,,
+C2_7_none_very,12,Chart 2.7,"Worried about harm from traffic accidents, by experience of traffic harm (no experience): % very worried",32,pct,,chart,N,,
+C2_7_none_somewhat,12,Chart 2.7,"Worried about harm from traffic accidents, by experience of traffic harm (no experience): % somewhat worried",35,pct,,chart,N,,
+C2_7_none_total,12,Chart 2.7,"Worried about harm from traffic accidents, by experience of traffic harm (no experience): % total (very + somewhat)",67,pct,,chart,N,,
+C2_7_know_very,12,Chart 2.7,"Worried about harm from traffic accidents, by experience of traffic harm (yes, know someone who has experienced): % very worried",45,pct,,chart,N,,
+C2_7_know_somewhat,12,Chart 2.7,"Worried about harm from traffic accidents, by experience of traffic harm (yes, know someone who has experienced): % somewhat worried",42,pct,,chart,N,,
+C2_7_know_total,12,Chart 2.7,"Worried about harm from traffic accidents, by experience of traffic harm (yes, know someone who has experienced): % total (very + somewhat)",88,pct,,chart,N,,
+C2_7_personal_very,12,Chart 2.7,"Worried about harm from traffic accidents, by experience of traffic harm (yes, personally experienced): % very worried",59,pct,,chart,N,,
+C2_7_personal_somewhat,12,Chart 2.7,"Worried about harm from traffic accidents, by experience of traffic harm (yes, personally experienced): % somewhat worried",30,pct,,chart,N,,
+C2_7_personal_total,12,Chart 2.7,"Worried about harm from traffic accidents, by experience of traffic harm (yes, personally experienced): % total (very + somewhat)",90,pct,,chart,N,,
+C2_7_both_very,12,Chart 2.7,"Worried about harm from traffic accidents, by experience of traffic harm (both): % very worried",48,pct,,chart,N,,
+C2_7_both_somewhat,12,Chart 2.7,"Worried about harm from traffic accidents, by experience of traffic harm (both): % somewhat worried",41,pct,,chart,N,,
+C2_7_both_total,12,Chart 2.7,"Worried about harm from traffic accidents, by experience of traffic harm (both): % total (very + somewhat)",89,pct,,chart,N,,
+X52,12,Chapter 2,No experience of traffic harm: % very or somewhat worried about traffic accidents,67,pct,,text,N,,
+X53,12,Chapter 2,No experience of traffic harm: % very worried about traffic accidents,32,pct,,text,N,,
+X54,12,Chapter 2,No experience of traffic harm: % somewhat worried about traffic accidents,35,pct,,text,N,,
+X55,12,Chapter 2,Know someone harmed in a traffic accident: % very or somewhat worried,88,pct,,text,N,,
+X56,12,Chapter 2,Personally harmed in a traffic accident: % very or somewhat worried,90,pct,,text,N,,
+X57,12,Chapter 2,Both personally harmed and know someone harmed: % very or somewhat worried,89,pct,,text,N,,
+X58,12,Chapter 2,Personally harmed in a traffic accident (only): % very worried,59,pct,,text,N,,
+X59,12,Chapter 2,Know someone harmed (only): % very worried,45,pct,,text,N,,
+X60,12,Chapter 2,Both personally harmed and know someone harmed: % very worried,48,pct,,text,N,,
+X61,12,Chapter 2,"Road-related accidents named as the greatest risk, among those with traffic harm experience 'no experience'",14,pct,,text,N,,'one in seven (14%)'.
+X62,12,Chapter 2,"Road-related accidents named as the greatest risk, among those with traffic harm experience 'yes, know someone who has experienced'",18,pct,,text,N,,
+X63,12,Chapter 2,"Road-related accidents named as the greatest risk, among those with traffic harm experience 'yes, personally experienced'",25,pct,,text,N,,
+X64,12,Chapter 2,"Road-related accidents named as the greatest risk, among those with traffic harm experience 'both'",14,pct,,text,N,,
+C2_8_none,12,Chart 2.8,"Road-related accidents named as the greatest risk, by experience of traffic harm: % no experience",14,pct,,chart,N,,
+C2_8_know,12,Chart 2.8,"Road-related accidents named as the greatest risk, by experience of traffic harm: % yes, know someone who has experienced",18,pct,,chart,N,,
+C2_8_personal,12,Chart 2.8,"Road-related accidents named as the greatest risk, by experience of traffic harm: % yes, personally experienced",25,pct,,chart,N,,
+C2_8_both,12,Chart 2.8,"Road-related accidents named as the greatest risk, by experience of traffic harm: % both",14,pct,,chart,N,,
+C2_9_none,13,Chart 2.9,"Climate change/severe weather named as the greatest risk, by experience of severe weather harm: % no experience",4,pct,,chart,N,,
+C2_9_know,13,Chart 2.9,"Climate change/severe weather named as the greatest risk, by experience of severe weather harm: % yes, know someone who has experienced",10,pct,,chart,N,,
+C2_9_personal,13,Chart 2.9,"Climate change/severe weather named as the greatest risk, by experience of severe weather harm: % yes, personally experienced",9,pct,,chart,N,,
+C2_9_both,13,Chart 2.9,"Climate change/severe weather named as the greatest risk, by experience of severe weather harm: % both",17,pct,,chart,N,,
+C2_10_none,13,Chart 2.10,"Crime/violence named as the greatest risk, by experience of violent crime harm: % no experience",11,pct,,chart,N,,
+C2_10_know,13,Chart 2.10,"Crime/violence named as the greatest risk, by experience of violent crime harm: % yes, know someone who has experienced",18,pct,,chart,N,,
+C2_10_personal,13,Chart 2.10,"Crime/violence named as the greatest risk, by experience of violent crime harm: % yes, personally experienced",18,pct,,chart,N,,
+C2_10_both,13,Chart 2.10,"Crime/violence named as the greatest risk, by experience of violent crime harm: % both",13,pct,,chart,N,,
+X65,13,Chapter 2,"Severe weather named as the greatest risk, among those with severe weather harm experience 'no experience'",4,pct,,text,N,,
+X66,13,Chapter 2,"Severe weather named as the greatest risk, among those with severe weather harm experience 'yes, know someone who has experienced'",10,pct,,text,N,,
+X67,13,Chapter 2,"Severe weather named as the greatest risk, among those with severe weather harm experience 'yes, personally experienced'",9,pct,,text,N,,
+X68,13,Chapter 2,"Severe weather named as the greatest risk, among those with severe weather harm experience 'both'",17,pct,,text,N,,
+X69,15,Chart 2.11,Correlation across countries: % satisfied with roads and highways vs % worried about traffic accidents (R),-0.47,correlation,0.05,text,Y,GWP_ROADS_SATISFACTION,"Chart 2.11 footnote i. Pearson correlation of country figures, 2023."
+X70,15,Chart 2.11,Correlation across countries: % satisfied with roads and highways vs % personally harmed in traffic accidents (R),-0.14,correlation,0.05,text,Y,GWP_ROADS_SATISFACTION,Chart 2.11 footnote ii.
+X71,17,Chapter 3,"Experienced a disaster in the past five years, 2021",27,pct,,text,N,,
+X72,17,Chapter 3,"Experienced a disaster in the past five years, 2023",30,pct,,text,N,,
+X73,17,Chapter 3,"Experienced a flood/heavy rain disaster in the past five years (% of all adults), 2021",10,pct,,text,N,,
+X74,17,Chapter 3,"Experienced a flood/heavy rain disaster in the past five years (% of all adults), 2023",13,pct,,text,N,,
+X75,17,Chapter 3,"Climate change a very serious threat, 2019",41,pct,,text,N,,
+X76,17,Chapter 3,"Climate change a somewhat serious threat, 2019",28,pct,,text,N,,
+X77,17,Chapter 3,"Climate change not a threat at all, 2019",13,pct,,text,N,,
+X78,17,Chapter 3,"Climate change: don't know, 2019",18,pct,,text,N,,"Don't know and refused, as in Chart 3.2."
+X79,17,Chapter 3,"Decrease (pp) in 'very serious threat', 2021 to 2023 ('dipped by two percentage points')",2,pp,,text,N,,
+X80,17,Chapter 3,"Climate change a very serious threat, 2021",41,pct,,text,N,,
+X81,17,Chapter 3,"Climate change a very serious threat, 2023",39,pct,,text,N,,
+X82,17,Chapter 3,"Increase (pp) in 'somewhat serious threat', 2021 to 2023",7,pp,,text,N,,
+X83,17,Chapter 3,"Climate change a somewhat serious threat, 2021",26,pct,,text,N,,
+X84,17,Chapter 3,"Climate change a somewhat serious threat, 2023",33,pct,,text,N,,
+X85,17,Chapter 3,"Increase (pp) in very or somewhat serious threat, 2021 to 2023",5,pp,,text,N,,
+X86,17,Chapter 3,"Climate change a very or somewhat serious threat, 2021",67,pct,,text,N,,
+X87,17,Chapter 3,"Climate change a very or somewhat serious threat, 2019",69,pct,,text,N,,
+X88,17,Chapter 3,"Increase (pp) in 'not a threat at all', 2021 to 2023",2,pp,,text,N,,
+X89,17,Chapter 3,"Climate change not a threat at all, 2023",16,pct,,text,N,,
+X90,17,Chapter 3,"Climate change: don't know, 2023",12,pct,,text,N,,"Don't know and refused, as in Chart 3.2."
+X91,17,Chapter 3,"Decrease (pp) in don't know, 2021 to 2023",7,pp,,text,N,,
+X92,17,Chapter 3,"Climate change: don't know, 2021",19,pct,,text,N,,"Don't know and refused, as in Chart 3.2."
+C3_2_very_2019,17,Chart 3.2,"Climate change a threat to the country in the next 20 years, 2019: % very",41,pct,,chart,N,,
+C3_2_somewhat_2019,17,Chart 3.2,"Climate change a threat to the country in the next 20 years, 2019: % somewhat",28,pct,,chart,N,,
+C3_2_not_2019,17,Chart 3.2,"Climate change a threat to the country in the next 20 years, 2019: % not",13,pct,,chart,N,,
+C3_2_dk_2019,17,Chart 3.2,"Climate change a threat to the country in the next 20 years, 2019: % dk (don't know/refused)",18,pct,,chart,N,,
+C3_2_very_2021,17,Chart 3.2,"Climate change a threat to the country in the next 20 years, 2021: % very",41,pct,,chart,N,,
+C3_2_somewhat_2021,17,Chart 3.2,"Climate change a threat to the country in the next 20 years, 2021: % somewhat",26,pct,,chart,N,,
+C3_2_not_2021,17,Chart 3.2,"Climate change a threat to the country in the next 20 years, 2021: % not",14,pct,,chart,N,,
+C3_2_dk_2021,17,Chart 3.2,"Climate change a threat to the country in the next 20 years, 2021: % dk (don't know/refused)",19,pct,,chart,N,,
+C3_2_very_2023,17,Chart 3.2,"Climate change a threat to the country in the next 20 years, 2023: % very",39,pct,,chart,N,,
+C3_2_somewhat_2023,17,Chart 3.2,"Climate change a threat to the country in the next 20 years, 2023: % somewhat",33,pct,,chart,N,,
+C3_2_not_2023,17,Chart 3.2,"Climate change a threat to the country in the next 20 years, 2023: % not",16,pct,,chart,N,,
+C3_2_dk_2023,17,Chart 3.2,"Climate change a threat to the country in the next 20 years, 2023: % dk (don't know/refused)",12,pct,,chart,N,,
+X93,18,Chapter 3,"Southern Europe: climate change a very or somewhat serious threat, 2023",92,pct,,text,N,,
+X94,18,Chapter 3,"Northern/Western Europe: climate change a very or somewhat serious threat, 2023",89,pct,,text,N,,
+X95,18,Chapter 3,"Latin America & the Caribbean: climate change a very serious threat, 2023",69,pct,,text,N,,
+X96,18,Chapter 3,"Eastern Asia: rank among regions by very or somewhat serious threat, 2023",4,rank,0,text,N,,
+X97,18,Chapter 3,"China: climate change a somewhat serious threat, 2023",59,pct,,text,N,,
+X98,18,Chapter 3,"Northern America: climate change a very serious threat, 2023",51,pct,,text,N,,
+X99,18,Chapter 3,"Northern America: climate change not a threat at all, 2023 ('one in five')",20,pct,,text,N,,
+X100,18,Chapter 3,"Southern Asia: climate change not a threat at all, 2023",21,pct,,text,N,,
+X101,18,Chapter 3,"Middle East: climate change not a threat at all, 2023",21,pct,,text,N,,
+X102,18,Chapter 3,"Southeastern Asia: climate change don't know or refused, 2023",27,pct,,text,N,,
+X103,18,Chapter 3,"Central/Western Africa: climate change don't know or refused, 2023",21,pct,,text,N,,
+X104,18,Chapter 3,"Southern Africa: climate change don't know or refused, 2023",20,pct,,text,N,,
+C3_3_south_europe_very,18,Chart 3.3,"Climate change a threat, 2023, Southern Europe: % very",66,pct,,chart,N,,
+C3_3_south_europe_somewhat,18,Chart 3.3,"Climate change a threat, 2023, Southern Europe: % somewhat",26,pct,,chart,N,,
+C3_3_south_europe_not,18,Chart 3.3,"Climate change a threat, 2023, Southern Europe: % not",6,pct,,chart,N,,
+C3_3_south_europe_combined,18,Chart 3.3,"Climate change a threat, 2023, Southern Europe: % combined (very + somewhat, from rounded figures)",92,pct,,chart,N,,Combined threat is the sum of the rounded 'very' and 'somewhat' figures (chart note).
+C3_3_nw_europe_very,18,Chart 3.3,"Climate change a threat, 2023, Northern/Western Europe: % very",57,pct,,chart,N,,
+C3_3_nw_europe_somewhat,18,Chart 3.3,"Climate change a threat, 2023, Northern/Western Europe: % somewhat",32,pct,,chart,N,,
+C3_3_nw_europe_not,18,Chart 3.3,"Climate change a threat, 2023, Northern/Western Europe: % not",7,pct,,chart,N,,
+C3_3_nw_europe_combined,18,Chart 3.3,"Climate change a threat, 2023, Northern/Western Europe: % combined (very + somewhat, from rounded figures)",89,pct,,chart,N,,Combined threat is the sum of the rounded 'very' and 'somewhat' figures (chart note).
+C3_3_latam_very,18,Chart 3.3,"Climate change a threat, 2023, Latin America & the Caribbean: % very",69,pct,,chart,N,,
+C3_3_latam_somewhat,18,Chart 3.3,"Climate change a threat, 2023, Latin America & the Caribbean: % somewhat",15,pct,,chart,N,,
+C3_3_latam_dk,18,Chart 3.3,"Climate change a threat, 2023, Latin America & the Caribbean: % dk (don't know/refused)",8,pct,,chart,N,,
+C3_3_latam_not,18,Chart 3.3,"Climate change a threat, 2023, Latin America & the Caribbean: % not",8,pct,,chart,N,,
+C3_3_latam_combined,18,Chart 3.3,"Climate change a threat, 2023, Latin America & the Caribbean: % combined (very + somewhat, from rounded figures)",84,pct,,chart,N,,Combined threat is the sum of the rounded 'very' and 'somewhat' figures (chart note).
+C3_3_east_asia_very,18,Chart 3.3,"Climate change a threat, 2023, Eastern Asia: % very",24,pct,,chart,N,,
+C3_3_east_asia_somewhat,18,Chart 3.3,"Climate change a threat, 2023, Eastern Asia: % somewhat",56,pct,,chart,N,,
+C3_3_east_asia_dk,18,Chart 3.3,"Climate change a threat, 2023, Eastern Asia: % dk (don't know/refused)",5,pct,,chart,N,,
+C3_3_east_asia_not,18,Chart 3.3,"Climate change a threat, 2023, Eastern Asia: % not",15,pct,,chart,N,,
+C3_3_east_asia_combined,18,Chart 3.3,"Climate change a threat, 2023, Eastern Asia: % combined (very + somewhat, from rounded figures)",80,pct,,chart,N,,Combined threat is the sum of the rounded 'very' and 'somewhat' figures (chart note).
+C3_3_north_africa_very,18,Chart 3.3,"Climate change a threat, 2023, Northern Africa: % very",38,pct,,chart,N,,
+C3_3_north_africa_somewhat,18,Chart 3.3,"Climate change a threat, 2023, Northern Africa: % somewhat",33,pct,,chart,N,,
+C3_3_north_africa_dk,18,Chart 3.3,"Climate change a threat, 2023, Northern Africa: % dk (don't know/refused)",15,pct,,chart,N,,
+C3_3_north_africa_not,18,Chart 3.3,"Climate change a threat, 2023, Northern Africa: % not",13,pct,,chart,N,,
+C3_3_north_africa_combined,18,Chart 3.3,"Climate change a threat, 2023, Northern Africa: % combined (very + somewhat, from rounded figures)",71,pct,,chart,N,,Combined threat is the sum of the rounded 'very' and 'somewhat' figures (chart note).
+C3_3_anz_very,18,Chart 3.3,"Climate change a threat, 2023, Australia & New Zealand: % very",47,pct,,chart,N,,
+C3_3_anz_somewhat,18,Chart 3.3,"Climate change a threat, 2023, Australia & New Zealand: % somewhat",24,pct,,chart,N,,
+C3_3_anz_dk,18,Chart 3.3,"Climate change a threat, 2023, Australia & New Zealand: % dk (don't know/refused)",11,pct,,chart,N,,
+C3_3_anz_not,18,Chart 3.3,"Climate change a threat, 2023, Australia & New Zealand: % not",18,pct,,chart,N,,
+C3_3_anz_combined,18,Chart 3.3,"Climate change a threat, 2023, Australia & New Zealand: % combined (very + somewhat, from rounded figures)",71,pct,,chart,N,,Combined threat is the sum of the rounded 'very' and 'somewhat' figures (chart note).
+C3_3_central_asia_very,18,Chart 3.3,"Climate change a threat, 2023, Central Asia: % very",37,pct,,chart,N,,
+C3_3_central_asia_somewhat,18,Chart 3.3,"Climate change a threat, 2023, Central Asia: % somewhat",32,pct,,chart,N,,
+C3_3_central_asia_dk,18,Chart 3.3,"Climate change a threat, 2023, Central Asia: % dk (don't know/refused)",16,pct,,chart,N,,
+C3_3_central_asia_not,18,Chart 3.3,"Climate change a threat, 2023, Central Asia: % not",15,pct,,chart,N,,
+C3_3_central_asia_combined,18,Chart 3.3,"Climate change a threat, 2023, Central Asia: % combined (very + somewhat, from rounded figures)",69,pct,,chart,N,,Combined threat is the sum of the rounded 'very' and 'somewhat' figures (chart note).
+C3_3_north_america_very,18,Chart 3.3,"Climate change a threat, 2023, Northern America: % very",51,pct,,chart,N,,
+C3_3_north_america_somewhat,18,Chart 3.3,"Climate change a threat, 2023, Northern America: % somewhat",18,pct,,chart,N,,
+C3_3_north_america_dk,18,Chart 3.3,"Climate change a threat, 2023, Northern America: % dk (don't know/refused)",10,pct,,chart,N,,
+C3_3_north_america_not,18,Chart 3.3,"Climate change a threat, 2023, Northern America: % not",20,pct,,chart,N,,
+C3_3_north_america_combined,18,Chart 3.3,"Climate change a threat, 2023, Northern America: % combined (very + somewhat, from rounded figures)",69,pct,,chart,N,,Combined threat is the sum of the rounded 'very' and 'somewhat' figures (chart note).
+C3_3_south_africa_very,18,Chart 3.3,"Climate change a threat, 2023, Southern Africa: % very",49,pct,,chart,N,,
+C3_3_south_africa_somewhat,18,Chart 3.3,"Climate change a threat, 2023, Southern Africa: % somewhat",19,pct,,chart,N,,
+C3_3_south_africa_dk,18,Chart 3.3,"Climate change a threat, 2023, Southern Africa: % dk (don't know/refused)",20,pct,,chart,N,,
+C3_3_south_africa_not,18,Chart 3.3,"Climate change a threat, 2023, Southern Africa: % not",11,pct,,chart,N,,
+C3_3_south_africa_combined,18,Chart 3.3,"Climate change a threat, 2023, Southern Africa: % combined (very + somewhat, from rounded figures)",68,pct,,chart,N,,Combined threat is the sum of the rounded 'very' and 'somewhat' figures (chart note).
+C3_3_east_europe_very,18,Chart 3.3,"Climate change a threat, 2023, Eastern Europe: % very",34,pct,,chart,N,,
+C3_3_east_europe_somewhat,18,Chart 3.3,"Climate change a threat, 2023, Eastern Europe: % somewhat",34,pct,,chart,N,,
+C3_3_east_europe_dk,18,Chart 3.3,"Climate change a threat, 2023, Eastern Europe: % dk (don't know/refused)",15,pct,,chart,N,,
+C3_3_east_europe_not,18,Chart 3.3,"Climate change a threat, 2023, Eastern Europe: % not",17,pct,,chart,N,,
+C3_3_east_europe_combined,18,Chart 3.3,"Climate change a threat, 2023, Eastern Europe: % combined (very + somewhat, from rounded figures)",68,pct,,chart,N,,Combined threat is the sum of the rounded 'very' and 'somewhat' figures (chart note).
+C3_3_south_asia_very,18,Chart 3.3,"Climate change a threat, 2023, Southern Asia: % very",37,pct,,chart,N,,
+C3_3_south_asia_somewhat,18,Chart 3.3,"Climate change a threat, 2023, Southern Asia: % somewhat",30,pct,,chart,N,,
+C3_3_south_asia_dk,18,Chart 3.3,"Climate change a threat, 2023, Southern Asia: % dk (don't know/refused)",12,pct,,chart,N,,
+C3_3_south_asia_not,18,Chart 3.3,"Climate change a threat, 2023, Southern Asia: % not",21,pct,,chart,N,,
+C3_3_south_asia_combined,18,Chart 3.3,"Climate change a threat, 2023, Southern Asia: % combined (very + somewhat, from rounded figures)",67,pct,,chart,N,,Combined threat is the sum of the rounded 'very' and 'somewhat' figures (chart note).
+C3_3_middle_east_very,18,Chart 3.3,"Climate change a threat, 2023, Middle East: % very",36,pct,,chart,N,,
+C3_3_middle_east_somewhat,18,Chart 3.3,"Climate change a threat, 2023, Middle East: % somewhat",29,pct,,chart,N,,
+C3_3_middle_east_dk,18,Chart 3.3,"Climate change a threat, 2023, Middle East: % dk (don't know/refused)",15,pct,,chart,N,,
+C3_3_middle_east_not,18,Chart 3.3,"Climate change a threat, 2023, Middle East: % not",21,pct,,chart,N,,
+C3_3_middle_east_combined,18,Chart 3.3,"Climate change a threat, 2023, Middle East: % combined (very + somewhat, from rounded figures)",65,pct,,chart,N,,Combined threat is the sum of the rounded 'very' and 'somewhat' figures (chart note).
+C3_3_cw_africa_very,18,Chart 3.3,"Climate change a threat, 2023, Central/Western Africa: % very",39,pct,,chart,N,,
+C3_3_cw_africa_somewhat,18,Chart 3.3,"Climate change a threat, 2023, Central/Western Africa: % somewhat",24,pct,,chart,N,,
+C3_3_cw_africa_dk,18,Chart 3.3,"Climate change a threat, 2023, Central/Western Africa: % dk (don't know/refused)",21,pct,,chart,N,,
+C3_3_cw_africa_not,18,Chart 3.3,"Climate change a threat, 2023, Central/Western Africa: % not",16,pct,,chart,N,,
+C3_3_cw_africa_combined,18,Chart 3.3,"Climate change a threat, 2023, Central/Western Africa: % combined (very + somewhat, from rounded figures)",63,pct,,chart,N,,Combined threat is the sum of the rounded 'very' and 'somewhat' figures (chart note).
+C3_3_east_africa_very,18,Chart 3.3,"Climate change a threat, 2023, Eastern Africa: % very",41,pct,,chart,N,,
+C3_3_east_africa_somewhat,18,Chart 3.3,"Climate change a threat, 2023, Eastern Africa: % somewhat",20,pct,,chart,N,,
+C3_3_east_africa_dk,18,Chart 3.3,"Climate change a threat, 2023, Eastern Africa: % dk (don't know/refused)",19,pct,,chart,N,,
+C3_3_east_africa_not,18,Chart 3.3,"Climate change a threat, 2023, Eastern Africa: % not",20,pct,,chart,N,,
+C3_3_east_africa_combined,18,Chart 3.3,"Climate change a threat, 2023, Eastern Africa: % combined (very + somewhat, from rounded figures)",61,pct,,chart,N,,Combined threat is the sum of the rounded 'very' and 'somewhat' figures (chart note).
+C3_3_se_asia_very,18,Chart 3.3,"Climate change a threat, 2023, Southeastern Asia: % very",36,pct,,chart,N,,
+C3_3_se_asia_somewhat,18,Chart 3.3,"Climate change a threat, 2023, Southeastern Asia: % somewhat",24,pct,,chart,N,,
+C3_3_se_asia_dk,18,Chart 3.3,"Climate change a threat, 2023, Southeastern Asia: % dk (don't know/refused)",27,pct,,chart,N,,
+C3_3_se_asia_not,18,Chart 3.3,"Climate change a threat, 2023, Southeastern Asia: % not",13,pct,,chart,N,,
+C3_3_se_asia_combined,18,Chart 3.3,"Climate change a threat, 2023, Southeastern Asia: % combined (very + somewhat, from rounded figures)",60,pct,,chart,N,,Combined threat is the sum of the rounded 'very' and 'somewhat' figures (chart note).
+T3_1_north_africa_very,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'very' (Northern Africa),12,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_north_africa_somewhat,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'somewhat' (Northern Africa),-1,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_north_africa_not,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'not' (Northern Africa),-5,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_north_africa_dk,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'dk' (Northern Africa),-7,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_central_asia_very,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'very' (Central Asia),3,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_central_asia_somewhat,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'somewhat' (Central Asia),2,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_central_asia_not,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'not' (Central Asia),-4,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_central_asia_dk,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'dk' (Central Asia),-2,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_south_asia_very,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'very' (Southern Asia),2,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_south_asia_somewhat,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'somewhat' (Southern Asia),2,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_south_asia_not,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'not' (Southern Asia),4,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_south_asia_dk,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'dk' (Southern Asia),-8,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_nw_europe_very,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'very' (Northern/Western Europe),1,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_nw_europe_somewhat,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'somewhat' (Northern/Western Europe),0,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_nw_europe_not,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'not' (Northern/Western Europe),0,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_nw_europe_dk,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'dk' (Northern/Western Europe),0,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_middle_east_very,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'very' (Middle East),1,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_middle_east_somewhat,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'somewhat' (Middle East),-1,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_middle_east_not,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'not' (Middle East),5,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_middle_east_dk,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'dk' (Middle East),-4,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_north_america_very,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'very' (Northern America),1,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_north_america_somewhat,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'somewhat' (Northern America),-7,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_north_america_not,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'not' (Northern America),0,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_north_america_dk,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'dk' (Northern America),4,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_east_africa_very,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'very' (Eastern Africa),0,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_east_africa_somewhat,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'somewhat' (Eastern Africa),-2,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_east_africa_not,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'not' (Eastern Africa),0,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_east_africa_dk,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'dk' (Eastern Africa),2,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_latam_very,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'very' (Latin America & the Caribbean),-2,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_latam_somewhat,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'somewhat' (Latin America & the Caribbean),1,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_latam_not,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'not' (Latin America & the Caribbean),0,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_latam_dk,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'dk' (Latin America & the Caribbean),0,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_east_asia_very,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'very' (Eastern Asia),-4,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_east_asia_somewhat,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'somewhat' (Eastern Asia),20,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_east_asia_not,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'not' (Eastern Asia),4,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_east_asia_dk,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'dk' (Eastern Asia),-20,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_anz_very,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'very' (Australia & New Zealand),-4,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_anz_somewhat,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'somewhat' (Australia & New Zealand),-6,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_anz_not,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'not' (Australia & New Zealand),4,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_anz_dk,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'dk' (Australia & New Zealand),6,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_se_asia_very,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'very' (Southeastern Asia),-5,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_se_asia_somewhat,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'somewhat' (Southeastern Asia),-1,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_se_asia_not,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'not' (Southeastern Asia),0,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_se_asia_dk,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'dk' (Southeastern Asia),6,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_cw_africa_very,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'very' (Central/Western Africa),-6,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_cw_africa_somewhat,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'somewhat' (Central/Western Africa),1,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_cw_africa_not,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'not' (Central/Western Africa),2,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_cw_africa_dk,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'dk' (Central/Western Africa),2,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_south_europe_very,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'very' (Southern Europe),-7,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_south_europe_somewhat,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'somewhat' (Southern Europe),6,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_south_europe_not,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'not' (Southern Europe),1,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_south_europe_dk,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'dk' (Southern Europe),0,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_south_africa_very,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'very' (Southern Africa),-10,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_south_africa_somewhat,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'somewhat' (Southern Africa),7,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_south_africa_not,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'not' (Southern Africa),1,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_south_africa_dk,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'dk' (Southern Africa),2,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_east_europe_very,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'very' (Eastern Europe),-14,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_east_europe_somewhat,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'somewhat' (Eastern Europe),8,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_east_europe_not,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'not' (Eastern Europe),7,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+T3_1_east_europe_dk,19,Table 3.1,Change (pp) 2019 to 2023 in climate change 'dk' (Eastern Europe),-1,pp,,table,N,,Differences of rounded figures (table note). 2019 uses the 2023 region of each country (Iran: Southern Asia).
+X105,19,Chapter 3,"Northern Africa: change (pp) in 'very serious threat', 2019 to 2023",12,pp,,text,N,,
+X106,19,Chapter 3,"Northern Africa: climate change a very serious threat, 2019",26,pct,,text,N,,
+X107,19,Chapter 3,"Northern Africa: climate change a very serious threat, 2023",38,pct,,text,N,,
+X108,19,Chapter 3,"Southern Europe: climate change a very or somewhat serious threat, 2019",93,pct,,text,N,,
+X109,19,Chapter 3,"Southern Europe: climate change a very or somewhat serious threat, 2023",92,pct,,text,N,,"Same figure as X93, given again on page 19."
+X110,19,Chapter 3,"Southern Europe: change (pp) in 'very serious threat', 2019 to 2023",-7,pp,,text,N,,
+X111,19,Chapter 3,"Southern Europe: change (pp) in 'somewhat serious threat', 2019 to 2023",6,pp,,text,N,,
+X112,19,Chapter 3,"Australia & New Zealand: change (pp) in very or somewhat serious threat, 2019 to 2023",-10,pp,,text,N,,Difference of combined figures built from rounded 'very' and 'somewhat' figures (81 to 71).
+X113,19,Chapter 3,"Australia & New Zealand: change (pp) in 'not a threat at all', 2019 to 2023",4,pp,,text,N,,
+X114,19,Chapter 3,"Australia & New Zealand: change (pp) in don't know, 2019 to 2023",6,pp,,text,N,,
+X115,19,Chapter 3,"Eastern Europe: change (pp) in 'very serious threat', 2019 to 2023",-14,pp,,text,N,,
+C3_4_china_2019,20,Chart 3.4,"China: climate change a very or somewhat serious threat, 2019",59,pct,,chart,N,,Sum of the rounded 'very' and 'somewhat' figures (footnote i).
+C3_4_china_2021,20,Chart 3.4,"China: climate change a very or somewhat serious threat, 2021",54,pct,,chart,N,,Sum of the rounded 'very' and 'somewhat' figures (footnote i).
+C3_4_china_2023,20,Chart 3.4,"China: climate change a very or somewhat serious threat, 2023",78,pct,,chart,N,,Sum of the rounded 'very' and 'somewhat' figures (footnote i).
+C3_4_rest_2019,20,Chart 3.4,"Rest of world: climate change a very or somewhat serious threat, 2019",71,pct,,chart,N,,Sum of the rounded 'very' and 'somewhat' figures (footnote i).
+C3_4_rest_2021,20,Chart 3.4,"Rest of world: climate change a very or somewhat serious threat, 2021",71,pct,,chart,N,,Sum of the rounded 'very' and 'somewhat' figures (footnote i).
+C3_4_rest_2023,20,Chart 3.4,"Rest of world: climate change a very or somewhat serious threat, 2023",70,pct,,chart,N,,Sum of the rounded 'very' and 'somewhat' figures (footnote i).
+X116,20,Chapter 3,"China: climate change a very or somewhat serious threat, 2023",78,pct,,text,N,,
+X117,20,Chapter 3,"China: climate change a very or somewhat serious threat, 2021",54,pct,,text,N,,
+X118,20,Chapter 3,"China: climate change a very or somewhat serious threat, 2019",59,pct,,text,N,,
+X119,20,Chapter 3,"Rest of the world (excluding China): very or somewhat serious threat, 2023",70,pct,,text,N,,Sum of the rounded 'very' and 'somewhat' figures (footnote i).
+X120,20,Chapter 3,"Rest of the world (excluding China): very or somewhat serious threat, 2019",71,pct,,text,N,,
+X121,20,Chapter 3,"Rest of the world (excluding China): very or somewhat serious threat, 2021",71,pct,,text,N,,
+X122,20,Chapter 3,"China: don't know whether climate change is a threat, 2021",31,pct,,text,N,,Don't know only (code 98).
+X123,20,Chapter 3,"China: don't know whether climate change is a threat, 2019",29,pct,,text,N,,Don't know only (code 98).
+X124,20,Chapter 3,"China: don't know whether climate change is a threat, 2023",5,pct,,text,N,,Don't know only (code 98).
+C3_5_ESP_very,21,Chart 3.5,"ESP: climate change a very serious threat, 2023",76,pct,,chart,N,,
+C3_5_ESP_somewhat,21,Chart 3.5,"ESP: climate change a somewhat serious threat, 2023",20,pct,,chart,N,,
+C3_5_ESP_total,21,Chart 3.5,"ESP: overall threat (very + somewhat, from rounded figures), 2023",96,pct,,chart,N,,Sum of the rounded figures (chart note).
+C3_5_DEU_very,21,Chart 3.5,"DEU: climate change a very serious threat, 2023",67,pct,,chart,N,,
+C3_5_DEU_somewhat,21,Chart 3.5,"DEU: climate change a somewhat serious threat, 2023",28,pct,,chart,N,,
+C3_5_DEU_total,21,Chart 3.5,"DEU: overall threat (very + somewhat, from rounded figures), 2023",95,pct,,chart,N,,Sum of the rounded figures (chart note).
+C3_5_AUT_very,21,Chart 3.5,"AUT: climate change a very serious threat, 2023",69,pct,,chart,N,,
+C3_5_AUT_somewhat,21,Chart 3.5,"AUT: climate change a somewhat serious threat, 2023",25,pct,,chart,N,,
+C3_5_AUT_total,21,Chart 3.5,"AUT: overall threat (very + somewhat, from rounded figures), 2023",94,pct,,chart,N,,Sum of the rounded figures (chart note).
+C3_5_GEO_very,21,Chart 3.5,"GEO: climate change a very serious threat, 2023",75,pct,,chart,N,,
+C3_5_GEO_somewhat,21,Chart 3.5,"GEO: climate change a somewhat serious threat, 2023",19,pct,,chart,N,,
+C3_5_GEO_total,21,Chart 3.5,"GEO: overall threat (very + somewhat, from rounded figures), 2023",94,pct,,chart,N,,Sum of the rounded figures (chart note).
+C3_5_KOR_very,21,Chart 3.5,"KOR: climate change a very serious threat, 2023",65,pct,,chart,N,,
+C3_5_KOR_somewhat,21,Chart 3.5,"KOR: climate change a somewhat serious threat, 2023",29,pct,,chart,N,,
+C3_5_KOR_total,21,Chart 3.5,"KOR: overall threat (very + somewhat, from rounded figures), 2023",94,pct,,chart,N,,Sum of the rounded figures (chart note).
+C3_5_ITA_very,21,Chart 3.5,"ITA: climate change a very serious threat, 2023",62,pct,,chart,N,,
+C3_5_ITA_somewhat,21,Chart 3.5,"ITA: climate change a somewhat serious threat, 2023",31,pct,,chart,N,,
+C3_5_ITA_total,21,Chart 3.5,"ITA: overall threat (very + somewhat, from rounded figures), 2023",93,pct,,chart,N,,Sum of the rounded figures (chart note).
+C3_5_JPN_very,21,Chart 3.5,"JPN: climate change a very serious threat, 2023",54,pct,,chart,N,,
+C3_5_JPN_somewhat,21,Chart 3.5,"JPN: climate change a somewhat serious threat, 2023",39,pct,,chart,N,,
+C3_5_JPN_total,21,Chart 3.5,"JPN: overall threat (very + somewhat, from rounded figures), 2023",93,pct,,chart,N,,Sum of the rounded figures (chart note).
+C3_5_LUX_very,21,Chart 3.5,"LUX: climate change a very serious threat, 2023",60,pct,,chart,N,,
+C3_5_LUX_somewhat,21,Chart 3.5,"LUX: climate change a somewhat serious threat, 2023",33,pct,,chart,N,,
+C3_5_LUX_total,21,Chart 3.5,"LUX: overall threat (very + somewhat, from rounded figures), 2023",93,pct,,chart,N,,Sum of the rounded figures (chart note).
+C3_5_GBR_very,21,Chart 3.5,"GBR: climate change a very serious threat, 2023",70,pct,,chart,N,,
+C3_5_GBR_somewhat,21,Chart 3.5,"GBR: climate change a somewhat serious threat, 2023",23,pct,,chart,N,,
+C3_5_GBR_total,21,Chart 3.5,"GBR: overall threat (very + somewhat, from rounded figures), 2023",93,pct,,chart,N,,Sum of the rounded figures (chart note).
+C3_5_IRL_very,21,Chart 3.5,"IRL: climate change a very serious threat, 2023",65,pct,,chart,N,,
+C3_5_IRL_somewhat,21,Chart 3.5,"IRL: climate change a somewhat serious threat, 2023",27,pct,,chart,N,,
+C3_5_IRL_total,21,Chart 3.5,"IRL: overall threat (very + somewhat, from rounded figures), 2023",92,pct,,chart,N,,Sum of the rounded figures (chart note).
+C3_5_top10,21,Chart 3.5,"Top 10 countries by overall threat (very + somewhat from rounded figures), 2023 (ISO3, sorted)",AUT; DEU; ESP; GBR; GEO; IRL; ITA; JPN; KOR; LUX,text,,chart,N,,"Ranked on the sum of rounded figures, as printed. Ireland ties at 92 with Switzerland and North Macedonia; ties are broken on the unrounded total."
+X125,21,Chapter 3,"Spain: overall threat (very + somewhat), 2023",96,pct,,text,N,,
+C3_6_SAU,22,Chart 3.6,"SAU: climate change not a threat at all, 2023",46,pct,,chart,N,,
+C3_6_ETH,22,Chart 3.6,"ETH: climate change not a threat at all, 2023",39,pct,,chart,N,,
+C3_6_ARE,22,Chart 3.6,"ARE: climate change not a threat at all, 2023",38,pct,,chart,N,,
+C3_6_ISR,22,Chart 3.6,"ISR: climate change not a threat at all, 2023",36,pct,,chart,N,,
+C3_6_IRQ,22,Chart 3.6,"IRQ: climate change not a threat at all, 2023",33,pct,,chart,N,,
+C3_6_MLI,22,Chart 3.6,"MLI: climate change not a threat at all, 2023",31,pct,,chart,N,,
+C3_6_BHR,22,Chart 3.6,"BHR: climate change not a threat at all, 2023",30,pct,,chart,N,,
+C3_6_JOR,22,Chart 3.6,"JOR: climate change not a threat at all, 2023",28,pct,,chart,N,,
+C3_6_EST,22,Chart 3.6,"EST: climate change not a threat at all, 2023",27,pct,,chart,N,,
+C3_6_IND,22,Chart 3.6,"IND: climate change not a threat at all, 2023",25,pct,,chart,N,,
+C3_6_top10,22,Chart 3.6,"Top 10 countries by % 'not a threat at all', 2023 (ISO3, sorted)",ARE; BHR; EST; ETH; IND; IRQ; ISR; JOR; MLI; SAU,text,,chart,N,,
+X126,"22, 23",Chapter 3,"Saudi Arabia: climate change not a threat at all, 2023",46,pct,,text,N,,
+X127,22,Chapter 3,"Saudi Arabia: climate change a very serious threat, 2023",7,pct,,text,N,,
+X128,22,Chapter 3,Saudi Arabia: ratio of 'not a threat at all' to 'very serious threat' ('almost seven times'),7,ratio,0.5,text,N,,Approximate wording: 'almost seven times'.
+X129,22,Chapter 3,"Ethiopia: climate change not a threat at all, 2023",39,pct,,text,N,,
+X130,22,Chapter 3,"Ethiopia: climate change a very serious threat, 2023",16,pct,,text,N,,
+X131,22,Chapter 3,"Israel: climate change not a threat at all, 2023",36,pct,,text,N,,
+X132,22,Chapter 3,"Israel: climate change not a threat at all, 2019",15,pct,,text,N,,
+X133,22,Chapter 3,"Israel: climate change not a threat at all, 2021",15,pct,,text,N,,
+C3_7_MMR,23,Chart 3.7,"MMR: don't know whether climate change is a threat, 2023",51,pct,,chart,N,,Don't know only (code 98).
+C3_7_LBY,23,Chart 3.7,"LBY: don't know whether climate change is a threat, 2023",48,pct,,chart,N,,Don't know only (code 98).
+C3_7_MAR,23,Chart 3.7,"MAR: don't know whether climate change is a threat, 2023",41,pct,,chart,N,,Don't know only (code 98).
+C3_7_LAO,23,Chart 3.7,"LAO: don't know whether climate change is a threat, 2023",40,pct,,chart,N,,Don't know only (code 98).
+C3_7_IDN,23,Chart 3.7,"IDN: don't know whether climate change is a threat, 2023",38,pct,,chart,N,,Don't know only (code 98).
+C3_7_NAM,23,Chart 3.7,"NAM: don't know whether climate change is a threat, 2023",30,pct,,chart,N,,Don't know only (code 98).
+C3_7_NGA,23,Chart 3.7,"NGA: don't know whether climate change is a threat, 2023",29,pct,,chart,N,,Don't know only (code 98).
+C3_7_COD,23,Chart 3.7,"COD: don't know whether climate change is a threat, 2023",28,pct,,chart,N,,Don't know only (code 98).
+C3_7_YEM,23,Chart 3.7,"YEM: don't know whether climate change is a threat, 2023",27,pct,,chart,N,,Don't know only (code 98).
+C3_7_SAU,23,Chart 3.7,"SAU: don't know whether climate change is a threat, 2023",27,pct,,chart,N,,Don't know only (code 98).
+C3_7_top10,23,Chart 3.7,"Top 10 countries by % don't know, 2023 (ISO3, sorted)",COD; IDN; LAO; LBY; MAR; MMR; NAM; NGA; SAU; YEM,text,,chart,N,,Don't know only (code 98).
+X134,23,Chapter 3,"Myanmar: no opinion (don't know or refused) on the threat of climate change, 2023",52,pct,,text,N,,Chart 3.7 prints 51% (don't know only).
+X135,23,Chapter 3,"Libya: no opinion (don't know or refused) on the threat of climate change, 2023",48,pct,,text,N,,
+X136,23,Chapter 3,"Saudi Arabia: don't know whether climate change is a threat, 2023",27,pct,,text,N,,
+C3_8_very,24,Chart 3.8,"Odds ratio, climate change a very serious threat: very worried vs not worried about severe weather",3.6,odds_ratio,0.1,chart,N,,"Logistic regression (glm) with country fixed effects, WGT-weighted; see README for the specification. The report used a multi-level model that also controlled for two Gallup World Poll items."
+C3_8_somewhat,24,Chart 3.8,"Odds ratio, climate change a very serious threat: somewhat worried vs not worried about severe weather",1.6,odds_ratio,0.1,chart,N,,"Logistic regression (glm) with country fixed effects, WGT-weighted; see README for the specification. The report used a multi-level model that also controlled for two Gallup World Poll items."
+X137,24,Chapter 3,"Odds ratio, somewhat worried vs not worried about severe weather",1.6,odds_ratio,0.1,text,N,,"Logistic regression (glm) with country fixed effects, WGT-weighted; see README for the specification. The report used a multi-level model that also controlled for two Gallup World Poll items."
+C3_9_tertiary,25,Chart 3.9,"Odds ratio, climate change a very serious threat: tertiary vs primary education",1.7,odds_ratio,0.1,chart,N,,"Logistic regression (glm) with country fixed effects, WGT-weighted; see README for the specification. The report used a multi-level model that also controlled for two Gallup World Poll items."
+C3_9_secondary,25,Chart 3.9,"Odds ratio, climate change a very serious threat: secondary vs primary education",1.3,odds_ratio,0.1,chart,N,,"Logistic regression (glm) with country fixed effects, WGT-weighted; see README for the specification. The report used a multi-level model that also controlled for two Gallup World Poll items."
+X138,25,Chapter 3,"Odds ratio, tertiary vs primary education",1.7,odds_ratio,0.1,text,N,,"Logistic regression (glm) with country fixed effects, WGT-weighted; see README for the specification. The report used a multi-level model that also controlled for two Gallup World Poll items."
+X139,25,Chapter 3,"Odds ratio, secondary vs primary education",1.3,odds_ratio,0.1,text,N,,"Logistic regression (glm) with country fixed effects, WGT-weighted; see README for the specification. The report used a multi-level model that also controlled for two Gallup World Poll items."
+X140,25,Chapter 3,"Odds ratio, male vs female",1.15,odds_ratio,0.1,text,N,,"Logistic regression (glm) with country fixed effects, WGT-weighted; see README for the specification. The report used a multi-level model that also controlled for two Gallup World Poll items."
+X141,25,Chapter 3,"Odds ratio, lives in a large city vs rural area",1.1,odds_ratio,0.1,text,N,,"Logistic regression (glm) with country fixed effects, WGT-weighted; see README for the specification. The report used a multi-level model that also controlled for two Gallup World Poll items. City = 'a large city' (Urbanicity 3)."
+X142,26,Chapter 3,Climate change a very serious threat: % satisfied with efforts to protect the environment,57,pct,,text,Y,GWP_ENVIRONMENT_SATISFACTION,
+X143,26,Chapter 3,Climate change not a threat at all: % satisfied with efforts to protect the environment,62,pct,,text,Y,GWP_ENVIRONMENT_SATISFACTION,
+X144,26,Chapter 3,Unsure (don't know) about climate change: % satisfied with efforts to protect the environment,66,pct,,text,Y,GWP_ENVIRONMENT_SATISFACTION,
+X145,26,Chapter 3,Climate change a very serious threat: % whose household separates its waste,58,pct,,text,N,,From the World Risk Poll 2024 report A World of Waste; 'yes' to WP23342.
+X146,26,Chapter 3,Climate change not a threat at all: % whose household separates its waste,48,pct,,text,N,,
+C4_1_less_2019,27,Chart 4.1,"Feel less safe than five years ago, 2019",25,pct,,chart,N,,
+C4_1_about_2019,27,Chart 4.1,"Feel about safe as than five years ago, 2019",36,pct,,chart,N,,
+C4_1_more_2019,27,Chart 4.1,"Feel more safe than five years ago, 2019",36,pct,,chart,N,,
+C4_1_less_2021,27,Chart 4.1,"Feel less safe than five years ago, 2021",34,pct,,chart,N,,
+C4_1_about_2021,27,Chart 4.1,"Feel about safe as than five years ago, 2021",38,pct,,chart,N,,
+C4_1_more_2021,27,Chart 4.1,"Feel more safe than five years ago, 2021",27,pct,,chart,N,,
+C4_1_less_2023,27,Chart 4.1,"Feel less safe than five years ago, 2023",26,pct,,chart,N,,
+C4_1_about_2023,27,Chart 4.1,"Feel about safe as than five years ago, 2023",37,pct,,chart,N,,
+C4_1_more_2023,27,Chart 4.1,"Feel more safe than five years ago, 2023",37,pct,,chart,N,,
+X147,27,Chapter 4,"Feel less safe than five years ago, 2021",34,pct,,text,N,,
+X148,27,Chapter 4,"Feel more safe than five years ago, 2021",27,pct,,text,N,,
+X149,27,Chapter 4,Countries surveyed in 2021,121,count,0,text,N,,
+X150,27,Chapter 4,Countries surveyed in 2019 ('137'),137,count,0,text,N,,"The 2019 file has 142 countries; 137 of them were surveyed again in 2023, the set this report uses for trends."
+C4_2_south_africa_less,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Southern Africa: % less safe",58,pct,,chart,N,,
+C4_2_south_africa_about,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Southern Africa: % about safe",20,pct,,chart,N,,
+C4_2_south_africa_more,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Southern Africa: % more safe",20,pct,,chart,N,,
+C4_2_latam_less,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Latin America & the Caribbean: % less safe",43,pct,,chart,N,,
+C4_2_latam_about,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Latin America & the Caribbean: % about safe",29,pct,,chart,N,,
+C4_2_latam_more,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Latin America & the Caribbean: % more safe",27,pct,,chart,N,,
+C4_2_east_africa_less,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Eastern Africa: % less safe",43,pct,,chart,N,,
+C4_2_east_africa_about,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Eastern Africa: % about safe",21,pct,,chart,N,,
+C4_2_east_africa_more,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Eastern Africa: % more safe",34,pct,,chart,N,,
+C4_2_cw_africa_less,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Central/Western Africa: % less safe",42,pct,,chart,N,,
+C4_2_cw_africa_about,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Central/Western Africa: % about safe",28,pct,,chart,N,,
+C4_2_cw_africa_more,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Central/Western Africa: % more safe",29,pct,,chart,N,,
+C4_2_north_america_less,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Northern America: % less safe",39,pct,,chart,N,,
+C4_2_north_america_about,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Northern America: % about safe",46,pct,,chart,N,,
+C4_2_north_america_more,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Northern America: % more safe",14,pct,,chart,N,,
+C4_2_south_europe_less,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Southern Europe: % less safe",33,pct,,chart,N,,
+C4_2_south_europe_about,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Southern Europe: % about safe",52,pct,,chart,N,,
+C4_2_south_europe_more,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Southern Europe: % more safe",15,pct,,chart,N,,
+C4_2_east_europe_less,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Eastern Europe: % less safe",32,pct,,chart,N,,
+C4_2_east_europe_about,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Eastern Europe: % about safe",52,pct,,chart,N,,
+C4_2_east_europe_more,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Eastern Europe: % more safe",15,pct,,chart,N,,
+C4_2_north_africa_less,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Northern Africa: % less safe",30,pct,,chart,N,,
+C4_2_north_africa_about,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Northern Africa: % about safe",47,pct,,chart,N,,
+C4_2_north_africa_more,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Northern Africa: % more safe",22,pct,,chart,N,,
+C4_2_nw_europe_less,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Northern/Western Europe: % less safe",30,pct,,chart,N,,
+C4_2_nw_europe_about,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Northern/Western Europe: % about safe",59,pct,,chart,N,,
+C4_2_nw_europe_more,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Northern/Western Europe: % more safe",10,pct,,chart,N,,
+C4_2_middle_east_less,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Middle East: % less safe",30,pct,,chart,N,,
+C4_2_middle_east_about,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Middle East: % about safe",40,pct,,chart,N,,
+C4_2_middle_east_more,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Middle East: % more safe",29,pct,,chart,N,,
+C4_2_south_asia_less,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Southern Asia: % less safe",27,pct,,chart,N,,
+C4_2_south_asia_about,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Southern Asia: % about safe",36,pct,,chart,N,,
+C4_2_south_asia_more,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Southern Asia: % more safe",37,pct,,chart,N,,
+C4_2_anz_less,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Australia & New Zealand: % less safe",26,pct,,chart,N,,
+C4_2_anz_about,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Australia & New Zealand: % about safe",59,pct,,chart,N,,
+C4_2_anz_more,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Australia & New Zealand: % more safe",14,pct,,chart,N,,
+C4_2_central_asia_less,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Central Asia: % less safe",17,pct,,chart,N,,
+C4_2_central_asia_about,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Central Asia: % about safe",45,pct,,chart,N,,
+C4_2_central_asia_more,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Central Asia: % more safe",37,pct,,chart,N,,
+C4_2_se_asia_less,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Southeastern Asia: % less safe",15,pct,,chart,N,,
+C4_2_se_asia_about,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Southeastern Asia: % about safe",55,pct,,chart,N,,
+C4_2_se_asia_more,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Southeastern Asia: % more safe",29,pct,,chart,N,,
+C4_2_east_asia_less,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Eastern Asia: % less safe",9,pct,,chart,N,,
+C4_2_east_asia_about,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Eastern Asia: % about safe",26,pct,,chart,N,,
+C4_2_east_asia_more,28,Chart 4.2,"Feelings of safety vs five years ago, 2023, Eastern Asia: % more safe",65,pct,,chart,N,,
+X151,28,Chapter 4,"Eastern Asia: feel more safe than five years ago, 2023",65,pct,,text,N,,
+X152,28,Chapter 4,"Northern America: change (pp) in feeling less safe, 2019 to 2023",12,pp,,text,N,,
+X153,28,Chapter 4,"Eastern Europe: change (pp) in feeling less safe, 2019 to 2023",11,pp,,text,N,,
+X154,28,Chapter 4,"United States: feel less safe than five years ago, 2019",27,pct,,text,N,,
+X155,28,Chapter 4,"United States: feel less safe than five years ago, 2023",40,pct,,text,N,,
+C4_4_traffic_2021,29,Chart 4.4,"Very or somewhat worried about harm from traffic/roadside accidents, 2021",71,pct,,chart,N,,
+C4_4_traffic_2023,29,Chart 4.4,"Very or somewhat worried about harm from traffic/roadside accidents, 2023",76,pct,,chart,N,,
+C4_4_weather_2019,29,Chart 4.4,"Very or somewhat worried about harm from severe weather events, 2019",68,pct,,chart,N,,
+C4_4_weather_2021,29,Chart 4.4,"Very or somewhat worried about harm from severe weather events, 2021",65,pct,,chart,N,,
+C4_4_weather_2023,29,Chart 4.4,"Very or somewhat worried about harm from severe weather events, 2023",71,pct,,chart,N,,
+C4_4_crime_2019,29,Chart 4.4,"Very or somewhat worried about harm from violent crime, 2019",62,pct,,chart,N,,
+C4_4_crime_2021,29,Chart 4.4,"Very or somewhat worried about harm from violent crime, 2021",58,pct,,chart,N,,
+C4_4_crime_2023,29,Chart 4.4,"Very or somewhat worried about harm from violent crime, 2023",65,pct,,chart,N,,
+C4_4_food_2019,29,Chart 4.4,"Very or somewhat worried about harm from the food you eat, 2019",60,pct,,chart,N,,
+C4_4_food_2021,29,Chart 4.4,"Very or somewhat worried about harm from the food you eat, 2021",56,pct,,chart,N,,
+C4_4_food_2023,29,Chart 4.4,"Very or somewhat worried about harm from the food you eat, 2023",59,pct,,chart,N,,
+C4_4_mental_2019,29,Chart 4.4,"Very or somewhat worried about harm from mental health issues, 2019",45,pct,,chart,N,,The text (pages 4 and 29) gives 48% for 2019 (X11).
+C4_4_mental_2021,29,Chart 4.4,"Very or somewhat worried about harm from mental health issues, 2021",52,pct,,chart,N,,
+C4_4_mental_2023,29,Chart 4.4,"Very or somewhat worried about harm from mental health issues, 2023",55,pct,,chart,N,,
+C4_4_work_2021,29,Chart 4.4,"Very or somewhat worried about harm from work, 2021",48,pct,,chart,N,,
+C4_4_work_2023,29,Chart 4.4,"Very or somewhat worried about harm from work, 2023",51,pct,,chart,N,,
+C4_4_water_2019,29,Chart 4.4,"Very or somewhat worried about harm from the water you drink, 2019",51,pct,,chart,N,,
+C4_4_water_2021,29,Chart 4.4,"Very or somewhat worried about harm from the water you drink, 2021",45,pct,,chart,N,,
+C4_4_water_2023,29,Chart 4.4,"Very or somewhat worried about harm from the water you drink, 2023",49,pct,,chart,N,,
+C4_5_weather_2021,30,Chart 4.5,"Personally experienced serious harm from severe weather events in the past two years, 2021",15,pct,,chart,N,,"Personally = 'yes, personally' or 'both' (chart note)."
+C4_5_weather_2023,30,Chart 4.5,"Personally experienced serious harm from severe weather events in the past two years, 2023",18,pct,,chart,N,,"Personally = 'yes, personally' or 'both' (chart note)."
+C4_5_traffic_2021,30,Chart 4.5,"Personally experienced serious harm from traffic/roadside accidents in the past two years, 2021",13,pct,,chart,N,,"Personally = 'yes, personally' or 'both' (chart note)."
+C4_5_traffic_2023,30,Chart 4.5,"Personally experienced serious harm from traffic/roadside accidents in the past two years, 2023",15,pct,,chart,N,,"Personally = 'yes, personally' or 'both' (chart note)."
+C4_5_work_2021,30,Chart 4.5,"Personally experienced serious harm from work in the past two years, 2021",15,pct,,chart,N,,"Personally = 'yes, personally' or 'both' (chart note)."
+C4_5_work_2023,30,Chart 4.5,"Personally experienced serious harm from work in the past two years, 2023",15,pct,,chart,N,,"Personally = 'yes, personally' or 'both' (chart note)."
+C4_5_mental_2021,30,Chart 4.5,"Personally experienced serious harm from mental health issues in the past two years, 2021",12,pct,,chart,N,,"Personally = 'yes, personally' or 'both' (chart note)."
+C4_5_mental_2023,30,Chart 4.5,"Personally experienced serious harm from mental health issues in the past two years, 2023",11,pct,,chart,N,,"Personally = 'yes, personally' or 'both' (chart note)."
+C4_5_food_2021,30,Chart 4.5,"Personally experienced serious harm from the food you eat in the past two years, 2021",10,pct,,chart,N,,"Personally = 'yes, personally' or 'both' (chart note)."
+C4_5_food_2023,30,Chart 4.5,"Personally experienced serious harm from the food you eat in the past two years, 2023",11,pct,,chart,N,,"Personally = 'yes, personally' or 'both' (chart note)."
+C4_5_water_2021,30,Chart 4.5,"Personally experienced serious harm from the water you drink in the past two years, 2021",9,pct,,chart,N,,"Personally = 'yes, personally' or 'both' (chart note)."
+C4_5_water_2023,30,Chart 4.5,"Personally experienced serious harm from the water you drink in the past two years, 2023",10,pct,,chart,N,,"Personally = 'yes, personally' or 'both' (chart note)."
+C4_5_crime_2021,30,Chart 4.5,"Personally experienced serious harm from violent crime in the past two years, 2021",7,pct,,chart,N,,"Personally = 'yes, personally' or 'both' (chart note)."
+C4_5_crime_2023,30,Chart 4.5,"Personally experienced serious harm from violent crime in the past two years, 2023",8,pct,,chart,N,,"Personally = 'yes, personally' or 'both' (chart note)."
+X156,30,Chapter 4,"Increase (pp) in personal experience of harm from traffic accidents, 2021 to 2023",2,pp,,text,N,,
+X157,30,Chapter 4,"Increase (pp) in personal experience of harm from severe weather events, 2021 to 2023",3,pp,,text,N,,
+C4_6_middle_east_2021,31,Chart 4.6,"Worry Index (0-100), Middle East, 2021",41,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_middle_east_2023,31,Chart 4.6,"Worry Index (0-100), Middle East, 2023",34,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_east_africa_2021,31,Chart 4.6,"Worry Index (0-100), Eastern Africa, 2021",53,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_east_africa_2023,31,Chart 4.6,"Worry Index (0-100), Eastern Africa, 2023",46,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_east_europe_2021,31,Chart 4.6,"Worry Index (0-100), Eastern Europe, 2021",41,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_east_europe_2023,31,Chart 4.6,"Worry Index (0-100), Eastern Europe, 2023",36,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_cw_africa_2021,31,Chart 4.6,"Worry Index (0-100), Central/Western Africa, 2021",57,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_cw_africa_2023,31,Chart 4.6,"Worry Index (0-100), Central/Western Africa, 2023",52,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_north_africa_2021,31,Chart 4.6,"Worry Index (0-100), Northern Africa, 2021",38,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_north_africa_2023,31,Chart 4.6,"Worry Index (0-100), Northern Africa, 2023",35,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_latam_2021,31,Chart 4.6,"Worry Index (0-100), Latin America & the Caribbean, 2021",52,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_latam_2023,31,Chart 4.6,"Worry Index (0-100), Latin America & the Caribbean, 2023",51,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_south_africa_2021,31,Chart 4.6,"Worry Index (0-100), Southern Africa, 2021",55,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_south_africa_2023,31,Chart 4.6,"Worry Index (0-100), Southern Africa, 2023",54,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_south_asia_2021,31,Chart 4.6,"Worry Index (0-100), Southern Asia, 2021",44,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_south_asia_2023,31,Chart 4.6,"Worry Index (0-100), Southern Asia, 2023",44,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_nw_europe_2021,31,Chart 4.6,"Worry Index (0-100), Northern/Western Europe, 2021",28,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_nw_europe_2023,31,Chart 4.6,"Worry Index (0-100), Northern/Western Europe, 2023",28,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_se_asia_2021,31,Chart 4.6,"Worry Index (0-100), Southeastern Asia, 2021",48,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_se_asia_2023,31,Chart 4.6,"Worry Index (0-100), Southeastern Asia, 2023",49,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_north_america_2021,31,Chart 4.6,"Worry Index (0-100), Northern America, 2021",32,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_north_america_2023,31,Chart 4.6,"Worry Index (0-100), Northern America, 2023",34,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_anz_2021,31,Chart 4.6,"Worry Index (0-100), Australia & New Zealand, 2021",27,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_anz_2023,31,Chart 4.6,"Worry Index (0-100), Australia & New Zealand, 2023",29,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_central_asia_2021,31,Chart 4.6,"Worry Index (0-100), Central Asia, 2021",27,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_central_asia_2023,31,Chart 4.6,"Worry Index (0-100), Central Asia, 2023",30,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_south_europe_2021,31,Chart 4.6,"Worry Index (0-100), Southern Europe, 2021",42,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_south_europe_2023,31,Chart 4.6,"Worry Index (0-100), Southern Europe, 2023",45,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_east_asia_2021,31,Chart 4.6,"Worry Index (0-100), Eastern Asia, 2021",29,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_6_east_asia_2023,31,Chart 4.6,"Worry Index (0-100), Eastern Asia, 2023",40,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_east_africa_2021,32,Chart 4.7,"Experience of Harm Index (0-100), Eastern Africa, 2021",14,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_east_africa_2023,32,Chart 4.7,"Experience of Harm Index (0-100), Eastern Africa, 2023",10,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_south_asia_2021,32,Chart 4.7,"Experience of Harm Index (0-100), Southern Asia, 2021",21,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_south_asia_2023,32,Chart 4.7,"Experience of Harm Index (0-100), Southern Asia, 2023",18,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_latam_2021,32,Chart 4.7,"Experience of Harm Index (0-100), Latin America & the Caribbean, 2021",10,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_latam_2023,32,Chart 4.7,"Experience of Harm Index (0-100), Latin America & the Caribbean, 2023",7,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_south_europe_2021,32,Chart 4.7,"Experience of Harm Index (0-100), Southern Europe, 2021",9,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_south_europe_2023,32,Chart 4.7,"Experience of Harm Index (0-100), Southern Europe, 2023",6,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_north_africa_2021,32,Chart 4.7,"Experience of Harm Index (0-100), Northern Africa, 2021",8,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_north_africa_2023,32,Chart 4.7,"Experience of Harm Index (0-100), Northern Africa, 2023",6,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_nw_europe_2021,32,Chart 4.7,"Experience of Harm Index (0-100), Northern/Western Europe, 2021",7,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_nw_europe_2023,32,Chart 4.7,"Experience of Harm Index (0-100), Northern/Western Europe, 2023",6,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_east_europe_2021,32,Chart 4.7,"Experience of Harm Index (0-100), Eastern Europe, 2021",6,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_east_europe_2023,32,Chart 4.7,"Experience of Harm Index (0-100), Eastern Europe, 2023",5,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_central_asia_2021,32,Chart 4.7,"Experience of Harm Index (0-100), Central Asia, 2021",3,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_central_asia_2023,32,Chart 4.7,"Experience of Harm Index (0-100), Central Asia, 2023",3,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_middle_east_2021,32,Chart 4.7,"Experience of Harm Index (0-100), Middle East, 2021",7,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_middle_east_2023,32,Chart 4.7,"Experience of Harm Index (0-100), Middle East, 2023",8,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_cw_africa_2021,32,Chart 4.7,"Experience of Harm Index (0-100), Central/Western Africa, 2021",15,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_cw_africa_2023,32,Chart 4.7,"Experience of Harm Index (0-100), Central/Western Africa, 2023",15,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_se_asia_2021,32,Chart 4.7,"Experience of Harm Index (0-100), Southeastern Asia, 2021",13,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_se_asia_2023,32,Chart 4.7,"Experience of Harm Index (0-100), Southeastern Asia, 2023",14,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_anz_2021,32,Chart 4.7,"Experience of Harm Index (0-100), Australia & New Zealand, 2021",7,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_anz_2023,32,Chart 4.7,"Experience of Harm Index (0-100), Australia & New Zealand, 2023",9,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_north_america_2021,32,Chart 4.7,"Experience of Harm Index (0-100), Northern America, 2021",7,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_north_america_2023,32,Chart 4.7,"Experience of Harm Index (0-100), Northern America, 2023",10,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_south_africa_2021,32,Chart 4.7,"Experience of Harm Index (0-100), Southern Africa, 2021",13,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_south_africa_2023,32,Chart 4.7,"Experience of Harm Index (0-100), Southern Africa, 2023",16,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_east_asia_2021,32,Chart 4.7,"Experience of Harm Index (0-100), Eastern Asia, 2021",5,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_7_east_asia_2023,32,Chart 4.7,"Experience of Harm Index (0-100), Eastern Asia, 2023",14,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_anz_experience,33,Chart 4.8,"Experience of Harm Index (0-100), Australia & New Zealand, 2023",9,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_anz_worry,33,Chart 4.8,"Worry Index (0-100), Australia & New Zealand, 2023",29,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_nw_europe_experience,33,Chart 4.8,"Experience of Harm Index (0-100), Northern/Western Europe, 2023",6,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_nw_europe_worry,33,Chart 4.8,"Worry Index (0-100), Northern/Western Europe, 2023",28,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_north_america_experience,33,Chart 4.8,"Experience of Harm Index (0-100), Northern America, 2023",10,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_north_america_worry,33,Chart 4.8,"Worry Index (0-100), Northern America, 2023",34,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_east_asia_experience,33,Chart 4.8,"Experience of Harm Index (0-100), Eastern Asia, 2023",14,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_east_asia_worry,33,Chart 4.8,"Worry Index (0-100), Eastern Asia, 2023",40,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_central_asia_experience,33,Chart 4.8,"Experience of Harm Index (0-100), Central Asia, 2023",3,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_central_asia_worry,33,Chart 4.8,"Worry Index (0-100), Central Asia, 2023",30,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_south_asia_experience,33,Chart 4.8,"Experience of Harm Index (0-100), Southern Asia, 2023",18,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_south_asia_worry,33,Chart 4.8,"Worry Index (0-100), Southern Asia, 2023",44,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_middle_east_experience,33,Chart 4.8,"Experience of Harm Index (0-100), Middle East, 2023",8,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_middle_east_worry,33,Chart 4.8,"Worry Index (0-100), Middle East, 2023",34,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_north_africa_experience,33,Chart 4.8,"Experience of Harm Index (0-100), Northern Africa, 2023",6,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_north_africa_worry,33,Chart 4.8,"Worry Index (0-100), Northern Africa, 2023",35,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_east_europe_experience,33,Chart 4.8,"Experience of Harm Index (0-100), Eastern Europe, 2023",5,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_east_europe_worry,33,Chart 4.8,"Worry Index (0-100), Eastern Europe, 2023",36,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_se_asia_experience,33,Chart 4.8,"Experience of Harm Index (0-100), Southeastern Asia, 2023",14,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_se_asia_worry,33,Chart 4.8,"Worry Index (0-100), Southeastern Asia, 2023",49,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_east_africa_experience,33,Chart 4.8,"Experience of Harm Index (0-100), Eastern Africa, 2023",10,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_east_africa_worry,33,Chart 4.8,"Worry Index (0-100), Eastern Africa, 2023",46,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_cw_africa_experience,33,Chart 4.8,"Experience of Harm Index (0-100), Central/Western Africa, 2023",15,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_cw_africa_worry,33,Chart 4.8,"Worry Index (0-100), Central/Western Africa, 2023",52,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_south_africa_experience,33,Chart 4.8,"Experience of Harm Index (0-100), Southern Africa, 2023",16,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_south_africa_worry,33,Chart 4.8,"Worry Index (0-100), Southern Africa, 2023",54,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_south_europe_experience,33,Chart 4.8,"Experience of Harm Index (0-100), Southern Europe, 2023",6,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_south_europe_worry,33,Chart 4.8,"Worry Index (0-100), Southern Europe, 2023",45,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_latam_experience,33,Chart 4.8,"Experience of Harm Index (0-100), Latin America & the Caribbean, 2023",7,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."
+C4_8_latam_worry,33,Chart 4.8,"Worry Index (0-100), Latin America & the Caribbean, 2023",51,index,,chart,N,,"Mean of the seven items (worry: very 2, somewhat 1, not 0; experience: personally or both = 1), scaled 0-100."

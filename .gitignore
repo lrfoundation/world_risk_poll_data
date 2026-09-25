@@ -1,0 +1,8 @@
+# Report reproduction: per-report working outputs (RESULTS.md is kept).
+reports/**/output/
+__pycache__/
+*.pyc
+.Rhistory
+
+# External data that may not be redistributed (see reports/external/README.md).
+reports/external/downloaded/

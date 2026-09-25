@@ -1,0 +1,517 @@
+finding_id,page,section,description,published_value,unit,tolerance,source,requires_gallup,gallup_items,note
+X01,"3, 6",Executive summary,"Interviews in the 2023 poll ('nearly 147,000')",147000,count,1000,text,N,,
+X02,"3, 6, 7",Executive summary,Countries and territories surveyed in 2023,142,count,0,text,N,,
+X03,"3, 7, 18, 29",Executive summary,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (global)",18,pct,,text,N,,
+X04,"3, 7",Executive summary,"Current workers who personally experienced serious harm at work in the past two years, 2023 (millions; 'around 667 million')",667,millions,,text,N,,
+X05_low,"3, 9",Executive summary,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023, by country income: low income",19,pct,,text,N,,
+X05_lower_middle,"3, 9",Executive summary,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023, by country income: lower-middle income",22,pct,,text,N,,
+X06,"3, 19",Executive summary,% of the current workforce harmed at work in the past two years who told someone responsible for safety or health about it,51,pct,,text,N,,
+X07,"3, 22, 29",Executive summary,% of the current workforce who have never received occupational safety and health (OSH) training,62,pct,,text,N,,
+X08_lower_middle,"3, 23",Executive summary,"% of the current workforce never trained, by country income: lower-middle income",79,pct,,text,N,,
+X08_low,"3, 23",Executive summary,"% of the current workforce never trained, by country income: low income",78,pct,,text,N,,
+X09_ft_employer,"3, 25",Executive summary,"% of the current workforce trained in the past two years, by employment type: employed full-time for an employer",41,pct,,text,N,,
+X09_part_time,"3, 25",Executive summary,"% of the current workforce trained in the past two years, by employment type: employed part-time",23,pct,,text,N,,
+X10_never,"3, 25, 29",Executive summary,OSH training among the current workforce working in agriculture: % never trained,80,pct,,text,N,,
+X10_past2,"3, 25, 29",Executive summary,OSH training among the current workforce working in agriculture: % trained in the past two years,15,pct,,text,N,,
+X11,"3, 25, 29",Executive summary,% of the current workforce in fishing never trained,73,pct,,text,N,,
+X12_not_harmed,"3, 12",Executive summary,"% of the employed very or somewhat worried about harm from work, by experience of workplace harm: not harmed",40,pct,,text,N,,
+X12_know_someone,"3, 12",Executive summary,"% of the employed very or somewhat worried about harm from work, by experience of workplace harm: know someone who has been harmed",69,pct,,text,N,,
+X12_personally,"3, 12",Executive summary,"% of the employed very or somewhat worried about harm from work, by experience of workplace harm: personally harmed",77,pct,,text,N,,
+X12_both,"3, 12",Executive summary,"% of the employed very or somewhat worried about harm from work, by experience of workplace harm: both personally and know someone",78,pct,,text,N,,
+X13_past2,"3, 27",Executive summary,Odds ratio of reporting workplace harm vs never trained (logistic model; harmed current workforce): trained in the past two years,3.3,odds_ratio,0.1,text,N,,"Model estimate; controls for gender, age, education, job sector and GDP per capita (World Bank). See README."
+X13_older,"3, 27",Executive summary,"Odds ratio of reporting workplace harm vs never trained (logistic model; harmed current workforce): trained, not in the past two years or not sure when",1.8,odds_ratio,0.1,text,N,,"Model estimate; controls for gender, age, education, job sector and GDP per capita (World Bank). See README."
+X14_adults,7,Chapter 2,"Personally experienced serious harm at work in the past two years, 2021: % of all adults",15,pct,,text,N,,
+X14_workforce,7,Chapter 2,"Personally experienced serious harm at work in the past two years, 2021: % of the then current workforce",19,pct,,text,N,,
+X15,7,Chapter 2,Countries and territories surveyed in 2021,121,count,0,text,N,,
+X16,7,Chapter 2,"% of workers who had ever been seriously injured while working, 2019",19,pct,,text,N,,
+X17,7,Chapter 2,"% of all adults who personally experienced serious harm at work in the past two years, 2023",15,pct,,text,N,,
+X18,7,Chapter 2,"% of adults classified as out of the workforce, 2023",34,pct,,text,N,,
+X19,7,Chapter 2,"% harmed at work in the past two years, current workforce plus those out of the workforce who worked in the past two years, 2023",17,pct,,text,N,,
+C2_1_2019,7,Chart 2.1,% of the current workforce who personally experienced serious harm at work in the past two years (2019: ever seriously injured while working): 2019*,19,pct,,chart,N,,
+C2_1_2021,7,Chart 2.1,% of the current workforce who personally experienced serious harm at work in the past two years (2019: ever seriously injured while working): 2021,19,pct,,chart,N,,
+C2_1_2023,7,Chart 2.1,% of the current workforce who personally experienced serious harm at work in the past two years (2019: ever seriously injured while working): 2023,18,pct,,chart,N,,
+X20,8,Chapter 2,Countries where survey mode changed (telephone in 2021 to face-to-face in 2023),27,count,0,text,N,,Mode from the Gallup/WRP methodology documents (external snapshot).
+X21,8,Chapter 2,"Average change (2023 minus 2021, points) in % harmed at work among the current workforce, countries whose mode changed",-3,pct,,text,N,,Unweighted mean of country changes.
+X22,8,Chapter 2,Countries where survey mode did not change (surveyed in both years),92,count,0,text,N,,
+X23,8,Chapter 2,"Average change (2023 minus 2021, points) in % harmed at work among the current workforce, countries whose mode did not change",-1,pct,,text,N,,Unweighted mean of country changes.
+X24_2023,8,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, Southern Asia: 2023",27,pct,,text,N,,
+X24_2021,8,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, Southern Asia: 2021",32,pct,,text,N,,
+X25_2023,8,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, Southern Europe: 2023",10,pct,,text,N,,
+X25_2021,8,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, Southern Europe: 2021",22,pct,,text,N,,
+X26_2023,8,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, Italy: 2023",7,pct,,text,N,,
+X26_2021,8,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, Italy: 2021",38,pct,,text,N,,
+X26_2019,8,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, Italy: 2019 (ever seriously injured while working)",7,pct,,text,N,,
+X27,8,Chapter 2,"Smallest 2021-2023 decrease (points) among Northern Africa, Latin America & the Caribbean and Northern/Western Europe ('five points or more')",5,pct,,text,N,,The text says each fell by five points or more; the function returns the smallest of the three decreases.
+X28_anz,8,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (increases since 2021): Australia & New Zealand",12,pct,,text,N,,
+X28_northern_america,8,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (increases since 2021): Northern America",12,pct,,text,N,,
+X29,8,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, Eastern Asia, 2023",20,pct,,text,N,,
+X30_central_western_africa,8,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023: Central/Western Africa",18,pct,,text,N,,
+X30_southeastern_asia,8,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023: Southeastern Asia",18,pct,,text,N,,
+X31_CHN,8,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023, Eastern Asia countries (footnote): China",22,pct,,text,N,,
+X31_TWN,8,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023, Eastern Asia countries (footnote): Taiwan",7,pct,,text,N,,
+X31_JPN,8,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023, Eastern Asia countries (footnote): Japan",9,pct,,text,N,,
+X31_MNG,8,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023, Eastern Asia countries (footnote): Mongolia",6,pct,,text,N,,
+X31_HKG,8,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023, Eastern Asia countries (footnote): Hong Kong",8,pct,,text,N,,
+X31_KOR,8,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023, Eastern Asia countries (footnote): South Korea",10,pct,,text,N,,
+C2_2_southern_asia_2021,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Southern Asia, 2021",32,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_southern_asia_2023,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Southern Asia, 2023",27,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_eastern_asia_2021,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Eastern Asia, 2021",10,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_eastern_asia_2023,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Eastern Asia, 2023",20,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_central_western_africa_2021,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Central/Western Africa, 2021",17,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_central_western_africa_2023,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Central/Western Africa, 2023",18,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_southeastern_asia_2021,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Southeastern Asia, 2021",19,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_southeastern_asia_2023,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Southeastern Asia, 2023",18,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_southern_africa_2021,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Southern Africa, 2021",16,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_southern_africa_2023,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Southern Africa, 2023",14,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_middle_east_2021,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Middle East, 2021",13,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_middle_east_2023,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Middle East, 2023",13,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_eastern_africa_2021,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Eastern Africa, 2021",17,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_eastern_africa_2023,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Eastern Africa, 2023",13,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_anz_2021,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Australia & New Zealand, 2021",7,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_anz_2023,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Australia & New Zealand, 2023",12,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_northern_america_2021,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Northern America, 2021",8,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_northern_america_2023,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Northern America, 2023",12,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_southern_europe_2021,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Southern Europe, 2021",22,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_southern_europe_2023,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Southern Europe, 2023",10,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_northern_africa_2021,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Northern Africa, 2021",17,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_northern_africa_2023,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Northern Africa, 2023",10,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_latin_america_2021,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Latin America & the Caribbean, 2021",14,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_latin_america_2023,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Latin America & the Caribbean, 2023",9,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_northern_western_europe_2021,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Northern/Western Europe, 2021",13,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_northern_western_europe_2023,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Northern/Western Europe, 2023",7,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_eastern_europe_2021,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Eastern Europe, 2021",8,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_eastern_europe_2023,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Eastern Europe, 2023",6,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_central_asia_2021,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Central Asia, 2021",7,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+C2_2_central_asia_2023,8,Chart 2.2,"% of the current workforce who personally experienced serious harm at work in the past two years: Central Asia, 2023",5,pct,,chart,N,,2021 values use the 2023 region of each country (Iran moved from Middle East to Southern Asia).
+X32_low,9,Chapter 2,"Fall in % harmed at work, 2021 to 2023 (points): low income",4,pct,,text,N,,
+X32_lower_middle,9,Chapter 2,"Fall in % harmed at work, 2021 to 2023 (points): lower-middle income",4,pct,,text,N,,
+X33,9,Chapter 2,"Countries with changes of 10 percentage points or more in harm at work, 2021-2023 ('seven countries')",7,count,0,text,N,,Table 2.1 and the text on the same page list eight countries.
+C2_3_low_2021,9,Chart 2.3,"% of the current workforce who personally experienced serious harm at work in the past two years: Low income, 2021",22,pct,,chart,N,,2021 values use each country's 2023 World Bank income group.
+C2_3_low_2023,9,Chart 2.3,"% of the current workforce who personally experienced serious harm at work in the past two years: Low income, 2023",19,pct,,chart,N,,2021 values use each country's 2023 World Bank income group.
+C2_3_lower_middle_2021,9,Chart 2.3,"% of the current workforce who personally experienced serious harm at work in the past two years: Lower-middle income, 2021",26,pct,,chart,N,,2021 values use each country's 2023 World Bank income group.
+C2_3_lower_middle_2023,9,Chart 2.3,"% of the current workforce who personally experienced serious harm at work in the past two years: Lower-middle income, 2023",22,pct,,chart,N,,2021 values use each country's 2023 World Bank income group.
+C2_3_upper_middle_2021,9,Chart 2.3,"% of the current workforce who personally experienced serious harm at work in the past two years: Upper-middle income, 2021",15,pct,,chart,N,,2021 values use each country's 2023 World Bank income group.
+C2_3_upper_middle_2023,9,Chart 2.3,"% of the current workforce who personally experienced serious harm at work in the past two years: Upper-middle income, 2023",17,pct,,chart,N,,2021 values use each country's 2023 World Bank income group.
+C2_3_high_2021,9,Chart 2.3,"% of the current workforce who personally experienced serious harm at work in the past two years: High income, 2021",11,pct,,chart,N,,2021 values use each country's 2023 World Bank income group.
+C2_3_high_2023,9,Chart 2.3,"% of the current workforce who personally experienced serious harm at work in the past two years: High income, 2023",9,pct,,chart,N,,2021 values use each country's 2023 World Bank income group.
+T2_1_SLE_2021,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Sierra Leone, 2021",27,pct,,table,N,,
+T2_1_SLE_2023,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Sierra Leone, 2023",41,pct,,table,N,,
+T2_1_SLE_diff,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Sierra Leone, percentage-point difference",15,pct,,table,N,,
+T2_1_PHL_2021,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Philippines, 2021",23,pct,,table,N,,
+T2_1_PHL_2023,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Philippines, 2023",34,pct,,table,N,,
+T2_1_PHL_diff,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Philippines, percentage-point difference",11,pct,,table,N,,
+T2_1_VNM_2021,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Vietnam, 2021",26,pct,,table,N,,
+T2_1_VNM_2023,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Vietnam, 2023",16,pct,,table,N,,
+T2_1_VNM_diff,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Vietnam, percentage-point difference",-10,pct,,table,N,,
+T2_1_BRA_2021,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Brazil, 2021",17,pct,,table,N,,
+T2_1_BRA_2023,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Brazil, 2023",6,pct,,table,N,,
+T2_1_BRA_diff,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Brazil, percentage-point difference",-11,pct,,table,N,,
+T2_1_GHA_2021,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Ghana, 2021",29,pct,,table,N,,
+T2_1_GHA_2023,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Ghana, 2023",13,pct,,table,N,,
+T2_1_GHA_diff,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Ghana, percentage-point difference",-16,pct,,table,N,,
+T2_1_MAR_2021,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Morocco, 2021",29,pct,,table,N,,
+T2_1_MAR_2023,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Morocco, 2023",10,pct,,table,N,,
+T2_1_MAR_diff,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Morocco, percentage-point difference",-19,pct,,table,N,,
+T2_1_MLI_2021,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Mali, 2021",36,pct,,table,N,,
+T2_1_MLI_2023,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Mali, 2023",15,pct,,table,N,,
+T2_1_MLI_diff,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Mali, percentage-point difference",-22,pct,,table,N,,
+T2_1_ITA_2021,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Italy, 2021",38,pct,,table,N,,
+T2_1_ITA_2023,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Italy, 2023",7,pct,,table,N,,
+T2_1_ITA_diff,9,Table 2.1,"% of the current workforce who personally experienced serious harm at work in the past two years: Italy, percentage-point difference",-31,pct,,table,N,,
+C2_4_MAR,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): Morocco",10,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_DZA,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): Algeria",16,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_LBY,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): Libya",10,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_EGY,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): Egypt",7,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_MRT,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): Mauritania",22,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_MLI,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): Mali",15,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_NER,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): Niger",22,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_TCD,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): Chad",32,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_NGA,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): Nigeria",16,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_SLE,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): Sierra Leone",41,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_LBR,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): Liberia",24,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_GHA,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): Ghana",13,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_ETH,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): Ethiopia",4,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_SOM,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): Somalia",39,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_KEN,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): Kenya",13,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_COD,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): D.R. Congo",26,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_UGA,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): Uganda",22,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_TZA,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): Tanzania",10,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_COM,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): Comoros",29,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_MDG,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): Madagascar",22,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_NAM,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): Namibia",21,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_ZAF,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): South Africa",14,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_legend_max,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): colour-scale maximum (highest African country)",41,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+C2_4_legend_min,10,Chart 2.4,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023 (Africa map): colour-scale minimum (lowest African country)",4,pct,,chart,N,,Other African countries on the map are coloured but not labelled.
+X34,10,Chapter 2,"Country with the highest % harmed at work in the world, 2023",Sierra Leone,text,,text,N,,
+X35_2023,10,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, Sierra Leone: 2023",41,pct,,text,N,,
+X35_2021,10,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, Sierra Leone: 2021",27,pct,,text,N,,
+X36,10,Chapter 2,Country with the largest increase in % harmed at work since 2021,Sierra Leone,text,,text,N,,
+X37_SOM,10,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023, other African countries with high rates: Somalia",39,pct,,text,N,,
+X37_TCD,10,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023, other African countries with high rates: Chad",32,pct,,text,N,,
+X37_COM,10,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023, other African countries with high rates: Comoros",29,pct,,text,N,,
+X37_COD,10,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023, other African countries with high rates: D.R. Congo",26,pct,,text,N,,
+X37_LBR,10,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023, other African countries with high rates: Liberia",24,pct,,text,N,,
+X37_UGA,10,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, 2023, other African countries with high rates: Uganda",22,pct,,text,N,,
+X38_2023,11,Chapter 2,% of the employed very or somewhat worried that the work they do could cause them serious harm: 2023,51,pct,,text,N,,
+X38_2021,11,Chapter 2,% of the employed very or somewhat worried that the work they do could cause them serious harm: 2021,52,pct,,text,N,,
+X39_southern_asia,11,Chapter 2,"% of the employed very or somewhat worried that the work they do could cause them serious harm, 2023: Southern Asia",60,pct,,text,N,,
+X39_central_western_africa,11,Chapter 2,"% of the employed very or somewhat worried that the work they do could cause them serious harm, 2023: Central/Western Africa",59,pct,,text,N,,
+X40,11,Chapter 2,"India's world rank for % harmed at work, 2023",6,rank,0,text,N,,
+X41_2023,11,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, India: 2023",30,pct,,text,N,,
+X41_2021,11,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, India: 2021",38,pct,,text,N,,
+X42_north,11,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, India, 2023, by region: north",38,pct,,text,N,,
+X42_central,11,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, India, 2023, by region: central",34,pct,,text,N,,
+X42_east,11,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, India, 2023, by region: east",32,pct,,text,N,,
+X42_west,11,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, India, 2023, by region: west",25,pct,,text,N,,
+X42_south,11,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, India, 2023, by region: south",20,pct,,text,N,,
+C2_5_southern_asia_harm,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Southern Asia, % personally experienced harm in past two years",27,pct,,chart,N,,
+C2_5_southern_asia_worry,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Southern Asia, % worried about harm at work",60,pct,,chart,N,,
+C2_5_central_western_africa_harm,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Central/Western Africa, % personally experienced harm in past two years",18,pct,,chart,N,,
+C2_5_central_western_africa_worry,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Central/Western Africa, % worried about harm at work",59,pct,,chart,N,,
+C2_5_southern_europe_harm,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Southern Europe, % personally experienced harm in past two years",10,pct,,chart,N,,
+C2_5_southern_europe_worry,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Southern Europe, % worried about harm at work",56,pct,,chart,N,,
+C2_5_southern_africa_harm,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Southern Africa, % personally experienced harm in past two years",14,pct,,chart,N,,
+C2_5_southern_africa_worry,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Southern Africa, % worried about harm at work",54,pct,,chart,N,,
+C2_5_eastern_asia_harm,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Eastern Asia, % personally experienced harm in past two years",20,pct,,chart,N,,
+C2_5_eastern_asia_worry,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Eastern Asia, % worried about harm at work",54,pct,,chart,N,,
+C2_5_eastern_africa_harm,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Eastern Africa, % personally experienced harm in past two years",13,pct,,chart,N,,
+C2_5_eastern_africa_worry,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Eastern Africa, % worried about harm at work",53,pct,,chart,N,,
+C2_5_southeastern_asia_harm,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Southeastern Asia, % personally experienced harm in past two years",18,pct,,chart,N,,
+C2_5_southeastern_asia_worry,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Southeastern Asia, % worried about harm at work",52,pct,,chart,N,,
+C2_5_latin_america_harm,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Latin America & the Caribbean, % personally experienced harm in past two years",9,pct,,chart,N,,
+C2_5_latin_america_worry,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Latin America & the Caribbean, % worried about harm at work",49,pct,,chart,N,,
+C2_5_northern_africa_harm,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Northern Africa, % personally experienced harm in past two years",10,pct,,chart,N,,
+C2_5_northern_africa_worry,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Northern Africa, % worried about harm at work",43,pct,,chart,N,,
+C2_5_middle_east_harm,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Middle East, % personally experienced harm in past two years",13,pct,,chart,N,,
+C2_5_middle_east_worry,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Middle East, % worried about harm at work",42,pct,,chart,N,,
+C2_5_eastern_europe_harm,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Eastern Europe, % personally experienced harm in past two years",6,pct,,chart,N,,
+C2_5_eastern_europe_worry,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Eastern Europe, % worried about harm at work",40,pct,,chart,N,,
+C2_5_anz_harm,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Australia & New Zealand, % personally experienced harm in past two years",12,pct,,chart,N,,
+C2_5_anz_worry,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Australia & New Zealand, % worried about harm at work",34,pct,,chart,N,,
+C2_5_central_asia_harm,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Central Asia, % personally experienced harm in past two years",5,pct,,chart,N,,
+C2_5_central_asia_worry,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Central Asia, % worried about harm at work",33,pct,,chart,N,,
+C2_5_northern_america_harm,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Northern America, % personally experienced harm in past two years",12,pct,,chart,N,,
+C2_5_northern_america_worry,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Northern America, % worried about harm at work",31,pct,,chart,N,,
+C2_5_northern_western_europe_harm,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Northern/Western Europe, % personally experienced harm in past two years",7,pct,,chart,N,,
+C2_5_northern_western_europe_worry,11,Chart 2.5,"Harm at work and worry about harm at work, 2023: Northern/Western Europe, % worried about harm at work",29,pct,,chart,N,,
+C2_6_not_harmed,12,Chart 2.6,"% of the employed very or somewhat worried that the work they do could cause them serious harm, by experience of workplace harm: not harmed",40,pct,,chart,N,,
+C2_6_know_someone,12,Chart 2.6,"% of the employed very or somewhat worried that the work they do could cause them serious harm, by experience of workplace harm: yes, know someone who has experienced",69,pct,,chart,N,,
+C2_6_personally,12,Chart 2.6,"% of the employed very or somewhat worried that the work they do could cause them serious harm, by experience of workplace harm: yes, personally experienced",77,pct,,chart,N,,
+C2_6_both,12,Chart 2.6,"% of the employed very or somewhat worried that the work they do could cause them serious harm, by experience of workplace harm: both",78,pct,,chart,N,,
+X43_traffic,12,Chapter 2,% of the current workforce very or somewhat worried about harm from: traffic accidents,77,pct,,text,N,,
+X43_weather,12,Chapter 2,% of the current workforce very or somewhat worried about harm from: severe weather events,72,pct,,text,N,,
+X43_work,12,Chapter 2,% of the current workforce very or somewhat worried about harm from: work (employed),51,pct,,text,N,,
+X43_water,12,Chapter 2,% of the current workforce very or somewhat worried about harm from: unsafe water,51,pct,,text,N,,
+X44_men,13,Chapter 2,% of the current workforce who personally experienced serious harm at work in the past two years: men,19,pct,,text,N,,
+X44_women,13,Chapter 2,% of the current workforce who personally experienced serious harm at work in the past two years: women,16,pct,,text,N,,
+X45_less_week,13,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, by how long the household could cover basic needs without income: less than a week",26,pct,,text,N,,
+X45_week_month,13,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, by how long the household could cover basic needs without income: between a week and a month",21,pct,,text,N,,
+X45_month_plus,13,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, by how long the household could cover basic needs without income: longer than a month",15,pct,,text,N,,
+C2_8_global,13,Chart 2.8,% of the current workforce who personally experienced serious harm at work in the past two years: global mean,18,pct,,chart,N,,
+C2_8_men,13,Chart 2.8,% of the current workforce who personally experienced serious harm at work in the past two years: men,19,pct,,chart,N,,
+C2_8_women,13,Chart 2.8,% of the current workforce who personally experienced serious harm at work in the past two years: women,16,pct,,chart,N,,
+C2_8_age_15_29,13,Chart 2.8,% of the current workforce who personally experienced serious harm at work in the past two years: age 15-29,19,pct,,chart,N,,
+C2_8_age_30_49,13,Chart 2.8,% of the current workforce who personally experienced serious harm at work in the past two years: age 30-49,18,pct,,chart,N,,
+C2_8_age_50_64,13,Chart 2.8,% of the current workforce who personally experienced serious harm at work in the past two years: age 50-64,15,pct,,chart,N,,
+C2_8_age_65plus,13,Chart 2.8,% of the current workforce who personally experienced serious harm at work in the past two years: age 65+,13,pct,,chart,N,,
+C2_8_primary,13,Chart 2.8,% of the current workforce who personally experienced serious harm at work in the past two years: primary education,21,pct,,chart,N,,
+C2_8_secondary,13,Chart 2.8,% of the current workforce who personally experienced serious harm at work in the past two years: secondary education,15,pct,,chart,N,,
+C2_8_tertiary,13,Chart 2.8,% of the current workforce who personally experienced serious harm at work in the past two years: tertiary education,15,pct,,chart,N,,
+C2_8_less_week,13,Chart 2.8,% of the current workforce who personally experienced serious harm at work in the past two years: financial resilience: less than a week,26,pct,,chart,N,,
+C2_8_week_month,13,Chart 2.8,% of the current workforce who personally experienced serious harm at work in the past two years: financial resilience: between a week and a month,21,pct,,chart,N,,
+C2_8_month_plus,13,Chart 2.8,% of the current workforce who personally experienced serious harm at work in the past two years: financial resilience: a month or more,15,pct,,chart,N,,
+X46_ft_employer,14,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, by employment type: full-time for an employer",15,pct,,text,N,,
+X46_ft_self,14,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, by employment type: self-employed",17,pct,,text,N,,
+X46_part_time,14,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, by employment type: part-time",20,pct,,text,N,,
+X46_unemployed,14,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, by employment type: unemployed",25,pct,,text,N,,
+C2_9_ft_employer,14,Chart 2.9,% of the current workforce who personally experienced serious harm at work in the past two years: full time for an employer,15,pct,,chart,N,,
+C2_9_ft_self,14,Chart 2.9,% of the current workforce who personally experienced serious harm at work in the past two years: full time for self,17,pct,,chart,N,,
+C2_9_part_time,14,Chart 2.9,% of the current workforce who personally experienced serious harm at work in the past two years: part time,20,pct,,chart,N,,
+C2_9_unemployed,14,Chart 2.9,% of the current workforce who personally experienced serious harm at work in the past two years: unemployed (in workforce),25,pct,,chart,N,,
+X47_fishing,15,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, by job sector: fishing",26,pct,,text,N,,
+X47_construction,15,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, by job sector: construction",22,pct,,text,N,,
+X47_mining,15,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, by job sector: mining and quarrying",21,pct,,text,N,,
+X47_market_services,15,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, by job sector: market services",17,pct,,text,N,,
+X47_non_market_services,15,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, by job sector: non-market services",16,pct,,text,N,,
+C2_10_global,15,Chart 2.10,% of the current workforce who personally experienced serious harm at work in the past two years: global mean,18,pct,,chart,N,,
+C2_10_fishing,15,Chart 2.10,% of the current workforce who personally experienced serious harm at work in the past two years: fishing,26,pct,,chart,N,,
+C2_10_construction,15,Chart 2.10,% of the current workforce who personally experienced serious harm at work in the past two years: construction,22,pct,,chart,N,,
+C2_10_mining,15,Chart 2.10,% of the current workforce who personally experienced serious harm at work in the past two years: mining and quarrying,21,pct,,chart,N,,
+C2_10_agriculture,15,Chart 2.10,% of the current workforce who personally experienced serious harm at work in the past two years: agriculture (excluding fishing),18,pct,,chart,N,,
+C2_10_market_services,15,Chart 2.10,% of the current workforce who personally experienced serious harm at work in the past two years: market services,17,pct,,chart,N,,
+C2_10_non_market_services,15,Chart 2.10,% of the current workforce who personally experienced serious harm at work in the past two years: non-market services,16,pct,,chart,N,,
+C2_10_manufacturing,15,Chart 2.10,% of the current workforce who personally experienced serious harm at work in the past two years: manufacturing,15,pct,,chart,N,,
+C2_10_electricity,15,Chart 2.10,"% of the current workforce who personally experienced serious harm at work in the past two years: electricity, gas or water supply",10,pct,,chart,N,,
+X48_market_services_men,17,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, by sector and sex: market services, men",17,pct,,text,N,,
+X48_market_services_women,17,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, by sector and sex: market services, women",17,pct,,text,N,,
+X48_non_market_services_men,17,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, by sector and sex: non-market services, men",16,pct,,text,N,,
+X48_non_market_services_women,17,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, by sector and sex: non-market services, women",15,pct,,text,N,,
+X49_construction_15_29,17,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, by sector and age: construction, 15-29",25,pct,,text,N,,
+X49_construction_65plus,17,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, by sector and age: construction, over 65",8,pct,,text,N,,
+X49_agriculture_15_29,17,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, by sector and age: agriculture, 15-29",20,pct,,text,N,,
+X49_agriculture_65plus,17,Chapter 2,"% of the current workforce who personally experienced serious harm at work in the past two years, by sector and age: agriculture, over 65",15,pct,,text,N,,
+C2_12_construction_women,17,Chart 2.12,"% of the current workforce who personally experienced serious harm at work in the past two years: Construction, women",17,pct,,chart,N,,
+C2_12_construction_men,17,Chart 2.12,"% of the current workforce who personally experienced serious harm at work in the past two years: Construction, men",23,pct,,chart,N,,
+C2_12_agriculture_women,17,Chart 2.12,"% of the current workforce who personally experienced serious harm at work in the past two years: Agriculture, women",15,pct,,chart,N,,
+C2_12_agriculture_men,17,Chart 2.12,"% of the current workforce who personally experienced serious harm at work in the past two years: Agriculture, men",19,pct,,chart,N,,
+C2_12_market_services_women,17,Chart 2.12,"% of the current workforce who personally experienced serious harm at work in the past two years: Market services, women",17,pct,,chart,N,,
+C2_12_market_services_men,17,Chart 2.12,"% of the current workforce who personally experienced serious harm at work in the past two years: Market services, men",17,pct,,chart,N,,
+C2_12_non_market_services_women,17,Chart 2.12,"% of the current workforce who personally experienced serious harm at work in the past two years: Non-market services, women",15,pct,,chart,N,,
+C2_12_non_market_services_men,17,Chart 2.12,"% of the current workforce who personally experienced serious harm at work in the past two years: Non-market services, men",16,pct,,chart,N,,
+C2_12_manufacturing_women,17,Chart 2.12,"% of the current workforce who personally experienced serious harm at work in the past two years: Manufacturing, women",13,pct,,chart,N,,
+C2_12_manufacturing_men,17,Chart 2.12,"% of the current workforce who personally experienced serious harm at work in the past two years: Manufacturing, men",16,pct,,chart,N,,
+C2_13_low_construction,17,Chart 2.13,"% of the current workforce who personally experienced serious harm at work in the past two years: Construction, low income",28,pct,,chart,N,,
+C2_13_low_agriculture,17,Chart 2.13,"% of the current workforce who personally experienced serious harm at work in the past two years: Agriculture, low income",18,pct,,chart,N,,
+C2_13_low_market_services,17,Chart 2.13,"% of the current workforce who personally experienced serious harm at work in the past two years: Market services, low income",19,pct,,chart,N,,
+C2_13_low_non_market_services,17,Chart 2.13,"% of the current workforce who personally experienced serious harm at work in the past two years: Non-market services, low income",20,pct,,chart,N,,
+C2_13_low_manufacturing,17,Chart 2.13,"% of the current workforce who personally experienced serious harm at work in the past two years: Manufacturing, low income",23,pct,,chart,N,,
+C2_13_lower_middle_construction,17,Chart 2.13,"% of the current workforce who personally experienced serious harm at work in the past two years: Construction, lower-middle income",25,pct,,chart,N,,
+C2_13_lower_middle_agriculture,17,Chart 2.13,"% of the current workforce who personally experienced serious harm at work in the past two years: Agriculture, lower-middle income",20,pct,,chart,N,,
+C2_13_lower_middle_market_services,17,Chart 2.13,"% of the current workforce who personally experienced serious harm at work in the past two years: Market services, lower-middle income",22,pct,,chart,N,,
+C2_13_lower_middle_non_market_services,17,Chart 2.13,"% of the current workforce who personally experienced serious harm at work in the past two years: Non-market services, lower-middle income",23,pct,,chart,N,,
+C2_13_lower_middle_manufacturing,17,Chart 2.13,"% of the current workforce who personally experienced serious harm at work in the past two years: Manufacturing, lower-middle income",21,pct,,chart,N,,
+C2_13_upper_middle_construction,17,Chart 2.13,"% of the current workforce who personally experienced serious harm at work in the past two years: Construction, upper-middle income",23,pct,,chart,N,,
+C2_13_upper_middle_agriculture,17,Chart 2.13,"% of the current workforce who personally experienced serious harm at work in the past two years: Agriculture, upper-middle income",15,pct,,chart,N,,
+C2_13_upper_middle_market_services,17,Chart 2.13,"% of the current workforce who personally experienced serious harm at work in the past two years: Market services, upper-middle income",17,pct,,chart,N,,
+C2_13_upper_middle_non_market_services,17,Chart 2.13,"% of the current workforce who personally experienced serious harm at work in the past two years: Non-market services, upper-middle income",14,pct,,chart,N,,
+C2_13_upper_middle_manufacturing,17,Chart 2.13,"% of the current workforce who personally experienced serious harm at work in the past two years: Manufacturing, upper-middle income",14,pct,,chart,N,,
+C2_13_high_construction,17,Chart 2.13,"% of the current workforce who personally experienced serious harm at work in the past two years: Construction, high income",11,pct,,chart,N,,
+C2_13_high_agriculture,17,Chart 2.13,"% of the current workforce who personally experienced serious harm at work in the past two years: Agriculture, high income",8,pct,,chart,N,,
+C2_13_high_market_services,17,Chart 2.13,"% of the current workforce who personally experienced serious harm at work in the past two years: Market services, high income",9,pct,,chart,N,,
+C2_13_high_non_market_services,17,Chart 2.13,"% of the current workforce who personally experienced serious harm at work in the past two years: Non-market services, high income",10,pct,,chart,N,,
+C2_13_high_manufacturing,17,Chart 2.13,"% of the current workforce who personally experienced serious harm at work in the past two years: Manufacturing, high income",9,pct,,chart,N,,
+X50_anz,19,Chapter 3,% of the current workforce harmed at work in the past two years who told someone about it: Australia & New Zealand,82,pct,,text,N,,The text gives one figure (82%) for Australia & New Zealand and Northern America.
+X50_northern_america,19,Chapter 3,% of the current workforce harmed at work in the past two years who told someone about it: Northern America,82,pct,,text,N,,The text gives one figure (82%) for Australia & New Zealand and Northern America.
+X50_northern_western_europe,19,Chapter 3,% of the current workforce harmed at work in the past two years who told someone about it: Northern/Western Europe,69,pct,,text,N,,The text gives one figure (82%) for Australia & New Zealand and Northern America.
+X50_southeastern_asia,19,Chapter 3,% of the current workforce harmed at work in the past two years who told someone about it: Southeastern Asia,48,pct,,text,N,,The text gives one figure (82%) for Australia & New Zealand and Northern America.
+X50_central_western_africa,19,Chapter 3,% of the current workforce harmed at work in the past two years who told someone about it: Central/Western Africa,48,pct,,text,N,,The text gives one figure (82%) for Australia & New Zealand and Northern America.
+X50_southern_africa,19,Chapter 3,% of the current workforce harmed at work in the past two years who told someone about it: Southern Africa,47,pct,,text,N,,The text gives one figure (82%) for Australia & New Zealand and Northern America.
+X50_southern_asia,19,Chapter 3,% of the current workforce harmed at work in the past two years who told someone about it: Southern Asia,42,pct,,text,N,,The text gives one figure (82%) for Australia & New Zealand and Northern America.
+X50_northern_africa,19,Chapter 3,% of the current workforce harmed at work in the past two years who told someone about it: Northern Africa,40,pct,,text,N,,The text gives one figure (82%) for Australia & New Zealand and Northern America.
+X50_central_asia,19,Chapter 3,% of the current workforce harmed at work in the past two years who told someone about it: Central Asia,34,pct,,text,N,,The text gives one figure (82%) for Australia & New Zealand and Northern America.
+X51_men,20,Chapter 3,% of the current workforce harmed at work in the past two years who told someone about it: men,51,pct,,text,N,,
+X51_women,20,Chapter 3,% of the current workforce harmed at work in the past two years who told someone about it: women,51,pct,,text,N,,
+X52_primary,20,Chapter 3,% of the current workforce harmed at work in the past two years who told someone about it: primary education,50,pct,,text,N,,
+X52_secondary,20,Chapter 3,% of the current workforce harmed at work in the past two years who told someone about it: secondary education,51,pct,,text,N,,
+X52_tertiary,20,Chapter 3,% of the current workforce harmed at work in the past two years who told someone about it: tertiary education,52,pct,,text,N,,
+X53_min,20,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, range across the five income quintiles: lowest quintile value",49,pct,,text,N,,
+X53_max,20,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, range across the five income quintiles: highest quintile value",52,pct,,text,N,,
+X54_age_50_64,20,Chapter 3,% of the current workforce harmed at work in the past two years who told someone about it: aged 50-64,46,pct,,text,N,,
+X54_age_15_29,20,Chapter 3,% of the current workforce harmed at work in the past two years who told someone about it: aged 15-29,52,pct,,text,N,,
+X54_age_30_49,20,Chapter 3,% of the current workforce harmed at work in the past two years who told someone about it: aged 30-49,52,pct,,text,N,,
+X55_northern_western_europe_women,20,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, by region and sex: Northern/Western Europe, women",84,pct,,text,N,,
+X55_northern_western_europe_men,20,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, by region and sex: Northern/Western Europe, men",57,pct,,text,N,,
+X55_middle_east_women,20,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, by region and sex: Middle East, women",43,pct,,text,N,,
+X55_middle_east_men,20,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, by region and sex: Middle East, men",54,pct,,text,N,,
+X55_eastern_europe_women,20,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, by region and sex: Eastern Europe, women",48,pct,,text,N,,
+X55_eastern_europe_men,20,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, by region and sex: Eastern Europe, men",59,pct,,text,N,,
+X56_northern_western_europe_15_29,20,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, by region and age: Northern/Western Europe, 15-29",76,pct,,text,N,,
+X56_northern_western_europe_30_49,20,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, by region and age: Northern/Western Europe, 30-49",62,pct,,text,N,,
+X56_southern_asia_15_29,20,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, by region and age: Southern Asia, 15-29",48,pct,,text,N,,
+X56_southern_asia_30_49,20,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, by region and age: Southern Asia, 30-49",37,pct,,text,N,,
+X56_southern_europe_15_29,20,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, by region and age: Southern Europe, 15-29",49,pct,,text,N,,
+X56_southern_europe_30_49,20,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, by region and age: Southern Europe, 30-49",64,pct,,text,N,,
+X56_eastern_europe_15_29,20,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, by region and age: Eastern Europe, 15-29",49,pct,,text,N,,
+X56_eastern_europe_30_49,20,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, by region and age: Eastern Europe, 30-49",59,pct,,text,N,,
+X57_ft_employer,20,Chapter 3,% of the current workforce harmed at work in the past two years who told someone about it: full-time for an employer,57,pct,,text,N,,
+X57_part_time,20,Chapter 3,% of the current workforce harmed at work in the past two years who told someone about it: part-time,49,pct,,text,N,,
+X57_self_employed,20,Chapter 3,% of the current workforce harmed at work in the past two years who told someone about it: self-employed,47,pct,,text,N,,
+C3_2_ft_employer,20,Chart 3.2,% of the current workforce harmed at work in the past two years who told someone about it: full-time for an employer,57,pct,,chart,N,,
+C3_2_part_time,20,Chart 3.2,% of the current workforce harmed at work in the past two years who told someone about it: part-time,49,pct,,chart,N,,
+C3_2_self_employed,20,Chart 3.2,% of the current workforce harmed at work in the past two years who told someone about it: self-employed,47,pct,,chart,N,,
+X58_construction,21,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, by job sector: construction",61,pct,,text,N,,
+X58_non_market_services,21,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, by job sector: non-market services",56,pct,,text,N,,
+X58_agriculture,21,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, by job sector: agriculture",49,pct,,text,N,,
+X58_market_services,21,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, by job sector: market services",48,pct,,text,N,,
+X58_manufacturing,21,Chapter 3,"% of the current workforce harmed at work in the past two years who told someone about it, by job sector: manufacturing",42,pct,,text,N,,
+X59_ever,22,Chapter 4,% of the current workforce who: have ever received OSH training,38,pct,,text,N,,
+X59_past2,22,Chapter 4,% of the current workforce who: received OSH training in the past two years,30,pct,,text,N,,
+C4_1_past2,22,Chart 4.1,OSH training among the current workforce: % past two years,30,pct,,chart,N,,
+C4_1_older,22,Chart 4.1,OSH training among the current workforce: % not within the past two years or not sure when,8,pct,,chart,N,,
+C4_1_never,22,Chart 4.1,OSH training among the current workforce: % never,62,pct,,chart,N,,
+X60_past2,23,Chapter 4,"OSH training among the current workforce, high-income countries: % in the past two years",49,pct,,text,N,,
+X60_older,23,Chapter 4,"OSH training among the current workforce, high-income countries: % not in the past two years",12,pct,,text,N,,
+C4_2_low_past2,23,Chart 4.2,"OSH training among the current workforce: low income, % past two years",14,pct,,chart,N,,
+C4_2_low_older,23,Chart 4.2,"OSH training among the current workforce: low income, % not within the past two years or not sure when",7,pct,,chart,N,,
+C4_2_low_never,23,Chart 4.2,"OSH training among the current workforce: low income, % never",78,pct,,chart,N,,
+C4_2_lower_middle_past2,23,Chart 4.2,"OSH training among the current workforce: lower-middle income, % past two years",14,pct,,chart,N,,
+C4_2_lower_middle_older,23,Chart 4.2,"OSH training among the current workforce: lower-middle income, % not within the past two years or not sure when",7,pct,,chart,N,,
+C4_2_lower_middle_never,23,Chart 4.2,"OSH training among the current workforce: lower-middle income, % never",79,pct,,chart,N,,
+C4_2_upper_middle_past2,23,Chart 4.2,"OSH training among the current workforce: upper-middle income, % past two years",38,pct,,chart,N,,
+C4_2_upper_middle_older,23,Chart 4.2,"OSH training among the current workforce: upper-middle income, % not within the past two years or not sure when",7,pct,,chart,N,,
+C4_2_upper_middle_never,23,Chart 4.2,"OSH training among the current workforce: upper-middle income, % never",55,pct,,chart,N,,
+C4_2_high_past2,23,Chart 4.2,"OSH training among the current workforce: high income, % past two years",49,pct,,chart,N,,
+C4_2_high_older,23,Chart 4.2,"OSH training among the current workforce: high income, % not within the past two years or not sure when",12,pct,,chart,N,,
+C4_2_high_never,23,Chart 4.2,"OSH training among the current workforce: high income, % never",39,pct,,chart,N,,
+X61_eastern_europe,23,Chapter 4,% of the current workforce who have ever had OSH training: Eastern Europe,78,pct,,text,N,,
+X61_anz,23,Chapter 4,% of the current workforce who have ever had OSH training: Australia & New Zealand,77,pct,,text,N,,
+C4_3_eastern_europe_past2,23,Chart 4.3,"OSH training among the current workforce: Eastern Europe, % past two years",59,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_eastern_europe_older,23,Chart 4.3,"OSH training among the current workforce: Eastern Europe, % not within the past two years or not sure when",19,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_eastern_europe_never,23,Chart 4.3,"OSH training among the current workforce: Eastern Europe, % never",21,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_anz_past2,23,Chart 4.3,"OSH training among the current workforce: Australia & New Zealand, % past two years",67,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_anz_older,23,Chart 4.3,"OSH training among the current workforce: Australia & New Zealand, % not within the past two years or not sure when",10,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_anz_never,23,Chart 4.3,"OSH training among the current workforce: Australia & New Zealand, % never",23,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_northern_america_past2,23,Chart 4.3,"OSH training among the current workforce: Northern America, % past two years",59,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_northern_america_older,23,Chart 4.3,"OSH training among the current workforce: Northern America, % not within the past two years or not sure when",11,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_northern_america_never,23,Chart 4.3,"OSH training among the current workforce: Northern America, % never",30,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_southern_europe_past2,23,Chart 4.3,"OSH training among the current workforce: Southern Europe, % past two years",46,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_southern_europe_older,23,Chart 4.3,"OSH training among the current workforce: Southern Europe, % not within the past two years or not sure when",15,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_southern_europe_never,23,Chart 4.3,"OSH training among the current workforce: Southern Europe, % never",39,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_northern_western_europe_past2,23,Chart 4.3,"OSH training among the current workforce: Northern/Western Europe, % past two years",43,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_northern_western_europe_older,23,Chart 4.3,"OSH training among the current workforce: Northern/Western Europe, % not within the past two years or not sure when",15,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_northern_western_europe_never,23,Chart 4.3,"OSH training among the current workforce: Northern/Western Europe, % never",42,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_eastern_asia_past2,23,Chart 4.3,"OSH training among the current workforce: Eastern Asia, % past two years",45,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_eastern_asia_never,23,Chart 4.3,"OSH training among the current workforce: Eastern Asia, % never",51,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_latin_america_past2,23,Chart 4.3,"OSH training among the current workforce: Latin America & the Caribbean, % past two years",28,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_latin_america_older,23,Chart 4.3,"OSH training among the current workforce: Latin America & the Caribbean, % not within the past two years or not sure when",11,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_latin_america_never,23,Chart 4.3,"OSH training among the current workforce: Latin America & the Caribbean, % never",61,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_middle_east_past2,23,Chart 4.3,"OSH training among the current workforce: Middle East, % past two years",24,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_middle_east_older,23,Chart 4.3,"OSH training among the current workforce: Middle East, % not within the past two years or not sure when",8,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_middle_east_never,23,Chart 4.3,"OSH training among the current workforce: Middle East, % never",67,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_southern_africa_past2,23,Chart 4.3,"OSH training among the current workforce: Southern Africa, % past two years",21,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_southern_africa_older,23,Chart 4.3,"OSH training among the current workforce: Southern Africa, % not within the past two years or not sure when",12,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_southern_africa_never,23,Chart 4.3,"OSH training among the current workforce: Southern Africa, % never",65,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_central_asia_past2,23,Chart 4.3,"OSH training among the current workforce: Central Asia, % past two years",24,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_central_asia_older,23,Chart 4.3,"OSH training among the current workforce: Central Asia, % not within the past two years or not sure when",6,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_central_asia_never,23,Chart 4.3,"OSH training among the current workforce: Central Asia, % never",68,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_southeastern_asia_past2,23,Chart 4.3,"OSH training among the current workforce: Southeastern Asia, % past two years",21,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_southeastern_asia_older,23,Chart 4.3,"OSH training among the current workforce: Southeastern Asia, % not within the past two years or not sure when",9,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_southeastern_asia_never,23,Chart 4.3,"OSH training among the current workforce: Southeastern Asia, % never",70,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_eastern_africa_past2,23,Chart 4.3,"OSH training among the current workforce: Eastern Africa, % past two years",18,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_eastern_africa_older,23,Chart 4.3,"OSH training among the current workforce: Eastern Africa, % not within the past two years or not sure when",8,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_eastern_africa_never,23,Chart 4.3,"OSH training among the current workforce: Eastern Africa, % never",74,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_central_western_africa_past2,23,Chart 4.3,"OSH training among the current workforce: Central/Western Africa, % past two years",12,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_central_western_africa_older,23,Chart 4.3,"OSH training among the current workforce: Central/Western Africa, % not within the past two years or not sure when",7,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_central_western_africa_never,23,Chart 4.3,"OSH training among the current workforce: Central/Western Africa, % never",80,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_southern_asia_past2,23,Chart 4.3,"OSH training among the current workforce: Southern Asia, % past two years",12,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_southern_asia_older,23,Chart 4.3,"OSH training among the current workforce: Southern Asia, % not within the past two years or not sure when",6,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_southern_asia_never,23,Chart 4.3,"OSH training among the current workforce: Southern Asia, % never",82,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_northern_africa_past2,23,Chart 4.3,"OSH training among the current workforce: Northern Africa, % past two years",11,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_northern_africa_older,23,Chart 4.3,"OSH training among the current workforce: Northern Africa, % not within the past two years or not sure when",7,pct,,chart,N,,Values under 5% are not displayed.
+C4_3_northern_africa_never,23,Chart 4.3,"OSH training among the current workforce: Northern Africa, % never",82,pct,,chart,N,,Values under 5% are not displayed.
+X62,24,Chapter 4,Countries in Eastern Europe among the top 10 for OSH training in the past two years,5,count,0,text,N,,"Uses GlobalRegion, which places Latvia in Northern/Western Europe; the report counts it as Eastern Europe."
+X63_SEN,24,Chapter 4,% of the current workforce never trained (lowest-ranked countries): Senegal,89,pct,,text,N,,
+X63_MAR,24,Chapter 4,% of the current workforce never trained (lowest-ranked countries): Morocco,88,pct,,text,N,,
+X63_TGO,24,Chapter 4,% of the current workforce never trained (lowest-ranked countries): Togo,88,pct,,text,N,,
+X63_CIV,24,Chapter 4,% of the current workforce never trained (lowest-ranked countries): Cote d'Ivoire,88,pct,,text,N,,
+T4_1_CZE,24,Table 4.1,"Top 10 countries: % of the current workforce trained in the last two years, Czech Republic",77,pct,,table,N,,
+T4_1_LVA,24,Table 4.1,"Top 10 countries: % of the current workforce trained in the last two years, Latvia",77,pct,,table,N,,
+T4_1_SVK,24,Table 4.1,"Top 10 countries: % of the current workforce trained in the last two years, Slovakia",74,pct,,table,N,,
+T4_1_HUN,24,Table 4.1,"Top 10 countries: % of the current workforce trained in the last two years, Hungary",73,pct,,table,N,,
+T4_1_AUS,24,Table 4.1,"Top 10 countries: % of the current workforce trained in the last two years, Australia",68,pct,,table,N,,
+T4_1_NOR,24,Table 4.1,"Top 10 countries: % of the current workforce trained in the last two years, Norway",65,pct,,table,N,,
+T4_1_KOR,24,Table 4.1,"Top 10 countries: % of the current workforce trained in the last two years, South Korea",64,pct,,table,N,,
+T4_1_ROU,24,Table 4.1,"Top 10 countries: % of the current workforce trained in the last two years, Romania",62,pct,,table,N,,
+T4_1_NZL,24,Table 4.1,"Top 10 countries: % of the current workforce trained in the last two years, New Zealand",61,pct,,table,N,,
+T4_1_CAN,24,Table 4.1,"Top 10 countries: % of the current workforce trained in the last two years, Canada",60,pct,,table,N,,
+T4_1_SEN,24,Table 4.1,"Bottom 10 countries: % of the current workforce NOT trained (never trained), Senegal",89,pct,,table,N,,'Proportion NOT trained in last two years' in the table header; the values are the % never trained (see README).
+T4_1_MAR,24,Table 4.1,"Bottom 10 countries: % of the current workforce NOT trained (never trained), Morocco",88,pct,,table,N,,'Proportion NOT trained in last two years' in the table header; the values are the % never trained (see README).
+T4_1_TGO,24,Table 4.1,"Bottom 10 countries: % of the current workforce NOT trained (never trained), Togo",88,pct,,table,N,,'Proportion NOT trained in last two years' in the table header; the values are the % never trained (see README).
+T4_1_CIV,24,Table 4.1,"Bottom 10 countries: % of the current workforce NOT trained (never trained), Cote d'Ivoire",88,pct,,table,N,,'Proportion NOT trained in last two years' in the table header; the values are the % never trained (see README).
+T4_1_YEM,24,Table 4.1,"Bottom 10 countries: % of the current workforce NOT trained (never trained), Yemen",87,pct,,table,N,,'Proportion NOT trained in last two years' in the table header; the values are the % never trained (see README).
+T4_1_NPL,24,Table 4.1,"Bottom 10 countries: % of the current workforce NOT trained (never trained), Nepal",87,pct,,table,N,,'Proportion NOT trained in last two years' in the table header; the values are the % never trained (see README).
+T4_1_EGY,24,Table 4.1,"Bottom 10 countries: % of the current workforce NOT trained (never trained), Egypt",87,pct,,table,N,,'Proportion NOT trained in last two years' in the table header; the values are the % never trained (see README).
+T4_1_TUN,24,Table 4.1,"Bottom 10 countries: % of the current workforce NOT trained (never trained), Tunisia",86,pct,,table,N,,'Proportion NOT trained in last two years' in the table header; the values are the % never trained (see README).
+T4_1_GMB,24,Table 4.1,"Bottom 10 countries: % of the current workforce NOT trained (never trained), The Gambia",85,pct,,table,N,,'Proportion NOT trained in last two years' in the table header; the values are the % never trained (see README).
+T4_1_LBN,24,Table 4.1,"Bottom 10 countries: % of the current workforce NOT trained (never trained), Lebanon",85,pct,,table,N,,'Proportion NOT trained in last two years' in the table header; the values are the % never trained (see README).
+C4_4_poorest_past2,24,Chart 4.4,"OSH training among the current workforce: poorest 20%, % past two years",24,pct,,chart,N,,
+C4_4_poorest_older,24,Chart 4.4,"OSH training among the current workforce: poorest 20%, % not within the past two years or not sure when",8,pct,,chart,N,,
+C4_4_poorest_never,24,Chart 4.4,"OSH training among the current workforce: poorest 20%, % never",68,pct,,chart,N,,
+C4_4_second_past2,24,Chart 4.4,"OSH training among the current workforce: second 20%, % past two years",29,pct,,chart,N,,
+C4_4_second_older,24,Chart 4.4,"OSH training among the current workforce: second 20%, % not within the past two years or not sure when",7,pct,,chart,N,,
+C4_4_second_never,24,Chart 4.4,"OSH training among the current workforce: second 20%, % never",64,pct,,chart,N,,
+C4_4_middle_past2,24,Chart 4.4,"OSH training among the current workforce: middle 20%, % past two years",28,pct,,chart,N,,
+C4_4_middle_older,24,Chart 4.4,"OSH training among the current workforce: middle 20%, % not within the past two years or not sure when",8,pct,,chart,N,,
+C4_4_middle_never,24,Chart 4.4,"OSH training among the current workforce: middle 20%, % never",64,pct,,chart,N,,
+C4_4_fourth_past2,24,Chart 4.4,"OSH training among the current workforce: fourth 20%, % past two years",33,pct,,chart,N,,
+C4_4_fourth_older,24,Chart 4.4,"OSH training among the current workforce: fourth 20%, % not within the past two years or not sure when",8,pct,,chart,N,,
+C4_4_fourth_never,24,Chart 4.4,"OSH training among the current workforce: fourth 20%, % never",59,pct,,chart,N,,
+C4_4_richest_past2,24,Chart 4.4,"OSH training among the current workforce: richest 20%, % past two years",34,pct,,chart,N,,
+C4_4_richest_older,24,Chart 4.4,"OSH training among the current workforce: richest 20%, % not within the past two years or not sure when",9,pct,,chart,N,,
+C4_4_richest_never,24,Chart 4.4,"OSH training among the current workforce: richest 20%, % never",57,pct,,chart,N,,
+C4_4_primary_past2,24,Chart 4.4,"OSH training among the current workforce: primary education, % past two years",20,pct,,chart,N,,
+C4_4_primary_older,24,Chart 4.4,"OSH training among the current workforce: primary education, % not within the past two years or not sure when",5,pct,,chart,N,,
+C4_4_primary_never,24,Chart 4.4,"OSH training among the current workforce: primary education, % never",75,pct,,chart,N,,
+C4_4_secondary_past2,24,Chart 4.4,"OSH training among the current workforce: secondary education, % past two years",33,pct,,chart,N,,
+C4_4_secondary_older,24,Chart 4.4,"OSH training among the current workforce: secondary education, % not within the past two years or not sure when",10,pct,,chart,N,,
+C4_4_secondary_never,24,Chart 4.4,"OSH training among the current workforce: secondary education, % never",57,pct,,chart,N,,
+C4_4_tertiary_past2,24,Chart 4.4,"OSH training among the current workforce: tertiary education, % past two years",45,pct,,chart,N,,
+C4_4_tertiary_older,24,Chart 4.4,"OSH training among the current workforce: tertiary education, % not within the past two years or not sure when",10,pct,,chart,N,,
+C4_4_tertiary_never,24,Chart 4.4,"OSH training among the current workforce: tertiary education, % never",45,pct,,chart,N,,
+C4_5_electricity_past2,25,Chart 4.5,"OSH training among the current workforce: electricity, gas or water supply, % past two years",69,pct,,chart,N,,
+C4_5_electricity_older,25,Chart 4.5,"OSH training among the current workforce: electricity, gas or water supply, % not within the past two years or not sure when",8,pct,,chart,N,,
+C4_5_electricity_never,25,Chart 4.5,"OSH training among the current workforce: electricity, gas or water supply, % never",23,pct,,chart,N,,
+C4_5_mining_past2,25,Chart 4.5,"OSH training among the current workforce: mining and quarrying, % past two years",48,pct,,chart,N,,
+C4_5_mining_older,25,Chart 4.5,"OSH training among the current workforce: mining and quarrying, % not within the past two years or not sure when",9,pct,,chart,N,,
+C4_5_mining_never,25,Chart 4.5,"OSH training among the current workforce: mining and quarrying, % never",43,pct,,chart,N,,
+C4_5_manufacturing_past2,25,Chart 4.5,"OSH training among the current workforce: manufacturing, % past two years",41,pct,,chart,N,,
+C4_5_manufacturing_older,25,Chart 4.5,"OSH training among the current workforce: manufacturing, % not within the past two years or not sure when",8,pct,,chart,N,,
+C4_5_manufacturing_never,25,Chart 4.5,"OSH training among the current workforce: manufacturing, % never",50,pct,,chart,N,,
+C4_5_non_market_services_past2,25,Chart 4.5,"OSH training among the current workforce: non-market services, % past two years",40,pct,,chart,N,,
+C4_5_non_market_services_older,25,Chart 4.5,"OSH training among the current workforce: non-market services, % not within the past two years or not sure when",10,pct,,chart,N,,
+C4_5_non_market_services_never,25,Chart 4.5,"OSH training among the current workforce: non-market services, % never",50,pct,,chart,N,,
+C4_5_construction_past2,25,Chart 4.5,"OSH training among the current workforce: construction, % past two years",31,pct,,chart,N,,
+C4_5_construction_older,25,Chart 4.5,"OSH training among the current workforce: construction, % not within the past two years or not sure when",9,pct,,chart,N,,
+C4_5_construction_never,25,Chart 4.5,"OSH training among the current workforce: construction, % never",60,pct,,chart,N,,
+C4_5_market_services_past2,25,Chart 4.5,"OSH training among the current workforce: market services, % past two years",31,pct,,chart,N,,
+C4_5_market_services_older,25,Chart 4.5,"OSH training among the current workforce: market services, % not within the past two years or not sure when",8,pct,,chart,N,,
+C4_5_market_services_never,25,Chart 4.5,"OSH training among the current workforce: market services, % never",60,pct,,chart,N,,
+C4_5_fishing_past2,25,Chart 4.5,"OSH training among the current workforce: fishing, % past two years",20,pct,,chart,N,,
+C4_5_fishing_older,25,Chart 4.5,"OSH training among the current workforce: fishing, % not within the past two years or not sure when",7,pct,,chart,N,,
+C4_5_fishing_never,25,Chart 4.5,"OSH training among the current workforce: fishing, % never",73,pct,,chart,N,,
+C4_5_agriculture_past2,25,Chart 4.5,"OSH training among the current workforce: agriculture, % past two years",15,pct,,chart,N,,
+C4_5_agriculture_older,25,Chart 4.5,"OSH training among the current workforce: agriculture, % not within the past two years or not sure when",5,pct,,chart,N,,
+C4_5_agriculture_never,25,Chart 4.5,"OSH training among the current workforce: agriculture, % never",80,pct,,chart,N,,
+X64_anz,26,Chapter 4,% of the construction current workforce trained in the past two years: Australia & New Zealand,82,pct,,text,N,,
+X64_northern_africa,26,Chapter 4,% of the construction current workforce trained in the past two years: Northern Africa,6,pct,,text,N,,
+X65_anz,26,Chapter 4,% of the construction current workforce harmed at work in the past two years: Australia & New Zealand,9,pct,,text,N,,
+X65_northern_africa,26,Chapter 4,% of the construction current workforce harmed at work in the past two years: Northern Africa,9,pct,,text,N,,
+C4_6_anz_past2,26,Chart 4.6,"OSH training among the construction current workforce: Australia & New Zealand, % past two years",82,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_anz_older,26,Chart 4.6,"OSH training among the construction current workforce: Australia & New Zealand, % not within the past two years or not sure when",9,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_anz_never,26,Chart 4.6,"OSH training among the construction current workforce: Australia & New Zealand, % never",9,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_northern_america_past2,26,Chart 4.6,"OSH training among the construction current workforce: Northern America, % past two years",68,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_northern_america_older,26,Chart 4.6,"OSH training among the construction current workforce: Northern America, % not within the past two years or not sure when",13,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_northern_america_never,26,Chart 4.6,"OSH training among the construction current workforce: Northern America, % never",19,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_eastern_europe_past2,26,Chart 4.6,"OSH training among the construction current workforce: Eastern Europe, % past two years",55,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_eastern_europe_older,26,Chart 4.6,"OSH training among the construction current workforce: Eastern Europe, % not within the past two years or not sure when",26,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_eastern_europe_never,26,Chart 4.6,"OSH training among the construction current workforce: Eastern Europe, % never",19,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_northern_western_europe_past2,26,Chart 4.6,"OSH training among the construction current workforce: Northern/Western Europe, % past two years",52,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_northern_western_europe_older,26,Chart 4.6,"OSH training among the construction current workforce: Northern/Western Europe, % not within the past two years or not sure when",18,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_northern_western_europe_never,26,Chart 4.6,"OSH training among the construction current workforce: Northern/Western Europe, % never",30,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_eastern_asia_past2,26,Chart 4.6,"OSH training among the construction current workforce: Eastern Asia, % past two years",50,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_eastern_asia_never,26,Chart 4.6,"OSH training among the construction current workforce: Eastern Asia, % never",48,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_southern_europe_past2,26,Chart 4.6,"OSH training among the construction current workforce: Southern Europe, % past two years",45,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_southern_europe_older,26,Chart 4.6,"OSH training among the construction current workforce: Southern Europe, % not within the past two years or not sure when",22,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_southern_europe_never,26,Chart 4.6,"OSH training among the construction current workforce: Southern Europe, % never",33,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_latin_america_past2,26,Chart 4.6,"OSH training among the construction current workforce: Latin America & the Caribbean, % past two years",27,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_latin_america_older,26,Chart 4.6,"OSH training among the construction current workforce: Latin America & the Caribbean, % not within the past two years or not sure when",12,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_latin_america_never,26,Chart 4.6,"OSH training among the construction current workforce: Latin America & the Caribbean, % never",61,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_southern_africa_past2,26,Chart 4.6,"OSH training among the construction current workforce: Southern Africa, % past two years",25,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_southern_africa_older,26,Chart 4.6,"OSH training among the construction current workforce: Southern Africa, % not within the past two years or not sure when",9,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_southern_africa_never,26,Chart 4.6,"OSH training among the construction current workforce: Southern Africa, % never",66,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_southeastern_asia_past2,26,Chart 4.6,"OSH training among the construction current workforce: Southeastern Asia, % past two years",25,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_southeastern_asia_older,26,Chart 4.6,"OSH training among the construction current workforce: Southeastern Asia, % not within the past two years or not sure when",11,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_southeastern_asia_never,26,Chart 4.6,"OSH training among the construction current workforce: Southeastern Asia, % never",64,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_eastern_africa_past2,26,Chart 4.6,"OSH training among the construction current workforce: Eastern Africa, % past two years",22,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_eastern_africa_older,26,Chart 4.6,"OSH training among the construction current workforce: Eastern Africa, % not within the past two years or not sure when",11,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_eastern_africa_never,26,Chart 4.6,"OSH training among the construction current workforce: Eastern Africa, % never",67,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_central_asia_past2,26,Chart 4.6,"OSH training among the construction current workforce: Central Asia, % past two years",18,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_central_asia_older,26,Chart 4.6,"OSH training among the construction current workforce: Central Asia, % not within the past two years or not sure when",7,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_central_asia_never,26,Chart 4.6,"OSH training among the construction current workforce: Central Asia, % never",75,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_central_western_africa_past2,26,Chart 4.6,"OSH training among the construction current workforce: Central/Western Africa, % past two years",17,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_central_western_africa_older,26,Chart 4.6,"OSH training among the construction current workforce: Central/Western Africa, % not within the past two years or not sure when",10,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_central_western_africa_never,26,Chart 4.6,"OSH training among the construction current workforce: Central/Western Africa, % never",73,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_middle_east_past2,26,Chart 4.6,"OSH training among the construction current workforce: Middle East, % past two years",15,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_middle_east_older,26,Chart 4.6,"OSH training among the construction current workforce: Middle East, % not within the past two years or not sure when",10,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_middle_east_never,26,Chart 4.6,"OSH training among the construction current workforce: Middle East, % never",75,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_southern_asia_past2,26,Chart 4.6,"OSH training among the construction current workforce: Southern Asia, % past two years",12,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_southern_asia_older,26,Chart 4.6,"OSH training among the construction current workforce: Southern Asia, % not within the past two years or not sure when",7,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_southern_asia_never,26,Chart 4.6,"OSH training among the construction current workforce: Southern Asia, % never",81,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_northern_africa_past2,26,Chart 4.6,"OSH training among the construction current workforce: Northern Africa, % past two years",6,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_northern_africa_older,26,Chart 4.6,"OSH training among the construction current workforce: Northern Africa, % not within the past two years or not sure when",6,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+C4_6_northern_africa_never,26,Chart 4.6,"OSH training among the construction current workforce: Northern Africa, % never",88,pct,,chart,N,,The chart is unnumbered in the report; the list of figures calls it Chart 4.6. Eastern Asia's middle segment is not labelled.
+X66_past2,27,Chapter 4,% of the current workforce who personally experienced serious harm at work in the past two years: trained in the past two years,19,pct,,text,N,,
+X66_older,27,Chapter 4,% of the current workforce who personally experienced serious harm at work in the past two years: trained longer ago,19,pct,,text,N,,
+X66_never,27,Chapter 4,% of the current workforce who personally experienced serious harm at work in the past two years: never trained,17,pct,,text,N,,
+C4_7_past2,27,Chart 4.7,Odds ratio of reporting workplace harm vs never trained: training in last two years,3.3,odds_ratio,0.1,chart,N,,Model estimate; see README for the specification.
+C4_7_older,27,Chart 4.7,Odds ratio of reporting workplace harm vs never trained: training not within the last two years or not sure when,1.8,odds_ratio,0.1,chart,N,,Model estimate; see README for the specification.

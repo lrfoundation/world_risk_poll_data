@@ -1,0 +1,931 @@
+finding_id,page,section,description,published_value,unit,tolerance,source,requires_gallup,gallup_items,note
+X01,"i, iii",Foreword; Executive summary,"Interviews conducted in 2025 ('more than 143,000')",143000,count,1000,text,N,,
+X02,"i, iii",Foreword; Executive summary,Countries and territories surveyed in 2025,140,count,0,text,N,,
+X03,"iii, 9, 12, 18, 19",Executive summary; Chapters 2-3,"Current workforce: % personally experienced serious harm at work in past two years, 2025",16,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X04,"iii, 18",Executive summary; Chapter 3,"Current workforce: % personally experienced harm at work, 2023",18,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Countries surveyed in 2025."
+X05,"iii, 18",Executive summary; Chapter 3,"Current workforce: % personally experienced harm at work, 2021",19,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Countries surveyed in 2025; China not asked the employment questions in 2021."
+X06,"iii, 12",Executive summary; Chapter 2,"Adults: % personally experienced harm from food in past two years, 2025 (record high)",14,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X07,"iii, 12",Executive summary; Chapter 2,"Adults: % personally experienced harm from drinking water, 2025 (record high)",13,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X08,"iii, 1, 2",Executive summary; Chapter 1,"Top-of-mind risk to safety: % road-related accidents, 2025 ('one in seven')",14,pct,,text,N,,
+X09,"iii, 2",Executive summary; Chapter 1,"Top-of-mind risk to safety: % personal health conditions, 2025",11,pct,,text,N,,
+X10,"iii, 2, 5",Executive summary; Chapter 1,"Top-of-mind risk to safety: % crime and violence, 2025",10,pct,,text,N,,
+X11,"iii, 4",Executive summary; Chapter 1,Global regions covered by the World Risk Poll,15,count,0,text,N,,
+X12,"iii, 4",Executive summary; Chapter 1,Distinct top-three rankings of top-of-mind risks among the 15 regions ('no two regions share the same top three'),15,count,0,text,N,,"Top three from Table 1.1: categories ranked on percentages rounded to whole numbers, tied categories grouped."
+X13,"iii, 26",Executive summary; Chapter 4,"Adults: % personally harmed by severe prolonged weather events (droughts, heatwaves), 2025",19,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X14,"iii, 12, 26","Executive summary; Chapters 2, 4","Adults: % personally harmed by severe weather events (floods, storms), 2025",17,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X15,"iii, 26",Executive summary; Chapter 4,"Adults: % personally harmed by the air they breathe, 2025 ('one in 10')",12,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X16,"iii, 26",Executive summary; Chapter 4,"Adults: % personally harmed by wildfires, 2025",8,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X17,"iv, 25, 26, 37",Executive summary; Chapter 4; Conclusion,"Adults: % not worried at all about being harmed by the air they breathe ('nearly half', '1 in 2')",47,pct,,text,N,,
+X18,"iv, 34",Executive summary; Chapter 4,"Of the 10 countries with most personal harm from severe weather events, number also in the 10 most harmed by severe prolonged weather events",7,count,0,text,N,,
+X19,"1, 2",Chapter 1,Change 2023 to 2025 in % naming road-related accidents as top risk ('down 2 percentage points'),-2,pct,,text,N,,"Difference of the rounded 2025 and 2023 figures (14 - 16), as in Chart 1.1."
+X20,"2, 7",Chapter 1,"Top-of-mind risk: % don't know or refused, 2025",15,pct,,text,N,,
+X21,2,Chapter 1,"Top-of-mind risk: % don't know or refused, 2023",9,pct,,text,N,,Countries surveyed in 2025.
+X22,2,Chapter 1,"Top-of-mind risk: % don't know or refused, 2021",19,pct,,text,N,,Countries surveyed in 2025.
+X23,2,Chapter 1,Change 2023 to 2025 in % don't know or refused ('six points higher'),6,pct,,text,N,,Difference of rounded figures (15 - 9).
+X24,2,Chapter 1,"India: % answering 'don't know' to top-of-mind risk, 2021",34,pct,,text,N,,"Don't know and refused together, as in Chart 1.1."
+X25,2,Chapter 1,"India: % answering 'don't know' to top-of-mind risk, 2023",5,pct,,text,N,,Don't know and refused together.
+X26,2,Chapter 1,"India: % answering 'don't know' to top-of-mind risk, 2025",36,pct,,text,N,,Don't know and refused together. 'Don't know' alone is 31%.
+X27,2,Chapter 1,"Top-of-mind risk: % road-related accidents, 2023",16,pct,,text,N,,Countries surveyed in 2025.
+X28,2,Chapter 1,"Top-of-mind risk: % road-related accidents, 2021 ('also 14%')",14,pct,,text,N,,Countries surveyed in 2025 (all 2021 countries give 13.3%).
+X29,2,Chapter 1,"Top-of-mind risk: % road-related accidents as first answer, 2019",16,pct,,text,N,,"2019 item L3_A (first of two answers); countries surveyed in 2025, as footnote v says."
+X30,2,Chapter 1,"Top-of-mind risk: % the economy, 2025",9,pct,,text,N,,
+X31,2,Chapter 1,"Top-of-mind risk: % climate change or severe weather events, 2025",6,pct,,text,N,,
+X32,2,Chapter 1,"Top-of-mind risk: % financial risks, 2025",5,pct,,text,N,,
+X33,2,Chapter 1,"Top-of-mind risk: % war or terrorism, 2025",3,pct,,text,N,,
+X34,2,Chapter 1 (footnote iii),"Top-of-mind risk: weighted % refusing to answer, 2025",1.8,pct,0.1,text,N,,
+X35,2,Chapter 1 (footnote iii),"Top-of-mind risk: weighted % answering 'don't know', 2025",13.6,pct,0.1,text,N,,
+X36,2,Chapter 1 (footnote iv),Among those who feel unable to protect themselves from a disaster: % who cannot name their top risk,18,pct,,text,N,,WP22252 = no; don't know and refused together.
+X37,2,Chapter 1 (footnote iv),Among those who feel able to protect themselves from a disaster: % who cannot name their top risk,10,pct,,text,N,,WP22252 = yes.
+X38,3,Chapter 1,"Australia and New Zealand: % naming road-related accidents, 2025",33,pct,,text,N,,
+X39,3,Chapter 1,"Northern America: % naming road-related accidents, 2025",33,pct,,text,N,,
+X40,3,Chapter 1,Northern America: change in % naming road-related accidents since 2023 ('increased by eight points'),8,pct,,text,N,,Difference of rounded figures in Chart 1.2.
+X41,3,Chapter 1,Eastern Asia: change in % naming road-related accidents since 2023 ('four-point increase'),4,pct,,text,N,,Difference of rounded figures in Chart 1.2.
+X42,3,Chapter 1,Southern Asia: change in % naming road-related accidents since 2023 ('down by 13 points'),-13,pct,,text,N,,Difference of rounded figures in Chart 1.2.
+X43,4,Chapter 1,Regions where road-related accidents rank among the top three risks,11,count,0,text,N,,"From Table 1.1 ranking (rounded percentages, ties grouped)."
+X44,4,Chapter 1,Regions where road-related accidents are the single top risk ('leads in six regions'),6,count,0,text,N,,
+X45,4,Chapter 1,"Regions where personal health is the second-most named risk (Central Asia, Southeastern Asia, Central/Western Africa, Eastern Africa, Southern Europe)",5,count,0,text,N,,
+X46,4,Chapter 1,Eastern Asia: % naming the environment (climate change/severe weather) as top risk,18,pct,,text,N,,
+X47,4,Chapter 1,Eastern Europe: % naming war or terrorism as top risk,23,pct,,text,N,,
+X48,4,Chapter 1,Australia and New Zealand: % naming mental health issues as top risk,10,pct,,text,N,,WP22331 code 8 (mental stress/exhaustion).
+X49,4,Chapter 1,Northern America: % naming politics as top risk,9,pct,,text,N,,
+C1_1_dk,2,Chart 1.1,"Top-of-mind risk to safety, 2025: % Don't know/refused",15,pct,,chart,N,,
+C1_1_dk_change,2,Chart 1.1,Top-of-mind risk to safety: change 2023 to 2025 in % Don't know/refused (pp),6,pct,,chart,N,,Difference of the rounded 2025 and 2023 figures ('No change' = 0); 2023 uses countries surveyed in 2025.
+C1_1_road,2,Chart 1.1,"Top-of-mind risk to safety, 2025: % Road-related accidents",14,pct,,chart,N,,
+C1_1_road_change,2,Chart 1.1,Top-of-mind risk to safety: change 2023 to 2025 in % Road-related accidents (pp),-2,pct,,chart,N,,Difference of the rounded 2025 and 2023 figures ('No change' = 0); 2023 uses countries surveyed in 2025.
+C1_1_health,2,Chart 1.1,"Top-of-mind risk to safety, 2025: % Personal health",11,pct,,chart,N,,
+C1_1_health_change,2,Chart 1.1,Top-of-mind risk to safety: change 2023 to 2025 in % Personal health (pp),0,pct,,chart,N,,Difference of the rounded 2025 and 2023 figures ('No change' = 0); 2023 uses countries surveyed in 2025.
+C1_1_crime,2,Chart 1.1,"Top-of-mind risk to safety, 2025: % Crime/violence",10,pct,,chart,N,,
+C1_1_crime_change,2,Chart 1.1,Top-of-mind risk to safety: change 2023 to 2025 in % Crime/violence (pp),-3,pct,,chart,N,,Difference of the rounded 2025 and 2023 figures ('No change' = 0); 2023 uses countries surveyed in 2025.
+C1_1_economy,2,Chart 1.1,"Top-of-mind risk to safety, 2025: % Economy",9,pct,,chart,N,,
+C1_1_economy_change,2,Chart 1.1,Top-of-mind risk to safety: change 2023 to 2025 in % Economy (pp),2,pct,,chart,N,,Difference of the rounded 2025 and 2023 figures ('No change' = 0); 2023 uses countries surveyed in 2025.
+C1_1_climate,2,Chart 1.1,"Top-of-mind risk to safety, 2025: % Climate change/severe weather",6,pct,,chart,N,,
+C1_1_climate_change,2,Chart 1.1,Top-of-mind risk to safety: change 2023 to 2025 in % Climate change/severe weather (pp),0,pct,,chart,N,,Difference of the rounded 2025 and 2023 figures ('No change' = 0); 2023 uses countries surveyed in 2025.
+C1_1_nothing,2,Chart 1.1,"Top-of-mind risk to safety, 2025: % Nothing/no risk",6,pct,,chart,N,,
+C1_1_nothing_change,2,Chart 1.1,Top-of-mind risk to safety: change 2023 to 2025 in % Nothing/no risk (pp),-1,pct,,chart,N,,Difference of the rounded 2025 and 2023 figures ('No change' = 0); 2023 uses countries surveyed in 2025.
+C1_1_financial,2,Chart 1.1,"Top-of-mind risk to safety, 2025: % Financial",5,pct,,chart,N,,
+C1_1_financial_change,2,Chart 1.1,Top-of-mind risk to safety: change 2023 to 2025 in % Financial (pp),-1,pct,,chart,N,,Difference of the rounded 2025 and 2023 figures ('No change' = 0); 2023 uses countries surveyed in 2025.
+C1_1_other,2,Chart 1.1,"Top-of-mind risk to safety, 2025: % Other",5,pct,,chart,N,,
+C1_1_other_change,2,Chart 1.1,Top-of-mind risk to safety: change 2023 to 2025 in % Other (pp),-1,pct,,chart,N,,Difference of the rounded 2025 and 2023 figures ('No change' = 0); 2023 uses countries surveyed in 2025.
+C1_1_war,2,Chart 1.1,"Top-of-mind risk to safety, 2025: % War/terrorism",3,pct,,chart,N,,
+C1_1_war_change,2,Chart 1.1,Top-of-mind risk to safety: change 2023 to 2025 in % War/terrorism (pp),0,pct,,chart,N,,Difference of the rounded 2025 and 2023 figures ('No change' = 0); 2023 uses countries surveyed in 2025.
+C1_1_work,2,Chart 1.1,"Top-of-mind risk to safety, 2025: % Work",2,pct,,chart,N,,
+C1_1_work_change,2,Chart 1.1,Top-of-mind risk to safety: change 2023 to 2025 in % Work (pp),-1,pct,,chart,N,,Difference of the rounded 2025 and 2023 figures ('No change' = 0); 2023 uses countries surveyed in 2025.
+C1_1_technology,2,Chart 1.1,"Top-of-mind risk to safety, 2025: % Technology",2,pct,,chart,N,,
+C1_1_technology_change,2,Chart 1.1,Top-of-mind risk to safety: change 2023 to 2025 in % Technology (pp),1,pct,,chart,N,,Difference of the rounded 2025 and 2023 figures ('No change' = 0); 2023 uses countries surveyed in 2025.
+C1_1_environment,2,Chart 1.1,"Top-of-mind risk to safety, 2025: % Environment (pollution)",2,pct,,chart,N,,
+C1_1_environment_change,2,Chart 1.1,Top-of-mind risk to safety: change 2023 to 2025 in % Environment (pollution) (pp),0,pct,,chart,N,,Difference of the rounded 2025 and 2023 figures ('No change' = 0); 2023 uses countries surveyed in 2025.
+C1_2_northern_america_2021,3,Chart 1.2,"Northern America: % naming road-related accidents as top risk, 2021",29,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_northern_america_2023,3,Chart 1.2,"Northern America: % naming road-related accidents as top risk, 2023",25,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_northern_america_2025,3,Chart 1.2,"Northern America: % naming road-related accidents as top risk, 2025",33,pct,,chart,N,,
+C1_2_anz_2021,3,Chart 1.2,"Australia and New Zealand: % naming road-related accidents as top risk, 2021",33,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_anz_2023,3,Chart 1.2,"Australia and New Zealand: % naming road-related accidents as top risk, 2023",35,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_anz_2025,3,Chart 1.2,"Australia and New Zealand: % naming road-related accidents as top risk, 2025",33,pct,,chart,N,,
+C1_2_southeastern_asia_2021,3,Chart 1.2,"Southeastern Asia: % naming road-related accidents as top risk, 2021",14,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_southeastern_asia_2023,3,Chart 1.2,"Southeastern Asia: % naming road-related accidents as top risk, 2023",24,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_southeastern_asia_2025,3,Chart 1.2,"Southeastern Asia: % naming road-related accidents as top risk, 2025",22,pct,,chart,N,,
+C1_2_southern_europe_2021,3,Chart 1.2,"Southern Europe: % naming road-related accidents as top risk, 2021",19,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_southern_europe_2023,3,Chart 1.2,"Southern Europe: % naming road-related accidents as top risk, 2023",19,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_southern_europe_2025,3,Chart 1.2,"Southern Europe: % naming road-related accidents as top risk, 2025",20,pct,,chart,N,,
+C1_2_nw_europe_2021,3,Chart 1.2,"Northern/Western Europe: % naming road-related accidents as top risk, 2021",21,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_nw_europe_2023,3,Chart 1.2,"Northern/Western Europe: % naming road-related accidents as top risk, 2023",18,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_nw_europe_2025,3,Chart 1.2,"Northern/Western Europe: % naming road-related accidents as top risk, 2025",19,pct,,chart,N,,
+C1_2_cw_africa_2021,3,Chart 1.2,"Central/Western Africa: % naming road-related accidents as top risk, 2021",17,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_cw_africa_2023,3,Chart 1.2,"Central/Western Africa: % naming road-related accidents as top risk, 2023",16,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_cw_africa_2025,3,Chart 1.2,"Central/Western Africa: % naming road-related accidents as top risk, 2025",17,pct,,chart,N,,
+C1_2_eastern_asia_2021,3,Chart 1.2,"Eastern Asia: % naming road-related accidents as top risk, 2021",25,pct,,chart,N,,Countries surveyed in 2025. China was not asked this question in 2021.
+C1_2_eastern_asia_2023,3,Chart 1.2,"Eastern Asia: % naming road-related accidents as top risk, 2023",11,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_eastern_asia_2025,3,Chart 1.2,"Eastern Asia: % naming road-related accidents as top risk, 2025",15,pct,,chart,N,,
+C1_2_middle_east_2021,3,Chart 1.2,"Middle East: % naming road-related accidents as top risk, 2021",13,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_middle_east_2023,3,Chart 1.2,"Middle East: % naming road-related accidents as top risk, 2023",14,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_middle_east_2025,3,Chart 1.2,"Middle East: % naming road-related accidents as top risk, 2025",15,pct,,chart,N,,
+C1_2_latam_2021,3,Chart 1.2,"Latin America and the Caribbean: % naming road-related accidents as top risk, 2021",10,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_latam_2023,3,Chart 1.2,"Latin America and the Caribbean: % naming road-related accidents as top risk, 2023",10,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_latam_2025,3,Chart 1.2,"Latin America and the Caribbean: % naming road-related accidents as top risk, 2025",12,pct,,chart,N,,
+C1_2_north_africa_2021,3,Chart 1.2,"Northern Africa: % naming road-related accidents as top risk, 2021",6,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_north_africa_2023,3,Chart 1.2,"Northern Africa: % naming road-related accidents as top risk, 2023",9,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_north_africa_2025,3,Chart 1.2,"Northern Africa: % naming road-related accidents as top risk, 2025",11,pct,,chart,N,,
+C1_2_southern_asia_2021,3,Chart 1.2,"Southern Asia: % naming road-related accidents as top risk, 2021",9,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_southern_asia_2023,3,Chart 1.2,"Southern Asia: % naming road-related accidents as top risk, 2023",22,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_southern_asia_2025,3,Chart 1.2,"Southern Asia: % naming road-related accidents as top risk, 2025",9,pct,,chart,N,,
+C1_2_eastern_europe_2021,3,Chart 1.2,"Eastern Europe: % naming road-related accidents as top risk, 2021",13,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_eastern_europe_2023,3,Chart 1.2,"Eastern Europe: % naming road-related accidents as top risk, 2023",8,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_eastern_europe_2025,3,Chart 1.2,"Eastern Europe: % naming road-related accidents as top risk, 2025",9,pct,,chart,N,,
+C1_2_east_africa_2021,3,Chart 1.2,"Eastern Africa: % naming road-related accidents as top risk, 2021",7,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_east_africa_2023,3,Chart 1.2,"Eastern Africa: % naming road-related accidents as top risk, 2023",9,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_east_africa_2025,3,Chart 1.2,"Eastern Africa: % naming road-related accidents as top risk, 2025",8,pct,,chart,N,,
+C1_2_central_asia_2021,3,Chart 1.2,"Central Asia: % naming road-related accidents as top risk, 2021",5,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_central_asia_2023,3,Chart 1.2,"Central Asia: % naming road-related accidents as top risk, 2023",7,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_central_asia_2025,3,Chart 1.2,"Central Asia: % naming road-related accidents as top risk, 2025",8,pct,,chart,N,,
+C1_2_southern_africa_2021,3,Chart 1.2,"Southern Africa: % naming road-related accidents as top risk, 2021",7,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_southern_africa_2023,3,Chart 1.2,"Southern Africa: % naming road-related accidents as top risk, 2023",6,pct,,chart,N,,Countries surveyed in 2025.
+C1_2_southern_africa_2025,3,Chart 1.2,"Southern Africa: % naming road-related accidents as top risk, 2025",6,pct,,chart,N,,
+T1_1_anz_1,4,Table 1.1,"Australia and New Zealand: % naming the top risk, 2025",33,pct,,table,N,,
+T1_1_anz_1_risk,4,Table 1.1,"Australia and New Zealand: top risk to safety, 2025",Road-related accidents,text,,table,N,,
+T1_1_anz_2,4,Table 1.1,"Australia and New Zealand: % naming the second risk, 2025",21,pct,,table,N,,
+T1_1_anz_2_risk,4,Table 1.1,"Australia and New Zealand: second risk to safety, 2025",Crime/violence,text,,table,N,,
+T1_1_anz_3,4,Table 1.1,"Australia and New Zealand: % naming the third risk, 2025",10,pct,,table,N,,
+T1_1_anz_3_risk,4,Table 1.1,"Australia and New Zealand: third risk to safety, 2025",Mental health,text,,table,N,,
+T1_1_central_asia_1,4,Table 1.1,"Central Asia: % naming the top risk, 2025",21,pct,,table,N,,'Don't know' is don't know plus refused. 
+T1_1_central_asia_1_risk,4,Table 1.1,"Central Asia: top risk to safety, 2025",Don't know,text,,table,N,,
+T1_1_central_asia_2,4,Table 1.1,"Central Asia: % naming the second risk, 2025",17,pct,,table,N,,
+T1_1_central_asia_2_risk,4,Table 1.1,"Central Asia: second risk to safety, 2025",Personal health,text,,table,N,,
+T1_1_central_asia_3,4,Table 1.1,"Central Asia: % naming the third risk, 2025",14,pct,,table,N,,
+T1_1_central_asia_3_risk,4,Table 1.1,"Central Asia: third risk to safety, 2025",Nothing,text,,table,N,,
+T1_1_eastern_asia_1,4,Table 1.1,"Eastern Asia: % naming the top risk, 2025",18,pct,,table,N,,
+T1_1_eastern_asia_1_risk,4,Table 1.1,"Eastern Asia: top risk to safety, 2025",Climate change/severe weather,text,,table,N,,Printed as 'Environment - climate change/severe weather' (WP22331 code 19).
+T1_1_eastern_asia_2,4,Table 1.1,"Eastern Asia: % naming the second risk, 2025",15,pct,,table,N,,
+T1_1_eastern_asia_2_risk,4,Table 1.1,"Eastern Asia: second risk to safety, 2025",Road-related accidents,text,,table,N,,
+T1_1_eastern_asia_3,4,Table 1.1,"Eastern Asia: % naming the third risk, 2025",11,pct,,table,N,,
+T1_1_eastern_asia_3_risk,4,Table 1.1,"Eastern Asia: third risk to safety, 2025",Economy,text,,table,N,,
+T1_1_southeastern_asia_1,4,Table 1.1,"Southeastern Asia: % naming the top risk, 2025",22,pct,,table,N,,
+T1_1_southeastern_asia_1_risk,4,Table 1.1,"Southeastern Asia: top risk to safety, 2025",Road-related accidents,text,,table,N,,
+T1_1_southeastern_asia_2,4,Table 1.1,"Southeastern Asia: % naming the second risk, 2025",17,pct,,table,N,,
+T1_1_southeastern_asia_2_risk,4,Table 1.1,"Southeastern Asia: second risk to safety, 2025",Personal health,text,,table,N,,
+T1_1_southeastern_asia_3,4,Table 1.1,"Southeastern Asia: % naming the third risk, 2025",12,pct,,table,N,,'Don't know' is don't know plus refused. 
+T1_1_southeastern_asia_3_risk,4,Table 1.1,"Southeastern Asia: third risk to safety, 2025",Don't know,text,,table,N,,
+T1_1_southern_asia_1,4,Table 1.1,"Southern Asia: % naming the top risk, 2025",32,pct,,table,N,,'Don't know' is don't know plus refused. 
+T1_1_southern_asia_1_risk,4,Table 1.1,"Southern Asia: top risk to safety, 2025",Don't know,text,,table,N,,
+T1_1_southern_asia_2,4,Table 1.1,"Southern Asia: % naming the second risk, 2025",15,pct,,table,N,,
+T1_1_southern_asia_2_risk,4,Table 1.1,"Southern Asia: second risk to safety, 2025",Economy,text,,table,N,,
+T1_1_southern_asia_3,4,Table 1.1,"Southern Asia: % naming the third risk, 2025",9,pct,,table,N,,Tied: value of the first of the tied categories.
+T1_1_southern_asia_3_risk,4,Table 1.1,"Southern Asia: third risk to safety, 2025","Personal health, Road-related accidents",text,,table,N,,Tied categories are listed alphabetically here.
+T1_1_cw_africa_1,4,Table 1.1,"Central/Western Africa: % naming the top risk, 2025",17,pct,,table,N,,
+T1_1_cw_africa_1_risk,4,Table 1.1,"Central/Western Africa: top risk to safety, 2025",Road-related accidents,text,,table,N,,
+T1_1_cw_africa_2,4,Table 1.1,"Central/Western Africa: % naming the second risk, 2025",15,pct,,table,N,,
+T1_1_cw_africa_2_risk,4,Table 1.1,"Central/Western Africa: second risk to safety, 2025",Personal health,text,,table,N,,
+T1_1_cw_africa_3,4,Table 1.1,"Central/Western Africa: % naming the third risk, 2025",12,pct,,table,N,,
+T1_1_cw_africa_3_risk,4,Table 1.1,"Central/Western Africa: third risk to safety, 2025",Crime/violence,text,,table,N,,
+T1_1_east_africa_1,4,Table 1.1,"Eastern Africa: % naming the top risk, 2025",15,pct,,table,N,,
+T1_1_east_africa_1_risk,4,Table 1.1,"Eastern Africa: top risk to safety, 2025",Crime/violence,text,,table,N,,
+T1_1_east_africa_2,4,Table 1.1,"Eastern Africa: % naming the second risk, 2025",14,pct,,table,N,,
+T1_1_east_africa_2_risk,4,Table 1.1,"Eastern Africa: second risk to safety, 2025",Personal health,text,,table,N,,
+T1_1_east_africa_3,4,Table 1.1,"Eastern Africa: % naming the third risk, 2025",11,pct,,table,N,,
+T1_1_east_africa_3_risk,4,Table 1.1,"Eastern Africa: third risk to safety, 2025",Economy,text,,table,N,,
+T1_1_southern_africa_1,4,Table 1.1,"Southern Africa: % naming the top risk, 2025",35,pct,,table,N,,
+T1_1_southern_africa_1_risk,4,Table 1.1,"Southern Africa: top risk to safety, 2025",Crime/violence,text,,table,N,,
+T1_1_southern_africa_2,4,Table 1.1,"Southern Africa: % naming the second risk, 2025",21,pct,,table,N,,'Don't know' is don't know plus refused. 
+T1_1_southern_africa_2_risk,4,Table 1.1,"Southern Africa: second risk to safety, 2025",Don't know,text,,table,N,,
+T1_1_southern_africa_3,4,Table 1.1,"Southern Africa: % naming the third risk, 2025",7,pct,,table,N,,Tied: value of the first of the tied categories.
+T1_1_southern_africa_3_risk,4,Table 1.1,"Southern Africa: third risk to safety, 2025","Nothing, Other",text,,table,N,,Tied categories are listed alphabetically here.
+T1_1_north_africa_1,4,Table 1.1,"Northern Africa: % naming the top risk, 2025",17,pct,,table,N,,
+T1_1_north_africa_1_risk,4,Table 1.1,"Northern Africa: top risk to safety, 2025",Personal health,text,,table,N,,
+T1_1_north_africa_2,4,Table 1.1,"Northern Africa: % naming the second risk, 2025",13,pct,,table,N,,'Don't know' is don't know plus refused. Tied: value of the first of the tied categories.
+T1_1_north_africa_2_risk,4,Table 1.1,"Northern Africa: second risk to safety, 2025","Don't know, Economy",text,,table,N,,Tied categories are listed alphabetically here.
+T1_1_north_africa_3,4,Table 1.1,"Northern Africa: % naming the third risk, 2025",11,pct,,table,N,,Tied: value of the first of the tied categories.
+T1_1_north_africa_3_risk,4,Table 1.1,"Northern Africa: third risk to safety, 2025","Crime/violence, Road-related accidents",text,,table,N,,Tied categories are listed alphabetically here.
+T1_1_middle_east_1,4,Table 1.1,"Middle East: % naming the top risk, 2025",18,pct,,table,N,,'Don't know' is don't know plus refused. 
+T1_1_middle_east_1_risk,4,Table 1.1,"Middle East: top risk to safety, 2025",Don't know,text,,table,N,,
+T1_1_middle_east_2,4,Table 1.1,"Middle East: % naming the second risk, 2025",15,pct,,table,N,,
+T1_1_middle_east_2_risk,4,Table 1.1,"Middle East: second risk to safety, 2025",Road-related accidents,text,,table,N,,
+T1_1_middle_east_3,4,Table 1.1,"Middle East: % naming the third risk, 2025",14,pct,,table,N,,
+T1_1_middle_east_3_risk,4,Table 1.1,"Middle East: third risk to safety, 2025",Nothing,text,,table,N,,
+T1_1_eastern_europe_1,4,Table 1.1,"Eastern Europe: % naming the top risk, 2025",23,pct,,table,N,,
+T1_1_eastern_europe_1_risk,4,Table 1.1,"Eastern Europe: top risk to safety, 2025",War/terrorism,text,,table,N,,
+T1_1_eastern_europe_2,4,Table 1.1,"Eastern Europe: % naming the second risk, 2025",18,pct,,table,N,,'Don't know' is don't know plus refused. 
+T1_1_eastern_europe_2_risk,4,Table 1.1,"Eastern Europe: second risk to safety, 2025",Don't know,text,,table,N,,
+T1_1_eastern_europe_3,4,Table 1.1,"Eastern Europe: % naming the third risk, 2025",12,pct,,table,N,,
+T1_1_eastern_europe_3_risk,4,Table 1.1,"Eastern Europe: third risk to safety, 2025",Personal health,text,,table,N,,
+T1_1_nw_europe_1,4,Table 1.1,"Northern/Western Europe: % naming the top risk, 2025",19,pct,,table,N,,
+T1_1_nw_europe_1_risk,4,Table 1.1,"Northern/Western Europe: top risk to safety, 2025",Road-related accidents,text,,table,N,,
+T1_1_nw_europe_2,4,Table 1.1,"Northern/Western Europe: % naming the second risk, 2025",11,pct,,table,N,,
+T1_1_nw_europe_2_risk,4,Table 1.1,"Northern/Western Europe: second risk to safety, 2025",Crime/violence,text,,table,N,,
+T1_1_nw_europe_3,4,Table 1.1,"Northern/Western Europe: % naming the third risk, 2025",10,pct,,table,N,,
+T1_1_nw_europe_3_risk,4,Table 1.1,"Northern/Western Europe: third risk to safety, 2025",Personal health,text,,table,N,,
+T1_1_southern_europe_1,4,Table 1.1,"Southern Europe: % naming the top risk, 2025",20,pct,,table,N,,
+T1_1_southern_europe_1_risk,4,Table 1.1,"Southern Europe: top risk to safety, 2025",Road-related accidents,text,,table,N,,
+T1_1_southern_europe_2,4,Table 1.1,"Southern Europe: % naming the second risk, 2025",12,pct,,table,N,,Tied: value of the first of the tied categories.
+T1_1_southern_europe_2_risk,4,Table 1.1,"Southern Europe: second risk to safety, 2025","Crime/violence, Personal health",text,,table,N,,Tied categories are listed alphabetically here.
+T1_1_southern_europe_3,4,Table 1.1,"Southern Europe: % naming the third risk, 2025",8,pct,,table,N,,
+T1_1_southern_europe_3_risk,4,Table 1.1,"Southern Europe: third risk to safety, 2025",Economy,text,,table,N,,
+T1_1_latam_1,4,Table 1.1,"Latin America and the Caribbean: % naming the top risk, 2025",35,pct,,table,N,,
+T1_1_latam_1_risk,4,Table 1.1,"Latin America and the Caribbean: top risk to safety, 2025",Crime/violence,text,,table,N,,
+T1_1_latam_2,4,Table 1.1,"Latin America and the Caribbean: % naming the second risk, 2025",24,pct,,table,N,,'Don't know' is don't know plus refused. 
+T1_1_latam_2_risk,4,Table 1.1,"Latin America and the Caribbean: second risk to safety, 2025",Don't know,text,,table,N,,
+T1_1_latam_3,4,Table 1.1,"Latin America and the Caribbean: % naming the third risk, 2025",12,pct,,table,N,,
+T1_1_latam_3_risk,4,Table 1.1,"Latin America and the Caribbean: third risk to safety, 2025",Road-related accidents,text,,table,N,,
+T1_1_northern_america_1,4,Table 1.1,"Northern America: % naming the top risk, 2025",33,pct,,table,N,,
+T1_1_northern_america_1_risk,4,Table 1.1,"Northern America: top risk to safety, 2025",Road-related accidents,text,,table,N,,
+T1_1_northern_america_2,4,Table 1.1,"Northern America: % naming the second risk, 2025",19,pct,,table,N,,
+T1_1_northern_america_2_risk,4,Table 1.1,"Northern America: second risk to safety, 2025",Crime/violence,text,,table,N,,
+T1_1_northern_america_3,4,Table 1.1,"Northern America: % naming the third risk, 2025",9,pct,,table,N,,
+T1_1_northern_america_3_risk,4,Table 1.1,"Northern America: third risk to safety, 2025",Politics,text,,table,N,,
+X50,5,Chapter 1,Global: change 2023 to 2025 in % naming crime and violence ('down three points'),-3,pct,,text,N,,Difference of rounded figures (10 - 13).
+X51,5,Chapter 1,"Latin America and the Caribbean: % naming crime and violence as top risk, 2025",35,pct,,text,N,,
+X52,5,Chapter 1,"Latin America and the Caribbean: % naming crime and violence as top risk, 2023",47,pct,,text,N,,Countries surveyed in 2025.
+X53,5,Chart 1.3 subtitle,Latin America and the Caribbean: fall 2023 to 2025 in % naming crime and violence ('falls 12 points'),-12,pct,,text,N,,
+C1_3_latam_2021,5,Chart 1.3,"Latin America and the Caribbean: % naming crime and violence as top risk, 2021",44,pct,,chart,N,,Countries surveyed in 2025.
+C1_3_latam_2023,5,Chart 1.3,"Latin America and the Caribbean: % naming crime and violence as top risk, 2023",47,pct,,chart,N,,Countries surveyed in 2025.
+C1_3_latam_2025,5,Chart 1.3,"Latin America and the Caribbean: % naming crime and violence as top risk, 2025",35,pct,,chart,N,,
+C1_3_global_2021,5,Chart 1.3,"Global: % naming crime and violence as top risk, 2021",12,pct,,chart,N,,Countries surveyed in 2025.
+C1_3_global_2023,5,Chart 1.3,"Global: % naming crime and violence as top risk, 2023",13,pct,,chart,N,,Countries surveyed in 2025.
+C1_3_global_2025,5,Chart 1.3,"Global: % naming crime and violence as top risk, 2025",10,pct,,chart,N,,
+T1_2_BWA_2023,5,Table 1.2,"Botswana: % naming crime and violence as top risk, 2023",49,pct,,table,N,,
+T1_2_BWA_2025,5,Table 1.2,"Botswana: % naming crime and violence as top risk, 2025",20,pct,,table,N,,
+T1_2_BWA_gap,5,Table 1.2,Botswana: percentage-point decline 2023 to 2025,29,pct,,table,N,,"Difference of the rounded 2023 and 2025 figures, as printed."
+T1_2_DOM_2023,5,Table 1.2,"Dominican Republic: % naming crime and violence as top risk, 2023",46,pct,,table,N,,
+T1_2_DOM_2025,5,Table 1.2,"Dominican Republic: % naming crime and violence as top risk, 2025",22,pct,,table,N,,
+T1_2_DOM_gap,5,Table 1.2,Dominican Republic: percentage-point decline 2023 to 2025,24,pct,,table,N,,"Difference of the rounded 2023 and 2025 figures, as printed."
+T1_2_VEN_2023,5,Table 1.2,"Venezuela: % naming crime and violence as top risk, 2023",42,pct,,table,N,,
+T1_2_VEN_2025,5,Table 1.2,"Venezuela: % naming crime and violence as top risk, 2025",20,pct,,table,N,,
+T1_2_VEN_gap,5,Table 1.2,Venezuela: percentage-point decline 2023 to 2025,22,pct,,table,N,,"Difference of the rounded 2023 and 2025 figures, as printed."
+T1_2_BFA_2023,5,Table 1.2,"Burkina Faso: % naming crime and violence as top risk, 2023",20,pct,,table,N,,
+T1_2_BFA_2025,5,Table 1.2,"Burkina Faso: % naming crime and violence as top risk, 2025",5,pct,,table,N,,
+T1_2_BFA_gap,5,Table 1.2,Burkina Faso: percentage-point decline 2023 to 2025,15,pct,,table,N,,"Difference of the rounded 2023 and 2025 figures, as printed."
+T1_2_ARG_2023,5,Table 1.2,"Argentina: % naming crime and violence as top risk, 2023",50,pct,,table,N,,
+T1_2_ARG_2025,5,Table 1.2,"Argentina: % naming crime and violence as top risk, 2025",35,pct,,table,N,,
+T1_2_ARG_gap,5,Table 1.2,Argentina: percentage-point decline 2023 to 2025,15,pct,,table,N,,"Difference of the rounded 2023 and 2025 figures, as printed."
+T1_2_BRA_2023,5,Table 1.2,"Brazil: % naming crime and violence as top risk, 2023",46,pct,,table,N,,
+T1_2_BRA_2025,5,Table 1.2,"Brazil: % naming crime and violence as top risk, 2025",32,pct,,table,N,,
+T1_2_BRA_gap,5,Table 1.2,Brazil: percentage-point decline 2023 to 2025,14,pct,,table,N,,"Difference of the rounded 2023 and 2025 figures, as printed."
+T1_2_HND_2023,5,Table 1.2,"Honduras: % naming crime and violence as top risk, 2023",35,pct,,table,N,,
+T1_2_HND_2025,5,Table 1.2,"Honduras: % naming crime and violence as top risk, 2025",21,pct,,table,N,,
+T1_2_HND_gap,5,Table 1.2,Honduras: percentage-point decline 2023 to 2025,14,pct,,table,N,,"Difference of the rounded 2023 and 2025 figures, as printed."
+T1_2_GTM_2023,5,Table 1.2,"Guatemala: % naming crime and violence as top risk, 2023",34,pct,,table,N,,
+T1_2_GTM_2025,5,Table 1.2,"Guatemala: % naming crime and violence as top risk, 2025",21,pct,,table,N,,
+T1_2_GTM_gap,5,Table 1.2,Guatemala: percentage-point decline 2023 to 2025,13,pct,,table,N,,"Difference of the rounded 2023 and 2025 figures, as printed."
+T1_2_FRA_2023,5,Table 1.2,"France: % naming crime and violence as top risk, 2023",27,pct,,table,N,,
+T1_2_FRA_2025,5,Table 1.2,"France: % naming crime and violence as top risk, 2025",15,pct,,table,N,,
+T1_2_FRA_gap,5,Table 1.2,France: percentage-point decline 2023 to 2025,12,pct,,table,N,,"Difference of the rounded 2023 and 2025 figures, as printed."
+T1_2_KOR_2023,5,Table 1.2,"South Korea: % naming crime and violence as top risk, 2023",20,pct,,table,N,,
+T1_2_KOR_2025,5,Table 1.2,"South Korea: % naming crime and violence as top risk, 2025",8,pct,,table,N,,
+T1_2_KOR_gap,5,Table 1.2,South Korea: percentage-point decline 2023 to 2025,12,pct,,table,N,,"Difference of the rounded 2023 and 2025 figures, as printed."
+T1_2_BOL_2023,5,Table 1.2,"Bolivia: % naming crime and violence as top risk, 2023",36,pct,,table,N,,
+T1_2_BOL_2025,5,Table 1.2,"Bolivia: % naming crime and violence as top risk, 2025",24,pct,,table,N,,
+T1_2_BOL_gap,5,Table 1.2,Bolivia: percentage-point decline 2023 to 2025,12,pct,,table,N,,"Difference of the rounded 2023 and 2025 figures, as printed."
+T1_2_ECU_2023,5,Table 1.2,"Ecuador: % naming crime and violence as top risk, 2023",72,pct,,table,N,,
+T1_2_ECU_2025,5,Table 1.2,"Ecuador: % naming crime and violence as top risk, 2025",60,pct,,table,N,,
+T1_2_ECU_gap,5,Table 1.2,Ecuador: percentage-point decline 2023 to 2025,12,pct,,table,N,,"Difference of the rounded 2023 and 2025 figures, as printed."
+T1_2_GIN_2023,5,Table 1.2,"Guinea: % naming crime and violence as top risk, 2023",23,pct,,table,N,,
+T1_2_GIN_2025,5,Table 1.2,"Guinea: % naming crime and violence as top risk, 2025",11,pct,,table,N,,
+T1_2_GIN_gap,5,Table 1.2,Guinea: percentage-point decline 2023 to 2025,12,pct,,table,N,,"Difference of the rounded 2023 and 2025 figures, as printed."
+T1_2_countries,5,Table 1.2,"The 13 countries with the largest declines 2023-2025 (ISO3, alphabetical)",ARG BFA BOL BRA BWA DOM ECU FRA GIN GTM HND KOR VEN,text,,table,N,,
+X54,5,Table 1.2 subtitle,"Of the 13 largest national declines, number in Latin America and the Caribbean",8,count,0,text,N,,
+X55,5,Chapter 1,"Of the 10 countries with the highest % naming crime and violence in 2025, number in Latin America and the Caribbean",7,count,0,text,N,,
+X56,5,Chapter 1 (footnote vii),"Of the 10 countries with the highest % naming crime and violence in 2023, number in Latin America and the Caribbean",8,count,0,text,N,,
+X57_ECU,5,Chapter 1,"Ecuador: % naming crime and violence as top risk, 2025",60,pct,,text,N,,
+X57_CHL,5,Chapter 1,"Chile: % naming crime and violence as top risk, 2025",47,pct,,text,N,,
+X57_CRI,5,Chapter 1,"Costa Rica: % naming crime and violence as top risk, 2025",44,pct,,text,N,,
+X57_MEX,5,Chapter 1,"Mexico: % naming crime and violence as top risk, 2025",43,pct,,text,N,,
+X57_PER,5,Chapter 1,"Peru: % naming crime and violence as top risk, 2025",38,pct,,text,N,,
+X57_COL,5,Chapter 1,"Colombia: % naming crime and violence as top risk, 2025",37,pct,,text,N,,
+X57_ARG,5,Chapter 1,"Argentina: % naming crime and violence as top risk, 2025",35,pct,,text,N,,
+C1_4_low_road_thriving,6,Chart 1.4,"Low-income countries, thriving: % naming road-related accidents as top risk",13,pct,,chart,Y,WP16; WP18,
+C1_4_low_road_struggling,6,Chart 1.4,"Low-income countries, struggling: % naming road-related accidents as top risk",13,pct,,chart,Y,WP16; WP18,
+C1_4_low_road_suffering,6,Chart 1.4,"Low-income countries, suffering: % naming road-related accidents as top risk",9,pct,,chart,Y,WP16; WP18,
+C1_4_low_health_thriving,6,Chart 1.4,"Low-income countries, thriving: % naming personal health as top risk",14,pct,,chart,Y,WP16; WP18,
+C1_4_low_health_struggling,6,Chart 1.4,"Low-income countries, struggling: % naming personal health as top risk",14,pct,,chart,Y,WP16; WP18,
+C1_4_low_health_suffering,6,Chart 1.4,"Low-income countries, suffering: % naming personal health as top risk",14,pct,,chart,Y,WP16; WP18,
+C1_4_low_economy_thriving,6,Chart 1.4,"Low-income countries, thriving: % naming economy or financial as top risk",13,pct,,chart,Y,WP16; WP18,"Economy = economy plus financial (WP22331 codes 9, 10)."
+C1_4_low_economy_struggling,6,Chart 1.4,"Low-income countries, struggling: % naming economy or financial as top risk",16,pct,,chart,Y,WP16; WP18,"Economy = economy plus financial (WP22331 codes 9, 10)."
+C1_4_low_economy_suffering,6,Chart 1.4,"Low-income countries, suffering: % naming economy or financial as top risk",14,pct,,chart,Y,WP16; WP18,"Economy = economy plus financial (WP22331 codes 9, 10)."
+C1_4_lower_middle_road_thriving,6,Chart 1.4,"Lower-middle-income countries, thriving: % naming road-related accidents as top risk",15,pct,,chart,Y,WP16; WP18,
+C1_4_lower_middle_road_struggling,6,Chart 1.4,"Lower-middle-income countries, struggling: % naming road-related accidents as top risk",11,pct,,chart,Y,WP16; WP18,
+C1_4_lower_middle_road_suffering,6,Chart 1.4,"Lower-middle-income countries, suffering: % naming road-related accidents as top risk",9,pct,,chart,Y,WP16; WP18,
+C1_4_lower_middle_health_thriving,6,Chart 1.4,"Lower-middle-income countries, thriving: % naming personal health as top risk",11,pct,,chart,Y,WP16; WP18,
+C1_4_lower_middle_health_struggling,6,Chart 1.4,"Lower-middle-income countries, struggling: % naming personal health as top risk",13,pct,,chart,Y,WP16; WP18,
+C1_4_lower_middle_health_suffering,6,Chart 1.4,"Lower-middle-income countries, suffering: % naming personal health as top risk",12,pct,,chart,Y,WP16; WP18,
+C1_4_lower_middle_economy_thriving,6,Chart 1.4,"Lower-middle-income countries, thriving: % naming economy or financial as top risk",13,pct,,chart,Y,WP16; WP18,"Economy = economy plus financial (WP22331 codes 9, 10)."
+C1_4_lower_middle_economy_struggling,6,Chart 1.4,"Lower-middle-income countries, struggling: % naming economy or financial as top risk",18,pct,,chart,Y,WP16; WP18,"Economy = economy plus financial (WP22331 codes 9, 10)."
+C1_4_lower_middle_economy_suffering,6,Chart 1.4,"Lower-middle-income countries, suffering: % naming economy or financial as top risk",27,pct,,chart,Y,WP16; WP18,"Economy = economy plus financial (WP22331 codes 9, 10)."
+C1_4_upper_middle_road_thriving,6,Chart 1.4,"Upper-middle-income countries, thriving: % naming road-related accidents as top risk",15,pct,,chart,Y,WP16; WP18,
+C1_4_upper_middle_road_struggling,6,Chart 1.4,"Upper-middle-income countries, struggling: % naming road-related accidents as top risk",14,pct,,chart,Y,WP16; WP18,
+C1_4_upper_middle_road_suffering,6,Chart 1.4,"Upper-middle-income countries, suffering: % naming road-related accidents as top risk",9,pct,,chart,Y,WP16; WP18,
+C1_4_upper_middle_health_thriving,6,Chart 1.4,"Upper-middle-income countries, thriving: % naming personal health as top risk",7,pct,,chart,Y,WP16; WP18,
+C1_4_upper_middle_health_struggling,6,Chart 1.4,"Upper-middle-income countries, struggling: % naming personal health as top risk",11,pct,,chart,Y,WP16; WP18,
+C1_4_upper_middle_health_suffering,6,Chart 1.4,"Upper-middle-income countries, suffering: % naming personal health as top risk",11,pct,,chart,Y,WP16; WP18,
+C1_4_upper_middle_economy_thriving,6,Chart 1.4,"Upper-middle-income countries, thriving: % naming economy or financial as top risk",9,pct,,chart,Y,WP16; WP18,"Economy = economy plus financial (WP22331 codes 9, 10)."
+C1_4_upper_middle_economy_struggling,6,Chart 1.4,"Upper-middle-income countries, struggling: % naming economy or financial as top risk",14,pct,,chart,Y,WP16; WP18,"Economy = economy plus financial (WP22331 codes 9, 10)."
+C1_4_upper_middle_economy_suffering,6,Chart 1.4,"Upper-middle-income countries, suffering: % naming economy or financial as top risk",16,pct,,chart,Y,WP16; WP18,"Economy = economy plus financial (WP22331 codes 9, 10)."
+C1_4_high_road_thriving,6,Chart 1.4,"High-income countries, thriving: % naming road-related accidents as top risk",27,pct,,chart,Y,WP16; WP18,
+C1_4_high_road_struggling,6,Chart 1.4,"High-income countries, struggling: % naming road-related accidents as top risk",22,pct,,chart,Y,WP16; WP18,
+C1_4_high_road_suffering,6,Chart 1.4,"High-income countries, suffering: % naming road-related accidents as top risk",16,pct,,chart,Y,WP16; WP18,
+C1_4_high_health_thriving,6,Chart 1.4,"High-income countries, thriving: % naming personal health as top risk",9,pct,,chart,Y,WP16; WP18,
+C1_4_high_health_struggling,6,Chart 1.4,"High-income countries, struggling: % naming personal health as top risk",10,pct,,chart,Y,WP16; WP18,
+C1_4_high_health_suffering,6,Chart 1.4,"High-income countries, suffering: % naming personal health as top risk",10,pct,,chart,Y,WP16; WP18,
+C1_4_high_economy_thriving,6,Chart 1.4,"High-income countries, thriving: % naming economy or financial as top risk",7,pct,,chart,Y,WP16; WP18,"Economy = economy plus financial (WP22331 codes 9, 10)."
+C1_4_high_economy_struggling,6,Chart 1.4,"High-income countries, struggling: % naming economy or financial as top risk",9,pct,,chart,Y,WP16; WP18,"Economy = economy plus financial (WP22331 codes 9, 10)."
+C1_4_high_economy_suffering,6,Chart 1.4,"High-income countries, suffering: % naming economy or financial as top risk",11,pct,,chart,Y,WP16; WP18,"Economy = economy plus financial (WP22331 codes 9, 10)."
+X58,7,Chapter 1 (footnote viii),"Lower-middle-income countries, suffering: % naming the economy or personal finances as top risk",27,pct,,text,Y,WP16; WP18,Same figure as Chart 1.4.
+X59,"8, 11",Chapter 2,"Of the 10 everyday risks, number that at least half of adults are very or somewhat worried about ('more than half ... worried about all 10 risks')",10,count,0,text,N,,
+X60,9,Chapter 2,"Current employees: % very or somewhat worried about harm from the work they do, 2025",51,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T2_1_anz_max_risk,10,Table 2.1,Australia and New Zealand: risk with the biggest worry-to-experience ratio,Water you drink,text,,table,N,,
+T2_1_anz_max,10,Table 2.1,Australia and New Zealand: biggest worry-to-experience ratio,17.6,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_anz_min_risk,10,Table 2.1,Australia and New Zealand: risk with the smallest worry-to-experience ratio,Mental health issues,text,,table,N,,
+T2_1_anz_min,10,Table 2.1,Australia and New Zealand: smallest worry-to-experience ratio,2.4,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_central_asia_max_risk,10,Table 2.1,Central Asia: risk with the biggest worry-to-experience ratio,Violent crime,text,,table,N,,
+T2_1_central_asia_max,10,Table 2.1,Central Asia: biggest worry-to-experience ratio,38.3,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_central_asia_min_risk,10,Table 2.1,Central Asia: risk with the smallest worry-to-experience ratio,Work you do,text,,table,N,,
+T2_1_central_asia_min,10,Table 2.1,Central Asia: smallest worry-to-experience ratio,7.3,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_eastern_asia_max_risk,10,Table 2.1,Eastern Asia: risk with the biggest worry-to-experience ratio,Violent crime,text,,table,N,,
+T2_1_eastern_asia_max,10,Table 2.1,Eastern Asia: biggest worry-to-experience ratio,4.0,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_eastern_asia_min_risk,10,Table 2.1,Eastern Asia: risk with the smallest worry-to-experience ratio,Work you do,text,,table,N,,
+T2_1_eastern_asia_min,10,Table 2.1,Eastern Asia: smallest worry-to-experience ratio,2.2,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_southeastern_asia_max_risk,10,Table 2.1,Southeastern Asia: risk with the biggest worry-to-experience ratio,Violent crime,text,,table,N,,
+T2_1_southeastern_asia_max,10,Table 2.1,Southeastern Asia: biggest worry-to-experience ratio,17.5,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_southeastern_asia_min_risk,10,Table 2.1,Southeastern Asia: risk with the smallest worry-to-experience ratio,Severe prolonged weather events,text,,table,N,,
+T2_1_southeastern_asia_min,10,Table 2.1,Southeastern Asia: smallest worry-to-experience ratio,3.7,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_southern_asia_max_risk,10,Table 2.1,Southern Asia: risk with the biggest worry-to-experience ratio,Wildfires,text,,table,N,,
+T2_1_southern_asia_max,10,Table 2.1,Southern Asia: biggest worry-to-experience ratio,4.8,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_southern_asia_min_risk,10,Table 2.1,Southern Asia: risk with the smallest worry-to-experience ratio,Water you drink,text,,table,N,,
+T2_1_southern_asia_min,10,Table 2.1,Southern Asia: smallest worry-to-experience ratio,2.7,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_cw_africa_max_risk,10,Table 2.1,Central/Western Africa: risk with the biggest worry-to-experience ratio,Mental health issues,text,,table,N,,
+T2_1_cw_africa_max,10,Table 2.1,Central/Western Africa: biggest worry-to-experience ratio,8.2,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_cw_africa_min_risk,10,Table 2.1,Central/Western Africa: risk with the smallest worry-to-experience ratio,Work you do,text,,table,N,,
+T2_1_cw_africa_min,10,Table 2.1,Central/Western Africa: smallest worry-to-experience ratio,3.4,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_east_africa_max_risk,10,Table 2.1,Eastern Africa: risk with the biggest worry-to-experience ratio,Wildfires,text,,table,N,,
+T2_1_east_africa_max,10,Table 2.1,Eastern Africa: biggest worry-to-experience ratio,9.2,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_east_africa_min_risk,10,Table 2.1,Eastern Africa: risk with the smallest worry-to-experience ratio,Severe prolonged weather events,text,,table,N,,
+T2_1_east_africa_min,10,Table 2.1,Eastern Africa: smallest worry-to-experience ratio,3.9,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_southern_africa_max_risk,10,Table 2.1,Southern Africa: risk with the biggest worry-to-experience ratio,Wildfires,text,,table,N,,
+T2_1_southern_africa_max,10,Table 2.1,Southern Africa: biggest worry-to-experience ratio,11.4,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_southern_africa_min_risk,10,Table 2.1,Southern Africa: risk with the smallest worry-to-experience ratio,Work you do,text,,table,N,,
+T2_1_southern_africa_min,10,Table 2.1,Southern Africa: smallest worry-to-experience ratio,4.2,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_north_africa_max_risk,10,Table 2.1,Northern Africa: risk with the biggest worry-to-experience ratio,Wildfires,text,,table,N,,
+T2_1_north_africa_max,10,Table 2.1,Northern Africa: biggest worry-to-experience ratio,20.8,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_north_africa_min_risk,10,Table 2.1,Northern Africa: risk with the smallest worry-to-experience ratio,Food you eat,text,,table,N,,
+T2_1_north_africa_min,10,Table 2.1,Northern Africa: smallest worry-to-experience ratio,4.3,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_middle_east_max_risk,10,Table 2.1,Middle East: risk with the biggest worry-to-experience ratio,Violent crime,text,,table,N,,
+T2_1_middle_east_max,10,Table 2.1,Middle East: biggest worry-to-experience ratio,21.2,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_middle_east_min_risk,10,Table 2.1,Middle East: risk with the smallest worry-to-experience ratio,Work you do,text,,table,N,,
+T2_1_middle_east_min,10,Table 2.1,Middle East: smallest worry-to-experience ratio,5.5,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_eastern_europe_max_risk,10,Table 2.1,Eastern Europe: risk with the biggest worry-to-experience ratio,Wildfires,text,,table,N,,
+T2_1_eastern_europe_max,10,Table 2.1,Eastern Europe: biggest worry-to-experience ratio,27.8,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_eastern_europe_min_risk,10,Table 2.1,Eastern Europe: risk with the smallest worry-to-experience ratio,Severe prolonged weather events,text,,table,N,,
+T2_1_eastern_europe_min,10,Table 2.1,Eastern Europe: smallest worry-to-experience ratio,5.9,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_nw_europe_max_risk,10,Table 2.1,Northern/Western Europe: risk with the biggest worry-to-experience ratio,Violent crime,text,,table,N,,
+T2_1_nw_europe_max,10,Table 2.1,Northern/Western Europe: biggest worry-to-experience ratio,17.0,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_nw_europe_min_risk,10,Table 2.1,Northern/Western Europe: risk with the smallest worry-to-experience ratio,Work you do,text,,table,N,,
+T2_1_nw_europe_min,10,Table 2.1,Northern/Western Europe: smallest worry-to-experience ratio,2.8,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_southern_europe_max_risk,10,Table 2.1,Southern Europe: risk with the biggest worry-to-experience ratio,Violent crime,text,,table,N,,
+T2_1_southern_europe_max,10,Table 2.1,Southern Europe: biggest worry-to-experience ratio,19.5,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_southern_europe_min_risk,10,Table 2.1,Southern Europe: risk with the smallest worry-to-experience ratio,Severe prolonged weather events,text,,table,N,,
+T2_1_southern_europe_min,10,Table 2.1,Southern Europe: smallest worry-to-experience ratio,4.2,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_latam_max_risk,10,Table 2.1,Latin America and the Caribbean: risk with the biggest worry-to-experience ratio,Violent crime,text,,table,N,,
+T2_1_latam_max,10,Table 2.1,Latin America and the Caribbean: biggest worry-to-experience ratio,19.1,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_latam_min_risk,10,Table 2.1,Latin America and the Caribbean: risk with the smallest worry-to-experience ratio,Severe prolonged weather events,text,,table,N,,
+T2_1_latam_min,10,Table 2.1,Latin America and the Caribbean: smallest worry-to-experience ratio,5.4,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_northern_america_max_risk,10,Table 2.1,Northern America: risk with the biggest worry-to-experience ratio,Water you drink,text,,table,N,,
+T2_1_northern_america_max,10,Table 2.1,Northern America: biggest worry-to-experience ratio,32.8,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+T2_1_northern_america_min_risk,10,Table 2.1,Northern America: risk with the smallest worry-to-experience ratio,Mental health issues,text,,table,N,,
+T2_1_northern_america_min,10,Table 2.1,Northern America: smallest worry-to-experience ratio,3.5,ratio,0.1,table,N,,"Ratio of % very or somewhat worried to % personally experienced (personally or both), unrounded; work: worry among current employees, experience among the workforce."
+X61,10,Chapter 2,Regions where wildfires have the biggest worry-to-experience ratio ('five regions'),5,count,0,text,N,,
+X62,11,Chapter 2,"Largest absolute change 2023 to 2025 in % worried among traffic accidents, violent crime, food and work ('within one percentage point')",1,pp,0.5,text,N,,Unrounded; the text says each is within one point. Countries surveyed in 2025.
+X63,11,Chapter 2,Change 2023 to 2025 in % worried about severe weather events ('dropped by three points'),-3,pct,,text,N,,Difference of the figures in Chart 2.2.
+X64,11,Chapter 2,Change 2023 to 2025 in % worried about drinking water ('rose by four points'),4,pct,,text,N,,Difference of the figures in Chart 2.2.
+X65,"11, 26","Chapters 2, 4","Adults: % very or somewhat worried about severe prolonged weather events, 2025 ('seven in 10')",71,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X66,11,Chapter 2,Rank of severe prolonged weather events among the 10 risks by % worried ('second only to traffic accidents'),2,rank,0,text,N,,
+X67,"11, 26","Chapters 2, 4","Adults: % very or somewhat worried about wildfires, 2025",56,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X68,"11, 26","Chapters 2, 4","Adults: % very or somewhat worried about the air they breathe, 2025",52,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X69,26,Chapter 4,"Adults: % very or somewhat worried about severe weather events, 2025",68,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C2_2_traffic_2021,11,Chart 2.2,"% very or somewhat worried about traffic/roadside accidents, 2021",71,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Countries surveyed in 2025."
+C2_2_traffic_2023,11,Chart 2.2,"% very or somewhat worried about traffic/roadside accidents, 2023",76,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Countries surveyed in 2025."
+C2_2_traffic_2025,11,Chart 2.2,"% very or somewhat worried about traffic/roadside accidents, 2025",77,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C2_2_severe_weather_2019,11,Chart 2.2,"% very or somewhat worried about severe weather events, 2019",68,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Countries surveyed in 2025."
+C2_2_severe_weather_2021,11,Chart 2.2,"% very or somewhat worried about severe weather events, 2021",66,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Countries surveyed in 2025."
+C2_2_severe_weather_2023,11,Chart 2.2,"% very or somewhat worried about severe weather events, 2023",71,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Countries surveyed in 2025."
+C2_2_severe_weather_2025,11,Chart 2.2,"% very or somewhat worried about severe weather events, 2025",68,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C2_2_crime_2019,11,Chart 2.2,"% very or somewhat worried about violent crime, 2019",63,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Countries surveyed in 2025."
+C2_2_crime_2021,11,Chart 2.2,"% very or somewhat worried about violent crime, 2021",58,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Countries surveyed in 2025."
+C2_2_crime_2023,11,Chart 2.2,"% very or somewhat worried about violent crime, 2023",65,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Countries surveyed in 2025."
+C2_2_crime_2025,11,Chart 2.2,"% very or somewhat worried about violent crime, 2025",65,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C2_2_food_2019,11,Chart 2.2,"% very or somewhat worried about food you eat, 2019",61,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Countries surveyed in 2025."
+C2_2_food_2021,11,Chart 2.2,"% very or somewhat worried about food you eat, 2021",56,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Countries surveyed in 2025."
+C2_2_food_2023,11,Chart 2.2,"% very or somewhat worried about food you eat, 2023",59,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Countries surveyed in 2025."
+C2_2_food_2025,11,Chart 2.2,"% very or somewhat worried about food you eat, 2025",60,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C2_2_mental_health_2019,11,Chart 2.2,"% very or somewhat worried about mental health issues, 2019",48,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Countries surveyed in 2025."
+C2_2_mental_health_2021,11,Chart 2.2,"% very or somewhat worried about mental health issues, 2021",53,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Countries surveyed in 2025."
+C2_2_mental_health_2023,11,Chart 2.2,"% very or somewhat worried about mental health issues, 2023",56,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Countries surveyed in 2025."
+C2_2_mental_health_2025,11,Chart 2.2,"% very or somewhat worried about mental health issues, 2025",54,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C2_2_work_2021,11,Chart 2.2,"% very or somewhat worried about work you do, 2021",48,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Countries surveyed in 2025. Current employees only."
+C2_2_work_2023,11,Chart 2.2,"% very or somewhat worried about work you do, 2023",51,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Countries surveyed in 2025. Current employees only."
+C2_2_work_2025,11,Chart 2.2,"% very or somewhat worried about work you do, 2025",51,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README) Current employees only."
+C2_2_water_2019,11,Chart 2.2,"% very or somewhat worried about water you drink, 2019",51,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Countries surveyed in 2025."
+C2_2_water_2021,11,Chart 2.2,"% very or somewhat worried about water you drink, 2021",44,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Countries surveyed in 2025."
+C2_2_water_2023,11,Chart 2.2,"% very or somewhat worried about water you drink, 2023",49,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Countries surveyed in 2025."
+C2_2_water_2025,11,Chart 2.2,"% very or somewhat worried about water you drink, 2025",52,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C2_2_prolonged_weather_2025,11,Chart 2.2,"% very or somewhat worried about severe prolonged weather events, 2025",71,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C2_2_wildfires_2025,11,Chart 2.2,"% very or somewhat worried about wildfires, 2025",56,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C2_2_air_2025,11,Chart 2.2,"% very or somewhat worried about the air you breathe, 2025",52,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X70,12,Chapter 2,"Adults: % personally experienced harm from severe weather events, 2023",19,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Countries surveyed in 2025."
+X71,12,Chapter 2,"Adults: % personally experienced harm from severe weather events, 2021",15,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Countries surveyed in 2025."
+X72,12,Chapter 2,"Adults: % personally experienced harm from traffic/roadside accidents, 2025",15,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X73,12,Chapter 2,"Adults: % personally experienced harm from violent crime, 2025",10,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C2_3_traffic_2021,12,Chart 2.3,"% personally experienced harm from traffic/roadside accidents, 2021",13,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Countries surveyed in 2025."
+C2_3_traffic_2023,12,Chart 2.3,"% personally experienced harm from traffic/roadside accidents, 2023",15,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Countries surveyed in 2025."
+C2_3_traffic_2025,12,Chart 2.3,"% personally experienced harm from traffic/roadside accidents, 2025",15,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C2_3_severe_weather_2021,12,Chart 2.3,"% personally experienced harm from severe weather events, 2021",15,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Countries surveyed in 2025."
+C2_3_severe_weather_2023,12,Chart 2.3,"% personally experienced harm from severe weather events, 2023",19,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Countries surveyed in 2025."
+C2_3_severe_weather_2025,12,Chart 2.3,"% personally experienced harm from severe weather events, 2025",17,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C2_3_crime_2021,12,Chart 2.3,"% personally experienced harm from violent crime, 2021",7,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Countries surveyed in 2025."
+C2_3_crime_2023,12,Chart 2.3,"% personally experienced harm from violent crime, 2023",8,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Countries surveyed in 2025."
+C2_3_crime_2025,12,Chart 2.3,"% personally experienced harm from violent crime, 2025",10,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C2_3_food_2021,12,Chart 2.3,"% personally experienced harm from food you eat, 2021",10,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Countries surveyed in 2025."
+C2_3_food_2023,12,Chart 2.3,"% personally experienced harm from food you eat, 2023",11,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Countries surveyed in 2025."
+C2_3_food_2025,12,Chart 2.3,"% personally experienced harm from food you eat, 2025",14,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C2_3_mental_health_2021,12,Chart 2.3,"% personally experienced harm from mental health issues, 2021",11,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Countries surveyed in 2025."
+C2_3_mental_health_2023,12,Chart 2.3,"% personally experienced harm from mental health issues, 2023",12,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Countries surveyed in 2025."
+C2_3_mental_health_2025,12,Chart 2.3,"% personally experienced harm from mental health issues, 2025",12,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C2_3_work_2021,12,Chart 2.3,"% personally experienced harm from work you do, 2021",19,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Countries surveyed in 2025. Current workforce (employed or unemployed)."
+C2_3_work_2023,12,Chart 2.3,"% personally experienced harm from work you do, 2023",18,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Countries surveyed in 2025. Current workforce (employed or unemployed)."
+C2_3_work_2025,12,Chart 2.3,"% personally experienced harm from work you do, 2025",16,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README) Current workforce (employed or unemployed)."
+C2_3_water_2021,12,Chart 2.3,"% personally experienced harm from water you drink, 2021",9,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Countries surveyed in 2025."
+C2_3_water_2023,12,Chart 2.3,"% personally experienced harm from water you drink, 2023",10,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Countries surveyed in 2025."
+C2_3_water_2025,12,Chart 2.3,"% personally experienced harm from water you drink, 2025",13,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C2_3_prolonged_weather_2025,12,Chart 2.3,"% personally experienced harm from severe prolonged weather events, 2025",19,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C2_3_wildfires_2025,12,Chart 2.3,"% personally experienced harm from wildfires, 2025",8,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C2_3_air_2025,12,Chart 2.3,"% personally experienced harm from the air you breathe, 2025",12,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X74,13,Chapter 2,Countries with an Experience of Harm Index score of 20 or above ('six countries'),6,count,0,text,N,,"Experience of Harm Index: per respondent, share of the 10 harm items answered 'personally' or 'both' (0-100), among respondents with no don't know/refused answer on the 10 items."
+X75,13,Chapter 2,Lowest Experience of Harm Index score among those six countries ('at least 20 or above'),20,index,0.5,text,N,,"Experience of Harm Index: per respondent, share of the 10 harm items answered 'personally' or 'both' (0-100), among respondents with no don't know/refused answer on the 10 items. India is the lowest of the six."
+X76,13,Chapter 2,Global average Experience of Harm Index ('nine'),9,index,,text,N,,"Experience of Harm Index: per respondent, share of the 10 harm items answered 'personally' or 'both' (0-100), among respondents with no don't know/refused answer on the 10 items. Weighted with WGT (see README)."
+C2_5_CHN_severe_weather,14,Chart 2.5,China: % personally harmed by severe weather events,33,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C2_5_CHN_work,14,Chart 2.5,China: % of the workforce personally harmed at work,30,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Work among the current workforce."
+C2_5_IND_min,14,Chart 2.5,India: lowest % personally harmed across the 10 risks ('within 10-24%'),10,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C2_5_IND_max,14,Chart 2.5,India: highest % personally harmed across the 10 risks ('within 10-24%'),24,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C2_5_PHL_severe_weather,14,Chart 2.5,Philippines: % personally harmed by severe weather events,62,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C2_5_PHL_prolonged_weather,14,Chart 2.5,Philippines: % personally harmed by severe prolonged weather events,62,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C2_5_TCD_severe_weather,14,Chart 2.5,Chad: % personally harmed by severe weather events,50,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C2_5_COM_mental_health,14,Chart 2.5,Comoros: % personally harmed by mental health issues,38,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C2_5_COM_prolonged_weather,14,Chart 2.5,Comoros: % personally harmed by severe prolonged weather events,44,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C2_5_SOM_work,14,Chart 2.5,Somalia: % of the workforce personally harmed at work,38,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Work among the current workforce."
+C2_5_PHL_vs_global,14,Chart 2.5,Philippines: smaller of the two ratios of its severe and prolonged weather harm to the global rate ('more than triple'),3,ratio,0.5,chart,N,,62/17 and 62/19; the printed claim is 'more than triple'.
+C2_5_highest_work,14,Chart 2.5,"Of the six countries, the one with the highest % harmed at work",SOM,text,,chart,N,,
+C2_5_highest_mental,14,Chart 2.5,"Of the six countries, the one with the highest % harmed by mental health issues",COM,text,,chart,N,,
+C2_6_prolonged_weather_personal,15,Chart 2.6,% personally experienced harm (personally or both) from severe prolonged weather events,19,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)."
+C2_6_prolonged_weather_know,15,Chart 2.6,% who know somebody who experienced harm (and were not harmed themselves) from severe prolonged weather events,11,pct,,chart,N,,"Answer 'yes, know someone who has experienced'."
+C2_6_severe_weather_personal,15,Chart 2.6,% personally experienced harm (personally or both) from severe weather events,17,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)."
+C2_6_severe_weather_know,15,Chart 2.6,% who know somebody who experienced harm (and were not harmed themselves) from severe weather events,16,pct,,chart,N,,"Answer 'yes, know someone who has experienced'."
+C2_6_work_personal,15,Chart 2.6,% personally experienced harm (personally or both) from work you do,16,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Work: current workforce."
+C2_6_work_know,15,Chart 2.6,% who know somebody who experienced harm (and were not harmed themselves) from work you do,15,pct,,chart,N,,"Answer 'yes, know someone who has experienced'. Work: current workforce."
+C2_6_traffic_personal,15,Chart 2.6,% personally experienced harm (personally or both) from traffic/roadside accidents,15,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)."
+C2_6_traffic_know,15,Chart 2.6,% who know somebody who experienced harm (and were not harmed themselves) from traffic/roadside accidents,27,pct,,chart,N,,"Answer 'yes, know someone who has experienced'."
+C2_6_food_personal,15,Chart 2.6,% personally experienced harm (personally or both) from food you eat,14,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)."
+C2_6_food_know,15,Chart 2.6,% who know somebody who experienced harm (and were not harmed themselves) from food you eat,14,pct,,chart,N,,"Answer 'yes, know someone who has experienced'."
+C2_6_water_personal,15,Chart 2.6,% personally experienced harm (personally or both) from water you drink,13,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)."
+C2_6_water_know,15,Chart 2.6,% who know somebody who experienced harm (and were not harmed themselves) from water you drink,10,pct,,chart,N,,"Answer 'yes, know someone who has experienced'."
+C2_6_mental_health_personal,15,Chart 2.6,% personally experienced harm (personally or both) from mental health issues,12,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)."
+C2_6_mental_health_know,15,Chart 2.6,% who know somebody who experienced harm (and were not harmed themselves) from mental health issues,18,pct,,chart,N,,"Answer 'yes, know someone who has experienced'."
+C2_6_air_personal,15,Chart 2.6,% personally experienced harm (personally or both) from the air you breathe,12,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)."
+C2_6_air_know,15,Chart 2.6,% who know somebody who experienced harm (and were not harmed themselves) from the air you breathe,9,pct,,chart,N,,"Answer 'yes, know someone who has experienced'."
+C2_6_crime_personal,15,Chart 2.6,% personally experienced harm (personally or both) from violent crime,10,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)."
+C2_6_crime_know,15,Chart 2.6,% who know somebody who experienced harm (and were not harmed themselves) from violent crime,17,pct,,chart,N,,"Answer 'yes, know someone who has experienced'."
+C2_6_wildfires_personal,15,Chart 2.6,% personally experienced harm (personally or both) from wildfires,8,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)."
+C2_6_wildfires_know,15,Chart 2.6,% who know somebody who experienced harm (and were not harmed themselves) from wildfires,11,pct,,chart,N,,"Answer 'yes, know someone who has experienced'."
+X77,15,Chapter 2,Adults: % who know someone harmed by severe prolonged weather events,11,pct,,text,N,,
+X78,15,Chapter 2,Adults: % who know someone harmed on the road in the past two years,27,pct,,text,N,,
+X79,15,Chapter 2,Ratio of knowing someone harmed on the road to personal road harm ('nearly twice'),2,ratio,0.5,text,N,,27/15 from the chart figures; the printed claim is 'nearly twice'.
+X80,16,Chapter 2,Lower-middle-income countries: average Experience of Harm Index ('averaging 15'),15,index,,text,N,,"Experience of Harm Index: per respondent, share of the 10 harm items answered 'personally' or 'both' (0-100), among respondents with no don't know/refused answer on the 10 items."
+C2_7_low_suffering_experience,16,Chart 2.7,"Low-income, suffering: average Experience of Harm Index",17,index,,chart,Y,WP16; WP18,"Experience of Harm Index: per respondent, share of the 10 harm items answered 'personally' or 'both' (0-100), among respondents with no don't know/refused answer on the 10 items."
+C2_7_low_suffering_worry,16,Chart 2.7,"Low-income, suffering: average Worry Index",55,index,,chart,Y,WP16; WP18,Worry Index = worry_index_published x 100.
+C2_7_low_suffering_gap,16,Chart 2.7,"Low-income, suffering: Worry Index minus Experience of Harm Index",38,index,,chart,Y,WP16; WP18,Difference of the rounded figures.
+C2_7_low_struggling_experience,16,Chart 2.7,"Low-income, struggling: average Experience of Harm Index",15,index,,chart,Y,WP16; WP18,"Experience of Harm Index: per respondent, share of the 10 harm items answered 'personally' or 'both' (0-100), among respondents with no don't know/refused answer on the 10 items."
+C2_7_low_struggling_worry,16,Chart 2.7,"Low-income, struggling: average Worry Index",53,index,,chart,Y,WP16; WP18,Worry Index = worry_index_published x 100.
+C2_7_low_struggling_gap,16,Chart 2.7,"Low-income, struggling: Worry Index minus Experience of Harm Index",38,index,,chart,Y,WP16; WP18,Difference of the rounded figures.
+C2_7_low_thriving_experience,16,Chart 2.7,"Low-income, thriving: average Experience of Harm Index",13,index,,chart,Y,WP16; WP18,"Experience of Harm Index: per respondent, share of the 10 harm items answered 'personally' or 'both' (0-100), among respondents with no don't know/refused answer on the 10 items."
+C2_7_low_thriving_worry,16,Chart 2.7,"Low-income, thriving: average Worry Index",51,index,,chart,Y,WP16; WP18,Worry Index = worry_index_published x 100.
+C2_7_low_thriving_gap,16,Chart 2.7,"Low-income, thriving: Worry Index minus Experience of Harm Index",38,index,,chart,Y,WP16; WP18,Difference of the rounded figures.
+C2_7_lower_middle_suffering_experience,16,Chart 2.7,"Lower-middle-income, suffering: average Experience of Harm Index",15,index,,chart,Y,WP16; WP18,"Experience of Harm Index: per respondent, share of the 10 harm items answered 'personally' or 'both' (0-100), among respondents with no don't know/refused answer on the 10 items."
+C2_7_lower_middle_suffering_worry,16,Chart 2.7,"Lower-middle-income, suffering: average Worry Index",37,index,,chart,Y,WP16; WP18,Worry Index = worry_index_published x 100.
+C2_7_lower_middle_suffering_gap,16,Chart 2.7,"Lower-middle-income, suffering: Worry Index minus Experience of Harm Index",22,index,,chart,Y,WP16; WP18,Difference of the rounded figures.
+C2_7_lower_middle_struggling_experience,16,Chart 2.7,"Lower-middle-income, struggling: average Experience of Harm Index",15,index,,chart,Y,WP16; WP18,"Experience of Harm Index: per respondent, share of the 10 harm items answered 'personally' or 'both' (0-100), among respondents with no don't know/refused answer on the 10 items."
+C2_7_lower_middle_struggling_worry,16,Chart 2.7,"Lower-middle-income, struggling: average Worry Index",41,index,,chart,Y,WP16; WP18,Worry Index = worry_index_published x 100.
+C2_7_lower_middle_struggling_gap,16,Chart 2.7,"Lower-middle-income, struggling: Worry Index minus Experience of Harm Index",26,index,,chart,Y,WP16; WP18,Difference of the rounded figures.
+C2_7_lower_middle_thriving_experience,16,Chart 2.7,"Lower-middle-income, thriving: average Experience of Harm Index",15,index,,chart,Y,WP16; WP18,"Experience of Harm Index: per respondent, share of the 10 harm items answered 'personally' or 'both' (0-100), among respondents with no don't know/refused answer on the 10 items."
+C2_7_lower_middle_thriving_worry,16,Chart 2.7,"Lower-middle-income, thriving: average Worry Index",45,index,,chart,Y,WP16; WP18,Worry Index = worry_index_published x 100.
+C2_7_lower_middle_thriving_gap,16,Chart 2.7,"Lower-middle-income, thriving: Worry Index minus Experience of Harm Index",30,index,,chart,Y,WP16; WP18,Difference of the rounded figures.
+C2_7_upper_middle_suffering_experience,16,Chart 2.7,"Upper-middle-income, suffering: average Experience of Harm Index",28,index,,chart,Y,WP16; WP18,"Experience of Harm Index: per respondent, share of the 10 harm items answered 'personally' or 'both' (0-100), among respondents with no don't know/refused answer on the 10 items."
+C2_7_upper_middle_suffering_worry,16,Chart 2.7,"Upper-middle-income, suffering: average Worry Index",53,index,,chart,Y,WP16; WP18,Worry Index = worry_index_published x 100.
+C2_7_upper_middle_suffering_gap,16,Chart 2.7,"Upper-middle-income, suffering: Worry Index minus Experience of Harm Index",25,index,,chart,Y,WP16; WP18,Difference of the rounded figures.
+C2_7_upper_middle_struggling_experience,16,Chart 2.7,"Upper-middle-income, struggling: average Experience of Harm Index",18,index,,chart,Y,WP16; WP18,"Experience of Harm Index: per respondent, share of the 10 harm items answered 'personally' or 'both' (0-100), among respondents with no don't know/refused answer on the 10 items."
+C2_7_upper_middle_struggling_worry,16,Chart 2.7,"Upper-middle-income, struggling: average Worry Index",47,index,,chart,Y,WP16; WP18,Worry Index = worry_index_published x 100.
+C2_7_upper_middle_struggling_gap,16,Chart 2.7,"Upper-middle-income, struggling: Worry Index minus Experience of Harm Index",29,index,,chart,Y,WP16; WP18,Difference of the rounded figures.
+C2_7_upper_middle_thriving_experience,16,Chart 2.7,"Upper-middle-income, thriving: average Experience of Harm Index",13,index,,chart,Y,WP16; WP18,"Experience of Harm Index: per respondent, share of the 10 harm items answered 'personally' or 'both' (0-100), among respondents with no don't know/refused answer on the 10 items."
+C2_7_upper_middle_thriving_worry,16,Chart 2.7,"Upper-middle-income, thriving: average Worry Index",43,index,,chart,Y,WP16; WP18,Worry Index = worry_index_published x 100.
+C2_7_upper_middle_thriving_gap,16,Chart 2.7,"Upper-middle-income, thriving: Worry Index minus Experience of Harm Index",30,index,,chart,Y,WP16; WP18,Difference of the rounded figures.
+C2_7_high_suffering_experience,16,Chart 2.7,"High-income, suffering: average Experience of Harm Index",9,index,,chart,Y,WP16; WP18,"Experience of Harm Index: per respondent, share of the 10 harm items answered 'personally' or 'both' (0-100), among respondents with no don't know/refused answer on the 10 items."
+C2_7_high_suffering_worry,16,Chart 2.7,"High-income, suffering: average Worry Index",45,index,,chart,Y,WP16; WP18,Worry Index = worry_index_published x 100.
+C2_7_high_suffering_gap,16,Chart 2.7,"High-income, suffering: Worry Index minus Experience of Harm Index",36,index,,chart,Y,WP16; WP18,Difference of the rounded figures.
+C2_7_high_struggling_experience,16,Chart 2.7,"High-income, struggling: average Experience of Harm Index",7,index,,chart,Y,WP16; WP18,"Experience of Harm Index: per respondent, share of the 10 harm items answered 'personally' or 'both' (0-100), among respondents with no don't know/refused answer on the 10 items."
+C2_7_high_struggling_worry,16,Chart 2.7,"High-income, struggling: average Worry Index",38,index,,chart,Y,WP16; WP18,Worry Index = worry_index_published x 100.
+C2_7_high_struggling_gap,16,Chart 2.7,"High-income, struggling: Worry Index minus Experience of Harm Index",31,index,,chart,Y,WP16; WP18,Difference of the rounded figures.
+C2_7_high_thriving_experience,16,Chart 2.7,"High-income, thriving: average Experience of Harm Index",5,index,,chart,Y,WP16; WP18,"Experience of Harm Index: per respondent, share of the 10 harm items answered 'personally' or 'both' (0-100), among respondents with no don't know/refused answer on the 10 items."
+C2_7_high_thriving_worry,16,Chart 2.7,"High-income, thriving: average Worry Index",32,index,,chart,Y,WP16; WP18,Worry Index = worry_index_published x 100.
+C2_7_high_thriving_gap,16,Chart 2.7,"High-income, thriving: Worry Index minus Experience of Harm Index",27,index,,chart,Y,WP16; WP18,Difference of the rounded figures.
+X81,"18, 19",Chapter 3,Workers harmed on the job in the past two years (million),610,count (million),10,text,N,,Sum of PROJWT (adult population) of the workforce personally harmed at work.
+C3_1_2019,19,Chart 3.1,"Current workforce: % personally experienced harm at work, 2019",19,pct,,chart,N,,"2019 item L19, 'ever been seriously injured while working', asked of the employed; countries surveyed in 2025."
+C3_1_2021,19,Chart 3.1,"Current workforce: % personally experienced harm at work, 2021",19,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_1_2023,19,Chart 3.1,"Current workforce: % personally experienced harm at work, 2023",18,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_1_2025,19,Chart 3.1,"Current workforce: % personally experienced harm at work, 2025",16,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce."
+C3_2_primary,19,Chart 3.2,Current workforce with primary education or less: % personally experienced harm at work,22,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C3_2_secondary,19,Chart 3.2,Current workforce with secondary education: % personally experienced harm at work,13,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C3_2_tertiary,19,Chart 3.2,Current workforce with tertiary education: % personally experienced harm at work,11,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C3_2_lt_month,19,Chart 3.2,Current workforce with could cover basic needs for less than a month: % personally experienced harm at work,21,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). WP22228 for financial resilience."
+C3_2_month_plus,19,Chart 3.2,Current workforce with could cover basic needs for a month or more: % personally experienced harm at work,14,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). WP22228 for financial resilience."
+X82,19,Chapter 3,Workers who could survive one month or less without income: % harmed at work ('one in five'),21,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). WP22228 = less than a month."
+X83,19,Chapter 3,Workers who could survive one month or more without income: % harmed at work,14,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X84,19,Chapter 3,Workers with primary education: % harmed at work,22,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X85,19,Chapter 3,Workers with secondary education: % harmed at work,13,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X86,19,Chapter 3,Workers with tertiary education: % harmed at work,11,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C3_3_high_experience,20,Chart 3.3,High-income countries: % of the workforce personally harmed at work,7,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C3_3_high_worry,20,Chart 3.3,High-income countries: % of current employees worried about harm at work,35,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_3_high_gap,20,Chart 3.3,High-income countries: worry minus experience (pp),28,pct,,chart,N,,Difference of the rounded figures.
+C3_3_upper_middle_experience,20,Chart 3.3,Upper-middle-income countries: % of the workforce personally harmed at work,21,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C3_3_upper_middle_worry,20,Chart 3.3,Upper-middle-income countries: % of current employees worried about harm at work,55,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_3_upper_middle_gap,20,Chart 3.3,Upper-middle-income countries: worry minus experience (pp),34,pct,,chart,N,,Difference of the rounded figures.
+C3_3_lower_middle_experience,20,Chart 3.3,Lower-middle-income countries: % of the workforce personally harmed at work,18,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C3_3_lower_middle_worry,20,Chart 3.3,Lower-middle-income countries: % of current employees worried about harm at work,57,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_3_lower_middle_gap,20,Chart 3.3,Lower-middle-income countries: worry minus experience (pp),39,pct,,chart,N,,Difference of the rounded figures.
+C3_3_low_experience,20,Chart 3.3,Low-income countries: % of the workforce personally harmed at work,16,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C3_3_low_worry,20,Chart 3.3,Low-income countries: % of current employees worried about harm at work,60,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_3_low_gap,20,Chart 3.3,Low-income countries: worry minus experience (pp),44,pct,,chart,N,,Difference of the rounded figures.
+X87,20,Chapter 3,Low-income countries: % of workers harmed at work ('one in six'),16,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X88,20,Chapter 3,Low-income countries: % of employees worried about harm at work,60,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X89,20,Chapter 3,Low-income countries: gap between worry and harm at work (pp),44,pct,,text,N,,Difference of the rounded figures.
+X90,20,Chapter 3,Lower-middle-income countries: % of workers harmed at work,18,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X91,20,Chapter 3,Upper-middle-income countries: % of workers harmed at work,21,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X92,20,Chapter 3,Lower-middle-income countries: % of employees worried about harm at work,57,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X93,20,Chapter 3,Upper-middle-income countries: % of employees worried about harm at work,55,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X94,20,Chapter 3,High-income countries: % of workers harmed at work,7,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X95,20,Chapter 3,High-income countries: % of employees worried about harm at work,35,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X96,20,Chapter 3,High-income countries: gap between worry and harm at work (pp),28,pct,,text,N,,Difference of the rounded figures.
+X97,20,Chapter 3,Adults classified as out of the workforce (%),35,pct,,text,N,,EMP_2010 = 6.
+X98,20,Chapter 3,Adults in the workforce (%) ('roughly two-thirds'),67,pct,2,text,N,,Printed as 'roughly two-thirds'.
+X99,21,Chapter 3,"Eastern Asia: % of the workforce harmed at work, 2023",20,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X100,21,Chapter 3,"Eastern Asia: % of the workforce harmed at work, 2025",27,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X101,21,Chapter 3,"Northern/Western Europe: % of the workforce harmed at work, 2023",8,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X102,21,Chapter 3,"Northern/Western Europe: % of the workforce harmed at work, 2025",10,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X103,21,Chapter 3,Regions reporting more workplace harm in 2025 than in 2021 ('only Eastern Asia'),1,count,0,text,N,,Compared on the rounded figures in Chart 3.4.
+X104_southern_asia,21,Chapter 3,Southern Asia: change 2023 to 2025 in % of the workforce harmed at work,-6,pct,,text,N,,Difference of the rounded figures in Chart 3.4.
+X104_southeastern_asia,21,Chapter 3,Southeastern Asia: change 2023 to 2025 in % of the workforce harmed at work,-6,pct,,text,N,,Difference of the rounded figures in Chart 3.4.
+X104_southern_africa,21,Chapter 3,Southern Africa: change 2023 to 2025 in % of the workforce harmed at work,-4,pct,,text,N,,Difference of the rounded figures in Chart 3.4.
+X104_middle_east,21,Chapter 3,Middle East: change 2023 to 2025 in % of the workforce harmed at work,-6,pct,,text,N,,Difference of the rounded figures in Chart 3.4.
+X104_anz,21,Chapter 3,Australia and New Zealand: change 2023 to 2025 in % of the workforce harmed at work,-6,pct,,text,N,,Difference of the rounded figures in Chart 3.4.
+X104_northern_america,21,Chapter 3,Northern America: change 2023 to 2025 in % of the workforce harmed at work,-7,pct,,text,N,,Difference of the rounded figures in Chart 3.4.
+C3_4_eastern_asia_2021,21,Chart 3.4,"Eastern Asia: % of the workforce personally harmed at work, 2021",10,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025. China excluded (employment questions not asked in 2021)."
+C3_4_eastern_asia_2023,21,Chart 3.4,"Eastern Asia: % of the workforce personally harmed at work, 2023",20,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_eastern_asia_2025,21,Chart 3.4,"Eastern Asia: % of the workforce personally harmed at work, 2025",27,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce."
+C3_4_southern_asia_2021,21,Chart 3.4,"Southern Asia: % of the workforce personally harmed at work, 2021",32,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_southern_asia_2023,21,Chart 3.4,"Southern Asia: % of the workforce personally harmed at work, 2023",27,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_southern_asia_2025,21,Chart 3.4,"Southern Asia: % of the workforce personally harmed at work, 2025",21,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce."
+C3_4_cw_africa_2021,21,Chart 3.4,"Central/Western Africa: % of the workforce personally harmed at work, 2021",17,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_cw_africa_2023,21,Chart 3.4,"Central/Western Africa: % of the workforce personally harmed at work, 2023",18,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_cw_africa_2025,21,Chart 3.4,"Central/Western Africa: % of the workforce personally harmed at work, 2025",17,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce."
+C3_4_east_africa_2021,21,Chart 3.4,"Eastern Africa: % of the workforce personally harmed at work, 2021",16,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_east_africa_2023,21,Chart 3.4,"Eastern Africa: % of the workforce personally harmed at work, 2023",13,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_east_africa_2025,21,Chart 3.4,"Eastern Africa: % of the workforce personally harmed at work, 2025",12,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce."
+C3_4_southeastern_asia_2021,21,Chart 3.4,"Southeastern Asia: % of the workforce personally harmed at work, 2021",19,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_southeastern_asia_2023,21,Chart 3.4,"Southeastern Asia: % of the workforce personally harmed at work, 2023",18,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_southeastern_asia_2025,21,Chart 3.4,"Southeastern Asia: % of the workforce personally harmed at work, 2025",12,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce."
+C3_4_nw_europe_2021,21,Chart 3.4,"Northern/Western Europe: % of the workforce personally harmed at work, 2021",13,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_nw_europe_2023,21,Chart 3.4,"Northern/Western Europe: % of the workforce personally harmed at work, 2023",8,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_nw_europe_2025,21,Chart 3.4,"Northern/Western Europe: % of the workforce personally harmed at work, 2025",10,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce."
+C3_4_southern_africa_2021,21,Chart 3.4,"Southern Africa: % of the workforce personally harmed at work, 2021",16,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_southern_africa_2023,21,Chart 3.4,"Southern Africa: % of the workforce personally harmed at work, 2023",14,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_southern_africa_2025,21,Chart 3.4,"Southern Africa: % of the workforce personally harmed at work, 2025",10,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce."
+C3_4_southern_europe_2021,21,Chart 3.4,"Southern Europe: % of the workforce personally harmed at work, 2021",22,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_southern_europe_2023,21,Chart 3.4,"Southern Europe: % of the workforce personally harmed at work, 2023",9,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_southern_europe_2025,21,Chart 3.4,"Southern Europe: % of the workforce personally harmed at work, 2025",10,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce."
+C3_4_north_africa_2021,21,Chart 3.4,"Northern Africa: % of the workforce personally harmed at work, 2021",17,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_north_africa_2023,21,Chart 3.4,"Northern Africa: % of the workforce personally harmed at work, 2023",9,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_north_africa_2025,21,Chart 3.4,"Northern Africa: % of the workforce personally harmed at work, 2025",8,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce."
+C3_4_latam_2021,21,Chart 3.4,"Latin America and the Caribbean: % of the workforce personally harmed at work, 2021",14,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_latam_2023,21,Chart 3.4,"Latin America and the Caribbean: % of the workforce personally harmed at work, 2023",9,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_latam_2025,21,Chart 3.4,"Latin America and the Caribbean: % of the workforce personally harmed at work, 2025",7,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce."
+C3_4_anz_2021,21,Chart 3.4,"Australia and New Zealand: % of the workforce personally harmed at work, 2021",7,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_anz_2023,21,Chart 3.4,"Australia and New Zealand: % of the workforce personally harmed at work, 2023",12,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_anz_2025,21,Chart 3.4,"Australia and New Zealand: % of the workforce personally harmed at work, 2025",6,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce."
+C3_4_central_asia_2021,21,Chart 3.4,"Central Asia: % of the workforce personally harmed at work, 2021",7,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_central_asia_2023,21,Chart 3.4,"Central Asia: % of the workforce personally harmed at work, 2023",5,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_central_asia_2025,21,Chart 3.4,"Central Asia: % of the workforce personally harmed at work, 2025",6,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce."
+C3_4_middle_east_2021,21,Chart 3.4,"Middle East: % of the workforce personally harmed at work, 2021",13,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_middle_east_2023,21,Chart 3.4,"Middle East: % of the workforce personally harmed at work, 2023",12,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_middle_east_2025,21,Chart 3.4,"Middle East: % of the workforce personally harmed at work, 2025",6,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce."
+C3_4_eastern_europe_2021,21,Chart 3.4,"Eastern Europe: % of the workforce personally harmed at work, 2021",8,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_eastern_europe_2023,21,Chart 3.4,"Eastern Europe: % of the workforce personally harmed at work, 2023",6,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_eastern_europe_2025,21,Chart 3.4,"Eastern Europe: % of the workforce personally harmed at work, 2025",5,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce."
+C3_4_northern_america_2021,21,Chart 3.4,"Northern America: % of the workforce personally harmed at work, 2021",8,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_northern_america_2023,21,Chart 3.4,"Northern America: % of the workforce personally harmed at work, 2023",12,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce; countries surveyed in 2025."
+C3_4_northern_america_2025,21,Chart 3.4,"Northern America: % of the workforce personally harmed at work, 2025",5,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README). Current workforce."
+C3_5_global_experience_lt15,22,Chart 3.5,"Global, < 15 hrs/week: % of the workforce personally harmed at work",19,pct,,chart,Y,EMP_WORK_HOURS,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C3_5_global_experience_h15_29,22,Chart 3.5,"Global, 15-29 hrs/week: % of the workforce personally harmed at work",14,pct,,chart,Y,EMP_WORK_HOURS,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C3_5_global_experience_h30_39,22,Chart 3.5,"Global, 30-39 hrs/week: % of the workforce personally harmed at work",19,pct,,chart,Y,EMP_WORK_HOURS,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C3_5_global_experience_h40_49,22,Chart 3.5,"Global, 40-49 hrs/week: % of the workforce personally harmed at work",14,pct,,chart,Y,EMP_WORK_HOURS,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C3_5_global_experience_h50plus,22,Chart 3.5,"Global, 50+ hrs/week: % of the workforce personally harmed at work",16,pct,,chart,Y,EMP_WORK_HOURS,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C3_5_global_worry_lt15,22,Chart 3.5,"Global, < 15 hrs/week: % of current employees worried about harm at work",51,pct,,chart,Y,EMP_WORK_HOURS,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_5_global_worry_h15_29,22,Chart 3.5,"Global, 15-29 hrs/week: % of current employees worried about harm at work",51,pct,,chart,Y,EMP_WORK_HOURS,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_5_global_worry_h30_39,22,Chart 3.5,"Global, 30-39 hrs/week: % of current employees worried about harm at work",53,pct,,chart,Y,EMP_WORK_HOURS,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_5_global_worry_h40_49,22,Chart 3.5,"Global, 40-49 hrs/week: % of current employees worried about harm at work",50,pct,,chart,Y,EMP_WORK_HOURS,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_5_global_worry_h50plus,22,Chart 3.5,"Global, 50+ hrs/week: % of current employees worried about harm at work",53,pct,,chart,Y,EMP_WORK_HOURS,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_5_high_experience_lt15,22,Chart 3.5,"High-income countries, < 15 hrs/week: % of the workforce personally harmed at work",6,pct,,chart,Y,EMP_WORK_HOURS,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C3_5_high_experience_h15_29,22,Chart 3.5,"High-income countries, 15-29 hrs/week: % of the workforce personally harmed at work",5,pct,,chart,Y,EMP_WORK_HOURS,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C3_5_high_experience_h30_39,22,Chart 3.5,"High-income countries, 30-39 hrs/week: % of the workforce personally harmed at work",7,pct,,chart,Y,EMP_WORK_HOURS,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C3_5_high_experience_h40_49,22,Chart 3.5,"High-income countries, 40-49 hrs/week: % of the workforce personally harmed at work",6,pct,,chart,Y,EMP_WORK_HOURS,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C3_5_high_experience_h50plus,22,Chart 3.5,"High-income countries, 50+ hrs/week: % of the workforce personally harmed at work",9,pct,,chart,Y,EMP_WORK_HOURS,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C3_5_high_worry_lt15,22,Chart 3.5,"High-income countries, < 15 hrs/week: % of current employees worried about harm at work",28,pct,,chart,Y,EMP_WORK_HOURS,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_5_high_worry_h15_29,22,Chart 3.5,"High-income countries, 15-29 hrs/week: % of current employees worried about harm at work",33,pct,,chart,Y,EMP_WORK_HOURS,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_5_high_worry_h30_39,22,Chart 3.5,"High-income countries, 30-39 hrs/week: % of current employees worried about harm at work",30,pct,,chart,Y,EMP_WORK_HOURS,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_5_high_worry_h40_49,22,Chart 3.5,"High-income countries, 40-49 hrs/week: % of current employees worried about harm at work",34,pct,,chart,Y,EMP_WORK_HOURS,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_5_high_worry_h50plus,22,Chart 3.5,"High-income countries, 50+ hrs/week: % of current employees worried about harm at work",47,pct,,chart,Y,EMP_WORK_HOURS,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X105,22,Chapter 3,"High-income countries, working under 50 hours: lowest % worried about harm at work across hours bands ('ranging from 28%')",28,pct,,text,Y,EMP_WORK_HOURS,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X106,22,Chapter 3,"High-income countries, working under 50 hours: highest % worried about harm at work across hours bands ('to 34%')",34,pct,,text,Y,EMP_WORK_HOURS,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X107,22,Chapter 3,"High-income countries, working 50+ hours: % worried about harm at work",47,pct,,text,Y,EMP_WORK_HOURS,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X108,22,Chapter 3,"High-income countries, working 50+ hours: % personally harmed at work",9,pct,,text,Y,EMP_WORK_HOURS,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X109_h40_49,22,Chapter 3 (footnote i),Global workforce: % working 40-49 hours a week,36,pct,,text,Y,EMP_WORK_HOURS,Among the workforce with an hours answer.
+X109_h50plus,22,Chapter 3 (footnote i),Global workforce: % working 50 hours or more a week,27,pct,,text,Y,EMP_WORK_HOURS,Among the workforce with an hours answer.
+X109_h40plus,22,Chapter 3 (footnote i),Global workforce: % working 40 hours or more a week,63,pct,,text,Y,EMP_WORK_HOURS,Among the workforce with an hours answer.
+X109_h30_39,22,Chapter 3 (footnote i),Global workforce: % working 30-39 hours a week,17,pct,,text,Y,EMP_WORK_HOURS,Among the workforce with an hours answer.
+X109_h15_29,22,Chapter 3 (footnote i),Global workforce: % working 15-29 hours a week,10,pct,,text,Y,EMP_WORK_HOURS,Among the workforce with an hours answer.
+X109_lt15,22,Chapter 3 (footnote i),Global workforce: % working fewer than 15 hours a week,8,pct,,text,Y,EMP_WORK_HOURS,Among the workforce with an hours answer.
+X110_h50plus,22,Chapter 3 (footnote ii),"High-income countries, working 50+ hours a week: % in the top household income quintile",29,pct,,text,Y,EMP_WORK_HOURS,INCOME_5 = 5.
+X110_h30_39,22,Chapter 3 (footnote ii),"High-income countries, working 30-39 hours a week: % in the top household income quintile",19,pct,,text,Y,EMP_WORK_HOURS,INCOME_5 = 5.
+X110_lt15,22,Chapter 3 (footnote ii),"High-income countries, working fewer than 15 hours a week: % in the top household income quintile",14,pct,,text,Y,EMP_WORK_HOURS,INCOME_5 = 5.
+X111,23,Chapter 3,"High-income countries: higher odds of worry about harm at work, 50+ hours vs 40-49 hours (%)",65,pct (odds),10,text,Y,EMP_WORK_HOURS,"Logistic regression among current employees in high-income countries: worried (very/somewhat) about harm at work on hours band, age, gender, education, income quintile, employment status and urbanicity; value = (odds ratio - 1) x 100. See README."
+X112,23,Chapter 3,"High-income countries: higher odds of worry about harm at work, 40-49 hours vs under 15 hours (%)",37,pct (odds),10,text,Y,EMP_WORK_HOURS,"Logistic regression among current employees in high-income countries: worried (very/somewhat) about harm at work on hours band, age, gender, education, income quintile, employment status and urbanicity; value = (odds ratio - 1) x 100. See README."
+X113,23,Chapter 3,"High-income countries: higher odds of worry about harm at work, somewhat vs not worried about mental health harm (%)",143,pct (odds),10,text,Y,EMP_WORK_HOURS,"Logistic regression among current employees in high-income countries: worried (very/somewhat) about harm at work on hours band, age, gender, education, income quintile, employment status and urbanicity; value = (odds ratio - 1) x 100. See README. Model 2 adds worry about mental health issues (WP20726)."
+X114,23,Chapter 3,"High-income countries: higher odds of worry about harm at work, very vs not worried about mental health harm (%)",293,pct (odds),10,text,Y,EMP_WORK_HOURS,"Logistic regression among current employees in high-income countries: worried (very/somewhat) about harm at work on hours band, age, gender, education, income quintile, employment status and urbanicity; value = (odds ratio - 1) x 100. See README. Model 2 adds worry about mental health issues (WP20726)."
+C3_6_not_thriving_lt15,23,Chart 3.6,"High-income countries, not thriving, < 15 hrs/week: % of current employees worried about harm at work",29,pct,,chart,Y,EMP_WORK_HOURS; WP16; WP18,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_6_not_thriving_h15_29,23,Chart 3.6,"High-income countries, not thriving, 15-29 hrs/week: % of current employees worried about harm at work",39,pct,,chart,Y,EMP_WORK_HOURS; WP16; WP18,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_6_not_thriving_h30_39,23,Chart 3.6,"High-income countries, not thriving, 30-39 hrs/week: % of current employees worried about harm at work",33,pct,,chart,Y,EMP_WORK_HOURS; WP16; WP18,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_6_not_thriving_h40_49,23,Chart 3.6,"High-income countries, not thriving, 40-49 hrs/week: % of current employees worried about harm at work",40,pct,,chart,Y,EMP_WORK_HOURS; WP16; WP18,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_6_not_thriving_h50plus,23,Chart 3.6,"High-income countries, not thriving, 50+ hrs/week: % of current employees worried about harm at work",55,pct,,chart,Y,EMP_WORK_HOURS; WP16; WP18,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_6_thriving_lt15,23,Chart 3.6,"High-income countries, thriving, < 15 hrs/week: % of current employees worried about harm at work",26,pct,,chart,Y,EMP_WORK_HOURS; WP16; WP18,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_6_thriving_h15_29,23,Chart 3.6,"High-income countries, thriving, 15-29 hrs/week: % of current employees worried about harm at work",27,pct,,chart,Y,EMP_WORK_HOURS; WP16; WP18,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_6_thriving_h30_39,23,Chart 3.6,"High-income countries, thriving, 30-39 hrs/week: % of current employees worried about harm at work",28,pct,,chart,Y,EMP_WORK_HOURS; WP16; WP18,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_6_thriving_h40_49,23,Chart 3.6,"High-income countries, thriving, 40-49 hrs/week: % of current employees worried about harm at work",28,pct,,chart,Y,EMP_WORK_HOURS; WP16; WP18,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C3_6_thriving_h50plus,23,Chart 3.6,"High-income countries, thriving, 50+ hrs/week: % of current employees worried about harm at work",37,pct,,chart,Y,EMP_WORK_HOURS; WP16; WP18,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X115,23,Chapter 3,"High-income countries, not thriving, 50+ hours: % worried about harm at work",55,pct,,text,Y,EMP_WORK_HOURS; WP16; WP18,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X116,23,Chapter 3,"High-income countries, thriving, 50+ hours: % worried about harm at work ('just over a third')",37,pct,,text,Y,EMP_WORK_HOURS; WP16; WP18,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C4_1_prolonged_weather_very,26,Chart 4.1,Severe prolonged weather events: % very worried,33,pct,,chart,N,,Don't know shown but not labelled; kept in the base.
+C4_1_prolonged_weather_somewhat,26,Chart 4.1,Severe prolonged weather events: % somewhat worried,38,pct,,chart,N,,Don't know shown but not labelled; kept in the base.
+C4_1_prolonged_weather_not,26,Chart 4.1,Severe prolonged weather events: % not worried,28,pct,,chart,N,,Don't know shown but not labelled; kept in the base.
+C4_1_severe_weather_very,26,Chart 4.1,Severe weather events: % very worried,31,pct,,chart,N,,Don't know shown but not labelled; kept in the base.
+C4_1_severe_weather_somewhat,26,Chart 4.1,Severe weather events: % somewhat worried,37,pct,,chart,N,,Don't know shown but not labelled; kept in the base.
+C4_1_severe_weather_not,26,Chart 4.1,Severe weather events: % not worried,30,pct,,chart,N,,Don't know shown but not labelled; kept in the base.
+C4_1_wildfires_very,26,Chart 4.1,Wildfires: % very worried,27,pct,,chart,N,,Don't know shown but not labelled; kept in the base.
+C4_1_wildfires_somewhat,26,Chart 4.1,Wildfires: % somewhat worried,29,pct,,chart,N,,Don't know shown but not labelled; kept in the base.
+C4_1_wildfires_not,26,Chart 4.1,Wildfires: % not worried,40,pct,,chart,N,,Don't know shown but not labelled; kept in the base.
+C4_1_air_very,26,Chart 4.1,The air you breathe: % very worried,18,pct,,chart,N,,Don't know shown but not labelled; kept in the base.
+C4_1_air_somewhat,26,Chart 4.1,The air you breathe: % somewhat worried,34,pct,,chart,N,,Don't know shown but not labelled; kept in the base.
+C4_1_air_not,26,Chart 4.1,The air you breathe: % not worried,47,pct,,chart,N,,Don't know shown but not labelled; kept in the base.
+X117_any,26,Chapter 4 (footnote ii),Adults personally harmed by at least one of the four of the four weather-related hazards in the past two years (%),32,pct,,text,N,,"Personally or both, for wildfires, severe weather, severe prolonged weather and air."
+X117_one,26,Chapter 4 (footnote ii),Adults personally harmed by exactly one of the four weather-related hazards in the past two years (%),16,pct,,text,N,,"Personally or both, for wildfires, severe weather, severe prolonged weather and air."
+X117_two,26,Chapter 4 (footnote ii),Adults personally harmed by exactly two of the four weather-related hazards in the past two years (%),9,pct,,text,N,,"Personally or both, for wildfires, severe weather, severe prolonged weather and air."
+X117_three,26,Chapter 4 (footnote ii),Adults personally harmed by exactly three of the four weather-related hazards in the past two years (%),5,pct,,text,N,,"Personally or both, for wildfires, severe weather, severe prolonged weather and air."
+X117_four,26,Chapter 4 (footnote ii),Adults personally harmed by all four of the four weather-related hazards in the past two years (%),2,pct,,text,N,,"Personally or both, for wildfires, severe weather, severe prolonged weather and air."
+C4_2_wildfires_no_very,27,Chart 4.2,"Wildfires, no experience: % very worried",23,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_wildfires_no_somewhat,27,Chart 4.2,"Wildfires, no experience: % somewhat worried",27,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_wildfires_know_very,27,Chart 4.2,"Wildfires, know someone harmed: % very worried",42,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_wildfires_know_somewhat,27,Chart 4.2,"Wildfires, know someone harmed: % somewhat worried",43,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_wildfires_personal_very,27,Chart 4.2,"Wildfires, personally experienced: % very worried",60,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_wildfires_personal_somewhat,27,Chart 4.2,"Wildfires, personally experienced: % somewhat worried",30,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_wildfires_both_very,27,Chart 4.2,"Wildfires, both: % very worried",42,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_wildfires_both_somewhat,27,Chart 4.2,"Wildfires, both: % somewhat worried",44,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_air_no_very,27,Chart 4.2,"The air you breathe, no experience: % very worried",12,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_air_no_somewhat,27,Chart 4.2,"The air you breathe, no experience: % somewhat worried",31,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_air_know_very,27,Chart 4.2,"The air you breathe, know someone harmed: % very worried",31,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_air_know_somewhat,27,Chart 4.2,"The air you breathe, know someone harmed: % somewhat worried",53,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_air_personal_very,27,Chart 4.2,"The air you breathe, personally experienced: % very worried",48,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_air_personal_somewhat,27,Chart 4.2,"The air you breathe, personally experienced: % somewhat worried",36,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_air_both_very,27,Chart 4.2,"The air you breathe, both: % very worried",45,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_air_both_somewhat,27,Chart 4.2,"The air you breathe, both: % somewhat worried",42,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_severe_weather_no_very,27,Chart 4.2,"Severe weather events, no experience: % very worried",24,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_severe_weather_no_somewhat,27,Chart 4.2,"Severe weather events, no experience: % somewhat worried",35,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_severe_weather_know_very,27,Chart 4.2,"Severe weather events, know someone harmed: % very worried",39,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_severe_weather_know_somewhat,27,Chart 4.2,"Severe weather events, know someone harmed: % somewhat worried",48,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_severe_weather_personal_very,27,Chart 4.2,"Severe weather events, personally experienced: % very worried",57,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_severe_weather_personal_somewhat,27,Chart 4.2,"Severe weather events, personally experienced: % somewhat worried",33,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_severe_weather_both_very,27,Chart 4.2,"Severe weather events, both: % very worried",48,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_severe_weather_both_somewhat,27,Chart 4.2,"Severe weather events, both: % somewhat worried",41,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_prolonged_weather_no_very,27,Chart 4.2,"Severe prolonged weather events, no experience: % very worried",25,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_prolonged_weather_no_somewhat,27,Chart 4.2,"Severe prolonged weather events, no experience: % somewhat worried",37,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_prolonged_weather_know_very,27,Chart 4.2,"Severe prolonged weather events, know someone harmed: % very worried",41,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_prolonged_weather_know_somewhat,27,Chart 4.2,"Severe prolonged weather events, know someone harmed: % somewhat worried",48,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_prolonged_weather_personal_very,27,Chart 4.2,"Severe prolonged weather events, personally experienced: % very worried",60,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_prolonged_weather_personal_somewhat,27,Chart 4.2,"Severe prolonged weather events, personally experienced: % somewhat worried",33,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_prolonged_weather_both_very,27,Chart 4.2,"Severe prolonged weather events, both: % very worried",45,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+C4_2_prolonged_weather_both_somewhat,27,Chart 4.2,"Severe prolonged weather events, both: % somewhat worried",45,pct,,chart,N,,Grouped by the harm answer (don't know/refused on harm excluded); worry don't know kept in the base.
+X118,27,Chapter 4,Personally harmed by wildfires: % very worried about wildfires,60,pct,,text,N,,
+X119,27,Chapter 4,Personally harmed by severe prolonged weather: % very worried about it,60,pct,,text,N,,
+X120,27,Chapter 4,Personally harmed by wildfires: % somewhat worried,30,pct,,text,N,,
+X121,27,Chapter 4,Personally harmed by severe prolonged weather: % somewhat worried,34,pct,,text,N,,Chart 4.2 prints 33% for the same bar.
+X122,27,Chapter 4,"Harmed and know others harmed ('both'), wildfires: % very worried",42,pct,,text,N,,
+X123,27,Chapter 4,"Harmed and know others harmed ('both'), severe prolonged weather: % very worried",45,pct,,text,N,,
+C4_3_prolonged_weather_high,28,Chart 4.3,High-income countries: % personally harmed by severe prolonged weather events,13,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C4_3_prolonged_weather_upper_middle,28,Chart 4.3,Upper-middle-income countries: % personally harmed by severe prolonged weather events,22,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C4_3_prolonged_weather_lower_middle,28,Chart 4.3,Lower-middle-income countries: % personally harmed by severe prolonged weather events,20,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C4_3_prolonged_weather_low,28,Chart 4.3,Low-income countries: % personally harmed by severe prolonged weather events,22,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C4_3_severe_weather_high,28,Chart 4.3,High-income countries: % personally harmed by severe weather events,8,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C4_3_severe_weather_upper_middle,28,Chart 4.3,Upper-middle-income countries: % personally harmed by severe weather events,22,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C4_3_severe_weather_lower_middle,28,Chart 4.3,Lower-middle-income countries: % personally harmed by severe weather events,18,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C4_3_severe_weather_low,28,Chart 4.3,Low-income countries: % personally harmed by severe weather events,20,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C4_3_air_high,28,Chart 4.3,High-income countries: % personally harmed by the air you breathe,4,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C4_3_air_upper_middle,28,Chart 4.3,Upper-middle-income countries: % personally harmed by the air you breathe,16,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C4_3_air_lower_middle,28,Chart 4.3,Lower-middle-income countries: % personally harmed by the air you breathe,13,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C4_3_air_low,28,Chart 4.3,Low-income countries: % personally harmed by the air you breathe,11,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C4_3_wildfires_high,28,Chart 4.3,High-income countries: % personally harmed by wildfires,3,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C4_3_wildfires_upper_middle,28,Chart 4.3,Upper-middle-income countries: % personally harmed by wildfires,12,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C4_3_wildfires_lower_middle,28,Chart 4.3,Lower-middle-income countries: % personally harmed by wildfires,7,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+C4_3_wildfires_low,28,Chart 4.3,Low-income countries: % personally harmed by wildfires,11,pct,,chart,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X124_prolonged_weather,28,Chapter 4,High-income countries: % personally harmed by severe prolonged weather events,13,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X124_severe_weather,28,Chapter 4,High-income countries: % personally harmed by severe weather events,8,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X124_air,28,Chapter 4,High-income countries: % personally harmed by the air you breathe,4,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X124_wildfires,28,Chapter 4,High-income countries: % personally harmed by wildfires,3,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X125,29,Chapter 4,Countries surveyed with at least 2% of land area burned by wildfires in 2025 (GWIS),46,count,0,text,N,,"External data: GWIS 2025 burned-area estimates, snapshot in reports/external/ (see README)."
+X126,29,Chapter 4,Correlation across those countries between % personally harmed by wildfires and % worried about wildfires (r),0.37,r,0.05,text,N,,"External data: GWIS 2025 burned-area estimates, snapshot in reports/external/ (see README)."
+C4_5_GRC_very,29,Chart 4.5,Greece: % very worried about wildfires,79,pct,,chart,N,,
+C4_5_GRC_somewhat,29,Chart 4.5,Greece: % somewhat worried about wildfires,15,pct,,chart,N,,
+C4_5_PRT_very,29,Chart 4.5,Portugal: % very worried about wildfires,75,pct,,chart,N,,
+C4_5_PRT_somewhat,29,Chart 4.5,Portugal: % somewhat worried about wildfires,18,pct,,chart,N,,
+C4_5_MNG_very,29,Chart 4.5,Mongolia: % very worried about wildfires,65,pct,,chart,N,,
+C4_5_MNG_somewhat,29,Chart 4.5,Mongolia: % somewhat worried about wildfires,28,pct,,chart,N,,
+C4_5_CYP_very,29,Chart 4.5,Cyprus: % very worried about wildfires,71,pct,,chart,N,,
+C4_5_CYP_somewhat,29,Chart 4.5,Cyprus: % somewhat worried about wildfires,20,pct,,chart,N,,
+C4_5_TUR_very,29,Chart 4.5,Turkiye: % very worried about wildfires,69,pct,,chart,N,,
+C4_5_TUR_somewhat,29,Chart 4.5,Turkiye: % somewhat worried about wildfires,20,pct,,chart,N,,
+C4_5_MWI_very,29,Chart 4.5,Malawi: % very worried about wildfires,77,pct,,chart,N,,
+C4_5_MWI_somewhat,29,Chart 4.5,Malawi: % somewhat worried about wildfires,11,pct,,chart,N,,
+C4_5_KOR_very,29,Chart 4.5,South Korea: % very worried about wildfires,52,pct,,chart,N,,
+C4_5_KOR_somewhat,29,Chart 4.5,South Korea: % somewhat worried about wildfires,35,pct,,chart,N,,
+C4_5_BRA_very,29,Chart 4.5,Brazil: % very worried about wildfires,59,pct,,chart,N,,
+C4_5_BRA_somewhat,29,Chart 4.5,Brazil: % somewhat worried about wildfires,27,pct,,chart,N,,
+C4_5_PHL_very,29,Chart 4.5,Philippines: % very worried about wildfires,54,pct,,chart,N,,
+C4_5_PHL_somewhat,29,Chart 4.5,Philippines: % somewhat worried about wildfires,31,pct,,chart,N,,
+C4_5_MLI_very,29,Chart 4.5,Mali: % very worried about wildfires,67,pct,,chart,N,,
+C4_5_MLI_somewhat,29,Chart 4.5,Mali: % somewhat worried about wildfires,17,pct,,chart,N,,
+C4_5_MUS_very,29,Chart 4.5,Mauritius: % very worried about wildfires,60,pct,,chart,N,,
+C4_5_MUS_somewhat,29,Chart 4.5,Mauritius: % somewhat worried about wildfires,24,pct,,chart,N,,
+C4_5_BOL_very,29,Chart 4.5,Bolivia: % very worried about wildfires,58,pct,,chart,N,,
+C4_5_BOL_somewhat,29,Chart 4.5,Bolivia: % somewhat worried about wildfires,26,pct,,chart,N,,
+C4_5_MKD_very,29,Chart 4.5,North Macedonia: % very worried about wildfires,48,pct,,chart,N,,
+C4_5_MKD_somewhat,29,Chart 4.5,North Macedonia: % somewhat worried about wildfires,36,pct,,chart,N,,
+C4_5_countries,29,Chart 4.5,"The 13 countries shown (most worried about wildfires; ISO3, alphabetical)",BOL BRA CYP GRC KOR MKD MLI MNG MUS MWI PHL PRT TUR,text,,chart,N,,Countries whose very + somewhat worried (rounded) is 84% or more.
+X127_GRC,29,Chapter 4,Greece: % very or somewhat worried about wildfires,94,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X127_PRT,29,Chapter 4,Portugal: % very or somewhat worried about wildfires,93,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X127_MNG,29,Chapter 4,Mongolia: % very or somewhat worried about wildfires,93,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X127_CYP,29,Chapter 4,Cyprus: % very or somewhat worried about wildfires,91,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X127_TUR,29,Chapter 4,Turkiye: % very or somewhat worried about wildfires,89,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X127_MWI,29,Chapter 4,Malawi: % very or somewhat worried about wildfires,88,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X127_KOR,29,Chapter 4,South Korea: % very or somewhat worried about wildfires,87,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X127_BRA,29,Chapter 4,Brazil: % very or somewhat worried about wildfires,86,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X127_PHL,29,Chapter 4,Philippines: % very or somewhat worried about wildfires,85,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X127_BOL,29,Chapter 4,Bolivia: % very or somewhat worried about wildfires,84,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X128,30,Chapter 4,United States: % very or somewhat worried about wildfires,46,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X129,30,Chapter 4,United States: rank among 140 countries on % worried about wildfires ('109th'),109,rank,2,text,N,,"Rank on the rounded percentages, US placed last among the countries tied at 46% (107th-109th); 111th on unrounded values."
+X130,30,Chapter 4,"United States, West: % worried about wildfires",83,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X131,30,Chapter 4,"United States, Northeast: % worried about wildfires",40,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X132,30,Chapter 4,"United States, South: % worried about wildfires",36,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X133,30,Chapter 4,"United States, Midwest: % worried about wildfires",25,pct,,text,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+X134,30,Chapter 4,United States: West's wildfire worry relative to the next-highest region ('more than twice'),2,ratio,0.5,text,N,,83/40 from the chart figures; the printed claim is 'more than twice'.
+C4_6_wildfires_northeast,30,Chart 4.6,"United States, Northeast: % very or somewhat worried about wildfires",40,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Region from REGION2_USA."
+C4_6_wildfires_midwest,30,Chart 4.6,"United States, Midwest: % very or somewhat worried about wildfires",25,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Region from REGION2_USA."
+C4_6_wildfires_south,30,Chart 4.6,"United States, South: % very or somewhat worried about wildfires",36,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Region from REGION2_USA."
+C4_6_wildfires_west,30,Chart 4.6,"United States, West: % very or somewhat worried about wildfires",83,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Region from REGION2_USA."
+C4_6_severe_weather_northeast,30,Chart 4.6,"United States, Northeast: % very or somewhat worried about severe weather events",61,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Region from REGION2_USA."
+C4_6_severe_weather_midwest,30,Chart 4.6,"United States, Midwest: % very or somewhat worried about severe weather events",58,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Region from REGION2_USA."
+C4_6_severe_weather_south,30,Chart 4.6,"United States, South: % very or somewhat worried about severe weather events",77,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Region from REGION2_USA."
+C4_6_severe_weather_west,30,Chart 4.6,"United States, West: % very or somewhat worried about severe weather events",52,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Region from REGION2_USA."
+C4_6_prolonged_weather_northeast,30,Chart 4.6,"United States, Northeast: % very or somewhat worried about severe prolonged weather events",68,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Region from REGION2_USA."
+C4_6_prolonged_weather_midwest,30,Chart 4.6,"United States, Midwest: % very or somewhat worried about severe prolonged weather events",56,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Region from REGION2_USA."
+C4_6_prolonged_weather_south,30,Chart 4.6,"United States, South: % very or somewhat worried about severe prolonged weather events",61,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Region from REGION2_USA."
+C4_6_prolonged_weather_west,30,Chart 4.6,"United States, West: % very or somewhat worried about severe prolonged weather events",73,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Region from REGION2_USA."
+C4_6_air_northeast,30,Chart 4.6,"United States, Northeast: % very or somewhat worried about the air you breathe",45,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Region from REGION2_USA."
+C4_6_air_midwest,30,Chart 4.6,"United States, Midwest: % very or somewhat worried about the air you breathe",52,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Region from REGION2_USA."
+C4_6_air_south,30,Chart 4.6,"United States, South: % very or somewhat worried about the air you breathe",44,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Region from REGION2_USA."
+C4_6_air_west,30,Chart 4.6,"United States, West: % very or somewhat worried about the air you breathe",49,pct,,chart,N,,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Region from REGION2_USA."
+C4_8_central_asia_cities,32,Chart 4.8,"Central Asia, cities: % very or somewhat worried about the air they breathe",59,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_central_asia_towns,32,Chart 4.8,"Central Asia, towns: % very or somewhat worried about the air they breathe",45,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_central_asia_rural,32,Chart 4.8,"Central Asia, rural: % very or somewhat worried about the air they breathe",38,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_southern_europe_cities,32,Chart 4.8,"Southern Europe, cities: % very or somewhat worried about the air they breathe",68,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_southern_europe_towns,32,Chart 4.8,"Southern Europe, towns: % very or somewhat worried about the air they breathe",61,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_southern_europe_rural,32,Chart 4.8,"Southern Europe, rural: % very or somewhat worried about the air they breathe",52,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_northern_america_cities,32,Chart 4.8,"Northern America, cities: % very or somewhat worried about the air they breathe",54,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_northern_america_towns,32,Chart 4.8,"Northern America, towns: % very or somewhat worried about the air they breathe",40,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_northern_america_rural,32,Chart 4.8,"Northern America, rural: % very or somewhat worried about the air they breathe",39,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_southern_asia_cities,32,Chart 4.8,"Southern Asia, cities: % very or somewhat worried about the air they breathe",50,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_southern_asia_towns,32,Chart 4.8,"Southern Asia, towns: % very or somewhat worried about the air they breathe",43,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_southern_asia_rural,32,Chart 4.8,"Southern Asia, rural: % very or somewhat worried about the air they breathe",35,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_latam_cities,32,Chart 4.8,"Latin America and the Caribbean, cities: % very or somewhat worried about the air they breathe",65,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_latam_towns,32,Chart 4.8,"Latin America and the Caribbean, towns: % very or somewhat worried about the air they breathe",63,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_latam_rural,32,Chart 4.8,"Latin America and the Caribbean, rural: % very or somewhat worried about the air they breathe",52,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_southeastern_asia_cities,32,Chart 4.8,"Southeastern Asia, cities: % very or somewhat worried about the air they breathe",61,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_southeastern_asia_towns,32,Chart 4.8,"Southeastern Asia, towns: % very or somewhat worried about the air they breathe",45,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_southeastern_asia_rural,32,Chart 4.8,"Southeastern Asia, rural: % very or somewhat worried about the air they breathe",48,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_eastern_europe_cities,32,Chart 4.8,"Eastern Europe, cities: % very or somewhat worried about the air they breathe",55,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_eastern_europe_towns,32,Chart 4.8,"Eastern Europe, towns: % very or somewhat worried about the air they breathe",52,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_eastern_europe_rural,32,Chart 4.8,"Eastern Europe, rural: % very or somewhat worried about the air they breathe",44,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_southern_africa_cities,32,Chart 4.8,"Southern Africa, cities: % very or somewhat worried about the air they breathe",52,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_southern_africa_towns,32,Chart 4.8,"Southern Africa, towns: % very or somewhat worried about the air they breathe",40,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_southern_africa_rural,32,Chart 4.8,"Southern Africa, rural: % very or somewhat worried about the air they breathe",41,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_anz_cities,32,Chart 4.8,"Australia and New Zealand, cities: % very or somewhat worried about the air they breathe",29,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_anz_towns,32,Chart 4.8,"Australia and New Zealand, towns: % very or somewhat worried about the air they breathe",24,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_anz_rural,32,Chart 4.8,"Australia and New Zealand, rural: % very or somewhat worried about the air they breathe",21,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_middle_east_cities,32,Chart 4.8,"Middle East, cities: % very or somewhat worried about the air they breathe",42,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_middle_east_towns,32,Chart 4.8,"Middle East, towns: % very or somewhat worried about the air they breathe",40,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_middle_east_rural,32,Chart 4.8,"Middle East, rural: % very or somewhat worried about the air they breathe",35,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_north_africa_cities,32,Chart 4.8,"Northern Africa, cities: % very or somewhat worried about the air they breathe",32,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_north_africa_towns,32,Chart 4.8,"Northern Africa, towns: % very or somewhat worried about the air they breathe",28,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_north_africa_rural,32,Chart 4.8,"Northern Africa, rural: % very or somewhat worried about the air they breathe",27,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_east_africa_cities,32,Chart 4.8,"Eastern Africa, cities: % very or somewhat worried about the air they breathe",44,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_east_africa_towns,32,Chart 4.8,"Eastern Africa, towns: % very or somewhat worried about the air they breathe",36,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_east_africa_rural,32,Chart 4.8,"Eastern Africa, rural: % very or somewhat worried about the air they breathe",41,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_nw_europe_cities,32,Chart 4.8,"Northern/Western Europe, cities: % very or somewhat worried about the air they breathe",43,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_nw_europe_towns,32,Chart 4.8,"Northern/Western Europe, towns: % very or somewhat worried about the air they breathe",41,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_nw_europe_rural,32,Chart 4.8,"Northern/Western Europe, rural: % very or somewhat worried about the air they breathe",41,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_eastern_asia_cities,32,Chart 4.8,"Eastern Asia, cities: % very or somewhat worried about the air they breathe",69,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_eastern_asia_towns,32,Chart 4.8,"Eastern Asia, towns: % very or somewhat worried about the air they breathe",67,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_eastern_asia_rural,32,Chart 4.8,"Eastern Asia, rural: % very or somewhat worried about the air they breathe",67,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_cw_africa_cities,32,Chart 4.8,"Central/Western Africa, cities: % very or somewhat worried about the air they breathe",46,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data. Printed as '46' without a % sign."
+C4_8_cw_africa_towns,32,Chart 4.8,"Central/Western Africa, towns: % very or somewhat worried about the air they breathe",41,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+C4_8_cw_africa_rural,32,Chart 4.8,"Central/Western Africa, rural: % very or somewhat worried about the air they breathe",47,pct,,chart,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README). Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data."
+X135,33,Chapter 4,"Of the 10 countries with the largest urban-rural gaps in worry about air, number in Central Asia (Armenia, Georgia, Uzbekistan)",3,count,0,text,Y,GWP_DEGURBA,
+X136,33,Chapter 4,"Of the 10 countries with the largest urban-rural gaps in worry about air, number in the Balkans (Albania, Greece, Bulgaria, Kosovo)",4,count,0,text,Y,GWP_DEGURBA,
+T4_1_MNG_cities,33,Table 4.1,"Mongolia, cities: % very or somewhat worried about the air they breathe",97,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_MNG_towns,33,Table 4.1,"Mongolia, towns: % very or somewhat worried about the air they breathe",68,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_MNG_rural,33,Table 4.1,"Mongolia, rural: % very or somewhat worried about the air they breathe",49,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_ALB_cities,33,Table 4.1,"Albania, cities: % very or somewhat worried about the air they breathe",82,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_ALB_towns,33,Table 4.1,"Albania, towns: % very or somewhat worried about the air they breathe",59,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_ALB_rural,33,Table 4.1,"Albania, rural: % very or somewhat worried about the air they breathe",37,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_GEO_cities,33,Table 4.1,"Georgia, cities: % very or somewhat worried about the air they breathe",76,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_GEO_towns,33,Table 4.1,"Georgia, towns: % very or somewhat worried about the air they breathe",65,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_GEO_rural,33,Table 4.1,"Georgia, rural: % very or somewhat worried about the air they breathe",34,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_ARM_cities,33,Table 4.1,"Armenia, cities: % very or somewhat worried about the air they breathe",73,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_ARM_towns,33,Table 4.1,"Armenia, towns: % very or somewhat worried about the air they breathe",55,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_ARM_rural,33,Table 4.1,"Armenia, rural: % very or somewhat worried about the air they breathe",33,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_GRC_cities,33,Table 4.1,"Greece, cities: % very or somewhat worried about the air they breathe",83,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_GRC_towns,33,Table 4.1,"Greece, towns: % very or somewhat worried about the air they breathe",55,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_GRC_rural,33,Table 4.1,"Greece, rural: % very or somewhat worried about the air they breathe",44,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_BGR_cities,33,Table 4.1,"Bulgaria, cities: % very or somewhat worried about the air they breathe",70,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_BGR_towns,33,Table 4.1,"Bulgaria, towns: % very or somewhat worried about the air they breathe",50,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_BGR_rural,33,Table 4.1,"Bulgaria, rural: % very or somewhat worried about the air they breathe",33,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_XKX_cities,33,Table 4.1,"Kosovo, cities: % very or somewhat worried about the air they breathe",60,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_XKX_towns,33,Table 4.1,"Kosovo, towns: % very or somewhat worried about the air they breathe",42,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_XKX_rural,33,Table 4.1,"Kosovo, rural: % very or somewhat worried about the air they breathe",27,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_MDG_cities,33,Table 4.1,"Madagascar, cities: % very or somewhat worried about the air they breathe",88,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_MDG_towns,33,Table 4.1,"Madagascar, towns: % very or somewhat worried about the air they breathe",62,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_MDG_rural,33,Table 4.1,"Madagascar, rural: % very or somewhat worried about the air they breathe",55,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_NAM_cities,33,Table 4.1,"Namibia, cities: % very or somewhat worried about the air they breathe",63,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_NAM_towns,33,Table 4.1,"Namibia, towns: % very or somewhat worried about the air they breathe",32,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_NAM_rural,33,Table 4.1,"Namibia, rural: % very or somewhat worried about the air they breathe",32,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_UZB_cities,33,Table 4.1,"Uzbekistan, cities: % very or somewhat worried about the air they breathe",58,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_UZB_towns,33,Table 4.1,"Uzbekistan, towns: % very or somewhat worried about the air they breathe",44,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+T4_1_UZB_rural,33,Table 4.1,"Uzbekistan, rural: % very or somewhat worried about the air they breathe",32,pct,,table,Y,GWP_DEGURBA,"Sum of the rounded 'very' and 'somewhat' percentages, as the report does (see README)"
+C4_9_experience_x7plus,33,Chart 4.9,Countries where PM2.5 is 7x or more the WHO guideline: median % personally harmed by the air they breathe,8,pct,,chart,N,,"External data: World Bank EN.ATM.PM25.MC.M3 (2023), snapshot in reports/external/; the report used 2024 AQI data. Median of country-level percentages; bands are PM2.5 / 5 ug/m3 (WHO guideline)."
+C4_9_experience_x5_7,33,Chart 4.9,Countries where PM2.5 is 5-7x the WHO guideline: median % personally harmed by the air they breathe,5,pct,,chart,N,,"External data: World Bank EN.ATM.PM25.MC.M3 (2023), snapshot in reports/external/; the report used 2024 AQI data. Median of country-level percentages; bands are PM2.5 / 5 ug/m3 (WHO guideline)."
+C4_9_experience_x3_5,33,Chart 4.9,Countries where PM2.5 is 3-5x the WHO guideline: median % personally harmed by the air they breathe,5,pct,,chart,N,,"External data: World Bank EN.ATM.PM25.MC.M3 (2023), snapshot in reports/external/; the report used 2024 AQI data. Median of country-level percentages; bands are PM2.5 / 5 ug/m3 (WHO guideline)."
+C4_9_experience_x2_3,33,Chart 4.9,Countries where PM2.5 is 2-3x the WHO guideline: median % personally harmed by the air they breathe,5,pct,,chart,N,,"External data: World Bank EN.ATM.PM25.MC.M3 (2023), snapshot in reports/external/; the report used 2024 AQI data. Median of country-level percentages; bands are PM2.5 / 5 ug/m3 (WHO guideline)."
+C4_9_experience_lt2x,33,Chart 4.9,Countries where PM2.5 is safe or less than 2x the WHO guideline: median % personally harmed by the air they breathe,3,pct,,chart,N,,"External data: World Bank EN.ATM.PM25.MC.M3 (2023), snapshot in reports/external/; the report used 2024 AQI data. Median of country-level percentages; bands are PM2.5 / 5 ug/m3 (WHO guideline)."
+C4_9_worry_x7plus,33,Chart 4.9,Countries where PM2.5 is 7x or more the WHO guideline: median % very or somewhat worried about the air they breathe,44,pct,,chart,N,,"External data: World Bank EN.ATM.PM25.MC.M3 (2023), snapshot in reports/external/; the report used 2024 AQI data. Median of country-level percentages; bands are PM2.5 / 5 ug/m3 (WHO guideline)."
+C4_9_worry_x5_7,33,Chart 4.9,Countries where PM2.5 is 5-7x the WHO guideline: median % very or somewhat worried about the air they breathe,46,pct,,chart,N,,"External data: World Bank EN.ATM.PM25.MC.M3 (2023), snapshot in reports/external/; the report used 2024 AQI data. Median of country-level percentages; bands are PM2.5 / 5 ug/m3 (WHO guideline)."
+C4_9_worry_x3_5,33,Chart 4.9,Countries where PM2.5 is 3-5x the WHO guideline: median % very or somewhat worried about the air they breathe,47,pct,,chart,N,,"External data: World Bank EN.ATM.PM25.MC.M3 (2023), snapshot in reports/external/; the report used 2024 AQI data. Median of country-level percentages; bands are PM2.5 / 5 ug/m3 (WHO guideline)."
+C4_9_worry_x2_3,33,Chart 4.9,Countries where PM2.5 is 2-3x the WHO guideline: median % very or somewhat worried about the air they breathe,51,pct,,chart,N,,"External data: World Bank EN.ATM.PM25.MC.M3 (2023), snapshot in reports/external/; the report used 2024 AQI data. Median of country-level percentages; bands are PM2.5 / 5 ug/m3 (WHO guideline)."
+C4_9_worry_lt2x,33,Chart 4.9,Countries where PM2.5 is safe or less than 2x the WHO guideline: median % very or somewhat worried about the air they breathe,42,pct,,chart,N,,"External data: World Bank EN.ATM.PM25.MC.M3 (2023), snapshot in reports/external/; the report used 2024 AQI data. Median of country-level percentages; bands are PM2.5 / 5 ug/m3 (WHO guideline)."
+X137,33,Chapter 4,Countries 2-7x over WHO PM2.5 guideline: median % personally harmed by air ('drop to 5%'),5,pct,,text,N,,"External data: World Bank EN.ATM.PM25.MC.M3 (2023), snapshot in reports/external/; the report used 2024 AQI data. Median of country-level percentages; bands are PM2.5 / 5 ug/m3 (WHO guideline)."
+T4_2_severe_weather_PHL,34,Table 4.2,PHL: % personally harmed by severe weather events,62,pct,,table,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+T4_2_severe_weather_TCD,34,Table 4.2,TCD: % personally harmed by severe weather events,50,pct,,table,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+T4_2_severe_weather_COM,34,Table 4.2,COM: % personally harmed by severe weather events,36,pct,,table,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+T4_2_severe_weather_NER,34,Table 4.2,NER: % personally harmed by severe weather events,35,pct,,table,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+T4_2_severe_weather_CHN,34,Table 4.2,CHN: % personally harmed by severe weather events,33,pct,,table,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+T4_2_severe_weather_MDG,34,Table 4.2,MDG: % personally harmed by severe weather events,28,pct,,table,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+T4_2_severe_weather_MOZ,34,Table 4.2,MOZ: % personally harmed by severe weather events,27,pct,,table,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+T4_2_severe_weather_BGD,34,Table 4.2,BGD: % personally harmed by severe weather events,26,pct,,table,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+T4_2_severe_weather_SOM,34,Table 4.2,SOM: % personally harmed by severe weather events,25,pct,,table,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+T4_2_severe_weather_MWI,34,Table 4.2,MWI: % personally harmed by severe weather events,25,pct,,table,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+T4_2_severe_weather_top10,34,Table 4.2,"The 10 countries most harmed by severe weather events (ISO3, alphabetical)",BGD CHN COM MDG MOZ MWI NER PHL SOM TCD,text,,table,N,,Ranked on the rounded (displayed) percentages.
+T4_2_prolonged_weather_PHL,34,Table 4.2,PHL: % personally harmed by severe prolonged weather events,62,pct,,table,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+T4_2_prolonged_weather_COM,34,Table 4.2,COM: % personally harmed by severe prolonged weather events,44,pct,,table,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+T4_2_prolonged_weather_TCD,34,Table 4.2,TCD: % personally harmed by severe prolonged weather events,44,pct,,table,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+T4_2_prolonged_weather_ZMB,34,Table 4.2,ZMB: % personally harmed by severe prolonged weather events,37,pct,,table,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+T4_2_prolonged_weather_SOM,34,Table 4.2,SOM: % personally harmed by severe prolonged weather events,35,pct,,table,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+T4_2_prolonged_weather_MWI,34,Table 4.2,MWI: % personally harmed by severe prolonged weather events,33,pct,,table,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+T4_2_prolonged_weather_LSO,34,Table 4.2,LSO: % personally harmed by severe prolonged weather events,32,pct,,table,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+T4_2_prolonged_weather_MDG,34,Table 4.2,MDG: % personally harmed by severe prolonged weather events,32,pct,,table,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+T4_2_prolonged_weather_MOZ,34,Table 4.2,MOZ: % personally harmed by severe prolonged weather events,29,pct,,table,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+T4_2_prolonged_weather_FRA,34,Table 4.2,FRA: % personally harmed by severe prolonged weather events,29,pct,,table,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+T4_2_prolonged_weather_top10,34,Table 4.2,"The 10 countries most harmed by severe prolonged weather events (ISO3, alphabetical)",COM FRA LSO MDG MOZ MWI PHL SOM TCD ZMB,text,,table,N,,Ranked on the rounded (displayed) percentages.
+X138,34,Chapter 4,Philippines: % personally harmed by both severe and severe prolonged weather events (Table 4.2 subtitle),62,pct,,text,N,,"Personally experienced = 'yes, personally' + 'both', summed after rounding each, as the report does (see README)"
+X139,36,Chapter 4,Adults: % very worried about severe prolonged weather events ('one-third'),33,pct,,text,N,,
+X140,36,Chapter 4,Adults: % somewhat worried about severe prolonged weather events,38,pct,,text,N,,
+X141,36,Chapter 4,Fifth-highest country % saying climate change is 'not a threat at all' ('at least 29% or more' in the top five),29,pct,,text,N,,"WP20719 = 3. The top five are Bahrain, Ethiopia, Iraq, Saudi Arabia and the United Arab Emirates."
+X142,36,Chapter 4,"Of Bahrain, Saudi Arabia and the United Arab Emirates, number among the five countries with most saying climate change is no threat",3,count,0,text,N,,
+C4_10_global_very,36,Chart 4.10,Global: % very worried about severe prolonged weather events,33,pct,,chart,N,,
+C4_10_global_somewhat,36,Chart 4.10,Global: % somewhat worried about severe prolonged weather events,38,pct,,chart,N,,
+C4_10_ISR_very,36,Chart 4.10,Israel: % very worried about severe prolonged weather events,17,pct,,chart,N,,
+C4_10_ISR_somewhat,36,Chart 4.10,Israel: % somewhat worried about severe prolonged weather events,33,pct,,chart,N,,
+C4_10_ETH_very,36,Chart 4.10,Ethiopia: % very worried about severe prolonged weather events,24,pct,,chart,N,,
+C4_10_ETH_somewhat,36,Chart 4.10,Ethiopia: % somewhat worried about severe prolonged weather events,26,pct,,chart,N,,
+C4_10_EST_very,36,Chart 4.10,Estonia: % very worried about severe prolonged weather events,12,pct,,chart,N,,
+C4_10_EST_somewhat,36,Chart 4.10,Estonia: % somewhat worried about severe prolonged weather events,38,pct,,chart,N,,
+C4_10_ARE_very,36,Chart 4.10,United Arab Emirates: % very worried about severe prolonged weather events,20,pct,,chart,N,,
+C4_10_ARE_somewhat,36,Chart 4.10,United Arab Emirates: % somewhat worried about severe prolonged weather events,27,pct,,chart,N,,
+C4_10_BHR_very,36,Chart 4.10,Bahrain: % very worried about severe prolonged weather events,22,pct,,chart,N,,
+C4_10_BHR_somewhat,36,Chart 4.10,Bahrain: % somewhat worried about severe prolonged weather events,23,pct,,chart,N,,
+C4_10_SAU_very,36,Chart 4.10,Saudi Arabia: % very worried about severe prolonged weather events,9,pct,,chart,N,,
+C4_10_SAU_somewhat,36,Chart 4.10,Saudi Arabia: % somewhat worried about severe prolonged weather events,35,pct,,chart,N,,
+C4_10_DNK_very,36,Chart 4.10,Denmark: % very worried about severe prolonged weather events,9,pct,,chart,N,,
+C4_10_DNK_somewhat,36,Chart 4.10,Denmark: % somewhat worried about severe prolonged weather events,35,pct,,chart,N,,
+C4_10_NOR_very,36,Chart 4.10,Norway: % very worried about severe prolonged weather events,7,pct,,chart,N,,
+C4_10_NOR_somewhat,36,Chart 4.10,Norway: % somewhat worried about severe prolonged weather events,35,pct,,chart,N,,
+C4_10_OMN_very,36,Chart 4.10,Oman: % very worried about severe prolonged weather events,7,pct,,chart,N,,
+C4_10_OMN_somewhat,36,Chart 4.10,Oman: % somewhat worried about severe prolonged weather events,26,pct,,chart,N,,
+C4_10_ISL_very,36,Chart 4.10,Iceland: % very worried about severe prolonged weather events,4,pct,,chart,N,,
+C4_10_ISL_somewhat,36,Chart 4.10,Iceland: % somewhat worried about severe prolonged weather events,25,pct,,chart,N,,
+C4_10_countries,36,Chart 4.10,"The 10 countries least worried about severe prolonged weather events (ISO3, alphabetical)",ARE BHR DNK EST ETH ISL ISR NOR OMN SAU,text,,chart,N,,Ranked on very + somewhat worried (rounded).
