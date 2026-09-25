@@ -18,9 +18,10 @@ from pathlib import Path
 
 import pandas as pd
 
+from .external import ExternalDataRequired
 from .gallup import GallupDataRequired
 
-STATUS_ORDER = ["MATCH", "WITHIN_TOLERANCE", "DIFFERENT", "GALLUP_ONLY", "ERROR", "NOT_RUN"]
+STATUS_ORDER = ["MATCH", "WITHIN_TOLERANCE", "DIFFERENT", "GALLUP_ONLY", "EXTERNAL_ONLY", "ERROR", "NOT_RUN"]
 
 
 def _key(key):
@@ -46,9 +47,9 @@ def compare(published, reproduced, tolerance):
     """Status of one numeric or text finding against its published value."""
     if not _is_number(published):
         return "MATCH" if str(reproduced).strip().lower() == published.strip().lower() else "DIFFERENT"
-    pub, rep = float(published), float(reproduced)
-    if math.isnan(rep):
+    if not _is_number(reproduced) or math.isnan(float(reproduced)):
         return "DIFFERENT"
+    pub, rep = float(published), float(reproduced)
     # MATCH: the reproduced value rounds to exactly the published figure.
     if round(rep, _decimals(published)) == pub:
         return "MATCH"
@@ -84,6 +85,9 @@ class Report:
                 value = fn()
             except GallupDataRequired as exc:
                 rows += [(i, "", "GALLUP_ONLY", str(exc)) for i in self._ids_for(finding_id)]
+                continue
+            except ExternalDataRequired as exc:
+                rows += [(i, "", "EXTERNAL_ONLY", str(exc)) for i in self._ids_for(finding_id)]
                 continue
             except Exception as exc:  # recorded, and makes the script exit non-zero
                 rows += [(i, "", "ERROR", f"{type(exc).__name__}: {exc}") for i in self._ids_for(finding_id)]
@@ -143,7 +147,8 @@ def build_table(report_dir):
         if r is not None and fid in r.index and r.loc[fid, "status"] == "ok":
             rec["r"] = r.loc[fid, "value"]
             if rec["python"] and _is_number(rec["python"]) and _is_number(rec["r"]):
-                if abs(float(rec["python"]) - float(rec["r"])) > 1e-6:
+                py_value, r_value = float(rec["python"]), float(rec["r"])
+                if abs(py_value - r_value) > 1e-6 * max(1.0, abs(py_value)):
                     rec["note"] = ("Python and R differ. " + rec["note"]).strip()
         records.append(rec)
     return pd.DataFrame(records)
@@ -175,6 +180,7 @@ def write_results(report_dir):
     lines += [
         "MATCH: rounds to the published figure. WITHIN_TOLERANCE: within the row's tolerance "
         "(default ±1 point). GALLUP_ONLY: needs Gallup World Poll data that is not public. "
+        "EXTERNAL_ONLY: needs non-poll data that is not redistributed here (see reports/external/). "
         "See `published_figures.csv` for each finding's source page.",
         "",
         "| ID | Page | Finding | Published | Python | R | Status | Note |",

@@ -12,6 +12,7 @@ from .data import (
     value_labels,
     variable_label,
 )
+from .external import EXTERNAL_DIR, ExternalDataRequired, external_path
 from .gallup import GALLUP_ENV, GallupDataRequired, load_gallup, merge_gallup
 from .results import STATUS_ORDER, Report, build_table, write_results
 from .stats import DEFAULT_WEIGHT, distribution, pct, wmean

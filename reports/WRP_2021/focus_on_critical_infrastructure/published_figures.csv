@@ -1,0 +1,192 @@
+finding_id,page,section,description,published_value,unit,tolerance,source,requires_gallup,gallup_items,note
+X01,1,Summary,Lost access to at least one of five critical services for more than a day in the past 12 months,57,pct,,text,N,,
+X02,1,Summary,"Lost access to at least one critical service, among people who experienced a disaster in the past five years",75,pct,,text,N,,"Tried: WGT 70.0%, substantive answers to all five 68.7%, mean of country figures 66.4%. The public data gives 69.1%."
+X03,1,Summary,National government well prepared to deal with a disaster (global),51,pct,,text,N,,"National government includes Myanmar's 'government in power' item (WP22526), asked there instead of WP22241."
+X04,1,Summary,Local government well prepared to deal with a disaster (global),48,pct,,text,N,,
+X05,1,Summary,"Gap (national minus local government well prepared), global",3,pp,,text,N,,
+X06,1,Summary,"Gap (national minus local), among those who experienced a disaster and lost access to clean water",7,pp,,text,N,,
+X07,2,Introduction,People who have experienced a disaster who also lost access to critical infrastructure for more than a day ('3 in 4'),75,pct,,text,N,,Same figure as X02.
+C1_electricity_disaster,3,Chart 1,"Lost access for more than a day in past 12 months: Electricity, experienced a disaster",53,pct,,chart,N,,
+C1_electricity_no_disaster,3,Chart 1,"Lost access for more than a day in past 12 months: Electricity, not experienced a disaster",39,pct,,chart,N,,
+C1_water_disaster,3,Chart 1,"Lost access for more than a day in past 12 months: Clean water, experienced a disaster",32,pct,,chart,N,,
+C1_water_no_disaster,3,Chart 1,"Lost access for more than a day in past 12 months: Clean water, not experienced a disaster",22,pct,,chart,N,,
+C1_food_disaster,3,Chart 1,"Lost access for more than a day in past 12 months: Food, experienced a disaster",23,pct,,chart,N,,
+C1_food_no_disaster,3,Chart 1,"Lost access for more than a day in past 12 months: Food, not experienced a disaster",13,pct,,chart,N,,
+C1_medicine_disaster,3,Chart 1,"Lost access for more than a day in past 12 months: Medicine/medical care, experienced a disaster",29,pct,,chart,N,,
+C1_medicine_no_disaster,3,Chart 1,"Lost access for more than a day in past 12 months: Medicine/medical care, not experienced a disaster",28,pct,,chart,N,,"The bar is drawn at 28%, next to 29% for those who experienced a disaster."
+C1_telephone_disaster,3,Chart 1,"Lost access for more than a day in past 12 months: Telephone, experienced a disaster",31,pct,,chart,N,,
+C1_telephone_no_disaster,3,Chart 1,"Lost access for more than a day in past 12 months: Telephone, not experienced a disaster",20,pct,,chart,N,,
+X08,3,Chart 1,Experienced a disaster: went without electricity for more than a day ('over half'),50,pct,10,text,N,,'Over half' is recorded as 50 with a tolerance up to 60.
+X09,3,Chart 1,Experienced a disaster: unable to obtain food for more than a day ('nearly a quarter'),25,pct,5,text,N,,'Nearly a quarter' is recorded as 25 with a tolerance of 5.
+X10,3,Chart 1,"Most common critical service lost, among those who experienced a disaster",electricity,text,,text,N,,
+X11,3,Chart 1,"Least common critical service lost, among those who experienced a disaster",food,text,,text,N,,
+C2_r2,3,Chart 2,"R-squared: % who could protect self or family in a disaster against mean perceived governmental preparedness, 15 regions",0.2,r2,0.05,chart,N,,Linear fit across the 15 regions. The points are not labelled with values.
+X12,4,Chart 3,South-eastern Asia: mean perceived governmental preparedness (highest),65,pct,,text,N,,
+X13,4,Chart 3,South Asia: mean perceived governmental preparedness (second highest),62,pct,,text,N,,
+X14,4,Chart 3,Latin America and Caribbean: mean perceived governmental preparedness (lowest),27,pct,,text,N,,
+X15,4,Chart 3,Central/Western Africa: mean perceived governmental preparedness (second lowest),31,pct,,text,N,,
+C3_south_eastern_asia_local,4,Chart 3,"Preparedness to deal with a future disaster: % local government well prepared, South-eastern Asia",65,pct,,chart,N,,
+C3_south_eastern_asia_national,4,Chart 3,"Preparedness to deal with a future disaster: % national government well prepared, South-eastern Asia",65,pct,,chart,N,,
+C3_south_eastern_asia_mean,4,Chart 3,"Preparedness to deal with a future disaster: mean perceived governmental preparedness, South-eastern Asia",65,pct,,chart,N,,
+C3_south_asia_local,4,Chart 3,"Preparedness to deal with a future disaster: % local government well prepared, South Asia",61,pct,,chart,N,,
+C3_south_asia_national,4,Chart 3,"Preparedness to deal with a future disaster: % national government well prepared, South Asia",63,pct,,chart,N,,
+C3_south_asia_mean,4,Chart 3,"Preparedness to deal with a future disaster: mean perceived governmental preparedness, South Asia",62,pct,,chart,N,,
+C3_australia_nz_local,4,Chart 3,"Preparedness to deal with a future disaster: % local government well prepared, Australia and New Zealand",55,pct,,chart,N,,
+C3_australia_nz_national,4,Chart 3,"Preparedness to deal with a future disaster: % national government well prepared, Australia and New Zealand",58,pct,,chart,N,,
+C3_australia_nz_mean,4,Chart 3,"Preparedness to deal with a future disaster: mean perceived governmental preparedness, Australia and New Zealand",57,pct,,chart,N,,
+C3_eastern_africa_local,4,Chart 3,"Preparedness to deal with a future disaster: % local government well prepared, Eastern Africa",48,pct,,chart,N,,
+C3_eastern_africa_national,4,Chart 3,"Preparedness to deal with a future disaster: % national government well prepared, Eastern Africa",60,pct,,chart,N,,
+C3_eastern_africa_mean,4,Chart 3,"Preparedness to deal with a future disaster: mean perceived governmental preparedness, Eastern Africa",54,pct,,chart,N,,
+C3_northern_america_local,4,Chart 3,"Preparedness to deal with a future disaster: % local government well prepared, Northern America",56,pct,,chart,N,,
+C3_northern_america_national,4,Chart 3,"Preparedness to deal with a future disaster: % national government well prepared, Northern America",50,pct,,chart,N,,
+C3_northern_america_mean,4,Chart 3,"Preparedness to deal with a future disaster: mean perceived governmental preparedness, Northern America",53,pct,,chart,N,,
+C3_central_asia_local,4,Chart 3,"Preparedness to deal with a future disaster: % local government well prepared, Central Asia",47,pct,,chart,N,,
+C3_central_asia_national,4,Chart 3,"Preparedness to deal with a future disaster: % national government well prepared, Central Asia",55,pct,,chart,N,,
+C3_central_asia_mean,4,Chart 3,"Preparedness to deal with a future disaster: mean perceived governmental preparedness, Central Asia",51,pct,,chart,N,,
+C3_north_africa_local,4,Chart 3,"Preparedness to deal with a future disaster: % local government well prepared, North Africa",39,pct,,chart,N,,
+C3_north_africa_national,4,Chart 3,"Preparedness to deal with a future disaster: % national government well prepared, North Africa",56,pct,,chart,N,,
+C3_north_africa_mean,4,Chart 3,"Preparedness to deal with a future disaster: mean perceived governmental preparedness, North Africa",48,pct,,chart,N,,
+C3_middle_east_local,4,Chart 3,"Preparedness to deal with a future disaster: % local government well prepared, Middle East",42,pct,,chart,N,,
+C3_middle_east_national,4,Chart 3,"Preparedness to deal with a future disaster: % national government well prepared, Middle East",44,pct,,chart,N,,
+C3_middle_east_mean,4,Chart 3,"Preparedness to deal with a future disaster: mean perceived governmental preparedness, Middle East",43,pct,,chart,N,,
+C3_east_asia_local,4,Chart 3,"Preparedness to deal with a future disaster: % local government well prepared, East Asia",43,pct,,chart,N,,
+C3_east_asia_national,4,Chart 3,"Preparedness to deal with a future disaster: % national government well prepared, East Asia",40,pct,,chart,N,,
+C3_east_asia_mean,4,Chart 3,"Preparedness to deal with a future disaster: mean perceived governmental preparedness, East Asia",42,pct,,chart,N,,
+C3_northern_western_europe_local,4,Chart 3,"Preparedness to deal with a future disaster: % local government well prepared, Northern/Western Europe",40,pct,,chart,N,,
+C3_northern_western_europe_national,4,Chart 3,"Preparedness to deal with a future disaster: % national government well prepared, Northern/Western Europe",37,pct,,chart,N,,
+C3_northern_western_europe_mean,4,Chart 3,"Preparedness to deal with a future disaster: mean perceived governmental preparedness, Northern/Western Europe",38,pct,,chart,N,,
+C3_southern_europe_local,4,Chart 3,"Preparedness to deal with a future disaster: % local government well prepared, Southern Europe",36,pct,,chart,N,,
+C3_southern_europe_national,4,Chart 3,"Preparedness to deal with a future disaster: % national government well prepared, Southern Europe",39,pct,,chart,N,,
+C3_southern_europe_mean,4,Chart 3,"Preparedness to deal with a future disaster: mean perceived governmental preparedness, Southern Europe",38,pct,,chart,N,,
+C3_southern_africa_local,4,Chart 3,"Preparedness to deal with a future disaster: % local government well prepared, Southern Africa",30,pct,,chart,N,,
+C3_southern_africa_national,4,Chart 3,"Preparedness to deal with a future disaster: % national government well prepared, Southern Africa",38,pct,,chart,N,,
+C3_southern_africa_mean,4,Chart 3,"Preparedness to deal with a future disaster: mean perceived governmental preparedness, Southern Africa",34,pct,,chart,N,,
+C3_eastern_europe_local,4,Chart 3,"Preparedness to deal with a future disaster: % local government well prepared, Eastern Europe",29,pct,,chart,N,,
+C3_eastern_europe_national,4,Chart 3,"Preparedness to deal with a future disaster: % national government well prepared, Eastern Europe",36,pct,,chart,N,,
+C3_eastern_europe_mean,4,Chart 3,"Preparedness to deal with a future disaster: mean perceived governmental preparedness, Eastern Europe",32,pct,,chart,N,,
+C3_central_western_africa_local,4,Chart 3,"Preparedness to deal with a future disaster: % local government well prepared, Central/Western Africa",27,pct,,chart,N,,
+C3_central_western_africa_national,4,Chart 3,"Preparedness to deal with a future disaster: % national government well prepared, Central/Western Africa",35,pct,,chart,N,,
+C3_central_western_africa_mean,4,Chart 3,"Preparedness to deal with a future disaster: mean perceived governmental preparedness, Central/Western Africa",31,pct,,chart,N,,
+C3_latin_america_caribbean_local,4,Chart 3,"Preparedness to deal with a future disaster: % local government well prepared, Latin America and Caribbean",23,pct,,chart,N,,
+C3_latin_america_caribbean_national,4,Chart 3,"Preparedness to deal with a future disaster: % national government well prepared, Latin America and Caribbean",30,pct,,chart,N,,
+C3_latin_america_caribbean_mean,4,Chart 3,"Preparedness to deal with a future disaster: mean perceived governmental preparedness, Latin America and Caribbean",27,pct,,chart,N,,
+X16,4,Chart 3,Regions where more people think local government is well prepared than national government ('only in four regions'),4,count,0,chart,N,,"Chart annotation; counts unrounded gaps (South-eastern Asia, Northern America, East Asia, Northern/Western Europe)."
+T1_ARE_mean,4,Table 1,"Mean perceived governmental preparedness, United Arab Emirates",80,pct,,table,N,,
+T1_ARE_disaster,4,Table 1,"Experienced a disaster in the past five years, United Arab Emirates",5,pct,,table,N,,
+T1_ARE_rank,4,Table 1,"Disaster experience ranking (1 = highest), United Arab Emirates",117,rank,0,table,N,,Ranked among the countries with a mean perceived governmental preparedness (118 in the public data).
+T1_BGD_mean,4,Table 1,"Mean perceived governmental preparedness, Bangladesh",75,pct,,table,N,,
+T1_BGD_disaster,4,Table 1,"Experienced a disaster in the past five years, Bangladesh",48,pct,,table,N,,
+T1_BGD_rank,4,Table 1,"Disaster experience ranking (1 = highest), Bangladesh",11,rank,0,table,N,,Ranked among the countries with a mean perceived governmental preparedness (118 in the public data).
+T1_PHL_mean,4,Table 1,"Mean perceived governmental preparedness, Philippines",75,pct,,table,N,,
+T1_PHL_disaster,4,Table 1,"Experienced a disaster in the past five years, Philippines",82,pct,,table,N,,
+T1_PHL_rank,4,Table 1,"Disaster experience ranking (1 = highest), Philippines",1,rank,0,table,N,,Ranked among the countries with a mean perceived governmental preparedness (118 in the public data).
+T1_IDN_mean,4,Table 1,"Mean perceived governmental preparedness, Indonesia",73,pct,,table,N,,
+T1_IDN_disaster,4,Table 1,"Experienced a disaster in the past five years, Indonesia",34,pct,,table,N,,
+T1_IDN_rank,4,Table 1,"Disaster experience ranking (1 = highest), Indonesia",26,rank,0,table,N,,Ranked among the countries with a mean perceived governmental preparedness (118 in the public data).
+T1_SGP_mean,4,Table 1,"Mean perceived governmental preparedness, Singapore",73,pct,,table,N,,
+T1_SGP_disaster,4,Table 1,"Experienced a disaster in the past five years, Singapore",4,pct,,table,N,,
+T1_SGP_rank,4,Table 1,"Disaster experience ranking (1 = highest), Singapore",118,rank,0,table,N,,Ranked among the countries with a mean perceived governmental preparedness (118 in the public data).
+T1_ROU_mean,4,Table 1,"Mean perceived governmental preparedness, Romania",17,pct,,table,N,,
+T1_ROU_disaster,4,Table 1,"Experienced a disaster in the past five years, Romania",12,pct,,table,N,,
+T1_ROU_rank,4,Table 1,"Disaster experience ranking (1 = highest), Romania",104,rank,0,table,N,,Ranked among the countries with a mean perceived governmental preparedness (118 in the public data).
+T1_BOL_mean,4,Table 1,"Mean perceived governmental preparedness, Bolivia",16,pct,,table,N,,
+T1_BOL_disaster,4,Table 1,"Experienced a disaster in the past five years, Bolivia",22,pct,,table,N,,
+T1_BOL_rank,4,Table 1,"Disaster experience ranking (1 = highest), Bolivia",56,rank,0,table,N,,Ranked among the countries with a mean perceived governmental preparedness (118 in the public data).
+T1_PRY_mean,4,Table 1,"Mean perceived governmental preparedness, Paraguay",15,pct,,table,N,,
+T1_PRY_disaster,4,Table 1,"Experienced a disaster in the past five years, Paraguay",38,pct,,table,N,,
+T1_PRY_rank,4,Table 1,"Disaster experience ranking (1 = highest), Paraguay",23,rank,0,table,N,,Ranked among the countries with a mean perceived governmental preparedness (118 in the public data).
+T1_LBN_mean,4,Table 1,"Mean perceived governmental preparedness, Lebanon",15,pct,,table,N,,
+T1_LBN_disaster,4,Table 1,"Experienced a disaster in the past five years, Lebanon",12,pct,,table,N,,
+T1_LBN_rank,4,Table 1,"Disaster experience ranking (1 = highest), Lebanon",99,rank,0,table,N,,Ranked among the countries with a mean perceived governmental preparedness (118 in the public data).
+T1_AFG_mean,4,Table 1,"Mean perceived governmental preparedness, Afghanistan",12,pct,,table,N,,
+T1_AFG_disaster,4,Table 1,"Experienced a disaster in the past five years, Afghanistan",46,pct,,table,N,,
+T1_AFG_rank,4,Table 1,"Disaster experience ranking (1 = highest), Afghanistan",13,rank,0,table,N,,Ranked among the countries with a mean perceived governmental preparedness (118 in the public data).
+X17,4,Table 1,Countries in the disaster experience ranking ('of 119 countries'),119,count,,table,N,,"118 countries have both preparedness questions (or Myanmar's replacement); China, Algeria and Saudi Arabia were not asked."
+X18,4,Table 1,"Five countries with the highest mean perceived governmental preparedness (ISO3, alphabetical)","ARE, BGD, IDN, PHL, SGP",text,,text,N,,
+X19,4,Table 1,"Five countries with the lowest mean perceived governmental preparedness (ISO3, alphabetical)","AFG, BOL, LBN, PRY, ROU",text,,table,N,,
+X20,4,Table 1,Country with the lowest mean perceived governmental preparedness,AFG,text,,text,N,,
+X21,4,Table 1,Philippines: experienced a disaster in the past five years ('more than 4 in 5'),80,pct,5,text,N,,'More than 4 in 5' is recorded as 80 with a tolerance of 5.
+C4_global,5,Chart 4,Percentage-point difference (national minus local government well prepared): global average,3,pp,,chart,N,,
+C4_south_eastern_asia,5,Chart 4,Percentage-point difference (national minus local government well prepared): South-eastern Asia,0,pp,,chart,N,,
+C4_south_asia,5,Chart 4,Percentage-point difference (national minus local government well prepared): South Asia,2,pp,,chart,N,,
+C4_australia_nz,5,Chart 4,Percentage-point difference (national minus local government well prepared): Australia and New Zealand,3,pp,,chart,N,,
+C4_eastern_africa,5,Chart 4,Percentage-point difference (national minus local government well prepared): Eastern Africa,12,pp,,chart,N,,
+C4_northern_america,5,Chart 4,Percentage-point difference (national minus local government well prepared): Northern America,-6,pp,,chart,N,,
+C4_central_asia,5,Chart 4,Percentage-point difference (national minus local government well prepared): Central Asia,8,pp,,chart,N,,
+C4_north_africa,5,Chart 4,Percentage-point difference (national minus local government well prepared): North Africa,17,pp,,chart,N,,
+C4_middle_east,5,Chart 4,Percentage-point difference (national minus local government well prepared): Middle East,3,pp,,chart,N,,
+C4_east_asia,5,Chart 4,Percentage-point difference (national minus local government well prepared): East Asia,-4,pp,,chart,N,,
+C4_northern_western_europe,5,Chart 4,Percentage-point difference (national minus local government well prepared): Northern/Western Europe,-4,pp,,chart,N,,"Data -3.5; the chart's own rounded values (40% local, 37% national) also give -3."
+C4_southern_europe,5,Chart 4,Percentage-point difference (national minus local government well prepared): Southern Europe,3,pp,,chart,N,,
+C4_southern_africa,5,Chart 4,Percentage-point difference (national minus local government well prepared): Southern Africa,9,pp,,chart,N,,
+C4_eastern_europe,5,Chart 4,Percentage-point difference (national minus local government well prepared): Eastern Europe,7,pp,,chart,N,,
+C4_central_western_africa,5,Chart 4,Percentage-point difference (national minus local government well prepared): Central/Western Africa,8,pp,,chart,N,,
+C4_latin_america_caribbean,5,Chart 4,Percentage-point difference (national minus local government well prepared): Latin America and Caribbean,7,pp,,chart,N,,
+C4_mean_south_eastern_asia,5,Chart 4,Mean perceived governmental preparedness: South-eastern Asia,65,pct,,chart,N,,Repeats the Chart 3 column.
+C4_mean_south_asia,5,Chart 4,Mean perceived governmental preparedness: South Asia,62,pct,,chart,N,,Repeats the Chart 3 column.
+C4_mean_australia_nz,5,Chart 4,Mean perceived governmental preparedness: Australia and New Zealand,57,pct,,chart,N,,Repeats the Chart 3 column.
+C4_mean_eastern_africa,5,Chart 4,Mean perceived governmental preparedness: Eastern Africa,54,pct,,chart,N,,Repeats the Chart 3 column.
+C4_mean_northern_america,5,Chart 4,Mean perceived governmental preparedness: Northern America,53,pct,,chart,N,,Repeats the Chart 3 column.
+C4_mean_central_asia,5,Chart 4,Mean perceived governmental preparedness: Central Asia,51,pct,,chart,N,,Repeats the Chart 3 column.
+C4_mean_north_africa,5,Chart 4,Mean perceived governmental preparedness: North Africa,48,pct,,chart,N,,Repeats the Chart 3 column.
+C4_mean_middle_east,5,Chart 4,Mean perceived governmental preparedness: Middle East,43,pct,,chart,N,,Repeats the Chart 3 column.
+C4_mean_east_asia,5,Chart 4,Mean perceived governmental preparedness: East Asia,42,pct,,chart,N,,Repeats the Chart 3 column.
+C4_mean_northern_western_europe,5,Chart 4,Mean perceived governmental preparedness: Northern/Western Europe,38,pct,,chart,N,,Repeats the Chart 3 column.
+C4_mean_southern_europe,5,Chart 4,Mean perceived governmental preparedness: Southern Europe,38,pct,,chart,N,,Repeats the Chart 3 column.
+C4_mean_southern_africa,5,Chart 4,Mean perceived governmental preparedness: Southern Africa,34,pct,,chart,N,,Repeats the Chart 3 column.
+C4_mean_eastern_europe,5,Chart 4,Mean perceived governmental preparedness: Eastern Europe,32,pct,,chart,N,,Repeats the Chart 3 column.
+C4_mean_central_western_africa,5,Chart 4,Mean perceived governmental preparedness: Central/Western Africa,31,pct,,chart,N,,Repeats the Chart 3 column.
+C4_mean_latin_america_caribbean,5,Chart 4,Mean perceived governmental preparedness: Latin America and Caribbean,27,pct,,chart,N,,Repeats the Chart 3 column.
+X22,5,Chart 4,"National government well prepared to deal with a disaster (global, page 5)",51,pct,,text,N,,
+X23,5,Chart 4,"Local government well prepared to deal with a disaster (global, page 5)",48,pct,,text,N,,
+X24,5,Chart 4,"Gap (national minus local), global (page 5)",3,pp,,text,N,,
+X25,5,Chart 4,"Regions that favoured local government ('only three regions': East Asia, Northern/Western Europe, Northern America)",3,count,0,text,N,,"Counts regions whose gap rounds to below zero, as printed in Chart 4. South-eastern Asia (-0.5) prints as 0; see X16."
+X26,6,Chart 5,"Gap (national minus local), among those who experienced a disaster and lost access to any critical service",5,pp,,text,N,,
+X27,6,Chart 5,"Gap (national minus local), experienced a disaster and lost access to clean water (text)",6.8,pp,,text,N,,Printed to one decimal place; see README for the alternatives tried.
+X28,6,Chart 5,"Gap (national minus local), experienced a disaster and lost access to food (text)",6.6,pp,,text,N,,Printed to one decimal place; see README for the alternatives tried.
+C5_water,6,Chart 5,"Gap (national minus local), experienced a disaster and lost access to clean water",6.8,pp,,chart,N,,Printed to one decimal place; see README for the alternatives tried.
+C5_food,6,Chart 5,"Gap (national minus local), experienced a disaster and lost access to food",6.6,pp,,chart,N,,Printed to one decimal place; see README for the alternatives tried.
+C5_telephone,6,Chart 5,"Gap (national minus local), experienced a disaster and lost access to telephone",5.4,pp,,chart,N,,Printed to one decimal place; see README for the alternatives tried.
+C5_medicine,6,Chart 5,"Gap (national minus local), experienced a disaster and lost access to medicine/medical care",5.3,pp,,chart,N,,Printed to one decimal place; see README for the alternatives tried.
+C5_electricity,6,Chart 5,"Gap (national minus local), experienced a disaster and lost access to electricity",5.1,pp,,chart,N,,Printed to one decimal place; see README for the alternatives tried.
+X29,6,Chart 6,"North Africa: gap (national minus local), all respondents ('17')",17,pp,,text,N,,
+X30,6,Chart 6,"North Africa: gap (national minus local), experienced a disaster and lost access ('11')",11,pp,,text,N,,
+X31,6,Chart 6,North Africa: reduction in the gap among those who experienced a disaster and lost access ('6 percentage point reduction'),6,pp,,text,N,,
+X32,6,Chart 6,"Northern/Western Europe: gap (national minus local), all respondents ('-4')",-4,pp,,text,N,,
+X33,6,Chart 6,"Northern/Western Europe: gap (national minus local), experienced a disaster and lost access ('-12')",-12,pp,,text,N,,Same as C6_northern_western_europe.
+X34,6,Chart 6,Northern/Western Europe: shift towards local government among those who experienced a disaster and lost access ('8 percentage point'),8,pp,,text,N,,Uses X33; with the Chart 7 method (-11.5) the shift is 8.0.
+C6_global,7,Chart 6,"Gap (national minus local), experienced a disaster and lost access: global average",5,pp,,chart,N,,
+C6_south_eastern_asia,7,Chart 6,"Gap (national minus local), experienced a disaster and lost access: South-eastern Asia",0,pp,,chart,N,,
+C6_south_asia,7,Chart 6,"Gap (national minus local), experienced a disaster and lost access: South Asia",7,pp,,chart,N,,"The Chart 7 method (mean over the five services) gives 6.5, but moves 6 other regions more than 1 point away."
+C6_australia_nz,7,Chart 6,"Gap (national minus local), experienced a disaster and lost access: Australia and New Zealand",3,pp,,chart,N,,
+C6_eastern_africa,7,Chart 6,"Gap (national minus local), experienced a disaster and lost access: Eastern Africa",12,pp,,chart,N,,
+C6_northern_america,7,Chart 6,"Gap (national minus local), experienced a disaster and lost access: Northern America",-3,pp,,chart,N,,
+C6_central_asia,7,Chart 6,"Gap (national minus local), experienced a disaster and lost access: Central Asia",9,pp,,chart,N,,"The Chart 7 method (mean over the five services) gives 9.0, but moves 6 other regions more than 1 point away."
+C6_north_africa,7,Chart 6,"Gap (national minus local), experienced a disaster and lost access: North Africa",11,pp,,chart,N,,
+C6_middle_east,7,Chart 6,"Gap (national minus local), experienced a disaster and lost access: Middle East",1,pp,,chart,N,,
+C6_east_asia,7,Chart 6,"Gap (national minus local), experienced a disaster and lost access: East Asia",2,pp,,chart,N,,"The Chart 7 method (mean over the five services) gives 2.2, but moves 6 other regions more than 1 point away."
+C6_northern_western_europe,7,Chart 6,"Gap (national minus local), experienced a disaster and lost access: Northern/Western Europe",-12,pp,,chart,N,,"The Chart 7 method (mean over the five services) gives -11.5, but moves 6 other regions more than 1 point away."
+C6_southern_europe,7,Chart 6,"Gap (national minus local), experienced a disaster and lost access: Southern Europe",2,pp,,chart,N,,
+C6_southern_africa,7,Chart 6,"Gap (national minus local), experienced a disaster and lost access: Southern Africa",7,pp,,chart,N,,"The Chart 7 method (mean over the five services) gives 7.2, but moves 6 other regions more than 1 point away."
+C6_eastern_europe,7,Chart 6,"Gap (national minus local), experienced a disaster and lost access: Eastern Europe",6,pp,,chart,N,,
+C6_central_western_africa,7,Chart 6,"Gap (national minus local), experienced a disaster and lost access: Central/Western Africa",10,pp,,chart,N,,
+C6_latin_america_caribbean,7,Chart 6,"Gap (national minus local), experienced a disaster and lost access: Latin America and Caribbean",12,pp,,chart,N,,
+X35,7,Chart 6,Eastern Africa: gap in favour of national government ('the largest ... at 12 percentage points'),12,pp,,text,N,,
+C7_regional,7,Chart 7,"Eastern Africa: gap (national minus local), regional average",12,pp,,chart,N,,
+C7_MOZ_gap,7,Chart 7,"Gap (national minus local), experienced a disaster and lost access: Mozambique",6,pp,,chart,N,,Mean over the five services of the gap among those who experienced a disaster and lost that service.
+C7_MOZ_mean,7,Chart 7,"Mean perceived governmental preparedness, experienced a disaster and lost access: Mozambique",65,pct,,chart,N,,"Mean over the five services, as for the gap."
+C7_TZA_gap,7,Chart 7,"Gap (national minus local), experienced a disaster and lost access: Tanzania",18,pp,,chart,N,,Mean over the five services of the gap among those who experienced a disaster and lost that service.
+C7_TZA_mean,7,Chart 7,"Mean perceived governmental preparedness, experienced a disaster and lost access: Tanzania",61,pct,,chart,N,,"Mean over the five services, as for the gap."
+C7_UGA_gap,7,Chart 7,"Gap (national minus local), experienced a disaster and lost access: Uganda",12,pp,,chart,N,,Mean over the five services of the gap among those who experienced a disaster and lost that service.
+C7_UGA_mean,7,Chart 7,"Mean perceived governmental preparedness, experienced a disaster and lost access: Uganda",58,pct,,chart,N,,"Mean over the five services, as for the gap."
+C7_ZWE_gap,7,Chart 7,"Gap (national minus local), experienced a disaster and lost access: Zimbabwe",13,pp,,chart,N,,Mean over the five services of the gap among those who experienced a disaster and lost that service.
+C7_ZWE_mean,7,Chart 7,"Mean perceived governmental preparedness, experienced a disaster and lost access: Zimbabwe",55,pct,,chart,N,,"Mean over the five services, as for the gap."
+C7_ZMB_gap,7,Chart 7,"Gap (national minus local), experienced a disaster and lost access: Zambia",18,pp,,chart,N,,Mean over the five services of the gap among those who experienced a disaster and lost that service.
+C7_ZMB_mean,7,Chart 7,"Mean perceived governmental preparedness, experienced a disaster and lost access: Zambia",52,pct,,chart,N,,"Mean over the five services, as for the gap."
+C7_KEN_gap,7,Chart 7,"Gap (national minus local), experienced a disaster and lost access: Kenya",11,pp,,chart,N,,Mean over the five services of the gap among those who experienced a disaster and lost that service.
+C7_KEN_mean,7,Chart 7,"Mean perceived governmental preparedness, experienced a disaster and lost access: Kenya",51,pct,,chart,N,,"Mean over the five services, as for the gap."
+C7_MUS_gap,7,Chart 7,"Gap (national minus local), experienced a disaster and lost access: Mauritius",-1,pp,,chart,N,,Mean over the five services of the gap among those who experienced a disaster and lost that service.
+C7_MUS_mean,7,Chart 7,"Mean perceived governmental preparedness, experienced a disaster and lost access: Mauritius",42,pct,,chart,N,,"Mean over the five services, as for the gap."
+X36,8,Tanzania,Tanzania: mean perceived governmental preparedness,61,pct,,text,N,,Chart 7 value.
+X37,8,Tanzania,Tanzania: gap (national minus local),18,pp,,text,N,,Chart 7 value.
+X38,9,Mauritius,Mauritius: mean perceived governmental preparedness,42,pct,,text,N,,Chart 7 value.

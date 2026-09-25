@@ -50,9 +50,10 @@ DISCRIMINATION <- c("WP22259", "WP22260", "WP22261", "WP22262", "WP22263")
 d$any_discrimination <- ifelse(rowSums(d[DISCRIMINATION] == 1, na.rm = TRUE) > 0, 1, 2)
 
 # Never worked (Chart 4.1): code 7 at any of the three V&H questions.
-# Chapter 4 charts use everyone else who was asked the module.
+# Chapter 4 charts use everyone else, including China, where the physical
+# V&H question was not asked.
 d$never_worked <- ifelse(rowSums(d[VH] == 7, na.rm = TRUE) > 0, 1, 2)
-ever <- d[d$never_worked == 2 & !is.na(d$WP22400_ALL), ]
+ever <- d[d$never_worked == 2, ]
 
 # Employment (Chart 4.2), among those who have ever worked.
 ever$employment <- unname(c("1" = 1, "2" = 1, "3" = 1, "5" = 1, "4" = 2, "6" = 3)[as.character(ever$EMP_2010)])
@@ -60,7 +61,10 @@ ever$employment_type <- unname(c("1" = 1, "3" = 2, "5" = 2, "2" = 3, "4" = 4)[as
 
 # Forms of V&H experienced (Charts 4.3, 4.4).
 ever$n_forms <- rowSums(ever[VH] == 1, na.rm = TRUE)
-anyvh <- ever[ever$n_forms > 0, ]
+# Chart 4.4 splits the combinations among those who answered yes or no to all
+# three questions (so China, not asked about physical V&H, is left out).
+answered_all <- rowSums(sapply(ever[VH], function(x) x %in% c(1, 2))) == length(VH)
+anyvh <- ever[ever$n_forms > 0 & answered_all, ]
 p <- anyvh$WP22400_ALL %in% 1
 y <- anyvh$WP22403_ALL %in% 1
 s <- anyvh$WP22406_ALL %in% 1

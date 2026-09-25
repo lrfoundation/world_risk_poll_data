@@ -54,11 +54,10 @@ DISCRIMINATION = ["WP22259", "WP22260", "WP22261", "WP22262", "WP22263"]
 d["any_discrimination"] = np.where(d[DISCRIMINATION].eq(1).any(axis=1), 1, 2)
 
 # Never worked (Chart 4.1): "respondent has never worked" (code 7) given at
-# any of the three V&H questions. Chapter 4 charts use everyone else who
-# was asked the module (the physical V&H question was not asked in every
-# country; including those countries does not reproduce Charts 4.2-4.4).
+# any of the three V&H questions. Chapter 4 charts use everyone else,
+# including China, where the physical V&H question was not asked.
 d["never_worked"] = np.where(d[VH].eq(7).any(axis=1), 1, 2)
-ever = d[(d.never_worked == 2) & d.WP22400_ALL.notna()].copy()
+ever = d[d.never_worked == 2].copy()
 
 # Employment (Chart 4.2), among those who have ever worked.
 ever["employment"] = ever.EMP_2010.map({1: 1, 2: 1, 3: 1, 5: 1, 4: 2, 6: 3})  # employed/unemployed/out
@@ -67,7 +66,10 @@ ever["employment_type"] = ever.EMP_2010.map({1: 1, 3: 2, 5: 2, 2: 3, 4: 4})  # F
 # Forms of V&H experienced (Charts 4.3, 4.4).
 yes = ever[VH].eq(1)
 ever["n_forms"] = yes.sum(axis=1)
-anyvh = ever[ever.n_forms > 0].copy()
+# Chart 4.4 splits the combinations among those who answered yes or no to all
+# three questions (so China, not asked about physical V&H, is left out).
+answered_all = ever[VH].isin([1, 2]).all(axis=1)
+anyvh = ever[(ever.n_forms > 0) & answered_all].copy()
 p, y, s = (anyvh[v].eq(1) for v in VH)
 anyvh["combination"] = np.select(
     [p & ~y & ~s, y & ~p & ~s, s & ~p & ~y, p & y & ~s, s & y & ~p, s & p & ~y, p & y & s],

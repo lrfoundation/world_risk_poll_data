@@ -7,7 +7,8 @@ Conventions (see reports/README.md):
   country figures are identical under either weight, and global or
   regional figures are population-weighted, as in the reports.
 - Base: rows where the variable is missing (question not asked) are always
-  dropped. Don't know / refused answers stay in the base unless listed in
+  dropped, and with `by`, groups where nobody was asked are left out, as in
+  R. Don't know / refused answers stay in the base unless listed in
   `exclude`, which is how Gallup reports percentages by default.
 """
 
@@ -37,7 +38,8 @@ def wmean(df, value, weight=DEFAULT_WEIGHT, by=None):
     results = {}
     for key, g in _grouped(df, by):
         g = g[g[value].notna()]
-        results[key] = (g[value] * g[weight]).sum() / g[weight].sum() if len(g) else float("nan")
+        if len(g) or by is None:
+            results[key] = (g[value] * g[weight]).sum() / g[weight].sum() if len(g) else float("nan")
     return _series(results, by)
 
 
@@ -53,7 +55,8 @@ def pct(df, var, codes, weight=DEFAULT_WEIGHT, by=None, exclude=None):
     for key, g in _grouped(df, by):
         g = g[g[var].notna() & ~g[var].isin(exclude)]
         w = g[weight]
-        results[key] = 100 * w[g[var].isin(codes)].sum() / w.sum() if len(g) else float("nan")
+        if len(g) or by is None:
+            results[key] = 100 * w[g[var].isin(codes)].sum() / w.sum() if len(g) else float("nan")
     return _series(results, by)
 
 

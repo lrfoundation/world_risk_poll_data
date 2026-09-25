@@ -71,7 +71,9 @@ dictionary <- function(year) {
   key <- as.character(year)
   if (is.null(.dictionaries[[key]])) {
     path <- file.path(WRP_ROOT, sprintf("WRP_%s", year), sprintf("WRP_%s_data_dictionary.csv", year))
-    .dictionaries[[key]] <- read.csv(path, fileEncoding = "UTF-8-BOM", stringsAsFactors = FALSE)
+    # arrow reads UTF-8 whatever the system locale; base read.csv can stop
+    # part-way through the file under a non-UTF-8 locale.
+    .dictionaries[[key]] <- as.data.frame(read_csv_arrow(path))
   }
   .dictionaries[[key]]
 }
@@ -181,6 +183,27 @@ merge_gallup <- function(df, columns) {
   merged
 }
 
+# --- Public non-poll data -------------------------------------------------
+# See reports/wrp/external.py. Files that may be redistributed are committed
+# in reports/external/; others are downloaded by
+# reports/external/fetch_external.py into reports/external/downloaded/.
+# Without them, the findings that need them are reported as EXTERNAL_ONLY.
+
+external_data_required <- function(message) {
+  structure(class = c("external_data_required", "error", "condition"),
+            list(message = message, call = NULL))
+}
+
+external_path <- function(name) {
+  for (folder in file.path(WRP_ROOT, "reports", "external", c("", "downloaded"))) {
+    path <- file.path(folder, name)
+    if (file.exists(path)) return(normalizePath(path))
+  }
+  stop(external_data_required(sprintf(
+    "needs %s, which is not redistributed here; run python reports/external/fetch_external.py to download it", name
+  )))
+}
+
 # --- Report registry ------------------------------------------------------
 # Mirrors reports/wrp/results.py. A finding function returns one value
 # (recorded under its id), or a named vector / matrix (recorded as
@@ -233,12 +256,13 @@ run_report <- function(report) {
     result <- tryCatch(
       .flatten(f$id, f$fn()) |> transform(status = "ok", message = ""),
       gallup_data_required = function(e) data.frame(finding_id = .ids_for(report, f$id), value = NA, status = "GALLUP_ONLY", message = conditionMessage(e)),
+      external_data_required = function(e) data.frame(finding_id = .ids_for(report, f$id), value = NA, status = "EXTERNAL_ONLY", message = conditionMessage(e)),
       error = function(e) data.frame(finding_id = .ids_for(report, f$id), value = NA, status = "ERROR", message = conditionMessage(e))
     )
     rows[[length(rows) + 1]] <- result
   }
   out <- do.call(rbind, rows)
-  out$value <- if (is.numeric(out$value)) sprintf("%.15g", out$value) else as.character(out$value)
+  out$value <- if (is.numeric(out$value)) sprintf("%.17g", out$value) else as.character(out$value)
   out$value[out$value %in% c("NA", NA)] <- ""
   dir.create(file.path(report$dir, "output"), showWarnings = FALSE)
   write.csv(out, file.path(report$dir, "output", "reproduced_r.csv"), row.names = FALSE)
@@ -251,7 +275,7 @@ run_report <- function(report) {
     tol <- if (nzchar(pub$tolerance[i])) as.numeric(pub$tolerance[i]) else 1
     .compare(pub$published_value[i], hit$value[1], tol)
   }, character(1))
-  counts <- table(factor(status, levels = c("MATCH", "WITHIN_TOLERANCE", "DIFFERENT", "GALLUP_ONLY", "ERROR", "NOT_RUN")))
+  counts <- table(factor(status, levels = c("MATCH", "WITHIN_TOLERANCE", "DIFFERENT", "GALLUP_ONLY", "EXTERNAL_ONLY", "ERROR", "NOT_RUN")))
   counts <- counts[counts > 0]
   cat(sprintf("%d findings: %s\n", nrow(pub), paste(names(counts), counts, collapse = ", ")))
   for (i in which(status %in% c("DIFFERENT", "ERROR", "NOT_RUN"))) {

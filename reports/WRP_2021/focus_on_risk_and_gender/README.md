@@ -27,9 +27,11 @@ Results are in [`RESULTS.md`](RESULTS.md).
   them gives 27.9% of women and 25.5% of men instead of the published 22% and 20%.
 - **Never worked (Chart 4.1)** means "respondent has never worked" (code 7) at any of the
   three violence and harassment questions (`WP22400_ALL`, `WP22403_ALL`, `WP22406_ALL`).
-- **Chapter 4 base:** everyone else who was asked the physical violence and harassment
-  question. It was not asked in every country. Including those countries does not
-  reproduce Charts 4.2–4.4.
+- **Chapter 4 base:** everyone else, including China, where the physical violence and
+  harassment question was not asked. Chart 4.4 (combinations of forms) is split among those
+  who answered yes or no to all three questions, which leaves China out. These definitions
+  also reproduce the figures in the full *Safe at Work?* report
+  (`reports/WRP_2021/core_safe_at_work/`).
 - **Forms of violence and harassment (Charts 4.3, 4.4):** physical, psychological and sexual
   use the `_ALL` versions of the questions, which merge the alternative wordings used in
   some countries. How often each form happened uses `WP22401`, `WP22404_ALL` and
@@ -50,18 +52,14 @@ compared with. The code reads it as native-born women.
 
 ## Findings that do not match
 
-20 findings differ from the published values by more than the ±1-point tolerance:
+14 findings differ from the published values by more than the ±1-point tolerance. Each traces
+back to the report itself:
 
 - **Chart 2.4, 6 values:** the "Local government" and "You and your family" panels are
   swapped. Each panel's values match the other panel's question, and the text on the same
   page matches the data (family 5 points, local government 2 points).
 - **Chart 4.6, 4 values:** the "ever experienced" values repeat Chart 4.5 (physical).
-  Psychological violence and harassment is about 16% for both women and men.
-- **Men's figures in Charts 4.3 and 4.7, and the text gaps X44 and X50, 6 values:** the
-  report has 5% of men experiencing sexual and 22% any violence and harassment at work.
-  The data gives 3% and 20%. No base or weighting tried reproduces them. Chart 4.4, which
-  splits the same respondents by combination of forms, matches the data and implies 3%
-  and 20%.
+  Psychological violence and harassment is about 16–17% for both women and men.
 - **X22:** page 8 gives the gap in feeling more safe as 2 points; page 4 says 3, and the
   data gives 4.
 - **X34:** the text says women are 2 points *less* likely to report discrimination. The
@@ -71,7 +69,7 @@ compared with. The code reads it as native-born women.
 - **C2_9 (men, religion, no):** 87% in the data against 86% published. The published yes
   and no values for this row add up to 98.
 
-55 more findings are within tolerance but do not round to the published figure. Most are
+51 more findings are within tolerance but do not round to the published figure. Most are
 values close to a rounding boundary (x.5), or text gaps that the report took from rounded
 figures.
 
