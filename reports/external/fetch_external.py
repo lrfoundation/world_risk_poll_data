@@ -75,6 +75,27 @@ def ndgain_vulnerability():
         return pd.read_csv(z.open(name))
 
 
+@fetcher("ndgain_scores", "focus_on_migration_in_a_warming_world__ndgain_scores.csv")
+def ndgain_scores():
+    """ND-GAIN Country Index 2024 release: overall score, readiness and vulnerability by country
+    and year (Migration in a warming world, Chapter 5).
+
+    Terms: as for ndgain above.
+    """
+    url = "https://gain.nd.edu/assets/581929/nd_gain_countryindex_2024.zip"
+    page = "https://gain.nd.edu/our-work/country-index/download-data/"
+    with zipfile.ZipFile(io.BytesIO(download(url, referer=page))) as z:
+        measures = []
+        for m in ["gain", "readiness", "vulnerability"]:
+            name = next(n for n in z.namelist() if n.endswith(f"resources/{m}/{m}.csv"))
+            measures.append(pd.read_csv(z.open(name))
+                            .melt(id_vars=["ISO3", "Name"], var_name="year", value_name=m)
+                            .set_index(["ISO3", "Name", "year"]))
+    scores = pd.concat(measures, axis=1).reset_index()
+    scores["year"] = scores["year"].astype(int)
+    return scores.sort_values(["ISO3", "year"])
+
+
 @fetcher("freedomhouse", "core_world_risk_poll_2019__freedom_house.csv")
 def freedom_house_2020():
     """Freedom House, Freedom in the World 2020 edition (WRP 2019 report, Chapter 2).
