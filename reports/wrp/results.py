@@ -113,6 +113,8 @@ def _load_reproduced(path):
 def _fmt(value, published):
     if value == "" or not _is_number(value):
         return value
+    if float(value).is_integer():
+        return str(int(float(value)))
     digits = _decimals(published) + 1 if _is_number(published) else 3
     return f"{float(value):.{digits}f}"
 

@@ -1,0 +1,498 @@
+finding_id,page,section,description,published_value,unit,tolerance,source,requires_gallup,gallup_items,note
+X01,4,Introduction,"Respondents interviewed in 2021 ('over 125,000')",125000,count,1000,text,N,,
+X02,4,Introduction,"Women interviewed ('66,000')",66000,count,1000,text,N,,
+X03,4,Introduction,Countries and areas surveyed,121,count,,text,N,,
+X04,4,Introduction,Foreign-born women who did not tell anyone about V&H at work: % 'did not know what to do',51,pct,,text,Y,WP4657,
+X05,4,Introduction,Comparison figure for X04 ('51% vs 46%'); read as native-born women,46,pct,,text,Y,WP4657,The report does not say who the 46% refers to. Native-born women is the reading used here; all women who did not tell is 46% in the public data.
+X06,4,Introduction,Foreign-born women who did not tell anyone about V&H at work: % 'procedures at work were unclear',60,pct,,text,Y,WP4657,
+X07,4,Introduction,Comparison figure for X06 ('60% vs 41%'); read as native-born women,41,pct,,text,Y,WP4657,
+X08,4,Introduction,"Gap (men minus women), % feel more safe than five years ago",3,pct,,text,N,,
+X09,4,Introduction,"Gap (women minus men), % feel less safe than five years ago",4,pct,,text,N,,
+X10,5,Introduction,"Gap (women minus men), % very worried about violent crime",7,pct,,text,N,,
+X11,5,Introduction,"Gap (women minus men), % personally experienced serious harm from violent crime ('no difference')",0,pct,,text,N,,
+X12,5,Introduction,"Gap (women minus men), % very worried about mental health",7,pct,,text,N,,
+X13,5,Introduction,Women who personally experienced serious harm from mental health issues,9,pct,,text,N,,
+X14,5,Introduction,"Gap (women minus men), % personally experienced serious harm from mental health issues",1,pct,,text,N,,
+X15,"5, 11",Introduction,"Gap (women minus men), % could cover basic needs for less than a week",2,pct,,text,N,,
+X16,"5, 11",Introduction,"Gap (women minus men), % could cover basic needs for a month or less",4,pct,,text,N,,
+X17,6,Introduction,"Gap (women minus men), % who have never worked",8,pct,,text,N,,
+X18,6,Introduction,Women who have ever worked: % unemployed or out of the workforce,50,pct,,text,N,,
+X19,6,Introduction,Men who have ever worked: % unemployed or out of the workforce,29,pct,,text,N,,
+X20,6,Introduction,"Gap (women minus men), % of those who have ever worked unemployed or out of the workforce",21,pct,,text,N,,
+C1_1_women_very,7,Chart 1.1,"Climate change a threat to your country in the next 20 years: % very serious threat, women",41,pct,,chart,N,,
+C1_1_women_somewhat,7,Chart 1.1,"Climate change a threat to your country in the next 20 years: % somewhat serious threat, women",26,pct,,chart,N,,
+C1_1_women_not,7,Chart 1.1,"Climate change a threat to your country in the next 20 years: % not a threat at all, women",13,pct,,chart,N,,
+C1_1_women_dk,7,Chart 1.1,"Climate change a threat to your country in the next 20 years: % don't know/refused, women",20,pct,,chart,N,,
+C1_1_men_very,7,Chart 1.1,"Climate change a threat to your country in the next 20 years: % very serious threat, men",41,pct,,chart,N,,
+C1_1_men_somewhat,7,Chart 1.1,"Climate change a threat to your country in the next 20 years: % somewhat serious threat, men",26,pct,,chart,N,,
+C1_1_men_not,7,Chart 1.1,"Climate change a threat to your country in the next 20 years: % not a threat at all, men",15,pct,,chart,N,,
+C1_1_men_dk,7,Chart 1.1,"Climate change a threat to your country in the next 20 years: % don't know/refused, men",18,pct,,chart,N,,
+X21,7,Chapter 1,"Gap (men minus women), % climate change 'not a threat at all'",2,pct,,text,N,,
+C1_2_women_more,8,Chart 1.2,"Feel safe compared with five years ago: % more safe, women",26,pct,,chart,N,,
+C1_2_women_less,8,Chart 1.2,"Feel safe compared with five years ago: % less safe, women",36,pct,,chart,N,,
+C1_2_women_same,8,Chart 1.2,"Feel safe compared with five years ago: % about as safe, women",38,pct,,chart,N,,
+C1_2_men_more,8,Chart 1.2,"Feel safe compared with five years ago: % more safe, men",29,pct,,chart,N,,
+C1_2_men_less,8,Chart 1.2,"Feel safe compared with five years ago: % less safe, men",32,pct,,chart,N,,
+C1_2_men_same,8,Chart 1.2,"Feel safe compared with five years ago: % about as safe, men",38,pct,,chart,N,,
+X22,8,Chapter 1,"Gap (men minus women), % feel more safe than five years ago",2,pct,,text,N,,Page 4 gives this gap as 3 points; the data gives 4 (29% vs 26% rounded).
+X23,8,Chapter 1,"Gap (women minus men), % feel less safe than five years ago",4,pct,,text,N,,
+X24,8,Chapter 1,"Gap (women minus men), % top-of-mind risk crime/violence",2,pct,,text,N,,
+X25,8,Chapter 1,"Gap (men minus women), % top-of-mind risk road-related accidents",5,pct,,text,N,,
+T1_1_women_road,8,Table 1.1,"Top-of-mind risk: Transportation: road-related accidents, women",11,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_men_road,8,Table 1.1,"Top-of-mind risk: Transportation: road-related accidents, men",16,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_women_other_transport,8,Table 1.1,"Top-of-mind risk: Transportation: other, women",2,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_men_other_transport,8,Table 1.1,"Top-of-mind risk: Transportation: other, men",1,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_women_crime,8,Table 1.1,"Top-of-mind risk: Crime/violence, women",13,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_men_crime,8,Table 1.1,"Top-of-mind risk: Crime/violence, men",11,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_women_war,8,Table 1.1,"Top-of-mind risk: War/terrorism, women",2,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_men_war,8,Table 1.1,"Top-of-mind risk: War/terrorism, men",2,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_women_health,8,Table 1.1,"Top-of-mind risk: Health: personal health condition/illness, women",12,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_men_health,8,Table 1.1,"Top-of-mind risk: Health: personal health condition/illness, men",9,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_women_covid,8,Table 1.1,"Top-of-mind risk: Health: Covid-19 related, women",8,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_men_covid,8,Table 1.1,"Top-of-mind risk: Health: Covid-19 related, men",7,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_women_mental_stress,8,Table 1.1,"Top-of-mind risk: Health: mental stress/exhaustion, women",1,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_men_mental_stress,8,Table 1.1,"Top-of-mind risk: Health: mental stress/exhaustion, men",1,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_women_financial,8,Table 1.1,"Top-of-mind risk: Financial: not having enough money, women",6,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_men_financial,8,Table 1.1,"Top-of-mind risk: Financial: not having enough money, men",6,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_women_economy,8,Table 1.1,"Top-of-mind risk: Economy-related, women",4,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_men_economy,8,Table 1.1,"Top-of-mind risk: Economy-related, men",6,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_women_politics,8,Table 1.1,"Top-of-mind risk: Politics/political situation/corruption, women",1,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_men_politics,8,Table 1.1,"Top-of-mind risk: Politics/political situation/corruption, men",2,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_women_technology,8,Table 1.1,"Top-of-mind risk: Technology: internet/technology related, women",0,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_men_technology,8,Table 1.1,"Top-of-mind risk: Technology: internet/technology related, men",0,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_women_water,8,Table 1.1,"Top-of-mind risk: Water supply or drinking unclean water, women",0,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_men_water,8,Table 1.1,"Top-of-mind risk: Water supply or drinking unclean water, men",1,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_women_hunger,8,Table 1.1,"Top-of-mind risk: Food: insufficient or lack of food, women",1,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_men_hunger,8,Table 1.1,"Top-of-mind risk: Food: insufficient or lack of food, men",1,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_women_household,8,Table 1.1,"Top-of-mind risk: Cooking or other household accidents, women",1,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_men_household,8,Table 1.1,"Top-of-mind risk: Cooking or other household accidents, men",1,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_women_work,8,Table 1.1,"Top-of-mind risk: Work-related accidents, women",1,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_men_work,8,Table 1.1,"Top-of-mind risk: Work-related accidents, men",3,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_women_pollution,8,Table 1.1,"Top-of-mind risk: Environment: pollution, women",0,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_men_pollution,8,Table 1.1,"Top-of-mind risk: Environment: pollution, men",1,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_women_climate,8,Table 1.1,"Top-of-mind risk: Environment: climate change or severe weather, women",3,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_men_climate,8,Table 1.1,"Top-of-mind risk: Environment: climate change or severe weather, men",3,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_women_disasters,8,Table 1.1,"Top-of-mind risk: Environment: non-weather-related disasters, women",1,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+T1_1_men_disasters,8,Table 1.1,"Top-of-mind risk: Environment: non-weather-related disasters, men",1,pct,,table,N,,The table's 'percentage point difference' column is not recorded: it is derived from these values and its sign is inconsistent between rows.
+C1_3_women_food_very,9,Chart 1.3,"Worry about the food you eat: % very worried, women",23,pct,,chart,N,,
+C1_3_women_food_somewhat,9,Chart 1.3,"Worry about the food you eat: % somewhat worried, women",35,pct,,chart,N,,
+C1_3_women_food_not,9,Chart 1.3,"Worry about the food you eat: % not worried, women",40,pct,,chart,N,,
+C1_3_women_food_exp_no,9,Chart 1.3,"Experienced serious harm from the food you eat: % no experience of harm, women",80,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_women_food_exp_know,9,Chart 1.3,"Experienced serious harm from the food you eat: % yes, know someone, women",8,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_women_food_exp_personal,9,Chart 1.3,"Experienced serious harm from the food you eat: % yes, personally, women",8,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_men_food_very,9,Chart 1.3,"Worry about the food you eat: % very worried, men",20,pct,,chart,N,,
+C1_3_men_food_somewhat,9,Chart 1.3,"Worry about the food you eat: % somewhat worried, men",33,pct,,chart,N,,
+C1_3_men_food_not,9,Chart 1.3,"Worry about the food you eat: % not worried, men",46,pct,,chart,N,,
+C1_3_men_food_exp_no,9,Chart 1.3,"Experienced serious harm from the food you eat: % no experience of harm, men",80,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_men_food_exp_know,9,Chart 1.3,"Experienced serious harm from the food you eat: % yes, know someone, men",9,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_men_food_exp_personal,9,Chart 1.3,"Experienced serious harm from the food you eat: % yes, personally, men",7,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_women_water_very,9,Chart 1.3,"Worry about drinking water: % very worried, women",20,pct,,chart,N,,
+C1_3_women_water_somewhat,9,Chart 1.3,"Worry about drinking water: % somewhat worried, women",27,pct,,chart,N,,
+C1_3_women_water_not,9,Chart 1.3,"Worry about drinking water: % not worried, women",52,pct,,chart,N,,
+C1_3_women_water_exp_no,9,Chart 1.3,"Experienced serious harm from drinking water: % no experience of harm, women",85,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_women_water_exp_personal,9,Chart 1.3,"Experienced serious harm from drinking water: % yes, personally, women",7,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_men_water_very,9,Chart 1.3,"Worry about drinking water: % very worried, men",16,pct,,chart,N,,
+C1_3_men_water_somewhat,9,Chart 1.3,"Worry about drinking water: % somewhat worried, men",25,pct,,chart,N,,
+C1_3_men_water_not,9,Chart 1.3,"Worry about drinking water: % not worried, men",58,pct,,chart,N,,
+C1_3_men_water_exp_no,9,Chart 1.3,"Experienced serious harm from drinking water: % no experience of harm, men",86,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_men_water_exp_personal,9,Chart 1.3,"Experienced serious harm from drinking water: % yes, personally, men",6,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_women_crime_very,9,Chart 1.3,"Worry about violent crime: % very worried, women",35,pct,,chart,N,,
+C1_3_women_crime_somewhat,9,Chart 1.3,"Worry about violent crime: % somewhat worried, women",27,pct,,chart,N,,
+C1_3_women_crime_not,9,Chart 1.3,"Worry about violent crime: % not worried, women",37,pct,,chart,N,,
+C1_3_women_crime_exp_no,9,Chart 1.3,"Experienced serious harm from violent crime: % no experience of harm, women",80,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_women_crime_exp_know,9,Chart 1.3,"Experienced serious harm from violent crime: % yes, know someone, women",11,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_men_crime_very,9,Chart 1.3,"Worry about violent crime: % very worried, men",28,pct,,chart,N,,
+C1_3_men_crime_somewhat,9,Chart 1.3,"Worry about violent crime: % somewhat worried, men",26,pct,,chart,N,,
+C1_3_men_crime_not,9,Chart 1.3,"Worry about violent crime: % not worried, men",44,pct,,chart,N,,
+C1_3_men_crime_exp_no,9,Chart 1.3,"Experienced serious harm from violent crime: % no experience of harm, men",79,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_men_crime_exp_know,9,Chart 1.3,"Experienced serious harm from violent crime: % yes, know someone, men",13,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_women_weather_very,9,Chart 1.3,"Worry about severe weather events: % very worried, women",38,pct,,chart,N,,
+C1_3_women_weather_somewhat,9,Chart 1.3,"Worry about severe weather events: % somewhat worried, women",31,pct,,chart,N,,
+C1_3_women_weather_not,9,Chart 1.3,"Worry about severe weather events: % not worried, women",30,pct,,chart,N,,
+C1_3_women_weather_exp_no,9,Chart 1.3,"Experienced serious harm from severe weather events: % no experience of harm, women",72,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_women_weather_exp_know,9,Chart 1.3,"Experienced serious harm from severe weather events: % yes, know someone, women",12,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_women_weather_exp_personal,9,Chart 1.3,"Experienced serious harm from severe weather events: % yes, personally, women",11,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_men_weather_very,9,Chart 1.3,"Worry about severe weather events: % very worried, men",31,pct,,chart,N,,
+C1_3_men_weather_somewhat,9,Chart 1.3,"Worry about severe weather events: % somewhat worried, men",31,pct,,chart,N,,
+C1_3_men_weather_not,9,Chart 1.3,"Worry about severe weather events: % not worried, men",38,pct,,chart,N,,
+C1_3_men_weather_exp_no,9,Chart 1.3,"Experienced serious harm from severe weather events: % no experience of harm, men",72,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_men_weather_exp_know,9,Chart 1.3,"Experienced serious harm from severe weather events: % yes, know someone, men",12,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_men_weather_exp_personal,9,Chart 1.3,"Experienced serious harm from severe weather events: % yes, personally, men",11,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_women_traffic_very,9,Chart 1.3,"Worry about traffic/roadside accidents: % very worried, women",40,pct,,chart,N,,
+C1_3_women_traffic_somewhat,9,Chart 1.3,"Worry about traffic/roadside accidents: % somewhat worried, women",34,pct,,chart,N,,
+C1_3_women_traffic_not,9,Chart 1.3,"Worry about traffic/roadside accidents: % not worried, women",26,pct,,chart,N,,
+C1_3_women_traffic_exp_no,9,Chart 1.3,"Experienced serious harm from traffic/roadside accidents: % no experience of harm, women",69,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_women_traffic_exp_know,9,Chart 1.3,"Experienced serious harm from traffic/roadside accidents: % yes, know someone, women",19,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_women_traffic_exp_personal,9,Chart 1.3,"Experienced serious harm from traffic/roadside accidents: % yes, personally, women",8,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_men_traffic_very,9,Chart 1.3,"Worry about traffic/roadside accidents: % very worried, men",34,pct,,chart,N,,
+C1_3_men_traffic_somewhat,9,Chart 1.3,"Worry about traffic/roadside accidents: % somewhat worried, men",36,pct,,chart,N,,
+C1_3_men_traffic_not,9,Chart 1.3,"Worry about traffic/roadside accidents: % not worried, men",30,pct,,chart,N,,
+C1_3_men_traffic_exp_no,9,Chart 1.3,"Experienced serious harm from traffic/roadside accidents: % no experience of harm, men",65,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_men_traffic_exp_know,9,Chart 1.3,"Experienced serious harm from traffic/roadside accidents: % yes, know someone, men",20,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_men_traffic_exp_personal,9,Chart 1.3,"Experienced serious harm from traffic/roadside accidents: % yes, personally, men",10,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_women_mental_very,9,Chart 1.3,"Worry about mental health: % very worried, women",28,pct,,chart,N,,
+C1_3_women_mental_somewhat,9,Chart 1.3,"Worry about mental health: % somewhat worried, women",29,pct,,chart,N,,
+C1_3_women_mental_not,9,Chart 1.3,"Worry about mental health: % not worried, women",42,pct,,chart,N,,
+C1_3_women_mental_exp_no,9,Chart 1.3,"Experienced serious harm from mental health: % no experience of harm, women",73,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_women_mental_exp_know,9,Chart 1.3,"Experienced serious harm from mental health: % yes, know someone, women",14,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_women_mental_exp_personal,9,Chart 1.3,"Experienced serious harm from mental health: % yes, personally, women",9,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_men_mental_very,9,Chart 1.3,"Worry about mental health: % very worried, men",21,pct,,chart,N,,
+C1_3_men_mental_somewhat,9,Chart 1.3,"Worry about mental health: % somewhat worried, men",27,pct,,chart,N,,
+C1_3_men_mental_not,9,Chart 1.3,"Worry about mental health: % not worried, men",51,pct,,chart,N,,
+C1_3_men_mental_exp_no,9,Chart 1.3,"Experienced serious harm from mental health: % no experience of harm, men",75,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_men_mental_exp_know,9,Chart 1.3,"Experienced serious harm from mental health: % yes, know someone, men",13,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_men_mental_exp_personal,9,Chart 1.3,"Experienced serious harm from mental health: % yes, personally, men",8,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_women_work_very,9,Chart 1.3,"Worry about the work you do: % very worried, women",18,pct,,chart,N,,
+C1_3_women_work_somewhat,9,Chart 1.3,"Worry about the work you do: % somewhat worried, women",28,pct,,chart,N,,
+C1_3_women_work_not,9,Chart 1.3,"Worry about the work you do: % not worried, women",53,pct,,chart,N,,
+C1_3_women_work_exp_no,9,Chart 1.3,"Experienced serious harm from the work you do: % no experience of harm, women",77,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_women_work_exp_know,9,Chart 1.3,"Experienced serious harm from the work you do: % yes, know someone, women",9,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_women_work_exp_personal,9,Chart 1.3,"Experienced serious harm from the work you do: % yes, personally, women",9,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_men_work_very,9,Chart 1.3,"Worry about the work you do: % very worried, men",19,pct,,chart,N,,
+C1_3_men_work_somewhat,9,Chart 1.3,"Worry about the work you do: % somewhat worried, men",30,pct,,chart,N,,
+C1_3_men_work_not,9,Chart 1.3,"Worry about the work you do: % not worried, men",50,pct,,chart,N,,
+C1_3_men_work_exp_no,9,Chart 1.3,"Experienced serious harm from the work you do: % no experience of harm, men",73,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_men_work_exp_know,9,Chart 1.3,"Experienced serious harm from the work you do: % yes, know someone, men",10,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+C1_3_men_work_exp_personal,9,Chart 1.3,"Experienced serious harm from the work you do: % yes, personally, men",12,pct,,chart,N,,"Segment labels are read by position; the extracted order is 'no', 'know someone', 'personally'."
+X26_food,9,Chapter 1,"Gap (women minus men), % very worried about food",3,pct,,text,N,,
+X26_water,9,Chapter 1,"Gap (women minus men), % very worried about water",4,pct,,text,N,,
+X26_crime,9,Chapter 1,"Gap (women minus men), % very worried about violent crime",7,pct,,text,N,,
+X26_weather,9,Chapter 1,"Gap (women minus men), % very worried about severe weather",7,pct,,text,N,,
+X26_traffic,9,Chapter 1,"Gap (women minus men), % very worried about road accidents",6,pct,,text,N,,
+X26_mental,9,Chapter 1,"Gap (women minus men), % very worried about mental health",7,pct,,text,N,,
+X26_work,9,Chapter 1,"Gap (men minus women), % very worried about work",1,pct,,text,N,,
+X27_traffic,9,Chapter 1,"Gap (men minus women), % personally experienced harm from a traffic or roadside accident",2,pct,,text,N,,
+X27_work,9,Chapter 1,"Gap (men minus women), % personally experienced harm at work",3,pct,,text,N,,
+C2_1_women,10,Chart 2.1,"World Risk Poll Resilience Index (0-1), women",0.53,mean,0.01,chart,N,,
+C2_1_men,10,Chart 2.1,"World Risk Poll Resilience Index (0-1), men",0.57,mean,0.01,chart,N,,
+C2_2_women_lt_week,11,Chart 2.2,"How long could cover basic needs if all income lost: % less than a week, women",13,pct,,chart,N,,'A month or less' = less than a month plus around a month.
+C2_2_women_weeks_1_2,11,Chart 2.2,"How long could cover basic needs if all income lost: % one to two weeks, women",13,pct,,chart,N,,'A month or less' = less than a month plus around a month.
+C2_2_women_weeks_2_4,11,Chart 2.2,"How long could cover basic needs if all income lost: % two to four weeks, women",9,pct,,chart,N,,'A month or less' = less than a month plus around a month.
+C2_2_women_around_month,11,Chart 2.2,"How long could cover basic needs if all income lost: % around a month, women",10,pct,,chart,N,,'A month or less' = less than a month plus around a month.
+C2_2_women_months_2,11,Chart 2.2,"How long could cover basic needs if all income lost: % two months, women",9,pct,,chart,N,,'A month or less' = less than a month plus around a month.
+C2_2_women_months_3,11,Chart 2.2,"How long could cover basic needs if all income lost: % three months, women",9,pct,,chart,N,,'A month or less' = less than a month plus around a month.
+C2_2_women_months_4plus,11,Chart 2.2,"How long could cover basic needs if all income lost: % four months or more, women",25,pct,,chart,N,,'A month or less' = less than a month plus around a month.
+C2_2_women_dk,11,Chart 2.2,"How long could cover basic needs if all income lost: % don't know/refused, women",8,pct,,chart,N,,'A month or less' = less than a month plus around a month.
+C2_2_women_month_or_less,11,Chart 2.2,"How long could cover basic needs if all income lost: % a month or less (chart annotation), women",46,pct,,chart,N,,'A month or less' = less than a month plus around a month.
+C2_2_men_lt_week,11,Chart 2.2,"How long could cover basic needs if all income lost: % less than a week, men",11,pct,,chart,N,,'A month or less' = less than a month plus around a month.
+C2_2_men_weeks_1_2,11,Chart 2.2,"How long could cover basic needs if all income lost: % one to two weeks, men",12,pct,,chart,N,,'A month or less' = less than a month plus around a month.
+C2_2_men_weeks_2_4,11,Chart 2.2,"How long could cover basic needs if all income lost: % two to four weeks, men",9,pct,,chart,N,,'A month or less' = less than a month plus around a month.
+C2_2_men_around_month,11,Chart 2.2,"How long could cover basic needs if all income lost: % around a month, men",10,pct,,chart,N,,'A month or less' = less than a month plus around a month.
+C2_2_men_months_2,11,Chart 2.2,"How long could cover basic needs if all income lost: % two months, men",11,pct,,chart,N,,'A month or less' = less than a month plus around a month.
+C2_2_men_months_3,11,Chart 2.2,"How long could cover basic needs if all income lost: % three months, men",9,pct,,chart,N,,'A month or less' = less than a month plus around a month.
+C2_2_men_months_4plus,11,Chart 2.2,"How long could cover basic needs if all income lost: % four months or more, men",29,pct,,chart,N,,'A month or less' = less than a month plus around a month.
+C2_2_men_dk,11,Chart 2.2,"How long could cover basic needs if all income lost: % don't know/refused, men",7,pct,,chart,N,,'A month or less' = less than a month plus around a month.
+C2_2_men_month_or_less,11,Chart 2.2,"How long could cover basic needs if all income lost: % a month or less (chart annotation), men",42,pct,,chart,N,,'A month or less' = less than a month plus around a month.
+C2_3_women_yes,12,Chart 2.3,"Experienced a disaster in the past five years: % yes, women",26,pct,,chart,N,,
+C2_3_women_no,12,Chart 2.3,"Experienced a disaster in the past five years: % no, women",73,pct,,chart,N,,
+C2_3_men_yes,12,Chart 2.3,"Experienced a disaster in the past five years: % yes, men",28,pct,,chart,N,,
+C2_3_men_no,12,Chart 2.3,"Experienced a disaster in the past five years: % no, men",71,pct,,chart,N,,
+X28,12,Chapter 2,"Gap (men minus women), % experienced a disaster in the past five years",2,pct,,text,N,,
+C2_4_women_national_yes,12,Chart 2.4,"Well prepared to deal with a disaster: national government, % yes, women",50,pct,,chart,N,,
+C2_4_women_national_no,12,Chart 2.4,"Well prepared to deal with a disaster: national government, % no, women",39,pct,,chart,N,,
+C2_4_women_local_yes,12,Chart 2.4,"Well prepared to deal with a disaster: local government, % yes, women",51,pct,,chart,N,,"The values printed in the 'Local government' and 'You and your family' panels are swapped: they match the other panel's question in the data, and the text on the same page (family 5 points, local government 2 points) matches the data."
+C2_4_women_local_no,12,Chart 2.4,"Well prepared to deal with a disaster: local government, % no, women",42,pct,,chart,N,,"The values printed in the 'Local government' and 'You and your family' panels are swapped: they match the other panel's question in the data, and the text on the same page (family 5 points, local government 2 points) matches the data."
+C2_4_women_hospitals_yes,12,Chart 2.4,"Well prepared to deal with a disaster: hospitals, % yes, women",54,pct,,chart,N,,
+C2_4_women_hospitals_no,12,Chart 2.4,"Well prepared to deal with a disaster: hospitals, % no, women",38,pct,,chart,N,,
+C2_4_women_family_yes,12,Chart 2.4,"Well prepared to deal with a disaster: you and your family, % yes, women",47,pct,,chart,N,,"The values printed in the 'Local government' and 'You and your family' panels are swapped: they match the other panel's question in the data, and the text on the same page (family 5 points, local government 2 points) matches the data."
+C2_4_women_family_no,12,Chart 2.4,"Well prepared to deal with a disaster: you and your family, % no, women",42,pct,,chart,N,,"The values printed in the 'Local government' and 'You and your family' panels are swapped: they match the other panel's question in the data, and the text on the same page (family 5 points, local government 2 points) matches the data."
+C2_4_men_national_yes,12,Chart 2.4,"Well prepared to deal with a disaster: national government, % yes, men",52,pct,,chart,N,,
+C2_4_men_national_no,12,Chart 2.4,"Well prepared to deal with a disaster: national government, % no, men",39,pct,,chart,N,,
+C2_4_men_local_yes,12,Chart 2.4,"Well prepared to deal with a disaster: local government, % yes, men",56,pct,,chart,N,,"The values printed in the 'Local government' and 'You and your family' panels are swapped: they match the other panel's question in the data, and the text on the same page (family 5 points, local government 2 points) matches the data."
+C2_4_men_local_no,12,Chart 2.4,"Well prepared to deal with a disaster: local government, % no, men",38,pct,,chart,N,,"The values printed in the 'Local government' and 'You and your family' panels are swapped: they match the other panel's question in the data, and the text on the same page (family 5 points, local government 2 points) matches the data."
+C2_4_men_hospitals_yes,12,Chart 2.4,"Well prepared to deal with a disaster: hospitals, % yes, men",55,pct,,chart,N,,
+C2_4_men_hospitals_no,12,Chart 2.4,"Well prepared to deal with a disaster: hospitals, % no, men",38,pct,,chart,N,,
+C2_4_men_family_yes,12,Chart 2.4,"Well prepared to deal with a disaster: you and your family, % yes, men",49,pct,,chart,N,,"The values printed in the 'Local government' and 'You and your family' panels are swapped: they match the other panel's question in the data, and the text on the same page (family 5 points, local government 2 points) matches the data."
+C2_4_men_family_no,12,Chart 2.4,"Well prepared to deal with a disaster: you and your family, % no, men",42,pct,,chart,N,,"The values printed in the 'Local government' and 'You and your family' panels are swapped: they match the other panel's question in the data, and the text on the same page (family 5 points, local government 2 points) matches the data."
+X29_national,12,Chapter 2,"Gap (men minus women), % say national government well prepared for a disaster",2,pct,,text,N,,
+X29_hospitals,12,Chapter 2,"Gap (men minus women), % say hospitals well prepared for a disaster",1,pct,,text,N,,
+X29_family,12,Chapter 2,"Gap (men minus women), % say you and your family well prepared for a disaster",5,pct,,text,N,,
+X29_local,12,Chapter 2,"Gap (men minus women), % say local government well prepared for a disaster",2,pct,,text,N,,
+T2_1_women_weather_service,13,Table 2.1,"Trust most for information about a disaster: The national weather service, women",15,pct,,table,N,,
+T2_1_men_weather_service,13,Table 2.1,"Trust most for information about a disaster: The national weather service, men",17,pct,,table,N,,
+T2_1_women_disaster_agency,13,Table 2.1,"Trust most for information about a disaster: The national disaster management agency, women",9,pct,,table,N,,
+T2_1_men_disaster_agency,13,Table 2.1,"Trust most for information about a disaster: The national disaster management agency, men",11,pct,,table,N,,
+T2_1_women_local_news,13,Table 2.1,"Trust most for information about a disaster: Local news through newspapers, television or radio, women",32,pct,,table,N,,
+T2_1_men_local_news,13,Table 2.1,"Trust most for information about a disaster: Local news through newspapers, television or radio, men",30,pct,,table,N,,
+T2_1_women_religious,13,Table 2.1,"Trust most for information about a disaster: Local religious leaders, women",4,pct,,table,N,,
+T2_1_men_religious,13,Table 2.1,"Trust most for information about a disaster: Local religious leaders, men",4,pct,,table,N,,
+T2_1_women_famous,13,Table 2.1,"Trust most for information about a disaster: A famous or influential person you like, women",2,pct,,table,N,,
+T2_1_men_famous,13,Table 2.1,"Trust most for information about a disaster: A famous or influential person you like, men",2,pct,,table,N,,
+T2_1_women_emergency,13,Table 2.1,"Trust most for information about a disaster: Emergency services, women",14,pct,,table,N,,
+T2_1_men_emergency,13,Table 2.1,"Trust most for information about a disaster: Emergency services, men",13,pct,,table,N,,
+T2_1_women_internet,13,Table 2.1,"Trust most for information about a disaster: Internet/social media, women",13,pct,,table,N,,
+T2_1_men_internet,13,Table 2.1,"Trust most for information about a disaster: Internet/social media, men",16,pct,,table,N,,
+T2_1_women_none,13,Table 2.1,"Trust most for information about a disaster: Would trust none of them, women",2,pct,,table,N,,
+T2_1_men_none,13,Table 2.1,"Trust most for information about a disaster: Would trust none of them, men",2,pct,,table,N,,
+T2_1_women_other,13,Table 2.1,"Trust most for information about a disaster: Some other source, women",3,pct,,table,N,,
+T2_1_men_other,13,Table 2.1,"Trust most for information about a disaster: Some other source, men",3,pct,,table,N,,
+T2_1_women_dk,13,Table 2.1,"Trust most for information about a disaster: Don't know/refused, women",6,pct,,table,N,,
+T2_1_men_dk,13,Table 2.1,"Trust most for information about a disaster: Don't know/refused, men",4,pct,,table,N,,
+X30_local_news,13,Chapter 2,"Gap (women minus men), % trust local news most",2,pct,,text,N,,
+X30_weather_service,13,Chapter 2,"Gap (men minus women), % trust the national weather service most",2,pct,,text,N,,
+X30_disaster_agency,13,Chapter 2,"Gap (men minus women), % trust the national disaster management agency most",2,pct,,text,N,,
+X30_internet,13,Chapter 2,"Gap (men minus women), % trust the internet/social media most",3,pct,,text,N,,
+C2_5_women_yes,13,Chart 2.5,"Could protect yourself or your family from a disaster: % yes, women",49,pct,,chart,N,,
+C2_5_women_no,13,Chart 2.5,"Could protect yourself or your family from a disaster: % no, women",39,pct,,chart,N,,
+C2_5_women_depends,13,Chart 2.5,"Could protect yourself or your family from a disaster: % it depends, women",6,pct,,chart,N,,
+C2_5_women_dk,13,Chart 2.5,"Could protect yourself or your family from a disaster: % don't know/refused, women",6,pct,,chart,N,,
+C2_5_men_yes,13,Chart 2.5,"Could protect yourself or your family from a disaster: % yes, men",56,pct,,chart,N,,
+C2_5_men_no,13,Chart 2.5,"Could protect yourself or your family from a disaster: % no, men",33,pct,,chart,N,,
+C2_5_men_depends,13,Chart 2.5,"Could protect yourself or your family from a disaster: % it depends, men",6,pct,,chart,N,,
+C2_5_men_dk,13,Chart 2.5,"Could protect yourself or your family from a disaster: % don't know/refused, men",5,pct,,chart,N,,
+X31,13,Chapter 2,"Gap (men minus women), % could protect themselves or family from a disaster",7,pct,,text,N,,
+C2_6_women_yes,14,Chart 2.6,"Household has a disaster plan all members know: % yes, women",31,pct,,chart,N,,
+C2_6_women_no,14,Chart 2.6,"Household has a disaster plan all members know: % no, women",65,pct,,chart,N,,
+C2_6_men_yes,14,Chart 2.6,"Household has a disaster plan all members know: % yes, men",36,pct,,chart,N,,
+C2_6_men_no,14,Chart 2.6,"Household has a disaster plan all members know: % no, men",61,pct,,chart,N,,
+X32,14,Chapter 2,"Gap (men minus women), % household has a disaster plan",5,pct,,text,N,,
+C2_7_women_electricity_yes,14,Chart 2.7,"Lost access to vital services for more than a day in the past 12 months: electricity, % yes, women",43,pct,,chart,N,,
+C2_7_women_electricity_no,14,Chart 2.7,"Lost access to vital services for more than a day in the past 12 months: electricity, % no, women",56,pct,,chart,N,,
+C2_7_women_medical_yes,14,Chart 2.7,"Lost access to vital services for more than a day in the past 12 months: medicine/medical help, % yes, women",22,pct,,chart,N,,
+C2_7_women_medical_no,14,Chart 2.7,"Lost access to vital services for more than a day in the past 12 months: medicine/medical help, % no, women",77,pct,,chart,N,,
+C2_7_women_water_yes,14,Chart 2.7,"Lost access to vital services for more than a day in the past 12 months: clean drinking water, % yes, women",26,pct,,chart,N,,
+C2_7_women_water_no,14,Chart 2.7,"Lost access to vital services for more than a day in the past 12 months: clean drinking water, % no, women",74,pct,,chart,N,,
+C2_7_women_food_yes,14,Chart 2.7,"Lost access to vital services for more than a day in the past 12 months: food, % yes, women",17,pct,,chart,N,,
+C2_7_women_food_no,14,Chart 2.7,"Lost access to vital services for more than a day in the past 12 months: food, % no, women",83,pct,,chart,N,,
+C2_7_women_telephone_yes,14,Chart 2.7,"Lost access to vital services for more than a day in the past 12 months: telephone, % yes, women",23,pct,,chart,N,,
+C2_7_women_telephone_no,14,Chart 2.7,"Lost access to vital services for more than a day in the past 12 months: telephone, % no, women",74,pct,,chart,N,,
+C2_7_men_electricity_yes,14,Chart 2.7,"Lost access to vital services for more than a day in the past 12 months: electricity, % yes, men",42,pct,,chart,N,,
+C2_7_men_electricity_no,14,Chart 2.7,"Lost access to vital services for more than a day in the past 12 months: electricity, % no, men",57,pct,,chart,N,,
+C2_7_men_medical_yes,14,Chart 2.7,"Lost access to vital services for more than a day in the past 12 months: medicine/medical help, % yes, men",20,pct,,chart,N,,
+C2_7_men_medical_no,14,Chart 2.7,"Lost access to vital services for more than a day in the past 12 months: medicine/medical help, % no, men",79,pct,,chart,N,,
+C2_7_men_water_yes,14,Chart 2.7,"Lost access to vital services for more than a day in the past 12 months: clean drinking water, % yes, men",24,pct,,chart,N,,
+C2_7_men_water_no,14,Chart 2.7,"Lost access to vital services for more than a day in the past 12 months: clean drinking water, % no, men",76,pct,,chart,N,,
+C2_7_men_food_yes,14,Chart 2.7,"Lost access to vital services for more than a day in the past 12 months: food, % yes, men",15,pct,,chart,N,,
+C2_7_men_food_no,14,Chart 2.7,"Lost access to vital services for more than a day in the past 12 months: food, % no, men",85,pct,,chart,N,,
+C2_7_men_telephone_yes,14,Chart 2.7,"Lost access to vital services for more than a day in the past 12 months: telephone, % yes, men",23,pct,,chart,N,,
+C2_7_men_telephone_no,14,Chart 2.7,"Lost access to vital services for more than a day in the past 12 months: telephone, % no, men",75,pct,,chart,N,,
+X33_food,14,Chapter 2,"Gap (women minus men), % went without food for more than a day",2,pct,,text,N,,
+X33_water,14,Chapter 2,"Gap (women minus men), % went without clean drinking water for more than a day",2,pct,,text,N,,
+X33_medical,14,Chapter 2,"Gap (women minus men), % went without medical help for more than a day",2,pct,,text,N,,
+C2_8_women_yes,15,Chart 2.8,"Ever experienced any discrimination: % yes, women",22,pct,,chart,N,,"The chart legend reads Yes then No, but the values only match the data with the larger segment as No: 22% of women and 20% of men report any discrimination. Respondents in countries not asked the questions are counted as No, which is what reproduces the published figures."
+C2_8_women_no,15,Chart 2.8,"Ever experienced any discrimination: % no, women",78,pct,,chart,N,,"The chart legend reads Yes then No, but the values only match the data with the larger segment as No: 22% of women and 20% of men report any discrimination. Respondents in countries not asked the questions are counted as No, which is what reproduces the published figures."
+C2_8_men_yes,15,Chart 2.8,"Ever experienced any discrimination: % yes, men",20,pct,,chart,N,,"The chart legend reads Yes then No, but the values only match the data with the larger segment as No: 22% of women and 20% of men report any discrimination. Respondents in countries not asked the questions are counted as No, which is what reproduces the published figures."
+C2_8_men_no,15,Chart 2.8,"Ever experienced any discrimination: % no, men",80,pct,,chart,N,,"The chart legend reads Yes then No, but the values only match the data with the larger segment as No: 22% of women and 20% of men report any discrimination. Respondents in countries not asked the questions are counted as No, which is what reproduces the published figures."
+X34,15,Chapter 2,"Gap (men minus women), % experienced any discrimination ('women slightly less likely, by 2 points')",2,pct,,text,N,,"The data, and the chart, show women 2 points more likely, not less."
+C2_9_women_skin_yes,15,Chart 2.9,"Experienced discrimination, by type: colour of skin, % yes, women",9,pct,,chart,N,,
+C2_9_women_skin_no,15,Chart 2.9,"Experienced discrimination, by type: colour of skin, % no, women",90,pct,,chart,N,,
+C2_9_women_nationality_yes,15,Chart 2.9,"Experienced discrimination, by type: nationality/ethnic group, % yes, women",11,pct,,chart,N,,
+C2_9_women_nationality_no,15,Chart 2.9,"Experienced discrimination, by type: nationality/ethnic group, % no, women",88,pct,,chart,N,,
+C2_9_women_religion_yes,15,Chart 2.9,"Experienced discrimination, by type: religion, % yes, women",11,pct,,chart,N,,
+C2_9_women_religion_no,15,Chart 2.9,"Experienced discrimination, by type: religion, % no, women",88,pct,,chart,N,,
+C2_9_women_gender_yes,15,Chart 2.9,"Experienced discrimination, by type: gender, % yes, women",13,pct,,chart,N,,
+C2_9_women_gender_no,15,Chart 2.9,"Experienced discrimination, by type: gender, % no, women",86,pct,,chart,N,,
+C2_9_women_disability_yes,15,Chart 2.9,"Experienced discrimination, by type: disability, % yes, women",6,pct,,chart,N,,
+C2_9_women_disability_no,15,Chart 2.9,"Experienced discrimination, by type: disability, % no, women",77,pct,,chart,N,,
+C2_9_women_disability_na,15,Chart 2.9,"Experienced discrimination, by type: disability, % not applicable, women",16,pct,,chart,N,,
+C2_9_men_skin_yes,15,Chart 2.9,"Experienced discrimination, by type: colour of skin, % yes, men",10,pct,,chart,N,,
+C2_9_men_skin_no,15,Chart 2.9,"Experienced discrimination, by type: colour of skin, % no, men",89,pct,,chart,N,,
+C2_9_men_nationality_yes,15,Chart 2.9,"Experienced discrimination, by type: nationality/ethnic group, % yes, men",13,pct,,chart,N,,
+C2_9_men_nationality_no,15,Chart 2.9,"Experienced discrimination, by type: nationality/ethnic group, % no, men",86,pct,,chart,N,,
+C2_9_men_religion_yes,15,Chart 2.9,"Experienced discrimination, by type: religion, % yes, men",12,pct,,chart,N,,
+C2_9_men_religion_no,15,Chart 2.9,"Experienced discrimination, by type: religion, % no, men",86,pct,,chart,N,,"Published yes + no = 98 although don't know, refused and not applicable total under 1% in the data."
+C2_9_men_gender_yes,15,Chart 2.9,"Experienced discrimination, by type: gender, % yes, men",8,pct,,chart,N,,
+C2_9_men_gender_no,15,Chart 2.9,"Experienced discrimination, by type: gender, % no, men",91,pct,,chart,N,,
+C2_9_men_disability_yes,15,Chart 2.9,"Experienced discrimination, by type: disability, % yes, men",6,pct,,chart,N,,
+C2_9_men_disability_no,15,Chart 2.9,"Experienced discrimination, by type: disability, % no, men",81,pct,,chart,N,,
+C2_9_men_disability_na,15,Chart 2.9,"Experienced discrimination, by type: disability, % not applicable, men",12,pct,,chart,N,,
+X35_disability,15,Chapter 2,"Gap (women minus men), % discrimination due to disability ('no difference')",0,pct,,text,N,,
+X35_skin,15,Chapter 2,"Gap (men minus women), % discrimination due to skin colour",1,pct,,text,N,,
+X35_religion,15,Chapter 2,"Gap (men minus women), % discrimination due to religion",1,pct,,text,N,,
+X35_nationality,15,Chapter 2,"Gap (men minus women), % discrimination due to nationality/ethnic group",2,pct,,text,N,,
+X35_gender,15,Chapter 2,"Gap (women minus men), % discrimination due to gender",5,pct,,text,N,,
+C3_1_women_yes,16,Chart 3.1,"Used the internet or social media in the past 30 days: % yes, women",59,pct,,chart,N,,
+C3_1_women_no,16,Chart 3.1,"Used the internet or social media in the past 30 days: % no, women",40,pct,,chart,N,,
+C3_1_men_yes,16,Chart 3.1,"Used the internet or social media in the past 30 days: % yes, men",66,pct,,chart,N,,
+C3_1_men_no,16,Chart 3.1,"Used the internet or social media in the past 30 days: % no, men",33,pct,,chart,N,,
+X36,16,Chapter 3,"Gap (men minus women), % used the internet in the past 30 days",7,pct,,text,N,,
+C3_2_women_very,17,Chart 3.2,"Worried online personal information could be stolen: % very worried, women",46,pct,,chart,N,,
+C3_2_women_somewhat,17,Chart 3.2,"Worried online personal information could be stolen: % somewhat worried, women",34,pct,,chart,N,,
+C3_2_women_not,17,Chart 3.2,"Worried online personal information could be stolen: % not worried, women",19,pct,,chart,N,,
+C3_2_men_very,17,Chart 3.2,"Worried online personal information could be stolen: % very worried, men",42,pct,,chart,N,,
+C3_2_men_somewhat,17,Chart 3.2,"Worried online personal information could be stolen: % somewhat worried, men",33,pct,,chart,N,,
+C3_2_men_not,17,Chart 3.2,"Worried online personal information could be stolen: % not worried, men",24,pct,,chart,N,,
+X37_very,17,Chapter 3,"Gap (women minus men), % very worried personal information stolen",4,pct,,text,N,,
+X37_somewhat,17,Chapter 3,"Gap (women minus men), % somewhat worried personal information stolen ('no difference')",0,pct,,text,N,,
+C3_3_women_very,17,Chart 3.3,"Worried online personal information could be used by companies: % very worried, women",42,pct,,chart,N,,
+C3_3_women_somewhat,17,Chart 3.3,"Worried online personal information could be used by companies: % somewhat worried, women",35,pct,,chart,N,,
+C3_3_women_not,17,Chart 3.3,"Worried online personal information could be used by companies: % not worried, women",22,pct,,chart,N,,
+C3_3_men_very,17,Chart 3.3,"Worried online personal information could be used by companies: % very worried, men",39,pct,,chart,N,,
+C3_3_men_somewhat,17,Chart 3.3,"Worried online personal information could be used by companies: % somewhat worried, men",33,pct,,chart,N,,
+C3_3_men_not,17,Chart 3.3,"Worried online personal information could be used by companies: % not worried, men",27,pct,,chart,N,,
+X38_very,17,Chapter 3,"Gap (women minus men), % very worried personal information used by companies",3,pct,,text,N,,
+X38_somewhat,17,Chapter 3,"Gap (women minus men), % somewhat worried personal information used by companies",2,pct,,text,N,,
+C3_4_women_very,18,Chart 3.4,"Worried online personal information could be used by the government: % very worried, women",37,pct,,chart,N,,
+C3_4_women_somewhat,18,Chart 3.4,"Worried online personal information could be used by the government: % somewhat worried, women",33,pct,,chart,N,,
+C3_4_women_not,18,Chart 3.4,"Worried online personal information could be used by the government: % not worried, women",29,pct,,chart,N,,
+C3_4_men_very,18,Chart 3.4,"Worried online personal information could be used by the government: % very worried, men",37,pct,,chart,N,,
+C3_4_men_somewhat,18,Chart 3.4,"Worried online personal information could be used by the government: % somewhat worried, men",30,pct,,chart,N,,
+C3_4_men_not,18,Chart 3.4,"Worried online personal information could be used by the government: % not worried, men",32,pct,,chart,N,,
+X39_somewhat,18,Chapter 3,"Gap (women minus men), % somewhat worried personal information used by government",3,pct,,text,N,,
+X39_very,18,Chapter 3,"Gap (women minus men), % very worried personal information used by government ('no difference')",0,pct,,text,N,,
+C3_5_women_yes,19,Chart 3.5,"Would feel safe in a driverless car: % yes, would feel safe, women",24,pct,,chart,N,,
+C3_5_women_no,19,Chart 3.5,"Would feel safe in a driverless car: % no, would not feel safe, women",69,pct,,chart,N,,
+C3_5_women_dk,19,Chart 3.5,"Would feel safe in a driverless car: % don't know/refused, women",7,pct,,chart,N,,
+C3_5_men_yes,19,Chart 3.5,"Would feel safe in a driverless car: % yes, would feel safe, men",31,pct,,chart,N,,
+C3_5_men_no,19,Chart 3.5,"Would feel safe in a driverless car: % no, would not feel safe, men",61,pct,,chart,N,,
+C3_5_men_dk,19,Chart 3.5,"Would feel safe in a driverless car: % don't know/refused, men",8,pct,,chart,N,,
+X40,19,Chapter 3,"Gap (men minus women), % would feel safe in a driverless car",7,pct,,text,N,,
+C3_6_women_help,19,Chart 3.6,"Artificial intelligence will mostly help or harm people in the next 20 years: % mostly help, women",36,pct,,chart,N,,
+C3_6_women_harm,19,Chart 3.6,"Artificial intelligence will mostly help or harm people in the next 20 years: % mostly harm, women",29,pct,,chart,N,,
+C3_6_women_no_opinion,19,Chart 3.6,"Artificial intelligence will mostly help or harm people in the next 20 years: % don't have an opinion, women",24,pct,,chart,N,,
+C3_6_women_dk,19,Chart 3.6,"Artificial intelligence will mostly help or harm people in the next 20 years: % don't know/refused, women",8,pct,,chart,N,,
+C3_6_men_help,19,Chart 3.6,"Artificial intelligence will mostly help or harm people in the next 20 years: % mostly help, men",42,pct,,chart,N,,
+C3_6_men_harm,19,Chart 3.6,"Artificial intelligence will mostly help or harm people in the next 20 years: % mostly harm, men",27,pct,,chart,N,,
+C3_6_men_no_opinion,19,Chart 3.6,"Artificial intelligence will mostly help or harm people in the next 20 years: % don't have an opinion, men",20,pct,,chart,N,,
+C3_6_men_dk,19,Chart 3.6,"Artificial intelligence will mostly help or harm people in the next 20 years: % don't know/refused, men",8,pct,,chart,N,,
+X41_help,19,Chapter 3,"Gap (men minus women), % AI will mostly help",6,pct,,text,N,,
+X41_harm,19,Chapter 3,"Gap (women minus men), % AI will mostly harm",2,pct,,text,N,,
+X41_no_opinion,19,Chapter 3,"Gap (women minus men), % no opinion on AI",4,pct,,text,N,,
+C4_1_women_worked,20,Chart 4.1,"Currently working or have ever worked: % working or have worked, women",86,pct,,chart,N,,
+C4_1_women_never,20,Chart 4.1,"Currently working or have ever worked: % never worked, women",14,pct,,chart,N,,
+C4_1_men_worked,20,Chart 4.1,"Currently working or have ever worked: % working or have worked, men",94,pct,,chart,N,,
+C4_1_men_never,20,Chart 4.1,"Currently working or have ever worked: % never worked, men",6,pct,,chart,N,,
+X42,20,Chapter 4,"Gap (women minus men), % never worked",8,pct,,text,N,,
+C4_2_women_employed,21,Chart 4.2,"Current employment status, those who have ever worked: % employed, women",50,pct,,chart,N,,
+C4_2_women_unemployed,21,Chart 4.2,"Current employment status, those who have ever worked: % unemployed, women",8,pct,,chart,N,,
+C4_2_women_out,21,Chart 4.2,"Current employment status, those who have ever worked: % out of workforce, women",42,pct,,chart,N,,
+C4_2_women_ex_full_time,21,Chart 4.2,"Current employment status, those who have ever worked: excluding out of workforce, % full time, women",40,pct,,chart,N,,
+C4_2_women_ex_part_time,21,Chart 4.2,"Current employment status, those who have ever worked: excluding out of workforce, % part time, women",28,pct,,chart,N,,
+C4_2_women_ex_self,21,Chart 4.2,"Current employment status, those who have ever worked: excluding out of workforce, % self-employed, women",19,pct,,chart,N,,
+C4_2_women_ex_unemployed,21,Chart 4.2,"Current employment status, those who have ever worked: excluding out of workforce, % unemployed, women",13,pct,,chart,N,,
+C4_2_men_employed,21,Chart 4.2,"Current employment status, those who have ever worked: % employed, men",70,pct,,chart,N,,
+C4_2_men_unemployed,21,Chart 4.2,"Current employment status, those who have ever worked: % unemployed, men",7,pct,,chart,N,,
+C4_2_men_out,21,Chart 4.2,"Current employment status, those who have ever worked: % out of workforce, men",23,pct,,chart,N,,
+C4_2_men_ex_full_time,21,Chart 4.2,"Current employment status, those who have ever worked: excluding out of workforce, % full time, men",48,pct,,chart,N,,
+C4_2_men_ex_part_time,21,Chart 4.2,"Current employment status, those who have ever worked: excluding out of workforce, % part time, men",18,pct,,chart,N,,
+C4_2_men_ex_self,21,Chart 4.2,"Current employment status, those who have ever worked: excluding out of workforce, % self-employed, men",25,pct,,chart,N,,
+C4_2_men_ex_unemployed,21,Chart 4.2,"Current employment status, those who have ever worked: excluding out of workforce, % unemployed, men",9,pct,,chart,N,,
+X43_out,21,Chapter 4,"Gap (women minus men), % out of the workforce (ever worked)",19,pct,,text,N,,
+X43_part_time,21,Chapter 4,"Gap (women minus men), % part time (excluding out of workforce)",10,pct,,text,N,,
+X43_full_time,21,Chapter 4,"Gap (men minus women), % full time (excluding out of workforce)",8,pct,,text,N,,
+X43_self,21,Chapter 4,"Gap (men minus women), % self-employed (excluding out of workforce)",6,pct,,text,N,,
+C4_3_women_none,21,Chart 4.3,"Number of forms of violence and harassment at work ever experienced (ever worked): % none, women",80,pct,,chart,N,,
+C4_3_women_one,21,Chart 4.3,"Number of forms of violence and harassment at work ever experienced (ever worked): % one form, women",14,pct,,chart,N,,
+C4_3_women_two,21,Chart 4.3,"Number of forms of violence and harassment at work ever experienced (ever worked): % two forms, women",5,pct,,chart,N,,
+C4_3_men_none,21,Chart 4.3,"Number of forms of violence and harassment at work ever experienced (ever worked): % none, men",78,pct,,chart,N,,"The men's figures here could not be reproduced under any base tried (ever worked, currently employed, in the labour force; population, within-country or no weights). Chart 4.4, which splits the same respondents by combination of forms, does match the data, and implies 3% of men who have ever worked experienced sexual and 20% any violence and harassment at work."
+C4_3_men_one,21,Chart 4.3,"Number of forms of violence and harassment at work ever experienced (ever worked): % one form, men",16,pct,,chart,N,,"The men's figures here could not be reproduced under any base tried (ever worked, currently employed, in the labour force; population, within-country or no weights). Chart 4.4, which splits the same respondents by combination of forms, does match the data, and implies 3% of men who have ever worked experienced sexual and 20% any violence and harassment at work."
+C4_3_men_two,21,Chart 4.3,"Number of forms of violence and harassment at work ever experienced (ever worked): % two forms, men",5,pct,,chart,N,,"The men's figures here could not be reproduced under any base tried (ever worked, currently employed, in the labour force; population, within-country or no weights). Chart 4.4, which splits the same respondents by combination of forms, does match the data, and implies 3% of men who have ever worked experienced sexual and 20% any violence and harassment at work."
+X44,21,Chapter 4,"Gap (men minus women), % experienced any violence and harassment at work",2,pct,,text,N,,"The men's figures here could not be reproduced under any base tried (ever worked, currently employed, in the labour force; population, within-country or no weights). Chart 4.4, which splits the same respondents by combination of forms, does match the data, and implies 3% of men who have ever worked experienced sexual and 20% any violence and harassment at work."
+C4_4_women_psych,22,Chart 4.4,"Types of violence and harassment experienced, among those who experienced any: % psychological only, women",47,pct,,chart,N,,
+C4_4_women_sexual,22,Chart 4.4,"Types of violence and harassment experienced, among those who experienced any: % sexual only, women",12,pct,,chart,N,,
+C4_4_women_sexual_psych,22,Chart 4.4,"Types of violence and harassment experienced, among those who experienced any: % sexual + psychological, women",11,pct,,chart,N,,
+C4_4_women_psych_physical,22,Chart 4.4,"Types of violence and harassment experienced, among those who experienced any: % psychological + physical, women",11,pct,,chart,N,,
+C4_4_women_physical,22,Chart 4.4,"Types of violence and harassment experienced, among those who experienced any: % physical only, women",9,pct,,chart,N,,
+C4_4_women_all_three,22,Chart 4.4,"Types of violence and harassment experienced, among those who experienced any: % sexual + physical + psychological, women",7,pct,,chart,N,,
+C4_4_women_sexual_physical,22,Chart 4.4,"Types of violence and harassment experienced, among those who experienced any: % sexual + physical, women",2,pct,,chart,N,,
+C4_4_men_psych,22,Chart 4.4,"Types of violence and harassment experienced, among those who experienced any: % psychological only, men",49,pct,,chart,N,,
+C4_4_men_sexual,22,Chart 4.4,"Types of violence and harassment experienced, among those who experienced any: % sexual only, men",4.5,pct,1,chart,N,,
+C4_4_men_sexual_psych,22,Chart 4.4,"Types of violence and harassment experienced, among those who experienced any: % sexual + psychological, men",4.5,pct,1,chart,N,,
+C4_4_men_psych_physical,22,Chart 4.4,"Types of violence and harassment experienced, among those who experienced any: % psychological + physical, men",20,pct,,chart,N,,
+C4_4_men_physical,22,Chart 4.4,"Types of violence and harassment experienced, among those who experienced any: % physical only, men",16,pct,,chart,N,,
+C4_4_men_all_three,22,Chart 4.4,"Types of violence and harassment experienced, among those who experienced any: % sexual + physical + psychological, men",5,pct,,chart,N,,
+X45_women,22,Chapter 4,Women who experienced any V&H at work: % with a sexual element,33,pct,,text,N,,
+X45_men,22,Chapter 4,Men who experienced any V&H at work: % with a sexual element,15,pct,,text,N,,
+C4_5_women_yes,23,Chart 4.5,"Ever experienced physical violence and harassment at work (ever worked): % yes, women",6,pct,,chart,N,,
+C4_5_women_no,23,Chart 4.5,"Ever experienced physical violence and harassment at work (ever worked): % no, women",94,pct,,chart,N,,
+C4_5_men_yes,23,Chart 4.5,"Ever experienced physical violence and harassment at work (ever worked): % yes, men",8,pct,,chart,N,,
+C4_5_men_no,23,Chart 4.5,"Ever experienced physical violence and harassment at work (ever worked): % no, men",92,pct,,chart,N,,
+C4_5_women_once_twice,23,Chart 4.5,"Times experienced physical violence and harassment at work (those who experienced it): % once or twice, women",43,pct,,chart,N,,
+C4_5_women_three_five,23,Chart 4.5,"Times experienced physical violence and harassment at work (those who experienced it): % three to five times, women",24,pct,,chart,N,,
+C4_5_women_more_five,23,Chart 4.5,"Times experienced physical violence and harassment at work (those who experienced it): % more than five times, women",32,pct,,chart,N,,
+C4_5_men_once_twice,23,Chart 4.5,"Times experienced physical violence and harassment at work (those who experienced it): % once or twice, men",42,pct,,chart,N,,
+C4_5_men_three_five,23,Chart 4.5,"Times experienced physical violence and harassment at work (those who experienced it): % three to five times, men",23,pct,,chart,N,,
+C4_5_men_more_five,23,Chart 4.5,"Times experienced physical violence and harassment at work (those who experienced it): % more than five times, men",33,pct,,chart,N,,
+C4_6_women_yes,23,Chart 4.6,"Ever experienced psychological violence and harassment at work (ever worked): % yes, women",6,pct,,chart,N,,The 'ever experienced' values in this chart repeat those of Chart 4.5 (physical); psychological violence and harassment is about 16% for both sexes in the data.
+C4_6_women_no,23,Chart 4.6,"Ever experienced psychological violence and harassment at work (ever worked): % no, women",94,pct,,chart,N,,The 'ever experienced' values in this chart repeat those of Chart 4.5 (physical); psychological violence and harassment is about 16% for both sexes in the data.
+C4_6_men_yes,23,Chart 4.6,"Ever experienced psychological violence and harassment at work (ever worked): % yes, men",8,pct,,chart,N,,The 'ever experienced' values in this chart repeat those of Chart 4.5 (physical); psychological violence and harassment is about 16% for both sexes in the data.
+C4_6_men_no,23,Chart 4.6,"Ever experienced psychological violence and harassment at work (ever worked): % no, men",92,pct,,chart,N,,The 'ever experienced' values in this chart repeat those of Chart 4.5 (physical); psychological violence and harassment is about 16% for both sexes in the data.
+C4_6_women_once_twice,23,Chart 4.6,"Times experienced psychological violence and harassment at work (those who experienced it): % once or twice, women",39,pct,,chart,N,,
+C4_6_women_three_five,23,Chart 4.6,"Times experienced psychological violence and harassment at work (those who experienced it): % three to five times, women",23,pct,,chart,N,,
+C4_6_women_more_five,23,Chart 4.6,"Times experienced psychological violence and harassment at work (those who experienced it): % more than five times, women",37,pct,,chart,N,,
+C4_6_men_once_twice,23,Chart 4.6,"Times experienced psychological violence and harassment at work (those who experienced it): % once or twice, men",35,pct,,chart,N,,
+C4_6_men_three_five,23,Chart 4.6,"Times experienced psychological violence and harassment at work (those who experienced it): % three to five times, men",25,pct,,chart,N,,
+C4_6_men_more_five,23,Chart 4.6,"Times experienced psychological violence and harassment at work (those who experienced it): % more than five times, men",37,pct,,chart,N,,
+C4_7_women_yes,24,Chart 4.7,"Ever experienced sexual violence and harassment at work (ever worked): % yes, women",7,pct,,chart,N,,
+C4_7_women_no,24,Chart 4.7,"Ever experienced sexual violence and harassment at work (ever worked): % no, women",93,pct,,chart,N,,
+C4_7_men_yes,24,Chart 4.7,"Ever experienced sexual violence and harassment at work (ever worked): % yes, men",5,pct,,chart,N,,"The men's figures here could not be reproduced under any base tried (ever worked, currently employed, in the labour force; population, within-country or no weights). Chart 4.4, which splits the same respondents by combination of forms, does match the data, and implies 3% of men who have ever worked experienced sexual and 20% any violence and harassment at work."
+C4_7_men_no,24,Chart 4.7,"Ever experienced sexual violence and harassment at work (ever worked): % no, men",95,pct,,chart,N,,"The men's figures here could not be reproduced under any base tried (ever worked, currently employed, in the labour force; population, within-country or no weights). Chart 4.4, which splits the same respondents by combination of forms, does match the data, and implies 3% of men who have ever worked experienced sexual and 20% any violence and harassment at work."
+C4_7_women_once_twice,24,Chart 4.7,"Times experienced sexual violence and harassment at work (those who experienced it): % once or twice, women",42,pct,,chart,N,,
+C4_7_women_three_five,24,Chart 4.7,"Times experienced sexual violence and harassment at work (those who experienced it): % three to five times, women",24,pct,,chart,N,,
+C4_7_women_more_five,24,Chart 4.7,"Times experienced sexual violence and harassment at work (those who experienced it): % more than five times, women",32,pct,,chart,N,,
+C4_7_men_once_twice,24,Chart 4.7,"Times experienced sexual violence and harassment at work (those who experienced it): % once or twice, men",50,pct,,chart,N,,
+C4_7_men_three_five,24,Chart 4.7,"Times experienced sexual violence and harassment at work (those who experienced it): % three to five times, men",21,pct,,chart,N,,
+C4_7_men_more_five,24,Chart 4.7,"Times experienced sexual violence and harassment at work (those who experienced it): % more than five times, men",25,pct,,chart,N,,
+X46,23,Chapter 4,"Gap (men minus women), % ever experienced physical V&H at work",2,pct,,text,N,,
+X47,23,Chapter 4,"Gap (women minus men), % experienced physical V&H three or more times ('no difference')",0,pct,,text,N,,
+X48,23,Chapter 4,"Gap (men minus women), % ever experienced psychological V&H at work",1,pct,,text,N,,
+X49,23,Chapter 4,"Gap (men minus women), % experienced psychological V&H three or more times",2,pct,,text,N,,
+X50,24,Chapter 4,"Gap (women minus men), % ever experienced sexual V&H at work",2,pct,,text,N,,"The men's figures here could not be reproduced under any base tried (ever worked, currently employed, in the labour force; population, within-country or no weights). Chart 4.4, which splits the same respondents by combination of forms, does match the data, and implies 3% of men who have ever worked experienced sexual and 20% any violence and harassment at work."
+X51,24,Chapter 4,"Gap (women minus men), % experienced sexual V&H three or more times",10,pct,,text,N,,
+C4_8_women_yes,24,Chart 4.8,"Told anyone about violence and harassment at work: % yes, women",57,pct,,chart,N,,
+C4_8_women_no,24,Chart 4.8,"Told anyone about violence and harassment at work: % no, women",42,pct,,chart,N,,
+C4_8_men_yes,24,Chart 4.8,"Told anyone about violence and harassment at work: % yes, men",48,pct,,chart,N,,
+C4_8_men_no,24,Chart 4.8,"Told anyone about violence and harassment at work: % no, men",51,pct,,chart,N,,
+X52,24,Chapter 4,"Gap (women minus men), % told someone about V&H at work",9,pct,,text,N,,
+C4_9_women_employer_yes,25,Chart 4.9,"Whom told about violence and harassment at work: employer or supervisor, % yes, women",52,pct,,chart,N,,
+C4_9_women_employer_no,25,Chart 4.9,"Whom told about violence and harassment at work: employer or supervisor, % no, women",48,pct,,chart,N,,
+C4_9_women_union_yes,25,Chart 4.9,"Whom told about violence and harassment at work: trade union representative, % yes, women",14,pct,,chart,N,,
+C4_9_women_union_no,25,Chart 4.9,"Whom told about violence and harassment at work: trade union representative, % no, women",86,pct,,chart,N,,
+C4_9_women_coworker_yes,25,Chart 4.9,"Whom told about violence and harassment at work: co-worker, % yes, women",66,pct,,chart,N,,
+C4_9_women_coworker_no,25,Chart 4.9,"Whom told about violence and harassment at work: co-worker, % no, women",34,pct,,chart,N,,
+C4_9_women_police_yes,25,Chart 4.9,"Whom told about violence and harassment at work: police/community leader, % yes, women",13,pct,,chart,N,,
+C4_9_women_police_no,25,Chart 4.9,"Whom told about violence and harassment at work: police/community leader, % no, women",87,pct,,chart,N,,
+C4_9_women_family_yes,25,Chart 4.9,"Whom told about violence and harassment at work: friend or family, % yes, women",85,pct,,chart,N,,
+C4_9_women_family_no,25,Chart 4.9,"Whom told about violence and harassment at work: friend or family, % no, women",15,pct,,chart,N,,
+C4_9_women_social_yes,25,Chart 4.9,"Whom told about violence and harassment at work: social services or not-for-profit, % yes, women",8,pct,,chart,N,,
+C4_9_women_social_no,25,Chart 4.9,"Whom told about violence and harassment at work: social services or not-for-profit, % no, women",92,pct,,chart,N,,
+C4_9_men_employer_yes,25,Chart 4.9,"Whom told about violence and harassment at work: employer or supervisor, % yes, men",55,pct,,chart,N,,
+C4_9_men_employer_no,25,Chart 4.9,"Whom told about violence and harassment at work: employer or supervisor, % no, men",45,pct,,chart,N,,
+C4_9_men_union_yes,25,Chart 4.9,"Whom told about violence and harassment at work: trade union representative, % yes, men",16,pct,,chart,N,,
+C4_9_men_union_no,25,Chart 4.9,"Whom told about violence and harassment at work: trade union representative, % no, men",84,pct,,chart,N,,
+C4_9_men_coworker_yes,25,Chart 4.9,"Whom told about violence and harassment at work: co-worker, % yes, men",69,pct,,chart,N,,
+C4_9_men_coworker_no,25,Chart 4.9,"Whom told about violence and harassment at work: co-worker, % no, men",31,pct,,chart,N,,
+C4_9_men_police_yes,25,Chart 4.9,"Whom told about violence and harassment at work: police/community leader, % yes, men",18,pct,,chart,N,,
+C4_9_men_police_no,25,Chart 4.9,"Whom told about violence and harassment at work: police/community leader, % no, men",82,pct,,chart,N,,
+C4_9_men_family_yes,25,Chart 4.9,"Whom told about violence and harassment at work: friend or family, % yes, men",83,pct,,chart,N,,
+C4_9_men_family_no,25,Chart 4.9,"Whom told about violence and harassment at work: friend or family, % no, men",17,pct,,chart,N,,
+C4_9_men_social_yes,25,Chart 4.9,"Whom told about violence and harassment at work: social services or not-for-profit, % yes, men",9,pct,,chart,N,,
+C4_9_men_social_no,25,Chart 4.9,"Whom told about violence and harassment at work: social services or not-for-profit, % no, men",91,pct,,chart,N,,
+X53_family,25,Chapter 4,"Gap (women minus men), % told a friend or family member",2,pct,,text,N,,
+X53_employer,25,Chapter 4,"Gap (men minus women), % told their supervisor",3,pct,,text,N,,
+X53_coworker,25,Chapter 4,"Gap (men minus women), % told a co-worker",3,pct,,text,N,,
+X53_union,25,Chapter 4,"Gap (men minus women), % told a trade union representative",2,pct,,text,N,,
+X53_police,25,Chapter 4,"Gap (men minus women), % told the police, a community leader or labour inspector",5,pct,,text,N,,
+C4_10_women_waste_yes,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: a waste of time, % yes, women",53,pct,,chart,N,,
+C4_10_women_waste_no,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: a waste of time, % no, women",45,pct,,chart,N,,
+C4_10_women_find_out_yes,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: worried people at work would find out, % yes, women",46,pct,,chart,N,,
+C4_10_women_find_out_no,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: worried people at work would find out, % no, women",53,pct,,chart,N,,
+C4_10_women_not_know_yes,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: did not know what to do, % yes, women",46,pct,,chart,N,,
+C4_10_women_not_know_no,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: did not know what to do, % no, women",53,pct,,chart,N,,
+C4_10_women_punishment_yes,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: fear of punishment, % yes, women",37,pct,,chart,N,,
+C4_10_women_punishment_no,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: fear of punishment, % no, women",62,pct,,chart,N,,
+C4_10_women_procedures_yes,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: unclear procedures at work, % yes, women",42,pct,,chart,N,,
+C4_10_women_procedures_no,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: unclear procedures at work, % no, women",55,pct,,chart,N,,
+C4_10_women_reputation_yes,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: fear for reputation, % yes, women",46,pct,,chart,N,,
+C4_10_women_reputation_no,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: fear for reputation, % no, women",53,pct,,chart,N,,
+C4_10_women_trust_yes,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: lack of trust in police/community leaders, % yes, women",39,pct,,chart,N,,
+C4_10_women_trust_no,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: lack of trust in police/community leaders, % no, women",59,pct,,chart,N,,
+C4_10_men_waste_yes,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: a waste of time, % yes, men",57,pct,,chart,N,,
+C4_10_men_waste_no,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: a waste of time, % no, men",41,pct,,chart,N,,
+C4_10_men_find_out_yes,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: worried people at work would find out, % yes, men",36,pct,,chart,N,,
+C4_10_men_find_out_no,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: worried people at work would find out, % no, men",62,pct,,chart,N,,
+C4_10_men_not_know_yes,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: did not know what to do, % yes, men",33,pct,,chart,N,,
+C4_10_men_not_know_no,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: did not know what to do, % no, men",66,pct,,chart,N,,
+C4_10_men_punishment_yes,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: fear of punishment, % yes, men",34,pct,,chart,N,,
+C4_10_men_punishment_no,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: fear of punishment, % no, men",65,pct,,chart,N,,
+C4_10_men_procedures_yes,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: unclear procedures at work, % yes, men",42,pct,,chart,N,,
+C4_10_men_procedures_no,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: unclear procedures at work, % no, men",56,pct,,chart,N,,
+C4_10_men_reputation_yes,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: fear for reputation, % yes, men",44,pct,,chart,N,,
+C4_10_men_reputation_no,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: fear for reputation, % no, men",54,pct,,chart,N,,
+C4_10_men_trust_yes,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: lack of trust in police/community leaders, % yes, men",44,pct,,chart,N,,
+C4_10_men_trust_no,26,Chart 4.10,"Reasons for not telling anyone about violence and harassment at work: lack of trust in police/community leaders, % no, men",53,pct,,chart,N,,
+X54_not_know,26,Chapter 4,"Gap (women minus men), % did not tell: did not know what to do",13,pct,,text,N,,
+X54_find_out,26,Chapter 4,"Gap (women minus men), % did not tell: worried people at work would find out",12,pct,,text,N,,"The chart on the same page shows 46% vs 36%, a 10-point gap; the text says 12."
+X54_punishment,26,Chapter 4,"Gap (women minus men), % did not tell: fear of punishment",3,pct,,text,N,,
+X54_waste,26,Chapter 4,"Gap (men minus women), % did not tell: a waste of time",4,pct,,text,N,,
+X54_trust,26,Chapter 4,"Gap (men minus women), % did not tell: lack of trust",5,pct,,text,N,,

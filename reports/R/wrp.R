@@ -238,7 +238,8 @@ run_report <- function(report) {
     rows[[length(rows) + 1]] <- result
   }
   out <- do.call(rbind, rows)
-  out$value <- ifelse(is.na(out$value), "", format(out$value, digits = 15, trim = TRUE))
+  out$value <- if (is.numeric(out$value)) sprintf("%.15g", out$value) else as.character(out$value)
+  out$value[out$value %in% c("NA", NA)] <- ""
   dir.create(file.path(report$dir, "output"), showWarnings = FALSE)
   write.csv(out, file.path(report$dir, "output", "reproduced_r.csv"), row.names = FALSE)
 

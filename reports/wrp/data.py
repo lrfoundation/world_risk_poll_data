@@ -35,8 +35,15 @@ def data_path(year, fmt="parquet"):
 
 
 def load_wave(year, columns=None):
-    """Load one wave from its Parquet file, optionally only some columns."""
-    return pd.read_parquet(data_path(year), columns=columns)
+    """Load one wave from its Parquet file, optionally only some columns.
+
+    Coded columns come back as float64 with NaN where the question was not
+    asked (rather than pandas' nullable Int64), so comparisons such as
+    df.Q.eq(1) give plain True/False, as they do in R.
+    """
+    df = pd.read_parquet(data_path(year), columns=columns)
+    nullable = [c for c, t in df.dtypes.items() if isinstance(t, pd.Int64Dtype)]
+    return df.astype({c: "float64" for c in nullable})
 
 
 def stack_waves(years, columns=None):
