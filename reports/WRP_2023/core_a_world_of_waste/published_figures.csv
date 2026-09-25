@@ -1,0 +1,818 @@
+finding_id,page,section,description,published_value,unit,tolerance,source,requires_gallup,gallup_items,note
+X01,3,Executive summary,"Interviews ('nearly 147,000')",147000,count,1000,text,N,,
+X02,3,Executive summary,Countries and territories surveyed,142,count,0,text,N,,
+X03,3,Executive summary,"Most common material in household waste is plastic or food ('four in five', 80%)",80,pct,,text,N,,
+X04,"3, 7",Executive summary,Most common material in household waste: plastic,42,pct,,text,N,,
+X05,"3, 7",Executive summary,Most common material in household waste: food,38,pct,,text,N,,
+X06,"3, 14",Executive summary,Household separates its waste before disposal ('slightly over half'),53,pct,,text,N,,
+X07,"3, 16",Executive summary,Household separates its waste: high-income countries,81,pct,,text,N,,
+X08,"3, 16",Executive summary,Household separates its waste: low-income countries,31,pct,,text,N,,
+X09,"3, 21, 22, 26",Executive summary,Waste collected by the municipal government,44,pct,,text,N,,
+X10,"3, 27",Executive summary,"Waste collected (government, private company or community group): cities in low-income countries",39,pct,,text,Y,GWP_DEGURBA,Degree of urbanisation (cities / towns and semi-dense areas / rural areas) is not in the public data.
+X11,"3, 27, 39",Executive summary,Waste collected: rural areas in low-income countries ('one in 50' on p39),2,pct,,text,Y,GWP_DEGURBA,
+X12,3,Executive summary,"Household disposes of its waste in an uncontrolled way: burns, dumps or takes it to landfill ('four in 10')",40,pct,,text,N,,"'Four in 10' (40). Page 21 gives 41%, see X67."
+X13,"3, 22, 39",Executive summary,Household burns its waste ('one in seven'),14,pct,,text,N,,
+X14,"3, 22",Executive summary,Household burns its waste: Central/Western Africa,34,pct,,text,N,,
+X15,"3, 22",Executive summary,Household burns its waste: Eastern Africa,41,pct,,text,N,,
+X16,"3, 24",Executive summary,Household burns its waste: Indonesia,48,pct,,text,N,,
+X17,"3, 24",Executive summary,"Household burns its waste: Indonesia ('nearly half' p3, 'half' p24)",50,pct,3,text,N,,Wording only; the figure given is 48% (X16). Tolerance 3 covers 'nearly half'.
+X18,"3, 32",Executive summary,Household separates its waste and has it collected,33,pct,,text,N,,
+X19,"3, 32",Executive summary,"Household separates its waste or has it collected, but not both",43,pct,,text,N,,
+X20,"3, 32",Executive summary,Household separates its waste and has it collected: high-income countries,71,pct,,text,N,,
+X21,"3, 32",Executive summary,Household separates its waste and has it collected: low-income countries,4,pct,,text,N,,
+X22,"3, 32",Executive summary,Household neither separates its waste nor has it collected: low-income countries,61,pct,,text,N,,
+X23,7,Chapter 2,"Most common material: household dust, leaves, branches/twigs, mud or soil",7,pct,,text,N,,
+X24,7,Chapter 2,Most common material: cardboard/paper,7,pct,,text,N,,
+X25,7,Chapter 2,Most common material: cans and metals,2,pct,,text,N,,
+X26,7,Chapter 2,Most common material: ash,1,pct,,text,N,,
+X27,7,Chapter 2,Most common material: glass,1,pct,,text,N,,
+X28,7,Chapter 2,Most common material: other,2,pct,,text,N,,
+C2_1_plastic,7,Chart 2.1,Most commonly reported primary material in household waste globally: % plastic,42,pct,,chart,N,,
+C2_1_food,7,Chart 2.1,Most commonly reported primary material in household waste globally: % food,38,pct,,chart,N,,
+C2_1_dust,7,Chart 2.1,Most commonly reported primary material in household waste globally: % household dust,7,pct,,chart,N,,
+C2_1_cardboard,7,Chart 2.1,Most commonly reported primary material in household waste globally: % cardboard/paper,7,pct,,chart,N,,
+C2_1_cans,7,Chart 2.1,Most commonly reported primary material in household waste globally: % cans & metal,2,pct,,chart,N,,
+C2_1_other,7,Chart 2.1,Most commonly reported primary material in household waste globally: % other,2,pct,,chart,N,,
+C2_1_ash,7,Chart 2.1,Most commonly reported primary material in household waste globally: % ash,1,pct,,chart,N,,
+C2_1_glass,7,Chart 2.1,Most commonly reported primary material in household waste globally: % glass,1,pct,,chart,N,,
+C2_2_low_plastic,8,Chart 2.2,"Most common type of material in household waste, by country income level: % plastic, low income",20,pct,,chart,N,,Segments too small to label are not printed and are not listed.
+C2_2_low_food,8,Chart 2.2,"Most common type of material in household waste, by country income level: % food, low income",41,pct,,chart,N,,Segments too small to label are not printed and are not listed.
+C2_2_low_dust,8,Chart 2.2,"Most common type of material in household waste, by country income level: % household dust, low income",29,pct,,chart,N,,Segments too small to label are not printed and are not listed.
+C2_2_low_other,8,Chart 2.2,"Most common type of material in household waste, by country income level: % other (cans, ash, glass, other, DK, refused), low income",7,pct,,chart,N,,Segments too small to label are not printed and are not listed.
+C2_2_lower_middle_plastic,8,Chart 2.2,"Most common type of material in household waste, by country income level: % plastic, lower-middle income",38,pct,,chart,N,,Segments too small to label are not printed and are not listed.
+C2_2_lower_middle_food,8,Chart 2.2,"Most common type of material in household waste, by country income level: % food, lower-middle income",43,pct,,chart,N,,Segments too small to label are not printed and are not listed.
+C2_2_lower_middle_dust,8,Chart 2.2,"Most common type of material in household waste, by country income level: % household dust, lower-middle income",12,pct,,chart,N,,Segments too small to label are not printed and are not listed.
+C2_2_lower_middle_other,8,Chart 2.2,"Most common type of material in household waste, by country income level: % other (cans, ash, glass, other, DK, refused), lower-middle income",5,pct,,chart,N,,Segments too small to label are not printed and are not listed.
+C2_2_upper_middle_plastic,8,Chart 2.2,"Most common type of material in household waste, by country income level: % plastic, upper-middle income",42,pct,,chart,N,,Segments too small to label are not printed and are not listed.
+C2_2_upper_middle_food,8,Chart 2.2,"Most common type of material in household waste, by country income level: % food, upper-middle income",40,pct,,chart,N,,Segments too small to label are not printed and are not listed.
+C2_2_upper_middle_cardboard,8,Chart 2.2,"Most common type of material in household waste, by country income level: % cardboard/paper, upper-middle income",8,pct,,chart,N,,Segments too small to label are not printed and are not listed.
+C2_2_upper_middle_other,8,Chart 2.2,"Most common type of material in household waste, by country income level: % other (cans, ash, glass, other, DK, refused), upper-middle income",7,pct,,chart,N,,Segments too small to label are not printed and are not listed.
+C2_2_high_plastic,8,Chart 2.2,"Most common type of material in household waste, by country income level: % plastic, high income",58,pct,,chart,N,,Segments too small to label are not printed and are not listed.
+C2_2_high_food,8,Chart 2.2,"Most common type of material in household waste, by country income level: % food, high income",20,pct,,chart,N,,Segments too small to label are not printed and are not listed.
+C2_2_high_cardboard,8,Chart 2.2,"Most common type of material in household waste, by country income level: % cardboard/paper, high income",15,pct,,chart,N,,Segments too small to label are not printed and are not listed.
+C2_2_high_other,8,Chart 2.2,"Most common type of material in household waste, by country income level: % other (cans, ash, glass, other, DK, refused), high income",6,pct,,chart,N,,Segments too small to label are not printed and are not listed.
+X29,8,Chapter 2,Most common material is plastic: high-income countries,58,pct,,text,N,,
+X30_upper_middle_plastic,8,Chapter 2,"Most common material: upper-middle income, plastic",42,pct,,text,N,,
+X30_upper_middle_food,8,Chapter 2,"Most common material: upper-middle income, food",40,pct,,text,N,,
+X30_lower_middle_plastic,8,Chapter 2,"Most common material: lower-middle income, plastic",38,pct,,text,N,,
+X30_lower_middle_food,8,Chapter 2,"Most common material: lower-middle income, food",43,pct,,text,N,,
+X31,8,Chapter 2,Most common material is plastic: low-income countries,20,pct,,text,N,,
+X32,8,Chapter 2,Most common material is food: high-income countries ('one in five'),20,pct,,text,N,,
+X33_low,8,Chapter 2,Most common material is food: low income ('around two in five households in all other income categories'),40,pct,3,text,N,,'Around two in five'; tolerance 3.
+X33_lower_middle,8,Chapter 2,Most common material is food: lower-middle income ('around two in five households in all other income categories'),40,pct,3,text,N,,'Around two in five'; tolerance 3.
+X33_upper_middle,8,Chapter 2,Most common material is food: upper-middle income ('around two in five households in all other income categories'),40,pct,3,text,N,,'Around two in five'; tolerance 3.
+X34,8,Chapter 2,"Household dust as most common material: low-income vs high-income countries, ratio ('nearly 30 times')",30,ratio,3,text,N,,'Nearly 30 times'; tolerance 3.
+C2_3_food_green_low,9,Chart 2.3,"Most common categories of material in household waste, by country income level: % food and green waste, low income",70,pct,,chart,N,,"Food and green waste = food or household dust; dry recyclables = plastic, cardboard/paper, cans/metal or glass."
+C2_3_food_green_lower_middle,9,Chart 2.3,"Most common categories of material in household waste, by country income level: % food and green waste, lower-middle income",55,pct,,chart,N,,"Food and green waste = food or household dust; dry recyclables = plastic, cardboard/paper, cans/metal or glass."
+C2_3_food_green_upper_middle,9,Chart 2.3,"Most common categories of material in household waste, by country income level: % food and green waste, upper-middle income",43,pct,,chart,N,,"Food and green waste = food or household dust; dry recyclables = plastic, cardboard/paper, cans/metal or glass."
+C2_3_food_green_high,9,Chart 2.3,"Most common categories of material in household waste, by country income level: % food and green waste, high income",21,pct,,chart,N,,"Food and green waste = food or household dust; dry recyclables = plastic, cardboard/paper, cans/metal or glass."
+C2_3_dry_low,9,Chart 2.3,"Most common categories of material in household waste, by country income level: % dry recyclables, low income",23,pct,,chart,N,,"Food and green waste = food or household dust; dry recyclables = plastic, cardboard/paper, cans/metal or glass."
+C2_3_dry_lower_middle,9,Chart 2.3,"Most common categories of material in household waste, by country income level: % dry recyclables, lower-middle income",41,pct,,chart,N,,"Food and green waste = food or household dust; dry recyclables = plastic, cardboard/paper, cans/metal or glass."
+C2_3_dry_upper_middle,9,Chart 2.3,"Most common categories of material in household waste, by country income level: % dry recyclables, upper-middle income",54,pct,,chart,N,,"Food and green waste = food or household dust; dry recyclables = plastic, cardboard/paper, cans/metal or glass."
+C2_3_dry_high,9,Chart 2.3,"Most common categories of material in household waste, by country income level: % dry recyclables, high income",76,pct,,chart,N,,"Food and green waste = food or household dust; dry recyclables = plastic, cardboard/paper, cans/metal or glass."
+X35,9,Chapter 2,Most common material is food and green waste (food or household dust),45,pct,,text,N,,
+C2_4_food_green_northern_western_europe,10,Chart 2.4,"Most common categories of material in household waste, by region: % food and green waste, Northern/Western Europe",14,pct,,chart,N,,
+C2_4_food_green_australia_nz,10,Chart 2.4,"Most common categories of material in household waste, by region: % food and green waste, Australia & New Zealand",17,pct,,chart,N,,
+C2_4_food_green_northern_america,10,Chart 2.4,"Most common categories of material in household waste, by region: % food and green waste, Northern America",17,pct,,chart,N,,
+C2_4_food_green_southern_europe,10,Chart 2.4,"Most common categories of material in household waste, by region: % food and green waste, Southern Europe",20,pct,,chart,N,,
+C2_4_food_green_southeastern_asia,10,Chart 2.4,"Most common categories of material in household waste, by region: % food and green waste, Southeastern Asia",29,pct,,chart,N,,
+C2_4_food_green_eastern_europe,10,Chart 2.4,"Most common categories of material in household waste, by region: % food and green waste, Eastern Europe",28,pct,,chart,N,,
+C2_4_food_green_latin_america,10,Chart 2.4,"Most common categories of material in household waste, by region: % food and green waste, Latin America & the Caribbean",30,pct,,chart,N,,
+C2_4_food_green_southern_africa,10,Chart 2.4,"Most common categories of material in household waste, by region: % food and green waste, Southern Africa",33,pct,,chart,N,,
+C2_4_food_green_central_asia,10,Chart 2.4,"Most common categories of material in household waste, by region: % food and green waste, Central Asia",44,pct,,chart,N,,
+C2_4_food_green_middle_east,10,Chart 2.4,"Most common categories of material in household waste, by region: % food and green waste, Middle East",47,pct,,chart,N,,
+C2_4_food_green_eastern_asia,10,Chart 2.4,"Most common categories of material in household waste, by region: % food and green waste, Eastern Asia",51,pct,,chart,N,,
+C2_4_food_green_northern_africa,10,Chart 2.4,"Most common categories of material in household waste, by region: % food and green waste, Northern Africa",58,pct,,chart,N,,
+C2_4_food_green_southern_asia,10,Chart 2.4,"Most common categories of material in household waste, by region: % food and green waste, Southern Asia",59,pct,,chart,N,,
+C2_4_food_green_central_western_africa,10,Chart 2.4,"Most common categories of material in household waste, by region: % food and green waste, Central/Western Africa",61,pct,,chart,N,,
+C2_4_food_green_eastern_africa,10,Chart 2.4,"Most common categories of material in household waste, by region: % food and green waste, Eastern Africa",66,pct,,chart,N,,
+C2_4_dry_northern_western_europe,10,Chart 2.4,"Most common categories of material in household waste, by region: % dry recyclables, Northern/Western Europe",84,pct,,chart,N,,
+C2_4_dry_australia_nz,10,Chart 2.4,"Most common categories of material in household waste, by region: % dry recyclables, Australia & New Zealand",81,pct,,chart,N,,
+C2_4_dry_northern_america,10,Chart 2.4,"Most common categories of material in household waste, by region: % dry recyclables, Northern America",79,pct,,chart,N,,
+C2_4_dry_southern_europe,10,Chart 2.4,"Most common categories of material in household waste, by region: % dry recyclables, Southern Europe",79,pct,,chart,N,,
+C2_4_dry_southeastern_asia,10,Chart 2.4,"Most common categories of material in household waste, by region: % dry recyclables, Southeastern Asia",69,pct,,chart,N,,
+C2_4_dry_eastern_europe,10,Chart 2.4,"Most common categories of material in household waste, by region: % dry recyclables, Eastern Europe",69,pct,,chart,N,,
+C2_4_dry_latin_america,10,Chart 2.4,"Most common categories of material in household waste, by region: % dry recyclables, Latin America & the Caribbean",68,pct,,chart,N,,
+C2_4_dry_southern_africa,10,Chart 2.4,"Most common categories of material in household waste, by region: % dry recyclables, Southern Africa",59,pct,,chart,N,,
+C2_4_dry_central_asia,10,Chart 2.4,"Most common categories of material in household waste, by region: % dry recyclables, Central Asia",49,pct,,chart,N,,
+C2_4_dry_middle_east,10,Chart 2.4,"Most common categories of material in household waste, by region: % dry recyclables, Middle East",49,pct,,chart,N,,
+C2_4_dry_eastern_asia,10,Chart 2.4,"Most common categories of material in household waste, by region: % dry recyclables, Eastern Asia",46,pct,,chart,N,,
+C2_4_dry_northern_africa,10,Chart 2.4,"Most common categories of material in household waste, by region: % dry recyclables, Northern Africa",39,pct,,chart,N,,
+C2_4_dry_southern_asia,10,Chart 2.4,"Most common categories of material in household waste, by region: % dry recyclables, Southern Asia",37,pct,,chart,N,,
+C2_4_dry_central_western_africa,10,Chart 2.4,"Most common categories of material in household waste, by region: % dry recyclables, Central/Western Africa",33,pct,,chart,N,,
+C2_4_dry_eastern_africa,10,Chart 2.4,"Most common categories of material in household waste, by region: % dry recyclables, Eastern Africa",28,pct,,chart,N,,
+X36,10,Chapter 2,Number of regions where food and green waste is more common than dry recyclables ('Five regions'),5,count,0,text,N,,
+X37_northern_western_europe,10,Chapter 2,Most common material is a dry recyclable: Northern/Western Europe ('around four in five'),80,pct,5,text,N,,'Around four in five'; tolerance 5.
+X37_southern_europe,10,Chapter 2,Most common material is a dry recyclable: Southern Europe ('around four in five'),80,pct,5,text,N,,'Around four in five'; tolerance 5.
+X37_australia_nz,10,Chapter 2,Most common material is a dry recyclable: Australia & New Zealand ('around four in five'),80,pct,5,text,N,,'Around four in five'; tolerance 5.
+X37_northern_america,10,Chapter 2,Most common material is a dry recyclable: Northern America ('around four in five'),80,pct,5,text,N,,'Around four in five'; tolerance 5.
+X38_europe,10,Chapter 2,Top 10 countries for plastic: number in Europe,5,count,0,text,N,,
+X38_southeastern_asia,10,Chapter 2,Top 10 countries for plastic: number in Southeastern Asia,3,count,0,text,N,,
+X38_lower_middle,10,Chapter 2,Top 10 countries for plastic: number of lower-middle-income countries,3,count,0,text,N,,
+T2_1_plastic_SVN,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % plastic (SVN),83,pct,,table,N,,
+T2_1_plastic_CZE,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % plastic (CZE),81,pct,,table,N,,
+T2_1_plastic_SWZ,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % plastic (SWZ),79,pct,,table,N,,
+T2_1_plastic_SLV,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % plastic (SLV),78,pct,,table,N,,
+T2_1_plastic_NLD,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % plastic (NLD),78,pct,,table,N,,
+T2_1_plastic_BEL,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % plastic (BEL),78,pct,,table,N,,
+T2_1_plastic_KHM,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % plastic (KHM),78,pct,,table,N,,
+T2_1_plastic_ITA,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % plastic (ITA),76,pct,,table,N,,
+T2_1_plastic_MMR,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % plastic (MMR),76,pct,,table,N,,
+T2_1_plastic_IDN,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % plastic (IDN),76,pct,,table,N,,
+T2_1_plastic_top10,11,Table 2.1,"Top 10 countries/territories where each waste material is most commonly disposed of: the 10 countries with the highest % plastic (ISO3, sorted)",BEL; CZE; IDN; ITA; KHM; MMR; NLD; SLV; SVN; SWZ,text,,table,N,,
+T2_1_food_COD,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % food (COD),79,pct,,table,N,,
+T2_1_food_CIV,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % food (CIV),76,pct,,table,N,,
+T2_1_food_GAB,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % food (GAB),75,pct,,table,N,,
+T2_1_food_MAR,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % food (MAR),72,pct,,table,N,,
+T2_1_food_LBN,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % food (LBN),71,pct,,table,N,,
+T2_1_food_KWT,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % food (KWT),70,pct,,table,N,,
+T2_1_food_PAK,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % food (PAK),68,pct,,table,N,,
+T2_1_food_AZE,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % food (AZE),68,pct,,table,N,,
+T2_1_food_MYS,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % food (MYS),63,pct,,table,N,,
+T2_1_food_ISR,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % food (ISR),61,pct,,table,N,,
+T2_1_food_top10,11,Table 2.1,"Top 10 countries/territories where each waste material is most commonly disposed of: the 10 countries with the highest % food (ISO3, sorted)",AZE; CIV; COD; GAB; ISR; KWT; LBN; MAR; MYS; PAK,text,,table,N,,
+T2_1_dust_ETH,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % dust (ETH),58,pct,,table,N,,
+T2_1_dust_AFG,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % dust (AFG),45,pct,,table,N,,
+T2_1_dust_SLE,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % dust (SLE),40,pct,,table,N,,
+T2_1_dust_MWI,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % dust (MWI),34,pct,,table,N,,
+T2_1_dust_NER,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % dust (NER),34,pct,,table,N,,
+T2_1_dust_ZWE,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % dust (ZWE),33,pct,,table,N,,
+T2_1_dust_BFA,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % dust (BFA),28,pct,,table,N,,
+T2_1_dust_TCD,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % dust (TCD),26,pct,,table,N,,
+T2_1_dust_ZMB,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % dust (ZMB),23,pct,,table,N,,
+T2_1_dust_MLI,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % dust (MLI),20,pct,,table,N,,
+T2_1_dust_top10,11,Table 2.1,"Top 10 countries/territories where each waste material is most commonly disposed of: the 10 countries with the highest % dust (ISO3, sorted)",AFG; BFA; ETH; MLI; MWI; NER; SLE; TCD; ZMB; ZWE,text,,table,N,,
+T2_1_cardboard_ISL,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % cardboard (ISL),36,pct,,table,N,,
+T2_1_cardboard_SWE,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % cardboard (SWE),26,pct,,table,N,,
+T2_1_cardboard_USA,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % cardboard (USA),23,pct,,table,N,,
+T2_1_cardboard_GBR,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % cardboard (GBR),22,pct,,table,N,,
+T2_1_cardboard_IRL,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % cardboard (IRL),22,pct,,table,N,,
+T2_1_cardboard_CAN,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % cardboard (CAN),20,pct,,table,N,,
+T2_1_cardboard_TWN,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % cardboard (TWN),19,pct,,table,N,,
+T2_1_cardboard_AUT,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % cardboard (AUT),19,pct,,table,N,,
+T2_1_cardboard_AUS,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % cardboard (AUS),17,pct,,table,N,,
+T2_1_cardboard_HRV,11,Table 2.1,Top 10 countries/territories where each waste material is most commonly disposed of: % cardboard (HRV),17,pct,,table,N,,
+T2_1_cardboard_top10,11,Table 2.1,"Top 10 countries/territories where each waste material is most commonly disposed of: the 10 countries with the highest % cardboard (ISO3, sorted)",AUS; AUT; CAN; GBR; HRV; IRL; ISL; SWE; TWN; USA,text,,table,N,,
+X39_food_COD,11,Chapter 2,Most common material is food: COD,79,pct,,text,N,,
+X39_food_CIV,11,Chapter 2,Most common material is food: CIV,76,pct,,text,N,,
+X39_food_GAB,11,Chapter 2,Most common material is food: GAB,75,pct,,text,N,,
+X39_dust_AFG,11,Chapter 2,Most common material is dust: AFG,45,pct,,text,N,,
+X40_men,11,Chapter 2,Most common material is a dry recyclable: men,53,pct,,text,N,,
+X40_women,11,Chapter 2,Most common material is a dry recyclable: women,50,pct,,text,N,,
+X41_eastern_asia,11,Chapter 2,"Gap between men and women in dry recyclables, or in food and green waste, is more than 5 points: Eastern Asia (1 = yes)",1,flag,0,text,N,,The text says 'more than five percentage points'; the function returns 1 if either gap exceeds 5.
+X41_central_asia,11,Chapter 2,"Gap between men and women in dry recyclables, or in food and green waste, is more than 5 points: Central Asia (1 = yes)",1,flag,0,text,N,,The text says 'more than five percentage points'; the function returns 1 if either gap exceeds 5.
+X41_eastern_europe,11,Chapter 2,"Gap between men and women in dry recyclables, or in food and green waste, is more than 5 points: Eastern Europe (1 = yes)",1,flag,0,text,N,,The text says 'more than five percentage points'; the function returns 1 if either gap exceeds 5.
+C2_5_women_food_green,11,Chart 2.5,"Primary reported form of household waste, by gender: % food and green waste, women",46,pct,,chart,N,,
+C2_5_women_dry,11,Chart 2.5,"Primary reported form of household waste, by gender: % dry recyclables, women",50,pct,,chart,N,,
+C2_5_men_food_green,11,Chart 2.5,"Primary reported form of household waste, by gender: % food and green waste, men",44,pct,,chart,N,,
+C2_5_men_dry,11,Chart 2.5,"Primary reported form of household waste, by gender: % dry recyclables, men",53,pct,,chart,N,,
+X42_count,12,Chapter 2,Countries where men are 10+ points more likely than women to report dry recyclables,10,count,0,text,N,,
+X42_countries,12,Chapter 2,"Countries where men are 10+ points more likely than women to report dry recyclables (ISO3, sorted)",ARE; BFA; BIH; JOR; KGZ; MLT; MOZ; MRT; THA; UKR,text,,text,N,,
+X43_count,12,Chapter 2,Countries where women are 10+ points more likely than men to report dry recyclables ('only Yemen'),1,count,0,text,N,,
+X43_countries,12,Chapter 2,Countries where women are 10+ points more likely than men to report dry recyclables (ISO3),YEM,text,,text,N,,
+C2_6_low_15_29,12,Chart 2.6,"Primary form of waste is dry recyclables, by age and country income level: % dry recyclables, low income, aged 15-29",24,pct,,chart,N,,
+C2_6_low_30_49,12,Chart 2.6,"Primary form of waste is dry recyclables, by age and country income level: % dry recyclables, low income, aged 30-49",23,pct,,chart,N,,
+C2_6_low_50_64,12,Chart 2.6,"Primary form of waste is dry recyclables, by age and country income level: % dry recyclables, low income, aged 50-64",20,pct,,chart,N,,
+C2_6_low_65plus,12,Chart 2.6,"Primary form of waste is dry recyclables, by age and country income level: % dry recyclables, low income, aged 65+",21,pct,,chart,N,,
+C2_6_lower_middle_15_29,12,Chart 2.6,"Primary form of waste is dry recyclables, by age and country income level: % dry recyclables, lower-middle income, aged 15-29",41,pct,,chart,N,,
+C2_6_lower_middle_30_49,12,Chart 2.6,"Primary form of waste is dry recyclables, by age and country income level: % dry recyclables, lower-middle income, aged 30-49",42,pct,,chart,N,,
+C2_6_lower_middle_50_64,12,Chart 2.6,"Primary form of waste is dry recyclables, by age and country income level: % dry recyclables, lower-middle income, aged 50-64",38,pct,,chart,N,,
+C2_6_lower_middle_65plus,12,Chart 2.6,"Primary form of waste is dry recyclables, by age and country income level: % dry recyclables, lower-middle income, aged 65+",39,pct,,chart,N,,
+C2_6_upper_middle_15_29,12,Chart 2.6,"Primary form of waste is dry recyclables, by age and country income level: % dry recyclables, upper-middle income, aged 15-29",58,pct,,chart,N,,
+C2_6_upper_middle_30_49,12,Chart 2.6,"Primary form of waste is dry recyclables, by age and country income level: % dry recyclables, upper-middle income, aged 30-49",57,pct,,chart,N,,
+C2_6_upper_middle_50_64,12,Chart 2.6,"Primary form of waste is dry recyclables, by age and country income level: % dry recyclables, upper-middle income, aged 50-64",51,pct,,chart,N,,
+C2_6_upper_middle_65plus,12,Chart 2.6,"Primary form of waste is dry recyclables, by age and country income level: % dry recyclables, upper-middle income, aged 65+",48,pct,,chart,N,,
+C2_6_high_15_29,12,Chart 2.6,"Primary form of waste is dry recyclables, by age and country income level: % dry recyclables, high income, aged 15-29",79,pct,,chart,N,,
+C2_6_high_30_49,12,Chart 2.6,"Primary form of waste is dry recyclables, by age and country income level: % dry recyclables, high income, aged 30-49",77,pct,,chart,N,,
+C2_6_high_50_64,12,Chart 2.6,"Primary form of waste is dry recyclables, by age and country income level: % dry recyclables, high income, aged 50-64",76,pct,,chart,N,,
+C2_6_high_65plus,12,Chart 2.6,"Primary form of waste is dry recyclables, by age and country income level: % dry recyclables, high income, aged 65+",71,pct,,chart,N,,
+T2_2_BGR_15_29,12,Table 2.2,"Countries/territories with the largest age gaps in primarily disposing of dry recyclables: % dry recyclables aged 15-29, BGR",82,pct,,table,N,,
+T2_2_BGR_65plus,12,Table 2.2,"Countries/territories with the largest age gaps in primarily disposing of dry recyclables: % dry recyclables aged 65+, BGR",42,pct,,table,N,,
+T2_2_BGR_gap,12,Table 2.2,"Countries/territories with the largest age gaps in primarily disposing of dry recyclables: gap (15-29 minus 65+, from the rounded figures), BGR",40,pct,,table,N,,
+T2_2_TWN_15_29,12,Table 2.2,"Countries/territories with the largest age gaps in primarily disposing of dry recyclables: % dry recyclables aged 15-29, TWN",85,pct,,table,N,,
+T2_2_TWN_65plus,12,Table 2.2,"Countries/territories with the largest age gaps in primarily disposing of dry recyclables: % dry recyclables aged 65+, TWN",55,pct,,table,N,,
+T2_2_TWN_gap,12,Table 2.2,"Countries/territories with the largest age gaps in primarily disposing of dry recyclables: gap (15-29 minus 65+, from the rounded figures), TWN",30,pct,,table,N,,
+T2_2_MUS_15_29,12,Table 2.2,"Countries/territories with the largest age gaps in primarily disposing of dry recyclables: % dry recyclables aged 15-29, MUS",57,pct,,table,N,,
+T2_2_MUS_65plus,12,Table 2.2,"Countries/territories with the largest age gaps in primarily disposing of dry recyclables: % dry recyclables aged 65+, MUS",27,pct,,table,N,,
+T2_2_MUS_gap,12,Table 2.2,"Countries/territories with the largest age gaps in primarily disposing of dry recyclables: gap (15-29 minus 65+, from the rounded figures), MUS",30,pct,,table,N,,
+T2_2_SVK_15_29,12,Table 2.2,"Countries/territories with the largest age gaps in primarily disposing of dry recyclables: % dry recyclables aged 15-29, SVK",70,pct,,table,N,,
+T2_2_SVK_65plus,12,Table 2.2,"Countries/territories with the largest age gaps in primarily disposing of dry recyclables: % dry recyclables aged 65+, SVK",43,pct,,table,N,,
+T2_2_SVK_gap,12,Table 2.2,"Countries/territories with the largest age gaps in primarily disposing of dry recyclables: gap (15-29 minus 65+, from the rounded figures), SVK",27,pct,,table,N,,
+T2_2_PRT_15_29,12,Table 2.2,"Countries/territories with the largest age gaps in primarily disposing of dry recyclables: % dry recyclables aged 15-29, PRT",83,pct,,table,N,,
+T2_2_PRT_65plus,12,Table 2.2,"Countries/territories with the largest age gaps in primarily disposing of dry recyclables: % dry recyclables aged 65+, PRT",57,pct,,table,N,,
+T2_2_PRT_gap,12,Table 2.2,"Countries/territories with the largest age gaps in primarily disposing of dry recyclables: gap (15-29 minus 65+, from the rounded figures), PRT",26,pct,,table,N,,
+T2_2_top5,12,Table 2.2,"Countries/territories with the largest age gaps in primarily disposing of dry recyclables: the five countries with the largest gaps (ISO3, sorted)",BGR; MUS; PRT; SVK; TWN,text,,table,N,,
+X44,12,Chapter 2,Countries where the gap in dry recyclables between ages 15-29 and 65+ is more than 25 points,5,count,0,text,N,,
+C2_7_low_primary,13,Chart 2.7,"Primary form of waste is dry recyclables, by education and country income level: % dry recyclables, low income, primary education",21,pct,,chart,N,,
+C2_7_low_secondary,13,Chart 2.7,"Primary form of waste is dry recyclables, by education and country income level: % dry recyclables, low income, secondary education",27,pct,,chart,N,,
+C2_7_low_tertiary,13,Chart 2.7,"Primary form of waste is dry recyclables, by education and country income level: % dry recyclables, low income, tertiary education",30,pct,,chart,N,,
+C2_7_lower_middle_primary,13,Chart 2.7,"Primary form of waste is dry recyclables, by education and country income level: % dry recyclables, lower-middle income, primary education",38,pct,,chart,N,,
+C2_7_lower_middle_secondary,13,Chart 2.7,"Primary form of waste is dry recyclables, by education and country income level: % dry recyclables, lower-middle income, secondary education",45,pct,,chart,N,,
+C2_7_lower_middle_tertiary,13,Chart 2.7,"Primary form of waste is dry recyclables, by education and country income level: % dry recyclables, lower-middle income, tertiary education",46,pct,,chart,N,,
+C2_7_upper_middle_primary,13,Chart 2.7,"Primary form of waste is dry recyclables, by education and country income level: % dry recyclables, upper-middle income, primary education",53,pct,,chart,N,,
+C2_7_upper_middle_secondary,13,Chart 2.7,"Primary form of waste is dry recyclables, by education and country income level: % dry recyclables, upper-middle income, secondary education",58,pct,,chart,N,,
+C2_7_upper_middle_tertiary,13,Chart 2.7,"Primary form of waste is dry recyclables, by education and country income level: % dry recyclables, upper-middle income, tertiary education",50,pct,,chart,N,,
+C2_7_high_primary,13,Chart 2.7,"Primary form of waste is dry recyclables, by education and country income level: % dry recyclables, high income, primary education",72,pct,,chart,N,,
+C2_7_high_secondary,13,Chart 2.7,"Primary form of waste is dry recyclables, by education and country income level: % dry recyclables, high income, secondary education",77,pct,,chart,N,,
+C2_7_high_tertiary,13,Chart 2.7,"Primary form of waste is dry recyclables, by education and country income level: % dry recyclables, high income, tertiary education",75,pct,,chart,N,,
+X45_cities,13,Chapter 2,Most common material is a dry recyclable: cities,52,pct,,text,Y,GWP_DEGURBA,
+X45_rural,13,Chapter 2,Most common material is a dry recyclable: rural areas,50,pct,,text,Y,GWP_DEGURBA,
+X46_cities,13,Chapter 2,Most common material is a dry recyclable: cities in low-income countries,31,pct,,text,Y,GWP_DEGURBA,
+X46_rural,13,Chapter 2,Most common material is a dry recyclable: rural areas in low-income countries,19,pct,,text,Y,GWP_DEGURBA,
+X47,"14, 39",Chapter 3,Household does not separate its waste ('two in five' on p39),40,pct,,text,N,,
+X48,14,Chapter 3,Household sometimes separates its waste,6,pct,,text,N,,
+C3_1_global_yes,15,Chart 3.1,"Household separates its waste before disposal, by region: % separate, Global",53,pct,,chart,N,,Values below 5% are not printed.
+C3_1_global_sometimes,15,Chart 3.1,"Household separates its waste before disposal, by region: % sometimes separate, Global",6,pct,,chart,N,,Values below 5% are not printed.
+C3_1_global_no,15,Chart 3.1,"Household separates its waste before disposal, by region: % don't separate, Global",40,pct,,chart,N,,Values below 5% are not printed.
+C3_1_australia_nz_yes,15,Chart 3.1,"Household separates its waste before disposal, by region: % separate, Australia & New Zealand",90,pct,,chart,N,,Values below 5% are not printed.
+C3_1_australia_nz_no,15,Chart 3.1,"Household separates its waste before disposal, by region: % don't separate, Australia & New Zealand",10,pct,,chart,N,,Values below 5% are not printed.
+C3_1_northern_western_europe_yes,15,Chart 3.1,"Household separates its waste before disposal, by region: % separate, Northern/Western Europe",90,pct,,chart,N,,Values below 5% are not printed.
+C3_1_northern_western_europe_no,15,Chart 3.1,"Household separates its waste before disposal, by region: % don't separate, Northern/Western Europe",7,pct,,chart,N,,Values below 5% are not printed.
+C3_1_southern_europe_yes,15,Chart 3.1,"Household separates its waste before disposal, by region: % separate, Southern Europe",83,pct,,chart,N,,Values below 5% are not printed.
+C3_1_southern_europe_no,15,Chart 3.1,"Household separates its waste before disposal, by region: % don't separate, Southern Europe",15,pct,,chart,N,,Values below 5% are not printed.
+C3_1_northern_america_yes,15,Chart 3.1,"Household separates its waste before disposal, by region: % separate, Northern America",70,pct,,chart,N,,Values below 5% are not printed.
+C3_1_northern_america_no,15,Chart 3.1,"Household separates its waste before disposal, by region: % don't separate, Northern America",30,pct,,chart,N,,Values below 5% are not printed.
+C3_1_latin_america_yes,15,Chart 3.1,"Household separates its waste before disposal, by region: % separate, Latin America & the Caribbean",57,pct,,chart,N,,Values below 5% are not printed.
+C3_1_latin_america_no,15,Chart 3.1,"Household separates its waste before disposal, by region: % don't separate, Latin America & the Caribbean",42,pct,,chart,N,,Values below 5% are not printed.
+C3_1_eastern_asia_yes,15,Chart 3.1,"Household separates its waste before disposal, by region: % separate, Eastern Asia",56,pct,,chart,N,,Values below 5% are not printed.
+C3_1_eastern_asia_sometimes,15,Chart 3.1,"Household separates its waste before disposal, by region: % sometimes separate, Eastern Asia",16,pct,,chart,N,,Values below 5% are not printed.
+C3_1_eastern_asia_no,15,Chart 3.1,"Household separates its waste before disposal, by region: % don't separate, Eastern Asia",28,pct,,chart,N,,Values below 5% are not printed.
+C3_1_southeastern_asia_yes,15,Chart 3.1,"Household separates its waste before disposal, by region: % separate, Southeastern Asia",55,pct,,chart,N,,Values below 5% are not printed.
+C3_1_southeastern_asia_no,15,Chart 3.1,"Household separates its waste before disposal, by region: % don't separate, Southeastern Asia",42,pct,,chart,N,,Values below 5% are not printed.
+C3_1_eastern_europe_yes,15,Chart 3.1,"Household separates its waste before disposal, by region: % separate, Eastern Europe",54,pct,,chart,N,,Values below 5% are not printed.
+C3_1_eastern_europe_no,15,Chart 3.1,"Household separates its waste before disposal, by region: % don't separate, Eastern Europe",43,pct,,chart,N,,Values below 5% are not printed.
+C3_1_central_asia_yes,15,Chart 3.1,"Household separates its waste before disposal, by region: % separate, Central Asia",53,pct,,chart,N,,Values below 5% are not printed.
+C3_1_central_asia_sometimes,15,Chart 3.1,"Household separates its waste before disposal, by region: % sometimes separate, Central Asia",7,pct,,chart,N,,Values below 5% are not printed.
+C3_1_central_asia_no,15,Chart 3.1,"Household separates its waste before disposal, by region: % don't separate, Central Asia",39,pct,,chart,N,,Values below 5% are not printed.
+C3_1_southern_asia_yes,15,Chart 3.1,"Household separates its waste before disposal, by region: % separate, Southern Asia",51,pct,,chart,N,,Values below 5% are not printed.
+C3_1_southern_asia_no,15,Chart 3.1,"Household separates its waste before disposal, by region: % don't separate, Southern Asia",47,pct,,chart,N,,Values below 5% are not printed.
+C3_1_eastern_africa_yes,15,Chart 3.1,"Household separates its waste before disposal, by region: % separate, Eastern Africa",39,pct,,chart,N,,Values below 5% are not printed.
+C3_1_eastern_africa_no,15,Chart 3.1,"Household separates its waste before disposal, by region: % don't separate, Eastern Africa",57,pct,,chart,N,,Values below 5% are not printed.
+C3_1_northern_africa_yes,15,Chart 3.1,"Household separates its waste before disposal, by region: % separate, Northern Africa",33,pct,,chart,N,,Values below 5% are not printed.
+C3_1_northern_africa_sometimes,15,Chart 3.1,"Household separates its waste before disposal, by region: % sometimes separate, Northern Africa",6,pct,,chart,N,,Values below 5% are not printed.
+C3_1_northern_africa_no,15,Chart 3.1,"Household separates its waste before disposal, by region: % don't separate, Northern Africa",60,pct,,chart,N,,Values below 5% are not printed.
+C3_1_middle_east_yes,15,Chart 3.1,"Household separates its waste before disposal, by region: % separate, Middle East",32,pct,,chart,N,,Values below 5% are not printed.
+C3_1_middle_east_sometimes,15,Chart 3.1,"Household separates its waste before disposal, by region: % sometimes separate, Middle East",9,pct,,chart,N,,Values below 5% are not printed.
+C3_1_middle_east_no,15,Chart 3.1,"Household separates its waste before disposal, by region: % don't separate, Middle East",57,pct,,chart,N,,Values below 5% are not printed.
+C3_1_southern_africa_yes,15,Chart 3.1,"Household separates its waste before disposal, by region: % separate, Southern Africa",27,pct,,chart,N,,Values below 5% are not printed.
+C3_1_southern_africa_sometimes,15,Chart 3.1,"Household separates its waste before disposal, by region: % sometimes separate, Southern Africa",11,pct,,chart,N,,Values below 5% are not printed.
+C3_1_southern_africa_no,15,Chart 3.1,"Household separates its waste before disposal, by region: % don't separate, Southern Africa",61,pct,,chart,N,,Values below 5% are not printed.
+C3_1_central_western_africa_yes,15,Chart 3.1,"Household separates its waste before disposal, by region: % separate, Central/Western Africa",24,pct,,chart,N,,Values below 5% are not printed.
+C3_1_central_western_africa_sometimes,15,Chart 3.1,"Household separates its waste before disposal, by region: % sometimes separate, Central/Western Africa",6,pct,,chart,N,,Values below 5% are not printed.
+C3_1_central_western_africa_no,15,Chart 3.1,"Household separates its waste before disposal, by region: % don't separate, Central/Western Africa",69,pct,,chart,N,,Values below 5% are not printed.
+X49_australia_nz,15,Chapter 3,Household separates its waste: Australia & New Zealand ('nine in 10'),90,pct,,text,N,,
+X49_northern_western_europe,15,Chapter 3,Household separates its waste: Northern/Western Europe ('nine in 10'),90,pct,,text,N,,
+X50_eastern_asia,15,Chapter 3,Household separates its waste: Eastern Asia,56,pct,,text,N,,
+X50_southeastern_asia,15,Chapter 3,Household separates its waste: Southeastern Asia,55,pct,,text,N,,
+X50_central_asia,15,Chapter 3,Household separates its waste: Central Asia,53,pct,,text,N,,
+X50_southern_asia,15,Chapter 3,Household separates its waste: Southern Asia,51,pct,,text,N,,
+X50_southern_africa,15,Chapter 3,Household separates its waste: Southern Africa,27,pct,,text,N,,
+X50_central_western_africa,15,Chapter 3,Household separates its waste: Central/Western Africa,24,pct,,text,N,,
+X51,15,Chapter 3,Household sometimes separates its waste: China,18,pct,,text,N,,
+X52,15,Chapter 3,Household sometimes separates its waste: all countries except China,3,pct,,text,N,,
+X53,15,Chapter 3,Household separates its waste: Eastern Asia excluding China,94,pct,,text,N,,
+C3_2_low_yes,16,Chart 3.2,"Household separates its waste before disposal, by country income level: % separate, low income",31,pct,,chart,N,,Values below 5% are not printed.
+C3_2_low_sometimes,16,Chart 3.2,"Household separates its waste before disposal, by country income level: % sometimes separate, low income",5,pct,,chart,N,,Values below 5% are not printed.
+C3_2_low_no,16,Chart 3.2,"Household separates its waste before disposal, by country income level: % don't separate, low income",63,pct,,chart,N,,Values below 5% are not printed.
+C3_2_lower_middle_yes,16,Chart 3.2,"Household separates its waste before disposal, by country income level: % separate, lower-middle income",47,pct,,chart,N,,Values below 5% are not printed.
+C3_2_lower_middle_no,16,Chart 3.2,"Household separates its waste before disposal, by country income level: % don't separate, lower-middle income",49,pct,,chart,N,,Values below 5% are not printed.
+C3_2_upper_middle_yes,16,Chart 3.2,"Household separates its waste before disposal, by country income level: % separate, upper-middle income",50,pct,,chart,N,,Values below 5% are not printed.
+C3_2_upper_middle_sometimes,16,Chart 3.2,"Household separates its waste before disposal, by country income level: % sometimes separate, upper-middle income",11,pct,,chart,N,,Values below 5% are not printed.
+C3_2_upper_middle_no,16,Chart 3.2,"Household separates its waste before disposal, by country income level: % don't separate, upper-middle income",39,pct,,chart,N,,Values below 5% are not printed.
+C3_2_high_yes,16,Chart 3.2,"Household separates its waste before disposal, by country income level: % separate, high income",81,pct,,chart,N,,Values below 5% are not printed.
+C3_2_high_no,16,Chart 3.2,"Household separates its waste before disposal, by country income level: % don't separate, high income",18,pct,,chart,N,,Values below 5% are not printed.
+X54,16,Chapter 3,"Separation, high-income vs low-income countries, ratio ('more than two and a half times')",2.5,ratio,0.5,text,N,,'More than two and a half times'; tolerance 0.5.
+X55_upper_middle,16,Chapter 3,Household separates its waste: upper-middle-income countries,50,pct,,text,N,,
+X55_lower_middle,16,Chapter 3,Household separates its waste: lower-middle-income countries,47,pct,,text,N,,
+T3_1_yes_KOR,16,Table 3.1,Top 10 countries/territories that do or do not separate their household waste: % yes (KOR),99,pct,,table,N,,
+T3_1_yes_ISL,16,Table 3.1,Top 10 countries/territories that do or do not separate their household waste: % yes (ISL),98,pct,,table,N,,
+T3_1_yes_BEL,16,Table 3.1,Top 10 countries/territories that do or do not separate their household waste: % yes (BEL),98,pct,,table,N,,
+T3_1_yes_ITA,16,Table 3.1,Top 10 countries/territories that do or do not separate their household waste: % yes (ITA),98,pct,,table,N,,
+T3_1_yes_SVN,16,Table 3.1,Top 10 countries/territories that do or do not separate their household waste: % yes (SVN),98,pct,,table,N,,
+T3_1_yes_MLT,16,Table 3.1,Top 10 countries/territories that do or do not separate their household waste: % yes (MLT),98,pct,,table,N,,
+T3_1_yes_TWN,16,Table 3.1,Top 10 countries/territories that do or do not separate their household waste: % yes (TWN),97,pct,,table,N,,
+T3_1_yes_CZE,16,Table 3.1,Top 10 countries/territories that do or do not separate their household waste: % yes (CZE),97,pct,,table,N,,
+T3_1_yes_LUX,16,Table 3.1,Top 10 countries/territories that do or do not separate their household waste: % yes (LUX),96,pct,,table,N,,
+T3_1_yes_SWE,16,Table 3.1,Top 10 countries/territories that do or do not separate their household waste: % yes (SWE),96,pct,,table,N,,
+T3_1_yes_top10,16,Table 3.1,"Top 10 countries/territories that do or do not separate their household waste: the 10 countries with the highest % yes (ISO3, sorted)",BEL; CZE; ISL; ITA; KOR; LUX; MLT; SVN; SWE; TWN,text,,table,N,,
+T3_1_no_GAB,16,Table 3.1,Top 10 countries/territories that do or do not separate their household waste: % no (GAB),88,pct,,table,N,,
+T3_1_no_CIV,16,Table 3.1,Top 10 countries/territories that do or do not separate their household waste: % no (CIV),85,pct,,table,N,,
+T3_1_no_XKX,16,Table 3.1,Top 10 countries/territories that do or do not separate their household waste: % no (XKX),84,pct,,table,N,,
+T3_1_no_TGO,16,Table 3.1,Top 10 countries/territories that do or do not separate their household waste: % no (TGO),83,pct,,table,N,,
+T3_1_no_CMR,16,Table 3.1,Top 10 countries/territories that do or do not separate their household waste: % no (CMR),80,pct,,table,N,,
+T3_1_no_BEN,16,Table 3.1,Top 10 countries/territories that do or do not separate their household waste: % no (BEN),80,pct,,table,N,,
+T3_1_no_LBR,16,Table 3.1,Top 10 countries/territories that do or do not separate their household waste: % no (LBR),79,pct,,table,N,,
+T3_1_no_COG,16,Table 3.1,Top 10 countries/territories that do or do not separate their household waste: % no (COG),79,pct,,table,N,,
+T3_1_no_MNE,16,Table 3.1,Top 10 countries/territories that do or do not separate their household waste: % no (MNE),78,pct,,table,N,,
+T3_1_no_ALB,16,Table 3.1,Top 10 countries/territories that do or do not separate their household waste: % no (ALB),78,pct,,table,N,,
+T3_1_no_top10,16,Table 3.1,"Top 10 countries/territories that do or do not separate their household waste: the 10 countries with the highest % no (ISO3, sorted)",ALB; BEN; CIV; CMR; COG; GAB; LBR; MNE; TGO; XKX,text,,table,N,,
+X56,16,Chapter 3,Top 10 countries for separation: number in Europe or Eastern Asia,10,count,0,text,N,,
+X57_sub_saharan_africa,16,Chapter 3,Top 10 countries for not separating: number in sub-Saharan Africa,7,count,0,text,N,,
+X57_eastern_europe,16,Chapter 3,"Top 10 countries for not separating: number in Eastern Europe (Kosovo, Montenegro, Albania)",3,count,0,text,N,,The report counts Montenegro and Albania as Eastern Europe; in GlobalRegion they are Southern Europe. See README.
+X58_15_29_yes,17,Chapter 3,Household separates its waste: aged 15-29,47,pct,,text,N,,
+X58_15_29_no,17,Chapter 3,Household does not separate its waste: aged 15-29,47,pct,,text,N,,
+X58_65plus_yes,17,Chapter 3,Household separates its waste: aged 65+,60,pct,,text,N,,
+C3_3_15_29_yes,17,Chart 3.3,"Household separates its waste before disposal, by age: % separate, aged 15-29",47,pct,,chart,N,,
+C3_3_15_29_sometimes,17,Chart 3.3,"Household separates its waste before disposal, by age: % sometimes separate, aged 15-29",6,pct,,chart,N,,
+C3_3_15_29_no,17,Chart 3.3,"Household separates its waste before disposal, by age: % don't separate, aged 15-29",47,pct,,chart,N,,
+C3_3_30_49_yes,17,Chart 3.3,"Household separates its waste before disposal, by age: % separate, aged 30-49",54,pct,,chart,N,,
+C3_3_30_49_sometimes,17,Chart 3.3,"Household separates its waste before disposal, by age: % sometimes separate, aged 30-49",6,pct,,chart,N,,
+C3_3_30_49_no,17,Chart 3.3,"Household separates its waste before disposal, by age: % don't separate, aged 30-49",40,pct,,chart,N,,
+C3_3_50_64_yes,17,Chart 3.3,"Household separates its waste before disposal, by age: % separate, aged 50-64",58,pct,,chart,N,,
+C3_3_50_64_sometimes,17,Chart 3.3,"Household separates its waste before disposal, by age: % sometimes separate, aged 50-64",6,pct,,chart,N,,
+C3_3_50_64_no,17,Chart 3.3,"Household separates its waste before disposal, by age: % don't separate, aged 50-64",36,pct,,chart,N,,
+C3_3_65plus_yes,17,Chart 3.3,"Household separates its waste before disposal, by age: % separate, aged 65+",60,pct,,chart,N,,
+C3_3_65plus_sometimes,17,Chart 3.3,"Household separates its waste before disposal, by age: % sometimes separate, aged 65+",5,pct,,chart,N,,
+C3_3_65plus_no,17,Chart 3.3,"Household separates its waste before disposal, by age: % don't separate, aged 65+",34,pct,,chart,N,,
+C3_4_BRA_15_29,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 15-29, BRA",41,pct,,chart,N,,
+C3_4_BRA_65plus,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 65+, BRA",75,pct,,chart,N,,
+C3_4_BRA_gap,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: gap (65+ minus 15-29, from the rounded figures), BRA",34,pct,,chart,N,,
+C3_4_GRC_15_29,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 15-29, GRC",54,pct,,chart,N,,
+C3_4_GRC_65plus,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 65+, GRC",85,pct,,chart,N,,
+C3_4_GRC_gap,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: gap (65+ minus 15-29, from the rounded figures), GRC",31,pct,,chart,N,,
+C3_4_ARG_15_29,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 15-29, ARG",35,pct,,chart,N,,
+C3_4_ARG_65plus,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 65+, ARG",63,pct,,chart,N,,
+C3_4_ARG_gap,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: gap (65+ minus 15-29, from the rounded figures), ARG",28,pct,,chart,N,,
+C3_4_URY_15_29,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 15-29, URY",26,pct,,chart,N,,
+C3_4_URY_65plus,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 65+, URY",53,pct,,chart,N,,
+C3_4_URY_gap,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: gap (65+ minus 15-29, from the rounded figures), URY",27,pct,,chart,N,,
+C3_4_VEN_15_29,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 15-29, VEN",28,pct,,chart,N,,
+C3_4_VEN_65plus,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 65+, VEN",54,pct,,chart,N,,
+C3_4_VEN_gap,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: gap (65+ minus 15-29, from the rounded figures), VEN",26,pct,,chart,N,,
+C3_4_PER_15_29,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 15-29, PER",48,pct,,chart,N,,
+C3_4_PER_65plus,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 65+, PER",70,pct,,chart,N,,
+C3_4_PER_gap,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: gap (65+ minus 15-29, from the rounded figures), PER",22,pct,,chart,N,,
+C3_4_PHL_15_29,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 15-29, PHL",57,pct,,chart,N,,
+C3_4_PHL_65plus,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 65+, PHL",79,pct,,chart,N,,
+C3_4_PHL_gap,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: gap (65+ minus 15-29, from the rounded figures), PHL",22,pct,,chart,N,,
+C3_4_DOM_15_29,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 15-29, DOM",31,pct,,chart,N,,
+C3_4_DOM_65plus,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 65+, DOM",52,pct,,chart,N,,
+C3_4_DOM_gap,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: gap (65+ minus 15-29, from the rounded figures), DOM",21,pct,,chart,N,,
+C3_4_SLV_15_29,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 15-29, SLV",49,pct,,chart,N,,
+C3_4_SLV_65plus,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 65+, SLV",69,pct,,chart,N,,
+C3_4_SLV_gap,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: gap (65+ minus 15-29, from the rounded figures), SLV",20,pct,,chart,N,,
+C3_4_HRV_15_29,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 15-29, HRV",64,pct,,chart,N,,
+C3_4_HRV_65plus,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 65+, HRV",84,pct,,chart,N,,
+C3_4_HRV_gap,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: gap (65+ minus 15-29, from the rounded figures), HRV",20,pct,,chart,N,,
+C3_4_COL_15_29,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 15-29, COL",50,pct,,chart,N,,
+C3_4_COL_65plus,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 65+, COL",67,pct,,chart,N,,
+C3_4_COL_gap,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: gap (65+ minus 15-29, from the rounded figures), COL",17,pct,,chart,N,,
+C3_4_CRI_15_29,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 15-29, CRI",52,pct,,chart,N,,
+C3_4_CRI_65plus,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 65+, CRI",68,pct,,chart,N,,
+C3_4_CRI_gap,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: gap (65+ minus 15-29, from the rounded figures), CRI",16,pct,,chart,N,,
+C3_4_BGR_15_29,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 15-29, BGR",6,pct,,chart,N,,
+C3_4_BGR_65plus,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 65+, BGR",22,pct,,chart,N,,
+C3_4_BGR_gap,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: gap (65+ minus 15-29, from the rounded figures), BGR",16,pct,,chart,N,,
+C3_4_PAN_15_29,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 15-29, PAN",37,pct,,chart,N,,
+C3_4_PAN_65plus,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 65+, PAN",53,pct,,chart,N,,
+C3_4_PAN_gap,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: gap (65+ minus 15-29, from the rounded figures), PAN",16,pct,,chart,N,,
+C3_4_CHL_15_29,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 15-29, CHL",34,pct,,chart,N,,
+C3_4_CHL_65plus,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: % separate aged 65+, CHL",49,pct,,chart,N,,
+C3_4_CHL_gap,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: gap (65+ minus 15-29, from the rounded figures), CHL",15,pct,,chart,N,,
+C3_4_mean_15_29,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: global mean, aged 15-29",47,pct,,chart,N,,
+C3_4_mean_65plus,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: global mean, aged 65+",60,pct,,chart,N,,
+C3_4_top15,17,Chart 3.4,"Top 15 countries with the largest gaps in separating household waste between ages 15-29 and 65+: the 15 countries with the largest gaps (ISO3, sorted)",ARG; BGR; BRA; CHL; COL; CRI; DOM; GRC; HRV; PAN; PER; PHL; SLV; URY; VEN,text,,chart,N,,
+X59_latin_america,17,Chapter 3,Household separates its waste: Latin America & the Caribbean,57,pct,,text,N,,
+X59_global,17,Chapter 3,Household separates its waste: global,53,pct,,text,N,,
+X60,17,Chapter 3,"Of the 15 countries with the largest age gaps in separation, number in Latin America & the Caribbean",11,count,0,text,N,,
+X61_women,18,Chapter 3,Household separates its waste: women,56,pct,,text,N,,
+X61_men,18,Chapter 3,Household separates its waste: men,51,pct,,text,N,,
+X61_upper_middle_women,18,Chapter 3,Household separates its waste: upper middle women,53,pct,,text,N,,
+X61_upper_middle_men,18,Chapter 3,Household separates its waste: upper middle men,47,pct,,text,N,,
+X61_lower_middle_women,18,Chapter 3,Household separates its waste: lower middle women,50,pct,,text,N,,
+X61_lower_middle_men,18,Chapter 3,Household separates its waste: lower middle men,45,pct,,text,N,,
+C3_5_women_yes,18,Chart 3.5,"Household separates its waste before disposal, by gender: % separate, women",56,pct,,chart,N,,
+C3_5_women_sometimes,18,Chart 3.5,"Household separates its waste before disposal, by gender: % sometimes separate, women",6,pct,,chart,N,,
+C3_5_women_no,18,Chart 3.5,"Household separates its waste before disposal, by gender: % don't separate, women",39,pct,,chart,N,,
+C3_5_men_yes,18,Chart 3.5,"Household separates its waste before disposal, by gender: % separate, men",51,pct,,chart,N,,
+C3_5_men_sometimes,18,Chart 3.5,"Household separates its waste before disposal, by gender: % sometimes separate, men",6,pct,,chart,N,,
+C3_5_men_no,18,Chart 3.5,"Household separates its waste before disposal, by gender: % don't separate, men",42,pct,,chart,N,,
+X62_northern_america_sep_women,18,Chapter 3,"Household separates, Northern America, women",73,pct,,text,N,,
+X62_northern_america_sep_men,18,Chapter 3,"Household separates, Northern America, men",66,pct,,text,N,,
+X62_northern_america_dry_women,18,Chapter 3,"Household dry recyclables, Northern America, women",78,pct,,text,N,,
+X62_northern_america_dry_men,18,Chapter 3,"Household dry recyclables, Northern America, men",80,pct,,text,N,,
+X62_southern_asia_sep_women,18,Chapter 3,"Household separates, Southern Asia, women",53,pct,,text,N,,
+X62_southern_asia_sep_men,18,Chapter 3,"Household separates, Southern Asia, men",48,pct,,text,N,,
+X62_southern_asia_dry_women,18,Chapter 3,"Household dry recyclables, Southern Asia, women",36,pct,,text,N,,
+X62_southern_asia_dry_men,18,Chapter 3,"Household dry recyclables, Southern Asia, men",37,pct,,text,N,,
+X63_tertiary,18,Chapter 3,Household separates its waste: tertiary education,64,pct,,text,N,,
+X63_secondary,18,Chapter 3,Household separates its waste: secondary education,55,pct,,text,N,,
+X63_primary,18,Chapter 3,Household separates its waste: primary education,49,pct,,text,N,,
+X64_very,19,Chapter 3,Household separates its waste: climate change a very serious threat,58,pct,,text,N,,
+X64_somewhat,19,Chapter 3,Household separates its waste: climate change a somewhat serious threat,53,pct,,text,N,,
+X64_not,19,Chapter 3,Household separates its waste: climate change a not a threat at all,48,pct,,text,N,,
+X65_very,19,Chapter 3,"Household separates its waste, high-income countries: climate change a very serious threat",84,pct,,text,N,,
+X65_somewhat,19,Chapter 3,"Household separates its waste, high-income countries: climate change a somewhat serious threat",83,pct,,text,N,,
+X65_not,19,Chapter 3,"Household separates its waste, high-income countries: climate change a not a threat at all",67,pct,,text,N,,
+C3_6_low_very,19,Chart 3.6,"Household separates its waste, by climate change concern and country income level: % separate, low income, climate change very serious threat",34,pct,,chart,N,,
+C3_6_low_somewhat,19,Chart 3.6,"Household separates its waste, by climate change concern and country income level: % separate, low income, climate change somewhat serious threat",31,pct,,chart,N,,
+C3_6_low_not,19,Chart 3.6,"Household separates its waste, by climate change concern and country income level: % separate, low income, climate change not a threat at all",35,pct,,chart,N,,
+C3_6_lower_middle_very,19,Chart 3.6,"Household separates its waste, by climate change concern and country income level: % separate, lower-middle income, climate change very serious threat",50,pct,,chart,N,,
+C3_6_lower_middle_somewhat,19,Chart 3.6,"Household separates its waste, by climate change concern and country income level: % separate, lower-middle income, climate change somewhat serious threat",45,pct,,chart,N,,
+C3_6_lower_middle_not,19,Chart 3.6,"Household separates its waste, by climate change concern and country income level: % separate, lower-middle income, climate change not a threat at all",48,pct,,chart,N,,
+C3_6_upper_middle_very,19,Chart 3.6,"Household separates its waste, by climate change concern and country income level: % separate, upper-middle income, climate change very serious threat",54,pct,,chart,N,,
+C3_6_upper_middle_somewhat,19,Chart 3.6,"Household separates its waste, by climate change concern and country income level: % separate, upper-middle income, climate change somewhat serious threat",52,pct,,chart,N,,
+C3_6_upper_middle_not,19,Chart 3.6,"Household separates its waste, by climate change concern and country income level: % separate, upper-middle income, climate change not a threat at all",43,pct,,chart,N,,
+C3_6_high_very,19,Chart 3.6,"Household separates its waste, by climate change concern and country income level: % separate, high income, climate change very serious threat",84,pct,,chart,N,,
+C3_6_high_somewhat,19,Chart 3.6,"Household separates its waste, by climate change concern and country income level: % separate, high income, climate change somewhat serious threat",83,pct,,chart,N,,
+C3_6_high_not,19,Chart 3.6,"Household separates its waste, by climate change concern and country income level: % separate, high income, climate change not a threat at all",67,pct,,chart,N,,
+C4_1_government,21,Chart 4.1,Global household waste disposal methods: % municipal government collects it,44,pct,,chart,N,,
+C4_1_landfill,21,Chart 4.1,Global household waste disposal methods: % someone from the household takes it to landfill,18,pct,,chart,N,,
+C4_1_burns,21,Chart 4.1,Global household waste disposal methods: % someone from the household burns it,14,pct,,chart,N,,
+C4_1_street,21,Chart 4.1,Global household waste disposal methods: % someone from the household disposes of it in the street,9,pct,,chart,N,,
+C4_1_community,21,Chart 4.1,Global household waste disposal methods: % someone from a community group collects it,7,pct,,chart,N,,
+C4_1_private,21,Chart 4.1,Global household waste disposal methods: % someone from a private company collects it,6,pct,,chart,N,,
+C4_1_other,21,Chart 4.1,Global household waste disposal methods: % other,2,pct,,chart,N,,
+X66,21,Chapter 4,"Government collection vs the next most common method, ratio ('more than twice as many')",2,ratio,0.5,text,N,,'More than twice as many'; tolerance 0.5.
+X67,21,Chapter 4,"Household disposes of its waste in an uncontrolled way (landfill, burning or dumping)",41,pct,,text,N,,Also in the footnote on the same page.
+X68,21,Chapter 4,Household dumps its waste outside the home,9,pct,,text,N,,
+X69,"21, 26",Chapter 4,Household has its waste collected (controlled disposal),56,pct,,text,N,,"Page 26 repeats it ('Globally, 56% of households have their waste collected')."
+X70,22,Chapter 4,Rank of open burning among disposal methods ('third most common'),3,rank,0,text,N,,
+X71,22,Chapter 4,Someone from the household takes the waste to a dump,18,pct,,text,N,,
+X72_low,22,Chapter 4,Household burns its waste: low income countries,37,pct,,text,N,,
+X72_lower_middle,22,Chapter 4,Household burns its waste: lower-middle income countries,22,pct,,text,N,,
+X72_upper_middle,22,Chapter 4,Household burns its waste: upper-middle income countries,9,pct,,text,N,,
+X72_high,22,Chapter 4,Household burns its waste: high income countries,1,pct,,text,N,,
+X73,22,Chapter 4,Household burns its waste: highest of the European regions and Australia & New Zealand ('1% or less'),1,pct,,text,N,,"Maximum across Eastern, Northern/Western and Southern Europe and Australia & New Zealand."
+C4_2_eastern_africa,22,Chart 4.2,"Household's primary method of waste disposal is open burning, by region: % burns its waste, eastern africa",41,pct,,chart,N,,
+C4_2_central_western_africa,22,Chart 4.2,"Household's primary method of waste disposal is open burning, by region: % burns its waste, central western africa",34,pct,,chart,N,,
+C4_2_southeastern_asia,22,Chart 4.2,"Household's primary method of waste disposal is open burning, by region: % burns its waste, southeastern asia",32,pct,,chart,N,,
+C4_2_southern_africa,22,Chart 4.2,"Household's primary method of waste disposal is open burning, by region: % burns its waste, southern africa",28,pct,,chart,N,,
+C4_2_southern_asia,22,Chart 4.2,"Household's primary method of waste disposal is open burning, by region: % burns its waste, southern asia",21,pct,,chart,N,,
+C4_2_central_asia,22,Chart 4.2,"Household's primary method of waste disposal is open burning, by region: % burns its waste, central asia",14,pct,,chart,N,,
+C4_2_northern_africa,22,Chart 4.2,"Household's primary method of waste disposal is open burning, by region: % burns its waste, northern africa",8,pct,,chart,N,,
+C4_2_middle_east,22,Chart 4.2,"Household's primary method of waste disposal is open burning, by region: % burns its waste, middle east",7,pct,,chart,N,,
+C4_2_latin_america,22,Chart 4.2,"Household's primary method of waste disposal is open burning, by region: % burns its waste, latin america",7,pct,,chart,N,,
+C4_2_eastern_asia,22,Chart 4.2,"Household's primary method of waste disposal is open burning, by region: % burns its waste, eastern asia",3,pct,,chart,N,,
+C4_2_northern_america,22,Chart 4.2,"Household's primary method of waste disposal is open burning, by region: % burns its waste, northern america",2,pct,,chart,N,,
+C4_2_eastern_europe,22,Chart 4.2,"Household's primary method of waste disposal is open burning, by region: % burns its waste, eastern europe",1,pct,,chart,N,,
+C4_2_northern_western_europe,22,Chart 4.2,"Household's primary method of waste disposal is open burning, by region: % burns its waste, northern western europe",1,pct,,chart,N,,
+C4_2_southern_europe,22,Chart 4.2,"Household's primary method of waste disposal is open burning, by region: % burns its waste, southern europe",0,pct,0.5,chart,N,,Printed as '<0.5%'; recorded as 0 with tolerance 0.5.
+C4_2_australia_nz,22,Chart 4.2,"Household's primary method of waste disposal is open burning, by region: % burns its waste, australia nz",0,pct,0.5,chart,N,,Printed as '<0.5%'; recorded as 0 with tolerance 0.5.
+C4_2_global,22,Chart 4.2,"Household's primary method of waste disposal is open burning, by region: global mean",14,pct,,chart,N,,
+X74,23,Chapter 4,Countries where a majority of households burn their waste,7,count,0,text,N,,
+X75,23,Chapter 4,Countries where open burning is the most common form of disposal,22,count,0,text,N,,"Burning compared with dumping, taking to the tip, and all collection combined (chart note)."
+X76,23,Chapter 4,"Of those 22 countries, number outside Africa and Asia ('all but one (Yemen)')",1,count,0,text,N,,
+C4_3_SWZ,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, SWZ",77,pct,,chart,N,,
+C4_3_KHM,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, KHM",67,pct,,chart,N,,
+C4_3_TCD,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, TCD",64,pct,,chart,N,,
+C4_3_UGA,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, UGA",61,pct,,chart,N,,
+C4_3_MWI,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, MWI",56,pct,,chart,N,,
+C4_3_NPL,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, NPL",54,pct,,chart,N,,
+C4_3_KEN,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, KEN",54,pct,,chart,N,,
+C4_3_GMB,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, GMB",49,pct,,chart,N,,
+C4_3_LAO,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, LAO",49,pct,,chart,N,,
+C4_3_LKA,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, LKA",49,pct,,chart,N,,
+C4_3_BFA,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, BFA",48,pct,,chart,N,,
+C4_3_IDN,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, IDN",48,pct,,chart,N,,
+C4_3_MOZ,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, MOZ",46,pct,,chart,N,,
+C4_3_ZWE,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, ZWE",45,pct,,chart,N,,
+C4_3_COD,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, COD",42,pct,,chart,N,,
+C4_3_SLE,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, SLE",41,pct,,chart,N,,
+C4_3_MLI,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, MLI",37,pct,,chart,N,,
+C4_3_TGO,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, TGO",37,pct,,chart,N,,
+C4_3_GIN,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, GIN",36,pct,,chart,N,,
+C4_3_NGA,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, NGA",35,pct,,chart,N,,
+C4_3_ETH,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, ETH",31,pct,,chart,N,,
+C4_3_YEM,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: % burns its waste, YEM",31,pct,,chart,N,,
+C4_3_global,23,Chart 4.3,Countries where open burning is the most common form of household waste disposal: global mean,14,pct,,chart,N,,
+C4_3_countries,23,Chart 4.3,"Countries where open burning is the most common form of household waste disposal: the countries shown (ISO3, sorted)",BFA; COD; ETH; GIN; GMB; IDN; KEN; KHM; LAO; LKA; MLI; MOZ; MWI; NGA; NPL; SLE; SWZ; TCD; TGO; UGA; YEM; ZWE,text,,chart,N,,
+X77,24,Chapter 4,Pearson correlation between national collection rates and open burning (Chart 4.4 footnote),-0.79,coef,0.01,text,N,,Across countries; each country's rates use its within-country weight.
+X78_SWZ,24,Chapter 4,Household burns its waste: Eswatini,77,pct,,text,N,,
+X78_rank,24,Chapter 4,Eswatini's rank for open burning ('the highest rate in the world'),1,rank,0,text,N,,
+X79,24,Chapter 4,Household burns its waste: Eswatini ('three in four households'),75,pct,3,text,N,,'Three in four'; tolerance 3.
+C5_1_australia_nz,26,Chart 5.1,"Household has its waste collected, by region: % collected, australia nz",93,pct,,chart,N,,
+C5_1_northern_western_europe,26,Chart 5.1,"Household has its waste collected, by region: % collected, northern western europe",88,pct,,chart,N,,
+C5_1_eastern_europe,26,Chart 5.1,"Household has its waste collected, by region: % collected, eastern europe",87,pct,,chart,N,,
+C5_1_latin_america,26,Chart 5.1,"Household has its waste collected, by region: % collected, latin america",85,pct,,chart,N,,
+C5_1_northern_america,26,Chart 5.1,"Household has its waste collected, by region: % collected, northern america",83,pct,,chart,N,,
+C5_1_southern_europe,26,Chart 5.1,"Household has its waste collected, by region: % collected, southern europe",83,pct,,chart,N,,
+C5_1_eastern_asia,26,Chart 5.1,"Household has its waste collected, by region: % collected, eastern asia",64,pct,,chart,N,,
+C5_1_middle_east,26,Chart 5.1,"Household has its waste collected, by region: % collected, middle east",64,pct,,chart,N,,
+C5_1_central_asia,26,Chart 5.1,"Household has its waste collected, by region: % collected, central asia",62,pct,,chart,N,,
+C5_1_northern_africa,26,Chart 5.1,"Household has its waste collected, by region: % collected, northern africa",59,pct,,chart,N,,
+C5_1_southern_africa,26,Chart 5.1,"Household has its waste collected, by region: % collected, southern africa",59,pct,,chart,N,,
+C5_1_southeastern_asia,26,Chart 5.1,"Household has its waste collected, by region: % collected, southeastern asia",47,pct,,chart,N,,
+C5_1_southern_asia,26,Chart 5.1,"Household has its waste collected, by region: % collected, southern asia",37,pct,,chart,N,,
+C5_1_central_western_africa,26,Chart 5.1,"Household has its waste collected, by region: % collected, central western africa",19,pct,,chart,N,,
+C5_1_eastern_africa,26,Chart 5.1,"Household has its waste collected, by region: % collected, eastern africa",14,pct,,chart,N,,
+C5_1_global,26,Chart 5.1,"Household has its waste collected, by region: global mean",56,pct,,chart,N,,
+X80_eastern_asia,26,Chapter 5,Household has its waste collected: eastern asia ('around three in five'),60,pct,5,text,N,,'Around three in five'; tolerance 5.
+X80_middle_east,26,Chapter 5,Household has its waste collected: middle east ('around three in five'),60,pct,5,text,N,,'Around three in five'; tolerance 5.
+X80_central_asia,26,Chapter 5,Household has its waste collected: central asia ('around three in five'),60,pct,5,text,N,,'Around three in five'; tolerance 5.
+X80_northern_africa,26,Chapter 5,Household has its waste collected: northern africa ('around three in five'),60,pct,5,text,N,,'Around three in five'; tolerance 5.
+X80_southern_africa,26,Chapter 5,Household has its waste collected: southern africa ('around three in five'),60,pct,5,text,N,,'Around three in five'; tolerance 5.
+X81,26,Chapter 5,Regions where a minority of households have their waste collected ('Four regions'),4,count,0,text,N,,
+X82_southeastern_asia,26,Chapter 5,Household has its waste collected: southeastern asia,47,pct,,text,N,,
+X82_southern_asia,26,Chapter 5,Household has its waste collected: southern asia,37,pct,,text,N,,
+X82_eastern_asia,26,Chapter 5,Household has its waste collected: eastern asia,64,pct,,text,N,,
+X82_central_asia,26,Chapter 5,Household has its waste collected: central asia,62,pct,,text,N,,
+X82_central_western_africa,26,Chapter 5,Household has its waste collected: central western africa,19,pct,,text,N,,
+X82_eastern_africa,26,Chapter 5,Household has its waste collected: eastern africa,14,pct,,text,N,,
+X83_low,27,Chapter 5,Household has its waste collected: low income countries,11,pct,,text,N,,Low and high in the text; lower- and upper-middle in the footnote.
+X83_lower_middle,27,Chapter 5,Household has its waste collected: lower-middle income countries,40,pct,,text,N,,
+X83_upper_middle,27,Chapter 5,Household has its waste collected: upper-middle income countries,65,pct,,text,N,,
+X83_high,27,Chapter 5,Household has its waste collected: high income countries,86,pct,,text,N,,
+X84_high_cities,27,Chapter 5,"Household has its waste collected: high income, cities",88,pct,,text,Y,GWP_DEGURBA,
+X84_high_towns,27,Chapter 5,"Household has its waste collected: high income, towns and semi-dense areas",86,pct,,text,Y,GWP_DEGURBA,
+X84_high_rural,27,Chapter 5,"Household has its waste collected: high income, rural areas",81,pct,,text,Y,GWP_DEGURBA,
+X84_upper_middle_cities,27,Chapter 5,"Household has its waste collected: upper-middle income, cities",73,pct,,text,Y,GWP_DEGURBA,
+X84_upper_middle_towns,27,Chapter 5,"Household has its waste collected: upper-middle income, towns and semi-dense areas",55,pct,,text,Y,GWP_DEGURBA,
+X84_upper_middle_rural,27,Chapter 5,"Household has its waste collected: upper-middle income, rural areas",52,pct,,text,Y,GWP_DEGURBA,
+X84_lower_middle_cities,27,Chapter 5,"Household has its waste collected: lower-middle income, cities",62,pct,,text,Y,GWP_DEGURBA,
+X84_lower_middle_towns,27,Chapter 5,"Household has its waste collected: lower-middle income, towns and semi-dense areas",29,pct,,text,Y,GWP_DEGURBA,
+X84_lower_middle_rural,27,Chapter 5,"Household has its waste collected: lower-middle income, rural areas",21,pct,,text,Y,GWP_DEGURBA,
+X84_low_towns,27,Chapter 5,"Household has its waste collected: low income, towns and semi-dense areas",5,pct,,text,Y,GWP_DEGURBA,
+X85_AUT_cities,27,Chapter 5,"Household has its waste collected: AUT, cities (footnote)",94,pct,,text,Y,GWP_DEGURBA,
+X85_AUT_towns,27,Chapter 5,"Household has its waste collected: AUT, towns and semi-dense areas (footnote)",96,pct,,text,Y,GWP_DEGURBA,
+X85_AUT_rural,27,Chapter 5,"Household has its waste collected: AUT, rural areas (footnote)",95,pct,,text,Y,GWP_DEGURBA,
+X85_DNK_cities,27,Chapter 5,"Household has its waste collected: DNK, cities (footnote)",93,pct,,text,Y,GWP_DEGURBA,
+X85_DNK_towns,27,Chapter 5,"Household has its waste collected: DNK, towns and semi-dense areas (footnote)",96,pct,,text,Y,GWP_DEGURBA,
+X85_DNK_rural,27,Chapter 5,"Household has its waste collected: DNK, rural areas (footnote)",96,pct,,text,Y,GWP_DEGURBA,
+C5_2_low_cities,27,Chart 5.2,"Household waste collection rates, by degree of urbanisation and country income level: % collected, low income, cities",39,pct,,chart,Y,GWP_DEGURBA,
+C5_2_low_towns,27,Chart 5.2,"Household waste collection rates, by degree of urbanisation and country income level: % collected, low income, towns and semi-dense areas",5,pct,,chart,Y,GWP_DEGURBA,
+C5_2_low_rural,27,Chart 5.2,"Household waste collection rates, by degree of urbanisation and country income level: % collected, low income, rural areas",2,pct,,chart,Y,GWP_DEGURBA,
+C5_2_lower_middle_cities,27,Chart 5.2,"Household waste collection rates, by degree of urbanisation and country income level: % collected, lower-middle income, cities",62,pct,,chart,Y,GWP_DEGURBA,
+C5_2_lower_middle_towns,27,Chart 5.2,"Household waste collection rates, by degree of urbanisation and country income level: % collected, lower-middle income, towns and semi-dense areas",29,pct,,chart,Y,GWP_DEGURBA,
+C5_2_lower_middle_rural,27,Chart 5.2,"Household waste collection rates, by degree of urbanisation and country income level: % collected, lower-middle income, rural areas",21,pct,,chart,Y,GWP_DEGURBA,
+C5_2_upper_middle_cities,27,Chart 5.2,"Household waste collection rates, by degree of urbanisation and country income level: % collected, upper-middle income, cities",73,pct,,chart,Y,GWP_DEGURBA,
+C5_2_upper_middle_towns,27,Chart 5.2,"Household waste collection rates, by degree of urbanisation and country income level: % collected, upper-middle income, towns and semi-dense areas",55,pct,,chart,Y,GWP_DEGURBA,
+C5_2_upper_middle_rural,27,Chart 5.2,"Household waste collection rates, by degree of urbanisation and country income level: % collected, upper-middle income, rural areas",52,pct,,chart,Y,GWP_DEGURBA,
+C5_2_high_cities,27,Chart 5.2,"Household waste collection rates, by degree of urbanisation and country income level: % collected, high income, cities",88,pct,,chart,Y,GWP_DEGURBA,
+C5_2_high_towns,27,Chart 5.2,"Household waste collection rates, by degree of urbanisation and country income level: % collected, high income, towns and semi-dense areas",86,pct,,chart,Y,GWP_DEGURBA,
+C5_2_high_rural,27,Chart 5.2,"Household waste collection rates, by degree of urbanisation and country income level: % collected, high income, rural areas",81,pct,,chart,Y,GWP_DEGURBA,
+C5_2_mean_cities,27,Chart 5.2,"Household waste collection rates, by degree of urbanisation and country income level: mean, cities",71,pct,,chart,Y,GWP_DEGURBA,
+C5_2_mean_towns,27,Chart 5.2,"Household waste collection rates, by degree of urbanisation and country income level: mean, towns and semi-dense areas",44,pct,,chart,Y,GWP_DEGURBA,
+C5_2_mean_rural,27,Chart 5.2,"Household waste collection rates, by degree of urbanisation and country income level: mean, rural areas",38,pct,,chart,Y,GWP_DEGURBA,
+X86,28,Chapter 5,Europe: collection in cities and rural areas between 80% and 90% in every European region (1 = yes),1,flag,0,text,Y,GWP_DEGURBA,"Eastern, Northern/Western and Southern Europe."
+X87_australia_nz,28,Chapter 5,"Gap in collection, cities minus rural areas: Australia & New Zealand",14,pct,,text,Y,GWP_DEGURBA,
+X87_northern_america,28,Chapter 5,"Gap in collection, cities minus rural areas: Northern America",20,pct,,text,Y,GWP_DEGURBA,
+X88_southern_africa,28,Chapter 5,"Gap in collection, cities minus rural areas, is more than 50 points: southern africa (1 = yes)",1,flag,0,text,Y,GWP_DEGURBA,
+X88_eastern_africa,28,Chapter 5,"Gap in collection, cities minus rural areas, is more than 50 points: eastern africa (1 = yes)",1,flag,0,text,Y,GWP_DEGURBA,
+C5_3_southern_africa_rural,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, rural areas, southern africa",23,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_southern_africa_cities,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, cities, southern africa",81,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_southern_africa_gap,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: gap (cities minus rural, from the rounded figures), southern africa",58,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_eastern_africa_rural,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, rural areas, eastern africa",2,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_eastern_africa_cities,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, cities, eastern africa",53,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_eastern_africa_gap,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: gap (cities minus rural, from the rounded figures), eastern africa",51,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_southern_asia_rural,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, rural areas, southern asia",22,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_southern_asia_cities,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, cities, southern asia",62,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_southern_asia_gap,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: gap (cities minus rural, from the rounded figures), southern asia",40,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_southeastern_asia_rural,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, rural areas, southeastern asia",30,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_southeastern_asia_cities,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, cities, southeastern asia",67,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_southeastern_asia_gap,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: gap (cities minus rural, from the rounded figures), southeastern asia",37,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_central_western_africa_rural,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, rural areas, central western africa",6,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_central_western_africa_cities,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, cities, central western africa",41,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_central_western_africa_gap,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: gap (cities minus rural, from the rounded figures), central western africa",35,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_central_asia_rural,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, rural areas, central asia",41,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_central_asia_cities,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, cities, central asia",73,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_central_asia_gap,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: gap (cities minus rural, from the rounded figures), central asia",32,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_middle_east_rural,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, rural areas, middle east",39,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_middle_east_cities,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, cities, middle east",70,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_middle_east_gap,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: gap (cities minus rural, from the rounded figures), middle east",31,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_latin_america_rural,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, rural areas, latin america",62,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_latin_america_cities,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, cities, latin america",91,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_latin_america_gap,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: gap (cities minus rural, from the rounded figures), latin america",29,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_northern_america_rural,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, rural areas, northern america",71,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_northern_america_cities,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, cities, northern america",91,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_northern_america_gap,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: gap (cities minus rural, from the rounded figures), northern america",20,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_eastern_asia_rural,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, rural areas, eastern asia",55,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_eastern_asia_cities,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, cities, eastern asia",71,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_eastern_asia_gap,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: gap (cities minus rural, from the rounded figures), eastern asia",16,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_australia_nz_rural,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, rural areas, australia nz",83,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_australia_nz_cities,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, cities, australia nz",97,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_australia_nz_gap,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: gap (cities minus rural, from the rounded figures), australia nz",14,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_northern_africa_rural,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, rural areas, northern africa",45,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_northern_africa_cities,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, cities, northern africa",56,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_northern_africa_gap,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: gap (cities minus rural, from the rounded figures), northern africa",11,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_southern_europe_rural,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, rural areas, southern europe",83,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_southern_europe_cities,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, cities, southern europe",83,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_southern_europe_gap,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: gap (cities minus rural, from the rounded figures), southern europe",0,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_northern_western_europe_rural,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, rural areas, northern western europe",88,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_northern_western_europe_cities,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, cities, northern western europe",88,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_northern_western_europe_gap,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: gap (cities minus rural, from the rounded figures), northern western europe",0,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_eastern_europe_rural,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, rural areas, eastern europe",88,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_eastern_europe_cities,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: % collected, cities, eastern europe",87,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_eastern_europe_gap,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: gap (cities minus rural, from the rounded figures), eastern europe",-1,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_mean_rural,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: rural mean",38,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+C5_3_mean_cities,28,Chart 5.3,"Household waste collection rates, by degree of urbanisation and region: cities mean",71,pct,,chart,Y,GWP_DEGURBA,Eastern Europe: the rural bar is labelled 88% and the cities bar 87%.
+X89,29,Chapter 5,Countries with a gap of 60 points or more in collection between cities and rural areas,15,count,0,text,Y,GWP_DEGURBA,
+C5_4_KHM_rural,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, rural areas, KHM",4,pct,,chart,Y,GWP_DEGURBA,
+C5_4_KHM_cities,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, cities, KHM",91,pct,,chart,Y,GWP_DEGURBA,
+C5_4_KHM_gap,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: gap (cities minus rural, from the rounded figures), KHM",87,pct,,chart,Y,GWP_DEGURBA,
+C5_4_SEN_rural,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, rural areas, SEN",9,pct,,chart,Y,GWP_DEGURBA,
+C5_4_SEN_cities,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, cities, SEN",83,pct,,chart,Y,GWP_DEGURBA,
+C5_4_SEN_gap,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: gap (cities minus rural, from the rounded figures), SEN",75,pct,,chart,Y,GWP_DEGURBA,
+C5_4_NPL_rural,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, rural areas, NPL",3,pct,,chart,Y,GWP_DEGURBA,
+C5_4_NPL_cities,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, cities, NPL",77,pct,,chart,Y,GWP_DEGURBA,
+C5_4_NPL_gap,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: gap (cities minus rural, from the rounded figures), NPL",74,pct,,chart,Y,GWP_DEGURBA,
+C5_4_NIC_rural,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, rural areas, NIC",14,pct,,chart,Y,GWP_DEGURBA,
+C5_4_NIC_cities,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, cities, NIC",87,pct,,chart,Y,GWP_DEGURBA,
+C5_4_NIC_gap,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: gap (cities minus rural, from the rounded figures), NIC",73,pct,,chart,Y,GWP_DEGURBA,
+C5_4_PRY_rural,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, rural areas, PRY",24,pct,,chart,Y,GWP_DEGURBA,
+C5_4_PRY_cities,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, cities, PRY",95,pct,,chart,Y,GWP_DEGURBA,
+C5_4_PRY_gap,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: gap (cities minus rural, from the rounded figures), PRY",71,pct,,chart,Y,GWP_DEGURBA,
+C5_4_TZA_rural,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, rural areas, TZA",3,pct,,chart,Y,GWP_DEGURBA,
+C5_4_TZA_cities,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, cities, TZA",72,pct,,chart,Y,GWP_DEGURBA,
+C5_4_TZA_gap,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: gap (cities minus rural, from the rounded figures), TZA",69,pct,,chart,Y,GWP_DEGURBA,
+C5_4_BOL_rural,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, rural areas, BOL",22,pct,,chart,Y,GWP_DEGURBA,
+C5_4_BOL_cities,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, cities, BOL",91,pct,,chart,Y,GWP_DEGURBA,
+C5_4_BOL_gap,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: gap (cities minus rural, from the rounded figures), BOL",69,pct,,chart,Y,GWP_DEGURBA,
+C5_4_MNG_rural,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, rural areas, MNG",27,pct,,chart,Y,GWP_DEGURBA,
+C5_4_MNG_cities,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, cities, MNG",95,pct,,chart,Y,GWP_DEGURBA,
+C5_4_MNG_gap,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: gap (cities minus rural, from the rounded figures), MNG",68,pct,,chart,Y,GWP_DEGURBA,
+C5_4_MLI_rural,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, rural areas, MLI",1,pct,,chart,Y,GWP_DEGURBA,
+C5_4_MLI_cities,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, cities, MLI",70,pct,,chart,Y,GWP_DEGURBA,
+C5_4_MLI_gap,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: gap (cities minus rural, from the rounded figures), MLI",68,pct,,chart,Y,GWP_DEGURBA,
+C5_4_GTM_rural,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, rural areas, GTM",18,pct,,chart,Y,GWP_DEGURBA,
+C5_4_GTM_cities,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, cities, GTM",84,pct,,chart,Y,GWP_DEGURBA,
+C5_4_GTM_gap,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: gap (cities minus rural, from the rounded figures), GTM",67,pct,,chart,Y,GWP_DEGURBA,
+C5_4_KGZ_rural,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, rural areas, KGZ",21,pct,,chart,Y,GWP_DEGURBA,
+C5_4_KGZ_cities,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, cities, KGZ",88,pct,,chart,Y,GWP_DEGURBA,
+C5_4_KGZ_gap,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: gap (cities minus rural, from the rounded figures), KGZ",66,pct,,chart,Y,GWP_DEGURBA,
+C5_4_HND_rural,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, rural areas, HND",16,pct,,chart,Y,GWP_DEGURBA,
+C5_4_HND_cities,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, cities, HND",82,pct,,chart,Y,GWP_DEGURBA,
+C5_4_HND_gap,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: gap (cities minus rural, from the rounded figures), HND",66,pct,,chart,Y,GWP_DEGURBA,
+C5_4_IRQ_rural,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, rural areas, IRQ",16,pct,,chart,Y,GWP_DEGURBA,
+C5_4_IRQ_cities,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, cities, IRQ",78,pct,,chart,Y,GWP_DEGURBA,
+C5_4_IRQ_gap,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: gap (cities minus rural, from the rounded figures), IRQ",62,pct,,chart,Y,GWP_DEGURBA,
+C5_4_GHA_rural,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, rural areas, GHA",8,pct,,chart,Y,GWP_DEGURBA,
+C5_4_GHA_cities,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, cities, GHA",68,pct,,chart,Y,GWP_DEGURBA,
+C5_4_GHA_gap,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: gap (cities minus rural, from the rounded figures), GHA",60,pct,,chart,Y,GWP_DEGURBA,
+C5_4_NAM_rural,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, rural areas, NAM",28,pct,,chart,Y,GWP_DEGURBA,
+C5_4_NAM_cities,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: % collected, cities, NAM",88,pct,,chart,Y,GWP_DEGURBA,
+C5_4_NAM_gap,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: gap (cities minus rural, from the rounded figures), NAM",60,pct,,chart,Y,GWP_DEGURBA,
+C5_4_mean_rural,29,Chart 5.4,Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: rural mean,38,pct,,chart,Y,GWP_DEGURBA,
+C5_4_mean_cities,29,Chart 5.4,Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: cities mean,71,pct,,chart,Y,GWP_DEGURBA,
+C5_4_top15,29,Chart 5.4,"Top 15 countries with the largest gaps between cities and rural areas in organised waste collection: the 15 countries with the largest gaps (ISO3, sorted)",BOL; GHA; GTM; HND; IRQ; KGZ; KHM; MLI; MNG; NAM; NIC; NPL; PRY; SEN; TZA,text,,chart,Y,GWP_DEGURBA,
+X90_cities_collected,30,Chapter 5,"India, household waste collected, cities",67,pct,,text,Y,GWP_DEGURBA,
+X90_cities_burns,30,Chapter 5,"India, household waste burns it, cities",11,pct,,text,Y,GWP_DEGURBA,
+X90_towns_collected,30,Chapter 5,"India, household waste collected, towns and semi-dense areas",27,pct,,text,Y,GWP_DEGURBA,
+X90_rural_collected,30,Chapter 5,"India, household waste collected, rural areas",23,pct,,text,Y,GWP_DEGURBA,
+X90_rural_burns,30,Chapter 5,"India, household waste burns it, rural areas",26,pct,,text,Y,GWP_DEGURBA,
+X90_towns_burns,30,Chapter 5,"India, household waste burns it, towns and semi-dense areas",31,pct,,text,Y,GWP_DEGURBA,
+C5_5_cities_burns,30,Chart 5.5,"India: household waste collection and open burning, by degree of urbanisation: % burns it, cities",11,pct,,chart,Y,GWP_DEGURBA,
+C5_5_cities_collected,30,Chart 5.5,"India: household waste collection and open burning, by degree of urbanisation: % collected, cities",67,pct,,chart,Y,GWP_DEGURBA,
+C5_5_towns_burns,30,Chart 5.5,"India: household waste collection and open burning, by degree of urbanisation: % burns it, towns and semi-dense areas",31,pct,,chart,Y,GWP_DEGURBA,
+C5_5_towns_collected,30,Chart 5.5,"India: household waste collection and open burning, by degree of urbanisation: % collected, towns and semi-dense areas",27,pct,,chart,Y,GWP_DEGURBA,
+C5_5_rural_burns,30,Chart 5.5,"India: household waste collection and open burning, by degree of urbanisation: % burns it, rural areas",26,pct,,chart,Y,GWP_DEGURBA,
+C5_5_rural_collected,30,Chart 5.5,"India: household waste collection and open burning, by degree of urbanisation: % collected, rural areas",23,pct,,chart,Y,GWP_DEGURBA,
+X91,30,Chapter 5,India: households that burn their waste and do not separate it (% of households that burn),41,pct,,text,N,,"Read as: of Indian households that burn their waste, 41% do not separate it ('not separated' = anything but yes, as in Chapter 6)."
+C5_6_cities_burns,30,Chart 5.6,"India: household waste collection and open burning where plastic is the main form of waste, by degree of urbanisation: % whose main waste is plastic, among households whose waste is burned, cities",51,pct,,chart,Y,GWP_DEGURBA,Read as the % citing plastic among households that burn / have their waste collected (see README).
+C5_6_cities_collected,30,Chart 5.6,"India: household waste collection and open burning where plastic is the main form of waste, by degree of urbanisation: % whose main waste is plastic, among households whose waste is collected, cities",33,pct,,chart,Y,GWP_DEGURBA,Read as the % citing plastic among households that burn / have their waste collected (see README).
+C5_6_towns_burns,30,Chart 5.6,"India: household waste collection and open burning where plastic is the main form of waste, by degree of urbanisation: % whose main waste is plastic, among households whose waste is burned, towns and semi-dense areas",58,pct,,chart,Y,GWP_DEGURBA,Read as the % citing plastic among households that burn / have their waste collected (see README).
+C5_6_towns_collected,30,Chart 5.6,"India: household waste collection and open burning where plastic is the main form of waste, by degree of urbanisation: % whose main waste is plastic, among households whose waste is collected, towns and semi-dense areas",39,pct,,chart,Y,GWP_DEGURBA,Read as the % citing plastic among households that burn / have their waste collected (see README).
+C5_6_rural_burns,30,Chart 5.6,"India: household waste collection and open burning where plastic is the main form of waste, by degree of urbanisation: % whose main waste is plastic, among households whose waste is burned, rural areas",44,pct,,chart,Y,GWP_DEGURBA,Read as the % citing plastic among households that burn / have their waste collected (see README).
+C5_6_rural_collected,30,Chart 5.6,"India: household waste collection and open burning where plastic is the main form of waste, by degree of urbanisation: % whose main waste is plastic, among households whose waste is collected, rural areas",37,pct,,chart,Y,GWP_DEGURBA,Read as the % citing plastic among households that burn / have their waste collected (see README).
+C5_7_cities_q1,31,Chart 5.7,"India: household waste open burning, by income quintile and degree of urbanisation: % burns it, cities, poorest 20%",13,pct,,chart,Y,GWP_DEGURBA,
+C5_7_cities_q2,31,Chart 5.7,"India: household waste open burning, by income quintile and degree of urbanisation: % burns it, cities, second 20%",13,pct,,chart,Y,GWP_DEGURBA,
+C5_7_cities_q3,31,Chart 5.7,"India: household waste open burning, by income quintile and degree of urbanisation: % burns it, cities, middle 20%",10,pct,,chart,Y,GWP_DEGURBA,
+C5_7_cities_q4,31,Chart 5.7,"India: household waste open burning, by income quintile and degree of urbanisation: % burns it, cities, fourth 20%",10,pct,,chart,Y,GWP_DEGURBA,
+C5_7_cities_q5,31,Chart 5.7,"India: household waste open burning, by income quintile and degree of urbanisation: % burns it, cities, richest 20%",11,pct,,chart,Y,GWP_DEGURBA,
+C5_7_towns_q1,31,Chart 5.7,"India: household waste open burning, by income quintile and degree of urbanisation: % burns it, towns and semi-dense areas, poorest 20%",35,pct,,chart,Y,GWP_DEGURBA,
+C5_7_towns_q2,31,Chart 5.7,"India: household waste open burning, by income quintile and degree of urbanisation: % burns it, towns and semi-dense areas, second 20%",28,pct,,chart,Y,GWP_DEGURBA,
+C5_7_towns_q3,31,Chart 5.7,"India: household waste open burning, by income quintile and degree of urbanisation: % burns it, towns and semi-dense areas, middle 20%",35,pct,,chart,Y,GWP_DEGURBA,
+C5_7_towns_q4,31,Chart 5.7,"India: household waste open burning, by income quintile and degree of urbanisation: % burns it, towns and semi-dense areas, fourth 20%",28,pct,,chart,Y,GWP_DEGURBA,
+C5_7_towns_q5,31,Chart 5.7,"India: household waste open burning, by income quintile and degree of urbanisation: % burns it, towns and semi-dense areas, richest 20%",28,pct,,chart,Y,GWP_DEGURBA,
+C5_7_rural_q1,31,Chart 5.7,"India: household waste open burning, by income quintile and degree of urbanisation: % burns it, rural areas, poorest 20%",24,pct,,chart,Y,GWP_DEGURBA,
+C5_7_rural_q2,31,Chart 5.7,"India: household waste open burning, by income quintile and degree of urbanisation: % burns it, rural areas, second 20%",28,pct,,chart,Y,GWP_DEGURBA,
+C5_7_rural_q3,31,Chart 5.7,"India: household waste open burning, by income quintile and degree of urbanisation: % burns it, rural areas, middle 20%",30,pct,,chart,Y,GWP_DEGURBA,
+C5_7_rural_q4,31,Chart 5.7,"India: household waste open burning, by income quintile and degree of urbanisation: % burns it, rural areas, fourth 20%",25,pct,,chart,Y,GWP_DEGURBA,
+C5_7_rural_q5,31,Chart 5.7,"India: household waste open burning, by income quintile and degree of urbanisation: % burns it, rural areas, richest 20%",24,pct,,chart,Y,GWP_DEGURBA,
+C5_8_delhi,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, delhi",16,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+C5_8_himachal_pradesh,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, himachal pradesh",44,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+C5_8_punjab,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, punjab",19,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+C5_8_uttarakhand,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, uttarakhand",32,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+C5_8_haryana,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, haryana",3,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+C5_8_rajasthan,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, rajasthan",33,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+C5_8_uttar_pradesh,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, uttar pradesh",36,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+C5_8_assam,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, assam",75,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+C5_8_bihar,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, bihar",17,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+C5_8_jharkhand,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, jharkhand",43,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+C5_8_gujarat,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, gujarat",19,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+C5_8_madhya_pradesh,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, madhya pradesh",19,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+C5_8_chhattisgarh,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, chhattisgarh",30,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+C5_8_odisha,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, odisha",22,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+C5_8_west_bengal,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, west bengal",37,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+C5_8_maharashtra,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, maharashtra",5,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+C5_8_telangana,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, telangana",9,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+C5_8_karnataka,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, karnataka",6,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+C5_8_andhra_pradesh,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, andhra pradesh",9,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+C5_8_tamil_nadu,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, tamil nadu",15,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+C5_8_kerala,32,Chart 5.8,"India: household waste open burning, by state (map): % burns it, kerala",27,pct,,chart,N,,Map labels. Uses REGION_IND; each state has 20 to 520 respondents.
+X92_delhi,32,Chapter 5,"India: household burns its waste, Delhi",16,pct,,text,N,,
+X92_assam,32,Chapter 5,"India: household burns its waste, Assam",75,pct,,text,N,,
+X92_assam_rank,32,Chapter 5,India: Assam's rank for open burning among states ('the highest levels'),1,rank,0,text,N,,
+X93_delhi,32,Chapter 5,"India: dissatisfied with air quality, Delhi",27,pct,,text,Y,GWP_AIR_QUALITY_SATISFACTION,
+X93_rest,32,Chapter 5,"India: dissatisfied with air quality, rest of India",15,pct,,text,Y,GWP_AIR_QUALITY_SATISFACTION,
+X94_cities,33,Chapter 5,"Brazil: household burns its waste, cities ('less than 0.5%')",0,pct,0.5,text,Y,GWP_DEGURBA,'Less than 0.5%'; recorded as 0 with tolerance 0.5.
+X94_towns,33,Chapter 5,"Brazil: household burns its waste, towns and semi-dense areas ('less than 0.5%')",0,pct,0.5,text,Y,GWP_DEGURBA,
+X94_rural,33,Chapter 5,"Brazil: household burns its waste, rural areas",36,pct,,text,Y,GWP_DEGURBA,
+X95_rural_q1,33,Chapter 5,"Brazil: household burns its waste, rural areas, poorest 20%",42,pct,,text,Y,GWP_DEGURBA,Chart 5.10 prints 41% for the same figure.
+X95_rural_q5,33,Chapter 5,"Brazil: household burns its waste, rural areas, richest 20%",14,pct,,text,Y,GWP_DEGURBA,
+C5_9_cities_burns,33,Chart 5.9,"Brazil: household waste collection and open burning, by degree of urbanisation: % burns it, cities",0,pct,,chart,Y,GWP_DEGURBA,
+C5_9_cities_collected,33,Chart 5.9,"Brazil: household waste collection and open burning, by degree of urbanisation: % collected, cities",97,pct,,chart,Y,GWP_DEGURBA,
+C5_9_towns_burns,33,Chart 5.9,"Brazil: household waste collection and open burning, by degree of urbanisation: % burns it, towns and semi-dense areas",0,pct,,chart,Y,GWP_DEGURBA,
+C5_9_towns_collected,33,Chart 5.9,"Brazil: household waste collection and open burning, by degree of urbanisation: % collected, towns and semi-dense areas",98,pct,,chart,Y,GWP_DEGURBA,
+C5_9_rural_burns,33,Chart 5.9,"Brazil: household waste collection and open burning, by degree of urbanisation: % burns it, rural areas",36,pct,,chart,Y,GWP_DEGURBA,
+C5_9_rural_collected,33,Chart 5.9,"Brazil: household waste collection and open burning, by degree of urbanisation: % collected, rural areas",59,pct,,chart,Y,GWP_DEGURBA,
+C5_10_cities_q1,33,Chart 5.10,"Brazil: household waste open burning, by income quintile and degree of urbanisation: % burns it, cities, poorest 20%",0,pct,,chart,Y,GWP_DEGURBA,
+C5_10_cities_q2,33,Chart 5.10,"Brazil: household waste open burning, by income quintile and degree of urbanisation: % burns it, cities, second 20%",0,pct,,chart,Y,GWP_DEGURBA,
+C5_10_cities_q3,33,Chart 5.10,"Brazil: household waste open burning, by income quintile and degree of urbanisation: % burns it, cities, middle 20%",0,pct,,chart,Y,GWP_DEGURBA,
+C5_10_cities_q4,33,Chart 5.10,"Brazil: household waste open burning, by income quintile and degree of urbanisation: % burns it, cities, fourth 20%",0,pct,,chart,Y,GWP_DEGURBA,
+C5_10_cities_q5,33,Chart 5.10,"Brazil: household waste open burning, by income quintile and degree of urbanisation: % burns it, cities, richest 20%",0,pct,,chart,Y,GWP_DEGURBA,
+C5_10_towns_q1,33,Chart 5.10,"Brazil: household waste open burning, by income quintile and degree of urbanisation: % burns it, towns and semi-dense areas, poorest 20%",0,pct,,chart,Y,GWP_DEGURBA,
+C5_10_towns_q2,33,Chart 5.10,"Brazil: household waste open burning, by income quintile and degree of urbanisation: % burns it, towns and semi-dense areas, second 20%",0,pct,,chart,Y,GWP_DEGURBA,
+C5_10_towns_q3,33,Chart 5.10,"Brazil: household waste open burning, by income quintile and degree of urbanisation: % burns it, towns and semi-dense areas, middle 20%",0,pct,,chart,Y,GWP_DEGURBA,
+C5_10_towns_q4,33,Chart 5.10,"Brazil: household waste open burning, by income quintile and degree of urbanisation: % burns it, towns and semi-dense areas, fourth 20%",0,pct,,chart,Y,GWP_DEGURBA,
+C5_10_towns_q5,33,Chart 5.10,"Brazil: household waste open burning, by income quintile and degree of urbanisation: % burns it, towns and semi-dense areas, richest 20%",0,pct,,chart,Y,GWP_DEGURBA,
+C5_10_rural_q1,33,Chart 5.10,"Brazil: household waste open burning, by income quintile and degree of urbanisation: % burns it, rural areas, poorest 20%",41,pct,,chart,Y,GWP_DEGURBA,
+C5_10_rural_q2,33,Chart 5.10,"Brazil: household waste open burning, by income quintile and degree of urbanisation: % burns it, rural areas, second 20%",43,pct,,chart,Y,GWP_DEGURBA,
+C5_10_rural_q3,33,Chart 5.10,"Brazil: household waste open burning, by income quintile and degree of urbanisation: % burns it, rural areas, middle 20%",38,pct,,chart,Y,GWP_DEGURBA,
+C5_10_rural_q4,33,Chart 5.10,"Brazil: household waste open burning, by income quintile and degree of urbanisation: % burns it, rural areas, fourth 20%",25,pct,,chart,Y,GWP_DEGURBA,
+C5_10_rural_q5,33,Chart 5.10,"Brazil: household waste open burning, by income quintile and degree of urbanisation: % burns it, rural areas, richest 20%",14,pct,,chart,Y,GWP_DEGURBA,
+C5_11_maranhao,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, maranhao",50,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_amapa,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, amapa",0,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_ceara,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, ceara",24,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_rio_grande_do_norte,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, rio grande do norte",0,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_amazonas,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, amazonas",0,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_para,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, para",41,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_paraiba,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, paraiba",33,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_pernambuco,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, pernambuco",24,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_alagoas,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, alagoas",0,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_rondonia,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, rondonia",17,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_tocantins,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, tocantins",0,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_bahia,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, bahia",12,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_sergipe,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, sergipe",0,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_federal_district,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, federal district",0,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_goias,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, goias",10,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_minas_gerais,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, minas gerais",0,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_mato_grosso_do_sul,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, mato grosso do sul",0,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_espirito_santo,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, espirito santo",0,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_sao_paulo,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, sao paulo",0,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_rio_de_janeiro,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, rio de janeiro",0,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_parana,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, parana",0,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_santa_catarina,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, santa catarina",0,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+C5_11_rio_grande_do_sul,34,Chart 5.11,"Brazil: household waste open burning, by state (map): % burns it, rio grande do sul",0,pct,,chart,N,,Map labels. Uses REGION_BRA; each state has 10 to 230 respondents.
+X96_maranhao,34,Chapter 5,"Brazil: household burns its waste, Maranhão ('half')",50,pct,,text,N,,
+X96_para,34,Chapter 5,"Brazil: household burns its waste, Pará",41,pct,,text,N,,
+X97_collected_only,36,Chapter 6,"Household waste collected, not separated",23,pct,,text,N,,
+X97_separated_only,36,Chapter 6,Household waste not collected but separated,20,pct,,text,N,,
+X97_neither,36,Chapter 6,Household waste not collected or separated,24,pct,,text,N,,
+X98_upper_middle_both,36,Chapter 6,Upper-middle income: collected and separated,32,pct,,text,N,,
+X98_upper_middle_collected_only,36,Chapter 6,"Upper-middle income: collected, not separated",33,pct,,text,N,,
+X98_lower_middle_separated_only,36,Chapter 6,"Lower-middle income: separated, not collected",26,pct,,text,N,,
+X98_lower_middle_neither,36,Chapter 6,Lower-middle income: neither separated nor collected,34,pct,,text,N,,
+C6_1_global_both,36,Chart 6.1,"Households per waste behaviour quadrant, by country income level: % collected and separated, global",33,pct,,chart,N,,"Collected = government, community group or private company; separated = yes only ('sometimes' counts as not separated)."
+C6_1_global_collected_only,36,Chart 6.1,"Households per waste behaviour quadrant, by country income level: % collected, not separated, global",23,pct,,chart,N,,"Collected = government, community group or private company; separated = yes only ('sometimes' counts as not separated)."
+C6_1_global_separated_only,36,Chart 6.1,"Households per waste behaviour quadrant, by country income level: % not collected but separated, global",20,pct,,chart,N,,"Collected = government, community group or private company; separated = yes only ('sometimes' counts as not separated)."
+C6_1_global_neither,36,Chart 6.1,"Households per waste behaviour quadrant, by country income level: % not collected or separated, global",24,pct,,chart,N,,"Collected = government, community group or private company; separated = yes only ('sometimes' counts as not separated)."
+C6_1_low_both,36,Chart 6.1,"Households per waste behaviour quadrant, by country income level: % collected and separated, low",4,pct,,chart,N,,"Collected = government, community group or private company; separated = yes only ('sometimes' counts as not separated)."
+C6_1_low_collected_only,36,Chart 6.1,"Households per waste behaviour quadrant, by country income level: % collected, not separated, low",8,pct,,chart,N,,"Collected = government, community group or private company; separated = yes only ('sometimes' counts as not separated)."
+C6_1_low_separated_only,36,Chart 6.1,"Households per waste behaviour quadrant, by country income level: % not collected but separated, low",28,pct,,chart,N,,"Collected = government, community group or private company; separated = yes only ('sometimes' counts as not separated)."
+C6_1_low_neither,36,Chart 6.1,"Households per waste behaviour quadrant, by country income level: % not collected or separated, low",61,pct,,chart,N,,"Collected = government, community group or private company; separated = yes only ('sometimes' counts as not separated)."
+C6_1_lower_middle_both,36,Chart 6.1,"Households per waste behaviour quadrant, by country income level: % collected and separated, lower middle",22,pct,,chart,N,,"Collected = government, community group or private company; separated = yes only ('sometimes' counts as not separated)."
+C6_1_lower_middle_collected_only,36,Chart 6.1,"Households per waste behaviour quadrant, by country income level: % collected, not separated, lower middle",19,pct,,chart,N,,"Collected = government, community group or private company; separated = yes only ('sometimes' counts as not separated)."
+C6_1_lower_middle_separated_only,36,Chart 6.1,"Households per waste behaviour quadrant, by country income level: % not collected but separated, lower middle",26,pct,,chart,N,,"Collected = government, community group or private company; separated = yes only ('sometimes' counts as not separated)."
+C6_1_lower_middle_neither,36,Chart 6.1,"Households per waste behaviour quadrant, by country income level: % not collected or separated, lower middle",34,pct,,chart,N,,"Collected = government, community group or private company; separated = yes only ('sometimes' counts as not separated)."
+C6_1_upper_middle_both,36,Chart 6.1,"Households per waste behaviour quadrant, by country income level: % collected and separated, upper middle",32,pct,,chart,N,,"Collected = government, community group or private company; separated = yes only ('sometimes' counts as not separated)."
+C6_1_upper_middle_collected_only,36,Chart 6.1,"Households per waste behaviour quadrant, by country income level: % collected, not separated, upper middle",33,pct,,chart,N,,"Collected = government, community group or private company; separated = yes only ('sometimes' counts as not separated)."
+C6_1_upper_middle_separated_only,36,Chart 6.1,"Households per waste behaviour quadrant, by country income level: % not collected but separated, upper middle",18,pct,,chart,N,,"Collected = government, community group or private company; separated = yes only ('sometimes' counts as not separated)."
+C6_1_upper_middle_neither,36,Chart 6.1,"Households per waste behaviour quadrant, by country income level: % not collected or separated, upper middle",17,pct,,chart,N,,"Collected = government, community group or private company; separated = yes only ('sometimes' counts as not separated)."
+C6_1_high_both,36,Chart 6.1,"Households per waste behaviour quadrant, by country income level: % collected and separated, high",71,pct,,chart,N,,"Collected = government, community group or private company; separated = yes only ('sometimes' counts as not separated)."
+C6_1_high_collected_only,36,Chart 6.1,"Households per waste behaviour quadrant, by country income level: % collected, not separated, high",15,pct,,chart,N,,"Collected = government, community group or private company; separated = yes only ('sometimes' counts as not separated)."
+C6_1_high_separated_only,36,Chart 6.1,"Households per waste behaviour quadrant, by country income level: % not collected but separated, high",10,pct,,chart,N,,"Collected = government, community group or private company; separated = yes only ('sometimes' counts as not separated)."
+C6_1_high_neither,36,Chart 6.1,"Households per waste behaviour quadrant, by country income level: % not collected or separated, high",4,pct,,chart,N,,"Collected = government, community group or private company; separated = yes only ('sometimes' counts as not separated)."
+X99_eastern_europe,37,Chapter 6,"Top 10 for 'collected, not separated': number in Eastern Europe",7,count,0,text,N,,The report's Eastern Europe includes the Western Balkans and Georgia; see README.
+X99_top5_eastern_europe,37,Chapter 6,"Top 5 for 'collected, not separated': number in Eastern Europe ('the top five are all')",5,count,0,text,N,,
+X99_top5_over_two_thirds,37,Chapter 6,"Top 5 for 'collected, not separated': all above two-thirds (1 = yes)",1,flag,0,text,N,,
+T6_1_XKX,37,Table 6.1,"Top 10 countries with the highest % of households whose waste is collected but not separated: % collected not separated, XKX",81,pct,,table,N,,
+T6_1_MNE,37,Table 6.1,"Top 10 countries with the highest % of households whose waste is collected but not separated: % collected not separated, MNE",76,pct,,table,N,,
+T6_1_BGR,37,Table 6.1,"Top 10 countries with the highest % of households whose waste is collected but not separated: % collected not separated, BGR",74,pct,,table,N,,
+T6_1_BIH,37,Table 6.1,"Top 10 countries with the highest % of households whose waste is collected but not separated: % collected not separated, BIH",70,pct,,table,N,,
+T6_1_SRB,37,Table 6.1,"Top 10 countries with the highest % of households whose waste is collected but not separated: % collected not separated, SRB",68,pct,,table,N,,
+T6_1_KWT,37,Table 6.1,"Top 10 countries with the highest % of households whose waste is collected but not separated: % collected not separated, KWT",66,pct,,table,N,,
+T6_1_PSE,37,Table 6.1,"Top 10 countries with the highest % of households whose waste is collected but not separated: % collected not separated, PSE",65,pct,,table,N,,
+T6_1_MKD,37,Table 6.1,"Top 10 countries with the highest % of households whose waste is collected but not separated: % collected not separated, MKD",60,pct,,table,N,,
+T6_1_GEO,37,Table 6.1,"Top 10 countries with the highest % of households whose waste is collected but not separated: % collected not separated, GEO",59,pct,,table,N,,
+T6_1_CHL,37,Table 6.1,"Top 10 countries with the highest % of households whose waste is collected but not separated: % collected not separated, CHL",57,pct,,table,N,,
+T6_1_top10,37,Table 6.1,"Top 10 countries with the highest % of households whose waste is collected but not separated: the 10 countries (ISO3, sorted)",BGR; BIH; CHL; GEO; KWT; MKD; MNE; PSE; SRB; XKX,text,,table,N,,
+T6_2_LKA,37,Table 6.2,"Top 10 countries with the highest % of households whose waste is separated but not collected: % separated not collected, LKA",51,pct,,table,N,,
+T6_2_NPL,37,Table 6.2,"Top 10 countries with the highest % of households whose waste is separated but not collected: % separated not collected, NPL",50,pct,,table,N,,
+T6_2_BGD,37,Table 6.2,"Top 10 countries with the highest % of households whose waste is separated but not collected: % separated not collected, BGD",42,pct,,table,N,,
+T6_2_MWI,37,Table 6.2,"Top 10 countries with the highest % of households whose waste is separated but not collected: % separated not collected, MWI",41,pct,,table,N,,
+T6_2_UGA,37,Table 6.2,"Top 10 countries with the highest % of households whose waste is separated but not collected: % separated not collected, UGA",40,pct,,table,N,,
+T6_2_TJK,37,Table 6.2,"Top 10 countries with the highest % of households whose waste is separated but not collected: % separated not collected, TJK",39,pct,,table,N,,
+T6_2_SWE,37,Table 6.2,"Top 10 countries with the highest % of households whose waste is separated but not collected: % separated not collected, SWE",37,pct,,table,N,,
+T6_2_KHM,37,Table 6.2,"Top 10 countries with the highest % of households whose waste is separated but not collected: % separated not collected, KHM",37,pct,,table,N,,
+T6_2_KEN,37,Table 6.2,"Top 10 countries with the highest % of households whose waste is separated but not collected: % separated not collected, KEN",36,pct,,table,N,,
+T6_2_HND,37,Table 6.2,"Top 10 countries with the highest % of households whose waste is separated but not collected: % separated not collected, HND",35,pct,,table,N,,
+T6_2_top10,37,Table 6.2,"Top 10 countries with the highest % of households whose waste is separated but not collected: the 10 countries (ISO3, sorted)",BGD; HND; KEN; KHM; LKA; MWI; NPL; SWE; TJK; UGA,text,,table,N,,
+X100_LKA,37,Chapter 6,Household waste separated but not collected: LKA,51,pct,,text,N,,
+X100_NPL,37,Chapter 6,Household waste separated but not collected: NPL,50,pct,,text,N,,
+X100_BGD,37,Chapter 6,Household waste separated but not collected: BGD,42,pct,,text,N,,
+X100_IND,37,Chapter 6,Household waste separated but not collected: IND,30,pct,,text,N,,
+X101_global_landfill,37,Chapter 6,Separated but not collected: % taken to the dump by a household member,44,pct,,text,N,,
+X101_global_burns,37,Chapter 6,Separated but not collected: % burned,34,pct,,text,N,,
+X101_low_burns,37,Chapter 6,"Separated but not collected: % burned, low-income countries",53,pct,,text,N,,
+X101_lower_middle_burns,37,Chapter 6,"Separated but not collected: % burned, lower-middle-income countries",44,pct,,text,N,,

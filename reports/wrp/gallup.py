@@ -12,7 +12,7 @@ or Stata .dta) holding WPID_RANDOM plus the GWP items a report needs. Rows
 are matched to the World Risk Poll on WPID_RANDOM, so the file must carry
 the same respondent IDs as the World Risk Poll release; confirm this with
 Gallup when you request the data. Without the file, findings that need GWP
-items are reported as SKIPPED and every other finding still runs.
+items are reported as GALLUP_ONLY and every other finding still runs.
 """
 
 import os
