@@ -23,6 +23,7 @@ from pathlib import Path
 
 import pandas as pd
 
+REPO_ROOT = Path(__file__).resolve().parents[2]
 DOWNLOADED = Path(__file__).resolve().parent / "downloaded"
 FETCHERS = {}
 
@@ -72,6 +73,67 @@ def ndgain_vulnerability():
     with zipfile.ZipFile(io.BytesIO(download(url, referer=page))) as z:
         name = next(n for n in z.namelist() if n.endswith("resources/vulnerability/vulnerability.csv"))
         return pd.read_csv(z.open(name))
+
+
+@fetcher("freedomhouse", "core_world_risk_poll_2019__freedom_house.csv")
+def freedom_house_2020():
+    """Freedom House, Freedom in the World 2020 edition (WRP 2019 report, Chapter 2).
+
+    Terms: free for non-commercial use with attribution; commercial use needs Freedom House's
+    permission.
+    """
+    url = "https://freedomhouse.org/sites/default/files/2020-02/2020_All_Data_FIW_2013-2020.xlsx"
+    fh = pd.read_excel(io.BytesIO(download(url)), sheet_name=1, skiprows=1)
+    fh = fh[fh.Edition == 2020]
+    wrp = pd.read_parquet(REPO_ROOT / "WRP_2019" / "WRP_2019.parquet", columns=["COUNTRY_ISO3", "Country"])
+    iso3 = wrp.drop_duplicates("COUNTRY_ISO3").set_index("Country").COUNTRY_ISO3.to_dict()
+    # Freedom House names that differ from the poll's. Palestine has two Freedom House
+    # entries (West Bank, Gaza Strip) and is left unmatched.
+    iso3.update({"Bosnia and Herzegovina": "BIH", "Cote d'Ivoire": "CIV", "Congo (Brazzaville)": "COG",
+                 "The Gambia": "GMB"})
+    return pd.DataFrame({
+        "country": fh["Country/Territory"], "iso3": fh["Country/Territory"].map(iso3), "c_t": fh["C/T"],
+        "edition": fh.Edition, "status": fh.Status, "pr": fh.PR, "cl": fh.CL, "total": fh.Total,
+    })
+
+
+@fetcher("who_seatbelt", "core_world_risk_poll_2019__who_seatbelt_laws.csv")
+def who_seatbelt_laws():
+    """WHO Global status report on road safety 2018, Table A7: seat-belt laws (WRP 2019, Chapter 4).
+
+    Parsed from the report PDF, so it needs poppler's pdftotext. Licence: CC BY-NC-SA 3.0 IGO.
+    """
+    import json
+    import re
+    import shutil
+    import subprocess
+    import tempfile
+
+    if not shutil.which("pdftotext"):
+        raise RuntimeError("needs pdftotext (poppler-utils) to read the WHO report PDF")
+    pdf_url = "https://iris.who.int/server/api/core/bitstreams/9c866a4e-fda7-43bd-96df-27d7c3b509bc/content"
+    with tempfile.TemporaryDirectory() as tmp:
+        pdf = Path(tmp) / "gsrrs2018.pdf"
+        pdf.write_bytes(download(pdf_url))
+        subprocess.run(["pdftotext", "-layout", str(pdf), str(pdf.with_suffix(".txt"))], check=True,
+                       stderr=subprocess.DEVNULL)
+        lines = pdf.with_suffix(".txt").read_text(encoding="utf-8").splitlines()
+    start = next(i for i, line in enumerate(lines) if "TABLE A7: SEAT-BELT" in line)
+    end = next(i for i, line in enumerate(lines) if i > start and "TABLE A8" in line)
+    row = re.compile(r"^\s*(\S.*?)\s{2,}(Yes|No)[a-z]?\s+(Yes|No|—)[a-z]?\s+(Yes|No|—)[a-z]?\s+(Yes|No|—)[a-z]?\s*$")
+    rows = [m.groups() for line in lines[start:end] if (m := row.match(line))]
+
+    gho = json.loads(download("https://ghoapi.azureedge.net/api/DIMENSION/COUNTRY/DimensionValues"))["value"]
+    iso3 = {r["Title"]: r["Code"] for r in gho}
+    iso3.update({"Côte d’Ivoire": "CIV", "Lao People’s Democratic Republic": "LAO", "Netherlands": "NLD",
+                 "Republic of Macedonia": "MKD", "Turkey": "TUR", "United Kingdom": "GBR",
+                 "West Bank and Gaza Strip": "PSE"})
+    blank = {"—": ""}
+    return pd.DataFrame([{
+        "iso3": iso3[name], "who_country": name, "national_law": law,
+        "drivers": blank.get(drv, drv), "front_seat": blank.get(front, front), "rear_seat": blank.get(rear, rear),
+        "all_occupants": "Yes" if (law, drv, front, rear) == ("Yes", "Yes", "Yes", "Yes") else "No",
+    } for name, law, drv, front, rear in rows])
 
 
 def main(keys):
