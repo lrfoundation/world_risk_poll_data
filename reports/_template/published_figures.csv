@@ -1,0 +1,5 @@
+finding_id,page,section,description,published_value,unit,tolerance,source,requires_gallup,gallup_items,note
+F01,5,Key findings,"Example: % who see climate change as a very serious threat to their country (global)",41,pct,,text,N,,
+F02_1,12,Chart 3,"Example: % very serious threat, men",42,pct,,chart,N,,
+F02_2,12,Chart 3,"Example: % very serious threat, women",40,pct,,chart,N,,
+F03,14,Key findings,"Example: finding that needs a Gallup World Poll item",55,pct,,text,Y,WP_EXAMPLE,

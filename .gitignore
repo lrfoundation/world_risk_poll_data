@@ -1,0 +1,5 @@
+# Report reproduction: per-report working outputs (RESULTS.md is kept).
+reports/**/output/
+__pycache__/
+*.pyc
+.Rhistory
