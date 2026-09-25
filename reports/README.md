@@ -35,6 +35,9 @@ per report.
 reports/
   wrp/                 shared Python helpers (import wrp)
   R/wrp.R              the same helpers in R, with the same function names
+  external/            snapshots of public non-poll data some reports use (World Bank
+                       indicators and similar), named <report_folder>__<source>.csv; each
+                       report's README gives the source, licence and download date
   _template/           starting point for a new report folder
   WRP_2019/ … WRP_2025/
     <core|focus_on>_<name>/
