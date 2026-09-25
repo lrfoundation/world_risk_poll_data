@@ -17,6 +17,11 @@ reproduced, one folder per report inside one folder per poll wave:
 | [`WRP_2023/`](WRP_2023/README.md) | 4 core reports (the *World Risk Poll 2024* reports) and 1 Focus On report |
 | [`WRP_2025/`](WRP_2025/README.md) | 2 core reports (the *World Risk Poll 2026* reports) |
 
+Across the 16 reports, 11,131 published numbers are checked. 10,060 of them (90%)
+match or come within a point. 114 differ, and each one is explained in its report's
+README; many are errors in the report itself. 956 need Gallup World Poll data that is
+not public, and 1 needs a safety index that is no longer published. The Python and R
+scripts agree on every value.
 [`REPRODUCTION_SUMMARY.md`](REPRODUCTION_SUMMARY.md) has the result for every report,
 and [`report_inventory.csv`](report_inventory.csv) lists each report with its PDF link.
 

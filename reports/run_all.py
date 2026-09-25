@@ -43,11 +43,16 @@ def main():
         "| Wave | Report | " + " | ".join(STATUS_ORDER) + " | Total |",
         "| --- | --- | " + " | ".join("---" for _ in STATUS_ORDER) + " | --- |",
     ]
+    totals = dict.fromkeys(STATUS_ORDER, 0)
     for d in dirs:
         counts = build_table(d)["status"].value_counts()
         cells = [str(counts.get(s, 0)) for s in STATUS_ORDER]
         link = f"[{d.name}]({d.relative_to(REPORTS).as_posix()}/RESULTS.md)"
         lines.append(f"| {d.parent.name} | {link} | " + " | ".join(cells) + f" | {counts.sum()} |")
+        for s in STATUS_ORDER:
+            totals[s] += int(counts.get(s, 0))
+    lines.append("| **All** | **{} reports** | ".format(len(dirs))
+                 + " | ".join(f"**{totals[s]}**" for s in STATUS_ORDER) + f" | **{sum(totals.values())}** |")
     if not pattern:
         (REPORTS / "REPRODUCTION_SUMMARY.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
         print("\nWrote reports/REPRODUCTION_SUMMARY.md")
