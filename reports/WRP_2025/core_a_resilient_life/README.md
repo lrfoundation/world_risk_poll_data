@@ -1,21 +1,20 @@
 # World Risk Poll 2026: A resilient life: How wellbeing shapes the capacity to cope
 
 - **Report:** *A resilient life: How wellbeing shapes the capacity to cope*, World Risk Poll 2026 report,
-  Lloyd's Register Foundation (https://doi.org/10.60743/sbwn-m411). **Not yet published:** the report is due
-  to launch, and no launch date has been given.
-- **PDF:** https://doi.org/10.60743/sbwn-m411 (the DOI resolves once the report is launched)
+  Lloyd's Register Foundation, October 2026 (https://doi.org/10.60743/sbwn-m411).
+- **PDF:** https://www.lrfoundation.org.uk/sites/default/files/2026-10/world-risk-poll-report-2026-resilience.pdf
 - **Data:** `WRP_2025/WRP_2025.parquet` (World Risk Poll 2025, wave 4; 143,459 respondents, 140 countries),
   with `WRP_2021` and `WRP_2023` for the Resilience Index trends and `WRP_2019` for two Gallup trends
 
 ## What is reproduced
 
-All 470 numbers in the report: every value printed in Charts 1.1, 1.2, 1.7, 2.1, 2.4, 2.5 and 3.1 to 3.6
+All 471 numbers in the report: every value printed in Charts 1.1, 1.2, 1.7, 2.1, 2.4, 2.5 and 3.1 to 3.6
 and in Tables 1.2, 1.3 and 3.1 (including the country names in Table 3.1), the numbers on the chapter
 covers (the "408,798 stories", the "+26 points" rings and the 100-dot graphic), and every number in the
 text, including point changes, counts ("18 increases ... 13 decreases", "97 countries", "five appear on
-both lists"), ranks ("130th of 139") and ratios given in words ("twice as high"). Page numbers are the
-report's printed page numbers (PDF page minus 6 in the chapters, roman numerals for the foreword and
-executive summary). Results are in [`RESULTS.md`](RESULTS.md).
+both lists", "the only dimension"), ranks ("130th of 139") and ratios given in words ("twice as high").
+Page numbers are the report's printed page numbers (PDF page minus 6 in the chapters, roman numerals for
+the foreword and executive summary). Results are in [`RESULTS.md`](RESULTS.md).
 
 Some charts print no values. Their functions write the plotted values to `output/` only:
 
@@ -81,17 +80,21 @@ Some charts print no values. Their functions write the plotted values to `output
 - **Table 3.1** ranks countries on unrounded %; the neighbours list's last row, "Mexico, Republic of
   Congo", holds both countries at 54%. Names are printed as in the table.
 - **Correlations** are Pearson, unweighted, across countries: r = 0.57 between the % feeling no
-  government care and the % feeling no care from neighbours (133 countries).
+  government care and the % feeling no care from neighbours (133 countries; pages iv and 22).
 - **Words compared as numbers:** "fewer than one in four" as an upper bound of 25 (tolerance 4); "roughly
   one in four" as 25 (tolerance 2); "nearly twice as high" and "twice as high" as a ratio of 2 (0.3 and
   0.25); "between 45 and 50" and "between 40 and 45" as 47.5 and 42.5 with a tolerance of 2.5; "most income
   groups" as the three the chart shows; "at least 10 points", "at least seven in 10" and "at least 55%" as
-  lower bounds; "all", "four" and "two" of the named countries as counts.
+  lower bounds; "all", "four" and "two" of the named countries as counts; "the only dimension" (page 9) as
+  1, the number of dimensions on which high-income countries do not have the highest or joint-highest
+  Chart 1.2 score.
 - **Not entered:** edition counts ("fourth edition", "for the third time"), the thresholds that define
   the Life Evaluation Index (7+, 8+, 4) and the rating thresholds the text reads off Chart 2.3 ("above a
   rating of 2", "flatten above ... 7"), dates, and "these five regions" (the regions just named). Page 5
   says the other regions changed "by one point or remained unchanged"; Table 1.2 shows Northern America
-  up two points (63 to 65), which is not a numbered claim.
+  up two points (63 to 65), which is not a numbered claim. The conclusion (page 26) says resilience among
+  adults rating their lives 0 to 2 is "broadly the same" in lower-middle-, upper-middle- and high-income
+  countries; the ranges are compared where they are printed (X31, pages iii and 14).
 
 ## Gallup World Poll data
 
@@ -115,7 +118,7 @@ the past 30 days") is not the same measure: it gives 48, 26, 51, 21 and 53% for 
 (published 52, 31, 51, 28 and 56).
 
 The Gallup code paths were tested with a synthetic file of random values (not committed): Python and R
-give the same results for all 863 values.
+give the same results for all 864 values.
 
 ## External data
 
@@ -127,7 +130,14 @@ for projects using the Poll, and the funded projects described on page 25.
 
 ## Findings that do not match
 
-None: no finding differs from the published value by more than its tolerance.
+1 finding differs from the published value by more than its tolerance:
+
+- **X101 (page 9):** the text says societal resilience "is the only dimension of the Resilience Index in
+  which high-income countries do not rank highest or joint-highest compared with countries of lower
+  income". Chart 1.2 (page 4) shows a second one: on community resilience, high-income countries score
+  63, against 64 in both lower-middle- and upper-middle-income countries (unrounded 63.1, 64.3 and 63.9).
+  The data gives 2 dimensions. Page 4 calls the three community scores "similar", so the page 9 sentence
+  seems to treat the one-point gap as a tie.
 
 Six findings are within tolerance but do not round to the published figure, all because the text gives
 a bound or a round number:

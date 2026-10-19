@@ -395,6 +395,12 @@ report.finding("X50")(lambda: by_income("community"))
 report.finding("X51")(lambda: by_income("societal"))
 
 
+@report.finding("X101")
+def high_income_not_top():
+    """Dimensions where high income's Chart 1.2 score (rounded) is below another group's (page 9)."""
+    return sum(r0(v["high"]) < max(r0(x) for x in v.values()) for v in (by_income(k) for k in FOUR))
+
+
 @report.finding("T1_2")
 def table_1_2():
     return {f"{r}_{y}": v for y in TREND for r, v in keyed(gm(y, "index", by="GlobalRegion"), REGION).items()}

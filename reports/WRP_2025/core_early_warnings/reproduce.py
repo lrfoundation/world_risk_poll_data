@@ -44,7 +44,7 @@ TYPES = {  # WP24180 codes -> keys (98 don't know and 99 refused are combined as
 TYPE_CODE = {v: k for k, v in TYPES.items()}
 CHART_2_5 = ["hurricane", "heatwave", "sandstorm", "blizzard", "other_nature", "thunder", "wildfire", "gale",
              "tornado", "flood", "volcano", "drought", "earthquake", "landslide"]  # no tsunami or non-natural
-CHART_3_3 = [t for t in CHART_2_5 if t != "tornado"]  # the bubbles in Chart 3.3
+CHART_3_3 = [t for t in CHART_2_5 if t != "tornado"]  # the bubbles in Chart 3.3 (tornado: 97 warned, under 100)
 PHL_REGIONS = {1: "ncr", 3: "balance_luzon", 4: "visayas", 5: "mindanao"}  # REGION2_PHL
 # The UN Early Warnings for All initiative's initial priority countries that were surveyed in 2025
 # (the 2023 report lists 17; Tajikistan, Ethiopia, Liberia and Ecuador have too few respondents).
@@ -353,6 +353,7 @@ report.finding("X051")(lambda: idv_by_n([1, 0, 2, 3]))
 report.finding("X052")(lambda: plan_agency(["neither", "plan", "agency", "both"]))
 
 # Policy implications
+report.finding("X052b")(lambda: by_income(w, ACT, [1])["low"])
 report.finding("X053")(lambda: country.loc["TCD", "coverage"])
 report.finding("X054")(lambda: country.loc["TCD", "impacted"])
 report.finding("X055")(phone_share)
@@ -585,7 +586,8 @@ def phone_above_90_shown():
 
 
 report.finding("X136")(lambda: phone_by_region()["phone"][["southern_asia", "eastern_africa"]])
-report.finding("X137")(lambda: {"global": phone_share(), **phone_by_region()["phone"][["northern_america", "anz"]]})
+report.finding("X137")(lambda: {"global": phone_share(),
+                                **phone_by_region()["phone"][["eastern_europe", "southern_asia"]]})
 
 
 @report.finding("C2_9")
@@ -723,6 +725,7 @@ report.finding("X192")(income_ratio)
 report.finding("X193")(lambda: low_income_education()["primary"])
 report.finding("X194")(lambda: by_income(ew, "warned", [1], ["low", "upper_middle", "high"]))
 report.finding("X195")(lambda: by_income(w, ACT, [1])["low"])
+report.finding("X195b")(lambda: by_income(w, ACT, [1])["lower_middle"])
 
 
 @report.finding("X196")

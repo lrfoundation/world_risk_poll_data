@@ -935,8 +935,6 @@ TEXT = {
     "X105": lambda: group_change("MOZ", "aff", 2021, 2023, "index"),  # Three affected provinces together
     "X106": lambda: group_change("MOZ", "rest", 2021, 2023, "index"),  # Rest of the country
     "X107": lambda: did("MOZ", "index", "est"),  # Gap ('one point')
-    "X108": lambda: region_change("MOZ", 2, 2021, 2023, "index"),  # Gaza Index change
-    "X109": lambda: region_change("MOZ", 7, 2021, 2023, "index"),  # Niassa Index change
     "X110": lambda: did("NZL", "index", "est"),  # Chart 2.3 subtitle: Northland and Auckland fell further ('three points')
     "X111": lambda: region_change("NZL", 1, 2021, 2023, "index"),  # Northland Index change
     "X112": lambda: region_change("NZL", 2, 2021, 2023, "index"),  # Auckland Index change
@@ -944,29 +942,18 @@ TEXT = {
     "X114": lambda: did("NZL", "index", "est"),  # Gap ('three points')
     "X115": lambda: n_hatched("NZL", 2021, 2023),  # Regions hatched (fewer than 50 respondents in an edition)
     "X116": lambda: n_regions("NZL", 2021, 2023),  # Regions shaded
-    "X117": lambda: region_n("NZL", 1, 2021),  # Northland respondents 2021
-    "X118": lambda: region_n("NZL", 1, 2023),  # Northland respondents 2023
-    "X119": lambda: region_n("NZL", 6, 2021),  # Hawke's Bay respondents 2021
-    "X120": lambda: region_n("NZL", 6, 2023),  # Hawke's Bay respondents 2023
-    "X121": lambda: region_n("NZL", 5, 2021),  # Tairāwhiti/Gisborne respondents 2021
-    "X122": lambda: region_n("NZL", 5, 2023),  # Tairāwhiti/Gisborne respondents 2023
     "X123": lambda: region_change("TUR", 11, 2021, 2023, "index"),  # Chart 2.4 subtitle: Central East Anatolia Index change
     "X124": lambda: region_change("TUR", 6, 2021, 2023, "index"),  # Chart 2.4 subtitle: Mediterranean Index change
     "X125": lambda: n_affected_provinces_unsurveyed(),  # Chart 2.4 subtitle: affected provinces with no 2023 respondents
     "X126": lambda: region_change("TUR", 11, 2021, 2023, "index"),  # Central East Anatolia Index change
-    "X127": lambda: region_n("TUR", 11, 2021),  # Central East Anatolia respondents 2021
-    "X128": lambda: region_n("TUR", 11, 2023),  # Central East Anatolia respondents 2023
     "X129": lambda: region_change("TUR", 6, 2021, 2023, "index"),  # Mediterranean Index change
     "X130": lambda: group_change("TUR", "rest", 2021, 2023, "index"),  # Rest of Türkiye Index change
     "X131": lambda: group_change("TUR", "aff", 2021, 2023, "index"),  # Two affected regions together
     "X132": lambda: did("TUR", "index", "est"),  # Gap ('four points')
+    "X132b": lambda: n_affected_provinces_unsurveyed(),  # Chart 2.4 note: officially affected provinces with no 2023 respondents ('the eight of them')
     "X133": lambda: min_region_n("TUR", 2021, 2023),  # Smallest regional sample
     "X134": lambda: max_region_n("TUR", 2021, 2023),  # Largest regional sample
     "X135": lambda: n_hatched("TUR", 2021, 2023),  # Regions hatched
-    "X136": lambda: region_n("TUR", 11, 2021),  # Central East Anatolia respondents 2021 (note)
-    "X137": lambda: region_n("TUR", 11, 2023),  # Central East Anatolia respondents 2023 (note)
-    "X138": lambda: region_n("TUR", 10, 2021),  # Northeast Anatolia respondents 2021
-    "X139": lambda: region_n("TUR", 10, 2023),  # Northeast Anatolia respondents 2023
     "X140": lambda: group_change("PAK", "aff", 2021, 2023, "index"),  # Chart 2.5 subtitle: Sindh Index change
     "X141": lambda: group_change("PAK", "rest", 2021, 2023, "index"),  # Chart 2.5 subtitle: rest of Pakistan
     "X142": lambda: group_change("PAK", "aff", 2021, 2023, "index"),  # Sindh Index change
@@ -976,20 +963,12 @@ TEXT = {
     "X146": lambda: region_change("PAK", 4, 2021, 2023, "index"),  # Balochistan Index change
     "X147": lambda: region_change("PAK", 3, 2021, 2023, "index"),  # Khyber Pakhtunkhwa Index change ('did not change')
     "X148": lambda: region_change("PAK", 8, 2021, 2023, "index"),  # Islamabad Index change
-    "X149": lambda: region_n("PAK", 8, 2021),  # Islamabad respondents 2021 (text)
-    "X150": lambda: region_n("PAK", 8, 2023),  # Islamabad respondents 2023 (text)
-    "X151": lambda: region_n("PAK", 8, 2021),  # Islamabad respondents 2021 (note)
-    "X152": lambda: region_n("PAK", 8, 2023),  # Islamabad respondents 2023 (note)
     "X153": lambda: group_change("ZAF", "aff", 2021, 2023, "index"),  # Chart 2.6 subtitle: KwaZulu-Natal Index change
     "X154": lambda: group_change("ZAF", "rest", 2021, 2023, "index"),  # Chart 2.6 subtitle: rest of South Africa
     "X155": lambda: group_change("ZAF", "aff", 2021, 2023, "index"),  # KwaZulu-Natal Index change
     "X156": lambda: group_change("ZAF", "rest", 2021, 2023, "index"),  # Rest of South Africa Index change
     "X157": lambda: did("ZAF", "index", "est"),  # Gap in the province's favour ('four points')
     "X158": lambda: region_change("ZAF", 9, 2021, 2023, "index"),  # Western Cape Index change
-    "X159": lambda: region_n("ZAF", 8, 2021),  # Northern Cape respondents 2021 (text)
-    "X160": lambda: region_n("ZAF", 8, 2023),  # Northern Cape respondents 2023 (text)
-    "X161": lambda: region_n("ZAF", 8, 2021),  # Northern Cape respondents 2021 (note)
-    "X162": lambda: region_n("ZAF", 8, 2023),  # Northern Cape respondents 2023 (note)
     "X163": lambda: group_change("ECU", "aff", 2021, 2023, "index"),  # Chart 2.7 subtitle: Guayas and El Oro Index change
     "X164": lambda: group_change("ECU", "rest", 2021, 2023, "index"),  # Chart 2.7 subtitle: rest of Ecuador
     "X165": lambda: did("ECU", "index", "est"),  # Chart 2.7 subtitle: gap
@@ -1002,8 +981,6 @@ TEXT = {
     "X172": lambda: region_change("ECU", 12, 2021, 2023, "index"),  # Manabí Index change
     "X173": lambda: n_hatched("ECU", 2021, 2023),  # Provinces hatched
     "X174": lambda: n_regions("ECU", 2021, 2023),  # Provinces shaded
-    "X175": lambda: region_n("ECU", 6, 2021),  # El Oro respondents 2021
-    "X176": lambda: region_n("ECU", 6, 2023),  # El Oro respondents 2023
     "X177": lambda: n_regions_50plus("ECU", 2021, 2023),  # Provinces with 50 or more respondents in both editions
     "X178": lambda: did("TUR", "societal", "est"),  # Türkiye societal dimension difference-in-differences
     "X179": lambda: group_change("TUR", "aff", 2021, 2023, "societal"),  # Türkiye affected regions: societal change
@@ -1023,6 +1000,7 @@ TEXT = {
     "X193": lambda: group_change("ZAF", "rest", 2021, 2023, "expo"),  # Rest of South Africa: reported disaster experience change
     "X194": lambda: mean_in("ZAF", "neighbours", 2021, "aff"),  # KwaZulu-Natal: neighbours care 'a lot' 2021
     "X195": lambda: mean_in("ZAF", "neighbours", 2023, "aff"),  # KwaZulu-Natal: neighbours care 'a lot' 2023
+    "X195b": lambda: mean_in("ZAF", "neighbours", 2023, "aff") / mean_in("ZAF", "neighbours", 2021, "aff"),  # KwaZulu-Natal: neighbours care 'a lot' 'nearly tripled' (2023 / 2021)
     "X196": lambda: did("ZAF", "neighbours", "est"),  # South Africa: neighbours difference-in-differences
     "X197": lambda: did("ZAF", "household", "est"),  # South Africa: household dimension difference-in-differences
     "X198": lambda: did("ZAF", "confidence", "est"),  # South Africa: confidence difference-in-differences
@@ -1068,10 +1046,6 @@ TEXT = {
     "X238": lambda: tur_unit_mean(12, 2023, "expo"),  # Adana and Mersin unit: reported experience 2023
     "X239": lambda: tur_outside_expo(2021),  # Nine regions outside the earthquake zone: reported experience 2021
     "X240": lambda: tur_outside_expo(2023),  # Nine regions outside the earthquake zone: reported experience 2023
-    "X241": lambda: region_n("NZL", 6, 2021),  # Hawke's Bay respondents 2021
-    "X242": lambda: region_n("NZL", 5, 2021),  # Tairāwhiti/Gisborne respondents 2021
-    "X243": lambda: region_n("NZL", 6, 2023),  # Hawke's Bay respondents 2023
-    "X244": lambda: region_n("NZL", 5, 2023),  # Tairāwhiti/Gisborne respondents 2023
     "X245": lambda: region_mean("NZL", 6, 2021, "expo"),  # Hawke's Bay reported experience 2021
     "X246": lambda: region_mean("NZL", 6, 2023, "expo"),  # Hawke's Bay reported experience 2023
     "X247": lambda: group_change("MAR", "aff", 2021, 2023, "expo"),  # Marrakech-Safi: rise in reported experience
@@ -1083,9 +1057,7 @@ TEXT = {
     "X253": lambda: national("TUR", "index", 2023),  # Türkiye national Index 2023
     "X254": lambda: group_change("TUR", "aff", 2021, 2023, "index"),  # Türkiye earthquake regions Index change
     "X255": lambda: group_change("TUR", "rest", 2021, 2023, "index"),  # Rest of Türkiye Index change
-    "X256": lambda: region_n("NZL", 6, 2023) + region_n("NZL", 5, 2023),  # Hawke's Bay and Tairāwhiti/Gisborne respondents 2023
     "X257": lambda: did("TUR", "community", "est"),  # Türkiye community dimension fell further
-    "X258": lambda: did("TUR", "neighbours", "est"),  # Türkiye neighbours rose further
     "X259": lambda: pooled("seven", "neighbours", "est"),  # Pooled neighbours
     "X260": lambda: did("TUR", "societal", "est"),  # Türkiye societal
     "X261": lambda: did("MOZ", "societal", "est"),  # Mozambique societal
@@ -1211,6 +1183,7 @@ TEXT = {
     "X381": lambda: aff_n("NZL", 2025),  # New Zealand affected respondents 2025
     "X382": lambda: gap("NZL", "index", 2025) - gap("NZL", "index", 2021),  # New Zealand 2025 gap below the 2021 baseline
     "X383": lambda: moe_index_gap("MAR", 2023),  # Chart 4.1 note: margin of error on the Index gap at 132 respondents
+    "X383b": lambda: chg("TUR", "societal", "est"),  # Chart 4.2 subtitle: Türkiye societal gap closed 2023-2025 ('nine points')
     "X384": lambda: gap("TUR", "societal", 2023) - gap("TUR", "societal", 2021),  # Türkiye societal gap widened 2021-2023
     "X385": lambda: chg("TUR", "societal", "est"),  # Türkiye societal gap narrowed 2023-2025
     "X386": lambda: gap("TUR", "societal", 2025) - gap("TUR", "societal", 2021),  # Türkiye societal: remaining compared with 2021
@@ -1229,6 +1202,7 @@ TEXT = {
     "X399": lambda: chg("TUR", "community", "est"),  # Türkiye community recovered 2023-2025
     "X400": lambda: chg("TUR", "confidence", "est"),  # Chart 4.3 subtitle: Türkiye confidence narrows
     "X401": lambda: chg("ZAF", "neighbours", "est"),  # Chart 4.3 subtitle: KwaZulu-Natal neighbours fall
+    "X401b": lambda: n_affected_provinces_unsurveyed(),  # Officially affected Turkish provinces with no 2023 respondents ('eight of the 11')
     "X402": lambda: tur_unit_n(13, 2025),  # Hatay, Kahramanmaraş and Osmaniye respondents 2025
     "X403": lambda: gap("TUR", "confidence", 2021),  # Türkiye confidence gap 2021
     "X404": lambda: gap("TUR", "confidence", 2023),  # Türkiye confidence gap 2023
@@ -1245,6 +1219,7 @@ TEXT = {
     "X415": lambda: chg("MAR", "protect", "est"),  # Morocco could protect change 2023-2025
     "X416": lambda: chg("TUR", "protect", "est"),  # Türkiye could protect change 2023-2025
     "X417": lambda: chg("NZL", "protect", "est"),  # New Zealand could protect change 2023-2025
+    "X417b": lambda: sum(region_change("TUR", r, 2023, 2025) > 0 for r in AFFECTED["TUR"]),  # Türkiye: outlined regions whose Index rose 2023-2025 ('only one of the two')
     "X418": lambda: region_change("TUR", 11, 2023, 2025, "index"),  # Türkiye Central East Anatolia Index change 2023-2025
     "X419": lambda: region_change("TUR", 6, 2023, 2025, "index"),  # Türkiye Mediterranean Index change 2023-2025
     "X420": lambda: region_change("TUR", 3, 2023, 2025, "index"),  # Türkiye Aegean Index change 2023-2025
@@ -1327,12 +1302,6 @@ TEXT = {
     "X497": lambda: chg("NZL", "confidence", "est"),  # Confidence returned towards the rest of the country
     "X498": lambda: gap("NZL", "individual", 2023),  # Individual gap 2023
     "X499": lambda: gap("NZL", "individual", 2025),  # Individual gap 2025
-    "X500": lambda: region_n("NZL", 1, 2023),  # Note: Northland respondents 2023
-    "X501": lambda: region_n("NZL", 1, 2025),  # Note: Northland respondents 2025
-    "X502": lambda: region_n("NZL", 6, 2023),  # Note: Hawke's Bay respondents 2023
-    "X503": lambda: region_n("NZL", 6, 2025),  # Note: Hawke's Bay respondents 2025
-    "X504": lambda: region_n("NZL", 5, 2023),  # Note: East Cape respondents 2023
-    "X505": lambda: region_n("NZL", 5, 2025),  # Note: East Cape respondents 2025
     "X506": lambda: n_hatched("NZL", 2023, 2025),  # Note: regions hatched
     "X507": lambda: n_regions("NZL", 2023, 2025),  # Note: regions
     "X508": lambda: group_change("ZAF", "aff", 2023, 2025, "index"),  # Chart 4.7 subtitle: KwaZulu-Natal Index change 2023-2025
@@ -1414,6 +1383,7 @@ TEXT = {
     "X584": lambda: did("MOZ", "gov", "est"),  # Mozambique government cares 'a lot'
     "X585": lambda: national("THA", "confidence", 2023) - national("THA", "confidence", 2021),  # Thailand confidence rise
     "X586": lambda: n_positive_did("neighbours"),  # Neighbours rose in four of the seven case studies
+    "X586b": lambda: mean_in("ZAF", "neighbours", 2023, "aff") / mean_in("ZAF", "neighbours", 2021, "aff"),  # KwaZulu-Natal: neighbours care 'a lot' 'nearly tripled' after its April 2022 floods (2023 / 2021)
     "X587": lambda: pooled("seven", "protect", "est"),  # Pooled could protect
     "X588": lambda: pooled3("three", "confidence", "change"),  # Confidence narrowing across Türkiye and New Zealand
     "X589": lambda: pooled("prep3", "prep", "est"),  # Pooled well prepared fell further

@@ -329,6 +329,13 @@ finding(report, "X48", function() {
 finding(report, "X49", function() by_income("household"))
 finding(report, "X50", function() by_income("community"))
 finding(report, "X51", function() by_income("societal"))
+# Dimensions where high income's Chart 1.2 score (rounded) is below another group's (page 9).
+finding(report, "X101", function() {
+  sum(vapply(FOUR, function(k) {
+    v <- r0(by_income(k))
+    v[["high"]] < max(v)
+  }, logical(1)))
+})
 
 finding(report, "T1_2", function() {
   out <- c()

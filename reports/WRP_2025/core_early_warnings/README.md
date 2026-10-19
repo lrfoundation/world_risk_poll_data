@@ -1,15 +1,14 @@
 # World Risk Poll 2026: From alert to agency: What turns warnings into action?
 
 - **Report:** *From alert to agency: What turns warnings into action?*, World Risk Poll 2026 report, Lloyd's
-  Register Foundation (https://doi.org/10.60743/yx1k-t541). **Not yet published:** the report is due to launch,
-  and no launch date has been given.
-- **PDF:** https://doi.org/10.60743/yx1k-t541 (the DOI resolves once the report is launched)
+  Register Foundation, October 2026 (https://doi.org/10.60743/yx1k-t541).
+- **PDF:** https://www.lrfoundation.org.uk/sites/default/files/2026-10/world-risk-poll-report-2026-early-warnings.pdf
 - **Data:** `WRP_2025/WRP_2025.parquet` (World Risk Poll 2025, wave 4; 143,459 respondents, 140 countries),
   with `WRP_2023` for the comparisons with 2023
 
 ## What is reproduced
 
-All 539 numbers in the report: every value printed in Charts 1.1 to 1.6, 2.1 to 2.3, 2.5 to 2.9 and 3.1 to
+All 541 numbers in the report: every value printed in Charts 1.1 to 1.6, 2.1 to 2.3, 2.5 to 2.9 and 3.1 to
 3.6 and in the chapter graphics, and every number in the text. This includes point gaps, ratios given in words
 ("twice", "almost half that rate"), counts of countries and regions, and shares given in words ("four in
 five", "more than half"). Page numbers are the report's printed page numbers (PDF page minus 6 in the
@@ -24,7 +23,9 @@ Some charts print no values, or only some:
   and those are compared.
 - **Chart 3.3** plots coverage against the ability to act by disaster type and prints no values. `C3_3`
   writes both values for the 13 types it shows to `output/`. The text quotes several of them, and those are
-  compared.
+  compared. As the chart's note says, it leaves out types with fewer than 100 warned respondents: tornadoes
+  (97) and tsunamis (10), so tornadoes are in Chart 2.5 but not here. "Other, not nature related" events are
+  in neither chart.
 - **Chart 2.9** leaves out the three regions with fewer than 100 unwarned respondents (Northern America,
   Eastern Asia, Australia and New Zealand). `C2_9` also writes them to `output/`.
 
@@ -66,24 +67,25 @@ Some charts print no values, or only some:
   "At least two-thirds" is 66.7% or more.
 - **Chart 2.9:** a region is shown if it has at least 100 unwarned respondents, as the chart's note says.
 - **The Philippines (page 7, Chart 1.6):** shares of the impacted adults naming each type, by `REGION2_PHL`.
-  The text says "52% of all adults", but 52%, 19% and 16% are shares of the impacted; as shares of all adults
-  they are 41%, 15% and 13%.
 - **2023 comparisons:** experienced a disaster (`WP23344`) among all adults; the type (`WP22247`) among those
   who experienced one; and at least one warning from the four 2023 sources (`WP22248` to `WP22251`), defined
   as in the 2023 report (respondents with no yes or no answer to any source are left out).
 - **Low-income countries, impacted vs not impacted (page 27):** individual resilience among those who
-  answered yes (33) and no (32) to `WP24213`.
+  answered yes (33) and no (32) to `WP24213`. The text calls this "a stronger sense of personal agency". The
+  share who feel able to protect themselves and their family (`WP22252`) is higher among the impacted (49.9%
+  against 38.9%), so the comparison holds for the individual resilience score, not for that question.
 - **Mean number of warnings by phone and internet (page 23):** among the 24,249 asked, including the unwarned.
   The overall mean is 3.0. Among the warned only it is 3.7, and two group means of 3.1 and 2.2 cannot average
   to 3.7.
 - **"More than 170 million":** the sum of `PROJWT` among unwarned respondents who own a mobile phone. The
   weights sum to 5.8 billion adults, and to 222 million unwarned adults.
 - **Words compared as numbers:** "more than 143,000" (tolerance 1,000); "twice" as a ratio of 2 (0.3) and
-  "almost half that rate" as 0.5 (0.1); "less than two thirds" as 67 (3); "a slim majority" as 50 (5); "more
+  "almost half that rate" as 0.5 (0.1); "less than two-thirds" as 67 (3); "a slim majority" as 50 (5); "more
   than nine in 10" as 90 (2); "around half" and "only half" as 50 (3); "around seven in 10" as 70 (2); "more
   than half" as 50 (10); "fewer than one in five" as 20 (6); "<1%" and "fewer than 1%" as 0 (the values
-  round to 0). The Gallup-only findings use "more than two thirds" as 67 (12), "roughly two-thirds" as 67 (5),
-  "roughly four in five" as 80 (3) and "more than 170 million" as 170 (10).
+  round to 0). The Gallup-only findings use "more than two-thirds" as 67 (12), "roughly four in five" as 80
+  (3) and "more than 170 million" as 170 (10). Where the words come with a printed figure, as in "around three
+  in five" for Southern Asia (58%) and Eastern Africa (63%), the printed figure is compared.
 - **Rankings:** X102 and X104 compare the countries named as highest and lowest (in alphabetical order of
   ISO3 code, as a text value).
 
@@ -119,38 +121,21 @@ None. The report uses no external index: the word "inform" appears only in "info
   population.
 
 Not entered as findings: "three is the magic number" and the other statements that three channels are the
-threshold (Charts 2.8 and 3.5 are compared); descriptions of the Poll ("every two years", "fourth edition",
-"one of three reports"); "three key levers"; the question wording ("over the age of 10"); and the map
-legend and axis labels.
+threshold (Charts 2.8 and 3.5 are compared); "over nine in 10" on page 12, which sums up the three printed
+rates beside it (94%, 93% and 92%); descriptions of the Poll ("every two years", "fourth edition", "one of
+three reports"); "three key levers"; the funded projects on page 26, including the South African finding,
+which gives no figure; the question wording ("over the age of 10"); and the map legend and axis labels.
 
 ## Findings that do not match
 
 No finding differs from its published value by more than its tolerance.
 
 17 findings are within tolerance but do not round to the published figure. All are numbers given in words
-(see Method notes): X001 and X010 (143,459 for "more than 143,000"), X006 (64.3% for "less than two
-thirds"), X007 (52.0% for "a slim majority"), X039, X152 and X159_sandstorm_warned (91.6% for "more than
+(see Method notes): X001 and X010 (143,459 for "more than 143,000"), X006 (64.3% for "less than
+two-thirds"), X007 (52.0% for "a slim majority"), X039, X152 and X159_sandstorm_warned (91.6% for "more than
 nine in 10"), X040, X153 and X159_sandstorm_act (47.4% for "around half"), X054, X110, X113 and X207 (58.0%
 for "more than half"), X111 (14.1% for "fewer than one in five"), X157 (71.0% for "around seven in 10") and
 X158 (52.5% for "only half").
-
-Within the report (the report is not yet published, so these may still be corrected):
-
-- **Page iv and page 27:** low-income countries have "the lowest ability to act" and are "least likely to be
-  able to act on a warning ..., at 48%". Lower-middle-income countries are lower (47%; 46.9 against 48.0), as
-  the report's own figures on the same pages show.
-- **Page 21:** earthquakes "roughly three in four (73%) were able to act, a similar proportion to those
-  impacted by floods". For floods it is 59%, as the previous sentence says.
-- **Page 16:** "roughly two-thirds" of the unwarned in Southern Asia and Eastern Africa own a phone. Chart 2.9
-  prints 58% and 63%.
-- **Page 7:** "52% of all adults" is a share of the impacted (see Method notes).
-- **Chart 3.3** leaves out tornadoes (77% warned and 77% able to act, 144 respondents), which Chart 2.5 shows.
-  Tsunamis (97% of 13 respondents) and "other, not nature related" events are in neither chart.
-- **Chart 2.8's** title says "(% among those impacted by a disaster)", but it plots individual resilience
-  scores.
-- **Drafting:** "As shown in Chapter 1 of *******" (page 4) and "Acknowledgements******" (page ii) have
-  placeholder asterisks; page 26 refers to findings "reported in Chapter 5" (the report has three chapters);
-  "94%vs.t 76%" and "raises the change a message is received" (page iv).
 
 ## Run
 

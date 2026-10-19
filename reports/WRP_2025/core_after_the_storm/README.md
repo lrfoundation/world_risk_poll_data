@@ -1,15 +1,14 @@
 # World Risk Poll 2026: After the storm: How disasters reshape resilience and trust
 
 - **Report:** *After the storm: How disasters reshape resilience and trust*, World Risk Poll 2026 report,
-  Lloyd's Register Foundation (https://doi.org/10.60743/16n7-bn41). **Not yet published:** the report is due
-  to launch, and no launch date has been given.
-- **PDF:** https://doi.org/10.60743/16n7-bn41 (the DOI resolves once the report is launched)
+  Lloyd's Register Foundation, October 2026 (https://doi.org/10.60743/16n7-bn41).
+- **PDF:** https://www.lrfoundation.org.uk/sites/default/files/2026-10/world-risk-poll-report-2026-after-the-storm.pdf
 - **Data:** `WRP_2025/WRP_2025.parquet` (World Risk Poll 2025, wave 4; 143,459 respondents, 140 countries),
   with `WRP_2021` and `WRP_2023` for the case studies
 
 ## What is reproduced
 
-All 1,537 numbers in the report: every value printed in Charts 1.1, 1.2, 3.1 to 3.6, 4.8 and 4.9 and in
+All 1,507 numbers in the report: every value printed in Charts 1.1, 1.2, 3.1 to 3.6, 4.8 and 4.9 and in
 Tables 2.1, 2.2, 4.1 and A.1 to A.4, and every number in the text, including counts ("six of the seven",
 "eight of the 11 provinces"), respondent counts in the chart notes, and ratios given in words ("nearly
 tripled", "doubled"). Page numbers are the report's printed page numbers (PDF page minus 6 in the chapters,
@@ -82,9 +81,10 @@ Some charts print no values:
 - **Margins of error** (page 49): a percentage's margin is 1.96 x sqrt(0.25 / n); an Index margin is the
   half-width of the HC1 interval of the Index gap in one wave (Morocco 2023, 132 respondents: 2.7; New
   Zealand 2023, 418: 2.2).
-- **Rounding.** The charts round each estimate once. Some whole numbers in the text are rounded from the
-  one-decimal appendix values instead: for example New Zealand's neighbours estimate, -4.48, is -4 in Chart
-  3.3 and "five" in the text (-4.5 rounded again). Nine text findings and one bound in Table 2.1 (26.48, printed
+- **Rounding.** The charts round each estimate once. Some whole numbers are rounded from a one-decimal
+  value instead: for example New Zealand's neighbours estimate, -4.48, is -4 in Chart 3.3 and "five" in the
+  text (-4.5 rounded again), and Chart 1.2 and the page 3 text print 59 for upper-middle-income adults
+  impacted by a disaster (58.497). Seven chart and text findings and one bound in Table 2.1 (26.48, printed
   27; Table A.2 prints 26.5) are within tolerance for this reason.
 - **Words compared as numbers:** "nearly tripled" as a ratio of 3 (tolerance 0.5), "doubled" as 2 (0.3),
   "half" as 50% (15), "roughly two in five" as 40% (3), "fewer than one in ten", "within two points", "within
@@ -94,17 +94,17 @@ Some charts print no values:
 
 ## Gallup World Poll data
 
-542 findings need data that is not in the public release. The code is included; without the data these
+539 findings need data that is not in the public release. The code is included; without the data these
 findings are reported as `GALLUP_ONLY`. See [`reports/README.md`](../../README.md#gallup-world-poll-data).
 
 | Item (name used in the code) | What it is | Findings |
 | --- | --- | --- |
 | `REGION_ZAF` (2021 respondents) | South Africa's province in 2021. The public 2021 file has no South African region variable. | 222: South Africa's 2021-2023 estimates and 2021 gaps, and everything pooled over the seven case studies (Table 2.2, the pooled bars in Charts 3.1 to 3.5, "six of the seven", the sensitivities and slopes on page 46) |
-| `REGION_NZL` (2025 respondents) | New Zealand's 16 regions in 2025. The public 2025 file has only `REGION2_NZL` (North and South Island). | 212: New Zealand's 2025 gaps and changes in Table A.3, Chart 4.6, and the pooled three-wave model (Table A.4) |
+| `REGION_NZL` (2025 respondents) | New Zealand's 16 regions in 2025. The public 2025 file has only `REGION2_NZL` (North and South Island). | 209: New Zealand's 2025 gaps and changes in Table A.3, Chart 4.6, and the pooled three-wave model (Table A.4) |
 | `WP139` | Confidence in the national government (1 = yes). | 137: Charts 3.2 and 3.6, the confidence rows of Tables 2.2 and A.2 to A.4, and the text on confidence |
 | `FIELD_DATE` | Interview date (the name it has in the 2019 release). The months from each event to fieldwork are calendar months from the event month to the country's modal interview month. | 12: the months columns of Tables 2.1 and 4.1 |
 | `REGION_TUR` (2025 respondents) | Türkiye's 26 NUTS-2 units in 2025 (the 2025 file has NUTS-1 only). | 5: Hatay, Kahramanmaraş and Osmaniye's 10 respondents in 2025 and the 63% share |
-| `REGION_MOZ`, `REGION_PAK`, `REGION_ECU` (2025 respondents) | Provinces in 2025 (the public 2025 file has only three broad regions for each). | 6: the 2025 exposure checks on pages 45-46 |
+| `REGION_MOZ`, `REGION_PAK`, `REGION_ECU` (2025 respondents) | Provinces in 2025 (the public 2025 file has only three broad regions for each). | 6: the 2025 exposure checks on page 45 |
 | `WP12259` | Gallup's primary sampling unit, for the third (PSU-clustered) standard error. | 7 |
 
 The region items are assumed to use the same codes as the 2023 public release (for example
@@ -126,9 +126,12 @@ events and of the Malaysian floods.
 
 Not entered as findings: the months after each event given in the text and chart labels ("surveyed a month
 after", "22 months", "31 months", "25 to 41 months"), which are the Table 2.1 and 4.1 values; the text
-columns of Tables 2.1 and 4.1; "six case studies meet (a) to (c)" and "four of the 11 officially affected
-provinces" (checks on the geography, not survey estimates); and Thailand "just above the middle of the
-country ranking" (Thailand's 28% is 60th of 142 countries in 2023; the median is 26%).
+columns of Tables 2.1 and 4.1; "six case studies meet (a) to (c)", "four of the 11 officially affected
+provinces" and "the five regions the disaster also reached" (checks on the geography, not survey
+estimates); counts that describe the design, such as "about six inputs" to the community dimension and "the
+nine measures" the comparison follows; Thailand "just above the middle of the country ranking" (Thailand's
+28% is 60th of 142 countries in 2023; the median is 26%); and KwaZulu-Natal "rose least apart from
+Gauteng" between 2023 and 2025 (Gauteng +0.8, KwaZulu-Natal +1.2).
 
 ## Findings that do not match
 
@@ -141,14 +144,13 @@ country ranking" (Thailand's 28% is 60th of 142 countries in 2023; the median is
   studies gives 3.0 (HC1 -1.4 to 7.4, within the margin of error as the text says). The report's "four" may be
   half of the seven-case estimate (7) rather than a separate estimate. Not explained further.
 
-Within the report, Chart 3.1 shows the pooled individual-dimension estimate as -2 and Table 2.2 as -3
-(both need the Gallup data), and the legends of Charts 4.4 to 4.7 say "2021 to 2023" for maps of the 2023
-to 2025 change.
+Within the report, page 25 says Chart 3.6 sets the three national changes "beside the seven disaster gaps
+from Chart 3.2"; Charts 3.2 and 3.6 show the five case studies that asked about confidence.
 
-22 more findings are within tolerance but do not round to the published figure:
+20 more findings are within tolerance but do not round to the published figure:
 
-- **Rounded twice (see Method notes):** T2_1_TUR_expo_lo (26.48), X019 and X528 (21.47), X026, X040, X560
-  and X600 (32.49), X295 and X302 (-4.48), X305 (16.48).
+- **Rounded twice (see Method notes):** T2_1_TUR_expo_lo (26.48), C1_2_upper_middle_impacted and X070
+  (58.497), X019 and X528 (21.47), X295 and X302 (-4.48), X305 (16.48).
 - **Words:** X004 (37.7% for "roughly two in five"), X005 (7.7% for "fewer than one in ten"), X087 (90.9%
   for "nine in ten"), X432 and X440 (1.5 for "within two points"), X468 (Istanbul +0.6 for "level").
 - **Counts given as round numbers:** X001 and X006 (143,459), X430 (52 for "about 50"), X523 (39 for "about

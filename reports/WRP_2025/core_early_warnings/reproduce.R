@@ -34,7 +34,7 @@ TYPES <- c( # WP24180 codes -> keys (98 don't know and 99 refused are combined a
 TYPE_CODE <- setNames(names(TYPES), TYPES)
 CHART_2_5 <- c("hurricane", "heatwave", "sandstorm", "blizzard", "other_nature", "thunder", "wildfire", "gale",
                "tornado", "flood", "volcano", "drought", "earthquake", "landslide") # no tsunami or non-natural
-CHART_3_3 <- setdiff(CHART_2_5, "tornado") # the bubbles in Chart 3.3
+CHART_3_3 <- setdiff(CHART_2_5, "tornado") # the bubbles in Chart 3.3 (tornado: 97 warned, under 100)
 PHL_REGIONS <- c("1" = "ncr", "3" = "balance_luzon", "4" = "visayas", "5" = "mindanao") # REGION2_PHL
 # The UN Early Warnings for All initiative's initial priority countries that were surveyed in 2025
 # (the 2023 report lists 17; Tajikistan, Ethiopia, Liberia and Ecuador have too few respondents).
@@ -279,6 +279,7 @@ finding(report, "X051", function() idv_by_n(c(1, 0, 2, 3)))
 finding(report, "X052", function() plan_agency(c("neither", "plan", "agency", "both")))
 
 # Policy implications
+finding(report, "X052b", function() by_income(w, ACT, 1)[["low"]])
 finding(report, "X053", function() country["TCD", "coverage"])
 finding(report, "X054", function() country["TCD", "impacted"])
 finding(report, "X055", phone_share)
@@ -432,7 +433,7 @@ finding(report, "X135", function() {
   sum(round(r$phone[r$shown]) > 90)
 })
 finding(report, "X136", function() phone_regions(c("southern_asia", "eastern_africa")))
-finding(report, "X137", function() c(global = phone_share(), phone_regions(c("northern_america", "anz"))))
+finding(report, "X137", function() c(global = phone_share(), phone_regions(c("eastern_europe", "southern_asia"))))
 # Regions with fewer than 100 unwarned respondents are not shown (Northern America,
 # Eastern Asia, Australia and New Zealand); they are still written to output/.
 finding(report, "C2_9", function() {
@@ -543,6 +544,7 @@ finding(report, "X192", income_ratio)
 finding(report, "X193", function() low_income_education()[["primary"]])
 finding(report, "X194", function() by_income(ew, "warned", 1, c("low", "upper_middle", "high")))
 finding(report, "X195", function() by_income(w, ACT, 1)[["low"]])
+finding(report, "X195b", function() by_income(w, ACT, 1)[["lower_middle"]])
 # Individual resilience in low-income countries, impacted (WP24213 = 1) vs not (= 2).
 finding(report, "X196", function() {
   r <- wmean(d[d$CountryIncomeLevel %in% 1, ], "individual", by = IMPACTED)

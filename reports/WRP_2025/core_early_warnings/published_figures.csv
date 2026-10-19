@@ -4,9 +4,9 @@ X002,i,Foreword,Countries and territories surveyed in 2025,140,count,,text,N,,
 X003,i,Foreword,Impacted by a disaster: % received at least one early warning ('four in five'),80,pct,,text,N,,
 X004,i,Foreword,Regions where fewer than half of impacted adults were warned ('in every region except Central/Western Africa at least half were reached'),1,count,,text,N,,
 X005,i,Foreword,Impacted by a disaster: low-income / high-income countries ('twice as likely'),2,ratio,0.3,text,N,,
-X006,i,Foreword,"Impacted by a disaster: % received at least one early warning, low-income countries ('less than two thirds')",67,pct,3,text,N,,Upper bound; recorded as two thirds (67) with a tolerance of 3
+X006,i,Foreword,"Impacted by a disaster: % received at least one early warning, low-income countries ('less than two-thirds')",67,pct,3,text,N,,Upper bound; recorded as two-thirds (67) with a tolerance of 3
 X007,i,Foreword,"Warned before a disaster, low- and lower-middle-income countries together: % NOT able to act ('a slim majority')",50,pct,5,text,N,,Lower bound ('a slim majority'); recorded as 50 with a tolerance of 5
-X008,i,Foreword,Impacted by a disaster and received no warning: % own a mobile phone ('more than two thirds'),67,pct,12,text,Y,WP17626,Lower bound; the report gives 77% elsewhere
+X008,i,Foreword,Impacted by a disaster and received no warning: % own a mobile phone ('more than two-thirds'),67,pct,12,text,Y,WP17626,Lower bound; the report gives 77% elsewhere
 X009,i,Foreword,"Impacted, received no warning and own a mobile phone: adults, millions ('more than 170 million')",170,million,10,text,Y,WP17626,Lower bound; sum of PROJWT
 X010,iii,Executive summary,"Interviews in the 2025 Poll ('more than 143,000')",143000,count,1000,text,N,,
 X011,iii,Executive summary,Countries and territories surveyed in 2025,140,count,,text,N,,
@@ -75,8 +75,8 @@ X048_sms,iv,Executive summary,Impacted by a disaster: % warned through each chan
 X049_1,iv,Executive summary,"Warned before a disaster: % able to take action because of the warning, by number of channels: one",37,pct,,text,N,,
 X049_2,iv,Executive summary,"Warned before a disaster: % able to take action because of the warning, by number of channels: two",51,pct,,text,N,,
 X049_3,iv,Executive summary,"Warned before a disaster: % able to take action because of the warning, by number of channels: three",64,pct,,text,N,,
-X050_min,iv,Executive summary,Gain in % able to act from each channel beyond three ('between four and eight points'): smallest,4,points,,text,N,,
-X050_max,iv,Executive summary,Gain in % able to act from each channel beyond three ('between four and eight points'): largest,8,points,,text,N,,
+X050_min,iv,Executive summary,Gain in % able to act from each channel beyond three ('between four and eight percentage points'): smallest,4,points,,text,N,,
+X050_max,iv,Executive summary,Gain in % able to act from each channel beyond three ('between four and eight percentage points'): largest,8,points,,text,N,,
 X051_1,iv,Executive summary,"Impacted by a disaster: individual resilience (0-100), by number of channels: warned once",40,score,,text,N,,
 X051_0,iv,Executive summary,"Impacted by a disaster: individual resilience (0-100), by number of channels: unwarned",37,score,,text,N,,
 X051_2,iv,Executive summary,"Impacted by a disaster: individual resilience (0-100), by number of channels: two channels",53,score,,text,N,,
@@ -85,6 +85,7 @@ X052_neither,iv,Executive summary,"Warned before a disaster: % able to take acti
 X052_plan,iv,Executive summary,"Warned before a disaster: % able to take action because of the warning, by household plan and agency: plan alone",50,pct,,text,N,,
 X052_agency,iv,Executive summary,"Warned before a disaster: % able to take action because of the warning, by household plan and agency: agency alone",60,pct,,text,N,,
 X052_both,iv,Executive summary,"Warned before a disaster: % able to take action because of the warning, by household plan and agency: both",83,pct,,text,N,,
+X052b,iv,Executive summary: policy implications,"Warned before a disaster: % able to take action because of the warning: low-income countries ('fewer than half of warned adults able to act')",48,pct,,text,N,,
 X053,iv,Executive summary: policy implications,Impacted by a disaster: % received at least one early warning: Chad,42,pct,,text,N,,
 X054,iv,Executive summary: policy implications,Impacted by a disaster in the past five years: Chad ('more than half of all adults'),50,pct,10,text,N,,Lower bound; recorded as 50 with a tolerance of 10
 X055,iv,Executive summary: policy implications,Impacted by a disaster and received no warning: % own a mobile phone,77,pct,,text,Y,WP17626,
@@ -194,9 +195,9 @@ C1_5_ZMB,6,Chart 1.5,"Impacted by a disaster in the past five years, by country 
 C1_5_MDG,6,Chart 1.5,"Impacted by a disaster in the past five years, by country (labelled countries): Madagascar",53,pct,,chart,N,,
 C1_5_LSO,6,Chart 1.5,"Impacted by a disaster in the past five years, by country (labelled countries): Lesotho",49,pct,,chart,N,,
 C1_5_ZWE,6,Chart 1.5,"Impacted by a disaster in the past five years, by country (labelled countries): Zimbabwe",50,pct,,chart,N,,
-X085_hurricane,7,Chapter 1: the Philippines,"Philippines, impacted by a disaster: % naming each type as the most impactful: tropical storm",52,pct,,text,N,,"The text says 'of all adults', but the figures are shares of those impacted (Chart 1.6's base); as shares of all adults they are 41%, 15% and 13%"
-X085_flood,7,Chapter 1: the Philippines,"Philippines, impacted by a disaster: % naming each type as the most impactful: flood",19,pct,,text,N,,"The text says 'of all adults', but the figures are shares of those impacted (Chart 1.6's base); as shares of all adults they are 41%, 15% and 13%"
-X085_earthquake,7,Chapter 1: the Philippines,"Philippines, impacted by a disaster: % naming each type as the most impactful: earthquake",16,pct,,text,N,,"The text says 'of all adults', but the figures are shares of those impacted (Chart 1.6's base); as shares of all adults they are 41%, 15% and 13%"
+X085_hurricane,7,Chapter 1: the Philippines,"Philippines, impacted by a disaster: % naming each type as the most impactful: tropical storm",52,pct,,text,N,,
+X085_flood,7,Chapter 1: the Philippines,"Philippines, impacted by a disaster: % naming each type as the most impactful: flood",19,pct,,text,N,,
+X085_earthquake,7,Chapter 1: the Philippines,"Philippines, impacted by a disaster: % naming each type as the most impactful: earthquake",16,pct,,text,N,,
 X086_visayas,7,Chapter 1: the Philippines,"Philippines, impacted by a disaster: % naming tropical storms, by region: Visayas",67,pct,,text,N,,
 X086_balance_luzon,7,Chapter 1: the Philippines,"Philippines, impacted by a disaster: % naming tropical storms, by region: Balance Luzon",59,pct,,text,N,,
 X086_ncr,7,Chapter 1: the Philippines,"Philippines, impacted by a disaster: % naming tropical storms, by region: National Capital Region",44,pct,,text,N,,
@@ -225,7 +226,7 @@ X092,9,Chapter 2,Impacted by a disaster: % received at least one early warning (
 X093,9,Chapter 2,"Experienced a disaster, 2023 Poll: % received at least one warning",70,pct,,text,N,,
 X094_2025,9,Chapter 2,"Warning channels asked about ('eight, compared to four in 2023'): 2025 Poll",8,count,,text,N,,
 X094_2023,9,Chapter 2,"Warning channels asked about ('eight, compared to four in 2023'): 2023 Poll",4,count,,text,N,,
-X095_low,9,Chapter 2,"Impacted by a disaster: % received at least one early warning, by income group: low-income ('around three in five')",64,pct,,text,N,,
+X095_low,9,Chapter 2,"Impacted by a disaster: % received at least one early warning, by income group: low-income ('fewer than two-thirds')",64,pct,,text,N,,
 X095_lower_middle,9,Chapter 2,"Impacted by a disaster: % received at least one early warning, by income group: lower-middle-income",77,pct,,text,N,,
 X095_upper_middle,9,Chapter 2,"Impacted by a disaster: % received at least one early warning, by income group: upper-middle-income",84,pct,,text,N,,
 X095_high,9,Chapter 2,"Impacted by a disaster: % received at least one early warning, by income group: high-income",84,pct,,text,N,,
@@ -359,11 +360,11 @@ X133,16,Chapter 2: mobile phones,"Impacted, received no warning and own a mobile
 X134_northern_america,16,Chapter 2: mobile phones,Impacted by a disaster and received no warning: % own a mobile phone: Northern America,100,pct,,text,Y,WP17626,
 X134_anz,16,Chapter 2: mobile phones,Impacted by a disaster and received no warning: % own a mobile phone: Australia and New Zealand,100,pct,,text,Y,WP17626,
 X135,16,Chapter 2: mobile phones,"Regions shown in Chart 2.9 where ownership among the unwarned is above 90% (Eastern, Southern and Northern/Western Europe, the Middle East and Central Asia)",5,count,,text,Y,WP17626,
-X136_southern_asia,16,Chapter 2: mobile phones,Impacted by a disaster and received no warning: % own a mobile phone ('roughly two-thirds'): Southern Asia,67,pct,5,text,Y,WP17626,Recorded as two-thirds (67) with a tolerance of 5; Chart 2.9 prints 58% and 63%
-X136_eastern_africa,16,Chapter 2: mobile phones,Impacted by a disaster and received no warning: % own a mobile phone ('roughly two-thirds'): Eastern Africa,67,pct,5,text,Y,WP17626,Recorded as two-thirds (67) with a tolerance of 5; Chart 2.9 prints 58% and 63%
+X136_southern_asia,16,Chapter 2: mobile phones,"Impacted by a disaster and received no warning: % own a mobile phone (the two lowest regions, 'around three in five'): Southern Asia",58,pct,,text,Y,WP17626,
+X136_eastern_africa,16,Chapter 2: mobile phones,"Impacted by a disaster and received no warning: % own a mobile phone (the two lowest regions, 'around three in five'): Eastern Africa",63,pct,,text,Y,WP17626,
 X137_global,16,Chart 2.9,Impacted by a disaster and received no warning: % own a mobile phone (chart subtitle): global,77,pct,,text,Y,WP17626,
-X137_northern_america,16,Chart 2.9,Impacted by a disaster and received no warning: % own a mobile phone (chart subtitle): Northern America,100,pct,,text,Y,WP17626,
-X137_anz,16,Chart 2.9,Impacted by a disaster and received no warning: % own a mobile phone (chart subtitle): Australia and New Zealand,100,pct,,text,Y,WP17626,
+X137_eastern_europe,16,Chart 2.9,Impacted by a disaster and received no warning: % own a mobile phone (chart subtitle): Eastern Europe,98,pct,,text,Y,WP17626,
+X137_southern_asia,16,Chart 2.9,Impacted by a disaster and received no warning: % own a mobile phone (chart subtitle): Southern Asia,58,pct,,text,Y,WP17626,
 C2_9_global,16,Chart 2.9,Impacted by a disaster and received no warning: % own a mobile phone: Global,77,pct,,chart,Y,WP17626,
 C2_9_eastern_europe,16,Chart 2.9,Impacted by a disaster and received no warning: % own a mobile phone: Eastern Europe,98,pct,,chart,Y,WP17626,
 C2_9_southern_europe,16,Chart 2.9,Impacted by a disaster and received no warning: % own a mobile phone: Southern Europe,96,pct,,chart,Y,WP17626,
@@ -508,7 +509,7 @@ C3_6_neither,24,Chart 3.6,"Warned before a disaster: % able to take action becau
 X184,26,Turning the World Risk Poll into action,Early Warnings for All priority countries where fewer than half of impacted adults were warned ('one of only two'),2,count,,text,N,,
 X185,26,Turning the World Risk Poll into action,Impacted by a disaster: % received at least one early warning: Nepal,47,pct,,text,N,,
 X186,26,Turning the World Risk Poll into action,Impacted by a disaster: % received at least one early warning: mudslides or landslides,64,pct,,text,N,,"The global figure (Chart 2.5), in a paragraph on Nepal; in Nepal it is 65% of 28 respondents"
-X187,26,Turning the World Risk Poll into action,"Impacted by a disaster and received no warning: % own a mobile phone: Eastern Africa ('roughly two-thirds', one of the two lowest regions)",67,pct,5,text,Y,WP17626,Recorded as two-thirds (67) with a tolerance of 5; Chart 2.9 prints 63%
+X187,26,Turning the World Risk Poll into action,"Impacted by a disaster and received no warning: % own a mobile phone: Eastern Africa ('one of the two regions where mobile phone ownership among the unwarned is lowest')",63,pct,,text,Y,WP17626,
 X188_both,26,Turning the World Risk Poll into action,"Warned before a disaster: % able to take action because of the warning, by household plan and agency: plan and agency",83,pct,,text,N,,
 X188_neither,26,Turning the World Risk Poll into action,"Warned before a disaster: % able to take action because of the warning, by household plan and agency: neither",27,pct,,text,N,,
 X189,27,Conclusion,Impacted by a disaster: % received at least one early warning ('four in five'),80,pct,,text,N,,
@@ -521,6 +522,7 @@ X194_low,27,Conclusion,Impacted by a disaster: % received at least one early war
 X194_upper_middle,27,Conclusion,Impacted by a disaster: % received at least one early warning: upper-middle-income,84,pct,,text,N,,
 X194_high,27,Conclusion,Impacted by a disaster: % received at least one early warning: high-income,84,pct,,text,N,,
 X195,27,Conclusion,Warned before a disaster: % able to take action because of the warning: low-income countries,48,pct,,text,N,,
+X195b,27,Conclusion,Warned before a disaster: % able to take action because of the warning: lower-middle-income countries,47,pct,,text,N,,
 X196_impacted,27,Conclusion,Low-income countries: individual resilience (0-100): impacted by a disaster,33,score,,text,N,,
 X196_not_impacted,27,Conclusion,Low-income countries: individual resilience (0-100): not impacted,32,score,,text,N,,
 X197,27,Conclusion,Warned before a disaster: % NOT able to act,36,pct,,text,N,,
