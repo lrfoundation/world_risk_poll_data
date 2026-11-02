@@ -1,0 +1,342 @@
+finding_id,page,section,description,published_value,unit,tolerance,source,requires_gallup,gallup_items,note
+X01,"i, iii",Foreword; Executive summary,"Interviews conducted in 2025 ('more than 143,000')",143000,count,1000,text,N,,
+X02,"i, iii",Foreword; Executive summary,Countries and territories surveyed in 2025,140,count,0,text,N,,
+X03,"iii, 3, 26",Executive summary; Chapter 1; Conclusion,"Global Resilience Index, 2025",57,score,,text,N,,
+X04,"iii, 3, 26",Executive summary; Chapter 1; Conclusion,"Change in global Resilience Index, 2021 to 2025 ('two points above 2021')",2,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X05,"iii, 3",Executive summary; Chapter 1,"Change in global individual resilience, 2023 to 2025 ('fallen two points')",-2,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X06,"iii, 3",Executive summary; Chapter 1,"Change in global individual resilience, 2021 to 2023 ('for a second consecutive edition')",-2,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X07,"iii, 3",Executive summary; Chapter 1,"Change in global household resilience, 2023 to 2025 ('unchanged')",0,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X08,"iii, 3",Executive summary; Chapter 1,"Change in global community resilience, 2023 to 2025 ('unchanged')",0,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X09,"iii, 9",Executive summary; Chapter 1,"Greece: change in societal resilience, 2021 to 2025",-11,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X10,"iii, 9",Executive summary; Chapter 1,"New Zealand: change in societal resilience, 2021 to 2025",-8,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X11,"iii, 9",Executive summary; Chapter 1,"Australia: change in societal resilience, 2021 to 2025",-6,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X12,"iii, 9",Executive summary; Chapter 1,"Netherlands: change in societal resilience, 2021 to 2025",-6,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X13,"iii, 9",Executive summary; Chapter 1,"Estonia: change in societal resilience, 2021 to 2025",-6,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X14,"iii, 9",Executive summary; Chapter 1,"France: change in societal resilience, 2021 to 2025",-6,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X15_north_africa,"iii, 5",Executive summary; Chapter 1,"Northern Africa: change in Resilience Index, 2023 to 2025",5,points,,text,N,,Difference of the rounded Table 1.2 values. Regions as classified in 2025 (see README).
+X15_southern_africa,"iii, 5",Executive summary; Chapter 1,"Southern Africa: change in Resilience Index, 2023 to 2025",4,points,,text,N,,Difference of the rounded Table 1.2 values. Regions as classified in 2025 (see README).
+X15_cw_africa,"iii, 5",Executive summary; Chapter 1,"Central/Western Africa: change in Resilience Index, 2023 to 2025",3,points,,text,N,,Difference of the rounded Table 1.2 values. Regions as classified in 2025 (see README).
+X15_east_africa,"iii, 5",Executive summary; Chapter 1,"Eastern Africa: change in Resilience Index, 2023 to 2025",3,points,,text,N,,Difference of the rounded Table 1.2 values. Regions as classified in 2025 (see README).
+X15_latam,5,Chapter 1,"Latin America and the Caribbean: change in Resilience Index, 2023 to 2025",2,points,,text,N,,Difference of the rounded Table 1.2 values. Regions as classified in 2025 (see README).
+X15_southern_asia,5,Chapter 1,"Southern Asia: change in Resilience Index, 2023 to 2025",-2,points,,text,N,,Difference of the rounded Table 1.2 values. Regions as classified in 2025 (see README).
+X15_eastern_asia,5,Chapter 1,"Eastern Asia: change in Resilience Index, 2023 to 2025",-2,points,,text,N,,Difference of the rounded Table 1.2 values. Regions as classified in 2025 (see README).
+X16_DZA,"iii, 7",Executive summary; Chapter 1,"Algeria: change in household resilience, 2021 to 2025",13,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X16_NGA,"iii, 7",Executive summary; Chapter 1,"Nigeria: change in household resilience, 2021 to 2025",9,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X16_KEN,"iii, 7",Executive summary; Chapter 1,"Kenya: change in household resilience, 2021 to 2025",8,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X16_EGY,"iii, 7",Executive summary; Chapter 1,"Egypt: change in household resilience, 2021 to 2025",7,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X16_UGA,"iii, 7",Executive summary; Chapter 1,"Uganda: change in household resilience, 2021 to 2025",6,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X17_north_africa,"iii, 7",Executive summary; Chapter 1,"Northern Africa: change in % with internet access, 2019 to 2025",17,points,,text,Y,WP16056,Difference of the rounded Table 1.3 values.
+X17_cw_africa,"iii, 7",Executive summary; Chapter 1,"Central/Western Africa: change in % with internet access, 2019 to 2025",12,points,,text,Y,WP16056,Difference of the rounded Table 1.3 values.
+X17_southern_africa,"iii, 7",Executive summary; Chapter 1,"Southern Africa: change in % with internet access, 2019 to 2025",12,points,,text,Y,WP16056,Difference of the rounded Table 1.3 values.
+X18,"iii, 3",Executive summary; Chapter 1,"Countries where % who could protect themselves in a future disaster (agency) rose by at least 10 points, 2023 to 2025",18,count,0,text,N,,WP22252 = yes. A change counts when it rounds to 10 points or more (see README).
+X19,"iii, 3",Executive summary; Chapter 1,"Countries where agency fell by at least 10 points, 2023 to 2025",13,count,0,text,N,,As X18.
+X20,"iii, 12, 26",Executive summary; Chapter 2; Conclusion,"Gap in Resilience Index between thriving and suffering adults, global ('16 points')",16,points,,text,Y,WP16; WP18,Difference of the rounded Chart 2.1 values (63 - 47).
+X21,12,Chapter 2,Smallest gap in Resilience Index between thriving and suffering adults across the four income groups ('at least 10 points'),10,points,,text,Y,WP16; WP18,Differences of the rounded Chart 2.1 values; the smallest is low-income (51 - 41).
+X22_lower_middle,"iii, 14, 26",Executive summary; Chapter 2; Conclusion,"Resilience Index among adults rating their present life 0, 1 or 2 on the Cantril ladder, lower-middle-income countries ('between 45 and 50')",47.5,score,2.5,text,Y,WP16,"Recorded as the midpoint of the stated range, with half its width as tolerance."
+X22_upper_middle,"iii, 14, 26",Executive summary; Chapter 2; Conclusion,"Resilience Index among adults rating their present life 0, 1 or 2 on the Cantril ladder, upper-middle-income countries ('between 45 and 50')",47.5,score,2.5,text,Y,WP16,"Recorded as the midpoint of the stated range, with half its width as tolerance."
+X22_high,"iii, 14, 26",Executive summary; Chapter 2; Conclusion,"Resilience Index among adults rating their present life 0, 1 or 2 on the Cantril ladder, high-income countries ('between 45 and 50')",47.5,score,2.5,text,Y,WP16,"Recorded as the midpoint of the stated range, with half its width as tolerance."
+X22_low,"iii, 14, 26",Executive summary; Chapter 2; Conclusion,"Resilience Index among adults rating their present life 0, 1 or 2 on the Cantril ladder, low-income countries ('between 40 and 45')",42.5,score,2.5,text,Y,WP16,"Recorded as the midpoint of the stated range, with half its width as tolerance."
+X23,"iii, 14",Executive summary; Chapter 2,Income groups in which the Resilience Index of adults rating their present life 10 is lower than of those rating it 9 ('most income groups'),3,count,1,text,Y,WP16,"'Most' of four groups is recorded as 3, with a tolerance of 1."
+X24,"iv, 18",Executive summary; Chapter 3,"Change in % who say the government does not care about them at all, 2021 to 2025 ('fallen eight percentage points')",-8,points,,text,N,,Difference of the rounded Chart 3.1 values (29 - 37). Countries surveyed in 2025.
+X25,"iv, 19, 26",Executive summary; Chapter 3; Conclusion,Countries where % government cares 'not at all' exceeds % 'a lot' by 10 points or more,97,count,0,text,N,,"Differences of the rounded country percentages, as in Chart 3.2."
+X26,"iv, 19",Executive summary; Chapter 3,Countries where % government cares 'a lot' exceeds % 'not at all' by 10 points or more,20,count,0,text,N,,As X25.
+X27_high,"iv, 23",Executive summary; Chapter 3,"Gap in household resilience between adults whose neighbours care 'a lot' and 'not at all', high-income countries",10,points,,text,N,,Difference of the rounded Chart 3.6 values (71 - 61).
+X27_upper_middle,"iv, 23",Executive summary; Chapter 3,"Gap in household resilience between adults whose neighbours care 'a lot' and 'not at all', upper-middle-income countries",10,points,,text,N,,Difference of the rounded Chart 3.6 values (66 - 56).
+X27_lower_middle,"iv, 23",Executive summary; Chapter 3,"Gap in household resilience between adults whose neighbours care 'a lot' and 'not at all', lower-middle-income countries",6,points,,text,N,,Difference of the rounded Chart 3.6 values (48 - 42).
+X27_low,"iv, 23",Executive summary; Chapter 3,"Gap in household resilience between adults whose neighbours care 'a lot' and 'not at all', low-income countries",6,points,,text,N,,Difference of the rounded Chart 3.6 values (44 - 38).
+X28,"iv, 22",Executive summary; Chapter 3,Correlation across countries between % government cares 'not at all' and % neighbours care 'not at all' (r),0.57,r,0.02,text,N,,"Pearson, unweighted, across the 133 countries with both values."
+X29_prolonged_weather,1,Chapter 1,"Adults: % personally experienced serious harm from severe prolonged weather events in the past two years, 2025",19,pct,,text,N,,"'Yes, personally' + 'both', summed after rounding each, as The quiet hazards does."
+X29_severe_weather,1,Chapter 1,"Adults: % personally experienced serious harm from severe weather events in the past two years, 2025",17,pct,,text,N,,"'Yes, personally' + 'both', summed after rounding each, as The quiet hazards does."
+X29_traffic,1,Chapter 1,"Adults: % personally experienced serious harm from traffic accidents in the past two years, 2025",15,pct,,text,N,,"'Yes, personally' + 'both', summed after rounding each, as The quiet hazards does."
+X29_food,1,Chapter 1,"Adults: % personally experienced serious harm from food in the past two years, 2025",14,pct,,text,N,,"'Yes, personally' + 'both', summed after rounding each, as The quiet hazards does."
+X29_water,1,Chapter 1,"Adults: % personally experienced serious harm from drinking water in the past two years, 2025",13,pct,,text,N,,"'Yes, personally' + 'both', summed after rounding each, as The quiet hazards does."
+X29_mental_health,1,Chapter 1,"Adults: % personally experienced serious harm from mental health issues in the past two years, 2025",12,pct,,text,N,,"'Yes, personally' + 'both', summed after rounding each, as The quiet hazards does."
+X29_crime,1,Chapter 1,"Adults: % personally experienced serious harm from violent crime in the past two years, 2025",10,pct,,text,N,,"'Yes, personally' + 'both', summed after rounding each, as The quiet hazards does."
+C1_1_index_2021,"iii, 3",Chart 1.1,"Global Resilience Index, 2021",55,score,,chart,N,,
+C1_1_index_2023,"iii, 3",Chart 1.1,"Global Resilience Index, 2023",57,score,,chart,N,,
+C1_1_index_2025,"iii, 3",Chart 1.1,"Global Resilience Index, 2025",57,score,,chart,N,,
+C1_1_individual_2021,"iii, 3",Chart 1.1,"Global individual resilience, 2021",46,score,,chart,N,,
+C1_1_individual_2023,"iii, 3",Chart 1.1,"Global individual resilience, 2023",44,score,,chart,N,,
+C1_1_individual_2025,"iii, 3",Chart 1.1,"Global individual resilience, 2025",42,score,,chart,N,,
+C1_1_household_2021,"iii, 3",Chart 1.1,"Global household resilience, 2021",54,score,,chart,N,,
+C1_1_household_2023,"iii, 3",Chart 1.1,"Global household resilience, 2023",55,score,,chart,N,,
+C1_1_household_2025,"iii, 3",Chart 1.1,"Global household resilience, 2025",55,score,,chart,N,,
+C1_1_community_2021,"iii, 3",Chart 1.1,"Global community resilience, 2021",63,score,,chart,N,,
+C1_1_community_2023,"iii, 3",Chart 1.1,"Global community resilience, 2023",63,score,,chart,N,,
+C1_1_community_2025,"iii, 3",Chart 1.1,"Global community resilience, 2025",63,score,,chart,N,,
+C1_1_societal_2021,"iii, 3",Chart 1.1,"Global societal resilience, 2021",63,score,,chart,N,,
+C1_1_societal_2023,"iii, 3",Chart 1.1,"Global societal resilience, 2023",65,score,,chart,N,,
+C1_1_societal_2025,"iii, 3",Chart 1.1,"Global societal resilience, 2025",66,score,,chart,N,,
+C1_2_index_low,"iii, 4",Chart 1.2,"Resilience Index, low-income countries, 2025",46,score,,chart,N,,
+C1_2_index_lower_middle,"iii, 4",Chart 1.2,"Resilience Index, lower-middle-income countries, 2025",53,score,,chart,N,,
+C1_2_index_upper_middle,"iii, 4",Chart 1.2,"Resilience Index, upper-middle-income countries, 2025",60,score,,chart,N,,
+C1_2_index_high,"iii, 4",Chart 1.2,"Resilience Index, high-income countries, 2025",61,score,,chart,N,,
+C1_2_individual_low,"iii, 4",Chart 1.2,"Individual resilience, low-income countries, 2025",33,score,,chart,N,,
+C1_2_individual_lower_middle,"iii, 4",Chart 1.2,"Individual resilience, lower-middle-income countries, 2025",31,score,,chart,N,,
+C1_2_individual_upper_middle,"iii, 4",Chart 1.2,"Individual resilience, upper-middle-income countries, 2025",45,score,,chart,N,,
+C1_2_individual_high,"iii, 4",Chart 1.2,"Individual resilience, high-income countries, 2025",60,score,,chart,N,,
+C1_2_household_low,"iii, 4",Chart 1.2,"Household resilience, low-income countries, 2025",41,score,,chart,N,,
+C1_2_household_lower_middle,"iii, 4",Chart 1.2,"Household resilience, lower-middle-income countries, 2025",45,score,,chart,N,,
+C1_2_household_upper_middle,"iii, 4",Chart 1.2,"Household resilience, upper-middle-income countries, 2025",62,score,,chart,N,,
+C1_2_household_high,"iii, 4",Chart 1.2,"Household resilience, high-income countries, 2025",66,score,,chart,N,,
+C1_2_community_low,"iii, 4",Chart 1.2,"Community resilience, low-income countries, 2025",50,score,,chart,N,,
+C1_2_community_lower_middle,"iii, 4",Chart 1.2,"Community resilience, lower-middle-income countries, 2025",64,score,,chart,N,,
+C1_2_community_upper_middle,"iii, 4",Chart 1.2,"Community resilience, upper-middle-income countries, 2025",64,score,,chart,N,,
+C1_2_community_high,"iii, 4",Chart 1.2,"Community resilience, high-income countries, 2025",63,score,,chart,N,,
+C1_2_societal_low,"iii, 4",Chart 1.2,"Societal resilience, low-income countries, 2025",59,score,,chart,N,,
+C1_2_societal_lower_middle,"iii, 4",Chart 1.2,"Societal resilience, lower-middle-income countries, 2025",70,score,,chart,N,,
+C1_2_societal_upper_middle,"iii, 4",Chart 1.2,"Societal resilience, upper-middle-income countries, 2025",68,score,,chart,N,,
+C1_2_societal_high,"iii, 4",Chart 1.2,"Societal resilience, high-income countries, 2025",57,score,,chart,N,,
+X30,4,Chapter 1,Gap in individual resilience between high- and upper-middle-income countries ('15 points higher'),15,points,,text,N,,Difference of the rounded Chart 1.2 values (60 - 45).
+T1_2_north_africa_2021,5,Table 1.2,"Resilience Index, Northern Africa, 2021",51,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_north_africa_2023,5,Table 1.2,"Resilience Index, Northern Africa, 2023",49,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_north_africa_2025,5,Table 1.2,"Resilience Index, Northern Africa, 2025",54,score,,table,N,,
+T1_2_southern_africa_2021,5,Table 1.2,"Resilience Index, Southern Africa, 2021",49,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_southern_africa_2023,5,Table 1.2,"Resilience Index, Southern Africa, 2023",47,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_southern_africa_2025,5,Table 1.2,"Resilience Index, Southern Africa, 2025",51,score,,table,N,,
+T1_2_cw_africa_2021,5,Table 1.2,"Resilience Index, Central/Western Africa, 2021",44,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_cw_africa_2023,5,Table 1.2,"Resilience Index, Central/Western Africa, 2023",44,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_cw_africa_2025,5,Table 1.2,"Resilience Index, Central/Western Africa, 2025",47,score,,table,N,,
+T1_2_east_africa_2021,5,Table 1.2,"Resilience Index, Eastern Africa, 2021",50,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_east_africa_2023,5,Table 1.2,"Resilience Index, Eastern Africa, 2023",46,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_east_africa_2025,5,Table 1.2,"Resilience Index, Eastern Africa, 2025",49,score,,table,N,,
+T1_2_latam_2021,5,Table 1.2,"Resilience Index, Latin America and the Caribbean, 2021",49,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_latam_2023,5,Table 1.2,"Resilience Index, Latin America and the Caribbean, 2023",48,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_latam_2025,5,Table 1.2,"Resilience Index, Latin America and the Caribbean, 2025",50,score,,table,N,,
+T1_2_southern_europe_2021,5,Table 1.2,"Resilience Index, Southern Europe, 2021",57,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_southern_europe_2023,5,Table 1.2,"Resilience Index, Southern Europe, 2023",55,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_southern_europe_2025,5,Table 1.2,"Resilience Index, Southern Europe, 2025",56,score,,table,N,,
+T1_2_northern_america_2021,5,Table 1.2,"Resilience Index, Northern America, 2021",65,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_northern_america_2023,5,Table 1.2,"Resilience Index, Northern America, 2023",63,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_northern_america_2025,5,Table 1.2,"Resilience Index, Northern America, 2025",65,score,,table,N,,
+T1_2_central_asia_2021,5,Table 1.2,"Resilience Index, Central Asia, 2021",61,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_central_asia_2023,5,Table 1.2,"Resilience Index, Central Asia, 2023",61,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_central_asia_2025,5,Table 1.2,"Resilience Index, Central Asia, 2025",62,score,,table,N,,
+T1_2_southeastern_asia_2021,5,Table 1.2,"Resilience Index, Southeastern Asia, 2021",64,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_southeastern_asia_2023,5,Table 1.2,"Resilience Index, Southeastern Asia, 2023",65,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_southeastern_asia_2025,5,Table 1.2,"Resilience Index, Southeastern Asia, 2025",65,score,,table,N,,
+T1_2_eastern_europe_2021,5,Table 1.2,"Resilience Index, Eastern Europe, 2021",56,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_eastern_europe_2023,5,Table 1.2,"Resilience Index, Eastern Europe, 2023",58,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_eastern_europe_2025,5,Table 1.2,"Resilience Index, Eastern Europe, 2025",58,score,,table,N,,
+T1_2_middle_east_2021,5,Table 1.2,"Resilience Index, Middle East, 2021",52,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_middle_east_2023,5,Table 1.2,"Resilience Index, Middle East, 2023",53,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_middle_east_2025,5,Table 1.2,"Resilience Index, Middle East, 2025",53,score,,table,N,,
+T1_2_nw_europe_2021,5,Table 1.2,"Resilience Index, Northern/Western Europe, 2021",64,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_nw_europe_2023,5,Table 1.2,"Resilience Index, Northern/Western Europe, 2023",63,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_nw_europe_2025,5,Table 1.2,"Resilience Index, Northern/Western Europe, 2025",63,score,,table,N,,
+T1_2_anz_2021,5,Table 1.2,"Resilience Index, Australia and New Zealand, 2021",66,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_anz_2023,5,Table 1.2,"Resilience Index, Australia and New Zealand, 2023",64,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_anz_2025,5,Table 1.2,"Resilience Index, Australia and New Zealand, 2025",63,score,,table,N,,
+T1_2_southern_asia_2021,5,Table 1.2,"Resilience Index, Southern Asia, 2021",52,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_southern_asia_2023,5,Table 1.2,"Resilience Index, Southern Asia, 2023",53,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_southern_asia_2025,5,Table 1.2,"Resilience Index, Southern Asia, 2025",51,score,,table,N,,
+T1_2_eastern_asia_2021,5,Table 1.2,"Resilience Index, Eastern Asia, 2021",62,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_eastern_asia_2023,5,Table 1.2,"Resilience Index, Eastern Asia, 2023",65,score,,table,N,,Regions as classified in 2025 (see README).
+T1_2_eastern_asia_2025,5,Table 1.2,"Resilience Index, Eastern Asia, 2025",63,score,,table,N,,
+X31_POL,6,Chapter 1,"Poland: change in individual resilience, 2021 to 2025",-18,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X31_SVK,6,Chapter 1,"Slovakia: change in individual resilience, 2021 to 2025",-15,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X31_HRV,6,Chapter 1,"Croatia: change in individual resilience, 2021 to 2025",-13,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X31_BGR,6,Chapter 1,"Bulgaria: change in individual resilience, 2021 to 2025",-13,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X31_BIH,6,Chapter 1,"Bosnia and Herzegovina: change in individual resilience, 2021 to 2025",-12,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X31_MAR,6,Chapter 1,"Morocco: change in individual resilience, 2021 to 2025",-19,points,,text,N,,"Difference of the rounded scores, as printed (see README)."
+X32,6,Chapter 1,"Countries with a larger fall in individual resilience than Poland, 2021 to 2025 ('the only country ... is Morocco')",1,count,0,text,N,,"Unrounded changes, countries measured in both years."
+X33,6,Chapter 1,"Morocco: individual resilience, 2021",39,score,,text,N,,
+X34,6,Chapter 1,"Morocco: individual resilience, 2025",20,score,,text,N,,
+X35_SVK,6,Chapter 1,"Slovakia: change in % who could protect themselves in a future disaster (agency), 2021 to 2025",-42,points,,text,N,,WP22252 = yes. Difference of the rounded percentages.
+X35_BGR,6,Chapter 1,"Bulgaria: change in % who could protect themselves in a future disaster (agency), 2021 to 2025",-40,points,,text,N,,WP22252 = yes. Difference of the rounded percentages.
+X35_HRV,6,Chapter 1,"Croatia: change in % who could protect themselves in a future disaster (agency), 2021 to 2025",-37,points,,text,N,,WP22252 = yes. Difference of the rounded percentages.
+X35_POL,6,Chapter 1,"Poland: change in % who could protect themselves in a future disaster (agency), 2021 to 2025",-37,points,,text,N,,WP22252 = yes. Difference of the rounded percentages.
+X35_BIH,6,Chapter 1,"Bosnia and Herzegovina: change in % who could protect themselves in a future disaster (agency), 2021 to 2025",-28,points,,text,N,,WP22252 = yes. Difference of the rounded percentages.
+X36_DZA,7,Chapter 1,"Algeria: household resilience, 2025 ('ranging from 62 in Algeria')",62,score,,text,N,,
+X36_EGY,7,Chapter 1,"Egypt: household resilience, 2025 ('to 39 in Egypt')",39,score,,text,N,,
+X37_DZA,7,Chapter 1,"Algeria: change in % who could cover basic needs for more than a month if all income were lost, 2021 to 2025",12,points,,text,N,,"WP22228 = 'a month or more', among those giving an answer (don't know and refused excluded). Difference of the rounded percentages."
+X37_EGY,7,Chapter 1,"Egypt: change in % who could cover basic needs for more than a month if all income were lost, 2021 to 2025",14,points,,text,N,,"WP22228 = 'a month or more', among those giving an answer (don't know and refused excluded). Difference of the rounded percentages."
+X37_UGA,7,Chapter 1,"Uganda: change in % who could cover basic needs for more than a month if all income were lost, 2021 to 2025",7,points,,text,N,,"WP22228 = 'a month or more', among those giving an answer (don't know and refused excluded). Difference of the rounded percentages."
+X37_KEN,7,Chapter 1,"Kenya: change in % who could cover basic needs for more than a month if all income were lost, 2021 to 2025",4,points,,text,N,,"WP22228 = 'a month or more', among those giving an answer (don't know and refused excluded). Difference of the rounded percentages."
+X37_NGA,7,Chapter 1,"Nigeria: change in % who could cover basic needs for more than a month if all income were lost, 2021 to 2025",3,points,,text,N,,"WP22228 = 'a month or more', among those giving an answer (don't know and refused excluded). Difference of the rounded percentages."
+X38_DZA,7,Chapter 1,"Algeria: change in % whose household has a disaster plan known to all members, 2021 to 2025",30,points,,text,N,,"2021 WP22253, 2025 WP23345 (members over 10), among those giving an answer. Difference of the rounded percentages."
+X38_KEN,7,Chapter 1,"Kenya: change in % whose household has a disaster plan known to all members, 2021 to 2025",10,points,,text,N,,"2021 WP22253, 2025 WP23345 (members over 10), among those giving an answer. Difference of the rounded percentages."
+T1_3_north_africa_2019,7,Table 1.3,"% with internet access, Northern Africa, 2019",52,pct,,table,Y,WP16056,Countries surveyed in 2025.
+T1_3_north_africa_2025,7,Table 1.3,"% with internet access, Northern Africa, 2025",69,pct,,table,Y,WP16056,Countries surveyed in 2025.
+T1_3_cw_africa_2019,7,Table 1.3,"% with internet access, Central/Western Africa, 2019",31,pct,,table,Y,WP16056,Countries surveyed in 2025.
+T1_3_cw_africa_2025,7,Table 1.3,"% with internet access, Central/Western Africa, 2025",43,pct,,table,Y,WP16056,Countries surveyed in 2025.
+T1_3_southern_africa_2019,7,Table 1.3,"% with internet access, Southern Africa, 2019",51,pct,,table,Y,WP16056,Countries surveyed in 2025.
+T1_3_southern_africa_2025,7,Table 1.3,"% with internet access, Southern Africa, 2025",63,pct,,table,Y,WP16056,Countries surveyed in 2025.
+T1_3_east_africa_2019,7,Table 1.3,"% with internet access, Eastern Africa, 2019",28,pct,,table,Y,WP16056,Countries surveyed in 2025.
+T1_3_east_africa_2025,7,Table 1.3,"% with internet access, Eastern Africa, 2025",37,pct,,table,Y,WP16056,Countries surveyed in 2025.
+T1_3_global_2019,7,Table 1.3,"% with internet access, Global average, 2019",56,pct,,table,Y,WP16056,Countries surveyed in 2025.
+T1_3_global_2025,7,Table 1.3,"% with internet access, Global average, 2025",74,pct,,table,Y,WP16056,Countries surveyed in 2025.
+X39_community_2021,8,Chapter 1,"Ukraine: community resilience, 2021",50,score,,text,N,,
+X39_community_2023,8,Chapter 1,"Ukraine: community resilience, 2023",56,score,,text,N,,
+X39_community_2025,8,Chapter 1,"Ukraine: community resilience, 2025",59,score,,text,N,,
+X39_individual_2025,8,Chapter 1,"Ukraine: individual resilience, 2025",61,score,,text,N,,
+X40_2021,8,Chapter 1,"Ukraine: % who think their neighbours care about them at least somewhat, 2021",42,pct,,text,N,,
+X40_2023,8,Chapter 1,"Ukraine: % who think their neighbours care about them at least somewhat, 2023",46,pct,,text,N,,
+X40_2025,8,Chapter 1,"Ukraine: % who think their neighbours care about them at least somewhat, 2025",49,pct,,text,N,,
+X41_USA_individual,10,Chapter 1,"United States: individual resilience, 2025",68,score,,text,N,,
+X41_USA_household,10,Chapter 1,"United States: household resilience, 2025",77,score,,text,N,,
+X41_SWE_individual,10,Chapter 1,"Sweden: individual resilience (highest), 2025",72,score,,text,N,,
+X41_VNM_household,10,Chapter 1,"Vietnam: household resilience (highest), 2025",79,score,,text,N,,
+X41_USA_community,10,Chapter 1,"United States: community resilience, 2025",68,score,,text,N,,
+C1_7_individual,10,Chart 1.7,"United States: global rank on individual resilience, 2025",2,rank,0,chart,N,,"Rank on unrounded country scores, 1 = highest."
+C1_7_household,10,Chart 1.7,"United States: global rank on household resilience, 2025",2,rank,0,chart,N,,"Rank on unrounded country scores, 1 = highest."
+C1_7_community,10,Chart 1.7,"United States: global rank on community resilience, 2025",28,rank,0,chart,N,,"Rank on unrounded country scores, 1 = highest."
+C1_7_societal,10,Chart 1.7,"United States: global rank on societal resilience, 2025",130,rank,0,chart,N,,"Rank on unrounded country scores, 1 = highest."
+X42,10,Chapter 1,Countries and territories ranked on societal resilience ('130th ... out of 139'),139,count,0,text,N,,Saudi Arabia has no societal score.
+X43_national_government,10,Chapter 1,United States: % confidence in the national government,30,pct,,text,Y,WP139,
+X43_judicial,10,Chapter 1,United States: % confidence in the judicial system,41,pct,,text,Y,WP138,
+X43_military_2025,10,Chapter 1,"United States: % confidence in the military, 2025",80,pct,,text,Y,WP137,
+X43_military_2019,10,Chapter 1,"United States: % confidence in the military, 2019",90,pct,,text,Y,WP137,
+X44,10,Chapter 1,United States: % government cares about them 'a lot',4,pct,,text,N,,
+X45_WP22260,10,Chapter 1,United States: % experienced discrimination because of religion,14,pct,,text,N,,
+X45_WP22263,10,Chapter 1,United States: % experienced discrimination because of a disability,9,pct,,text,N,,
+X45_WP22259,10,Chapter 1,United States: % experienced discrimination because of the colour of their skin,25,pct,,text,N,,
+X45_WP22261,10,Chapter 1,United States: % experienced discrimination because of nationality or ethnicity,28,pct,,text,N,,
+X45_WP22262,10,Chapter 1,United States: % experienced discrimination because of gender,26,pct,,text,N,,
+X46_WP22259,10,Chapter 1,United States: global rank on % discrimination because of skin colour ('third highest'),3,rank,0,text,N,,"Rank on unrounded country percentages, 1 = highest."
+X46_WP22261,10,Chapter 1,United States: global rank on % discrimination because of nationality or ethnicity ('fifth'),5,rank,0,text,N,,"Rank on unrounded country percentages, 1 = highest."
+X46_WP22262,10,Chapter 1,United States: global rank on % discrimination because of gender ('fifth'),5,rank,0,text,N,,"Rank on unrounded country percentages, 1 = highest."
+C2_1_low_thriving,12,Chart 2.1,"Resilience Index, thriving adults, low-income countries",51,score,,chart,Y,WP16; WP18,
+C2_1_low_struggling,12,Chart 2.1,"Resilience Index, struggling adults, low-income countries",46,score,,chart,Y,WP16; WP18,
+C2_1_low_suffering,12,Chart 2.1,"Resilience Index, suffering adults, low-income countries",41,score,,chart,Y,WP16; WP18,
+C2_1_lower_middle_thriving,12,Chart 2.1,"Resilience Index, thriving adults, lower-middle-income countries",59,score,,chart,Y,WP16; WP18,
+C2_1_lower_middle_struggling,12,Chart 2.1,"Resilience Index, struggling adults, lower-middle-income countries",53,score,,chart,Y,WP16; WP18,
+C2_1_lower_middle_suffering,12,Chart 2.1,"Resilience Index, suffering adults, lower-middle-income countries",47,score,,chart,Y,WP16; WP18,
+C2_1_upper_middle_thriving,12,Chart 2.1,"Resilience Index, thriving adults, upper-middle-income countries",64,score,,chart,Y,WP16; WP18,
+C2_1_upper_middle_struggling,12,Chart 2.1,"Resilience Index, struggling adults, upper-middle-income countries",59,score,,chart,Y,WP16; WP18,
+C2_1_upper_middle_suffering,12,Chart 2.1,"Resilience Index, suffering adults, upper-middle-income countries",47,score,,chart,Y,WP16; WP18,
+C2_1_high_thriving,12,Chart 2.1,"Resilience Index, thriving adults, high-income countries",65,score,,chart,Y,WP16; WP18,
+C2_1_high_struggling,12,Chart 2.1,"Resilience Index, struggling adults, high-income countries",60,score,,chart,Y,WP16; WP18,
+C2_1_high_suffering,12,Chart 2.1,"Resilience Index, suffering adults, high-income countries",50,score,,chart,Y,WP16; WP18,
+C2_1_global_thriving,"iii, 12, 26",Chart 2.1,"Resilience Index, thriving adults, global",63,score,,chart,Y,WP16; WP18,
+C2_1_global_struggling,"iii, 12, 26",Chart 2.1,"Resilience Index, struggling adults, global",56,score,,chart,Y,WP16; WP18,
+C2_1_global_suffering,"iii, 12, 26",Chart 2.1,"Resilience Index, suffering adults, global",47,score,,chart,Y,WP16; WP18,
+X47,13,Chapter 2,Correlation across countries between mean present life rating and the Resilience Index (r),0.61,r,0.02,text,Y,WP16,"Pearson, unweighted, across countries."
+X48,13,Chapter 2,Median of the country Resilience Index scores (Chart 2.2 dividing line),55,score,,text,N,,
+X49,13,Chapter 2,Median of the country % thriving (Chart 2.2 dividing line),33,pct,,text,Y,WP16; WP18,
+C2_4_individual_thriving,"iii, 15, 26",Chart 2.4,"Individual resilience, thriving adults, global",52,score,,chart,Y,WP16; WP18,
+C2_4_individual_struggling,15,Chart 2.4,"Individual resilience, struggling adults, global",41,score,,chart,Y,WP16; WP18,
+C2_4_individual_suffering,"iii, 15, 26",Chart 2.4,"Individual resilience, suffering adults, global",26,score,,chart,Y,WP16; WP18,
+C2_4_household_thriving,15,Chart 2.4,"Household resilience, thriving adults, global",65,score,,chart,Y,WP16; WP18,
+C2_4_household_struggling,15,Chart 2.4,"Household resilience, struggling adults, global",55,score,,chart,Y,WP16; WP18,
+C2_4_household_suffering,15,Chart 2.4,"Household resilience, suffering adults, global",40,score,,chart,Y,WP16; WP18,
+C2_4_community_thriving,15,Chart 2.4,"Community resilience, thriving adults, global",69,score,,chart,Y,WP16; WP18,
+C2_4_community_struggling,15,Chart 2.4,"Community resilience, struggling adults, global",62,score,,chart,Y,WP16; WP18,
+C2_4_community_suffering,15,Chart 2.4,"Community resilience, suffering adults, global",54,score,,chart,Y,WP16; WP18,
+C2_4_societal_thriving,15,Chart 2.4,"Societal resilience, thriving adults, global",67,score,,chart,Y,WP16; WP18,
+C2_4_societal_struggling,15,Chart 2.4,"Societal resilience, struggling adults, global",65,score,,chart,Y,WP16; WP18,
+C2_4_societal_suffering,15,Chart 2.4,"Societal resilience, suffering adults, global",67,score,,chart,Y,WP16; WP18,
+C2_5_low_individual,16,Chart 2.5,"Individual resilience, suffering adults, low-income countries",23,score,,chart,Y,WP16; WP18,
+C2_5_low_household,16,Chart 2.5,"Household resilience, suffering adults, low-income countries",37,score,,chart,Y,WP16; WP18,
+C2_5_low_community,16,Chart 2.5,"Community resilience, suffering adults, low-income countries",47,score,,chart,Y,WP16; WP18,
+C2_5_low_societal,16,Chart 2.5,"Societal resilience, suffering adults, low-income countries",56,score,,chart,Y,WP16; WP18,
+C2_5_lower_middle_individual,16,Chart 2.5,"Individual resilience, suffering adults, lower-middle-income countries",19,score,,chart,Y,WP16; WP18,
+C2_5_lower_middle_household,16,Chart 2.5,"Household resilience, suffering adults, lower-middle-income countries",34,score,,chart,Y,WP16; WP18,
+C2_5_lower_middle_community,16,Chart 2.5,"Community resilience, suffering adults, lower-middle-income countries",62,score,,chart,Y,WP16; WP18,
+C2_5_lower_middle_societal,16,Chart 2.5,"Societal resilience, suffering adults, lower-middle-income countries",73,score,,chart,Y,WP16; WP18,
+C2_5_upper_middle_individual,16,Chart 2.5,"Individual resilience, suffering adults, upper-middle-income countries",32,score,,chart,Y,WP16; WP18,
+C2_5_upper_middle_household,16,Chart 2.5,"Household resilience, suffering adults, upper-middle-income countries",48,score,,chart,Y,WP16; WP18,
+C2_5_upper_middle_community,16,Chart 2.5,"Community resilience, suffering adults, upper-middle-income countries",43,score,,chart,Y,WP16; WP18,
+C2_5_upper_middle_societal,16,Chart 2.5,"Societal resilience, suffering adults, upper-middle-income countries",64,score,,chart,Y,WP16; WP18,
+C2_5_high_individual,16,Chart 2.5,"Individual resilience, suffering adults, high-income countries",48,score,,chart,Y,WP16; WP18,
+C2_5_high_household,16,Chart 2.5,"Household resilience, suffering adults, high-income countries",55,score,,chart,Y,WP16; WP18,
+C2_5_high_community,16,Chart 2.5,"Community resilience, suffering adults, high-income countries",49,score,,chart,Y,WP16; WP18,
+C2_5_high_societal,16,Chart 2.5,"Societal resilience, suffering adults, high-income countries",48,score,,chart,Y,WP16; WP18,
+C3_1_government_2021_a_lot,18,Chart 3.1,"% who say the government cares about them 'a lot', 2021",19,pct,,chart,N,,Countries surveyed in 2025. Includes the Vietnam and Myanmar versions of the question (see README).
+C3_1_government_2021_somewhat,18,Chart 3.1,"% who say the government cares about them 'somewhat', 2021",40,pct,,chart,N,,Countries surveyed in 2025. Includes the Vietnam and Myanmar versions of the question (see README).
+C3_1_government_2021_not_at_all,"iv, 18",Chart 3.1,"% who say the government cares about them 'not at all', 2021",37,pct,,chart,N,,Countries surveyed in 2025. Includes the Vietnam and Myanmar versions of the question (see README).
+C3_1_government_2025_a_lot,"iv, 18",Chart 3.1,"% who say the government cares about them 'a lot', 2025",22,pct,,chart,N,,Includes the Vietnam and Myanmar versions of the question (see README).
+C3_1_government_2025_somewhat,"iv, 18",Chart 3.1,"% who say the government cares about them 'somewhat', 2025",47,pct,,chart,N,,Includes the Vietnam and Myanmar versions of the question (see README).
+C3_1_government_2025_not_at_all,"iv, 18",Chart 3.1,"% who say the government cares about them 'not at all', 2025",29,pct,,chart,N,,Includes the Vietnam and Myanmar versions of the question (see README).
+C3_1_neighbours_2021_a_lot,18,Chart 3.1,"% who say the neighbours care about them 'a lot', 2021",23,pct,,chart,N,,Countries surveyed in 2025. 
+C3_1_neighbours_2021_somewhat,18,Chart 3.1,"% who say the neighbours care about them 'somewhat', 2021",42,pct,,chart,N,,Countries surveyed in 2025. 
+C3_1_neighbours_2021_not_at_all,"iv, 18",Chart 3.1,"% who say the neighbours care about them 'not at all', 2021",32,pct,,chart,N,,Countries surveyed in 2025. 
+C3_1_neighbours_2025_a_lot,"iv, 18",Chart 3.1,"% who say the neighbours care about them 'a lot', 2025",23,pct,,chart,N,,
+C3_1_neighbours_2025_somewhat,"iv, 18",Chart 3.1,"% who say the neighbours care about them 'somewhat', 2025",49,pct,,chart,N,,
+C3_1_neighbours_2025_not_at_all,"iv, 18",Chart 3.1,"% who say the neighbours care about them 'not at all', 2025",26,pct,,chart,N,,
+X50,18,Chapter 3,"Change in % government cares 'a lot', 2021 to 2025 ('nudged up by three points')",3,points,,text,N,,Difference of the rounded Chart 3.1 values.
+X51,18,Chapter 3,"Change in % government cares 'somewhat', 2021 to 2025 ('risen by seven points')",7,points,,text,N,,Difference of the rounded Chart 3.1 values.
+C3_2_gov_a_lot,19,Chart 3.2,Countries where government: 'a lot' 10+ points higher,20,count,0,chart,N,,Differences of the rounded country percentages.
+C3_2_gov_under_10,19,Chart 3.2,Countries where government: gap under 10 points,16,count,0,chart,N,,Differences of the rounded country percentages.
+C3_2_gov_not_at_all,19,Chart 3.2,Countries where government: 'not at all' 10+ points higher,97,count,0,chart,N,,Differences of the rounded country percentages.
+C3_2_nbr_a_lot,19,Chart 3.2,Countries where neighbours: 'a lot' 10+ points higher,21,count,0,chart,N,,Differences of the rounded country percentages.
+C3_2_nbr_under_10,19,Chart 3.2,Countries where neighbours: gap under 10 points,56,count,0,chart,N,,Differences of the rounded country percentages.
+C3_2_nbr_not_at_all,19,Chart 3.2,Countries where neighbours: 'not at all' 10+ points higher,63,count,0,chart,N,,Differences of the rounded country percentages.
+C3_3_government_low,"iv, 20",Chart 3.3,"% who say the government cares about them 'not at all', low-income countries",44,pct,,chart,N,,
+C3_3_government_lower_middle,"iv, 20",Chart 3.3,"% who say the government cares about them 'not at all', lower-middle-income countries",25,pct,,chart,N,,
+C3_3_government_upper_middle,"iv, 20",Chart 3.3,"% who say the government cares about them 'not at all', upper-middle-income countries",24,pct,,chart,N,,
+C3_3_government_high,"iv, 20",Chart 3.3,"% who say the government cares about them 'not at all', high-income countries",45,pct,,chart,N,,
+C3_3_neighbours_low,20,Chart 3.3,"% who say the neighbours care about them 'not at all', low-income countries",33,pct,,chart,N,,
+C3_3_neighbours_lower_middle,20,Chart 3.3,"% who say the neighbours care about them 'not at all', lower-middle-income countries",21,pct,,chart,N,,
+C3_3_neighbours_upper_middle,20,Chart 3.3,"% who say the neighbours care about them 'not at all', upper-middle-income countries",28,pct,,chart,N,,
+C3_3_neighbours_high,20,Chart 3.3,"% who say the neighbours care about them 'not at all', high-income countries",32,pct,,chart,N,,
+C3_4_low,20,Chart 3.4,"% thriving, low-income countries",14,pct,,chart,Y,WP16; WP18,
+C3_4_lower_middle,20,Chart 3.4,"% thriving, lower-middle-income countries",20,pct,,chart,Y,WP16; WP18,
+C3_4_upper_middle,20,Chart 3.4,"% thriving, upper-middle-income countries",37,pct,,chart,Y,WP16; WP18,
+C3_4_high,20,Chart 3.4,"% thriving, high-income countries",44,pct,,chart,Y,WP16; WP18,
+C3_5_government_northern_america,21,Chart 3.5,"% who say the government cares about them 'not at all', Northern America",55,pct,,chart,N,,
+C3_5_neighbours_northern_america,21,Chart 3.5,"% who say their neighbours care about them 'not at all', Northern America",18,pct,,chart,N,,
+C3_5_government_cw_africa,21,Chart 3.5,"% who say the government cares about them 'not at all', Central/Western Africa",52,pct,,chart,N,,
+C3_5_neighbours_cw_africa,21,Chart 3.5,"% who say their neighbours care about them 'not at all', Central/Western Africa",29,pct,,chart,N,,
+C3_5_government_latam,21,Chart 3.5,"% who say the government cares about them 'not at all', Latin America and the Caribbean",51,pct,,chart,N,,
+C3_5_neighbours_latam,21,Chart 3.5,"% who say their neighbours care about them 'not at all', Latin America and the Caribbean",48,pct,,chart,N,,
+C3_5_government_southern_europe,21,Chart 3.5,"% who say the government cares about them 'not at all', Southern Europe",48,pct,,chart,N,,
+C3_5_neighbours_southern_europe,21,Chart 3.5,"% who say their neighbours care about them 'not at all', Southern Europe",33,pct,,chart,N,,
+C3_5_government_southern_africa,21,Chart 3.5,"% who say the government cares about them 'not at all', Southern Africa",42,pct,,chart,N,,
+C3_5_neighbours_southern_africa,21,Chart 3.5,"% who say their neighbours care about them 'not at all', Southern Africa",33,pct,,chart,N,,
+C3_5_government_middle_east,21,Chart 3.5,"% who say the government cares about them 'not at all', Middle East",42,pct,,chart,N,,
+C3_5_neighbours_middle_east,21,Chart 3.5,"% who say their neighbours care about them 'not at all', Middle East",24,pct,,chart,N,,
+C3_5_government_nw_europe,21,Chart 3.5,"% who say the government cares about them 'not at all', Northern/Western Europe",39,pct,,chart,N,,
+C3_5_neighbours_nw_europe,21,Chart 3.5,"% who say their neighbours care about them 'not at all', Northern/Western Europe",23,pct,,chart,N,,
+C3_5_government_eastern_europe,21,Chart 3.5,"% who say the government cares about them 'not at all', Eastern Europe",36,pct,,chart,N,,
+C3_5_neighbours_eastern_europe,21,Chart 3.5,"% who say their neighbours care about them 'not at all', Eastern Europe",51,pct,,chart,N,,
+C3_5_government_anz,21,Chart 3.5,"% who say the government cares about them 'not at all', Australia and New Zealand",35,pct,,chart,N,,
+C3_5_neighbours_anz,21,Chart 3.5,"% who say their neighbours care about them 'not at all', Australia and New Zealand",24,pct,,chart,N,,
+C3_5_government_east_africa,21,Chart 3.5,"% who say the government cares about them 'not at all', Eastern Africa",28,pct,,chart,N,,
+C3_5_neighbours_east_africa,21,Chart 3.5,"% who say their neighbours care about them 'not at all', Eastern Africa",23,pct,,chart,N,,
+C3_5_government_southern_asia,21,Chart 3.5,"% who say the government cares about them 'not at all', Southern Asia",22,pct,,chart,N,,
+C3_5_neighbours_southern_asia,21,Chart 3.5,"% who say their neighbours care about them 'not at all', Southern Asia",21,pct,,chart,N,,
+C3_5_government_southeastern_asia,21,Chart 3.5,"% who say the government cares about them 'not at all', Southeastern Asia",22,pct,,chart,N,,
+C3_5_neighbours_southeastern_asia,21,Chart 3.5,"% who say their neighbours care about them 'not at all', Southeastern Asia",17,pct,,chart,N,,
+C3_5_government_north_africa,21,Chart 3.5,"% who say the government cares about them 'not at all', Northern Africa",18,pct,,chart,N,,
+C3_5_neighbours_north_africa,21,Chart 3.5,"% who say their neighbours care about them 'not at all', Northern Africa",24,pct,,chart,N,,
+C3_5_government_central_asia,21,Chart 3.5,"% who say the government cares about them 'not at all', Central Asia",15,pct,,chart,N,,
+C3_5_neighbours_central_asia,21,Chart 3.5,"% who say their neighbours care about them 'not at all', Central Asia",20,pct,,chart,N,,
+C3_5_government_eastern_asia,21,Chart 3.5,"% who say the government cares about them 'not at all', Eastern Asia",15,pct,,chart,N,,
+C3_5_neighbours_eastern_asia,21,Chart 3.5,"% who say their neighbours care about them 'not at all', Eastern Asia",26,pct,,chart,N,,
+T3_1_government_top10,22,Table 3.1,"Countries in the government 'not at all' top 10 (ISO3, sorted)","BOL, COL, COM, GRC, HND, MDG, PAN, PER, PRY, ROU",text,,table,N,,"Top 10 on rounded percentages, ties at the 10th value included."
+T3_1_government_COM,22,Table 3.1,Comoros: % who say the government cares about them 'not at all',83,pct,,table,N,,
+T3_1_government_BOL,22,Table 3.1,Bolivia: % who say the government cares about them 'not at all',78,pct,,table,N,,
+T3_1_government_PER,22,Table 3.1,Peru: % who say the government cares about them 'not at all',77,pct,,table,N,,
+T3_1_government_PAN,22,Table 3.1,Panama: % who say the government cares about them 'not at all',74,pct,,table,N,,
+T3_1_government_ROU,22,Table 3.1,Romania: % who say the government cares about them 'not at all',73,pct,,table,N,,
+T3_1_government_PRY,22,Table 3.1,Paraguay: % who say the government cares about them 'not at all',73,pct,,table,N,,
+T3_1_government_COL,22,Table 3.1,Colombia: % who say the government cares about them 'not at all',72,pct,,table,N,,
+T3_1_government_HND,22,Table 3.1,Honduras: % who say the government cares about them 'not at all',71,pct,,table,N,,
+T3_1_government_MDG,22,Table 3.1,Madagascar: % who say the government cares about them 'not at all',70,pct,,table,N,,
+T3_1_government_GRC,22,Table 3.1,Greece: % who say the government cares about them 'not at all',70,pct,,table,N,,
+T3_1_neighbours_top10,22,Table 3.1,"Countries in the neighbours 'not at all' top 10 (ISO3, sorted; Mexico and Republic of Congo share the 10th row)","BOL, COG, COL, ECU, GAB, HKG, HND, MDG, MEX, PER, RUS",text,,table,N,,"Top 10 on rounded percentages, ties at the 10th value included."
+T3_1_neighbours_HKG,22,Table 3.1,Hong Kong (S.A.R. of China): % who say their neighbours care about them 'not at all',64,pct,,table,N,,
+T3_1_neighbours_GAB,22,Table 3.1,Gabon: % who say their neighbours care about them 'not at all',61,pct,,table,N,,
+T3_1_neighbours_PER,22,Table 3.1,Peru: % who say their neighbours care about them 'not at all',60,pct,,table,N,,
+T3_1_neighbours_MDG,22,Table 3.1,Madagascar: % who say their neighbours care about them 'not at all',59,pct,,table,N,,
+T3_1_neighbours_BOL,22,Table 3.1,Bolivia: % who say their neighbours care about them 'not at all',59,pct,,table,N,,
+T3_1_neighbours_RUS,22,Table 3.1,Russia: % who say their neighbours care about them 'not at all',59,pct,,table,N,,
+T3_1_neighbours_COL,22,Table 3.1,Colombia: % who say their neighbours care about them 'not at all',56,pct,,table,N,,
+T3_1_neighbours_HND,22,Table 3.1,Honduras: % who say their neighbours care about them 'not at all',55,pct,,table,N,,
+T3_1_neighbours_ECU,22,Table 3.1,Ecuador: % who say their neighbours care about them 'not at all',55,pct,,table,N,,
+T3_1_neighbours_MEX,22,Table 3.1,Mexico: % who say their neighbours care about them 'not at all',54,pct,,table,N,,
+T3_1_neighbours_COG,22,Table 3.1,Republic of Congo: % who say their neighbours care about them 'not at all',54,pct,,table,N,,
+X52,22,Chapter 3,Countries on both Table 3.1 lists ('five appear on both lists'),5,count,0,text,N,,
+C3_6_low_a_lot,23,Chart 3.6,"Household resilience, neighbours care 'a lot', low-income countries",44,score,,chart,N,,
+C3_6_low_somewhat,23,Chart 3.6,"Household resilience, neighbours care 'somewhat', low-income countries",43,score,,chart,N,,
+C3_6_low_not_at_all,23,Chart 3.6,"Household resilience, neighbours care 'not at all', low-income countries",38,score,,chart,N,,
+C3_6_lower_middle_a_lot,23,Chart 3.6,"Household resilience, neighbours care 'a lot', lower-middle-income countries",48,score,,chart,N,,
+C3_6_lower_middle_somewhat,23,Chart 3.6,"Household resilience, neighbours care 'somewhat', lower-middle-income countries",45,score,,chart,N,,
+C3_6_lower_middle_not_at_all,23,Chart 3.6,"Household resilience, neighbours care 'not at all', lower-middle-income countries",42,score,,chart,N,,
+C3_6_upper_middle_a_lot,23,Chart 3.6,"Household resilience, neighbours care 'a lot', upper-middle-income countries",66,score,,chart,N,,
+C3_6_upper_middle_somewhat,23,Chart 3.6,"Household resilience, neighbours care 'somewhat', upper-middle-income countries",63,score,,chart,N,,
+C3_6_upper_middle_not_at_all,23,Chart 3.6,"Household resilience, neighbours care 'not at all', upper-middle-income countries",56,score,,chart,N,,
+C3_6_high_a_lot,23,Chart 3.6,"Household resilience, neighbours care 'a lot', high-income countries",71,score,,chart,N,,
+C3_6_high_somewhat,23,Chart 3.6,"Household resilience, neighbours care 'somewhat', high-income countries",68,score,,chart,N,,
+C3_6_high_not_at_all,23,Chart 3.6,"Household resilience, neighbours care 'not at all', high-income countries",61,score,,chart,N,,
