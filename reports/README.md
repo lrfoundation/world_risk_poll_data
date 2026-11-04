@@ -8,7 +8,7 @@ generated comparison of published and reproduced values.
 ## Reports
 
 All 20 World Risk Poll core and Focus On reports published up to October 2026 are
-reproduced, one folder per report inside one folder per poll wave:
+reproduced. There is one folder per report inside one folder per poll wave:
 
 | Wave | Reports |
 | --- | --- |
@@ -17,9 +17,9 @@ reproduced, one folder per report inside one folder per poll wave:
 | [`WRP_2023/`](WRP_2023/README.md) | 4 core reports (the *World Risk Poll 2024* reports) and 2 Focus On reports |
 | [`WRP_2025/`](WRP_2025/README.md) | 5 core reports (the *World Risk Poll 2026* reports) |
 
-Across the 20 reports, 13,065 published numbers are checked. 11,264 of them (86%)
-match or come within a point. 116 differ, and each one is explained in its report's
-README; many are errors in the report itself. 1,684 need Gallup World Poll data that
+Across the 20 reports, 13,879 published numbers are checked. 11,959 of them (86%)
+match or come within a point. 118 differ, and each one is explained in its report's
+README; many are errors in the report itself. 1,801 need Gallup World Poll data that
 is not public, and 1 needs a safety index that is no longer published. The Python and R
 scripts agree on every value.
 [`REPRODUCTION_SUMMARY.md`](REPRODUCTION_SUMMARY.md) has the result for every report,

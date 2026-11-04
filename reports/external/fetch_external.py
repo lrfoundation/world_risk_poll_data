@@ -136,7 +136,7 @@ def who_seatbelt_laws():
     with tempfile.TemporaryDirectory() as tmp:
         pdf = Path(tmp) / "gsrrs2018.pdf"
         pdf.write_bytes(download(pdf_url))
-        subprocess.run(["pdftotext", "-layout", str(pdf), str(pdf.with_suffix(".txt"))], check=True,
+        subprocess.run(["pdftotext", "-layout", "-enc", "UTF-8", str(pdf), str(pdf.with_suffix(".txt"))], check=True,
                        stderr=subprocess.DEVNULL)
         lines = pdf.with_suffix(".txt").read_text(encoding="utf-8").splitlines()
     start = next(i for i, line in enumerate(lines) if "TABLE A7: SEAT-BELT" in line)

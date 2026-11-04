@@ -3,14 +3,15 @@
 Run from the repository root:
     python reports/WRP_2025/core_a_resilient_life/reproduce.py
 
-The report uses the Resilience Index from the 2021, 2023 and 2025 polls
-(Chapter 1), relates it to Gallup's Life Evaluation Index (Chapter 2), and
-looks at how much people feel their government and neighbours care about
-them (Chapter 3). Each function below computes one chart, table or text
-statement listed in published_figures.csv; see README.md for the method notes.
+The report uses the 2025 data (wave 4), with Resilience Index trends across
+2021, 2023 and 2025. Chapter 2 combines the Resilience Index with Gallup's
+Life Evaluation Index (Cantril ladder), which is not in the public release.
+Each function below computes one chart, table or text statement listed in
+published_figures.csv; see README.md for the method notes.
 """
 
 import sys
+from functools import lru_cache
 from pathlib import Path
 
 import numpy as np
@@ -24,71 +25,73 @@ report = Report(__file__)
 
 # --- Variables -------------------------------------------------------------------
 
-# Resilience Index (0-100) and its four dimensions (0-1 in the data, x 100 here).
-DIMS = {"index": "resilience_index_100", "individual": "resilience_idv", "household": "resilience_hhl",
+# The Resilience Index and its four dimensions: the released 0-1 scores, used x 100.
+DIMS = {"index": "resilience_index", "individual": "resilience_idv", "household": "resilience_hhl",
         "community": "resilience_com", "societal": "resilience_soc"}
-AGENCY = "WP22252"     # could protect yourself or family in a future disaster: 1 = yes
-FINANCE = "WP22228"    # could cover basic needs if income was lost: 2 = a month or more
-NEIGHBOURS = "WP22232"  # neighbours care about you: 1 a lot, 2 somewhat, 3 not at all
-GOVERNMENT = "WP22231_ALL"  # government cares about you (2023, 2025), including Myanmar and Vietnam
-CARE = {"a_lot": 1, "somewhat": 2, "not_at_all": 3}
-DK = [98, 99]  # don't know, refused
-DISCRIMINATION = ["WP22259", "WP22260", "WP22261", "WP22262", "WP22263"]  # skin, religion, nationality, gender, disability
-HARM = {"prolonged_weather": "WP24177", "severe_weather": "WP22445", "traffic": "WP22446", "food": "WP22442",
-        "water": "WP22443", "mental_health": "WP22447", "crime": "WP22444"}  # 1 personally, 2 someone else, 3 both
-
+FOUR = ["individual", "household", "community", "societal"]
 REGION = {1: "east_africa", 2: "cw_africa", 3: "north_africa", 4: "southern_africa", 5: "latam",
-          6: "northern_america", 7: "central_asia", 8: "eastern_asia", 9: "southeastern_asia", 10: "southern_asia",
-          11: "middle_east", 12: "eastern_europe", 13: "nw_europe", 14: "southern_europe", 15: "anz"}
+          6: "northern_america", 7: "central_asia", 8: "eastern_asia", 9: "southeastern_asia",
+          10: "southern_asia", 11: "middle_east", 12: "eastern_europe", 13: "nw_europe",
+          14: "southern_europe", 15: "anz"}
+AFRICA = ["north_africa", "southern_africa", "cw_africa", "east_africa"]
 INCOME = {1: "low", 2: "lower_middle", 3: "upper_middle", 4: "high"}  # 9 = not classified: left out
-AFRICA = {3: "north_africa", 2: "cw_africa", 4: "southern_africa", 1: "east_africa"}
 LE = {1: "thriving", 2: "struggling", 3: "suffering"}
+CARE = {1: "a_lot", 2: "somewhat", 3: "not_at_all"}
+WHO = {"government": "gov", "neighbours": "WP22232"}
+DISC = {"skin": "WP22259", "religion": "WP22260", "nationality": "WP22261", "gender": "WP22262",
+        "disability": "WP22263"}
+PLAN = {2021: "WP22253", 2023: "WP23345", 2025: "WP23345"}  # household disaster plan known to all
+# Harm in the past two years (1 personally, 2 someone you know, 3 both, 4 no), page 1.
+HARM = {"prolonged_weather": "WP24177", "severe_weather": "WP22445", "traffic": "WP22446", "food": "WP22442",
+        "water": "WP22443", "mental_health": "WP22447", "crime": "WP22444"}
+DK = [98, 99]
+SIX = ["GRC", "NZL", "AUS", "NLD", "EST", "FRA"]  # Chart 1.6
+# Country names as printed in Table 3.1 (others use the release's Country name).
+NAME = {"COM": "Comoros", "BOL": "Bolivia", "PER": "Peru", "PAN": "Panama", "ROU": "Romania", "PRY": "Paraguay",
+        "COL": "Colombia", "HND": "Honduras", "MDG": "Madagascar", "GRC": "Greece",
+        "HKG": "Hong Kong (S.A.R. of China)", "GAB": "Gabon", "RUS": "Russia", "ECU": "Ecuador", "MEX": "Mexico",
+        "COG": "Republic of Congo"}
 
-BASE = ["WPID_RANDOM", "COUNTRY_ISO3", "PROJWT", "GlobalRegion", "CountryIncomeLevel", *DIMS.values()]
-d25 = load_wave(2025, BASE + [AGENCY, FINANCE, NEIGHBOURS, GOVERNMENT, "WP22231", "WP23345", *DISCRIMINATION, *HARM.values()])
-d23 = load_wave(2023, BASE + [AGENCY, FINANCE, NEIGHBOURS, GOVERNMENT, "WP23345"])
-d21 = load_wave(2021, BASE + [AGENCY, FINANCE, NEIGHBOURS, "WP22231", "WP22469", "WP22525", "WP22253"])
-d19 = load_wave(2019, ["WPID_RANDOM", "COUNTRY_ISO3", "PROJWT", "GlobalRegion"])
-
-# Trends use the countries surveyed in 2025 in every wave, classified by their 2025
-# region (this is what reproduces Table 1.2 and the 2021 values in Chart 3.1; see README).
-REGION_2025 = d25.groupby("COUNTRY_ISO3")["GlobalRegion"].first()
-C25 = set(REGION_2025.index)
-d21 = d21[d21.COUNTRY_ISO3.isin(C25)].copy()
-d23 = d23[d23.COUNTRY_ISO3.isin(C25)].copy()
-d19 = d19[d19.COUNTRY_ISO3.isin(C25)].copy()
-WAVES = {2021: d21, 2023: d23, 2025: d25}
+BASE = ["WPID_RANDOM", "COUNTRY_ISO3", "Country", "PROJWT", "GlobalRegion", "CountryIncomeLevel", *DIMS.values(),
+        "WP22231", "WP22232", "WP22252", "WP22228", *DISC.values()]
+d25 = load_wave(2025, BASE + ["WP22231_ALL", "WP23345", *HARM.values()])
+d23 = load_wave(2023, BASE + ["WP22231_ALL", "WP23345"])
+d21 = load_wave(2021, BASE + ["WP22525", "WP22469", "WP22253"])
+d19 = load_wave(2019, ["WPID_RANDOM", "COUNTRY_ISO3", "PROJWT", "GlobalRegion"])  # Gallup items only
 
 # --- Derived variables -----------------------------------------------------------
 
-for d in (d19, d21, d23, d25):
-    d["region"] = d.COUNTRY_ISO3.map(REGION_2025)
+for y, d in [(2021, d21), (2023, d23), (2025, d25)]:
+    for k, v in DIMS.items():
+        d[k] = 100 * d[v]  # 0-100, as printed
+    d["region"] = d.GlobalRegion.map(REGION)
+    d["income"] = d.CountryIncomeLevel.map(INCOME)
+    d["plan"] = d[PLAN[y]]
+# Government cares about you: the combined version that adds Myanmar's and
+# Vietnam's own wording (WP22231_ALL in 2023 and 2025; built the same way for 2021).
+d25["gov"] = d25.WP22231_ALL
+d23["gov"] = d23.WP22231_ALL
+d21["gov"] = d21.WP22231.fillna(d21.WP22525).fillna(d21.WP22469)
+d19["region"] = d19.GlobalRegion.map(REGION)
 
-for d in WAVES.values():
-    for key, var in DIMS.items():
-        d[key] = d[var] if key == "index" else 100 * d[var]
-
-# 2021 asked Vietnam and Myanmar about "the authorities" and "the government in power";
-# the combined question matches the 2023 and 2025 WP22231_ALL.
-d21[GOVERNMENT] = d21.WP22231.fillna(d21.WP22469).fillna(d21.WP22525)
-
-# Disaster plan known to all household members: 2021 wording (WP22253), 2023-25 "over 10 years old".
-d21["plan"] = d21.WP22253
-d23["plan"] = d23.WP23345
-d25["plan"] = d25.WP23345
-
-# Country scores (unrounded) for every wave.
-country = {y: pd.DataFrame({k: wmean(d, k, by="COUNTRY_ISO3") for k in DIMS}) for y, d in WAVES.items()}
-
+# Every country in each wave (country-level changes) and, for global and
+# regional trends, the countries surveyed in 2025, as the report does (this
+# reproduces Table 1.2 and Chart 3.1; see README).
+C25 = set(d25.COUNTRY_ISO3)
+ALL = {2021: d21, 2023: d23, 2025: d25}
+TREND = {y: d[d.COUNTRY_ISO3.isin(C25)] for y, d in ALL.items()}
 
 # --- Helpers ---------------------------------------------------------------------
 
 
 def r0(x):
     """Round half up to a whole number, as printed (same rule in the R script)."""
-    if isinstance(x, (pd.Series, pd.DataFrame)):
-        return np.floor(x.astype(float) + 0.5 + 1e-9)
-    return np.floor(np.asarray(x, dtype=float) + 0.5 + 1e-9)
+    return float(np.floor(np.asarray(x, dtype=float) + 0.5 + 1e-9))
+
+
+def rdiff(a, b):
+    """Difference of two figures rounded as printed: how the report states its changes."""
+    return r0(a) - r0(b)
 
 
 def keyed(series, keys):
@@ -96,74 +99,118 @@ def keyed(series, keys):
     return {keys[k]: v for k, v in series.items() if k in keys}
 
 
-def score(iso, dim, year):
-    return country[year].loc[iso, dim]
+def country(df, iso):
+    return df[df.COUNTRY_ISO3 == iso]
 
 
-def rounded_change(iso, dim, start, end):
-    """Change in a country's score between two waves, from the rounded scores."""
-    return float(r0(score(iso, dim, end)) - r0(score(iso, dim, start)))
+def country_means(df, k):
+    return wmean(df, k, by="COUNTRY_ISO3")
 
 
-def country_pct(y, var, codes, iso, exclude=None):
-    return pct(WAVES[y][WAVES[y].COUNTRY_ISO3 == iso], var, codes, exclude=exclude)
+def country_pct(df, var, codes, exclude=None):
+    return pct(df, var, codes, by="COUNTRY_ISO3", exclude=exclude)
 
 
-def pct_change(var_by_year, codes, iso, start, end, exclude=None):
-    """Change in a country's % between two waves, from the rounded percentages."""
-    vals = {y: country_pct(y, var_by_year[y], codes, iso, exclude) for y in (start, end)}
-    return float(r0(vals[end]) - r0(vals[start]))
+def ranks(series, ascending=False):
+    """Rank countries, 1 = highest (ties share the best rank)."""
+    return series.dropna().rank(ascending=ascending, method="min")
 
 
-def harmed(var):
-    """% personally harmed: 'yes, personally' + 'both', each rounded first (as The quiet hazards)."""
-    t = distribution(d25, var)
-    return float(r0(t.get(1, 0.0)) + r0(t.get(3, 0.0)))
+def rsum(df, var, codes):
+    """Sum of the rounded % in each of `codes` ('personally' + 'both', as in The quiet hazards)."""
+    t = distribution(df, var)
+    return sum(r0(t.get(c, 0.0)) for c in codes)
 
 
-def rank_of(series, iso):
-    """Rank of a country, 1 = highest, on unrounded values."""
-    return int(series.dropna().rank(ascending=False, method="min")[iso])
+@lru_cache(maxsize=None)
+def wellbeing():
+    """2025 respondents with Gallup's Life Evaluation Index (WP16 now, WP18 in five years).
 
-
-def life_evaluation(df):
-    """Gallup Life Evaluation Index groups from the Cantril ladder (WP16 now, WP18 in five years).
-
-    1 thriving (now 7+ and future 8+), 3 suffering (both 4 or below),
-    2 struggling (everyone else with valid answers).
+    life_eval: 1 thriving (now 7+ and future 8+), 3 suffering (both 4 or below),
+    2 struggling (everyone else with valid answers). ladder: WP16, 0-10.
     """
-    g = merge_gallup(df, ["WP16", "WP18"])
+    g = merge_gallup(d25, ["WP16", "WP18"])
     now, fut = g.WP16.where(g.WP16 <= 10), g.WP18.where(g.WP18 <= 10)
     g["ladder"] = now
     g["life_eval"] = np.select([(now >= 7) & (fut >= 8), (now <= 4) & (fut <= 4), now.notna() & fut.notna()],
                                [1.0, 3.0, 2.0], default=np.nan)
+    g["thriving"] = np.where(g.life_eval.notna(), 100.0 * (g.life_eval == 1), np.nan)
     return g
 
 
-def care_gaps(var):
-    """Country 'not at all' minus 'a lot', from the rounded percentages (Chart 3.2)."""
-    t = distribution(d25, var, by="COUNTRY_ISO3")
-    return pd.Series(r0(t[3]) - r0(t[1]), index=t.index)
+@lru_cache(maxsize=None)
+def gallup_wave(year, item):
+    """One wave with a Gallup yes/no item (1 = yes) as a 0/100 variable `yes`."""
+    d = {2019: d19, **ALL}[year]
+    g = merge_gallup(d, [item])
+    g["yes"] = np.where(g[item].notna(), 100.0 * (g[item] == 1), np.nan)
+    return g
 
 
-def top_not_at_all(var):
-    """Table 3.1: countries with the highest % 'not at all', ties at the 10th rounded value included."""
-    s = pct(d25, var, [3], by="COUNTRY_ISO3").sort_values(ascending=False)
-    cutoff = r0(s.iloc[9])
-    return s[r0(s) >= cutoff]
+def internet(year):
+    """Gallup WP16056: access to the internet in any way (1 = yes); countries surveyed in 2025."""
+    g = gallup_wave(year, "WP16056")
+    return g[g.COUNTRY_ISO3.isin(C25)]
 
 
-def internet(df):
-    """Gallup WP16056: access to the internet (1 = yes)."""
-    return merge_gallup(df, ["WP16056"])
+def agency_change():
+    """Change in country % who could protect themselves (WP22252 = yes), 2023 to 2025."""
+    a23, a25 = country_pct(d23, "WP22252", [1]), country_pct(d25, "WP22252", [1])
+    common = a23.index.intersection(a25.index)
+    return a25[common] - a23[common]
 
 
-def confidence(df, item):
-    """Gallup confidence items (1 = yes): WP137 military, WP138 judicial system, WP139 national government."""
-    return merge_gallup(df, [item])
+def big(change):
+    """A change counts as 10 points or more when it rounds to 10 or more."""
+    return change.map(r0) >= 10
 
 
-# --- Front matter and executive summary ---------------------------------------------
+def region_change():
+    """Regional Index change 2023 to 2025 (difference of the rounded Table 1.2 scores)."""
+    a, b = wmean(TREND[2023], "index", by="region"), wmean(TREND[2025], "index", by="region")
+    return pd.Series({k: rdiff(b[k], a[k]) for k in b.index})
+
+
+def country_change(k, y0=2021, y1=2025, isos=None):
+    """Country change in a dimension (difference of rounded scores), for `isos` or every
+    country with a score in both waves."""
+    a, b = country_means(ALL[y0], k).dropna(), country_means(ALL[y1], k).dropna()
+    isos = isos or sorted(set(a.index) & set(b.index))
+    return {i: rdiff(b[i], a[i]) for i in isos}
+
+
+def care_gaps(who):
+    """Country % 'not at all' minus % 'a lot', rounded: counts of gaps of 10+ points either way."""
+    t = distribution(d25, WHO[who], by="COUNTRY_ISO3")
+    gap = (t[3.0] - t[1.0]).map(r0)
+    return {"a_lot_higher": int((gap <= -10).sum()), "under_10": int(((gap > -10) & (gap < 10)).sum()),
+            "not_at_all_higher": int((gap >= 10).sum())}
+
+
+def top10(who):
+    """Table 3.1: rows of (countries, unrounded %) for the 10 highest % 'not at all'.
+
+    Countries are ranked on unrounded %; the last row holds every remaining
+    country with the same printed (rounded) value, as the table prints
+    "Mexico, Republic of Congo".
+    """
+    s = country_pct(d25, WHO[who], [3]).sort_values(ascending=False)
+    rows = [([i], s[i]) for i in s.index[:9]]
+    last = [i for i in s.index[9:] if r0(s[i]) == r0(s.iloc[9])]
+    rows.append((last, s.iloc[9]))
+    return rows
+
+
+def name(iso):
+    return NAME.get(iso, d25.loc[d25.COUNTRY_ISO3 == iso, "Country"].iloc[0])
+
+
+def gm(y, k, by=None):
+    """Global (or by-group) mean of a 0-100 measure over the trend countries."""
+    return wmean(TREND[y], k, by=by)
+
+
+# --- Front matter and executive summary -------------------------------------------
 
 
 @report.finding("X01")
@@ -177,457 +224,479 @@ def countries():
 
 
 @report.finding("X03")
-def index_2025():
-    return wmean(d25, "index")
+def care_a_lot():
+    return {"government": pct(d25, "gov", [1]), "neighbours": pct(d25, "WP22232", [1])}
 
 
-def global_rounded(dim, year):
-    return float(r0(wmean(WAVES[year], dim)))
-
-
-@report.finding("X04")
-def index_change_2021_2025():
-    return global_rounded("index", 2025) - global_rounded("index", 2021)
-
-
-@report.finding("X05")
-def individual_change_2023_2025():
-    return global_rounded("individual", 2025) - global_rounded("individual", 2023)
-
-
-@report.finding("X06")
-def individual_change_2021_2023():
-    return global_rounded("individual", 2023) - global_rounded("individual", 2021)
-
-
-@report.finding("X07")
-def household_change():
-    return global_rounded("household", 2025) - global_rounded("household", 2023)
-
-
-@report.finding("X08")
-def community_change():
-    return global_rounded("community", 2025) - global_rounded("community", 2023)
-
-
-for _fid, _iso in [("X09", "GRC"), ("X10", "NZL"), ("X11", "AUS"), ("X12", "NLD"), ("X13", "EST"), ("X14", "FRA")]:
-    report.finding(_fid)(lambda iso=_iso: rounded_change(iso, "societal", 2021, 2025))
-
-
-def table_1_2():
-    """Resilience Index by region (2025 classification) in each wave."""
-    return pd.DataFrame({y: wmean(d, "index", by="region") for y, d in WAVES.items()})
-
-
-@report.finding("X15")
-def region_change_2023_2025():
-    t = table_1_2()
-    return keyed(r0(t[2025]) - r0(t[2023]), REGION)
-
-
-@report.finding("X16")
-def household_change_africa():
-    return {iso: rounded_change(iso, "household", 2021, 2025) for iso in ["DZA", "NGA", "KEN", "EGY", "UGA"]}
-
-
-def table_1_3():
-    """% with internet access in 2019 and 2025, by African region and globally (countries surveyed in 2025)."""
-    out = {}
-    for year, d in ((2019, d19), (2025, d25)):
-        g = internet(d[d.COUNTRY_ISO3.isin(C25)])
-        by_region = pct(g, "WP16056", [1], by="region")
-        for code, key in AFRICA.items():
-            out[(key, year)] = by_region[code]
-        out[("global", year)] = pct(g, "WP16056", [1])
-    return out
-
-
-@report.finding("X17")
-def internet_change():
-    t = table_1_3()
-    return {key: float(r0(t[(key, 2025)]) - r0(t[(key, 2019)])) for key in ["north_africa", "cw_africa", "southern_africa"]}
-
-
-def agency_change_2023_2025():
-    a23 = pct(d23, AGENCY, [1], by="COUNTRY_ISO3")
-    a25 = pct(d25, AGENCY, [1], by="COUNTRY_ISO3")
-    return (a25 - a23).dropna()
-
-
-@report.finding("X18")
-def agency_increases():
-    # A change counts when it rounds to 10 points or more.
-    return int((r0(agency_change_2023_2025()) >= 10).sum())
-
-
-@report.finding("X19")
-def agency_decreases():
-    return int((r0(-agency_change_2023_2025()) >= 10).sum())
-
-
-def life_eval_index(dim="index", by=None):
-    g = life_evaluation(d25)
-    keys = ["CountryIncomeLevel", "life_eval"] if by == "income" else "life_eval"
-    return wmean(g, dim, by=keys)
-
-
-@report.finding("X20")
-def thriving_suffering_gap():
-    s = life_eval_index()
-    return float(r0(s[1]) - r0(s[3]))
-
-
-@report.finding("X21")
-def smallest_income_gap():
-    s = life_eval_index(by="income").unstack()
-    gaps = r0(s.loc[list(INCOME), 1]) - r0(s.loc[list(INCOME), 3])
-    return float(gaps.min())
-
-
-def chart_2_3():
-    """Resilience Index by present life rating (0-10) and income group (no printed values)."""
-    g = life_evaluation(d25)
-    return wmean(g, "index", by=["CountryIncomeLevel", "ladder"]).unstack()
-
-
-@report.finding("X22")
-def bottom_of_ladder():
-    g = life_evaluation(d25)
-    low = g[g.ladder <= 2]
-    return keyed(wmean(low, "index", by="CountryIncomeLevel"), INCOME)
-
-
-@report.finding("X23")
-def ten_below_nine():
-    t = chart_2_3()
-    return int(sum(t.loc[code, 10] < t.loc[code, 9] for code in INCOME))
-
-
-@report.finding("C2_3")
-def chart_2_3_values():
-    t = chart_2_3().loc[list(INCOME)]
-    return {(INCOME[i], int(r)): v for (i, r), v in t.stack().items()}
+report.finding("X04")(lambda: gm(2025, "index"))
+report.finding("X05")(lambda: rdiff(gm(2025, "index"), gm(2023, "index")))
+report.finding("X06")(lambda: rdiff(gm(2025, "index"), gm(2021, "index")))
+report.finding("X07")(lambda: gm(2021, "index"))
+report.finding("X08")(lambda: gm(2025, "individual"))
+report.finding("X09")(lambda: rdiff(gm(2025, "individual"), gm(2023, "individual")))
+report.finding("X10")(lambda: rdiff(gm(2023, "individual"), gm(2021, "individual")))
+report.finding("X11")(lambda: gm(2021, "individual"))
+report.finding("X12")(lambda: gm(2023, "individual"))
+report.finding("X13")(lambda: gm(2025, "household"))
+report.finding("X14")(lambda: rdiff(gm(2025, "household"), gm(2023, "household")))
+report.finding("X15")(lambda: gm(2025, "community"))
+report.finding("X16")(lambda: rdiff(gm(2025, "community"), gm(2023, "community")))
+report.finding("X17")(lambda: int(big(agency_change()).sum()))
+report.finding("X18")(lambda: int(big(-agency_change()).sum()))
+report.finding("X19")(lambda: int(big(-agency_change())[["IND", "PAK", "IDN"]].sum()))
+report.finding("X20")(lambda: gm(2025, "societal"))
+report.finding("X21")(lambda: gm(2023, "societal"))
+report.finding("X22")(lambda: gm(2021, "societal"))
+report.finding("X23")(lambda: country_change("societal", isos=SIX))
 
 
 @report.finding("X24")
-def government_not_at_all_change():
-    return float(r0(pct(d25, GOVERNMENT, [3])) - r0(pct(d21, GOVERNMENT, [3])))
+def african_region_changes():
+    c = region_change()
+    return {k: c[k] for k in [*AFRICA, "latam"]}
 
 
 @report.finding("X25")
-def government_gap_not_at_all():
-    return int((care_gaps(GOVERNMENT) >= 10).sum())
+def africa_largest_gains():
+    rank = region_change().rank(ascending=False, method="min")
+    return int((rank[AFRICA] <= 4).sum())
 
 
-@report.finding("X26")
-def government_gap_a_lot():
-    return int((care_gaps(GOVERNMENT) <= -10).sum())
+report.finding("X26")(lambda: country_change("household", isos=["DZA", "NGA", "KEN", "EGY", "UGA"]))
 
 
-def chart_3_6():
-    t = wmean(d25, "household", by=["CountryIncomeLevel", NEIGHBOURS]).unstack()
-    return t.loc[list(INCOME), [1, 2, 3]]
+def table_1_3():
+    out = {}
+    for y in (2019, 2025):
+        g = internet(y)
+        out.update({f"{k}_{y}": v for k, v in keyed(wmean(g, "yes", by="GlobalRegion"), REGION).items() if k in AFRICA})
+        out[f"global_{y}"] = wmean(g, "yes")
+    return out
 
 
 @report.finding("X27")
-def care_household_gap():
-    t = chart_3_6()
-    return {INCOME[i]: float(r0(t.loc[i, 1]) - r0(t.loc[i, 3])) for i in INCOME}
+def internet_change():
+    t = table_1_3()
+    return {k: rdiff(t[f"{k}_2025"], t[f"{k}_2019"]) for k in ["north_africa", "cw_africa", "southern_africa"]}
 
 
-@report.finding("X28")
+def by_life_eval(k, df=None):
+    g = wellbeing() if df is None else df
+    return keyed(wmean(g, k, by="life_eval"), LE)
+
+
+report.finding("X28")(lambda: by_life_eval("index"))
+report.finding("X29")(lambda: by_life_eval("individual"))
+
+
+@report.finding("X30")
+def individual_ratio():
+    t = by_life_eval("individual")
+    return t["thriving"] / t["suffering"]
+
+
+@report.finding("X31")
+def low_ladder_resilience():
+    g = wellbeing()
+    return keyed(wmean(g[g.ladder <= 2], "index", by="CountryIncomeLevel"), INCOME)
+
+
+def chart_2_3():
+    g = wellbeing()
+    t = wmean(g, "index", by=["CountryIncomeLevel", "ladder"])
+    return {(INCOME[i], int(r)): v for (i, r), v in t.items() if i in INCOME}
+
+
+@report.finding("X32")
+def ten_below_nine():
+    t = chart_2_3()
+    return sum(t[(inc, 10)] < t[(inc, 9)] for inc in INCOME.values())
+
+
+def care(df, who):
+    return keyed(distribution(df, WHO[who]), CARE)
+
+
+report.finding("X33")(lambda: care(d25, "government"))
+report.finding("X34")(lambda: rdiff(care(TREND[2025], "government")["not_at_all"],
+                                    care(TREND[2021], "government")["not_at_all"]))
+
+
+@report.finding("X35")
+def neighbours_care():
+    a, b = care(TREND[2021], "neighbours"), care(TREND[2025], "neighbours")
+    return {"a_lot_2025": b["a_lot"], "not_at_all_2025": b["not_at_all"], "not_at_all_2021": a["not_at_all"],
+            "a_lot_2021": a["a_lot"], "somewhat_2021": a["somewhat"], "somewhat_2025": b["somewhat"]}
+
+
+@report.finding("X36")
+def waves_not_at_all_exceeds():
+    return sum(care(TREND[y], "government")["not_at_all"] > care(TREND[y], "government")["a_lot"] for y in TREND)
+
+
+report.finding("X37")(lambda: care_gaps("government")["not_at_all_higher"])
+report.finding("X38")(lambda: care_gaps("government")["a_lot_higher"])
+report.finding("X39")(lambda: keyed(pct(d25, "gov", [3], by="CountryIncomeLevel"), INCOME))
+report.finding("X40")(lambda: pct(d25[d25.CountryIncomeLevel.isin([2, 3])], "gov", [3]))
+
+
+def household_by_neighbour_care():
+    t = wmean(d25, "household", by=["CountryIncomeLevel", "WP22232"])
+    return {(INCOME[i], CARE[c]): v for (i, c), v in t.items() if i in INCOME and c in CARE}
+
+
+def household_care_gaps():
+    t = household_by_neighbour_care()
+    return {inc: rdiff(t[(inc, "a_lot")], t[(inc, "not_at_all")]) for inc in INCOME.values()}
+
+
+report.finding("X41")(household_care_gaps)
+
+
+@report.finding("X42")
 def care_correlation():
-    gov = pct(d25, GOVERNMENT, [3], by="COUNTRY_ISO3")
-    nbr = pct(d25, NEIGHBOURS, [3], by="COUNTRY_ISO3")
-    both = pd.concat([gov, nbr], axis=1).dropna()
-    return both.iloc[:, 0].corr(both.iloc[:, 1])
+    g, n = country_pct(d25, "gov", [3]), country_pct(d25, "WP22232", [3])
+    j = pd.concat([g, n], axis=1).dropna()
+    return float(np.corrcoef(j.iloc[:, 0], j.iloc[:, 1])[0, 1])
 
 
-# --- Chapter 1 -------------------------------------------------------------------
+# --- Chapter 1 ---------------------------------------------------------------------
 
 
-@report.finding("X29")
-def harm_2025():
-    return {key: harmed(var) for key, var in HARM.items()}
+@report.finding("X43")
+def stories():
+    return int(sum(d[FOUR].notna().all(axis=1).sum() for d in ALL.values()))
+
+
+report.finding("X44")(lambda: {k: rsum(d25, v, [1, 3]) for k, v in HARM.items()})
 
 
 @report.finding("C1_1")
 def chart_1_1():
-    return {(k, y): wmean(d, k) for k in DIMS for y, d in WAVES.items()}
+    return {f"{k}_{y}": gm(y, k) for k in DIMS for y in TREND}
+
+
+def by_income(k):
+    return keyed(wmean(d25, k, by="CountryIncomeLevel"), INCOME)
 
 
 @report.finding("C1_2")
 def chart_1_2():
-    return {(k, INCOME[i]): v for k in DIMS for i, v in wmean(d25, k, by="CountryIncomeLevel").items() if i in INCOME}
+    return {f"{k}_{inc}": v for k in DIMS for inc, v in by_income(k).items()}
 
 
-@report.finding("X30")
-def individual_high_vs_upper_middle():
-    s = wmean(d25, "individual", by="CountryIncomeLevel")
-    return float(r0(s[4]) - r0(s[3]))
+report.finding("X45")(lambda: by_income("index"))
+report.finding("X46")(lambda: by_income("individual"))
+report.finding("X47")(lambda: rdiff(by_income("individual")["high"], by_income("individual")["upper_middle"]))
+report.finding("X48")(lambda: {inc: by_income("individual")["high"] / by_income("individual")[inc]
+                               for inc in ["lower_middle", "low"]})
+report.finding("X49")(lambda: by_income("household"))
+report.finding("X50")(lambda: by_income("community"))
+report.finding("X51")(lambda: by_income("societal"))
+
+
+@report.finding("X101")
+def high_income_not_top():
+    """Dimensions where high income's Chart 1.2 score (rounded) is below another group's (page 9)."""
+    return sum(r0(v["high"]) < max(r0(x) for x in v.values()) for v in (by_income(k) for k in FOUR))
 
 
 @report.finding("T1_2")
-def table_1_2_values():
-    t = table_1_2()
-    return {(REGION[r], y): t.loc[r, y] for r in REGION for y in WAVES}
+def table_1_2():
+    return {f"{r}_{y}": v for y in TREND for r, v in keyed(gm(y, "index", by="GlobalRegion"), REGION).items()}
 
 
-@report.finding("X31")
-def individual_change_2021_2025():
-    return {iso: rounded_change(iso, "individual", 2021, 2025) for iso in ["POL", "SVK", "HRV", "BGR", "BIH", "MAR"]}
+report.finding("X52")(lambda: {k: region_change()[k] for k in ["southern_asia", "eastern_asia"]})
+report.finding("X53")(lambda: int((region_change() <= -2).sum()))
+report.finding("X54")(lambda: country_change("individual", isos=["POL", "SVK", "HRV", "BGR", "BIH"]))
 
 
-@report.finding("X32")
+@report.finding("X55")
+def morocco():
+    a, b = wmean(country(d21, "MAR"), "individual"), wmean(country(d25, "MAR"), "individual")
+    return {"change": rdiff(b, a), "2021": a, "2025": b}
+
+
+@report.finding("X56")
 def larger_fall_than_poland():
-    change = (country[2025]["individual"] - country[2021]["individual"]).dropna()
-    return int((change < change["POL"]).sum())
+    c = pd.Series(country_change("individual"))
+    return int((c < c["POL"]).sum())
 
 
-@report.finding("X33")
-def morocco_individual_2021():
-    return score("MAR", "individual", 2021)
-
-
-@report.finding("X34")
-def morocco_individual_2025():
-    return score("MAR", "individual", 2025)
-
-
-@report.finding("X35")
-def agency_change_2021_2025():
-    return {iso: pct_change({y: AGENCY for y in WAVES}, [1], iso, 2021, 2025) for iso in ["SVK", "BGR", "HRV", "POL", "BIH"]}
-
-
-@report.finding("X36")
-def household_range():
-    return {iso: score(iso, "household", 2025) for iso in ["DZA", "EGY"]}
-
-
-@report.finding("X37")
-def finance_change():
-    # Among those giving an answer: with don't know and refused in the base the changes are
-    # 24, 16, 5, 6 and 6 points (see README).
-    return {iso: pct_change({y: FINANCE for y in WAVES}, [2], iso, 2021, 2025, DK) for iso in ["DZA", "EGY", "UGA", "KEN", "NGA"]}
-
-
-@report.finding("X38")
-def plan_change():
-    # Among those giving an answer, as for X37 (Algeria is 31 points with don't know in the base).
-    return {iso: pct_change({y: "plan" for y in WAVES}, [1], iso, 2021, 2025, DK) for iso in ["DZA", "KEN"]}
-
-
-@report.finding("T1_3")
-def table_1_3_values():
-    return table_1_3()
-
-
-@report.finding("X39")
-def ukraine():
-    out = {f"community_{y}": score("UKR", "community", y) for y in WAVES}
-    out["individual_2025"] = score("UKR", "individual", 2025)
-    return out
-
-
-@report.finding("X40")
-def ukraine_neighbours():
-    return {y: country_pct(y, NEIGHBOURS, [1, 2], "UKR") for y in WAVES}
-
-
-@report.finding("X41")
-def us_scores():
-    return {"USA_individual": score("USA", "individual", 2025), "USA_household": score("USA", "household", 2025),
-            "SWE_individual": score("SWE", "individual", 2025), "VNM_household": score("VNM", "household", 2025),
-            "USA_community": score("USA", "community", 2025)}
-
-
-@report.finding("C1_7")
-def us_ranks():
-    return {k: rank_of(country[2025][k], "USA") for k in ["individual", "household", "community", "societal"]}
-
-
-@report.finding("X42")
-def societal_ranked():
-    return int(country[2025]["societal"].notna().sum())
-
-
-def us_confidence(item, year):
-    d = {2019: d19, 2025: d25}[year]
-    return pct(confidence(d[d.COUNTRY_ISO3 == "USA"], item), item, [1])
-
-
-@report.finding("X43")
-def us_confidence_items():
-    return {"national_government": us_confidence("WP139", 2025), "judicial": us_confidence("WP138", 2025),
-            "military_2025": us_confidence("WP137", 2025), "military_2019": us_confidence("WP137", 2019)}
-
-
-@report.finding("X44")
-def us_government_a_lot():
-    return country_pct(2025, "WP22231", [1], "USA")
-
-
-@report.finding("X45")
-def us_discrimination():
-    return {v: country_pct(2025, v, [1], "USA") for v in DISCRIMINATION}
-
-
-@report.finding("X46")
-def us_discrimination_rank():
-    return {v: rank_of(pct(d25, v, [1], by="COUNTRY_ISO3"), "USA") for v in ["WP22259", "WP22261", "WP22262"]}
+@report.finding("X57")
+def agency_eastern_europe():
+    a, b = country_pct(d21, "WP22252", [1]), country_pct(d25, "WP22252", [1])
+    return {i: rdiff(b[i], a[i]) for i in ["SVK", "BGR", "HRV", "POL", "BIH"]}
 
 
 @report.finding("C1_3")
-def chart_1_3():
-    """Individual resilience in five Eastern European countries (no printed values)."""
-    return {(iso, y): score(iso, "individual", y) for iso in ["POL", "SVK", "HRV", "BGR", "BIH"] for y in WAVES}
+def chart_1_3():  # line chart with no printed values: written to output/ only
+    return {f"{i}_{y}": wmean(country(d, i), "individual") for i in ["POL", "SVK", "HRV", "BGR", "BIH"]
+            for y, d in ALL.items()}
+
+
+report.finding("X58")(lambda: {i: wmean(country(d25, i), "household") for i in ["DZA", "EGY"]})
 
 
 @report.finding("C1_4")
-def chart_1_4():
-    """Household resilience in five African countries (no printed values)."""
-    return {(iso, y): score(iso, "household", y) for iso in ["DZA", "NGA", "KEN", "EGY", "UGA"] for y in WAVES}
+def chart_1_4():  # line chart with no printed values: written to output/ only
+    return {f"{i}_{y}": wmean(country(d, i), "household") for i in ["DZA", "NGA", "KEN", "EGY", "UGA"]
+            for y, d in ALL.items()}
+
+
+@report.finding("X59")
+def financial_change():
+    # % who could cover basic needs for a month or more; don't know and refused excluded.
+    a, b = (country_pct(d, "WP22228", [2], exclude=DK) for d in (d21, d25))
+    return {i: rdiff(b[i], a[i]) for i in ["DZA", "EGY", "UGA", "KEN", "NGA"]}
+
+
+@report.finding("X60")
+def plan_change():
+    a, b = (country_pct(d, "plan", [1], exclude=DK) for d in (d21, d25))
+    return {i: rdiff(b[i], a[i]) for i in ["DZA", "KEN"]}
+
+
+report.finding("T1_3")(table_1_3)
+report.finding("X61")(lambda: {str(y): wmean(country(d, "UKR"), "community") for y, d in ALL.items()})
+report.finding("X62")(lambda: wmean(country(d25, "UKR"), "individual"))
+report.finding("X63")(lambda: {str(y): pct(country(d, "UKR"), "WP22232", [1, 2]) for y, d in ALL.items()})
 
 
 @report.finding("C1_5")
-def chart_1_5():
-    """Ukraine: Resilience Index and dimensions (no printed values)."""
-    return {(k, y): score("UKR", k, y) for k in DIMS for y in WAVES}
+def chart_1_5():  # line chart with no printed values: written to output/ only
+    return {f"{k}_{y}": wmean(country(d, "UKR"), k) for k in DIMS for y, d in ALL.items()}
 
 
 @report.finding("C1_6")
-def chart_1_6():
-    """Societal resilience in six high-income countries (no printed values)."""
-    return {(iso, y): score(iso, "societal", y) for iso in ["GRC", "NZL", "AUS", "NLD", "EST", "FRA"] for y in WAVES}
+def chart_1_6():  # line chart with no printed values: written to output/ only
+    return {f"{i}_{y}": wmean(country(d, i), "societal") for i in SIX for y, d in ALL.items()}
 
 
-# --- Chapter 2 (Gallup Life Evaluation Index) -------------------------------------------
+@report.finding("X64")
+def six_government_care_fell():
+    a, b = (country_pct(d[d.COUNTRY_ISO3.isin(SIX)], "gov", [1, 2]) for d in (d21, d25))
+    return int((b[SIX] < a[SIX]).sum())
+
+
+def confidence_fell(item, isos):
+    a, b = (wmean(gallup_wave(y, item), "yes", by="COUNTRY_ISO3") for y in (2021, 2025))
+    return int((b[isos] < a[isos]).sum())
+
+
+report.finding("X65")(lambda: confidence_fell("WP139", SIX))
+report.finding("X66")(lambda: confidence_fell("WP137", ["AUS", "GRC", "NZL", "NLD"]))
+report.finding("X67")(lambda: confidence_fell("WP138", ["AUS", "GRC"]))
+
+
+@report.finding("X68")
+def australia_discrimination():
+    return sum(pct(country(d25, "AUS"), DISC[k], [1]) > pct(country(d21, "AUS"), DISC[k], [1])
+               for k in ["skin", "gender", "disability"])
+
+
+def dim_ranks(k):
+    return ranks(country_means(d25, k))
+
+
+report.finding("X69")(lambda: {k: wmean(country(d25, "USA"), k) for k in ["individual", "household", "community"]})
+report.finding("X70")(lambda: {"SWE": wmean(country(d25, "SWE"), "individual"),
+                               "VNM": wmean(country(d25, "VNM"), "household")})
+report.finding("X71")(lambda: {k: dim_ranks(k)["USA"] for k in FOUR})
+report.finding("C1_7")(lambda: {k: dim_ranks(k)["USA"] for k in FOUR})
+report.finding("X72")(lambda: len(dim_ranks("societal")))
+report.finding("X73")(lambda: 100 * dim_ranks("community")["USA"] / len(dim_ranks("community")))
+
+
+@report.finding("X74")
+def micro_macro_split():
+    r = pd.DataFrame({k: dim_ranks(k) for k in FOUR}).dropna()
+    split = r.societal - r[["individual", "household"]].min(axis=1)
+    return split.rank(ascending=False, method="min")["USA"]
+
+
+def us_confidence(item, year=2025):
+    return wmean(country(gallup_wave(year, item), "USA"), "yes")
+
+
+def bottom_share(series, iso="USA"):
+    """Position from the bottom as % of countries (rank 1 = lowest)."""
+    r = ranks(series, ascending=True)
+    return 100 * r[iso] / len(r)
+
+
+def top_share(series, iso="USA"):
+    r = ranks(series)
+    return 100 * r[iso] / len(r)
+
+
+report.finding("X75")(lambda: {"national_government": us_confidence("WP139"), "judiciary": us_confidence("WP138")})
+report.finding("X76")(lambda: {k: bottom_share(wmean(gallup_wave(2025, it), "yes", by="COUNTRY_ISO3"))
+                               for k, it in [("national_government", "WP139"), ("judiciary", "WP138")]})
+report.finding("X77")(lambda: pct(country(d25, "USA"), "gov", [1]))
+report.finding("X78")(lambda: bottom_share(country_pct(d25, "gov", [1])))
+report.finding("X79")(lambda: {k: pct(country(d25, "USA"), DISC[k], [1])
+                               for k in ["religion", "disability", "skin", "nationality", "gender"]})
+report.finding("X80")(lambda: {k: top_share(country_pct(d25, DISC[k], [1])) for k in ["religion", "disability"]})
+report.finding("X81")(lambda: {k: ranks(country_pct(d25, DISC[k], [1]))["USA"]
+                               for k in ["skin", "nationality", "gender"]})
+
+
+@report.finding("X82")
+def us_military():
+    a, b = us_confidence("WP137", 2019), us_confidence("WP137", 2025)
+    return {"2025": b, "2019": a, "change": rdiff(b, a)}
+
+
+# --- Chapter 2 (Gallup Life Evaluation Index) ----------------------------------------
+
+
+@report.finding("X83")
+def cover_gaps():
+    return {k: rdiff(by_life_eval(k)["thriving"], by_life_eval(k)["suffering"]) for k in FOUR}
+
+
+report.finding("X84")(lambda: rdiff(by_life_eval("index")["thriving"], by_life_eval("index")["suffering"]))
+
+
+def chart_2_1_values():
+    g = wellbeing()
+    t = wmean(g, "index", by=["CountryIncomeLevel", "life_eval"])
+    out = {f"{INCOME[i]}_{LE[e]}": v for (i, e), v in t.items() if i in INCOME}
+    out.update({f"global_{k}": v for k, v in by_life_eval("index").items()})
+    return out
 
 
 @report.finding("C2_1")
 def chart_2_1():
-    by_income = life_eval_index(by="income")
-    out = {(INCOME[i], LE[le]): v for (i, le), v in by_income.items() if i in INCOME and le in LE}
-    out.update({("global", LE[le]): v for le, v in life_eval_index().items() if le in LE})
-    return out
+    return chart_2_1_values()
+
+
+@report.finding("X85")
+def smallest_income_gap():
+    t = chart_2_1_values()
+    return min(rdiff(t[f"{inc}_thriving"], t[f"{inc}_suffering"]) for inc in INCOME.values())
 
 
 def country_wellbeing():
-    g = life_evaluation(d25)
-    return pd.DataFrame({"thriving": pct(g[g.life_eval.notna()], "life_eval", [1], by="COUNTRY_ISO3"),
-                         "ladder": wmean(g, "ladder", by="COUNTRY_ISO3"),
-                         "index": country[2025]["index"]})
-
-
-@report.finding("X47")
-def ladder_index_correlation():
-    t = country_wellbeing().dropna()
-    return t.ladder.corr(t["index"])
-
-
-@report.finding("X48")
-def median_index():
-    return country[2025]["index"].median()
-
-
-@report.finding("X49")
-def median_thriving():
-    return country_wellbeing().thriving.median()
+    g = wellbeing()
+    return pd.DataFrame({"thriving": wmean(g, "thriving", by="COUNTRY_ISO3"),
+                         "index": wmean(g, "index", by="COUNTRY_ISO3")})
 
 
 @report.finding("C2_2")
-def chart_2_2():
-    """Country % thriving against the Resilience Index (no printed values)."""
+def chart_2_2():  # scatter with no printed values: written to output/ only
+    t = country_wellbeing()
+    return {f"{c}_{iso}": v for iso, row in t.iterrows() for c, v in row.items()}
+
+
+@report.finding("X86")
+def thriving_correlation():
     t = country_wellbeing().dropna()
-    return {(iso, k): t.loc[iso, k] for iso in t.index for k in ["thriving", "index"]}
+    return float(np.corrcoef(t.thriving, t["index"])[0, 1])
+
+
+report.finding("X87")(lambda: float(country_wellbeing().thriving.dropna().median()))
+report.finding("X88")(lambda: float(country_means(d25, "index").dropna().median()))
+
+
+@report.finding("C2_3")
+def chart_2_3_values():  # line chart with no printed values: written to output/ only
+    return {f"{inc}_{r}": v for (inc, r), v in chart_2_3().items()}
 
 
 @report.finding("C2_4")
 def chart_2_4():
-    return {(k, LE[le]): v for k in ["individual", "household", "community", "societal"]
-            for le, v in life_eval_index(k).items() if le in LE}
+    return {f"{k}_{e}": v for k in FOUR for e, v in by_life_eval(k).items()}
+
+
+report.finding("X89")(lambda: by_life_eval("household"))
 
 
 @report.finding("C2_5")
 def chart_2_5():
-    g = life_evaluation(d25)
-    suffering = g[g.life_eval == 3]
-    return {(INCOME[i], k): v for k in ["individual", "household", "community", "societal"]
-            for i, v in wmean(suffering, k, by="CountryIncomeLevel").items() if i in INCOME}
+    g = wellbeing()
+    g = g[g.life_eval == 3]
+    return {f"{inc}_{k}": v for k in FOUR for inc, v in keyed(wmean(g, k, by="CountryIncomeLevel"), INCOME).items()}
 
 
-# --- Chapter 3 -------------------------------------------------------------------
+# --- Chapter 3 ---------------------------------------------------------------------
+
+
+@report.finding("X90")
+def cover_dots():
+    t = distribution(d25, "gov")  # WP22231_ALL: 99 = don't know or refused
+    return {"not_at_all": t[3.0], "dk": t[99.0], "somewhat": t[2.0], "a_lot": t[1.0]}
+
+
+@report.finding("X91")
+def government_care_2021():
+    a, b = care(TREND[2021], "government"), care(TREND[2025], "government")
+    return {"a_lot_2021": a["a_lot"], "a_lot_change": rdiff(b["a_lot"], a["a_lot"]),
+            "somewhat_2021": a["somewhat"], "somewhat_change": rdiff(b["somewhat"], a["somewhat"])}
 
 
 @report.finding("C3_1")
-def chart_3_1():
-    out = {}
-    for who, var in (("government", GOVERNMENT), ("neighbours", NEIGHBOURS)):
-        for y in (2021, 2025):
-            for key, code in CARE.items():
-                out[(who, y, key)] = pct(WAVES[y], var, [code])
-    return out
+def chart_3_1():  # 2023 is plotted but not labelled: written to output/ only
+    return {f"{who}_{y}_{k}": v for who in WHO for y in TREND for k, v in care(TREND[y], who).items()}
 
 
-@report.finding("X50")
-def government_a_lot_change():
-    return float(r0(pct(d25, GOVERNMENT, [1])) - r0(pct(d21, GOVERNMENT, [1])))
-
-
-@report.finding("X51")
-def government_somewhat_change():
-    return float(r0(pct(d25, GOVERNMENT, [2])) - r0(pct(d21, GOVERNMENT, [2])))
-
-
-@report.finding("C3_2")
-def chart_3_2():
-    out = {}
-    for who, var in (("gov", GOVERNMENT), ("nbr", NEIGHBOURS)):
-        g = care_gaps(var)
-        out[f"{who}_a_lot"] = int((g <= -10).sum())
-        out[f"{who}_under_10"] = int(((g > -10) & (g < 10)).sum())
-        out[f"{who}_not_at_all"] = int((g >= 10).sum())
-    return out
-
-
-@report.finding("C3_3")
-def chart_3_3():
-    return {(who, INCOME[i]): v for who, var in (("government", GOVERNMENT), ("neighbours", NEIGHBOURS))
-            for i, v in pct(d25, var, [3], by="CountryIncomeLevel").items() if i in INCOME}
+report.finding("X92")(lambda: {"government_under_10": care_gaps("government")["under_10"],
+                               "neighbours_not_at_all_higher": care_gaps("neighbours")["not_at_all_higher"],
+                               "neighbours_a_lot_higher": care_gaps("neighbours")["a_lot_higher"]})
+report.finding("C3_2")(lambda: {f"{who}_{k}": v for who in WHO for k, v in care_gaps(who).items()})
+report.finding("X93")(lambda: keyed(pct(d25, "WP22232", [3], by="CountryIncomeLevel"), INCOME))
+report.finding("C3_3")(lambda: {f"{who}_{inc}": v for who, var in WHO.items()
+                                for inc, v in keyed(pct(d25, var, [3], by="CountryIncomeLevel"), INCOME).items()})
 
 
 @report.finding("C3_4")
 def chart_3_4():
-    g = life_evaluation(d25)
-    return keyed(pct(g[g.life_eval.notna()], "life_eval", [1], by="CountryIncomeLevel"), INCOME)
+    return keyed(wmean(wellbeing(), "thriving", by="CountryIncomeLevel"), INCOME)
 
 
-@report.finding("C3_5")
-def chart_3_5():
-    return {(who, REGION[r]): v for who, var in (("government", GOVERNMENT), ("neighbours", NEIGHBOURS))
-            for r, v in pct(d25, var, [3], by="GlobalRegion").items() if r in REGION}
+def by_region(who):
+    return keyed(pct(d25, WHO[who], [3], by="GlobalRegion"), REGION)
+
+
+report.finding("X94")(lambda: {f"{who}_{r}": by_region(who)[r] for who, r in [
+    ("government", "northern_america"), ("government", "cw_africa"), ("neighbours", "eastern_europe"),
+    ("neighbours", "latam"), ("government", "eastern_asia"), ("government", "central_asia"),
+    ("neighbours", "southeastern_asia")]})
+report.finding("C3_5")(lambda: {f"{who}_{r}": v for who in WHO for r, v in by_region(who).items()})
 
 
 @report.finding("T3_1")
 def table_3_1():
     out = {}
-    for who, var in (("government", GOVERNMENT), ("neighbours", NEIGHBOURS)):
-        top = top_not_at_all(var)
-        out[f"{who}_top10"] = ", ".join(sorted(top.index))
-        out.update({f"{who}_{iso}": v for iso, v in top.items()})
+    for who in WHO:
+        for i, (isos, v) in enumerate(top10(who), 1):
+            out[f"{who}_{i}_country"] = ", ".join(sorted(name(c) for c in isos))
+            out[f"{who}_{i}_value"] = v
     return out
 
 
-@report.finding("X52")
-def on_both_lists():
-    return len(set(top_not_at_all(GOVERNMENT).index) & set(top_not_at_all(NEIGHBOURS).index))
+def both_lists():
+    listed = {who: {c for isos, _ in top10(who) for c in isos} for who in WHO}
+    return sorted(listed["government"] & listed["neighbours"])
+
+
+report.finding("X95")(lambda: len(both_lists()))
+report.finding("X96")(lambda: int(d25[d25.COUNTRY_ISO3.isin(both_lists())].drop_duplicates("COUNTRY_ISO3")
+                                  .GlobalRegion.eq(5).sum()))
+report.finding("X97")(lambda: float(country_pct(d25, "gov", [3])[both_lists()].min()))
+report.finding("X98")(lambda: float(country_pct(d25, "WP22232", [3])[both_lists()].min()))
+report.finding("X99")(lambda: {f"{who}_{i}": country_pct(d25, WHO[who], [3])[i]
+                               for who, i in [("government", "PAN"), ("government", "PRY"),
+                                              ("neighbours", "ECU"), ("neighbours", "MEX")]})
 
 
 @report.finding("C3_6")
-def chart_3_6_values():
-    t = chart_3_6()
-    keys = {1: "a_lot", 2: "somewhat", 3: "not_at_all"}
-    return {(INCOME[i], keys[c]): t.loc[i, c] for i in INCOME for c in keys}
+def chart_3_6():
+    return {f"{inc}_{c}": v for (inc, c), v in household_by_neighbour_care().items()}
+
+
+report.finding("X100")(lambda: max(household_care_gaps().values()))
 
 
 if __name__ == "__main__":

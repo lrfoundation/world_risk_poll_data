@@ -74,8 +74,14 @@ class Report:
         return register
 
     def _ids_for(self, finding_id):
+        """Published IDs that a failing finding stands for: its own ID and its "<id>_<key>"
+        values, minus those that belong to another registered finding with a longer ID
+        (for example "X_lo" when both "X" and "X_lo" are registered)."""
         ids = self.published["finding_id"]
-        return list(ids[(ids == finding_id) | ids.str.startswith(finding_id + "_")]) or [finding_id]
+        own = ids[(ids == finding_id) | ids.str.startswith(finding_id + "_")]
+        longer = [f for f, _ in self._functions if f != finding_id and f.startswith(finding_id + "_")]
+        own = [i for i in own if not any(i == f or i.startswith(f + "_") for f in longer)]
+        return own or [finding_id]
 
     def run(self):
         """Run every registered finding, write outputs, return an exit code."""
@@ -111,7 +117,8 @@ class Report:
 def _load_reproduced(path):
     if not path.exists():
         return None
-    return pd.read_csv(path, dtype={"value": str}, keep_default_na=False).set_index("finding_id")
+    table = pd.read_csv(path, dtype={"value": str}, keep_default_na=False)
+    return table.drop_duplicates("finding_id").set_index("finding_id")
 
 
 def _fmt(value, published):
