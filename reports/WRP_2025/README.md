@@ -1,6 +1,6 @@
 # Reports on the World Risk Poll 2025 (wave 4)
 
-The 2025 poll: fieldwork in 2025, 143,459 respondents in 140 countries and areas. Its reports are published as the *World Risk Poll 2026* reports.
+The 2025 poll: fieldwork in 2025, 143,459 respondents in 140 countries and areas. Its reports are published as the *World Risk Poll 2026* reports. All five have been published, and [`WRP_2025/RELEASE_NOTES.md`](../../WRP_2025/RELEASE_NOTES.md) describes each one alongside the data.
 
 Data: [`WRP_2025/`](../../WRP_2025/). Each folder below reproduces one report in Python and R; see [`reports/README.md`](../README.md) for how to run them and the conventions they share.
 

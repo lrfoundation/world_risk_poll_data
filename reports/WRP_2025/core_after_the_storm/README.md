@@ -1,112 +1,164 @@
 # World Risk Poll 2026: After the storm: How disasters reshape resilience and trust
 
-- **Report:** *After the storm: How disasters reshape resilience and trust*, World Risk Poll 2026 report, Lloyd's Register
-  Foundation, October 2026 (doi:10.60743/16n7-bn41)
+- **Report:** *After the storm: How disasters reshape resilience and trust*, World Risk Poll 2026 report,
+  Lloyd's Register Foundation, October 2026 (https://doi.org/10.60743/16n7-bn41).
 - **PDF:** https://www.lrfoundation.org.uk/sites/default/files/2026-10/world-risk-poll-report-2026-after-the-storm.pdf
-- **Data:** `WRP_2021`, `WRP_2023` and `WRP_2025` (World Risk Poll 2021, 2023 and 2025), for ten countries: the seven
-  case studies (Morocco, Ecuador, Mozambique, New Zealand, Türkiye, Pakistan, South Africa) and Thailand, the Philippines
-  and Lebanon; Chapter 1 uses every country
+- **Data:** `WRP_2025/WRP_2025.parquet` (World Risk Poll 2025, wave 4; 143,459 respondents, 140 countries),
+  with `WRP_2021` and `WRP_2023` for the case studies
 
 ## What is reproduced
 
-All 1,132 numbers in the report: every value in the charts and tables, including the one-decimal estimates and
-intervals in appendix Tables A.1 to A.4, and every number in the text, including counts of regions and respondents.
-Page numbers are the report's printed page numbers (PDF page = printed page + 6; roman numerals for the front matter).
-A number the report repeats is recorded once, with every page it appears on. Results are in [`RESULTS.md`](RESULTS.md).
+All 1,507 numbers in the report: every value printed in Charts 1.1, 1.2, 3.1 to 3.6, 4.8 and 4.9 and in
+Tables 2.1, 2.2, 4.1 and A.1 to A.4, and every number in the text, including counts ("six of the seven",
+"eight of the 11 provinces"), respondent counts in the chart notes, and ratios given in words ("nearly
+tripled", "doubled"). Page numbers are the report's printed page numbers (PDF page minus 6 in the chapters,
+roman numerals for the foreword and executive summary). Results are in [`RESULTS.md`](RESULTS.md).
 
-Charts 2.8 and 4.1 to 4.3 have no printed values: they plot the estimates in Tables A.1 and A.3, which are compared.
-The maps (Charts 2.1 to 2.7 and 4.4 to 4.7) are compared through the regional changes and sample sizes their text and
-notes give.
+Some charts print no values:
 
-## Method
+- **Charts 2.1 to 2.7 and 4.4 to 4.7** are maps of the change in the Resilience Index by region. Their
+  functions (`C2_1` to `C2_7`, `C4_4` to `C4_7`) write every region's change to `output/` only. The text
+  beside each map quotes many of these changes, and those are compared.
+- **Chart 2.8** plots the Table A.1 estimates and two pooled estimates. The case values are compared through
+  Table A.1; "Pooled, six cases" (without Ecuador) is written to `output/` (`C2_8_pooled6`).
+- **Charts 4.1 to 4.3** plot the gaps in Table A.3, which are compared there.
 
-- **Comparison.** In each country, respondents in the affected regions (A = 1) are compared with the rest of the
-  country. The difference-in-differences is the coefficient on A × 2023 in a weighted least squares regression of the
-  outcome on A, the 2023 wave and their interaction, weighted by `PROJWT`. Intervals are HC1 (heteroskedasticity-robust,
-  with the n / (n − k) correction), estimate ± 1.96 SE. This reproduces every estimate and interval in Tables A.1 and
-  A.2 that the public data can compute.
-- **Affected regions** (Table 2.1): Marrakech-Safi (`REGION_MAR` provinces mapped to the 12 regions in 2021,
-  `REGION3_MAR` = 7 after); Guayas and El Oro (`REGION_ECU` 8, 6); Sofala, Zambezia and Manica (`REGION_MOZ` 8, 10, 4);
-  Northland and Auckland (`REGION_NZL` 1, 2); the Mediterranean and Central East Anatolia (`REGION3_TUR` 6, 11); Sindh
-  (`REGION_PAK` 1); KwaZulu-Natal (`REGION_ZAF` 4).
-- **Region don't know and refused.** In Ecuador the five respondents who gave no province are left out (the published
-  estimates match only that way). In Morocco 2021 the seven who gave no province stay in the rest of the country (they
-  match only that way).
-- **Outcomes.** The Index and its dimensions times 100 (`resilience_index_100` is already 0 to 100). The questions are
-  0 or 100, with don't know and refused (and "it depends") in the base: government cares 'a lot' (`WP22231` = 1),
-  neighbours care 'a lot' (`WP22232` = 1), could protect their family (`WP22252` = 1), disaster exposure (`WP22245`,
-  `WP23344`, `WP24213` = 1), national government well prepared (`WP22241`, `WP24198` = 1), local government
-  (`WP24199` = 1), and confidence in national government (`WP139` = 1, Gallup). The Worry Index is
-  `worry_index_published` times 100.
-- **Three waves (Table A.3, Chart 4.9).** One regression per case and measure with A, wave dummies and their
-  interactions gives the gap at each wave; the 2023 to 2025 change is the difference of the two interactions. The
-  adjusted column removes Southeast Anatolia (Türkiye) and Hawke's Bay, East Cape, Waikato and Bay of Plenty (New
-  Zealand) from both groups.
-- **Pooled models (Tables 2.2 and A.4).** One regression on the stacked case studies with country-by-wave dummies,
-  country-by-affected dummies and A × 2023 (and A × 2025 for Table A.4), with `PROJWT` rescaled to sum to one in each
-  country and wave. Confidence pools the five case studies that asked it; government care in Table A.4 pools Türkiye and
-  New Zealand. The appendix sensitivity checks (without Ecuador; region- and PSU-clustered CR1 intervals; the
-  exploratory slopes on months and on the exposure check) and the four-case model are coded the same way. Months are the
-  case attributes in Table 2.1, entered in the scripts.
-- **Maps.** Regional changes are the change in the weighted regional mean. Sample sizes count respondents with an Index
-  score. Pakistan's former FATA is shown with Khyber Pakhtunkhwa, as on the map.
-- **Changes** (chart bars, map regions and the text) are the unrounded change, rounded half up.
-- **Countries measured in both editions (X06).** 120 countries have Index data in 2021 and 2023; 118 have an overall
-  Index score in both (China and Saudi Arabia have none in 2021). The Index fell in 74 and rose in 44 (published 75 and
-  43); the individual dimension fell in 87.
+## Method notes
 
-## Gallup World Poll data and region codes
+- **Case studies and regions.** Each case study splits the country into the regions the disaster struck
+  (affected) and every other region (rest of the country), using the poll's region variables:
 
-458 findings need data that is not in the public release. The code is included; without the data these findings are
-reported as `GALLUP_ONLY`. See [`reports/README.md`](../../README.md#gallup-world-poll-data).
+  | Case | Affected regions | 2021 | 2023 | 2025 |
+  | --- | --- | --- | --- | --- |
+  | Morocco | Marrakech-Safi | `REGION_MAR` (provinces, mapped to regions) | `REGION3_MAR` | `REGION3_MAR` |
+  | Mozambique | Zambezia, Sofala, Manica | `REGION_MOZ` | `REGION_MOZ` | |
+  | New Zealand | Northland, Auckland | `REGION_NZL` | `REGION_NZL` | Gallup (see below) |
+  | Türkiye | Mediterranean, Central East Anatolia (NUTS-1) | `REGION3_TUR` | `REGION3_TUR` | `REGION3_TUR` |
+  | Pakistan | Sindh | `REGION_PAK` | `REGION_PAK` | |
+  | South Africa | KwaZulu-Natal | Gallup (see below) | `REGION_ZAF` | `REGION_ZAF` |
+  | Ecuador | Guayas, El Oro | `REGION_ECU` | `REGION_ECU` | |
+
+  Region "don't know" and "refused" are left out (5 respondents in Ecuador 2021). The one exception is
+  Morocco 2021, where the public file codes provinces: `reproduce.py` maps the 75 provinces to the 12 regions
+  of the 2015 reform, and the 7 respondents whose province is "don't know" stay in the rest of Morocco. These
+  two choices reproduce Tables A.1 and A.2 to the decimal (the report must have had those 7 respondents'
+  region). Pakistan's former FATA (2023 only) is folded into Khyber Pakhtunkhwa, as in the maps.
+- **Measures** (0-100): the Resilience Index and its four dimensions are `resilience_*` x 100.
+  Government cares "a lot" (`WP22231` = 1), neighbours care "a lot" (`WP22232` = 1), could protect yourself
+  or your family (`WP22252` = 1; "it depends" is in the base), reported disaster (`WP22245`, `WP23344`,
+  `WP24213` = 1), national government well prepared (`WP22241` in 2021, with its "it depends" in the base;
+  `WP24198` in 2025), local government well prepared (`WP24199`), Worry Index (`worry_index_published` x
+  100), and the hazard named (`WP22247` in 2023, `WP24180` in 2025). Base: everyone asked, with don't know
+  and refused in the base. Weight: `PROJWT`.
+- **Case estimates** (Tables A.1 to A.3) come from a weighted least-squares regression within the country:
+  the measure on an affected indicator, wave dummies and their interactions, weighted by `PROJWT`, with HC1
+  standard errors (n / (n - k)) and normal 95% intervals. The difference-in-differences is the
+  affected-by-2023 coefficient; the 2023-2025 change is the affected-by-2025 minus the affected-by-2023
+  coefficient in the three-wave model. This reproduces every estimate and interval in Tables A.1 and A.2 for
+  the six case studies in the public data, and Table A.3 for Morocco and Türkiye. South Africa's 2023-2025
+  change uses 2023 and 2025 only (its 2021 regions are Gallup data); the estimate is the same and the HC1
+  factor differs by about 0.1%. "Adjusted" removes Southeast Anatolia, and Waikato, Bay of Plenty, East Cape
+  (Tairawhiti) and Hawke's Bay, from both groups.
+- **Pooled models** (Tables 2.2 and A.4): one regression on the stacked case studies with country-by-wave
+  and country-by-affected dummies and the affected-by-wave term(s), with `PROJWT` rescaled to sum to 1 in
+  each country and wave, and HC1 errors. Case studies where a question was not asked in a wave are left out
+  (confidence: Morocco and Pakistan; government cares in Table A.4: Morocco). Region-clustered errors (the
+  appendix's second error) cluster by region within country, CR1: G / (G - 1) x (n - 1) / (n - k). The
+  "months" and "exposure check" slopes interact the affected-by-2023 term with the months in Table 2.1 and
+  with each case's exposure-check estimate.
+- **Map notes and region counts** count respondents with an Index score (Northern Cape 2025: 39, as
+  printed, of 40 respondents). A region is shaded if it has respondents in both waves and hatched if it has
+  fewer than 50 in either. Table 2.1 and Table 4.1 count all respondents in the affected regions.
+- **Türkiye's NUTS-2 units** come from `REGION_TUR` (2021 and 2023). The "eight of the 11 officially
+  affected provinces" with no 2023 respondents are the provinces in the three units (TR63, TRC1, TRC2) with
+  no 2023 respondents; the 118 respondents are those units' respondents in 2021. The "51% ... 50%" shares
+  are unweighted shares of the affected-region respondents in TR62, TR63 and TRB1.
+- **Chapter 1 and 2 national figures.** "Fell in 75 of the 120 countries and rose in 43" uses each country's
+  Index as the mean of its four dimension scores (the Index as defined in Table 1.1); the mean of the
+  respondent Index gives 74 and 44 (of 118 countries with an Index in both waves). The global changes on
+  page 2 ("two points above 2021", "one point above 2021") are differences of the rounded scores (unrounded
+  1.4 and 1.7).
+- **Margins of error** (page 49): a percentage's margin is 1.96 x sqrt(0.25 / n); an Index margin is the
+  half-width of the HC1 interval of the Index gap in one wave (Morocco 2023, 132 respondents: 2.7; New
+  Zealand 2023, 418: 2.2).
+- **Rounding.** The charts round each estimate once. Some whole numbers are rounded from a one-decimal
+  value instead: for example New Zealand's neighbours estimate, -4.48, is -4 in Chart 3.3 and "five" in the
+  text (-4.5 rounded again), and Chart 1.2 and the page 3 text print 59 for upper-middle-income adults
+  impacted by a disaster (58.497). Seven chart and text findings and one bound in Table 2.1 (26.48, printed
+  27; Table A.2 prints 26.5) are within tolerance for this reason.
+- **Words compared as numbers:** "nearly tripled" as a ratio of 3 (tolerance 0.5), "doubled" as 2 (0.3),
+  "half" as 50% (15), "roughly two in five" as 40% (3), "fewer than one in ten", "within two points", "within
+  three points" and "a point or less" as upper bounds, "about 14,000" and "about 10,000" with a tolerance of
+  500. "About 14,000" counts respondents with an Index score in the seven countries in 2021 and 2023; "about
+  10,000" counts all respondents in the five countries that asked about confidence.
+
+## Gallup World Poll data
+
+539 findings need data that is not in the public release. The code is included; without the data these
+findings are reported as `GALLUP_ONLY`. See [`reports/README.md`](../../README.md#gallup-world-poll-data).
 
 | Item (name used in the code) | What it is | Findings |
 | --- | --- | --- |
-| `REGION_ZAF` (2021) | South Africa's province in 2021 (public from 2023) | Every South Africa estimate that uses 2021 (211 findings), so also the seven-case pooled models |
-| `REGION_NZL` (2025) | New Zealand's region in 2025 (the public file has only North and South Island) | Every New Zealand estimate that uses 2025, so also Table A.4 (196 findings) |
-| `WP139` | Confidence in national government (1 = yes) | Charts 3.2 and 3.6, Tables A.2 to A.4 and Table 2.2 confidence rows (83 findings) |
-| `WP12259`, `WP12258` | Primary sampling unit and stratum | PSU-clustered intervals (X37) |
-| `REGION_TUR` (2025) | Türkiye's NUTS-2 unit in 2025 | X25 |
-| `REGION_MOZ`, `REGION_PAK`, `REGION_ECU` (2025) | Province in 2025 (the public file has only macro-regions) | X28 |
+| `REGION_ZAF` (2021 respondents) | South Africa's province in 2021. The public 2021 file has no South African region variable. | 222: South Africa's 2021-2023 estimates and 2021 gaps, and everything pooled over the seven case studies (Table 2.2, the pooled bars in Charts 3.1 to 3.5, "six of the seven", the sensitivities and slopes on page 46) |
+| `REGION_NZL` (2025 respondents) | New Zealand's 16 regions in 2025. The public 2025 file has only `REGION2_NZL` (North and South Island). | 209: New Zealand's 2025 gaps and changes in Table A.3, Chart 4.6, and the pooled three-wave model (Table A.4) |
+| `WP139` | Confidence in the national government (1 = yes). | 137: Charts 3.2 and 3.6, the confidence rows of Tables 2.2 and A.2 to A.4, and the text on confidence |
+| `FIELD_DATE` | Interview date (the name it has in the 2019 release). The months from each event to fieldwork are calendar months from the event month to the country's modal interview month. | 12: the months columns of Tables 2.1 and 4.1 |
+| `REGION_TUR` (2025 respondents) | Türkiye's 26 NUTS-2 units in 2025 (the 2025 file has NUTS-1 only). | 5: Hatay, Kahramanmaraş and Osmaniye's 10 respondents in 2025 and the 63% share |
+| `REGION_MOZ`, `REGION_PAK`, `REGION_ECU` (2025 respondents) | Provinces in 2025 (the public 2025 file has only three broad regions for each). | 6: the 2025 exposure checks on page 45 |
+| `WP12259` | Gallup's primary sampling unit, for the third (PSU-clustered) standard error. | 7 |
 
-The scripts expect each item under the name in the table, with the same codes as the public variable of that name in
-the other waves. South Africa's changes from 2023 to 2025 need no Gallup data and are compared through Chart 4.7 and
-X31.
+The region items are assumed to use the same codes as the 2023 public release (for example
+`REGION_ZAF` 4 = KwaZulu-Natal). The confidence item `WP139` is the one the report's appendix names. All
+the Gallup code paths were tested with a synthetic file of random values (not committed): Python and R
+give the same results.
 
-The Gallup code paths were tested with a synthetic file of random values (not committed): every finding runs, and
-Python and R give the same results.
+## External data
+
+None. Figures the report quotes from other sources are context and are not reproduced: the earthquake
+magnitudes, depths and distances (USGS), death tolls, injuries, displacement, damage and appeal figures
+for each disaster (for example 2,960 dead in Morocco, 53,537 in Türkiye, 1,730 in Pakistan, 443 in
+KwaZulu-Natal, 14 in Ecuador, 165 after Cyclone Freddy; US$34.2 billion and US$103.6 billion in Türkiye;
+over US$30 billion in Pakistan, close to 70% of it in Sindh; the UN appeal of US$160 million revised to
+US$816 million), the Baker Institute's "more than 10 construction amnesties since 2001", Gallup's note that
+provinces holding about 12% of Türkiye's population could not be interviewed in 2023, the 11 officially
+affected Turkish provinces, Lebanon's currency losing more than 85% of its value, and the dates of the
+events and of the Malaysian floods.
+
+Not entered as findings: the months after each event given in the text and chart labels ("surveyed a month
+after", "22 months", "31 months", "25 to 41 months"), which are the Table 2.1 and 4.1 values; the text
+columns of Tables 2.1 and 4.1; "six case studies meet (a) to (c)", "four of the 11 officially affected
+provinces" and "the five regions the disaster also reached" (checks on the geography, not survey
+estimates); counts that describe the design, such as "about six inputs" to the community dimension and "the
+nine measures" the comparison follows; Thailand "just above the middle of the country ranking" (Thailand's
+28% is 60th of 142 countries in 2023; the median is 26%); and KwaZulu-Natal "rose least apart from
+Gauteng" between 2023 and 2025 (Gauteng +0.8, KwaZulu-Natal +1.2).
 
 ## Findings that do not match
 
-One finding differs from the published value by more than its tolerance:
+2 findings differ from the published values by more than their tolerance:
 
-- **X19, perceived neighbourly care without KwaZulu-Natal.** The report says the seven-case rise of seven percentage
-  points "halves to four" without KwaZulu-Natal. The six-case pooled model gives 3.0 (HC1 −1.4 to 7.4). The seven-case
-  model needs South Africa's 2021 provinces, so the difference cannot be traced further with the public data.
+- **X086 (page 6):** "Two thirds of Türkiye's affected respondents are in its Mediterranean region." The
+  Mediterranean has 127 of 174 affected respondents in 2021 and 130 of 180 in 2023 (72.6%; 75% weighted). The
+  share is 69% over all three waves and 62.5% in 2025 alone. Not explained.
+- **X299 (page 22):** "without KwaZulu-Natal it halves to four". The pooled model on the six other case
+  studies gives 3.0 (HC1 -1.4 to 7.4, within the margin of error as the text says). The report's "four" may be
+  half of the seven-case estimate (7) rather than a separate estimate. Not explained further.
 
-Within tolerance but not rounding to the published figure:
+Within the report, page 25 says Chart 3.6 sets the three national changes "beside the seven disaster gaps
+from Chart 3.2"; Charts 3.2 and 3.6 show the five case studies that asked about confidence.
 
-- **Double rounding.** Some whole numbers are rounded from a one-decimal value: Table 2.1's lower bound for Türkiye
-  (26.48, Table A.2 26.5, printed 27), "22 percentage points above" (KwaZulu-Natal neighbours gap in 2023, 21.47),
-  New Zealand's neighbours gap "by five" in the text (−4.48; Chart 3.3 prints −4), Sindh's 17% (16.48) and
-  upper-middle-income individual resilience among the impacted, 59 (58.497).
-- **Istanbul** changed 0.6 points between 2023 and 2025 (49.6 to 50.2), printed as "level" (0).
-- **Türkiye adjusted neighbours lower bound** in Table A.3 is −21.450 (published −21.4).
-- **Approximate counts:** "more than 143,000" interviews (143,459), "about 14,000" respondents (14,022), "about 10,000"
-  (10,008), and X06 above.
-- **Shares of the affected respondents:** "two thirds" of Türkiye's are in the Mediterranean region (72.6% of
-  respondents, 75.0% weighted), recorded as 67 with a tolerance of 6; "nine in ten" of New Zealand's are in Auckland
-  (90.9%).
+20 more findings are within tolerance but do not round to the published figure:
 
-Not compared: figures the report quotes from other sources (deaths, people affected or displaced, damage estimates,
-magnitudes and dates of the disasters, the number of officially affected provinces); months from each disaster to the
-fieldwork (Tables 2.1 and 4.1, as the public files have no interview date); the approximate margins of error on page 49
-(about nine percentage points at 132 respondents, and so on); and statements without a number, such as which regions
-the disasters reached.
+- **Rounded twice (see Method notes):** T2_1_TUR_expo_lo (26.48), C1_2_upper_middle_impacted and X070
+  (58.497), X019 and X528 (21.47), X295 and X302 (-4.48), X305 (16.48).
+- **Words:** X004 (37.7% for "roughly two in five"), X005 (7.7% for "fewer than one in ten"), X087 (90.9%
+  for "nine in ten"), X432 and X440 (1.5 for "within two points"), X468 (Istanbul +0.6 for "level").
+- **Counts given as round numbers:** X001 and X006 (143,459), X430 (52 for "about 50"), X523 (39 for "about
+  40"), X633 (14,027), X634 (10,024).
 
 ## Run
 
 ```
-python reports/WRP_2025/core_after_the_storm/reproduce.py
 Rscript reports/WRP_2025/core_after_the_storm/reproduce.R
+python reports/WRP_2025/core_after_the_storm/reproduce.py
 ```

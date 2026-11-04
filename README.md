@@ -45,6 +45,7 @@ Note on trends: country coverage differs by wave, and some questions and publish
 
 ## Getting started
 
+- [`WRP_2025/RELEASE_NOTES.md`](WRP_2025/RELEASE_NOTES.md) — the final release of the 2025 wave: what is in the data, the five *World Risk Poll 2026* reports with their links and DOIs, and how to cite them.
 - [`docs/CODEBOOK.md`](docs/CODEBOOK.md) — the 37-variable harmonised block that lets the four waves stack into one trend file, documented once with value labels and cross-wave comparability notes.
 - `examples/quickstart.*` — load one wave, stack all four into a pooled weighted trend, and trend one question that sits outside the harmonised block (climate-change threat). Same worked example in [Python](examples/quickstart.py), [R](examples/quickstart.R), [SQL / DuckDB](examples/quickstart.sql) and [Julia](examples/quickstart.jl).
 - [`reports/`](reports/README.md) — Python and R scripts that reproduce the findings of each World Risk Poll core report and Focus On report from this data, one folder per wave and per report. Findings that need Gallup World Poll data outside this release are flagged; that data must be obtained from Gallup directly.
