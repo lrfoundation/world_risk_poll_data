@@ -60,12 +60,18 @@ ZERO = None      # how a report prints a value that rounds to nought ("<0.5"); s
 
 
 def fmt(value, decimals=0):
+    """decimals of "g" prints each value as it was published (10, 0.8, 0.03)."""
     if value == 0 and ZERO:
         return ZERO
-    return f"{value:.{decimals}f}"
+    return f"{value:g}" if decimals == "g" else f"{value:.{decimals}f}"
 
 
 def nice_max(top, percent):
+    if top <= 2 and not percent:            # an index that runs from 0 to 1
+        for step in (0.05, 0.1, 0.2, 0.5):
+            if top / step <= 5.01:
+                vmax = step * -(-top // step)
+                return round(vmax + (step if vmax - top < step * 0.12 else 0), 2), step
     for step in (5, 10, 20, 25):
         if top / step <= 5.01:
             vmax = step * -(-top // step)

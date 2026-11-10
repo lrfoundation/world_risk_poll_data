@@ -80,6 +80,11 @@ table.data tr:nth-child(even) td { background: #FBF3F7; }
 .mapkey i { width: 12px; height: 12px; border-radius: 3px 0 0 3px; display: inline-block; }
 .ranks { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; width: 780px; margin-top: 8px; }
 .regionmap { display: grid; grid-template-columns: 470px 1fr; gap: 26px; width: 780px; align-items: center; }
+.lists { display: grid; gap: 22px; width: 780px; align-items: end; }
+.lists.many { gap: 16px; }
+.lists.many .rank div { font-size: 13px; white-space: nowrap; }
+.lists.many .rank h6 { font-size: 13px; }
+.lists .rank h6 { min-height: 36px; display: flex; align-items: flex-end; text-transform: none; letter-spacing: 0; font-size: 14px; border-bottom: 2px solid var(--fuchsia); padding-bottom: 5px; }
 .regionmap svg { display: block; border-radius: 8px; background: #F7F9FB; }
 .rank h6 { margin: 0 0 4px; font-size: 13px; line-height: 18px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); }
 .rank div { display: flex; justify-content: space-between; font-size: 15px; line-height: 24px; border-bottom: 1px solid #E3E3E3; }

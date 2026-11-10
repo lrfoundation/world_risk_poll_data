@@ -1541,9 +1541,9 @@ Chart 2.2 shows the relationship between the percentage of workers in each count
  "subtitle": "Results among employed people in each country or territory",
  "page": 24,
  "clip": [
-  81,
+  82,
   242,
-  551,
+  545,
   585
  ]
 }
@@ -1795,9 +1795,9 @@ Like work-related harm, people were more likely to experience and worry about ha
  "why": "the original plots every country without printing its value",
  "page": 28,
  "clip": [
-  81,
+  82,
   450,
-  551,
+  544,
   676
  ]
 }
@@ -2100,9 +2100,9 @@ In a year when health systems were tasked with administering Covid-19 vaccines w
  "why": "the original plots every country without printing its value",
  "page": 33,
  "clip": [
-  50,
+  51,
   244,
-  520,
+  513,
   543
  ]
 }
@@ -2361,9 +2361,9 @@ The 2021 World Risk Poll finds that people in lower-income countries and territo
  "why": "the original plots every country without printing its value; the four income-group totals it does print are in the text",
  "page": 40,
  "clip": [
-  81,
+  82,
   119,
-  551,
+  545,
   562
  ]
 }

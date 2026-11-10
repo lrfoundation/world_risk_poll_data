@@ -95,8 +95,29 @@ def lines_of(block):
     return [re.sub(r"\s+", " ", "".join(s["text"] for s in line["spans"]).replace("\t", " ")).strip() for line in block["lines"]]
 
 
+def frames(page, labels):
+    """The charts of a page as (x0, top, x1, bottom).
+
+    Each chart sits between two pink rules: one at its label, one under it. A chart whose
+    closing rule is on the next page runs to the foot of this one.
+    """
+    rules = []
+    for g in page.get_drawings():
+        r, c = g["rect"], g.get("color")
+        if r.width > 300 and r.height < 3 and c and abs(c[0] - 0.918) < 0.02 and abs(c[1] - 0.104) < 0.03 and 60 < r.y0 < 800:
+            rules.append((r.y0, r.x0, r.x1))
+    rules.sort()
+    tops = [rule for rule in rules if any(abs(rule[0] - y - 12) < 14 and rule[1] - 10 < x < rule[2] for x, y in labels)]
+    out = []
+    for y0, x0, x1 in tops:
+        below = [rule[0] for rule in rules if rule[0] > y0 + 5]
+        out.append((x0, y0 - 16, x1, below[0] if below and below[0] not in [t[0] for t in tops] else (below[0] - 20 if below else 800)))
+    return out
+
+
 def page_items(page, index, top=55, bottom=800):
     found, notes = [], []
+    charts = None
     for block in page.get_text("dict")["blocks"]:
         spans = [s for line in block.get("lines", []) for s in line["spans"] if s["text"].strip()]
         if not spans:
@@ -121,6 +142,10 @@ def page_items(page, index, top=55, bottom=800):
         if not item["text"]:
             continue
         (notes if kind == "fn" else found).append(item)
+
+    charts = frames(page, [(b["x0"], b["y0"]) for b in found if b["kind"] == "label"])
+    for b in found:
+        b["frame"] = next((f for f in charts if f[1] <= b["y0"] <= f[3] and f[0] - 10 < b["x0"] < f[2]), None)
 
     # Reading order: a full-width block ends the band of columns above it.
     found.sort(key=lambda b: b["y0"])
@@ -179,6 +204,6 @@ if __name__ == "__main__":
     document = pymupdf.open(PDFS / sys.argv[1])
     got, fns = stream(document, int(sys.argv[2]), int(sys.argv[3]))
     for it in got:
-        print(f'{it["page"]:>3} {it["kind"]:<8} {round(it["x0"]):>4} {round(it["y0"]):>4}  {it["text"][:150]}')
+        print(f'{it["page"]:>3} {it["kind"]:<8}{"#" if it["frame"] else " "} {round(it["x0"]):>4} {round(it["y0"]):>4}  {it["text"][:150]}')
     for n, text in fns.items():
         print(f"[^{n}] {text[:150]}")

@@ -196,24 +196,27 @@ class Report:
                 height += 54
             elif spec.get("grey"):
                 colours = [GREY if r[0] in spec["grey"] else FUCHSIA for r in spec["rows"]]
-            return charts.scaled(charts.hbar(rows, CHART_W, height, FUCHSIA, unit=unit, colours=colours, key=key, label_width=spec.get("label_width", 0.34)), SCALE)
+            return charts.scaled(charts.hbar(rows, CHART_W, height, FUCHSIA, unit=unit, decimals=spec.get("decimals", 0), colours=colours, key=key,
+                                             label_width=spec.get("label_width", 0.34)), SCALE)
         if kind == "grouped":
             rows = [(label, self.values(ids)) for label, ids in spec["rows"]]
             series = self.series(spec)
             height = min(1260, 120 + len(rows) * (len(series) * 46 + 40))
-            return charts.scaled(charts.grouped(rows, series, CHART_W, height, unit=unit), SCALE)
+            return charts.scaled(charts.grouped(rows, series, CHART_W, height, unit=unit, decimals=spec.get("decimals", 0)), SCALE)
         if kind == "stacked":
             # An id of null is a segment the original draws but does not label. With "rest", what is left of 100 is drawn
-            # as one pale segment under that name, without a figure.
+            # as one pale segment under that name, without a figure; with "gaps", only in the rows that have such a segment.
             series, rows = self.series(spec), []
+            rest = spec.get("rest") or spec.get("gaps")
             for label, ids in spec["rows"]:
                 values = [self.fig.number(i) if i else 0 for i in ids]
-                rows.append((self.label(label), values + ([max(0, 100 - sum(values))] if spec.get("rest") else [])))
-            if spec.get("rest"):
-                series.append((spec["rest"], "#E9E9E9"))
+                left = max(0, 100 - sum(values)) if spec.get("rest") or not all(ids) else 0
+                rows.append((self.label(label), values + ([left] if rest else [])))
+            if rest:
+                series.append((rest, "#E9E9E9"))
             n = len(rows)
-            height = 130 + (120 if n <= 6 else 88 if n <= 9 else 66) * n
-            mute = (len(series) - 1,) if spec.get("rest") else ()
+            height = 130 + (120 if n <= 6 else 88 if n <= 9 else 66 if n <= 12 else 58) * n
+            mute = (len(series) - 1,) if rest else ()
             svg = charts.scaled(charts.stacked(rows, series, CHART_W, height, unit=unit, label_all=True, mute=mute), SCALE)
             if charts.stacked.unlabelled:
                 self.small = f"Segments of {max(charts.stacked.unlabelled):g}{unit} or less are too narrow to label."
@@ -240,6 +243,12 @@ class Report:
             return svg
         if kind == "region_map":
             return self.region_map(spec)
+        if kind == "lists":
+            # Ranked lists side by side, each under its own heading: [[heading, [[name, finding], ...]], ...]
+            columns = "".join(
+                f'<div class="rank"><h6>{escape(head)}</h6>' + "".join(f"<div><span>{escape(name)}</span><b>{self.fig.text(fid)}{unit}</b></div>" for name, fid in rows) + "</div>"
+                for head, rows in spec["lists"])
+            return f'<div class="lists{" many" if len(spec["lists"]) > 3 else ""}" style="grid-template-columns: repeat({len(spec["lists"])}, 1fr)">{columns}</div>'
         if kind == "heading":
             return ""
         if kind == "vgrouped":

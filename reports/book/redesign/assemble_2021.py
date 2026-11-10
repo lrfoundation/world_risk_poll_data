@@ -64,7 +64,7 @@ class Ids:
             elif isinstance(value, (list, tuple)):
                 for v in value:
                     walk(v)
-        for field in ("rows", "panels", "top", "bottom"):
+        for field in ("rows", "panels", "top", "bottom", "lists"):
             walk(spec.get(field, []))
 
 
@@ -86,6 +86,18 @@ AGES = {"15_29": "Age 15-29", "30_49": "Age 30-49", "50_64": "Age 50-64", "65plu
 QUINTILES = {"bottom": "Bottom 20% income", "second": "Second 20%", "middle": "Middle 20%", "fourth": "Fourth 20%", "top": "Top 20% income"}
 EDUCATION = {"primary": "Primary education or less (0-8 years)", "secondary": "Secondary education (9-15 years)", "post_secondary": "Post-secondary education (16 years or more)"}
 SCATTER = "the original plots every country without printing its value"
+COUNTRIES = {
+    "AFG": "Afghanistan", "ALB": "Albania", "AUS": "Australia", "AUT": "Austria", "BGD": "Bangladesh", "BIH": "Bosnia and Herzegovina", "BOL": "Bolivia", "BRA": "Brazil",
+    "CHE": "Switzerland", "CMR": "Cameroon", "COG": "Congo Brazzaville", "COL": "Colombia", "DEU": "Germany", "ECU": "Ecuador", "EGY": "Egypt", "EST": "Estonia",
+    "GAB": "Gabon", "GIN": "Guinea", "HND": "Honduras", "IDN": "Indonesia", "IND": "India", "IRQ": "Iraq", "KEN": "Kenya", "KHM": "Cambodia", "LAO": "Laos",
+    "LBN": "Lebanon", "MAR": "Morocco", "MEX": "Mexico", "MLI": "Mali", "MNG": "Mongolia", "MOZ": "Mozambique", "MYS": "Malaysia", "NGA": "Nigeria", "NIC": "Nicaragua",
+    "NZL": "New Zealand", "PAN": "Panama", "PHL": "Philippines", "PRY": "Paraguay", "ROU": "Romania", "RUS": "Russia", "SEN": "Senegal", "SLE": "Sierra Leone",
+    "TGO": "Togo", "THA": "Thailand", "UGA": "Uganda", "USA": "United States", "VEN": "Venezuela", "VNM": "Vietnam", "ZMB": "Zambia", "ZWE": "Zimbabwe",
+}
+INCOME4 = {"low_income": "Low-income countries", "lower_middle": "Lower-middle-income countries", "upper_middle": "Upper-middle-income countries", "high_income": "High-income countries"}
+NEEDS = {"electricity": "Gone without electricity", "water": "Been without clean drinking water", "food": "Been unable to obtain food because of shortages",
+         "medical": "Been unable to obtain medical assistance or medicine", "telephone": "Been unable to access a telephone"}
+NOT_PRINTED = "Values the original does not print"
 
 PLANS = {}
 
@@ -94,7 +106,7 @@ def urls(text):
     """Web addresses that the PDF broke across lines, joined up again."""
     text = join_urls(text)
     while True:
-        joined = re.sub(r"(https?://\S*[/_-]) (?=[\w%])", r"\1", text)
+        joined = re.sub(r"(https?://\S*(?:[/_-]|%20)) (?=[\w%])", r"\1", text)
         if joined == text:
             return text
         text = joined
@@ -112,7 +124,8 @@ def sections(items):
         text = item["text"]
         if item["kind"] == "part":
             chapter = re.fullmatch(r"Chapter (\d+)", text)
-            current = dict(kind="chapter" if chapter else "front", title=None if chapter else text, items=[])
+            after = any(s["kind"] == "chapter" for s in out)
+            current = dict(kind="chapter" if chapter else "back" if after else "front", title=None if chapter else text, items=[])
             out.append(current)
         elif item["kind"] == "title":
             if current and current["kind"] == "chapter" and current["title"] is None:
@@ -136,12 +149,16 @@ def small_print(lines):
 
 
 def content(section, charts, doc, drop=(), heads=("# ", "## ")):
-    """A section's items as content blocks (strings, and dicts for charts)."""
-    out, chart, inside, last_small = [], None, False, None
+    """A section's items as content blocks (strings, and dicts for charts).
+
+    heads are the marks for the section's levels of heading, largest first. A section whose
+    largest heading is the 12-point one uses its bold lines of text as the level below.
+    """
+    out, chart, last_small = [], None, None
+    levels = ["h1", "h2", "sub"] if any(i["kind"] == "h1" for i in section["items"]) else ["h2", "sub"]
     for item in section["items"]:
         kind, text = item["kind"], item["text"]
-        if inside and item["page"] != chart["_page"]:
-            inside = False
+        inside = chart is not None and item["frame"] is not None and item["page"] == chart["_page"]
         if text in drop:
             continue
         if kind == "label":
@@ -149,7 +166,8 @@ def content(section, charts, doc, drop=(), heads=("# ", "## ")):
             assert m, text
             chart = dict(id=PREFIX[m.group(1)] + m.group(2), number=m.group(2), _page=item["page"], _box=[item["x0"], item["y0"], item["x1"], item["y1"], item["y1"]])
             chart["as"] = m.group(1)
-            inside, last_small = True, None
+            chart["_frame"] = item["frame"]
+            last_small = None
             out.append(chart)
         elif kind == "caption":
             if chart is None or not inside:
@@ -160,37 +178,35 @@ def content(section, charts, doc, drop=(), heads=("# ", "## ")):
             else:
                 chart["subtitle"] = (chart.get("subtitle", "") + " " + text).strip()
             chart["_box"][3] = chart["_box"][4] = item["y1"] + 2
-        elif kind == "sub":
-            if inside:
-                chart["subtitle"] = (chart.get("subtitle", "") + " " + text).strip()
-                chart["_box"][3] = chart["_box"][4] = item["y1"] + 2
-            else:
-                out.append(f"**{text}**")
+        elif kind == "sub" and inside:
+            chart["subtitle"] = (chart.get("subtitle", "") + " " + text).strip()
+            chart["_box"][3] = chart["_box"][4] = item["y1"] + 2
         elif kind == "small":
             if chart is None:
                 continue
             below = last_small is not None and item["page"] == last_small["page"] and 0 <= item["y0"] - last_small["y1"] < 8
-            if text.startswith("Survey question") or below:
+            if text.startswith("Survey question") or below or (inside and re.match(NOTE_STARTS, text)):
                 question, notes = small_print(item["lines"])
-                if below and not text.startswith("Survey question"):
+                if not text.startswith("Survey question"):
                     question, notes = "", text
                 if question:
                     chart["question"] = (chart.get("question", "") + " " + question).strip()
                 if notes:
                     chart["note"] = (chart.get("note", "") + " " + notes).strip()
-                chart["_box"][3] = item["y0"] - 3
-                chart["_box"][2] = max(chart["_box"][2], item["x1"])
-                inside, last_small = False, item
-        elif kind in ("h1", "h2"):
-            inside = False
-            out.append(heads[kind == "h2"] + text)
+                if last_small is None:
+                    chart["_bottom"] = item["y0"] - 3
+                last_small = item
+        elif kind in ("h1", "h2") or (kind == "sub" and not inside):
+            level = levels.index(kind)
+            out.append(heads[level] + text if level < len(heads) else f"**{text}**")
         elif kind == "quote":
             if not inside:
                 out.append("> " + text.strip("“”\" "))
         elif kind == "p":
             if inside:
                 continue                         # the lettering of the chart, which the specification draws
-            bullet = re.match(r"• ?", text)
+            text = re.sub(r"^\*\*([•-])\*\* ?|^\*\*([•-]) ", lambda m: f"• {'' if m.group(1) else '**'}", text)
+            bullet = re.match(r"[•-] ", text) or re.match(r"• ?", text)
             finding = re.match(r"(\d+)\) ?", text)
             style = item.get("style", "")
             if bullet or finding:
@@ -212,15 +228,15 @@ def content(section, charts, doc, drop=(), heads=("# ", "## ")):
     # A chart with no specification yet is a picture of the original.
     for block in out:
         if isinstance(block, dict):
-            box, page = block.pop("_box"), block.pop("_page")
+            box, page, frame = block.pop("_box"), block.pop("_page"), block.pop("_frame")
+            bottom = block.pop("_bottom", frame[3] - 3)
             spec = charts.get(block["id"])
             if spec is None:
                 spec = dict(kind="original", why="it has not been redrawn yet")
                 block["_todo"] = True
             if spec["kind"] == "original" and "clip" not in spec:
-                # the picture runs from under the chart's title to the top of its small print
-                left = box[0] - 4
-                spec = dict(spec, page=page, clip=[round(left), round(box[4]), round(left + 470), round(box[3])])
+                # the picture runs from under the chart's title to the top of its small print, or to the rule that closes the chart
+                spec = dict(spec, page=page, clip=[round(frame[0] - 3), round(box[4]), round(frame[2] + 3), round(bottom)])
             for field in ("title", "subtitle", "question", "note"):
                 if field in spec and spec[field] is None:
                     block.pop(field, None)
@@ -262,11 +278,10 @@ def assemble(key):
             chapter += 1
             opener = p["chapters"][chapter - 1]
             out.append(f"::chapter {title} | {opener['big']} | {opener['caption']}")
-            blocks = content(section, p["charts"], doc, drop)
+            blocks = content(section, p["charts"], doc, drop, heads=("# ", "## "))
         else:
             out.append(f"::{section['kind']} {title}")
-            has_h1 = any(i["kind"] == "h1" for i in section["items"])
-            blocks = content(section, p["charts"], doc, drop, heads=("## ", "### ") if has_h1 else ("## ", "## "))
+            blocks = content(section, p["charts"], doc, drop, heads=("## ", "### "))
             blocks += p.get("after", {}).get(section["title"], [])
         for block in blocks:
             if isinstance(block, dict):
@@ -372,6 +387,108 @@ plan(
                     panels=[["", [[label, [f"C5_3_{k}_{c}" for c in ("experienced", "know_someone", "neither")]]
                                   for k, label in (("total", "Total"), ("primary", "Primary education or less (0-8 years)"), ("secondary", "Secondary education (9-15 years)"),
                                                    ("post_secondary", "Post-secondary education (16+ years)"))]]]),
+    },
+)
+
+
+def countries(ids, prefix, suffix=""):
+    """[[name, finding]] for the countries of one list, in the printed order."""
+    return [[COUNTRIES[k], f"{prefix}{k}{suffix}"] for k in ids.keys(prefix, suffix, COUNTRIES)]
+
+
+plan(
+    "2021_a_resilient_world",
+    folder="WRP_2021/core_a_resilient_world", pdf="core_a_resilient_world.pdf", pages=(3, 46),
+    title="A Resilient World?", subtitle="Understanding vulnerability in a changing climate", published="September 2022",
+    source="World Risk Poll 2021: A Resilient World? Understanding vulnerability in a changing climate (Lloyd's Register Foundation, September 2022)",
+    copyright="Copyright © 2022 Lloyd's Register Foundation. All rights reserved.",
+    cover_image=[10, 0],
+    chapters=[
+        dict(big="52%", caption="of people worldwide said there is something they could do to protect themselves or their families from a disaster"),
+        dict(big="23%", caption="of people worldwide believed their neighbours care about them ‘a lot’"),
+        dict(big="0.44", caption="was the Resilience Index score of Central/Western Africa, the lowest of any region; Australia and New Zealand had the highest, at 0.66"),
+        dict(big="27%", caption="of people worldwide said they had experienced a disaster caused by a natural hazard in the past five years"),
+    ],
+    after={"Preface": ["**Dr. Ruth Boumphrey**, Chief Executive, Lloyd’s Register Foundation"]},
+    edits=[
+        "The headline figure on each chapter's opening page is taken from that chapter's text; the original opens each chapter with a photograph.",
+        "The name under the portrait in the preface is set as a line at the end of the preface.",
+        "Footnotes are gathered as numbered references at the back, with their original numbers. Web addresses that the original broke across lines have been joined up.",
+        "Chart 1.1 is a ring in the original and Chart 2.4 a row of five rings; both are drawn here as bars. Chart 4.2 is fifteen small bar charts in the original and is "
+        "set here as a table of the same values.",
+        "In Charts 1.3 and 2.6 the original leaves out segments under 5%. The space they take is drawn in pale grey at the end of the bar, without a figure.",
+    ],
+    pending="The four appendices of the original (the questionnaire, the list of regions, the Resilience Index methodology and the references listed again by chapter) "
+            "are not in this draft.",
+    charts=lambda ids: {
+        "1.1": dict(kind="stacked", rows=[["World", [f"C1_1_{k}" for k in ("yes", "no", "depends", "dk")]]],
+                    series=["Yes", "No", "It depends", "Don’t know"], colours=["teal", "fuchsia", "navy", "grey"]),
+        "1.2": dict(kind="hbar", rows=ids.regions("C1_2_", None)),
+        "1.3": dict(kind="stacked", gaps=NOT_PRINTED,
+                    rows=[[REGIONS[k], [i if i in ids.ids else None for i in (f"C1_3_{k}_{c}" for c in ("lt_week", "week_to_month", "month_to_3", "4_plus", "dk"))]]
+                          for k in ids.keys("C1_3_", "_week_to_month")],
+                    series=["Less than a week", "One week to less than a month", "One month to three months", "Four months or more", "Don’t know"],
+                    colours=["fuchsia", "orange", "teal", "green", "grey"]),
+        "1.4": dict(kind="grouped", series=["Have internet access", "Have a mobile phone"], colours=["teal", "fuchsia"],
+                    rows=[[label, [f"C1_4_{k}_internet", f"C1_4_{k}_mobile"]] for k, label in INCOME4.items()]),
+        "1.5": dict(kind="grouped", series=["Among those with internet access", "Among those without internet access"], colours=["fuchsia", "teal"],
+                    rows=[[label, [f"C1_5_{k}_internet", f"C1_5_{k}_no_internet"]] for k, label in INCOME4.items()]),
+        "1.6": dict(kind="hbar", rows=countries(ids, "C1_6_")),
+        "2.1": dict(kind="hbar", key=["World Bank country income group", "Urbanisation"], colours=["fuchsia", "navy"],
+                    rows=[[label, f"C2_1_{k}", "World Bank country income group"] for k, label in INCOME4.items()]
+                    + [[label, f"C2_1_{k}", "Urbanisation"] for k, label in (("rural", "Rural areas"), ("small_town", "Small towns"), ("large_city", "Large cities/suburbs"))]),
+        "2.2": dict(kind="hbar", rows=ids.regions("C2_2_", None)),
+        "2.3": dict(kind="original", why=SCATTER),
+        "T2.1": dict(kind="lists", lists=[[head, countries(ids, f"T2_1_{k}_")] for k, head in (
+            ("healthcare", "% Dissatisfied with availability of quality healthcare"), ("education", "% Dissatisfied with education system or schools"),
+            ("roads", "% Dissatisfied with roads and highways"))]),
+        "2.4": dict(kind="hbar", rows=[[label, f"C2_4_{k}"] for k, label in (("nationality", "Nationality/ethnic group"), ("religion", "Religion"), ("sex", "Sex"),
+                                                                           ("skin", "Colour of your skin"), ("disability", "Disability"))]),
+        "T2.2": dict(kind="lists", lists=[[head, countries(ids, f"T2_2_{k}_")] for k, head in (
+            ("nationality", "% Nationality/ethnic group"), ("religion", "% Religion"), ("sex", "% Sex"), ("skin", "% Colour of your skin"), ("disability", "% Disability"))]),
+        "2.5": dict(kind="original", why="the original shades every country on a map of the world and prints the value of only ten of them"),
+        "2.6": dict(kind="stacked", gaps=NOT_PRINTED,
+                    rows=[[REGIONS[k], [i if i in ids.ids else None for i in (f"C2_6_{k}_{c}" for c in ("a_lot", "somewhat", "not_at_all", "dk"))]] for k in ids.keys("C2_6_", "_a_lot")],
+                    series=["A lot", "Somewhat", "Not at all", "Don’t know"], colours=["green", "teal", "fuchsia", "grey"]),
+        "T2.3": dict(kind="lists", lists=[["% National government does not care ‘at all’", countries(ids, "T2_3_")[:6]],
+                                          ["% National government does not care ‘at all’", countries(ids, "T2_3_")[6:]]]),
+        "2.7": dict(kind="hbar", unit="", decimals=1, rows=ids.regions("C2_7_", None)),
+        "2.8": dict(kind="original", why=SCATTER),
+        "3.1": dict(kind="hbar", unit="", decimals=2, rows=ids.regions("C3_1_", None)),
+        "3.2": dict(kind="hbar", unit="", decimals=2, key=["Sex", "Urbanisation", "Income"], colours=["teal", "navy", "fuchsia"],
+                    rows=[["Men", "C3_2_men", "Sex"], ["Women", "C3_2_women", "Sex"], ["Rural areas", "C3_2_rural", "Urbanisation"],
+                          ["Small towns/villages", "C3_2_small_town", "Urbanisation"], ["Large cities/suburbs", "C3_2_large_city", "Urbanisation"],
+                          ["Country’s lowest income quintile", "C3_2_q1", "Income"], ["Second quintile", "C3_2_q2", "Income"], ["Third quintile", "C3_2_q3", "Income"],
+                          ["Fourth quintile", "C3_2_q4", "Income"], ["Country’s highest income quintile", "C3_2_q5", "Income"]]),
+        "T3.3": dict(kind="matrix", unit="", decimals=2, plain=[2], columns=["Index score, bottom income quintile", "Index score, top income quintile", "Difference"],
+                     rows=[[name, [f"T3_3_{iso}_{c}" for c in ("bottom", "top", "difference")]] for name, iso in ((COUNTRIES[k], k) for k in ids.keys("T3_3_", "_bottom"))]),
+        "4.1": dict(kind="hbar", decimals="g", rows=[[label, f"C4_1_{k}"] for k, label in (
+            ("flood", "Flood/Heavy rain"), ("hurricane", "Hurricane/Cyclone"), ("earthquake", "Earthquake"), ("drought", "Drought"), ("wildfire", "Wildfire"),
+            ("thunder", "Thunder or lightning storm"), ("tornado", "Tornado"), ("blizzard", "Blizzard or snowstorm"), ("mudslide", "Mudslide"),
+            ("volcano", "Volcano eruption"), ("tsunami", "Tsunami"))]),
+        "4.2": dict(kind="matrix", plain=[6],
+                    columns=["Flood/heavy rain", "Hurricane/cyclone", "Earthquake", "Drought", "Wildfire", "Other", "Did not experience disaster"],
+                    rows=[[REGIONS[k], [i if i in ids.ids else None for i in (f"C4_2_{k}_{c}" for c in ("flood", "hurricane", "earthquake", "drought", "wildfire", "other", "none"))]]
+                          for k in ids.keys("C4_2_", "_none")]),
+        "4.3": dict(kind="grouped", series=["Among those who have experienced a disaster in past five years", "Among those who have not experienced a disaster in past five years"],
+                    colours=["fuchsia", "teal"], rows=[[label, [f"C4_3_{k}_disaster", f"C4_3_{k}_no_disaster"]] for k, label in NEEDS.items()]),
+        "4.4": dict(kind="vgrouped", series=["Among those who have experienced a disaster in past five years", "Among those who have not experienced a disaster in past five years"],
+                    colours=["fuchsia", "teal"],
+                    panels=[[title, [[label, [f"C4_4_{g}_{k}_disaster", f"C4_4_{g}_{k}_no_disaster"]] for k, label in NEEDS.items()]]
+                            for g, title in (("low_lower_middle", "Low/lower-middle-income countries"), ("upper_middle_high", "Upper-middle/high-income countries"))]),
+        "4.5": dict(kind="hbar", rows=ids.regions("C4_5_", None)),
+        "4.6": dict(kind="grouped", series=["Hospitals", "Local government", "National government"], rows=ids.regions("C4_6_", ["hospitals", "local", "national"])),
+        "T4.1": dict(kind="matrix", columns=["All countries", "Low-income countries", "Lower-middle-income countries", "Upper-middle-income countries", "High-income countries"],
+                     rows=[[label, [f"T4_1_{k}_{c}" for c in ("all", "low_income", "lower_middle", "upper_middle", "high_income")]] for k, label in (
+                         ("local_news", "Local news, through newspapers, TV or radio"), ("weather_service", "National weather service"), ("internet", "Internet/social media"),
+                         ("emergency", "Emergency services (e.g., fire dept., police, medical services)"), ("disaster_agency", "The national disaster management agency"),
+                         ("religious", "Local religious leaders"), ("famous", "A famous or influential person you like"))]),
+        "4.7": dict(kind="original", why=SCATTER),
+        "T4.2": dict(kind="matrix", unit=["%", "%", " pts"], plain=[2],
+                     columns=["Among those who had experienced a disaster", "Among those who had not experienced a disaster", "Difference"],
+                     rows=[[label, [f"T4_2_{k}_{c}" for c in ("experienced", "not", "difference")]] for k, label in (
+                         ("any", "Any type of natural hazard"), ("drought", "Drought"), ("wildfire", "Wildfire"), ("flood", "Flood/heavy rain"),
+                         ("hurricane", "Hurricane/cyclone"), ("earthquake", "Earthquake"))]),
     },
 )
 
