@@ -67,8 +67,8 @@ def fmt(value, decimals=0):
 
 
 def nice_max(top, percent):
-    if top <= 2 and not percent:            # an index that runs from 0 to 1
-        for step in (0.05, 0.1, 0.2, 0.5):
+    if top <= 10 and not percent:           # an index that runs from 0 to 1, a ratio
+        for step in (0.05, 0.1, 0.2, 0.5, 1, 2):
             if top / step <= 5.01:
                 vmax = step * -(-top // step)
                 return round(vmax + (step if vmax - top < step * 0.12 else 0), 2), step
@@ -186,7 +186,9 @@ def grouped(rows, series, width, height, unit="%", decimals=0):
     """Several bars per row. rows: [(label, [values])]; series: [(name, colour)]."""
     wrapped, label_w = _labels(rows, FS, width * 0.34)
     x0, x1 = label_w + 22, width - 96
-    top, bottom = 64, height - 48
+    extra = max(0, key_height(series, x0 - 14, width) - 30)        # the plot starts under a key of three rows or more
+    height += extra
+    top, bottom = 64 + extra, height - 48
     vmax, step = nice_max(max(v for _, vs in rows for v in vs if v is not None), unit == "%")
     band = (bottom - top) / len(rows)
     n = len(series)
@@ -206,20 +208,27 @@ def grouped(rows, series, width, height, unit="%", decimals=0):
     return _frame(width, height, "".join(out))
 
 
-def stacked(rows, segments, width, height, unit="%", label_all=False, mute=()):
-    """Bars that add to 100. rows: [(label, [values])]; segments: [(name, colour)]. Segments listed in mute are never labelled."""
+def stacked(rows, segments, width, height, unit="%", label_all=False, mute=(), quiet=(), extra=None, texts=None):
+    """Bars that add to 100. rows: [(label, [values])]; segments: [(name, colour)]. Segments listed in mute are never labelled,
+    nor are the (row, segment) cells in quiet. extra heads a column of texts at the right, one per row."""
     wrapped, label_w = _labels(rows, FS, width * 0.3)
-    x0, x1 = label_w + 22, width - 30
-    extra = key_height(segments, x0 - 14, width)
-    height += extra
-    top, bottom = 64 + extra, height - 48
+    tail = 150 if extra else 0
+    x0, x1 = label_w + 22, width - 30 - tail
+    head = wrap(extra, FS - 3, tail - 10) if extra else []
+    extra_h = key_height(segments, x0 - 14, width) + max(0, 24 * len(head) - 30)
+    height += extra_h
+    top, bottom = 64 + extra_h, height - 48
     band = (bottom - top) / len(rows)
     thick = min(84, band * 0.62)
     stacked.unlabelled = []
     out = [_key(segments, x0 - 14, 4, width), _value_axis(x0, x1, top, bottom, 100, 20, unit)]
+    for k, text in enumerate(head):
+        out.append(_txt(width - tail / 2, top - 14 - 24 * (len(head) - 1 - k), text, FS - 3, 700, "middle"))
     for i, ((label, values), lines) in enumerate(zip(rows, wrapped)):
         y_mid = top + band * (i + 0.5)
         x = x0 + 0.75
+        if texts and texts[i]:
+            out.append(_txt(width - tail / 2, y_mid + 9, texts[i], FS_VALUE, 900, "middle"))
         last = max(j for j, v in enumerate(values) if v > 0)
         for j, (value, (_, colour)) in enumerate(zip(values, segments)):
             if value <= 0:
@@ -229,7 +238,7 @@ def stacked(rows, segments, width, height, unit="%", label_all=False, mute=()):
                 out.append(_bar(x, y_mid - thick / 2, w, thick, colour))
             else:
                 out.append(f'<rect x="{x:.1f}" y="{y_mid - thick / 2:.1f}" width="{max(w - 2, 0.5):.1f}" height="{thick:.1f}" fill="{colour}"/>')
-            if j not in mute and (label_all or colour.upper() != GRID):
+            if j not in mute and (i, j) not in quiet and (label_all or colour.upper() != GRID):
                 # the figure with its unit where there is room, the bare figure in a narrow segment, nothing in a sliver
                 text = next((t for t in (f"{value:g}{unit}", f"{value:g}") if w >= width_of(t, FS_VALUE, True) + 8), None)
                 if text:

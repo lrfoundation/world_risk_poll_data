@@ -246,6 +246,34 @@ def content(section, charts, doc, drop=(), heads=("# ", "## ")):
     return out
 
 
+def opening(title, blocks):
+    """Split a chapter's blocks into what its opening page can hold and the rest.
+
+    The opening page takes the text before the first heading or chart, as far as it fits beside the headline
+    figure; a paragraph that introduces a list stays with its list. What is left over before the chapter's
+    first main heading starts the text without a heading, as it does in the original.
+    """
+    room = 440 - 57 * max(0, -(-len(title) // 30) - 1)
+    lead = next((k for k, b in enumerate(blocks) if isinstance(b, dict) or b.startswith("#")), len(blocks))
+    groups = []                      # runs of blocks that stay together
+    for block in blocks[:lead]:
+        if block.startswith("- ") and groups:
+            groups[-1].append(block)
+        else:
+            groups.append([block])
+    taken = 0
+    for group in groups:
+        height = sum(22 * -(-len(b) // 120) + 26 for b in group)
+        if height > room:
+            break
+        room -= height
+        taken += len(group)
+    rest = blocks[taken:]
+    if rest and not (isinstance(rest[0], str) and rest[0].startswith("# ")):
+        rest = ["::flow"] + rest
+    return blocks[:taken] + rest
+
+
 def dump(blocks):
     return ["```chart\n" + json.dumps(b, ensure_ascii=False, indent=1) + "\n```" if isinstance(b, dict) else b for b in blocks]
 
@@ -278,7 +306,7 @@ def assemble(key):
             chapter += 1
             opener = p["chapters"][chapter - 1]
             out.append(f"::chapter {title} | {opener['big']} | {opener['caption']}")
-            blocks = content(section, p["charts"], doc, drop, heads=("# ", "## "))
+            blocks = opening(title, content(section, p["charts"], doc, drop, heads=("# ", "## ")))
         else:
             out.append(f"::{section['kind']} {title}")
             blocks = content(section, p["charts"], doc, drop, heads=("## ", "### "))
@@ -489,6 +517,101 @@ plan(
                      rows=[[label, [f"T4_2_{k}_{c}" for c in ("experienced", "not", "difference")]] for k, label in (
                          ("any", "Any type of natural hazard"), ("drought", "Drought"), ("wildfire", "Wildfire"), ("flood", "Flood/heavy rain"),
                          ("hurricane", "Hurricane/cyclone"), ("earthquake", "Earthquake"))]),
+    },
+)
+
+
+AI5 = dict(series=["Mostly help", "Neither", "Don’t have an opinion", "Mostly harm", "Don’t know/refused"], colours=["teal", "lime", "orange", "fuchsia", "grey"])
+AI5_KEYS = ("help", "neither", "no_opinion", "harm", "dk")
+WORRY3 = dict(series=["Very worried", "Somewhat worried", "Not worried"], colours=["fuchsia", "green", "teal"], rest="Don’t know/refused")
+SCHOOLING = ["Among those with primary education or less", "Among those with secondary education", "Among those with post-secondary education"]
+USES = (("stolen", "Personal information being stolen"), ("companies", "Personal information being used by companies for marketing purposes without your permission"),
+        ("government", "Personal information being used by the government without your permission"))
+FEELINGS = (("comfortable", "‘Living comfortably’ on current income"), ("getting_by", "‘Getting by’ on current income"),
+            ("difficult", "‘Finding it difficult’ on current income"), ("very_difficult", "‘Finding it very difficult’ on current income"))
+PLACES = {"MUS": "Mauritius", "TUR": "Türkiye", "POL": "Poland", "HND": "Honduras", "SLV": "El Salvador", "GRC": "Greece", "USA": "United States", "JPN": "Japan",
+          "HKG": "Hong Kong SAR of China", "IRN": "Iran", "KOR": "South Korea", "FIN": "Finland", "SWE": "Sweden", "CHN": "China", "DEU": "Germany", "NOR": "Norway",
+          "EST": "Estonia", "DNK": "Denmark", "ISL": "Iceland", "ARE": "United Arab Emirates", "AFG": "Afghanistan", "ITA": "Italy", "ESP": "Spain", "KGZ": "Kyrgyzstan",
+          "SAU": "Saudi Arabia", "NPL": "Nepal"}
+
+
+def ai_rows(ids, prefix, names):
+    """Rows of the five answers on artificial intelligence; an answer the original does not print is null."""
+    return [[label, [i if i in ids.ids else None for i in (f"{prefix}{k}_{c}" for c in AI5_KEYS)]] for k, label in names]
+
+
+plan(
+    "2021_a_digital_world",
+    folder="WRP_2021/core_a_digital_world", pdf="core_a_digital_world.pdf", pages=(3, 35),
+    title="A Digital World", subtitle="Perceptions of risk from AI and misuse of personal data", published="November 2022",
+    source="World Risk Poll 2021: A Digital World. Perceptions of risk from AI and misuse of personal data (Lloyd's Register Foundation, November 2022)",
+    copyright="Copyright © 2022 Lloyd's Register Foundation. All rights reserved.",
+    cover_image=[10, 0],
+    chapters=[
+        dict(big="39%", caption="of people worldwide believed artificial intelligence will ‘mostly help’ people in their country in the next 20 years; 28% said it will ‘mostly harm’"),
+        dict(big="63%", caption="of people worldwide said they had used the internet in the past 30 days, up from 54% in 2019"),
+        dict(big="44%", caption="of internet users worldwide were ‘very worried’ that their personal information could be stolen"),
+    ],
+    after={"Preface": ["**Dr. Ruth Boumphrey**, Chief Executive, Lloyd’s Register Foundation"]},
+    edits=[
+        "The headline figure on each chapter's opening page is taken from that chapter's charts; the original opens each chapter with a photograph.",
+        "The name under the portrait in the preface is set as a line at the end of the preface.",
+        "Footnotes are gathered as numbered references at the back, with their original numbers. Web addresses that the original broke across lines have been joined up.",
+        "Map 1.1 is a map of the world shaded by region in the original; its fifteen ratios are drawn here as bars. Chart 1.7 is a ring in the original and is drawn as a bar.",
+        "In the charts of views on artificial intelligence the original draws segments under 5% without a figure. Where a bar has one such segment it is drawn in its place, "
+        "at what is left of 100%, also without a figure; where it has two, the space they take is drawn in pale grey at the end of the bar.",
+    ],
+    pending="The three appendices of the original (the questionnaire, the list of regions and the references listed again by chapter) are not in this draft.",
+    charts=lambda ids: {
+        "1.1": dict(kind="grouped", series=["World", "Women", "Men"], colours=["teal", "fuchsia", "navy"],
+                    rows=[[label, [f"C1_1_{g}_{k}" for g in ("world", "women", "men")]] for k, label in zip(AI5_KEYS, AI5["series"])]),
+        "1.2": dict(kind="stacked", gaps=NOT_PRINTED, extra="Ratio: mostly help/mostly harm", extra_decimals=1,
+                    rows=[row + [f"C1_2_{k}_ratio"] for row, k in zip(ai_rows(ids, "C1_2_", [(k, REGIONS[k]) for k in ids.keys("C1_2_", "_ratio")]), ids.keys("C1_2_", "_ratio"))],
+                    **AI5),
+        "M1.1": dict(kind="hbar", unit="", decimals=1, rows=ids.regions("M1_1_", None)),
+        "T1.1": dict(kind="matrix", unit=["%", "%", " pts", "%"], plain=[2], columns=["Mostly help", "Mostly harm", "Net ‘mostly help’*", "No opinion/don’t know"],
+                     rows=[[PLACES[k], [f"T1_1_{k}_{c}" for c in ("help", "harm", "net", "no_opinion_dk")]] for k in ids.keys("T1_1_", "_net")]),
+        "1.3": dict(kind="stacked", gaps=NOT_PRINTED, rows=ai_rows(ids, "C1_3_", [("access", "Have access to the internet"), ("no_access", "Do not have access to the internet")]), **AI5),
+        "1.4": dict(kind="stacked", gaps=NOT_PRINTED,
+                    rows=ai_rows(ids, "C1_4_", [("important", "Religion important in daily life"), ("not_important", "Religion not important in daily life")]), **AI5),
+        "1.5": dict(kind="stacked", gaps=NOT_PRINTED, rows=ai_rows(ids, "C1_5_", [
+            ("experienced", "Have experienced discrimination based on race/nationality, skin colour or gender"),
+            ("not_experienced", "Have not experienced discrimination based on race/nationality, skin colour or gender")]), **AI5),
+        "1.6": dict(kind="grouped", series=["‘Mostly harm’ among those who had experienced discrimination", "‘Mostly harm’ among those who had not experienced discrimination"],
+                    colours=["fuchsia", "teal"], rows=[[PLACES[k], [f"C1_6_{k}_experienced", f"C1_6_{k}_not_experienced"]] for k in ("DNK", "NOR", "SWE")]),
+        "1.7": dict(kind="stacked", rows=[["World", ["C1_7_yes", "C1_7_no", "C1_7_dk"]]],
+                    series=["Yes, would feel safe", "No, would not feel safe", "Don’t know/refused"], colours=["teal", "fuchsia", "grey"]),
+        "T1.2": dict(kind="lists", lists=[["% Yes, would feel safe", [[PLACES[k], f"T1_2_{k}"] for k in ids.keys("T1_2_")[:5]]],
+                                          ["% Yes, would feel safe", [[PLACES[k], f"T1_2_{k}"] for k in ids.keys("T1_2_")[5:]]]]),
+        "1.8": dict(kind="grouped", series=SCHOOLING, colours=["fuchsia", "teal", "navy"],
+                    rows=[[label, [f"C1_8_{k}_{c}" for c in ("primary", "secondary", "post_secondary")]] for k, label in (
+                        ("world", "World"), ("internet", "People who have internet access"), ("no_internet", "People who do not have internet access"))]),
+        "2.1": dict(kind="grouped", series=["2019", "2021"], colours=["navy", "fuchsia"],
+                    rows=[[label, [f"C2_1_{k}_2019", f"C2_1_{k}_2021"]] for k, label in (
+                        ("world", "World"), ("low", "Low-income countries"), ("lower_middle", "Lower-middle-income countries"),
+                        ("upper_middle", "Upper-middle-income countries"), ("high", "High-income countries"))]),
+        "2.2": dict(kind="hbar", rows=ids.regions("C2_2_", None)),
+        "2.3": dict(kind="grouped", series=SCHOOLING, colours=["fuchsia", "teal", "navy"],
+                    rows=[[label, [f"C2_3_{k}_{c}" for c in ("primary", "secondary", "post_secondary")]] for k, label in (
+                        ("world", "World"), ("south_asia", "Southern Asia"), ("central_west_africa", "Central/Western Africa"), ("east_africa", "Eastern Africa"))]),
+        "2.4": dict(kind="grouped", series=["2019", "2021"], colours=["navy", "fuchsia"],
+                    rows=[[label, [f"C2_4_{k}_2019", f"C2_4_{k}_2021"]] for k, label in AGES.items()]),
+        "3.1": dict(kind="stacked", rows=[[label, [f"C3_1_{k}_{c}" for c in ("very", "somewhat", "not")]] for k, label in USES], **WORRY3),
+        "3.2": dict(kind="stacked", rows=ids.regions("C3_2_", ["very", "somewhat", "not"]), **WORRY3),
+        "3.3": dict(kind="original", why=SCATTER),
+        "3.4": dict(kind="hbar", key=["Age group", "Feelings about current income"], colours=["fuchsia", "teal"],
+                    rows=[[label, f"C3_4_{k}", "Age group"] for k, label in AGES.items()] + [[label, f"C3_4_{k}", "Feelings about current income"] for k, label in FEELINGS]),
+        "3.5": dict(kind="grouped", series=["Companies for marketing purposes without your permission", "The government without your permission"], colours=["fuchsia", "teal"],
+                    rows=ids.regions("C3_5_", ["companies", "government"])),
+        "3.6": dict(kind="grouped", series=["Among those who have confidence in national government", "Among those who do not have confidence in national government"],
+                    colours=["teal", "fuchsia"], rows=[[PLACES[k], [f"C3_6_{k}_confidence", f"C3_6_{k}_no_confidence"]] for k in ids.keys("C3_6_", "_no_confidence")]),
+        "3.7": dict(kind="grouped", series=["Companies for marketing purposes without your permission", "The government without your permission"], colours=["fuchsia", "teal"],
+                    title="Percentage of internet users ‘very worried’ about the government or companies using their online personal information, by feelings about current income",
+                    subtitle=None, rows=[[label, [f"C3_7_{k}_companies", f"C3_7_{k}_government"]] for k, label in FEELINGS]),
+        "3.8": dict(kind="grouped", series=["Among those who had not experienced discrimination", "Among those who had experienced one form of discrimination",
+                                            "Among those who had experienced two or more forms of discrimination"], colours=["teal", "fuchsia", "navy"],
+                    rows=[[label.replace("Personal information being", "Being").replace("Being stolen", "Being stolen"), [f"C3_8_{k}_{c}" for c in ("none", "one", "two_plus")]]
+                          for k, label in USES]),
     },
 )
 

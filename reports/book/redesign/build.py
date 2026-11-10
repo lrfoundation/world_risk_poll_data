@@ -100,8 +100,9 @@ def parse(path):
             flow = None
             section = dict(kind="chapter", title=title, big=big, caption=caption, opener=[], flows=[], new=False)
             sections.append(section)
-        elif chunk.startswith("# "):
-            flow = dict(title=chunk[2:], blocks=[])
+        elif chunk.startswith("# ") or chunk == "::flow":
+            # "::flow" starts a chapter's text where the original has no heading over it
+            flow = dict(title=chunk[2:] if chunk.startswith("# ") else "", blocks=[])
             section["flows"].append(flow)
         elif flow is None:
             section["opener"].append(chunk)
@@ -206,18 +207,25 @@ class Report:
         if kind == "stacked":
             # An id of null is a segment the original draws but does not label. With "rest", what is left of 100 is drawn
             # as one pale segment under that name, without a figure; with "gaps", only in the rows that have such a segment.
-            series, rows = self.series(spec), []
-            rest = spec.get("rest") or spec.get("gaps")
-            for label, ids in spec["rows"]:
+            # A row with one such segment draws it in its place, at what is left of 100; a third entry in a row is a finding
+            # shown as text at the right, under the heading "extra".
+            series, rows, quiet, texts = self.series(spec), [], set(), []
+            rest = spec.get("rest") or (spec.get("gaps") if any(ids.count(None) > 1 for _, ids, *_ in spec["rows"]) else None)
+            for r, (label, ids, *more) in enumerate(spec["rows"]):
                 values = [self.fig.number(i) if i else 0 for i in ids]
                 left = max(0, 100 - sum(values)) if spec.get("rest") or not all(ids) else 0
+                if spec.get("gaps") and ids.count(None) == 1:
+                    values[ids.index(None)], left = left, 0
+                    quiet.add((r, ids.index(None)))
                 rows.append((self.label(label), values + ([left] if rest else [])))
+                texts.append(f"{self.fig.number(more[0]):.{spec.get('extra_decimals', 0)}f}{spec.get('extra_unit', '')}" if more and more[0] else None)
             if rest:
                 series.append((rest, "#E9E9E9"))
             n = len(rows)
             height = 130 + (120 if n <= 6 else 88 if n <= 9 else 66 if n <= 12 else 58) * n
             mute = (len(series) - 1,) if rest else ()
-            svg = charts.scaled(charts.stacked(rows, series, CHART_W, height, unit=unit, label_all=True, mute=mute), SCALE)
+            svg = charts.scaled(charts.stacked(rows, series, CHART_W, height, unit=unit, label_all=True, mute=mute, quiet=quiet,
+                                               extra=spec.get("extra"), texts=texts), SCALE)
             if charts.stacked.unlabelled:
                 self.small = f"Segments of {max(charts.stacked.unlabelled):g}{unit} or less are too narrow to label."
             return svg
@@ -457,9 +465,10 @@ class Report:
                 anchor = self.anchor()
                 new = tag if section["new"] and index == 0 else ""
                 level = "sub" if section["kind"] == "chapter" else "top"
-                toc.append((level, "", flow["title"], anchor))
+                if flow["title"]:
+                    toc.append((level, "", flow["title"], anchor))
                 self.renumbering = not section["new"]
-                html += f'<h1 id="{anchor}">{self.inline(flow["title"])}</h1>{new}' + self.blocks(flow["blocks"])
+                html += (f'<h1 id="{anchor}">{self.inline(flow["title"])}</h1>{new}' if flow["title"] else "") + self.blocks(flow["blocks"])
                 self.renumbering = True
             body.append(self.flow_page(html, numbering if section["kind"] != "back" else "main"))
         # Back matter made here: references, then notes on this edition.
