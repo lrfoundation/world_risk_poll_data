@@ -64,6 +64,7 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | `assemble_2023.py` | Those items, plus the report's plan in `plans_2023.py`, to a content file |
 | `plans_2023.py` | A plan per report of the 2023 poll: pages, opener figures, chart specifications, edits and queries |
 | `check.py` | Compares a content file with its pages of the PDF, both ways: every sentence set must be in the original, and every block of running text in the original must be set |
+| `bind.py` | The re-set reports and the published reports of the 2025 poll, bound as one book |
 | `content/` | One file per re-set report |
 
 ## The four reports of the 2019 volume
@@ -258,3 +259,24 @@ Conventions added for these reports:
 `check.py` still reports the lines of the list of charts on a contents page for
 the charts that are pictures, and one or two blocks of chart lettering (a note
 set between two charts in the ocean workers report). None is missing text.
+
+## Binding the book
+
+    python reports/book/redesign/bind.py --screen
+
+writes `output/redesign/World_Risk_Poll_reports_2019_to_2025.pdf` (782 pages of
+1920 by 1080 points) and, with `--screen`, a copy with its pictures at 110 dpi.
+Build every report first; the five reports of the 2025 poll come from
+`.cache/pdfs/` as published and are placed page for page.
+
+The book is a title page, "About this book", the contents, and four parts, one
+for each poll. A part opens with a page of its own and its reports follow whole,
+cover first, in the order of `BOOK` in `bind.py`. Each report keeps its own page
+numbers. The book's page number ("Book page 123") is added in the middle of the
+foot of every page but the covers, where all the reports leave the footer
+empty; this is the only mark made on the pages of the 2025 poll's reports. The
+PDF has a bookmark for each part and report.
+
+The pages have no bleed and no trim marks, and parts and reports start on the
+next page whichever side it falls on. Both are for the printer's specification
+to settle.
