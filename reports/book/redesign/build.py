@@ -154,8 +154,10 @@ class Report:
     # -- figures
 
     def number(self, spec):
-        kind = "Table" if spec["kind"] == "table" or spec.get("table") else "Chart"
-        self.counts[kind] += 1
+        kind = spec.get("as") or ("Table" if spec["kind"] == "table" or spec.get("table") else "Chart")
+        self.counts[kind] = self.counts.get(kind, 0) + 1
+        if spec.get("number"):
+            return f"{kind} {spec['number']}"          # the number the original gives it
         if self.meta.get("numbering") == "chapter":
             return f"{kind} {self.chapter}.{self.counts[kind]}"
         return f"{kind} {self.counts[kind]}"
@@ -166,13 +168,21 @@ class Report:
         return list(zip(names, [NAMED.get(c, c) for c in spec["colours"]] if spec.get("colours") else SERIES))
 
     def values(self, ids):
-        return [self.fig.number(i) for i in ids]
+        """Published values by finding ID; null stays None (a value the original does not show)."""
+        return [self.fig.number(i) if i else None for i in ids]
 
     def label(self, text):
         """A row label; {finding_id} in it is replaced by that published value."""
         return re.sub(r"\{(\w+)\}", lambda m: self.fig.text(m.group(1)), text)
 
     def drawing(self, spec):
+        charts.ZERO = spec.get("zero")          # "<0.5" where the original prints that for a value that rounds to nought
+        try:
+            return self.draw(spec)
+        finally:
+            charts.ZERO = None
+
+    def draw(self, spec):
         kind = spec["kind"]
         unit = spec.get("unit", "%")
         if kind == "hbar":
@@ -210,8 +220,26 @@ class Report:
             return svg
         if kind == "matrix":
             rows = [(label, self.values(ids)) for label, ids in spec["rows"]]
-            row_height = 74 if len(rows) <= 6 else 58
-            return charts.scaled(charts.matrix(rows, spec["columns"], CHART_W, row_height, unit=unit, decimals=spec.get("decimals", 0)), SCALE)
+            row_height = 74 if len(rows) <= 6 else 58 if len(rows) <= 12 else 50
+            return charts.scaled(charts.matrix(rows, spec["columns"], CHART_W, row_height, unit=unit, decimals=spec.get("decimals", 0),
+                                               plain=tuple(spec.get("plain", ())), groups=spec.get("groups"), signed=tuple(spec.get("signed", ()))), SCALE)
+        if kind == "stacked_pair":
+            # Two sets of stacked bars side by side; a fourth entry in a row is the finding shown as text at the right.
+            rows = []
+            for label, first, second, *rest in spec["rows"]:
+                text = None
+                if rest and rest[0]:
+                    value = self.fig.number(rest[0])
+                    unit_ = spec.get("extra_unit", "")
+                    text = ("+" if value > 0 else "−" if value < 0 else "") + f"{abs(value):g}" + (unit_[:-1] if unit_.endswith("pts") and abs(value) == 1 else unit_)
+                rows.append((label, self.values(first), self.values(second), text))
+            row_height = 58 if len(rows) <= 12 else 50
+            svg = charts.scaled(charts.stacked_pair(rows, self.series(spec), spec["panels"], CHART_W, row_height, unit=unit, extra=spec.get("extra")), SCALE)
+            if charts.stacked_pair.unlabelled:
+                self.small = f"Segments of {max(charts.stacked_pair.unlabelled):g}{unit} or less are too narrow to label."
+            return svg
+        if kind == "region_map":
+            return self.region_map(spec)
         if kind == "heading":
             return ""
         if kind == "vgrouped":
@@ -255,6 +283,42 @@ class Report:
 
         return (f'<div class="mapkey">{key}</div>{art}<div class="ranks">{ranked("Top 3", spec["top"])}{ranked("Bottom 3", spec["bottom"])}</div>')
 
+    def region_map(self, spec):
+        """Part of the world, with the countries the original names shaded by their published values."""
+        from worldmap import SMALL, mix, project
+        values = {code: self.fig.number(fid) for _, code, fid in spec["rows"]}
+        lon0, lat0, lon1, lat1 = spec["box"]
+        (xa, ya), (xb, yb) = project(lon0, lat1), project(lon1, lat0)
+        width = 470
+        k = width / (xb - xa)
+        height = round(k * (yb - ya))
+        top = max(values.values())
+
+        def place(x, y):
+            return k * (x - xa), k * (y - ya)
+
+        def shade(code):
+            return mix(FUCHSIA, 0.18 + 0.82 * values[code] / top) if code in values else NO_DATA
+
+        out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" role="img" '
+               'font-family="DM Sans, sans-serif">']
+        for code, rings in sorted(self.world.shapes.items()):
+            d = "".join("M" + "L".join(f"{x:.1f},{y:.1f}" for x, y in (place(*pt) for pt in ring)) + "Z" for ring in rings)
+            out.append(f'<path d="{d}" fill="{shade(code)}" stroke="#FFFFFF" stroke-width="0.8" stroke-linejoin="round" fill-rule="evenodd"/>')
+        for code in values:
+            if code in SMALL:
+                x, y = place(*project(*SMALL[code]))
+                out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="6" fill="{shade(code)}" stroke="#FFFFFF" stroke-width="1.5"/>')
+        for name, code, fid in spec["rows"]:
+            x, y = self.world.centre(code, place)
+            dx, dy = spec.get("nudge", {}).get(code, (0, 0))
+            out.append(f'<text x="{x + dx:.1f}" y="{y + dy + 5:.1f}" font-size="15" font-weight="900" text-anchor="middle" fill="#231F20" '
+                       f'stroke="#FFFFFF" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">{self.fig.text(fid)}%</text>')
+        out.append("</svg>")
+        ranked = sorted(spec["rows"], key=lambda r: -values[r[1]])
+        items = "".join(f"<div><span>{escape(name)}</span><b>{self.fig.text(fid)}%</b></div>" for name, _, fid in ranked)
+        return f'<div class="regionmap">{"".join(out)}<div class="rank">{items}</div></div>'
+
     def figure(self, spec):
         label = self.number(spec)
         anchor = self.anchor()
@@ -275,7 +339,7 @@ class Report:
         if self.small:
             notes.append(f"<p><b>Note:</b> {self.small}</p>")
         if spec["kind"] == "map":
-            notes.append("<p><b>Note:</b> Country shading was computed for this edition from the public 2019 data, in five groups of about equal size. "
+            notes.append("<p><b>Note:</b> Country shading was computed for this edition from the public " + str(self.meta["wave"]) + " data, in five groups of about equal size. "
                          "The countries named are the published figures.</p>")
         subtitle = f'<p class="sub">{self.inline(spec["subtitle"])}</p>' if spec.get("subtitle") else ""
         cls = "fig" + (" tall" if spec.get("tall") else "") + (" inline" if spec["kind"] == "table" else "") + (" head" if spec["kind"] == "heading" else "")
@@ -294,6 +358,8 @@ class Report:
                 out.append('<div class="colbreak"></div>')
             elif chunk.startswith("## "):
                 out.append(f"<h2>{self.inline(chunk[3:])}</h2>")
+            elif chunk.startswith("### "):
+                out.append(f"<h3>{self.inline(chunk[4:])}</h3>")
             elif chunk.startswith("> "):
                 out.append(f'<p class="lead">{self.inline(chunk[2:])}</p>')
             elif chunk.startswith("- "):
@@ -323,7 +389,7 @@ class Report:
 
     def chrome(self):
         m = self.meta
-        line = f'{m["brand"]}  ||  {m["title"]}  ||  Re-set in 2026 from the full report of the 2019 poll'
+        line = f'{m["brand"]}  ||  {m["title"]}  ||  {m.get("running", "Re-set in 2026 from the full report of the 2019 poll")}'
         return (f'<div class="rule top"></div><div class="rule bottom"></div><div class="credit">{escape(m["copyright"])}<br>{escape(line)}</div>'
                 '<div class="pn"></div>')
 
@@ -347,7 +413,7 @@ class Report:
                 '<svg class="edge" viewBox="0 0 1920 1080"><line x1="606.7" y1="0" x2="932.9" y2="1080" stroke="#E3076E" stroke-width="3"/></svg>'
                 f'<div class="logo">{self.logo.replace("#e5006e", "#FFFFFF")}</div>'
                 f'<div class="wrp">World Risk Poll</div><div class="rep">Report {m["wave"]}</div>'
-                f'<div class="name"><b>{escape(m["title"])}:</b><br>{escape(m["subtitle"])}</div>'
+                f'<div class="name"><b>{escape(m["title"])}{"" if m["title"][-1] in "?!" else ":"}</b><br>{escape(m["subtitle"])}</div>'
                 f'<div class="series">{escape(m["series"])}</div><div class="gallup">Powered by <b>GALLUP</b></div></section>')
 
     def opener(self, section, number, anchor):
@@ -410,7 +476,8 @@ class Report:
         # Contents sits after the first front section, as in the 2026 reports' front matter.
         front = [p for p in body if 'data-num="front"' in p]
         rest = [p for p in body if 'data-num="front"' not in p]
-        pages = [self.cover()] + front[:1] + [self.flow_page(contents, "front")] + front[1:] + rest
+        lead = 0 if self.meta.get("contents_first") else 1
+        pages = [self.cover()] + front[:lead] + [self.flow_page(contents, "front")] + front[lead:] + rest
         return pages
 
     def edition_notes(self, tag, anchor):
@@ -440,6 +507,8 @@ class Report:
             names = labels[0] if len(labels) == 1 else "Charts " + ", ".join(numbers[:-1]) + " and " + numbers[-1]
             verb = "is placed as a picture" if len(labels) == 1 else "are placed as pictures"
             out.append(f"<p><b>{names}</b> {verb} of the original, because {why}.</p>")
+        if m.get("pending"):
+            out.append(f"<p><b>Not yet set.</b> {self.inline(m['pending'])}</p>")
         for query in self.queries + m.get("queries", []):
             out.append(f"<p><b>Query.</b> {self.inline(query)}</p>")
         self.renumbering = True

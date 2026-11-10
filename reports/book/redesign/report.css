@@ -25,6 +25,7 @@ body { font-family: "DM Sans", "WRP Scripts", sans-serif; font-size: 17px; line-
 
 .flow h1 { font-size: 48px; line-height: 54px; font-weight: 700; letter-spacing: -0.02em; color: var(--navy); margin: 0 0 18px; padding: 0 0 2px 20px; break-after: avoid; }
 .flow h2 { font-size: 30px; line-height: 36px; font-weight: 700; letter-spacing: -0.01em; color: var(--navy); margin: 30px 0 14px; padding: 0 18px 1px 20px; break-after: avoid; }
+.flow h3 { font-size: 21px; line-height: 27px; font-weight: 700; color: var(--navy); margin: 22px 0 8px; padding: 0 18px 0 20px; break-after: avoid; }
 .flow h1::before, .flow h2::before, .fig h4::before, .fig .sub::before, .flow .lead::before {
   content: ""; position: absolute; left: 0; top: 3px; bottom: 3px; width: 10px; border-radius: 5px; background: var(--fuchsia); }
 .flow h2::before { background: var(--lime); }
@@ -78,13 +79,15 @@ table.data tr:nth-child(even) td { background: #FBF3F7; }
 .mapkey span { display: inline-flex; align-items: center; gap: 6px; }
 .mapkey i { width: 12px; height: 12px; border-radius: 3px 0 0 3px; display: inline-block; }
 .ranks { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; width: 780px; margin-top: 8px; }
+.regionmap { display: grid; grid-template-columns: 470px 1fr; gap: 26px; width: 780px; align-items: center; }
+.regionmap svg { display: block; border-radius: 8px; background: #F7F9FB; }
 .rank h6 { margin: 0 0 4px; font-size: 13px; line-height: 18px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); }
 .rank div { display: flex; justify-content: space-between; font-size: 15px; line-height: 24px; border-bottom: 1px solid #E3E3E3; }
 .rank b { font-weight: 900; color: var(--fuchsia); }
 
 /* ---- contents and list of figures */
 .toc { margin: 0 18px 0 20px; }
-.toc .row { display: flex; justify-content: space-between; gap: 24px; font-size: 14px; line-height: 19px; font-style: italic; padding: 3px 0 3px; border-bottom: 1px solid rgba(227, 7, 110, 0.18); break-inside: avoid; }
+.toc .row { display: flex; justify-content: space-between; gap: 24px; font-size: 14px; line-height: calc(19px * var(--fit)); font-style: italic; padding: 3px 0 3px; border-bottom: 1px solid rgba(227, 7, 110, 0.18); break-inside: avoid; }
 .toc .row.chapter { font-style: normal; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-top: 16px; border-bottom: 0; }
 .toc .row.top { font-weight: 600; }
 .toc .row.sub { padding-left: 0; }

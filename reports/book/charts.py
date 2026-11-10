@@ -56,7 +56,12 @@ def wrap(text, size, max_width, bold=True):
     return lines + [line]
 
 
+ZERO = None      # how a report prints a value that rounds to nought ("<0.5"); set by the caller for one chart
+
+
 def fmt(value, decimals=0):
+    if value == 0 and ZERO:
+        return ZERO
     return f"{value:.{decimals}f}"
 
 
@@ -86,7 +91,7 @@ def _key_rows(entries, x, width):
     """The key's entries in rows that fit the width: [[(name, colour, x)]]."""
     s, rows, at = 20, [[]], x
     for name, colour in entries:
-        w = s + 10 + width_of(name, FS)
+        w = s + 10 + width_of(name, FS) * 1.08
         if rows[-1] and width and at + w > width:
             rows.append([])
             at = x
@@ -97,7 +102,7 @@ def _key_rows(entries, x, width):
 
 def _key_origin(entries, x, width):
     """Where the key starts: at x, moved left if that makes it fit on one row, at the left edge if it needs several."""
-    total = sum(64 + width_of(name, FS) for name, _ in entries) - 34
+    total = sum(64 + width_of(name, FS) * 1.08 for name, _ in entries) - 34
     if width and x + total > width:
         return max(0, width - total) if total <= width else 0
     return x
@@ -176,7 +181,7 @@ def grouped(rows, series, width, height, unit="%", decimals=0):
     wrapped, label_w = _labels(rows, FS, width * 0.34)
     x0, x1 = label_w + 22, width - 96
     top, bottom = 64, height - 48
-    vmax, step = nice_max(max(v for _, vs in rows for v in vs), unit == "%")
+    vmax, step = nice_max(max(v for _, vs in rows for v in vs if v is not None), unit == "%")
     band = (bottom - top) / len(rows)
     n = len(series)
     thick = min(46, band * 0.76 / n)
@@ -185,9 +190,11 @@ def grouped(rows, series, width, height, unit="%", decimals=0):
         y_mid = top + band * (i + 0.5)
         y = y_mid - (n * thick + (n - 1) * 2) / 2
         for value, (_, colour) in zip(values, series):
-            w = (x1 - x0) * value / vmax
-            out.append(_bar(x0 + 0.75, y, w, thick, colour))
-            out.append(_txt(x0 + w + 12, y + thick / 2 + 9, fmt(value, decimals) + unit, FS_VALUE, 900, fill=label_colour(colour)))
+            if value is not None:               # None: the original shows no bar (not asked that year)
+                w = (x1 - x0) * value / vmax
+                size = FS_VALUE if thick >= 22 else FS_VALUE - 5
+                out.append(_bar(x0 + 0.75, y, w, thick, colour))
+                out.append(_txt(x0 + w + 12, y + thick / 2 + size * 0.36, fmt(value, decimals) + unit, size, 900, fill=label_colour(colour)))
             y += thick + 2
         out.append(_category(lines, x0 - 16, y_mid))
     return _frame(width, height, "".join(out))
@@ -228,6 +235,54 @@ def stacked(rows, segments, width, height, unit="%", label_all=False, mute=()):
     return _frame(width, height, "".join(out))
 
 
+def stacked_pair(rows, segments, panels, width, row_height=58, unit="%", extra=None):
+    """Stacked bars in two panels side by side (two years, say), with an optional column of text at the right.
+
+    rows: [(label, [values of the first panel], [values of the second], text or None)]; panels: the two panel names;
+    extra: the heading of the text column.
+    """
+    wrapped, label_w = _labels([(r[0], None) for r in rows], FS, width * 0.27)
+    x0 = label_w + 22
+    tail = 170 if extra else 0
+    gap = 40
+    panel_w = (width - x0 - tail - gap - 8) / 2
+    head = wrap(extra, FS - 3, tail - 10) if extra else []
+    keys = key_height(segments, x0 - 14, width)
+    top = 64 + keys + max(40, 24 * len(head) + 8)
+    height = top + row_height * len(rows) + 8
+    thick = row_height * 0.7
+    stacked_pair.unlabelled = []
+    out = [_key(segments, x0 - 14, 4, width)]
+    for p, name in enumerate(panels):
+        px = x0 + p * (panel_w + gap)
+        out.append(_txt(px + panel_w / 2, top - 14, name, FS, 800, "middle"))
+        out.append(f'<line x1="{px}" y1="{top}" x2="{px}" y2="{height - 8}" stroke="{INK}" stroke-width="1.5"/>')
+    for k, text in enumerate(head):
+        out.append(_txt(width - tail / 2, top - 14 - 24 * (len(head) - 1 - k), text, FS - 3, 700, "middle"))
+    for i, ((label, first, second, text), lines) in enumerate(zip(rows, wrapped)):
+        y_mid = top + row_height * (i + 0.5)
+        for p, values in enumerate((first, second)):
+            x = x0 + p * (panel_w + gap) + 0.75
+            last = max(j for j, v in enumerate(values) if v > 0)
+            for j, (value, (_, colour)) in enumerate(zip(values, segments)):
+                if value <= 0:
+                    continue
+                w = panel_w * value / 100
+                if j == last:
+                    out.append(_bar(x, y_mid - thick / 2, w, thick, colour))
+                else:
+                    out.append(f'<rect x="{x:.1f}" y="{y_mid - thick / 2:.1f}" width="{max(w - 2, 0.5):.1f}" height="{thick:.1f}" fill="{colour}"/>')
+                if w >= width_of(f"{value:g}", FS_VALUE - 2, True) + 6:
+                    out.append(_txt(x + w / 2, y_mid + 8, f"{value:g}", FS_VALUE - 2, 900, "middle", text_on(colour)))
+                else:
+                    stacked_pair.unlabelled.append(value)
+                x += w
+        if text:
+            out.append(_txt(width - tail / 2, y_mid + 8, text, FS_VALUE - 2, 900, "middle"))
+        out.append(_category(lines, x0 - 16, y_mid))
+    return _frame(width, height, "".join(out))
+
+
 def line(years, series, width, height, unit="%"):
     """Lines across polls. series: [(name, colour, [values])]."""
     x0, x1 = 76, width - 60
@@ -264,7 +319,9 @@ def vgrouped(panels, series, width, height, unit="%"):
     panels: [(panel title, [(group label, [values])])]; series: [(name, colour)].
     """
     x0, x1 = 86, width - 20
-    top = 70
+    extra = key_height(series, x0 - 14, width)
+    height += extra
+    top = 70 + extra
     gap = 34
     panel_h = (height - top - gap * (len(panels) - 1)) / len(panels)
     vmax, step = nice_max(max(v for _, groups in panels for _, vs in groups for v in vs), unit == "%")
@@ -331,30 +388,51 @@ def dumbbell(rows, series, width, height, total=None, unit="%", total_unit=None)
     return _frame(width, height, "".join(out))
 
 
-def matrix(rows, columns, width, row_height=58, unit="%", decimals=0, low="#FBE6F0", high="#E3076E"):
-    """A table of values, each cell shaded from light to dark by its value. rows: [(label, [values])]; columns: [names]."""
+def matrix(rows, columns, width, row_height=58, unit="%", decimals=0, low="#FBE6F0", high="#E3076E", plain=(), groups=None, signed=()):
+    """A table of values, each cell shaded from light to dark by its value. rows: [(label, [values])]; columns: [names].
+
+    unit and decimals may be lists, one per column. Columns listed in plain are not shaded (a ratio, a difference) and
+    those in signed show a plus sign. A value of None is a cell the original leaves empty. groups: [(name, columns
+    spanned)] puts a heading over runs of columns (two years, say).
+    """
+    units = unit if isinstance(unit, (list, tuple)) else [unit] * len(columns)
+    places = decimals if isinstance(decimals, (list, tuple)) else [decimals] * len(columns)
     wrapped, label_w = _labels(rows, FS, width * (0.27 if len(columns) < 7 else 0.2))
     x0 = label_w + 22
     cell = (width - x0) / len(columns)
     size = FS - 2 if len(columns) < 7 else FS - 4
     heads = [[line.replace("/ ", "/") for line in wrap(name.replace("/", "/ "), size * 0.86, cell - 6)] for name in columns]
-    top = 14 + 25 * max(len(h) for h in heads)
+    top = 14 + 25 * max(len(h) for h in heads) + (38 if groups else 0)
     height = top + row_height * len(rows) + 6
-    values = [v for _, vs in rows for v in vs]
+    values = [v for _, vs in rows for j, v in enumerate(vs) if v is not None and j not in plain]
     vmin, vmax = min(values), max(values)
     a, b = [int(low[i:i + 2], 16) for i in (1, 3, 5)], [int(high[i:i + 2], 16) for i in (1, 3, 5)]
-    out = []
+    out, at = [], 0
+    for name, span in groups or []:
+        xa, xb = x0 + cell * at + 4, x0 + cell * (at + span) - 4
+        if name:
+            out.append(_txt((xa + xb) / 2, 24, name, FS, 800, "middle"))
+            out.append(f'<line x1="{xa:.1f}" y1="34" x2="{xb:.1f}" y2="34" stroke="{INK}" stroke-width="1.5"/>')
+        at += span
     for j, lines in enumerate(heads):
         y = top - 12 - 25 * (len(lines) - 1)
         out += [_txt(x0 + cell * (j + 0.5), y + 25 * k, line, size, 700, "middle") for k, line in enumerate(lines)]
     for i, ((label, vs), lines) in enumerate(zip(rows, wrapped)):
         y = top + row_height * i
         for j, value in enumerate(vs):
+            if value is None:
+                out.append(_txt(x0 + cell * (j + 0.5), y + row_height / 2 + 9, "–", FS_VALUE, 400, "middle"))
+                continue
+            text = ("+" if j in signed and value > 0 else "") + fmt(value, places[j]).replace("-", "−") + units[j]
+            if j in plain:
+                out.append(f'<rect x="{x0 + cell * j + 2:.1f}" y="{y + 2:.1f}" width="{cell - 4:.1f}" height="{row_height - 4:.1f}" rx="5" fill="#F1F1F1"/>')
+                out.append(_txt(x0 + cell * (j + 0.5), y + row_height / 2 + 9, text, FS_VALUE, 900, "middle"))
+                continue
             t = (value - vmin) / (vmax - vmin) if vmax > vmin else 1
             fill = "#" + "".join(f"{round(a[k] + (b[k] - a[k]) * t):02X}" for k in range(3))
             out.append(f'<rect x="{x0 + cell * j + 2:.1f}" y="{y + 2:.1f}" width="{cell - 4:.1f}" height="{row_height - 4:.1f}" rx="5" fill="{fill}"/>')
             ink = "#FFFFFF" if luminance(fill) < 0.24 else INK
-            out.append(_txt(x0 + cell * (j + 0.5), y + row_height / 2 + 9, fmt(value, decimals) + unit, FS_VALUE, 900, "middle", ink))
+            out.append(_txt(x0 + cell * (j + 0.5), y + row_height / 2 + 9, text, FS_VALUE, 900, "middle", ink))
         out.append(_category(lines, x0 - 16, y + row_height / 2))
     return _frame(width, height, "".join(out))
 

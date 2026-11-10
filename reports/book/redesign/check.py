@@ -31,7 +31,12 @@ def main():
     meta = json.loads(head)
     doc = pymupdf.open(HERE.parent / ".cache" / "pdfs" / meta["pdf"])
     spans = list(zip(pages[::2], pages[1::2]))
-    source = letters(" ".join(doc[i].get_text() for i in range(0, max(b for _, b in spans) + 1)))
+    top, bottom = meta.get("margins", (0, 10000))       # page furniture above and below these lines is left out
+
+    def page_text(page):
+        return " ".join(b[4] for b in page.get_text("blocks") if top <= b[1] <= bottom and b[6] == 0)
+
+    source = letters(" ".join(page_text(doc[i]) for i in range(0, max(b for _, b in spans) + 1)))
 
     new, ours, sentences, missing = False, [], 0, []
     for chunk in re.split(r"\n\s*\n", body.strip()):
@@ -64,7 +69,7 @@ def main():
                 lines = block.get("lines", [])
                 text = " ".join("".join(s["text"] for s in line["spans"]) for line in lines)
                 size = max((s["size"] for line in lines for s in line["spans"]), default=0)
-                text = re.sub(r"^Survey question: ", "", text.strip())
+                text = re.sub(r"^Survey questions?: ", "", text.strip())
                 if len(letters(text)) < 40 or size < 6.5 or text.startswith(RUNNING_HEAD) or "All rights reserved" in text:
                     continue                      # chart labels, page furniture
                 if not re.search(r"[.?!:;,]", text) and len(letters(text)) < 90:
