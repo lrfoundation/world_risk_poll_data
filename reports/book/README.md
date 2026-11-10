@@ -99,3 +99,34 @@ is dark enough to read on white (fuchsia, green, navy); teal series are labelled
 Add an entry to `REPORTS` in `content.py`: the report's folder, title, a lede, a headline figure,
 four to six numbers, one or two charts and, for a core report, a function in `maps.py`. Run
 `build.py`; the contents page and page numbers update themselves.
+
+## An InDesign file of a book or report
+
+    python reports/book/indesign.py                                          # the coffee table book
+    python reports/book/indesign.py reports/book/output/redesign/2019_risk_at_work.html
+
+writes `output/indesign/<name>/` with an IDML document, a `Links` folder and the
+DM Sans files, and zips the folder. IDML is InDesign's interchange format;
+InDesign 2020 or later opens it and saves it as `.indd`.
+
+The script opens the built HTML in Chrome three times: once to read where every
+block of text and every chart sits, once to print each page without that text
+and those charts (the page's artwork), and once to print each chart on its own.
+In the IDML each page has its artwork as one placed PDF at the back, each chart
+or map as a placed PDF of its own, and the text as live text frames. Paragraph
+styles are made from the type in use and named after it ("27 on 41 Regular
+231F20"), blocks that follow one another down a column share a frame, and
+frames grow with their text.
+
+What to expect on opening:
+
+- Links are relative paths. If InDesign reports them missing, Links > Relink to
+  Folder and the `Links` folder puts all of them back at once.
+- The text needs DM Sans. The files are in `Document fonts`.
+- InDesign breaks lines a little differently from a browser, so a line may turn
+  at a different word.
+- Text inside a chart is part of the chart's PDF, not live text.
+
+The file was test-opened in Scribus, which reads IDML, and its pages compared
+with the PDF. It has not been opened in InDesign itself.
+
