@@ -161,12 +161,13 @@ def _category(lines, x, y_mid):
     return "".join(_txt(x, y + i * 26, line, FS, 600, "end") for i, line in enumerate(lines))
 
 
-def hbar(rows, width, height, colour, unit="%", decimals=0, highlight=None, highlight_colour="#0D2240", colours=None, key=None, label_width=0.34):
-    """One bar per row. rows: [(label, value)]. colours gives a colour per row, with a key above."""
+def hbar(rows, width, height, colour, unit="%", decimals=0, highlight=None, highlight_colour="#0D2240", colours=None, key=None, label_width=0.34, texts=None, extra=None):
+    """One bar per row. rows: [(label, value)]. colours gives a colour per row, with a key above. A row whose value is None is a heading over the rows below it."""
     wrapped, label_w = _labels(rows, FS, width * label_width)
-    x0, x1 = label_w + 22, width - 96
-    top, bottom = (64 if key else 10), height - 48
-    vmax, step = nice_max(max(v for _, v in rows), unit == "%")
+    x0, x1 = label_w + 22, width - 96 - (170 if texts else 0)        # texts: a second figure for each row, in a column at the right under the heading "extra"
+    head = wrap(extra, FS, 230) if texts and extra else []
+    top, bottom = (64 if key else 10) + (26 * len(head) + 8 if head and not key else 0), height - 48
+    vmax, step = nice_max(max(v for _, v in rows if v is not None), unit == "%")
     band = (bottom - top) / len(rows)
     thick = min(80, band * 0.64)
     out = [_value_axis(x0, x1, top, bottom, vmax, step, unit)]
@@ -174,11 +175,17 @@ def hbar(rows, width, height, colour, unit="%", decimals=0, highlight=None, high
         out.append(_key(key, x0 - 14, 4, width))
     for i, ((label, value), lines) in enumerate(zip(rows, wrapped)):
         y_mid = top + band * (i + 0.5)
+        if value is None:
+            out.append(_txt(x0 - 16, y_mid + 14, label, FS, 900, "end", "#0D2240"))
+            continue
         fill = colours[i] if colours else (highlight_colour if label == highlight else colour)
         w = (x1 - x0) * value / vmax
         out.append(_bar(x0 + 0.75, y_mid - thick / 2, w, thick, fill))
         out.append(_txt(x0 + w + 12, y_mid + 9, fmt(value, decimals) + unit, FS_VALUE, 900, fill=label_colour(fill)))
+        if texts and texts[i]:
+            out.append(f'<g font-style="italic">{_txt(width - 4, y_mid + 8, texts[i], FS_VALUE - 3, 700, "end")}</g>')
         out.append(_category(lines, x0 - 16, y_mid))
+    out += [_txt(width - 4, 22 + 26 * k, line, FS, 700, "end") for k, line in enumerate(head)]
     return _frame(width, height, "".join(out))
 
 
@@ -339,7 +346,7 @@ def vgrouped(panels, series, width, height, unit="%"):
     top = 70 + extra
     gap = 34
     panel_h = (height - top - gap * (len(panels) - 1)) / len(panels)
-    vmax, step = nice_max(max(v for _, groups in panels for _, vs in groups for v in vs), unit == "%")
+    vmax, step = nice_max(max(v for _, groups in panels for _, vs in groups for v in vs if v is not None), unit == "%")      # (None: a bar the original does not have)
     out = [_key(series, x0 - 14, 4, width)]
     for p, (title, groups) in enumerate(panels):
         y_top = top + p * (panel_h + gap) + (34 if title else 0)
@@ -361,6 +368,9 @@ def vgrouped(panels, series, width, height, unit="%"):
         for g, (label, values) in enumerate(groups):
             x = x0 + slot * (g + 0.5) - (n * bar + (n - 1) * 2) / 2
             for value, (_, colour) in zip(values, series):
+                if value is None:
+                    x += bar + 2
+                    continue
                 h = (y_bottom - y_top) * value / vmax
                 r = min(7, bar / 2, max(h, 0.1))
                 out.append(f'<path d="M{x:.1f},{y_bottom:.1f}v-{h - r:.1f}a{r},{r} 0 0 1 {r},-{r}h{bar - 2 * r:.1f}a{r},{r} 0 0 1 {r},{r}v{h - r:.1f}z" fill="{colour}"/>')
@@ -374,7 +384,7 @@ def vgrouped(panels, series, width, height, unit="%"):
     return _frame(width, height, "".join(out))
 
 
-def dumbbell(rows, series, width, height, total=None, unit="%", total_unit=None):
+def dumbbell(rows, series, width, height, total=None, unit="%", total_unit=None, signed=False):
     """Two values per row as dots joined by a line, with an optional total column.
 
     rows: [(label, [first, second], total value or None)]; series: [(name, colour)] for the two dots.
@@ -397,9 +407,12 @@ def dumbbell(rows, series, width, height, total=None, unit="%", total_unit=None)
         for j, (x, value, (_, colour)) in enumerate(zip(xs, row[1], series)):
             out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="11" fill="{colour}" stroke="#FFFFFF" stroke-width="2.5"/>')
             left = j == low and xs[0] != xs[1]
+            if left and x - 18 - width_of(f"{value:g}{unit}", FS_VALUE - 3, True) < x0 + 4 and abs(xs[0] - xs[1]) > 130:
+                left = False            # no room before a dot at the foot of the scale: its figure goes after it
             out.append(_txt(x - 18 if left else x + 18, y + 8, f"{value:g}{unit}", FS_VALUE - 3, 900, "end" if left else "start", label_colour(colour)))
         if total and len(row) > 2 and row[2] is not None:
-            out.append(_txt(width - 4, y + 8, f"{row[2]:g}{unit if total_unit is None else total_unit}", FS_VALUE - 3, 900, "end"))
+            sign = "+" if signed and row[2] > 0 else ""
+            out.append(_txt(width - 4, y + 8, f"{sign}{row[2]:g}{unit if total_unit is None else total_unit}".replace("-", "−"), FS_VALUE - 3, 900, "end"))
         out.append(_category(lines, x0 - 16, y))
     return _frame(width, height, "".join(out))
 
@@ -410,18 +423,21 @@ def diverging(rows, series, width, height, unit=" pts", decimals=0, marker=None,
     rows: [(label, value, text or None)]; series: [(name of values below zero, colour), (name of values above, colour)].
     marker: (text, value) draws a dashed line at that value, with the text over it. extra heads a column at the
     right that shows each row's text. signless prints every value without a sign, where the side and the colour
-    say which group is higher.
+    say which group is higher. A row whose value is None is a heading over the rows below it, and series
+    without names draw no key.
     """
+    named = [entry for entry in series if entry[0]]
     wrapped, label_w = _labels([(r[0], 0) for r in rows], FS, width * 0.3)
     head = wrap(extra, FS, 300) if extra else []
     column = 190 if extra else 0
     x0, x1 = label_w + 22, width - 30 - column
-    top = max(64 + key_height(series, x0 - 14, width - (320 if extra else 0)), 22 + 26 * len(head)) + (34 if marker else 0)
+    top = max(64 + key_height(named, x0 - 14, width - (320 if extra else 0)) if named else 16, 22 + 26 * len(head)) + (34 if marker else 0)
     height += top - 64
     bottom = height - 48
-    low, high = min(0, min(r[1] for r in rows)), max(0, max(r[1] for r in rows))
-    step = next(s for s in (1, 2, 5, 10, 20, 25, 50) if (high - low) / s <= 8)
-    vmin, vmax = step * (low // step), step * -(-high // step)
+    low, high = min(0, min(r[1] for r in rows if r[1] is not None)), max(0, max(r[1] for r in rows if r[1] is not None))
+    steps = (0.05, 0.1, 0.2, 0.5) if high - low < 1 else ()      # scores between nought and one, not percentages
+    step = next(s for s in steps + (1, 2, 5, 10, 20, 25, 50) if (high - low) / s <= 8)
+    vmin, vmax = round(step * (low // step), 6), round(step * -(-high // step), 6)
     if vmax - high < step * 0.45:
         vmax += step                    # room for the label at the end of the longest bar
     if low < 0 and low - vmin < step * 0.6:
@@ -430,7 +446,7 @@ def diverging(rows, series, width, height, unit=" pts", decimals=0, marker=None,
     def at(v):
         return x0 + (x1 - x0) * (v - vmin) / (vmax - vmin)
 
-    out = [_key(series, x0 - 14, 4, width - (320 if extra else 0))]
+    out = [_key(named, x0 - 14, 4, width - (320 if extra else 0))] if named else []
     out += [_txt(width - 4, 22 + 26 * k, line, FS, 700, "end") for k, line in enumerate(head)]
     v = vmin
     while v <= vmax + 1e-9:
@@ -439,7 +455,7 @@ def diverging(rows, series, width, height, unit=" pts", decimals=0, marker=None,
             out.append(f'<line x1="{x:.1f}" y1="{top}" x2="{x:.1f}" y2="{bottom}" stroke="{GRID}" stroke-width="1" stroke-dasharray="1 5" stroke-linecap="round"/>')
         out.append(f'<line x1="{x:.1f}" y1="{bottom}" x2="{x:.1f}" y2="{bottom + 7}" stroke="{INK}" stroke-width="1.5"/>')
         out.append(_txt(x, bottom + 32, f"{abs(v) if signless else v:g}".replace("-", "−"), FS_AXIS, anchor="middle"))
-        v += step
+        v = round(v + step, 6)
     out.append(f'<line x1="{x0}" y1="{bottom}" x2="{x1:.1f}" y2="{bottom}" stroke="{INK}" stroke-width="1.5"/>')
     if marker:
         x = at(marker[1])
@@ -449,6 +465,10 @@ def diverging(rows, series, width, height, unit=" pts", decimals=0, marker=None,
     thick = min(46, band * 0.56)
     for i, ((label, value, text), lines) in enumerate(zip(rows, wrapped)):
         y = top + band * (i + 0.5)
+        if value is None:
+            out.append(_txt(0, y + 12, label, FS, 800, fill="#E3076E"))
+            out.append(f'<line x1="0" y1="{y + band / 2 - 5:.1f}" x2="{x0 - 16:.1f}" y2="{y + band / 2 - 5:.1f}" stroke="#E3076E" stroke-width="1.5"/>')
+            continue
         colour = series[0][1] if value < 0 else series[1][1]
         x, w = at(value), abs(at(value) - at(0))
         if value > 0:
@@ -482,17 +502,19 @@ def matrix(rows, columns, width, row_height=58, unit="%", decimals=0, low="#FBE6
     cell = (width - x0) / len(columns)
     size = FS - 2 if len(columns) < 7 else FS - 4
     heads = [[line.replace("/ ", "/") for line in wrap(name.replace("/", "/ "), size * 0.86, cell - 6)] for name in columns]
-    top = 14 + 25 * max(len(h) for h in heads) + (38 if groups else 0)
+    spans = [wrap(name, FS - 2, cell * span - 14) if name else [] for name, span in groups or []]
+    over = 24 * max((len(lines) for lines in spans), default=0) + (14 if groups else 0)
+    top = 14 + 25 * max(len(h) for h in heads) + over
     height = top + row_height * len(rows) + 6
     values = [v for _, vs in rows if vs is not None for j, v in enumerate(vs) if v is not None and j not in plain]
-    vmin, vmax = min(values), max(values)
+    vmin, vmax = (min(values), max(values)) if values else (0, 1)         # (no values: every column is plain)
     a, b = [int(low[i:i + 2], 16) for i in (1, 3, 5)], [int(high[i:i + 2], 16) for i in (1, 3, 5)]
     out, at = [], 0
-    for name, span in groups or []:
+    for (name, span), lines in zip(groups or [], spans):
         xa, xb = x0 + cell * at + 4, x0 + cell * (at + span) - 4
         if name:
-            out.append(_txt((xa + xb) / 2, 24, name, FS, 800, "middle"))
-            out.append(f'<line x1="{xa:.1f}" y1="34" x2="{xb:.1f}" y2="34" stroke="{INK}" stroke-width="1.5"/>')
+            out += [_txt((xa + xb) / 2, over - 14 - 24 * (len(lines) - 1 - k), line, FS - 2, 800, "middle") for k, line in enumerate(lines)]
+            out.append(f'<line x1="{xa:.1f}" y1="{over - 4}" x2="{xb:.1f}" y2="{over - 4}" stroke="{INK}" stroke-width="1.5"/>')
         at += span
     for j, lines in enumerate(heads):
         y = top - 12 - 25 * (len(lines) - 1)

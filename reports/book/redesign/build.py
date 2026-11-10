@@ -188,7 +188,7 @@ class Report:
         kind = spec["kind"]
         unit = spec.get("unit", "%")
         if kind == "hbar":
-            rows = [(r[0], self.fig.number(r[1])) for r in spec["rows"]]
+            rows = [(r[0], self.fig.number(r[1]) if r[1] else None) for r in spec["rows"]]      # no finding: a heading over the rows below it
             n = len(rows)
             height = 70 + spec.get("row", 84 if n <= 8 else 74 if n <= 12 else 62 if n <= 16 else 54) * n
             key = colours = None
@@ -198,8 +198,19 @@ class Report:
                 height += 54
             elif spec.get("grey"):
                 colours = [GREY if r[0] in spec["grey"] else FUCHSIA for r in spec["rows"]]
+            texts = None
+            if spec.get("texts"):               # a change in points beside each value, as the original prints it: "+3pp", "No change"
+                changes = [self.fig.number(f) for f in spec["texts"]]
+                texts = ["No change" if v == 0 else f"{v:+g}pp".replace("-", "−") for v in changes]
+                height += 40
+            if spec.get("colour") and not colours:
+                colours = [NAMED[spec["colour"]]] * n       # every bar in one colour that is not the first of the palette
             return charts.scaled(charts.hbar(rows, CHART_W, height, FUCHSIA, unit=unit, decimals=spec.get("decimals", 0), colours=colours, key=key,
-                                             label_width=spec.get("label_width", 0.34)), SCALE)
+                                             label_width=spec.get("label_width", 0.34), texts=texts, extra=spec.get("extra")), SCALE)
+        if kind == "line":
+            # lines across the polls: years, and rows of [name, [finding per year]]
+            series = [(name, colour, self.values(ids)) for (name, colour), (_, ids) in zip(self.series(spec, [r[0] for r in spec["rows"]]), spec["rows"])]
+            return charts.scaled(charts.line(spec["years"], series, CHART_W, spec.get("height", 640), unit), SCALE)
         if kind == "grouped":
             rows = [(label, self.values(ids)) for label, ids in spec["rows"]]
             series = self.series(spec)
@@ -265,31 +276,36 @@ class Report:
             height = spec.get("panel_height", 520) * len(panels)
             return charts.scaled(charts.vgrouped(panels, self.series(spec), CHART_W, height, unit=unit), SCALE)
         if kind == "dumbbell":
-            rows = [(label, self.values(ids[1:]), self.fig.number(ids[0])) for label, ids in spec["rows"]]
+            rows = [(label, self.values(ids[1:]), self.fig.number(ids[0]) if ids[0] else None) for label, ids in spec["rows"]]      # no first finding: a row with no figure in the column at the right
             series = self.series(spec, spec["series"][1:])
             return charts.scaled(charts.dumbbell(rows, series, CHART_W, 112 + 62 * len(rows), spec["series"][0], unit=unit,
-                                                 total_unit=spec.get("total_unit")), SCALE)
+                                                 total_unit=spec.get("total_unit"), signed=spec.get("signed", False)), SCALE)
         if kind == "map":
             return self.map(spec)
         if kind == "diverging":
             # Differences either side of nought: [label, finding, finding shown as text at the right]. "marker" is
             # [text, finding] for a dashed line; {finding} in its text is that published value.
             # A fourth entry of -1 puts a difference the original prints without a sign on the left ("signless").
-            rows = [(label, self.fig.number(fid) * (more[1] if len(more) > 1 else 1), f"{self.fig.number(more[0]):g}{spec.get('extra_unit', '%')}" if more and more[0] else None)
+            rows = [(label, None, None) if fid is None else
+                    (label, self.fig.number(fid) * (more[1] if len(more) > 1 else 1), f"{self.fig.number(more[0]):g}{spec.get('extra_unit', '%')}" if more and more[0] else None)
                     for label, fid, *more in spec["rows"]]
             marker = (self.label(spec["marker"][0]), self.fig.number(spec["marker"][1])) if spec.get("marker") else None
-            height = 112 + (54 if len(rows) > 10 else 76) * len(rows)
+            height = 112 + spec.get("row", 54 if len(rows) > 10 else 76) * len(rows)
             return charts.scaled(charts.diverging(rows, self.series(spec), CHART_W, height, unit=spec.get("unit", " pts"), decimals=spec.get("decimals", 0),
                                                   marker=marker, extra=spec.get("extra"), signless=spec.get("signless", False)), SCALE)
         if kind == "parts":
             # Several drawings under one title (the two halves of a chart, a pair of pies): each part is a specification, with an optional heading.
-            return "".join((f'<h6 class="part">{escape(part["heading"])}</h6>' if part.get("heading") else "") + self.draw(part) for part in spec["parts"])
+            return "".join('<div class="part">' + (f'<h6 class="part">{escape(part["heading"])}</h6>' if part.get("heading") else "") + self.draw(part) + "</div>"
+                           for part in spec["parts"])
         if kind == "table":
+            # rows: [label, finding or findings]; a row with no finding is a heading over the rows below it
             head = "".join(f"<th>{escape(c)}</th>" for c in spec["columns"])
-            body = "".join(f"<tr><td>{escape(label)}</td>" + "".join(f"<td>{self.fig.text(f)}%</td>" for f in ([fid] if isinstance(fid, str) else fid)) + "</tr>"
-                           for label, fid in spec["rows"])
+            body = "".join(
+                f'<tr class="group"><th colspan="{len(spec["columns"])}">{escape(label)}</th></tr>' if fid is None else
+                f"<tr><td>{escape(label)}</td>" + "".join(f"<td>{escape(self.fig.text(f))}{unit}</td>" for f in ([fid] if isinstance(fid, str) else fid)) + "</tr>"
+                for label, fid in spec["rows"])
             wide = " wide" if len(spec["columns"]) > 2 else ""
-            return f'<table class="data{wide}"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table>'
+            return f'<table class="data{wide}{" words" if unit == "" else ""}"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table>'
         if kind == "original":
             import pymupdf
             page = self.source_pdf()[spec["page"]]
@@ -400,6 +416,12 @@ class Report:
                 out.append(self.figure(json.loads(chunk.split("\n", 1)[1].rsplit("```", 1)[0])))
             elif chunk.startswith("::column"):
                 out.append('<div class="colbreak"></div>')
+            elif chunk.startswith("::box"):
+                # a box of the original: its title, then its own blocks up to "::endbox"
+                end = next(k for k in range(i, len(chunks)) if chunks[k] == "::endbox")
+                title = f"<h5>{self.inline(chunk[6:])}</h5>" if chunk[6:].strip() else ""
+                out.append(f'<aside class="box">{title}{self.blocks(chunks[i + 1:end])}</aside>')
+                i = end
             elif chunk.startswith("## "):
                 ident = ""
                 if self.meta.get("contents_h2") and self.toc is not None:      # a report without chapters lists these headings in its contents
@@ -477,12 +499,12 @@ class Report:
         return (f'<section class="page cover" data-num="none"><div class="photo">{photo}</div><div class="panel"></div>'
                 '<svg class="edge" viewBox="0 0 1920 1080"><line x1="606.7" y1="0" x2="932.9" y2="1080" stroke="#E3076E" stroke-width="3"/></svg>'
                 f'<div class="logo">{self.logo.replace("#e5006e", "#FFFFFF")}</div>'
-                f'<div class="wrp">World Risk Poll</div><div class="rep">Report {m["wave"]}</div>'
-                f'<div class="name"><b>{escape(m["title"])}{"" if m["title"][-1] in "?!" else ":"}</b><br>{escape(m["subtitle"])}</div>'
+                f'<div class="wrp">World Risk Poll</div><div class="rep">Report {m.get("edition", m["wave"])}</div>'
+                f'<div class="name"><b>{escape(m["title"])}{"" if m["title"][-1] in "?!" or not m["subtitle"] else ":"}</b><br>{escape(m["subtitle"])}</div>'
                 f'<div class="series">{escape(m["series"])}</div><div class="gallup">Powered by <b>GALLUP</b></div></section>')
 
     def opener(self, section, number, anchor):
-        text = "".join(f"<p>{self.inline(c)}</p>" for c in section["opener"])
+        text = "".join(f'<p class="foot">{self.inline(c[2:])}</p>' if c.startswith("^ ") else f"<p>{self.inline(c)}</p>" for c in section["opener"])
         parts = section["big"].split(" in ")
         if len(parts) == 2:
             size = "two" if len(parts[0] + parts[1]) <= 2 else "three"

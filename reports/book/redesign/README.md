@@ -40,11 +40,12 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | `::column` | Start a new column |
 | `# Heading`, `## Heading`, `### Heading` | Section heading (starts a column) and two levels of sub-heading |
 | `> text` | A highlighted statement of the original |
+| `::box Title` … `::endbox` | Text the original sets in a box on a grey ground |
 | `>> text`, `>-- source` | A sentence or quotation the original sets large, and the line that names its source |
 | `^ text` | A note the original sets at the foot of a column, placed under its paragraph |
 | ```` ```roll ```` + JSON | A list of names in columns, coloured by status, with a key |
 | `- text`, `-- text`, `1. **Lead.** text` | Bullets, points under a bullet, and numbered findings |
-| ```` ```chart ```` + JSON | A figure: `hbar`, `grouped`, `stacked`, `stacked_pair` (two sets of stacked bars side by side), `vgrouped`, `dumbbell`, `diverging` (differences either side of nought), `parts` (several drawings under one title), `matrix` (a table of shaded values), `lists` (ranked lists side by side), `map`, `region_map` (part of the world, a few countries shaded), `table`, `heading` (a table that is only a title over the text that follows) or `original` |
+| ```` ```chart ```` + JSON | A figure: `hbar`, `grouped`, `stacked`, `stacked_pair` (two sets of stacked bars side by side), `vgrouped`, `dumbbell`, `diverging` (differences either side of nought), `parts` (several drawings under one title), `matrix` (a table of shaded values), `lists` (ranked lists side by side), `line` (values over the years of the poll), `map`, `region_map` (part of the world, a few countries shaded), `table`, `heading` (a table that is only a title over the text that follows) or `original` |
 | `[^n]: text` | A footnote of the original, listed under References |
 
 ## Files
@@ -59,6 +60,9 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | `core_2021.py` | Reads the typed items (headings, paragraphs, chart labels, small print, footnotes) of a core report of the 2021 poll from its PDF |
 | `assemble_2021.py` | Those items, plus a plan per report (opener figures, chart specifications), to a content file |
 | `focus_2021.py` | The same two steps for the Focus On reports of the 2021 poll, which share another design |
+| `core_2023.py` | Reads the typed items of a report of the 2023 poll (core or Focus On) from its PDF |
+| `assemble_2023.py` | Those items, plus the report's plan in `plans_2023.py`, to a content file |
+| `plans_2023.py` | A plan per report of the 2023 poll: pages, opener figures, chart specifications, edits and queries |
 | `check.py` | Compares a content file with its pages of the PDF, both ways: every sentence set must be in the original, and every block of running text in the original must be set |
 | `content/` | One file per re-set report |
 
@@ -192,3 +196,65 @@ breaks across two pages (fossil fuels), and the quotation whose bracketed words
 the PDF holds apart from the rest (critical infrastructure). The lettering
 inside a picture of the original is also reported, since it is not set as text.
 
+## The reports of the 2023 poll
+
+    python reports/book/redesign/assemble_2023.py 2023_a_world_of_waste
+    python reports/book/redesign/check.py 2023_a_world_of_waste 1 40 41 41
+    python reports/book/redesign/build.py 2023_a_world_of_waste
+
+| Report | Pages of the PDF (from 0) | Charts and tables | Pages re-set |
+| --- | --- | --- | --- |
+| `2023_resilience_in_a_changing_world` | 1 to 34, 44 | 33, of which 4 are pictures of the original | 52 |
+| `2023_a_world_of_waste` | 1 to 40, 41 | 35, of which 2 are pictures | 51 |
+| `2023_engineering_safer_workplaces` | 1 to 29, 30 | 25, of which 4 are pictures | 38 |
+| `2023_what_the_world_worries_about` | 1 to 34, 35 | 29, of which 4 are pictures | 43 |
+| `2023_focus_ocean_workers` | 1 to 10 | 10, of which 1 is a picture | 18 |
+| `2023_focus_migration` | 1 to 18 | 17, of which 4 are pictures | 30 |
+
+The appendices of the core reports (questionnaire, regions, the method of the
+Resilience Index) are not re-set yet; each report's "Notes on this edition"
+says so.
+
+All six are designed as landscape pages of 842 by 595 points in two columns,
+set in DM Sans. `core_2023.py` types each line by size and face: text in 8
+point, headings in pink, chart titles in 10 point bold, small print in 5 or 6
+point, page notes marked with roman numerals. The font is a variable one, so
+bold is told from the width of the letters. A chart runs from its title to its
+small print, and the lettering between the two is left out of the text; a chart
+that is redrawn takes its values from `published_figures.csv` as in the other
+reports.
+
+A plan in `plans_2023.py` gives, for each report:
+
+- `pages`, the opener figure of each chapter (`chapters`), and the chart
+  specifications (a function that returns them by chart number);
+- `numbers`: charts the original prints without a number, or under a heading
+  instead of a title, mapped to the label they take (*Engineering safer
+  workplaces* prints its Chart 4.6 without one; the ocean workers report numbers
+  none of its charts);
+- `small_text`: pages whose text is set in 7 point (the closing page of a
+  Focus On); `box_gap`: the line spacing of the boxes, where it is not the 11
+  points of the core reports;
+- `replace`, `drop`, `after`, `inside`, `as_chapters`: corrections to the
+  reading order where the page design departs from the two columns;
+- `edits` and `queries`: every change to the wording and every doubt about the
+  original, both printed in the "Notes on this edition".
+
+Conventions added for these reports:
+
+- A chart the original sets as a map of states or countries with its values
+  printed is drawn as sorted bars. Scatter plots, the chord diagrams of the
+  migration report and charts whose values are not printed stay pictures of the
+  original, each with its reason.
+- `hbar` takes heading rows (a row with no finding), a `texts` column for
+  changes printed as words ("+3pp", "No change") and one `colour` for all bars.
+  `diverging` takes heading rows too, and scores between nought and one get a
+  finer axis. `dumbbell` rows may have no figure at the right.
+- The parts of a `parts` figure stay whole across a column break.
+- `check.py` leaves the roman note marks out on both sides, checks small notes
+  that start "Note" or "*" whatever their size, and exempts the lettering inside
+  the rectangle of a picture of the original.
+
+`check.py` still reports the lines of the list of charts on a contents page for
+the charts that are pictures, and one or two blocks of chart lettering (a note
+set between two charts in the ocean workers report). None is missing text.

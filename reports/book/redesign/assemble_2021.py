@@ -34,7 +34,9 @@ class Ids:
 
     def __init__(self, folder):
         with open(HERE.parents[1] / folder / "published_figures.csv", encoding="utf-8") as f:
-            self.ids = [row["finding_id"] for row in csv.DictReader(f)]
+            rows = list(csv.DictReader(f))
+        self.ids = [row["finding_id"] for row in rows]
+        self.values = {row["finding_id"]: row["published_value"] for row in rows}
 
     def keys(self, prefix, suffix="", names=None):
         """The middle parts of the IDs that start with prefix and end with suffix, in CSV order."""
@@ -264,13 +266,16 @@ def opening(title, blocks):
     first main heading starts the text without a heading, as it does in the original.
     """
     room = 440 - 57 * max(0, -(-len(title) // 30) - 1)
-    lead = next((k for k, b in enumerate(blocks) if isinstance(b, dict) or b.startswith("#")), len(blocks))
+    lead = next((k for k, b in enumerate(blocks) if isinstance(b, dict) or b.startswith(("#", "> "))), len(blocks))
     groups = []                      # runs of blocks that stay together
+    boxed = False
     for block in blocks[:lead]:
-        if block.startswith("- ") and groups:
+        # a list stays whole, a note stays under its paragraph, and a box is not cut in two
+        if (boxed or block.startswith(("- ", "-- ", "^ "))) and groups:
             groups[-1].append(block)
         else:
             groups.append([block])
+        boxed = block.startswith("::box") or (boxed and block != "::endbox")
     taken = 0
     for group in groups:
         height = sum(22 * -(-len(b) // 120) + 26 for b in group)

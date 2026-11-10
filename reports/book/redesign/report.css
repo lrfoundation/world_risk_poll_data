@@ -65,7 +65,8 @@ sup.ref { font-size: 10px; line-height: 0; font-weight: 600; color: var(--fuchsi
 .fig .art { padding: 8px 0 0 20px; }
 .fig .art svg { display: block; }
 .fig .art h6.part { margin: 14px 0 8px; font-size: 16px; line-height: 21px; font-weight: 700; color: var(--navy); }
-.fig .art h6.part:first-child { margin-top: 0; }
+.fig .art div.part:first-child h6.part { margin-top: 0; }
+.fig .art div.part { break-inside: avoid; }
 .fig .art svg + svg { margin-top: 18px; }
 .fig .notes { margin: 8px 0 0 20px; padding-top: 8px; border-top: 1px solid rgba(227, 7, 110, 0.55); }
 .fig .notes p { font-size: 14px; line-height: 18px; font-style: italic; margin: 0 0 4px; padding: 0; }
@@ -170,3 +171,16 @@ ol.refs li::before { content: attr(value) "."; position: absolute; left: 0; font
 .cover .gallup { position: absolute; left: 138px; top: 908px; padding-left: 0; font-size: 22px; line-height: 26px; color: #fff; }
 .cover .gallup b { display: block; font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: 44px; line-height: 46px; letter-spacing: 0.02em; }
 .cover .gallup::before { content: ""; position: absolute; left: -30px; top: 2px; bottom: 2px; width: 12px; border-radius: 6px; background: #00A651; }
+
+/* ---- a box of the original: a note set apart from the text on a grey ground */
+.flow .box { background: #ECF0F1; border-radius: 14px; padding: 22px 8px 1px; margin: 6px 0 calc(26px * var(--fit)); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.flow .box > * { position: relative; }
+.flow .box h5 { font-size: 18px; line-height: 24px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--navy); margin: 0 0 12px; padding: 0 18px 0 20px; break-after: avoid; }
+.flow .box p, .flow .box li { font-size: 16px; line-height: calc(24px * var(--fit)); }
+.flow .box p { margin-bottom: calc(18px * var(--fit)); }
+.flow .box .foot { font-size: 13px; line-height: 18px; margin-top: -6px; }
+table.data.words td:not(:first-child), table.data.words th:not(:first-child) { text-align: left; font-weight: 400; width: auto; }
+table.data.words td:first-child, table.data.words th:first-child { width: 70px; }
+table.data tr.group th { background: #fff; color: var(--fuchsia); border-bottom: 2px solid var(--fuchsia); padding: 12px 14px 4px; font-size: 15px; letter-spacing: 0.04em; text-transform: uppercase; }
+table.data tr.group th, table.data.words tr.group th { text-align: left; }
+.opener .left p.foot { font-size: 13px; line-height: 18px; opacity: 0.9; }
