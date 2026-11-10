@@ -129,6 +129,7 @@ class Report:
         self.chapter = 0
         self.anchors = 0
         self.pdf = None
+        self.toc = None
 
     # -- text
 
@@ -136,7 +137,7 @@ class Report:
         # Chart and table numbers of the original become this report's numbers, except in text written for this edition.
         for old, new in (self.meta.get("renumber", {}).items() if self.renumbering else ()):
             text = text.replace(old, new)
-        text = escape(text, quote=False)
+        text = escape(text, quote=False).replace("\\*", "&#42;")          # "\*" is an asterisk that prints
         text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", text)
         text = re.sub(r"(?<![\w*])\*(?!\s)(.+?)(?<!\s)\*(?![\w*])", r"<em>\1</em>", text)
         text = re.sub(r"(https?://\S+?)(?=[.,;)]?(\s|$))", lambda m: f'<span class="url">{m.group(1)}</span>', text)
@@ -189,7 +190,7 @@ class Report:
         if kind == "hbar":
             rows = [(r[0], self.fig.number(r[1])) for r in spec["rows"]]
             n = len(rows)
-            height = 70 + (84 if n <= 8 else 74 if n <= 12 else 62 if n <= 16 else 54) * n
+            height = 70 + spec.get("row", 84 if n <= 8 else 74 if n <= 12 else 62 if n <= 16 else 54) * n
             key = colours = None
             if spec.get("key"):
                 palette = dict(self.series(spec, spec["key"]))
@@ -270,6 +271,19 @@ class Report:
                                                  total_unit=spec.get("total_unit")), SCALE)
         if kind == "map":
             return self.map(spec)
+        if kind == "diverging":
+            # Differences either side of nought: [label, finding, finding shown as text at the right]. "marker" is
+            # [text, finding] for a dashed line; {finding} in its text is that published value.
+            # A fourth entry of -1 puts a difference the original prints without a sign on the left ("signless").
+            rows = [(label, self.fig.number(fid) * (more[1] if len(more) > 1 else 1), f"{self.fig.number(more[0]):g}{spec.get('extra_unit', '%')}" if more and more[0] else None)
+                    for label, fid, *more in spec["rows"]]
+            marker = (self.label(spec["marker"][0]), self.fig.number(spec["marker"][1])) if spec.get("marker") else None
+            height = 112 + (54 if len(rows) > 10 else 76) * len(rows)
+            return charts.scaled(charts.diverging(rows, self.series(spec), CHART_W, height, unit=spec.get("unit", " pts"), decimals=spec.get("decimals", 0),
+                                                  marker=marker, extra=spec.get("extra"), signless=spec.get("signless", False)), SCALE)
+        if kind == "parts":
+            # Several drawings under one title (the two halves of a chart, a pair of pies): each part is a specification, with an optional heading.
+            return "".join((f'<h6 class="part">{escape(part["heading"])}</h6>' if part.get("heading") else "") + self.draw(part) for part in spec["parts"])
         if kind == "table":
             head = "".join(f"<th>{escape(c)}</th>" for c in spec["columns"])
             body = "".join(f"<tr><td>{escape(label)}</td>" + "".join(f"<td>{self.fig.text(f)}%</td>" for f in ([fid] if isinstance(fid, str) else fid)) + "</tr>"
@@ -279,8 +293,18 @@ class Report:
         if kind == "original":
             import pymupdf
             page = self.source_pdf()[spec["page"]]
-            png = page.get_pixmap(matrix=pymupdf.Matrix(4, 4), clip=pymupdf.Rect(*spec["clip"])).tobytes("png")
-            return f'<img class="original" style="width:{spec.get("width", 780)}px" src="data:image/png;base64,{base64.b64encode(png).decode()}" alt="">'
+            clip = pymupdf.Rect(*spec["clip"])
+            width = spec.get("width", 780)
+            if spec.get("plate"):               # a page of its own: as large as the page allows
+                width = round(min(1688, 730 * clip.width / clip.height))
+            zoom = spec.get("zoom", min(4, max(1.5, 2.6 * width / clip.width)))
+            pix = page.get_pixmap(matrix=pymupdf.Matrix(zoom, zoom), clip=clip)
+            for box in spec.get("blank", []):       # page furniture inside the picture's rectangle (a logo, the question text set again below)
+                area = pymupdf.IRect([round(v * zoom) for v in box]) & pix.irect
+                if not area.is_empty:
+                    pix.set_rect(area, (255, 255, 255))
+            png = pix.tobytes("png")
+            return f'<img class="original" style="width:{width}px" src="data:image/png;base64,{base64.b64encode(png).decode()}" alt="">'
         raise ValueError(kind)
 
     def map(self, spec):
@@ -360,8 +384,11 @@ class Report:
                          "The countries named are the published figures.</p>")
         subtitle = f'<p class="sub">{self.inline(spec["subtitle"])}</p>' if spec.get("subtitle") else ""
         cls = "fig" + (" tall" if spec.get("tall") else "") + (" inline" if spec["kind"] == "table" else "") + (" head" if spec["kind"] == "heading" else "")
-        return (f'<figure class="{cls}" id="{anchor}"><h4>{label}. {self.inline(title)}</h4>{subtitle}'
-                f'<div class="art">{art}</div><div class="notes">{"".join(notes)}</div></figure>')
+        inner = f'<h4>{label}. {self.inline(title)}</h4>{subtitle}<div class="art">{art}</div><div class="notes">{"".join(notes)}</div>'
+        if spec.get("plate"):
+            # Too wide for a column: the figure takes the next whole page (paginate.js brings text forward to fill the page before it).
+            return f'<figure class="fig plate" id="{anchor}"><div class="sheet">{inner}</div></figure><div class="platefill"></div>'
+        return f'<figure class="{cls}" id="{anchor}">{inner}</figure>'
 
     # -- blocks
 
@@ -374,9 +401,27 @@ class Report:
             elif chunk.startswith("::column"):
                 out.append('<div class="colbreak"></div>')
             elif chunk.startswith("## "):
-                out.append(f"<h2>{self.inline(chunk[3:])}</h2>")
+                ident = ""
+                if self.meta.get("contents_h2") and self.toc is not None:      # a report without chapters lists these headings in its contents
+                    anchor = self.anchor()
+                    self.toc.append(("top", "", chunk[3:], anchor))
+                    ident = f' id="{anchor}"'
+                out.append(f"<h2{ident}>{self.inline(chunk[3:])}</h2>")
             elif chunk.startswith("### "):
                 out.append(f"<h3>{self.inline(chunk[4:])}</h3>")
+            elif chunk.startswith(">> "):
+                out.append(f'<p class="statement">{self.inline(chunk[3:])}</p>')
+            elif chunk.startswith(">-- "):
+                out.append(f'<p class="cite">{self.inline(chunk[4:])}</p>')
+            elif chunk.startswith("^ "):
+                out.append(f'<p class="foot">{self.inline(chunk[2:])}</p>')
+            elif chunk.startswith("```roll"):
+                roll = json.loads(chunk.split("\n", 1)[1].rsplit("```", 1)[0])
+                colours = [NAMED.get(c, c) for _, c in roll["key"]]
+                key = "".join(f'<span><i style="background:{c}"></i>{escape(name)}</span>' for (name, _), c in zip(roll["key"], colours))
+                names = "".join(f'<span class="s{status}" style="--c:{colours[status]}">{escape(name)}</span>' if status is not None else f"<span>{escape(name)}</span>"
+                                for name, status in roll["names"])
+                out.append(f'<div class="roll"><div class="mapkey">{key}</div><div class="names">{names}</div></div>')
             elif chunk.startswith("> "):
                 out.append(f'<p class="lead">{self.inline(chunk[2:])}</p>')
             elif chunk.startswith(("- ", "-- ")):
@@ -409,7 +454,7 @@ class Report:
 
     def chrome(self):
         m = self.meta
-        line = f'{m["brand"]}  ||  {m["title"]}  ||  {m.get("running", "Re-set in 2026 from the full report of the 2019 poll")}'
+        line = f'{m["brand"]}  ||  {m.get("running_title", m["title"])}  ||  {m.get("running", "Re-set in 2026 from the full report of the 2019 poll")}'
         return (f'<div class="rule top"></div><div class="rule bottom"></div><div class="credit">{escape(m["copyright"])}<br>{escape(line)}</div>'
                 '<div class="pn"></div>')
 
@@ -444,13 +489,14 @@ class Report:
             big = f'<div class="big {size}"><span>{parts[0]}</span><i>in</i><span>{parts[1]}</span></div>'
         else:
             big = f'<div class="big single{" long" if len(section["big"]) > 4 else ""}"><span>{escape(section["big"])}</span></div>'
-        return (f'<section class="page opener" data-num="main" id="{anchor}">{self.chrome()}<div class="block"></div>'
+        return (f'<section class="page opener{" plain" if self.meta.get("plain_opener") else ""}" data-num="main" id="{anchor}">{self.chrome()}<div class="block"></div>'
                 f'<div class="logo">{self.logo.replace("#e5006e", "#FFFFFF")}</div>'
-                f'<div class="left"><div class="chap">Chapter {number}</div><h1>{self.inline(section["title"])}</h1><div class="text">{text}</div></div>'
+                f'<div class="left">{"" if self.meta.get("plain_opener") else f"<div class=chap>Chapter {number}</div>"}<h1>{self.inline(section["title"])}</h1><div class="text">{text}</div></div>'
                 f'{big}<div class="cap">{self.inline(section["caption"])}</div></section>')
 
     def build(self):
         pages, toc = [], []
+        self.toc = toc
         tag = '<span class="newtag">New for this edition</span>'
         body, chapter, numbering = [], 0, "front"
         for section in self.sections:
@@ -461,13 +507,14 @@ class Report:
                     self.counts = {"Chart": 0, "Table": 0}
                 numbering = "main"
                 anchor = self.anchor()
-                toc.append(("chapter", f"Chapter {chapter}", section["title"], anchor))
+                plain = self.meta.get("plain_opener")           # a report without chapters: its introduction has the opening page
+                toc.append(("top", "", section["title"], anchor) if plain else ("chapter", f"Chapter {chapter}", section["title"], anchor))
                 body.append(self.opener(section, chapter, anchor))
             html = ""
             for index, flow in enumerate(section["flows"]):
                 anchor = self.anchor()
                 new = tag if section["new"] and index == 0 else ""
-                level = "sub" if section["kind"] == "chapter" else "top"
+                level = "sub" if section["kind"] == "chapter" and not self.meta.get("plain_opener") else "top"
                 if flow["title"]:
                     toc.append((level, "", flow["title"], anchor))
                 self.renumbering = not section["new"]
@@ -477,9 +524,10 @@ class Report:
         # Back matter made here: references, then notes on this edition.
         if self.notes:
             anchor = self.anchor()
-            toc.append(("top", "", "References", anchor))
+            name = self.meta.get("references_title", "References")
+            toc.append(("top", "", name, anchor))
             refs = "".join(f'<li value="{n}">{self.inline(text)}</li>' for n, text in self.notes.items())
-            body.append(self.flow_page(f'<h1 id="{anchor}">References</h1><ol class="refs">{refs}</ol>', "main"))
+            body.append(self.flow_page(f'<h1 id="{anchor}">{escape(name)}</h1><ol class="refs">{refs}</ol>', "main"))
         anchor = self.anchor()
         toc.append(("top", "", "Notes on this edition", anchor))
         body.append(self.flow_page(self.edition_notes(tag, anchor), "main"))
@@ -515,8 +563,12 @@ class Report:
             out.append(f"<p><b>Numbering.</b> {self.inline(m['numbering_note'])}</p>")
         if m.get("edits"):
             out.append("<p><b>Wording and headings.</b></p><ul>" + "".join(f"<li>{self.inline(e)}</li>" for e in m["edits"]) + "</ul>")
-        out.append("<p><b>Charts.</b> Charts are redrawn from the values printed in the original, in the chart style of the World Risk Poll 2026 reports. "
-                   "Chart titles and question texts are the original ones.</p>")
+        if len(self.originals) < len(self.figures):
+            out.append("<p><b>Charts.</b> Charts are redrawn from the values printed in the original, in the chart style of the World Risk Poll 2026 reports. "
+                       "Chart titles and question texts are the original ones.</p>")
+        else:
+            out.append("<p><b>Charts.</b> None of the charts could be redrawn from published values, so each is a picture of the original. "
+                       "Chart titles and question texts are the original ones, re-set.</p>")
         if m.get("chart_note"):
             out.append(f"<p>{self.inline(m['chart_note'])}</p>")
         reasons = {}

@@ -382,12 +382,13 @@ def dumbbell(rows, series, width, height, total=None, unit="%", total_unit=None)
     wrapped, label_w = _labels([(r[0], 0) for r in rows], FS, width * 0.3)
     column = 150 if total else 0
     x0, x1 = label_w + 22, width - 60 - column
-    top, bottom = 64, height - 48
+    head = wrap(total, FS, 330) if total else []           # a long heading over the total column runs onto more lines
+    height += 26 * max(0, len(head) - 2)
+    top, bottom = 64 + 26 * max(0, len(head) - 2), height - 48
     vmax, step = nice_max(max(v for r in rows for v in r[1]), unit == "%")
     band = (bottom - top) / len(rows)
-    out = [_key(series, x0 - 14, 4, width), _value_axis(x0, x1, top, bottom, vmax, step, unit)]
-    if total:
-        out.append(_txt(width - 4, 22, total, FS, 700, "end"))
+    out = [_key(series, x0 - 14, 4, width - 340 if len(head) > 1 else width), _value_axis(x0, x1, top, bottom, vmax, step, unit)]
+    out += [_txt(width - 4, 22 + 26 * k, line, FS, 700, "end") for k, line in enumerate(head)]
     for i, (row, lines) in enumerate(zip(rows, wrapped)):
         y = top + band * (i + 0.5)
         xs = [x0 + (x1 - x0) * v / vmax for v in row[1]]
@@ -400,6 +401,68 @@ def dumbbell(rows, series, width, height, total=None, unit="%", total_unit=None)
         if total and len(row) > 2 and row[2] is not None:
             out.append(_txt(width - 4, y + 8, f"{row[2]:g}{unit if total_unit is None else total_unit}", FS_VALUE - 3, 900, "end"))
         out.append(_category(lines, x0 - 16, y))
+    return _frame(width, height, "".join(out))
+
+
+def diverging(rows, series, width, height, unit=" pts", decimals=0, marker=None, extra=None, signless=False):
+    """Bars that run to the left or the right of a zero line (a difference between two groups).
+
+    rows: [(label, value, text or None)]; series: [(name of values below zero, colour), (name of values above, colour)].
+    marker: (text, value) draws a dashed line at that value, with the text over it. extra heads a column at the
+    right that shows each row's text. signless prints every value without a sign, where the side and the colour
+    say which group is higher.
+    """
+    wrapped, label_w = _labels([(r[0], 0) for r in rows], FS, width * 0.3)
+    head = wrap(extra, FS, 300) if extra else []
+    column = 190 if extra else 0
+    x0, x1 = label_w + 22, width - 30 - column
+    top = max(64 + key_height(series, x0 - 14, width - (320 if extra else 0)), 22 + 26 * len(head)) + (34 if marker else 0)
+    height += top - 64
+    bottom = height - 48
+    low, high = min(0, min(r[1] for r in rows)), max(0, max(r[1] for r in rows))
+    step = next(s for s in (1, 2, 5, 10, 20, 25, 50) if (high - low) / s <= 8)
+    vmin, vmax = step * (low // step), step * -(-high // step)
+    if vmax - high < step * 0.45:
+        vmax += step                    # room for the label at the end of the longest bar
+    if low < 0 and low - vmin < step * 0.6:
+        vmin -= step
+
+    def at(v):
+        return x0 + (x1 - x0) * (v - vmin) / (vmax - vmin)
+
+    out = [_key(series, x0 - 14, 4, width - (320 if extra else 0))]
+    out += [_txt(width - 4, 22 + 26 * k, line, FS, 700, "end") for k, line in enumerate(head)]
+    v = vmin
+    while v <= vmax + 1e-9:
+        x = at(v)
+        if v:
+            out.append(f'<line x1="{x:.1f}" y1="{top}" x2="{x:.1f}" y2="{bottom}" stroke="{GRID}" stroke-width="1" stroke-dasharray="1 5" stroke-linecap="round"/>')
+        out.append(f'<line x1="{x:.1f}" y1="{bottom}" x2="{x:.1f}" y2="{bottom + 7}" stroke="{INK}" stroke-width="1.5"/>')
+        out.append(_txt(x, bottom + 32, f"{abs(v) if signless else v:g}".replace("-", "−"), FS_AXIS, anchor="middle"))
+        v += step
+    out.append(f'<line x1="{x0}" y1="{bottom}" x2="{x1:.1f}" y2="{bottom}" stroke="{INK}" stroke-width="1.5"/>')
+    if marker:
+        x = at(marker[1])
+        out.append(f'<line x1="{x:.1f}" y1="{top - 8}" x2="{x:.1f}" y2="{bottom}" stroke="#00785C" stroke-width="2" stroke-dasharray="6 5"/>')
+        out.append(_txt(x, top - 18, marker[0], FS - 2, 700, "middle", "#00785C"))
+    band = (bottom - top) / len(rows)
+    thick = min(46, band * 0.56)
+    for i, ((label, value, text), lines) in enumerate(zip(rows, wrapped)):
+        y = top + band * (i + 0.5)
+        colour = series[0][1] if value < 0 else series[1][1]
+        x, w = at(value), abs(at(value) - at(0))
+        if value > 0:
+            out.append(_bar(at(0) + 0.75, y - thick / 2, w, thick, colour))
+        elif value < 0:
+            out.append(f'<g transform="translate({2 * at(0):.1f},0) scale(-1,1)">{_bar(at(0) + 0.75, y - thick / 2, w, thick, colour)}</g>')
+        shown = fmt(abs(value), decimals) + unit
+        out.append(f'<text x="{x - 12 if value < 0 else x + 12:.1f}" y="{y + 9:.1f}" font-size="{FS_VALUE}" font-weight="900" '
+                   f'text-anchor="{"end" if value < 0 else "start"}" fill="{label_colour(colour) if value else INK}" stroke="#FFFFFF" stroke-width="6" '
+                   f'paint-order="stroke" stroke-linejoin="round">{"−" if value < 0 and not signless else ""}{shown}</text>')
+        if text:
+            out.append(_txt(width - 4, y + 9, text, FS_VALUE, 900, "end"))
+        out.append(_category(lines, x0 - 16, y))
+    out.append(f'<line x1="{at(0):.1f}" y1="{top}" x2="{at(0):.1f}" y2="{bottom}" stroke="{INK}" stroke-width="1.5"/>')
     return _frame(width, height, "".join(out))
 
 
@@ -445,6 +508,9 @@ def matrix(rows, columns, width, row_height=58, unit="%", decimals=0, low="#FBE6
                 out.append(_txt(x0 + cell * (j + 0.5), y + row_height / 2 + 9, "–", FS_VALUE, 400, "middle"))
                 continue
             text = ("+" if j in signed and value > 0 else "") + fmt(value, places[j]).replace("-", "−") + units[j]
+            if units[j] == "th":                # a rank: 1st, 2nd, 23rd, 117th
+                n = int(value)
+                text = f"{n}" + ("th" if 10 <= n % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th"))
             if j in plain:
                 out.append(f'<rect x="{x0 + cell * j + 2:.1f}" y="{y + 2:.1f}" width="{cell - 4:.1f}" height="{row_height - 4:.1f}" rx="5" fill="#F1F1F1"/>')
                 out.append(_txt(x0 + cell * (j + 0.5), y + row_height / 2 + 9, text, FS_VALUE, 900, "middle"))

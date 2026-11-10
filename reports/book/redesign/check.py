@@ -22,6 +22,8 @@ RUNNING_HEAD = "The Lloyd’s Register Foundation World Risk Poll Report 2019"
 
 
 def letters(text):
+    for ligature, plain in (("ﬀ", "ff"), ("ﬁ", "fi"), ("ﬂ", "fl")):
+        text = text.replace(ligature, plain)
     return re.sub(r"[^a-z]", "", text.lower().replace("­", ""))
 
 
@@ -38,7 +40,7 @@ def main():
 
     source = letters(" ".join(page_text(doc[i]) for i in range(0, max(b for _, b in spans) + 1)))
 
-    new, ours, sentences, missing = False, [], 0, []
+    new, ours, sentences, missing = False, [meta.get("running_title", "")], 0, []
     for chunk in re.split(r"\n\s*\n", body.strip()):
         chunk = chunk.strip()
         if chunk.startswith("::new"):
@@ -48,11 +50,16 @@ def main():
         elif chunk.startswith("```chart"):
             spec = json.loads(chunk.split("\n", 1)[1].rsplit("```", 1)[0])
             ours.append(" ".join(str(spec.get(k, "")) for k in ("title", "subtitle", "question", "note")))
+            ours += [part.get("heading", "") for part in spec.get("parts", [])]
+        elif chunk.startswith("```roll"):
+            ours.append(" ".join(name for name, _ in json.loads(chunk.split("\n", 1)[1].rsplit("```", 1)[0])["names"]))
+        elif chunk.startswith(("::chapter ", "::front ", "::back ")):
+            ours.append(chunk)                # a section's title, and the figure and caption on an opening page
         elif not new and not chunk.startswith("::"):
             ours.append(chunk)
             if chunk.startswith("[^"):
                 continue
-            text = re.sub(r"^(#+ |> |- |\d+\. )", "", re.sub(r"\[\^\w+\]", "", chunk)).replace("**", "")
+            text = re.sub(r"^(#+ |>> |>-- |> |\^ |-- |- |\d+\. )", "", re.sub(r"\[\^\w+\]", "", chunk)).replace("**", "")
             for sentence in re.split(r"(?<=[.?!])\s+(?=[A-Z‘“])", text):
                 sentences += 1
                 if letters(sentence) and letters(sentence) not in source:
@@ -69,8 +76,8 @@ def main():
                 lines = block.get("lines", [])
                 text = " ".join("".join(s["text"] for s in line["spans"]) for line in lines)
                 size = max((s["size"] for line in lines for s in line["spans"]), default=0)
-                text = re.sub(r"^Survey questions?: ", "", text.strip())
-                if len(letters(text)) < 40 or size < 6.5 or text.startswith(RUNNING_HEAD) or "All rights reserved" in text:
+                text = re.sub(r"^Survey questions?: |^(Chart|Table) \d+\s+", "", text.strip())
+                if len(letters(text)) < 40 or size < 6.5 or text.startswith(RUNNING_HEAD) or "All rights reserved" in text or "  ||  " in text:
                     continue                      # chart labels, page furniture
                 if not re.search(r"[.?!:;,]", text) and len(letters(text)) < 90:
                     continue                      # axis and key labels

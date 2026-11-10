@@ -40,8 +40,11 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | `::column` | Start a new column |
 | `# Heading`, `## Heading`, `### Heading` | Section heading (starts a column) and two levels of sub-heading |
 | `> text` | A highlighted statement of the original |
+| `>> text`, `>-- source` | A sentence or quotation the original sets large, and the line that names its source |
+| `^ text` | A note the original sets at the foot of a column, placed under its paragraph |
+| ```` ```roll ```` + JSON | A list of names in columns, coloured by status, with a key |
 | `- text`, `-- text`, `1. **Lead.** text` | Bullets, points under a bullet, and numbered findings |
-| ```` ```chart ```` + JSON | A figure: `hbar`, `grouped`, `stacked`, `stacked_pair` (two sets of stacked bars side by side), `vgrouped`, `dumbbell`, `matrix` (a table of shaded values), `lists` (ranked lists side by side), `map`, `region_map` (part of the world, a few countries shaded), `table`, `heading` (a table that is only a title over the text that follows) or `original` |
+| ```` ```chart ```` + JSON | A figure: `hbar`, `grouped`, `stacked`, `stacked_pair` (two sets of stacked bars side by side), `vgrouped`, `dumbbell`, `diverging` (differences either side of nought), `parts` (several drawings under one title), `matrix` (a table of shaded values), `lists` (ranked lists side by side), `map`, `region_map` (part of the world, a few countries shaded), `table`, `heading` (a table that is only a title over the text that follows) or `original` |
 | `[^n]: text` | A footnote of the original, listed under References |
 
 ## Files
@@ -55,6 +58,7 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | `assemble_2019.py` | Draft markup of the 2019 chapters, plus a plan per report (chapters, chart specifications, new writing), to a content file |
 | `core_2021.py` | Reads the typed items (headings, paragraphs, chart labels, small print, footnotes) of a core report of the 2021 poll from its PDF |
 | `assemble_2021.py` | Those items, plus a plan per report (opener figures, chart specifications), to a content file |
+| `focus_2021.py` | The same two steps for the Focus On reports of the 2021 poll, which share another design |
 | `check.py` | Compares a content file with its pages of the PDF, both ways: every sentence set must be in the original, and every block of running text in the original must be set |
 | `content/` | One file per re-set report |
 
@@ -134,3 +138,57 @@ Conventions added for these reports:
 The appendices (questionnaires, lists of regions, the Resilience Index
 methodology, references listed again by chapter) are not set yet; each draft
 says so in its "Notes on this edition".
+
+## The Focus On reports of the 2021 poll
+
+    python reports/book/redesign/focus_2021.py 2021_focus_critical_infrastructure
+    python reports/book/redesign/check.py 2021_focus_critical_infrastructure 0 9
+    python reports/book/redesign/build.py 2021_focus_critical_infrastructure
+
+| Report | Pages of the PDF (from 0) | Charts and tables |
+| --- | --- | --- |
+| `2021_focus_critical_infrastructure` | 0 to 9 | 8, of which 1 is a picture of the original |
+| `2021_focus_fossil_fuels` | 0 to 12 | 8, all pictures of the original |
+| `2021_focus_violence_and_harassment` | 0 to 13 | 10 |
+
+*Focus On: Risk and Gender* is not part of the book.
+
+These reports are short, have no chapters, and are designed as pages of 1920 by
+1280 points in two columns. `focus_2021.py` reads them by type, as `core_2021.py`
+does the core reports, and arranges each one the same way:
+
+- the summary on the original's cover ("What the data tells us", "What we can do
+  about it") is the front section;
+- the introduction takes the opening page, with the headline figure the original
+  prints beside it (`plain_opener` in the header: no chapter number);
+- the rest runs on as one text under the original's headings, which are listed
+  in the contents (`contents_h2`);
+- the numbered references of the last page are the notes, under the original's
+  title "References and endnotes", and the "About" texts are the back section.
+
+The PDF sometimes holds neighbouring lines of two columns as one block, so the
+reader splits blocks where a line jumps sideways, and puts back together the
+paragraphs that a column, a page or a chart divides.
+
+Conventions added for these reports:
+
+- `"plate": true` gives a figure that is too wide for a column a page of its
+  own. `paginate.js` starts it on the next page and brings the text that follows
+  forward to fill the page before it; figures keep their order.
+- `"blank"` paints out page furniture that falls inside the rectangle of a
+  picture of the original (the logo in the corner of the page, the question
+  text that is set again underneath).
+- A difference that the original prints without a sign, with the colour saying
+  which group is higher, is drawn on that group's side (`"signless"`, and a
+  fourth entry of -1 in the row).
+- A map of regions or a pie chart whose values are printed is drawn as bars;
+  each report's "Notes on this edition" says where.
+- The charts of the fossil fuels report plot a value for every country against
+  figures from Our World in Data and the World Bank, and print none of them.
+  All eight are pictures of the original until those values are in the repository.
+
+`check.py` reports two differences that are not errors: a sentence the original
+breaks across two pages (fossil fuels), and the quotation whose bracketed words
+the PDF holds apart from the rest (critical infrastructure). The lettering
+inside a picture of the original is also reported, since it is not set as text.
+

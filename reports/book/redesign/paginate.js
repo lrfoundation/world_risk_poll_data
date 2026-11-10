@@ -19,8 +19,35 @@
     return { columns, fill: (bottom - box.top) / box.height };
   };
 
+  // A figure with a page of its own must start a page (a left column). Text that follows it is brought
+  // forward to fill the page before it, as far as that page has room and up to the next main heading.
+  const placePlates = (flow) => {
+    const column = (el) => Math.round((el.getBoundingClientRect().left - flow.getBoundingClientRect().left) / PITCH);
+    for (const plate of flow.querySelectorAll(".fig.plate")) {
+      const fill = plate.nextElementSibling;
+      const target = column(plate) + (column(plate) % 2);
+      for (;;) {
+        // (figures keep their order: the text steps over a column-sized figure that follows the plate)
+        let next = fill.nextElementSibling;
+        while (next && next.matches(".fig:not(.plate), .roll")) next = next.nextElementSibling;
+        if (!next || next.matches("h1, .fig, .platefill")) break;
+        const home = next.previousElementSibling;
+        plate.before(next);
+        if (column(plate) > target) { home.after(next); break; }
+      }
+      // a heading is not left behind without its text
+      while (plate.previousElementSibling && plate.previousElementSibling.matches("h2, h3")) fill.after(plate.previousElementSibling);
+      if (column(plate) % 2) {
+        const gap = document.createElement("div");
+        gap.className = "colbreak";
+        plate.before(gap);
+      }
+    }
+  };
+
   for (const page of [...document.querySelectorAll("section.page.body")]) {
     const flow = page.querySelector(".flow");
+    placePlates(flow);
     let { columns, fill } = measure(flow);
     // A few lines alone on a new page or at the top of a column: close up the leading a little to bring them back.
     if ((columns > 2 && columns % 2 === 1 && fill < 0.4) || (columns > 1 && fill < 0.12)) {

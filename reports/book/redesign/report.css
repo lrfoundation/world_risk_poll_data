@@ -64,6 +64,9 @@ sup.ref { font-size: 10px; line-height: 0; font-weight: 600; color: var(--fuchsi
 .fig .sub::before { background: var(--green); }
 .fig .art { padding: 8px 0 0 20px; }
 .fig .art svg { display: block; }
+.fig .art h6.part { margin: 14px 0 8px; font-size: 16px; line-height: 21px; font-weight: 700; color: var(--navy); }
+.fig .art h6.part:first-child { margin-top: 0; }
+.fig .art svg + svg { margin-top: 18px; }
 .fig .notes { margin: 8px 0 0 20px; padding-top: 8px; border-top: 1px solid rgba(227, 7, 110, 0.55); }
 .fig .notes p { font-size: 14px; line-height: 18px; font-style: italic; margin: 0 0 4px; padding: 0; }
 .fig .notes b { font-weight: 600; }
@@ -92,6 +95,24 @@ table.data tr:nth-child(even) td { background: #FBF3F7; }
 .rank h6 { margin: 0 0 4px; font-size: 13px; line-height: 18px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); }
 .rank div { display: flex; justify-content: space-between; font-size: 15px; line-height: 24px; border-bottom: 1px solid #E3E3E3; }
 .rank b { font-weight: 900; color: var(--fuchsia); }
+
+/* ---- a figure on a page of its own; a statement set large; a note under a paragraph; names by status */
+.fig.plate { height: 950px; margin: 0; break-before: column; }
+.fig.plate .sheet { position: absolute; left: 0; top: 0; width: 1728px; height: 950px; }
+.fig.plate img.original { margin: 0 auto; }
+.fig.plate .notes { margin-top: 14px; }
+.platefill { height: 950px; break-inside: avoid; }
+.flow .statement { font-size: 36px; line-height: 45px; font-weight: 500; letter-spacing: -0.01em; color: var(--navy); margin: 14px 0 30px; padding: 0 18px 2px 20px; break-inside: avoid; }
+.flow .statement::before { content: ""; position: absolute; left: 0; top: 3px; bottom: 3px; width: 10px; border-radius: 5px; background: var(--fuchsia); }
+.flow .statement strong { font-weight: 800; color: var(--fuchsia); }
+.flow .cite { font-size: 14px; line-height: 19px; font-style: italic; text-align: right; margin: -16px 0 26px; }
+.flow .foot { font-size: 13px; line-height: 18px; margin: -12px 0 26px; padding-top: 6px; }
+.flow .foot::before { content: ""; position: absolute; left: 20px; top: 0; width: 120px; border-top: 1px solid #1a1a1a; }
+.roll { margin: 0 18px 26px 20px; break-inside: avoid; }
+.roll .mapkey { margin-bottom: 12px; font-size: 14px; }
+.roll .names { column-count: 5; column-gap: 14px; font-size: 12.5px; line-height: 17px; }
+.roll .names span { display: block; color: #333; }
+.roll .names span[class] { font-weight: 800; color: var(--c); }
 
 /* ---- contents and list of figures */
 .toc { margin: 0 18px 0 20px; }
@@ -128,6 +149,8 @@ ol.refs li::before { content: attr(value) "."; position: absolute; left: 0; font
 .opener .big.three i { left: 300px; top: 250px; font-size: 130px; }
 .opener .big.single span { position: static; display: block; margin-top: 170px; font-size: 370px; line-height: 1; text-align: right; letter-spacing: -0.05em; }
 .opener .big.single.long span { margin-top: 215px; font-size: 290px; }
+.opener.plain .left { top: 170px; }
+.opener .cap strong { font-weight: 800; }
 .opener .cap { position: absolute; left: 1380px; top: 880px; width: 440px; color: #fff; font-size: 22px; line-height: 30px; font-weight: 600; }
 
 /* ---- cover */
