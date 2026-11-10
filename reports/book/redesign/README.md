@@ -40,7 +40,7 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | `# Heading`, `## Heading` | Section heading (starts a column) and sub-heading |
 | `> text` | A highlighted statement of the original |
 | `- text`, `1. **Lead.** text` | Bullets and numbered findings |
-| ```` ```chart ```` + JSON | A figure: `hbar`, `grouped`, `vgrouped`, `dumbbell`, `map`, `table` or `original` |
+| ```` ```chart ```` + JSON | A figure: `hbar`, `grouped`, `stacked`, `vgrouped`, `dumbbell`, `map`, `table` or `original` |
 | `[^n]: text` | A footnote of the original, listed under References |
 
 ## Files
@@ -51,4 +51,24 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | `report.css` | The page format, measured from the 2026 report PDFs |
 | `paginate.js` | Runs in the page: turns the column flow into pages, numbers them, fills in the contents |
 | `extract.py` | Published PDF to draft markup |
+| `assemble_2019.py` | Draft markup of the 2019 chapters, plus a plan per report (chapters, chart specifications, new writing), to a content file |
+| `check.py` | Compares a content file with its pages of the PDF, both ways: every sentence set must be in the original, and every block of running text in the original must be set |
 | `content/` | One file per re-set report |
+
+## The four reports of the 2019 volume
+
+    python reports/book/redesign/assemble_2019.py 2019_technology
+    python reports/book/redesign/check.py 2019_technology 126 140 141 152
+    python reports/book/redesign/build.py 2019_technology
+
+| Report | Chapters of the 2019 volume | Pages of the PDF (from 0) |
+| --- | --- | --- |
+| `2019_feeling_safe` | 1 to 4 and 10 | 17 to 86, 171 to 182 |
+| `2019_risk_at_work` | 5 | 87 to 111 |
+| `2019_climate_food_water` | 6 and 9 | 112 to 125, 153 to 170 |
+| `2019_technology` | 7 and 8 | 126 to 140, 141 to 152 |
+
+`2019_risk_at_work` was the pilot and its content file was written by hand; the
+others come from `assemble_2019.py`. The check reports the headings and the
+cross-references that were changed on purpose ("Chapter 3 of the 2019 volume"),
+which are also listed in each report's "Notes on this edition".

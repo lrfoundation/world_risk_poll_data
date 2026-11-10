@@ -51,6 +51,15 @@ def internet_use_2019():
     return _share(2019, "L26", [1])
 
 
+def worried_false_info_2019():
+    """Among internet users (the question was put only to them)."""
+    return _share(2019, "L27B", [1])
+
+
+def worried_fraud_2019():
+    return _share(2019, "L27C", [1])
+
+
 def less_safe_2021():
     return _share(2021, "WP20711", [2])
 
@@ -123,6 +132,8 @@ CHECKS = [
     ("less_safe_2019", "LBN", "WRP_2019/core_world_risk_poll_2019", "T1_1_LBN_less"),
     ("gov_food_not_good_2019", "LBN", "WRP_2019/core_world_risk_poll_2019", "C9_6_LBN"),
     ("gov_water_not_good_2019", "LBN", "WRP_2019/core_world_risk_poll_2019", "C9_8_LBN"),
+    ("worried_false_info_2019", "MWI", "WRP_2019/core_world_risk_poll_2019", "C8_4_MWI"),
+    ("worried_fraud_2019", "MUS", "WRP_2019/core_world_risk_poll_2019", "C8_8_MUS"),
     ("burns_waste_2023", "IDN", "WRP_2023/core_a_world_of_waste", "X16"),
     ("impacted_by_disaster_2025", "PHL", "WRP_2025/core_from_alert_to_agency", "X023"),
     ("impacted_by_disaster_2025", "ISR", "WRP_2025/core_from_alert_to_agency", "X024"),

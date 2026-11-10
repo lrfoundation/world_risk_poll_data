@@ -522,8 +522,6 @@ Given that higher levels of education were associated with a better understandin
 }
 ```
 
-People who answered correctly/incorrectly that 10% is the same as 1 out of 10
-
 Looking at the results by country income group, people in high-income countries were more likely to say climate change is a very serious threat (56%) than those in low-income countries and territories, possibly mirroring the differences in education levels across country income groups. Substantially fewer people in the low-income (38%) and middle- income country groups (37% in each) said climate change is a very serious threat.
 
 ```chart

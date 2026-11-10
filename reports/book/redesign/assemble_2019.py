@@ -172,6 +172,89 @@ PLANS = {
 }
 
 
+HELP = dict(series=["Mostly help", "Mostly harm"], colours=["green", "fuchsia"])
+HELP3 = dict(series=["Mostly help", "Mostly harm", "No opinion"], colours=["green", "fuchsia", "grey"])
+SAME_AS = "People who answered correctly/incorrectly that 10% is the same as 1 out of 10"
+
+
+def by_gender(prefix, names):
+    return [[name, [f"{prefix}women_{key}", f"{prefix}men_{key}"]] for key, name in names.items()]
+
+
+PLANS["2019_technology"] = dict(
+    number=4,
+    subtitle="New technologies and the risks of being online",
+    cover_image=[141, 0],
+    chapters=[
+        dict(source=7, big="48%", caption="of adults said genetically modified foods will mostly harm people in their country over the next 20 years"),
+        dict(source=8, big="57%", caption="of internet users worldwide said they worry about receiving false information online"),
+    ],
+    about=[
+        "The body of this report is Chapters 7 and 8 of the 2019 volume, reproduced word for word and set here as Chapters 1 and 2. Their charts "
+        "have been redrawn from the published values in the current World Risk Poll chart style, and their footnotes are gathered as numbered "
+        "references at the back. Three things are new: this page, the heading ‘Introduction’ at the start of each chapter, and the conclusion. "
+        "Charts are numbered by chapter, so Chart 7.2 of the 2019 volume is Chart 1.2 here and Chart 8.2 is Chart 2.2.",
+        "The two chapters are paired because both are about technology, although they ask about it in different ways. Chapter 1 asks everyone "
+        "whether three technologies (genetically modified food, nuclear power and artificial intelligence) will mostly help or mostly harm people "
+        "in their country over the next 20 years. Chapter 2 asks only people who use the internet what worries them when they are online. The "
+        "first is a judgement about the future, made largely at a distance; the second is a report from daily use.",
+    ],
+    conclusion=[
+        "Of the three technologies the 2019 poll asked about, only one was met with clear suspicion. Nearly half of adults worldwide (48%) said "
+        "genetically modified foods would mostly harm people in their country over the next 20 years, more than twice the share who said they "
+        "would mostly help (21%). Nuclear power and artificial intelligence drew the opposite balance: 40% and 41% respectively expected them "
+        "to mostly help, against 29% and 30% who expected harm. In all three cases about three in 10 people offered no view either way, which "
+        "is a finding in its own right.",
+        "Where people live shaped these views as much as the technology in question. People in low-income countries were almost twice as "
+        "likely as those in higher-income countries to see genetically modified foods as helpful (43% compared with 22%). Optimism about "
+        "artificial intelligence was concentrated in Eastern Asia, where 59% expected it to mostly help and only 11% to mostly harm; in "
+        "Southern Europe and in Latin America and the Caribbean, by contrast, about half expected it to do harm (51% and 49%).",
+        "The second chapter turns from technologies people judge at a distance to one that many use every day, although far from all: the "
+        "share of people who had used the internet in the past 30 days ranged from 96% in Bahrain to 8% in Chad. Among those who were online, "
+        "false information was the most common worry (57%), ahead of fraud (45%) and bullying (30%). The worries also fell differently by age. "
+        "Concern about bullying was highest among users aged 15 to 29 (34%, compared with 21% of those aged 65 and over), whilst concern about "
+        "fraud rose with age, from 42% to 55% across the same two groups.",
+        "It is important to note when these questions were asked: in 2019, before the pandemic moved much of daily life online and before "
+        "generative AI reached the public. The figures are therefore best read as a baseline. The 2021 poll returned to artificial "
+        "intelligence and to the risks of being online, and what changed can only be measured because the 2019 questions came first.",
+    ],
+    charts={
+        "7.1": dict(kind="stacked", series=HELP["series"] + ["No opinion/neither/do not know/refused"], colours=HELP3["colours"],
+                    rows=groups("C7_1_", {"gm": "Genetically modified food", "nuclear": "Nuclear power", "ai": "Artificial intelligence"}, ["help", "harm", "none"])),
+        "7.2": dict(kind="grouped", tall=True, rows=by_region("C7_2_", ["help", "harm"]), **HELP),
+        "7.3": dict(kind="original", page=132, clip=[55, 304, 480, 572], width=640,
+                    note="Reproduced from the 2019 report. The Food and Shelter Index comes from the Gallup World Poll, which is not in the public files, "
+                         "so this chart could not be redrawn."),
+        "7.4": dict(kind="grouped", tall=True, rows=by_region("C7_4_", ["help", "harm"]), **HELP),
+        "7.5": dict(kind="vgrouped", subtitle="Percentages among people in high-income economies", panels=[["", groups("C7_5_", EDUCATION, ["help", "harm"])]], **HELP),
+        "7.6": dict(kind="vgrouped", subtitle=SAME_AS, series=["Correct", "Not correct"], panels=[["", groups("C7_6_", INCOME, ["correct", "not_correct"])]]),
+        "7.7": dict(kind="vgrouped", panel_height=440, **HELP,
+                    panels=[["Women (high-income economies only)", groups("C7_7_women_", EDUCATION, ["help", "harm"])],
+                            ["Men (high-income economies only)", groups("C7_7_men_", EDUCATION, ["help", "harm"])]]),
+        "7.8": dict(kind="grouped", tall=True, rows=by_region("C7_8_", ["help", "harm"]), **HELP),
+        "7.9": dict(kind="original", page=139, clip=[80, 299, 466, 564], width=640,
+                    note="Reproduced from the 2019 report. The Trust in Scientists Index comes from the Wellcome Global Monitor, which is not in the "
+                         "public files of the poll, so this chart could not be redrawn."),
+        "7.10": dict(kind="vgrouped", panel_height=440, note="Due to rounding, percentages may sum to 100% +/- 1%.", **HELP3,
+                     panels=[["Women", groups("C7_10_women_", AGES, ["help", "harm", "none"])], ["Men", groups("C7_10_men_", AGES, ["help", "harm", "none"])]]),
+        "8.1": dict(kind="map", fn="internet_use_2019", top=[["Bahrain", "C8_1_BHR"], ["Kuwait", "C8_1_KWT"], ["Ireland", "C8_1_IRL"]],
+                    bottom=[["Ethiopia", "C8_1_ETH"], ["Niger", "C8_1_NER"], ["Chad", "C8_1_TCD"]]),
+        "8.2": dict(kind="vgrouped", panel_height=440, series=["Women", "Men"], panels=[["", by_gender("C8_2_", AGES)], ["", by_gender("C8_2_", EDUCATION)]]),
+        "8.3": dict(kind="stacked", series=["Yes", "No", "Do not know/refused"], colours=["fuchsia", "teal", "grey"],
+                    rows=groups("C8_3_", {"bullying": "Bullying", "false_info": "Receiving false information", "fraud": "Fraud"}, ["yes", "no", "dk"])),
+        "8.4": dict(kind="map", fn="worried_false_info_2019", top=[["Malawi", "C8_4_MWI"], ["Rwanda", "C8_4_RWA"], ["Bolivia", "C8_4_BOL"]],
+                    bottom=[["India", "C8_4_IND"], ["Lithuania", "C8_4_LTU"], ["Turkmenistan", "C8_4_TKM"]]),
+        "8.5": dict(kind="vgrouped", series=["Receiving false information", "Fraud", "Online bullying"], colours=["fuchsia", "green", "teal"],
+                    panels=[["", [[name, [f"C8_5_{risk}_{key}" for risk in ("false_info", "fraud", "bullying")]] for key, name in AGES.items()]]]),
+        "8.6": dict(kind="original", page=150, clip=[55, 264, 480, 528], width=640,
+                    note="Reproduced from the 2019 report. The values for each country are not among the published figures in this repository."),
+        "8.7": dict(kind="vgrouped", panel_height=440, series=["Women", "Men"], panels=[["", by_gender("C8_7_", EDUCATION)], ["", by_gender("C8_7_", AGES)]]),
+        "8.8": dict(kind="map", fn="worried_fraud_2019", top=[["Mauritius", "C8_8_MUS"], ["Portugal", "C8_8_PRT"], ["Malta", "C8_8_MLT"]],
+                    bottom=[["Egypt", "C8_8_EGY"], ["Tajikistan", "C8_8_TJK"], ["Turkmenistan", "C8_8_TKM"]]),
+    },
+)
+
+
 # ---------------------------------------------------------------- reading a chapter's draft
 
 def join_urls(text):
@@ -214,6 +297,9 @@ def chapter(doc, number, offset):
             state = "questions"
         elif line.startswith("# ") and state != "body":
             state = "body"
+        if state == "insight" and re.match(rf"{len(parts['findings']) + 1} [A-Z]", line):
+            parts["findings"].append(line)      # the list of findings runs on past the next heading in the PDF's reading order
+            continue
         parts[state].append(line)
     return parts
 
@@ -227,11 +313,17 @@ def finding(line):
 def blocks(lines, charts, offset, seen):
     """Draft lines as content blocks: charts get their specification, questions their options."""
     out, chart = [], None
+    furniture = {spec["subtitle"] for spec in charts.values() if spec.get("subtitle")}
     for line in lines:
+        if line in furniture:
+            continue
         if line.startswith("<!-- note:"):
             if chart is not None:
                 question = re.sub(r"^Survey question: ", "", line[len("<!-- note:"):-len("-->")].strip())
-                chart["question"] = f'{chart.get("question", "")} {question}'.strip()
+                for title, _ in chart.get("panels", []):
+                    question = question.replace(title, "") if title else question
+                if question.strip():
+                    chart["question"] = f'{chart.get("question", "")} {question.strip()}'.strip()
             continue
         label = re.match(r"\[(chart|table) ([\d.]+)\]\s*(.*)", line)
         if label:
