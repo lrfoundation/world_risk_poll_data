@@ -65,6 +65,8 @@ def rich(block, body=10.0):
         for span in line["spans"]:
             text = span["text"].replace("\t", " ").replace("­", "").replace("\xa0", " ")
             font = span["font"]
+            if body and span["color"] == 0xFFFFFF:
+                continue                # white type left behind in a paragraph: it does not print
             if span["size"] < body * 0.75 and re.fullmatch(r"\s*[\d,\s]+\s*", text) and text.strip():
                 style, text = "", "".join(f"[^{n}]" for n in re.findall(r"\d+", text))
             elif "Itali" in font or font.endswith("-It"):
@@ -131,6 +133,11 @@ def page_items(page, index, top=55, bottom=800):
         kind = kind_of(main)
         if kind is None:
             continue
+        if kind == "sub":
+            # a paragraph that is mostly bold is still a paragraph
+            light = [s for s in spans if "Light" in s["font"] and 9.8 <= s["size"] <= 10.2]
+            if sum(len(s["text"]) for s in light) >= 20:
+                kind, main = "p", max(light, key=lambda s: len(s["text"]))
         item = dict(kind=kind, page=index, x0=x0, y0=y0, x1=x1, y1=y1, wide=x1 - x0 > 300)
         if kind == "small":
             item["lines"] = [line for line in lines_of(block) if line]

@@ -61,15 +61,13 @@ The 2021 study includes 125,911 people across 121 countries and territories acro
 
 - Worldwide, 39% of people said AI would ‘mostly help’ people in their country, 28% said it would ‘mostly harm’ people, and 30% said they ‘do not have an opinion’ (22%) or did not know (8%).
 
-- Women were less likely than men to say AI would mostly help — 35% versus 42%, respectively.
+-- Women were less likely than men to say AI would mostly help — 35% versus 42%, respectively.
 
 - In Eastern Asia, Southeastern Asia, Central Asia, Northern/Western Europe, Southern Europe, Australia/New Zealand and Eastern Europe, more people said AI would mostly help rather than mostly harm people in their country in the next 20 years.
 
-- Optimism about AI was strongest in Eastern Asia, where 57% said AI would mostly help people, while just 13% said it would mostly harm them. Several countries in the region — including China, Japan and South Korea — are considered leaders in developing AI applications.
+-- Optimism about AI was strongest in Eastern Asia, where 57% said AI would mostly help people, while just 13% said it would mostly harm them. Several countries in the region — including China, Japan and South Korea — are considered leaders in developing AI applications.
 
-- By contrast, people in several of the world’s lowest-income regions — including Central/Western Africa,
-
-Southern Africa, Northern Africa, Eastern Africa and Southern Asia — were more likely to say AI would mostly harm than help people in their country in the next 20 years.
+-- By contrast, people in several of the world’s lowest-income regions — including Central/Western Africa, Southern Africa, Northern Africa, Eastern Africa and Southern Asia — were more likely to say AI would mostly harm than help people in their country in the next 20 years.
 
 - People who said religion was important in their daily lives expressed less optimism about AI, regardless of their level of educational attainment. Overall, 32% of those who said religion was important in their daily lives felt AI would mostly help people in their country, versus 48% of those who did not.
 
@@ -83,17 +81,13 @@ Southern Africa, Northern Africa, Eastern Africa and Southern Asia — were more
 
 - The percentage of people who reported using the internet in the past 30 days rose from 54% in 2019 to 63% in 2021 among the 119 countries and territories surveyed both years. The greatest increases occurred in lower-middle-income (from 31% to 41%) and upper-middle-income (65% to 76%) economies.
 
-- By contrast, there was a comparatively small rise in internet use among low-income economies; in 2021,
-
-22% of people in these countries said they had used the internet in the past 30 days, versus 20% in 2019. Less than a third of people in three of the world’s lowest-income regions — Southern Asia (31%), Eastern Africa (29%) and Central/Western Africa (27%) — said they had used the internet in the past 30 days, compared with more than half in all other regions.
+-- By contrast, there was a comparatively small rise in internet use among low-income economies; in 2021, 22% of people in these countries said they had used the internet in the past 30 days, versus 20% in 2019. Less than a third of people in three of the world’s lowest-income regions — Southern Asia (31%), Eastern Africa (29%) and Central/Western Africa (27%) — said they had used the internet in the past 30 days, compared with more than half in all other regions.
 
 - Worldwide, 38% of people with primary education or less said they had gone online in the past 30 days, compared with 78% of those with secondary and 94% with post-secondary education.
 
 - Globally, women were less likely than men to say they had used the internet in the past 30 days — 59% versus 66%, respectively. The gender gap was widest in Southern Asia at 23 percentage points.
 
-- Just 10% of women in Southern Asia with primary education or less had used the internet in the past
-
-30 days.
+-- Just 10% of women in Southern Asia with primary education or less had used the internet in the past 30 days.
 
 - Though internet use remains more common among younger people worldwide, those aged 65 and older saw the greatest gain in internet use since 2019, from 28% to 46% in 2021. Covid-19 may have influenced the rise in internet use among older adults, many of whom have engaged with technology in new ways to stay connected to family and friends or to access essential services during the pandemic.
 

@@ -44,6 +44,8 @@ sup.ref { font-size: 10px; line-height: 0; font-weight: 600; color: var(--fuchsi
 
 .flow ul { list-style: none; margin: 0 0 calc(26px * var(--fit)); padding: 0 18px 0 20px; }
 .flow ul li { position: relative; padding-left: 24px; margin-bottom: calc(12px * var(--fit)); break-inside: avoid; }
+.flow ul li.under { margin-left: 28px; }
+.flow ul li.under::before { top: 12px; height: 2px; width: 10px; border-radius: 0; }
 .flow ul li::before { content: ""; position: absolute; left: 3px; top: 9px; width: 8px; height: 8px; border-radius: 50%; background: var(--fuchsia); }
 .options { display: block; margin: 6px 0 2px; font-size: 15px; line-height: 22px; color: #333; }
 .options > span { display: block; padding-left: 4px; }
@@ -125,6 +127,7 @@ ol.refs li::before { content: attr(value) "."; position: absolute; left: 0; font
 .opener .big.three span:first-child { top: 20px; left: 10px; }
 .opener .big.three i { left: 300px; top: 250px; font-size: 130px; }
 .opener .big.single span { position: static; display: block; margin-top: 170px; font-size: 370px; line-height: 1; text-align: right; letter-spacing: -0.05em; }
+.opener .big.single.long span { margin-top: 215px; font-size: 290px; }
 .opener .cap { position: absolute; left: 1380px; top: 880px; width: 440px; color: #fff; font-size: 22px; line-height: 30px; font-weight: 600; }
 
 /* ---- cover */

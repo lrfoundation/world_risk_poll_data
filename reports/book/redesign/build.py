@@ -230,7 +230,7 @@ class Report:
                 self.small = f"Segments of {max(charts.stacked.unlabelled):g}{unit} or less are too narrow to label."
             return svg
         if kind == "matrix":
-            rows = [(label, self.values(ids)) for label, ids in spec["rows"]]
+            rows = [(label, self.values(ids) if ids is not None else None) for label, ids in spec["rows"]]
             row_height = 74 if len(rows) <= 6 else 58 if len(rows) <= 12 else 50
             return charts.scaled(charts.matrix(rows, spec["columns"], CHART_W, row_height, unit=unit, decimals=spec.get("decimals", 0),
                                                plain=tuple(spec.get("plain", ())), groups=spec.get("groups"), signed=tuple(spec.get("signed", ()))), SCALE)
@@ -379,16 +379,19 @@ class Report:
                 out.append(f"<h3>{self.inline(chunk[4:])}</h3>")
             elif chunk.startswith("> "):
                 out.append(f'<p class="lead">{self.inline(chunk[2:])}</p>')
-            elif chunk.startswith("- "):
-                items = []
-                while i < len(chunks) and (chunks[i].startswith("- ") or re.match(r"\s+A\. ", chunks[i])):
-                    if chunks[i].startswith("- "):
+            elif chunk.startswith(("- ", "-- ")):
+                items, under = [], set()
+                while i < len(chunks) and (chunks[i].startswith(("- ", "-- ")) or re.match(r"\s+A\. ", chunks[i])):
+                    if chunks[i].startswith("-- "):          # a point under the bullet before it
+                        items.append(self.inline(chunks[i][3:]))
+                        under.add(len(items) - 1)
+                    elif chunks[i].startswith("- "):
                         items.append(self.inline(chunks[i][2:]))
                     else:
                         options = re.split(r"\s(?=[B-H]\. )", chunks[i].strip())
                         items[-1] += '<span class="options">' + "".join(f"<span>{self.inline(o)}</span>" for o in options) + "</span>"
                     i += 1
-                out.append("<ul>" + "".join(f"<li>{item}</li>" for item in items) + "</ul>")
+                out.append("<ul>" + "".join(f'<li class="under">{item}</li>' if n in under else f"<li>{item}</li>" for n, item in enumerate(items)) + "</ul>")
                 continue
             elif re.match(r"\d+\. ", chunk):
                 items, first = [], int(chunk.split(". ", 1)[0])
@@ -440,7 +443,7 @@ class Report:
             size = "two" if len(parts[0] + parts[1]) <= 2 else "three"
             big = f'<div class="big {size}"><span>{parts[0]}</span><i>in</i><span>{parts[1]}</span></div>'
         else:
-            big = f'<div class="big single"><span>{escape(section["big"])}</span></div>'
+            big = f'<div class="big single{" long" if len(section["big"]) > 4 else ""}"><span>{escape(section["big"])}</span></div>'
         return (f'<section class="page opener" data-num="main" id="{anchor}">{self.chrome()}<div class="block"></div>'
                 f'<div class="logo">{self.logo.replace("#e5006e", "#FFFFFF")}</div>'
                 f'<div class="left"><div class="chap">Chapter {number}</div><h1>{self.inline(section["title"])}</h1><div class="text">{text}</div></div>'

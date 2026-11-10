@@ -412,14 +412,16 @@ def matrix(rows, columns, width, row_height=58, unit="%", decimals=0, low="#FBE6
     """
     units = unit if isinstance(unit, (list, tuple)) else [unit] * len(columns)
     places = decimals if isinstance(decimals, (list, tuple)) else [decimals] * len(columns)
-    wrapped, label_w = _labels(rows, FS, width * (0.27 if len(columns) < 7 else 0.2))
+    wrapped, label_w = _labels([r for r in rows if r[1] is not None], FS, width * (0.27 if len(columns) < 7 else 0.2))
+    wrapped = iter(wrapped)
+    wrapped = [next(wrapped) if vs is not None else None for _, vs in rows]         # a row with no values is a heading over the rows below it
     x0 = label_w + 22
     cell = (width - x0) / len(columns)
     size = FS - 2 if len(columns) < 7 else FS - 4
     heads = [[line.replace("/ ", "/") for line in wrap(name.replace("/", "/ "), size * 0.86, cell - 6)] for name in columns]
     top = 14 + 25 * max(len(h) for h in heads) + (38 if groups else 0)
     height = top + row_height * len(rows) + 6
-    values = [v for _, vs in rows for j, v in enumerate(vs) if v is not None and j not in plain]
+    values = [v for _, vs in rows if vs is not None for j, v in enumerate(vs) if v is not None and j not in plain]
     vmin, vmax = min(values), max(values)
     a, b = [int(low[i:i + 2], 16) for i in (1, 3, 5)], [int(high[i:i + 2], 16) for i in (1, 3, 5)]
     out, at = [], 0
@@ -434,6 +436,10 @@ def matrix(rows, columns, width, row_height=58, unit="%", decimals=0, low="#FBE6
         out += [_txt(x0 + cell * (j + 0.5), y + 25 * k, line, size, 700, "middle") for k, line in enumerate(lines)]
     for i, ((label, vs), lines) in enumerate(zip(rows, wrapped)):
         y = top + row_height * i
+        if vs is None:
+            out.append(_txt(x0, y + row_height / 2 + 12, label, FS, 800, fill=high))
+            out.append(f'<line x1="0" y1="{y + row_height - 4:.1f}" x2="{width}" y2="{y + row_height - 4:.1f}" stroke="{high}" stroke-width="1.5"/>')
+            continue
         for j, value in enumerate(vs):
             if value is None:
                 out.append(_txt(x0 + cell * (j + 0.5), y + row_height / 2 + 9, "–", FS_VALUE, 400, "middle"))

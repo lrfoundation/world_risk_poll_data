@@ -34,13 +34,14 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | Markup | Meaning |
 | --- | --- |
 | `::front Title`, `::back Title` | A section before or after the chapters |
-| `::chapter Title \| 1 in 5 \| caption` | A chapter opener with its headline figure; the paragraphs up to the first `#` go on the opener |
+| `::chapter Title \| 1 in 5 \| caption` | A chapter opener with its headline figure; the paragraphs up to the first `#` or `::flow` go on the opener |
+| `::flow` | Start a chapter's text where the original has no heading over it |
 | `::new` … `::endnew` | Text written for this edition |
 | `::column` | Start a new column |
-| `# Heading`, `## Heading` | Section heading (starts a column) and sub-heading |
+| `# Heading`, `## Heading`, `### Heading` | Section heading (starts a column) and two levels of sub-heading |
 | `> text` | A highlighted statement of the original |
-| `- text`, `1. **Lead.** text` | Bullets and numbered findings |
-| ```` ```chart ```` + JSON | A figure: `hbar`, `grouped`, `stacked`, `vgrouped`, `dumbbell`, `matrix` (a table of shaded values), `map`, `table`, `heading` (a table that is only a title over the text that follows) or `original` |
+| `- text`, `-- text`, `1. **Lead.** text` | Bullets, points under a bullet, and numbered findings |
+| ```` ```chart ```` + JSON | A figure: `hbar`, `grouped`, `stacked`, `stacked_pair` (two sets of stacked bars side by side), `vgrouped`, `dumbbell`, `matrix` (a table of shaded values), `lists` (ranked lists side by side), `map`, `region_map` (part of the world, a few countries shaded), `table`, `heading` (a table that is only a title over the text that follows) or `original` |
 | `[^n]: text` | A footnote of the original, listed under References |
 
 ## Files
@@ -52,6 +53,8 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | `paginate.js` | Runs in the page: turns the column flow into pages, numbers them, fills in the contents |
 | `extract.py` | Published PDF to draft markup |
 | `assemble_2019.py` | Draft markup of the 2019 chapters, plus a plan per report (chapters, chart specifications, new writing), to a content file |
+| `core_2021.py` | Reads the typed items (headings, paragraphs, chart labels, small print, footnotes) of a core report of the 2021 poll from its PDF |
+| `assemble_2021.py` | Those items, plus a plan per report (opener figures, chart specifications), to a content file |
 | `check.py` | Compares a content file with its pages of the PDF, both ways: every sentence set must be in the original, and every block of running text in the original must be set |
 | `content/` | One file per re-set report |
 
@@ -90,3 +93,44 @@ Three conventions for charts that the published figures cannot fully supply:
   map are the published figures. The check reports the headings and the
 cross-references that were changed on purpose ("Chapter 3 of the 2019 volume"),
 which are also listed in each report's "Notes on this edition".
+
+## The four core reports of the 2021 poll
+
+    python reports/book/redesign/assemble_2021.py 2021_a_resilient_world
+    python reports/book/redesign/check.py 2021_a_resilient_world 3 46
+    python reports/book/redesign/build.py 2021_a_resilient_world
+
+| Report | Pages of the PDF (from 0) | Charts and tables |
+| --- | --- | --- |
+| `2021_a_changed_world` | 3 to 50 | 26, of which 4 are pictures of the original |
+| `2021_a_resilient_world` | 3 to 46 | 29, of which 4 are pictures of the original |
+| `2021_a_digital_world` | 3 to 35 | 23, of which 1 is a picture of the original |
+| `2021_safe_at_work` | 3 to 37 | 25 |
+
+These four share one design, so nothing in their content files is written by
+hand. `core_2021.py` tells a block's role from its type (the report's fonts and
+sizes are listed in `kind_of`), and finds each chart's extent from the two pink
+rules that bracket it; what lies between them is the chart's lettering, which
+the specification redraws, and its small print (the survey question and notes),
+which is kept. Each report keeps its own preface, executive summary, chapters
+and conclusion in the original order, and its charts keep their original
+numbers. A plan in `assemble_2021.py` gives the pages, the headline figure for
+each chapter opener and one specification per chart; a chart with no
+specification is placed as a picture of the original, so a first run is already
+a complete draft.
+
+Conventions added for these reports:
+
+- A stacked bar with one segment the original draws without a figure (under 5%)
+  draws it in its place at what is left of 100%, without a figure (`"gaps"`).
+  With two or more such segments in a row the space is one pale segment at the
+  end of the bar.
+- `"zero": "<0.5"` prints a value that rounds to nought as the original does;
+  `"decimals"` may be a number or `"g"` (each value as published).
+- A `matrix` row with no values is a heading over the rows below it.
+- Type that the PDF holds in white inside a paragraph (a leftover chart label)
+  is dropped, since it does not print.
+
+The appendices (questionnaires, lists of regions, the Resilience Index
+methodology, references listed again by chapter) are not set yet; each draft
+says so in its "Notes on this edition".

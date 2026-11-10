@@ -87,9 +87,9 @@ World Risk Poll resilience indicators have been compiled into the global Resilie
 
 - The aim of this exploratory index is to discover the size of the difference in the resilience of different groups, countries and regions, to track those differences over time and to understand which factors most drive changes to resilience. For example, within the unsurprising observation that people in the poorest regions have the least resilience, statistical modeling highlights two specific groups with among the lowest resilience scores in the world (page 36):
 
-- women with low incomes in Afghanistan
+-- women with low incomes in Afghanistan
 
-- women with low incomes in rural Central/Western Africa
+-- women with low incomes in rural Central/Western Africa
 
 ### Resilience and natural hazards
 
@@ -1689,9 +1689,7 @@ In some countries, however, differences by demographic categories were significa
 
 - In Afghanistan, where women lacked access to economic and educational opportunities even before the Taliban takeover in August 2021 (see page 36), their score of 0.27 was the lowest among female populations in any country and well below Afghan men’s score of 0.40. Other countries where men had significantly higher resilience (greater than a 0.07-point difference) included Croatia, Slovenia, Mexico, Argentina and Pakistan.
 
-- Among countries with substantial urban/rural gaps in resilience, two of the largest populations in Africa topped the list: South Africa (0.53 in large cities vs. 0.42 in rural areas) and Nigeria (0.49 vs. 0.39). Urban/rural differences of 0.08 points or more were also seen in Algeria, Ghana and Sierra Leone.
-
-Though many African countries have seen strong economic growth over the past 20 years, infrastructure development in rural areas has often not kept pace with fast-growing cities like Lagos and Johannesburg[^48], contributing to high levels of inequality[^49]. In Nigeria, for example, the 2021 World Risk Poll found that 62% of people in rural areas had primary education or less, compared to 37% of those in large cities or suburbs. In South Africa, 39% of rural residents had primary education or less, versus 20% of city-dwellers.
+- Among countries with substantial urban/rural gaps in resilience, two of the largest populations in Africa topped the list: South Africa (0.53 in large cities vs. 0.42 in rural areas) and Nigeria (0.49 vs. 0.39). Urban/rural differences of 0.08 points or more were also seen in Algeria, Ghana and Sierra Leone. Though many African countries have seen strong economic growth over the past 20 years, infrastructure development in rural areas has often not kept pace with fast-growing cities like Lagos and Johannesburg[^48], contributing to high levels of inequality[^49]. In Nigeria, for example, the 2021 World Risk Poll found that 62% of people in rural areas had primary education or less, compared to 37% of those in large cities or suburbs. In South Africa, 39% of rural residents had primary education or less, versus 20% of city-dwellers.
 
 - Particularly among countries with high income inequality, resilience scores often differed substantially between people in their country’s top and bottom income quintiles. Countries with the largest income-related gaps in resilience included the United States, which has the highest income inequality[^50] of any high-income country, and several countries from the world’s two most unequal regions: Latin America/Caribbean and Southern Africa.
 
@@ -1813,17 +1811,9 @@ Statistical models known as classification trees were used to partition Resilien
 
 The analysis first divided global regions into those with lower overall index scores (all four African regions, plus the Latin America/Caribbean region and Southern Asia) versus higher scores. It then iteratively tested for the greatest differences among the remaining categories, drilling down to find those groups defined by specific sets of characteristics that had the lowest resilience scores. The technique identified two groups with the world's lowest resilience scores:
 
-- **Women in Afghanistan’s lower income quintiles** Population size: 7,634,000; Overall index score: 0.25
+- **Women in Afghanistan’s lower income quintiles** Population size: 7,634,000; Overall index score: 0.25 After decades of war and instability in Afghanistan, the Taliban seized power again in August 2021, triggering an economic collapse as donor governments cut off aid to the new regime. Such conditions left many Afghans helpless in the face of one of the country’s worst droughts in decades, leading to a severe food insecurity crisis in late 2021[^53]. Data collection for the 2021 World Risk Poll took place during and in the immediate aftermath of the Taliban takeover; at that time, the survey found that 89% of women had no more than primary education versus 60% of men. Since regaining control of the country, the Taliban has made new decrees that further restricted girls’ access to secondary education, as well as women’s access to employment[^54].
 
-After decades of war and instability in Afghanistan, the Taliban seized power again in August 2021, triggering an economic collapse as donor governments cut off aid to the new regime. Such conditions left many Afghans helpless in the face of one of the country’s worst droughts in decades, leading to a severe food insecurity crisis in late 2021[^53].
-
-Data collection for the 2021 World Risk Poll took place during and in the immediate aftermath of the Taliban takeover; at that time, the survey found that 89% of women had no more than primary education versus 60% of men. Since regaining control of the country, the Taliban has made new decrees that further restricted girls’ access to secondary education, as well as women’s access to employment[^54].
-
-- **Women living rurally in lower-income quintiles of countries in Central/Western Africa** Population size: 27,882,000; Overall index score: 0.37
-
-As noted above, several countries with the largest urban/rural gaps in resilience scores — including Nigeria, Ghana and Sierra Leone — are in the Central/Western Africa region. Women in the region’s rural areas are particularly vulnerable, in part because they have lower average education levels than men; 77% of rural women in Central/Western African countries have primary education or less, versus 57% of rural men.
-
-As discussed on page 39, people in Central/Western Africa were more likely than those in any other region to say they had experienced flood-related disasters in the past five years, indicating this group is not only among the world’s least resilient but also particularly vulnerable to the effects of climate change.
+- **Women living rurally in lower-income quintiles of countries in Central/Western Africa** Population size: 27,882,000; Overall index score: 0.37 As noted above, several countries with the largest urban/rural gaps in resilience scores — including Nigeria, Ghana and Sierra Leone — are in the Central/Western Africa region. Women in the region’s rural areas are particularly vulnerable, in part because they have lower average education levels than men; 77% of rural women in Central/Western African countries have primary education or less, versus 57% of rural men. As discussed on page 39, people in Central/Western Africa were more likely than those in any other region to say they had experienced flood-related disasters in the past five years, indicating this group is not only among the world’s least resilient but also particularly vulnerable to the effects of climate change.
 
 ::chapter Resilience and natural hazards | 27% | of people worldwide said they had experienced a disaster caused by a natural hazard in the past five years
 
@@ -2358,7 +2348,7 @@ Notably, though a high percentage of Southern Asians (71%) said they are well-pr
 
 People’s confidence that they are prepared to deal with disasters was also related to whether they felt their governments and healthcare systems are prepared to do so. The high percentages in Southern and Southeastern Asia who felt personally prepared to deal with a disaster were reflected in the relatively high percentages who said their national government, local government and hospitals are well prepared.
 
-In many cases, these results were likely affected by people’s perception of how well their governments and healthcare systems had managed the Covid-19 crisis. Public opinion surveys on Covid-19 in 2021 showed that many people in the United States[^60] and Europe[^61] were not satisfied with how their governments handled the pandemic. Such discontent may help explain why people in Northern America, Northern/Western Europe and Southern Europe were far more likely to say hospitals in their country are prepared to deal with a disaster than to say the same about their national or local governments. Chart 3.6
+In many cases, these results were likely affected by people’s perception of how well their governments and healthcare systems had managed the Covid-19 crisis. Public opinion surveys on Covid-19 in 2021 showed that many people in the United States[^60] and Europe[^61] were not satisfied with how their governments handled the pandemic. Such discontent may help explain why people in Northern America, Northern/Western Europe and Southern Europe were far more likely to say hospitals in their country are prepared to deal with a disaster than to say the same about their national or local governments.
 
 ```chart
 {

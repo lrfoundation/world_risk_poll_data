@@ -148,14 +148,16 @@ def small_print(lines):
     return text.strip(), " ".join(notes).strip()
 
 
-def content(section, charts, doc, drop=(), heads=("# ", "## ")):
+def content(section, charts, doc, drop=(), heads=("# ", "## "), flat=False):
     """A section's items as content blocks (strings, and dicts for charts).
 
     heads are the marks for the section's levels of heading, largest first. A section whose
     largest heading is the 12-point one uses its bold lines of text as the level below.
     """
-    out, chart, last_small = [], None, None
+    out, chart, last_small, entry = [], None, None, None
     levels = ["h1", "h2", "sub"] if any(i["kind"] == "h1" for i in section["items"]) else ["h2", "sub"]
+    if flat:
+        levels = ["h2", "sub"]              # a report whose pink headings ("Conclusions") rank with its black ones
     for item in section["items"]:
         kind, text = item["kind"], item["text"]
         inside = chart is not None and item["frame"] is not None and item["page"] == chart["_page"]
@@ -197,7 +199,7 @@ def content(section, charts, doc, drop=(), heads=("# ", "## ")):
                     chart["_bottom"] = item["y0"] - 3
                 last_small = item
         elif kind in ("h1", "h2") or (kind == "sub" and not inside):
-            level = levels.index(kind)
+            level = levels.index(kind) if kind in levels else 0
             out.append(heads[level] + text if level < len(heads) else f"**{text}**")
         elif kind == "quote":
             if not inside:
@@ -205,7 +207,7 @@ def content(section, charts, doc, drop=(), heads=("# ", "## ")):
         elif kind == "p":
             if inside:
                 continue                         # the lettering of the chart, which the specification draws
-            text = re.sub(r"^\*\*([•-])\*\* ?|^\*\*([•-]) ", lambda m: f"• {'' if m.group(1) else '**'}", text)
+            text = re.sub(r"^\*\*([•-])\*\* ?|^\*\*([•-]) ", lambda m: f"{m.group(1)} " if m.group(1) else f"{m.group(2)} **", text)
             bullet = re.match(r"[•-] ", text) or re.match(r"• ?", text)
             finding = re.match(r"(\d+)\) ?", text)
             style = item.get("style", "")
@@ -215,7 +217,15 @@ def content(section, charts, doc, drop=(), heads=("# ", "## ")):
                     body = f"*{body}*"
                 elif style == "**" and finding:
                     body = f"**{body}**"
-                out.append(("- " if bullet else f"{finding.group(1)}. ") + body)
+                # a dash marks a point under the bullet before it
+                out.append(("-- " if text.startswith("-") else "- " if bullet else f"{finding.group(1)}. ") + body)
+                entry = item
+                continue
+            # The rest of a list entry that the PDF holds as a block of its own: indented under the entry, on the next line.
+            if (entry is not None and out and isinstance(out[-1], str) and out[-1].startswith("-") and item["page"] == entry["page"]
+                    and item["x0"] > entry["x0"] + 5 and -2 <= item["y0"] - entry["y1"] < 8):
+                out[-1] += " " + text
+                entry = dict(entry, y1=item["y1"])
                 continue
             # A paragraph the original broke over a page, a column or a chart: put it back together.
             k = next((k for k in range(len(out) - 1, -1, -1) if isinstance(out[k], str)), None)
@@ -306,7 +316,7 @@ def assemble(key):
             chapter += 1
             opener = p["chapters"][chapter - 1]
             out.append(f"::chapter {title} | {opener['big']} | {opener['caption']}")
-            blocks = opening(title, content(section, p["charts"], doc, drop, heads=("# ", "## ")))
+            blocks = opening(title, content(section, p["charts"], doc, drop, heads=("# ", "## "), flat=p.get("flat", False)))
         else:
             out.append(f"::{section['kind']} {title}")
             blocks = content(section, p["charts"], doc, drop, heads=("## ", "### "))
@@ -612,6 +622,108 @@ plan(
                                             "Among those who had experienced two or more forms of discrimination"], colours=["teal", "fuchsia", "navy"],
                     rows=[[label.replace("Personal information being", "Being").replace("Being stolen", "Being stolen"), [f"C3_8_{k}_{c}" for c in ("none", "one", "two_plus")]]
                           for k, label in USES]),
+    },
+)
+
+
+SEXES = dict(series=["Male", "Female"], colours=["teal", "fuchsia"])
+BIRTH = dict(series=["Native-born", "Foreign-born"], colours=["fuchsia", "teal"])
+INCOME_GROUPS = (("low", "Low-income countries"), ("lower_middle", "Lower-middle-income countries"), ("upper_middle", "Upper-middle-income countries"), ("high", "High-income countries"))
+FIFTHS = (("poorest", "Poorest 20%"), ("second", "Second 20%"), ("middle", "Middle 20%"), ("fourth", "Fourth 20%"), ("richest", "Richest 20%"))
+FORMS = (("sexual", "Sexual"), ("psychological", "Psychological"), ("physical", "Physical"))
+SCHOOL = (("tertiary", "Tertiary (16 years or more)"), ("secondary", "Secondary (8-15 years)"), ("primary", "Primary (0-8 years)"))
+WORKPLACES = {"AUS": "Australia", "FIN": "Finland", "ISL": "Iceland", "NZL": "New Zealand", "DNK": "Denmark", "USA": "United States", "NOR": "Norway", "CAN": "Canada",
+              "GRC": "Greece", "SWE": "Sweden", "KGZ": "Kyrgyzstan", "LBN": "Lebanon", "MYS": "Malaysia", "UZB": "Uzbekistan", "ARM": "Armenia", "IDN": "Indonesia",
+              "GEO": "Georgia", "KAZ": "Kazakhstan", "PAK": "Pakistan", "TJK": "Tajikistan"}
+TOP3 = {"australia_nz": "Australia and New Zealand", "central_western_africa": "Central/Western Africa", "eastern_asia": "East Asia", "northern_america": "Northern America",
+        "eastern_europe": "Eastern Europe", "central_asia": "Central Asia"}
+COMBINATIONS = (("psychological", "Psychological"), ("physical", "Physical"), ("sexual", "Sexual"), ("psychological_physical", "Psychological + physical"),
+                ("sexual_psychological", "Sexual + psychological"), ("sexual_physical", "Sexual + physical"), ("all_three", "Sexual + physical + psychological"))
+
+
+def workplace_rows(ids, fig_text):
+    """Table 1.1: the ten countries with the highest and the ten with the lowest experience, each with its income group."""
+    keys = ids.keys("T1_1_", "_all")
+    row = lambda k: [f"{WORKPLACES[k]} ({fig_text[f'T1_1_{k}_income']})", [f"T1_1_{k}_{c}" for c in ("all", "men", "women", "diff")]]
+    return [["Ten countries with highest experience", None]] + [row(k) for k in keys[:10]] + [["Ten countries with lowest experience", None]] + [row(k) for k in keys[10:]]
+
+
+def published_text(folder):
+    with open(HERE.parents[1] / folder / "published_figures.csv", encoding="utf-8") as f:
+        return {row["finding_id"]: row["published_value"] for row in csv.DictReader(f)}
+
+
+plan(
+    "2021_safe_at_work",
+    folder="WRP_2021/core_safe_at_work", pdf="core_safe_at_work.pdf", pages=(3, 37), flat=True,
+    title="Safe at Work?", subtitle="Global experiences of violence and harassment", published="January 2023",
+    source="World Risk Poll 2021: Safe at Work? Global experiences of violence and harassment (Lloyd's Register Foundation, January 2023)",
+    copyright="Copyright © 2023 Lloyd's Register Foundation. All rights reserved.",
+    cover_image=[9, 0],
+    chapters=[
+        dict(big="20.9%", caption="of people who have ever worked said they had experienced some form of violence and harassment at work in their lifetime"),
+        dict(big="27.7%", caption="of those who had experienced violence and harassment at work had experienced more than one form of it"),
+        dict(big="30.2%", caption="of foreign-born women said they had experienced violence and harassment in the workplace, compared with 21.5% of native-born women"),
+    ],
+    after={"Preface": ["**Dr. Ruth Boumphrey**, Chief Executive, Lloyd’s Register Foundation"]},
+    edits=[
+        "The headline figure on each chapter's opening page is taken from that chapter's text; the original opens each chapter with a photograph.",
+        "The name under the portrait in the preface is set as a line at the end of the preface.",
+        "Footnotes are gathered as numbered references at the back, with their original numbers. Web addresses that the original broke across lines have been joined up.",
+        "Chart 1.1 is a ring in the original and is drawn as a bar. Chart 2.2 is two blocks of rectangles sized by their values, one for men and one for women; "
+        "it is drawn here as paired bars. In Table 1.1 each country's World Bank income group follows its name instead of having a column of its own.",
+        "Where the original draws a segment under 5% without a figure, it is drawn in its place at what is left of 100%, also without a figure.",
+    ],
+    queries=[
+        "Chart 1.7. The key of the original reads ‘No experience of violence and harassment’ and ‘Experience of violence and harassment’, but both bars are the percentage who "
+        "experienced it: the shorter one among people who had not experienced that type of discrimination, the longer one among people who had. The key is kept as printed.",
+    ],
+    pending="The four appendices of the original (the questionnaire, the list of regions, the methodology note and the references listed again by chapter) are not in this draft.",
+    charts=lambda ids: {
+        "1.1": dict(kind="stacked", gaps=NOT_PRINTED, rows=[["World", ["C1_1_no", "C1_1_last_year", "C1_1_two_five", "C1_1_five_plus", None]]],
+                    series=["No", "Yes, last year", "Yes, 2-5 years ago", "Yes, 5+ years ago", "Yes, do not know"], colours=["teal", "fuchsia", "navy", "grey", "purple"]),
+        "1.2": dict(kind="stacked", rows=[[label, [f"C1_2_{k}_no", f"C1_2_{k}_yes"]] for k, label in (("men", "Male"), ("women", "Female"))],
+                    series=["Not experienced", "Experienced"], colours=["teal", "fuchsia"]),
+        "1.3": dict(kind="grouped", rows=ids.regions("C1_3_", ["men", "women"]), **SEXES),
+        "T1.1": dict(kind="matrix", decimals=1, unit=["%", "%", "%", " pts"], plain=[3], columns=["All", "Men", "Women", "Percentage point difference (women – men)"],
+                     rows=workplace_rows(ids, published_text("WRP_2021/core_safe_at_work"))),
+        "1.4": dict(kind="grouped", rows=[[label, [f"C1_4_{k}_men", f"C1_4_{k}_women"]] for k, label in INCOME_GROUPS], **SEXES),
+        "1.5": dict(kind="grouped", rows=[[label, [f"C1_5_{k}_men", f"C1_5_{k}_women"]] for k, label in INCOME_GROUPS], **SEXES),
+        "1.6": dict(kind="stacked", rows=[[label, [f"C1_6_{k}_no", f"C1_6_{k}_yes"]] for k, label in (("discrimination", "Experienced discrimination"), ("none", "No discrimination"))],
+                    series=["No experience of violence and harassment", "Experience of violence and harassment"], colours=["teal", "fuchsia"]),
+        "1.7": dict(kind="grouped", series=["No experience of violence and harassment", "Experience of violence and harassment"], colours=["teal", "fuchsia"],
+                    rows=[[label, [f"C1_7_{k}_no", f"C1_7_{k}_yes"]] for k, label in (
+                        ("gender", "Due to your gender"), ("skin", "Due to the colour of your skin"), ("nationality", "Due to your nationality/ethnic group"),
+                        ("religion", "Due to your religion"), ("disability", "Due to a disability"))]),
+        "1.8": dict(kind="stacked", gaps=NOT_PRINTED, rows=[[label, [f"C1_8_{k}_yes", f"C1_8_{k}_no", None]] for k, label in FORMS],
+                    series=["Yes", "No", "Don’t know/refused"], colours=["fuchsia", "teal", "navy"]),
+        "1.9": dict(kind="stacked", gaps=NOT_PRINTED,
+                    rows=[[f"{label}: {sex}", [f"C1_9_{k}_{s}_yes", f"C1_9_{k}_{s}_no", None]] for k, label in FORMS for s, sex in (("men", "Male"), ("women", "Female"))],
+                    series=["Yes", "No", "Don’t know/refused"], colours=["fuchsia", "teal", "navy"]),
+        "1.10": dict(kind="stacked", gaps=NOT_PRINTED, rows=[[label, [f"C1_10_{k}_once_twice", f"C1_10_{k}_three_five", f"C1_10_{k}_more_five", None]] for k, label in FORMS],
+                     series=["Once or twice", "Three to five times", "More than five times", "Don’t know/refused"], colours=["teal", "grey", "fuchsia", "navy"]),
+        "T1.2": dict(kind="lists", lists=[[label, [[TOP3[r], f"T1_2_{k}_{r}"] for r in ids.keys(f"T1_2_{k}_", "", TOP3)]] for k, label in (
+            ("physical", "Physical"), ("psychological", "Psychological"), ("sexual", "Sexual"))]),
+        "2.1": dict(kind="stacked", rows=[[label, [f"C2_1_{k}_{c}" for c in ("one", "two", "three")]] for k, label in (("men", "Male"), ("women", "Female"))],
+                    series=["One type", "Two types", "Three types"], colours=["teal", "grey", "fuchsia"]),
+        "2.2": dict(kind="grouped", rows=[[label, [i if i in ids.ids else None for i in (f"C2_2_men_{k}", f"C2_2_women_{k}")]] for k, label in COMBINATIONS], decimals="g", **SEXES),
+        "2.3": dict(kind="stacked", gaps=NOT_PRINTED, rows=[["Experience of discrimination", [f"C2_3_discrimination_{c}" for c in ("one", "two", "three")]],
+                                                           ["No experience of discrimination", ["C2_3_none_one", "C2_3_none_two", None]]],
+                    series=["One type", "Two types", "Three types"], colours=["teal", "grey", "fuchsia"]),
+        "3.1": dict(kind="stacked", gaps=NOT_PRINTED, rows=[[label, [f"C3_1_{k}_none", f"C3_1_{k}_one", f"C3_1_{k}_two", None]] for k, label in SCHOOL],
+                    series=["No type", "1 type", "2 types", "3 types"], colours=["navy", "teal", "grey", "fuchsia"]),
+        "3.2": dict(kind="stacked", gaps=NOT_PRINTED, rows=[[label, [f"C3_2_{k}_no", f"C3_2_{k}_yes", None]] for k, label in SCHOOL],
+                    series=["Didn’t tell someone", "Told someone", "Don’t know/refused"], colours=["teal", "fuchsia", "navy"]),
+        "T3.1": dict(kind="matrix", columns=["Employer", "Co-worker", "Friend or family", "Trade union", "Police/community leader", "Social services"],
+                     rows=[[label, [f"T3_1_{k}_{c}" for c in ("employer", "coworker", "family", "union", "police", "social")]] for k, label in SCHOOL]),
+        "T3.2": dict(kind="matrix", columns=["Worried people at work would find out", "Fear for my reputation", "Waste of time"],
+                     rows=[[label, [f"T3_2_{k}_{c}" for c in ("find_out", "reputation", "waste")]] for k, label in SCHOOL]),
+        "3.3": dict(kind="grouped", rows=[[label, [f"C3_3_{k}_native", f"C3_3_{k}_foreign"]] for k, label in (("women", "Female"), ("men", "Male"))], **BIRTH),
+        "3.4": dict(kind="grouped", rows=[[label, [f"C3_4_{k}_native", f"C3_4_{k}_foreign"]] for k, label in FIFTHS], **BIRTH),
+        "3.5": dict(kind="grouped", rows=[[label, [f"C3_5_{k}_native", f"C3_5_{k}_foreign"]] for k, label in INCOME_GROUPS], **BIRTH),
+        "3.6": dict(kind="grouped", rows=[[label, [f"C3_6_{k}_native", f"C3_6_{k}_foreign"]] for k, label in FIFTHS], **BIRTH),
+        "3.7": dict(kind="grouped", rows=[[label, [f"C3_7_{k}_native", f"C3_7_{k}_foreign"]] for k, label in FIFTHS], **BIRTH),
+        "3.8": dict(kind="grouped", rows=[[label, [f"C3_8_{k}_native", f"C3_8_{k}_foreign"]] for k, label in FIFTHS], **BIRTH),
     },
 )
 
