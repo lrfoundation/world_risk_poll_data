@@ -6,3 +6,6 @@ __pycache__/
 
 # External data that may not be redistributed (see reports/external/README.md).
 reports/external/downloaded/
+
+# Coffee table book: downloaded fonts and map outlines (the built book goes in output/).
+reports/book/.cache/

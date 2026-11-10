@@ -1,0 +1,169 @@
+/* World Risk Poll coffee table book. Pages are 1920 by 1080, the format of the
+   World Risk Poll 2026 reports. Colours and type follow the 2026 report style:
+   DM Sans, ink text, fuchsia, green and teal, with navy for the 2019 poll. */
+
+@page { size: 1920px 1080px; margin: 0; }
+
+:root {
+  --fuchsia: #E3076E; --green: #00785C; --teal: #00A7B3; --navy: #0D2240;
+  --ink: #231F20; --muted: #5F5B5C; --grey: #BDBDBD; --line: #D9D7D8;
+  --navy-light: #EEF2F7; --fuchsia-light: #FCE8F2; --paper: #FFFFFF;
+  --wave: var(--fuchsia); --wave-text: var(--fuchsia); --on: #FFFFFF;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: "DM Sans", sans-serif; color: var(--ink); background: #8a8a8a; }
+
+.page {
+  width: 1920px; height: 1080px; position: relative; overflow: hidden;
+  background: var(--paper); break-after: page; margin: 0 auto;
+}
+@media screen { .page { margin: 24px auto; box-shadow: 0 4px 24px rgba(0, 0, 0, .35); } }
+
+.w2019 { --wave: var(--navy); --wave-text: var(--navy); --on: #FFFFFF; }
+.w2021 { --wave: var(--fuchsia); --wave-text: var(--fuchsia); --on: #FFFFFF; }
+.w2023 { --wave: var(--green); --wave-text: var(--green); --on: #FFFFFF; }
+.w2025 { --wave: var(--teal); --wave-text: var(--navy); --on: var(--navy); }
+
+.eyebrow { font-size: 20px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.dot { color: var(--wave-text); }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Footer */
+.foot {
+  position: absolute; left: 96px; right: 96px; bottom: 44px; display: flex; justify-content: space-between;
+  font-size: 17px; color: var(--muted); letter-spacing: .02em;
+}
+.foot .tick { display: inline-block; width: 28px; height: 6px; background: var(--wave); margin-right: 14px; vertical-align: middle; border-radius: 0 3px 3px 0; }
+.foot b { font-weight: 700; color: var(--ink); }
+
+/* Cover */
+.cover { background: var(--fuchsia); color: #fff; }
+.cover .map { position: absolute; left: 150px; top: 215px; }
+.cover .logo { position: absolute; left: 96px; top: 84px; width: 118px; }
+.cover .logo svg { width: 100%; height: auto; display: block; }
+.cover h1 { position: absolute; left: 96px; bottom: 268px; font-size: 208px; font-weight: 900; letter-spacing: -.045em; line-height: .9; }
+.cover h2 { position: absolute; left: 104px; bottom: 170px; font-size: 62px; font-weight: 500; letter-spacing: -.02em; }
+.cover p { position: absolute; left: 104px; bottom: 96px; font-size: 27px; font-weight: 500; }
+.cover .years { position: absolute; right: 96px; top: 96px; text-align: right; font-size: 27px; font-weight: 700; letter-spacing: .1em; line-height: 1.6; }
+
+/* About and contents */
+.pad { position: absolute; inset: 96px 96px 110px 96px; }
+.about { display: grid; grid-template-columns: 1040px 1fr; gap: 110px; }
+.about h1, .back h1 { font-size: 92px; font-weight: 800; letter-spacing: -.035em; line-height: 1.02; margin: 26px 0 48px; }
+.about p { font-size: 27px; line-height: 1.5; margin-bottom: 26px; max-width: 1030px; }
+.wavelist { align-self: start; margin-top: 190px; }
+.wavelist .row { border-top: 2px solid var(--ink); padding: 22px 0 30px; display: grid; grid-template-columns: 220px 1fr; align-items: baseline; }
+.wavelist .yr { font-size: 76px; font-weight: 900; letter-spacing: -.04em; color: var(--wave-text); line-height: 1; }
+.wavelist .what { font-size: 22px; line-height: 1.4; }
+.wavelist .what b { display: block; font-size: 25px; }
+
+.contents h1 { font-size: 80px; font-weight: 800; letter-spacing: -.035em; margin: 18px 0 30px; }
+.contents .cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 44px; }
+.contents .col { border-top: 8px solid var(--wave); padding-top: 18px; }
+.contents .col h2 { font-size: 64px; font-weight: 900; letter-spacing: -.04em; color: var(--wave-text); line-height: 1; }
+.contents .col .brand { font-size: 18px; color: var(--muted); margin: 6px 0 20px; }
+.contents .item { display: grid; grid-template-columns: 1fr 44px; gap: 12px; padding: 9px 0 10px; border-top: 1px solid var(--line); font-size: 20px; line-height: 1.24; font-weight: 600; }
+.contents .item small { display: block; font-size: 15px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+.contents .item .pg { text-align: right; font-weight: 900; color: var(--wave-text); }
+
+/* Poll opener */
+.wave { background: var(--wave); color: var(--on); }
+.wave .left { position: absolute; left: 96px; top: 96px; width: 650px; bottom: 110px; }
+.wave .year { font-size: 290px; font-weight: 900; letter-spacing: -.055em; line-height: .86; margin: 40px 0 34px -10px; }
+.wave .brand { font-size: 26px; font-weight: 700; margin-bottom: 18px; }
+.wave .blurb { font-size: 27px; line-height: 1.46; font-weight: 500; }
+.wave .facts { position: absolute; left: 0; bottom: 0; display: flex; gap: 44px; white-space: nowrap; }
+.wave .facts div { border-top: 2px solid var(--on); padding-top: 14px; flex: none; }
+.wave .facts b { display: block; font-size: 54px; font-weight: 900; letter-spacing: -.03em; line-height: 1; }
+.wave .facts span { font-size: 17px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.wave .map { position: absolute; right: 50px; top: 240px; }
+.wave .maplabel { position: absolute; right: 96px; top: 100px; text-align: right; }
+.wave .foot { color: var(--on); opacity: .85; }
+.wave .foot b { color: var(--on); }
+.wave .foot .tick { background: var(--on); }
+
+/* Report opener */
+.opener .panel { position: absolute; left: 0; top: 0; bottom: 0; width: 700px; background: var(--wave); color: var(--on); padding: 96px 70px 96px 96px; }
+.opener .hero { font-size: 236px; font-weight: 900; letter-spacing: -.055em; line-height: .9; margin: 150px 0 30px -8px; white-space: nowrap; }
+.opener .hero.long { font-size: 190px; }
+.opener .hero small { font-size: .5em; font-weight: 900; letter-spacing: -.02em; }
+.opener .herocap { font-size: 31px; line-height: 1.34; font-weight: 500; }
+.opener .count { position: absolute; left: 96px; bottom: 96px; font-size: 19px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.opener .main { position: absolute; left: 796px; right: 96px; top: 96px; bottom: 110px; display: flex; flex-direction: column; align-items: flex-start; }
+.opener .kind { color: var(--wave-text); }
+.opener h1 { font-size: 104px; font-weight: 800; letter-spacing: -.04em; line-height: .98; margin: 42px 0 22px; }
+.opener h1.mid { font-size: 80px; }
+.opener h1.small { font-size: 60px; letter-spacing: -.03em; line-height: 1.04; }
+.opener h2 { font-size: 34px; font-weight: 500; letter-spacing: -.01em; line-height: 1.22; color: var(--muted); margin-bottom: 44px; }
+.opener .lede { font-size: 31px; line-height: 1.48; max-width: 1010px; margin-top: auto; margin-bottom: 46px; }
+.opener .meta { font-size: 18px; color: var(--muted); border-top: 2px solid var(--ink); padding-top: 14px; width: 100%; display: flex; gap: 44px; white-space: nowrap; }
+.opener .meta b { color: var(--ink); font-weight: 700; }
+
+/* Running head */
+.head { position: absolute; left: 96px; right: 96px; top: 74px; display: flex; justify-content: space-between; align-items: baseline; }
+.head .eyebrow { color: var(--wave-text); }
+.head .where { font-size: 19px; color: var(--muted); font-weight: 500; }
+
+/* Numbers */
+.stats { position: absolute; left: 96px; right: 96px; top: 190px; bottom: 120px; display: grid; gap: 0 64px; grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr 1fr; }
+.stats.four { grid-template-columns: repeat(2, 1fr); gap: 0 110px; }
+.stat { border-top: 2px solid var(--ink); padding-top: 22px; }
+.stat .n { font-size: 160px; font-weight: 900; letter-spacing: -.05em; line-height: .95; color: var(--wave-text); white-space: nowrap; }
+.stat .n small { font-size: .5em; letter-spacing: -.02em; }
+.stat .c { font-size: 28px; line-height: 1.36; margin-top: 14px; max-width: 530px; }
+.stats.four .stat .n { font-size: 176px; }
+.stats.four .stat .c { font-size: 29px; max-width: 700px; }
+
+/* Charts */
+.chart .text { position: absolute; left: 96px; top: 190px; width: 500px; bottom: 120px; }
+.chart h3 { font-size: 40px; font-weight: 700; letter-spacing: -.02em; line-height: 1.14; margin-bottom: 34px; }
+.chart .q, .chart .note { font-size: 19px; line-height: 1.45; color: var(--muted); margin-top: 16px; }
+.chart .q b, .chart .note b { color: var(--ink); }
+.chart .rule { width: 64px; height: 8px; background: var(--wave); border-radius: 0 4px 4px 0; margin-bottom: 30px; }
+.chart .plot { position: absolute; left: 676px; right: 96px; top: 190px; bottom: 120px; display: flex; align-items: center; }
+
+/* Focus On second page: numbers beside the chart */
+.focus .side { position: absolute; left: 96px; top: 190px; width: 470px; bottom: 120px; display: flex; flex-direction: column; gap: 30px; }
+.focus .stat .n { font-size: 112px; }
+.focus .stat .c { font-size: 23px; margin-top: 10px; }
+.focus .body { position: absolute; left: 660px; right: 96px; top: 190px; bottom: 120px; }
+.focus .body h3 { font-size: 34px; font-weight: 700; letter-spacing: -.02em; line-height: 1.16; margin-bottom: 26px; max-width: 1080px; }
+.focus .body .q, .focus .body .note { font-size: 17px; line-height: 1.42; color: var(--muted); margin-top: 10px; max-width: 1120px; }
+.focus .body .q b, .focus .body .note b { color: var(--ink); }
+
+/* Maps */
+.mapp h3 { position: absolute; left: 96px; top: 150px; font-size: 46px; font-weight: 800; letter-spacing: -.03em; width: 1300px; line-height: 1.08; }
+.mapp .sub { position: absolute; left: 96px; top: 268px; font-size: 21px; color: var(--muted); width: 1240px; line-height: 1.36; }
+.mapp .map { position: absolute; left: 60px; top: 345px; }
+.mapp .side { position: absolute; right: 96px; top: 150px; width: 400px; }
+.mapp .side h4 { font-size: 17px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; border-top: 2px solid var(--ink); padding-top: 12px; margin: 0 0 10px; }
+.mapp .side .block { margin-bottom: 30px; }
+.mapp .key div, .mapp .rank div { display: flex; align-items: center; font-size: 21px; padding: 4px 0; }
+.mapp .key i { display: inline-block; width: 34px; height: 22px; margin-right: 14px; border-radius: 5px 0 0 5px; }
+.mapp .rank div { justify-content: space-between; border-bottom: 1px solid var(--line); padding: 7px 0; }
+.mapp .rank b { font-weight: 900; color: var(--wave-text); }
+.mapp .src { position: absolute; left: 96px; bottom: 84px; font-size: 16px; color: var(--muted); width: 1300px; }
+.mapp .place { display: grid; grid-template-columns: 30px 1fr; gap: 4px 10px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 22px; }
+.mapp .place i { width: 22px; height: 22px; border-radius: 5px 0 0 5px; margin-top: 4px; }
+.mapp .place b { font-weight: 700; }
+.mapp .place span { grid-column: 2; font-size: 18px; color: var(--muted); }
+
+/* Back matter */
+.back { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; }
+.back h1 { grid-column: 1 / -1; font-size: 76px; margin: 22px 0 0; }
+.back h4 { font-size: 27px; font-weight: 800; margin: 0 0 8px; border-top: 2px solid var(--ink); padding-top: 14px; }
+.back p { font-size: 23px; line-height: 1.44; margin-bottom: 24px; }
+.srcnote { font-size: 20px; color: var(--muted); margin-top: 14px; max-width: 1300px; line-height: 1.4; }
+.sources { columns: 2; column-gap: 90px; margin-top: 20px; }
+.sources .src { break-inside: avoid; padding: 6px 0 7px; border-top: 1px solid var(--line); font-size: 16px; line-height: 1.28; display: grid; grid-template-columns: 44px 1fr; }
+.sources .src b { font-weight: 700; font-size: 18px; }
+.sources .src .pg { font-weight: 900; color: var(--wave-text); }
+.sources .src span { color: var(--muted); display: block; }
+.end { background: var(--navy); color: #fff; }
+.end .logo { position: absolute; left: 96px; top: 96px; width: 150px; }
+.end .logo svg { width: 100%; height: auto; display: block; }
+.end .map { position: absolute; left: 150px; top: 215px; }
+.end p { position: absolute; left: 96px; bottom: 96px; font-size: 28px; line-height: 1.5; font-weight: 500; }
+.end p b { font-weight: 800; }

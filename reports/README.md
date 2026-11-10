@@ -56,6 +56,8 @@ reports/
                        fetch_external.py for sources whose licence does not allow
                        committing them; see external/README.md
   _template/           starting point for a new report folder
+  book/                the coffee table book of all the reports, built from the published
+                       figures; see book/README.md
   WRP_2019/ … WRP_2025/
     <core|focus_on>_<name>/
       README.md              the report, its link, method notes, Gallup caveats
