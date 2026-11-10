@@ -31,11 +31,11 @@ def classify_2019(font, size, colour):
         return "h2"
     if font.startswith("Calmetta") and 8.5 <= size <= 10.5:
         return "chart"
-    if font.startswith("SourceSansPro") and "Italic" in font and size <= 8.5:
+    if font.startswith("SourceSansPro") and "Itali" in font and size <= 8.5:
         return "note"
     if font.startswith("AktivGrotesk"):
         return "fn"
-    if font.startswith("SourceSansPro") and 9.8 <= size <= 10.2 and colour == 0x2D2A26:
+    if font.startswith("SourceSansPro") and 8.8 <= size <= 10.2 and colour == 0x2D2A26:
         return "p"
     return None
 
@@ -110,13 +110,21 @@ def draft(doc, first, last, classify=classify_2019):
     out, notes, expected = [], [], None
     for index in range(first, last + 1):
         out.append(f"<!-- page {doc[index].get_label() or index + 1} -->")
+        untitled = None
         for b in page_blocks(doc[index], classify):
             kind, text = b["kind"], b["text"]
             if kind == "fn":
                 if expected is None:
                     expected = int(re.match(r"\d+", text).group())
-                got, expected = split_footnotes(text, expected)
-                notes += got
+                # A block may open with the end of the previous note, carried over a column or page.
+                start = re.search(rf"(?:^|(?<=[\s/])){expected}\s+(?=\S)", text)
+                if notes and (start is None or start.start() > 0):
+                    carried = text[:start.start()] if start else text
+                    notes[-1] = (notes[-1][0], f"{notes[-1][1]} {carried.strip()}")
+                    text = text[start.start():] if start else ""
+                if text:
+                    got, expected = split_footnotes(text, expected)
+                    notes += got
             elif kind == "title":
                 out.append(f"<!-- title: {text} -->")
             elif kind == "h1":
@@ -129,8 +137,11 @@ def draft(doc, first, last, classify=classify_2019):
                 m = re.fullmatch(r"(Chart|Table) (\d+\.\d+)", text)
                 if m:
                     out.append(f"[{m.group(1).lower()} {m.group(2)}]")
-                elif out and out[-1].startswith(("[chart", "[table")) and not re.fullmatch(r"[\d\s.%]+", text):
-                    out[-1] += f" {text}"
+                    untitled = len(out) - 1
+                elif untitled is not None and not re.fullmatch(r"[\d\s.%]+", text):
+                    # The title can come later in reading order than its "Chart 6.3" label.
+                    out[untitled] += f" {text}"
+                    untitled = None
             elif kind == "note":
                 out.append(f"<!-- note: {text} -->")
             elif text.startswith("•"):

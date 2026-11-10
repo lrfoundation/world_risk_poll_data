@@ -116,6 +116,7 @@ class Report:
         self.queries = []
         self.originals = set()
         self.counts = {"Chart": 0, "Table": 0}
+        self.chapter = 0
         self.anchors = 0
         self.pdf = None
 
@@ -145,36 +146,48 @@ class Report:
     def number(self, spec):
         kind = "Table" if spec["kind"] == "table" else "Chart"
         self.counts[kind] += 1
+        if self.meta.get("numbering") == "chapter":
+            return f"{kind} {self.chapter}.{self.counts[kind]}"
         return f"{kind} {self.counts[kind]}"
+
+    def series(self, spec, names=None):
+        """(name, colour) for each series: the spec's named colours, or the palette in order."""
+        names = spec["series"] if names is None else names
+        return list(zip(names, [NAMED[c] for c in spec["colours"]] if spec.get("colours") else SERIES))
 
     def values(self, ids):
         return [self.fig.number(i) for i in ids]
 
     def drawing(self, spec):
         kind = spec["kind"]
+        unit = spec.get("unit", "%")
         if kind == "hbar":
             rows = [(r[0], self.fig.number(r[1])) for r in spec["rows"]]
             n = len(rows)
-            height = 70 + (84 if n <= 8 else 74 if n <= 12 else 62) * n
+            height = 70 + (84 if n <= 8 else 74 if n <= 12 else 62 if n <= 16 else 54) * n
             key = colours = None
             if spec.get("key"):
-                palette = dict(zip(spec["key"], SERIES))
+                palette = dict(self.series(spec, spec["key"]))
                 key, colours = list(palette.items()), [palette[r[2]] for r in spec["rows"]]
                 height += 54
             elif spec.get("grey"):
                 colours = [GREY if r[0] in spec["grey"] else FUCHSIA for r in spec["rows"]]
-            return charts.scaled(charts.hbar(rows, CHART_W, height, FUCHSIA, colours=colours, key=key), SCALE)
+            return charts.scaled(charts.hbar(rows, CHART_W, height, FUCHSIA, unit=unit, colours=colours, key=key), SCALE)
         if kind == "grouped":
             rows = [(label, self.values(ids)) for label, ids in spec["rows"]]
-            series = list(zip(spec["series"], [NAMED[c] for c in spec["colours"]] if spec.get("colours") else SERIES))
+            series = self.series(spec)
             height = min(1260, 120 + len(rows) * (len(series) * 46 + 40))
-            return charts.scaled(charts.grouped(rows, series, CHART_W, height), SCALE)
+            return charts.scaled(charts.grouped(rows, series, CHART_W, height, unit=unit), SCALE)
+        if kind == "stacked":
+            rows = [(label, self.values(ids)) for label, ids in spec["rows"]]
+            return charts.scaled(charts.stacked(rows, self.series(spec), CHART_W, 130 + 120 * len(rows), unit=unit, label_all=True), SCALE)
         if kind == "vgrouped":
             panels = [(title, [(label, self.values(ids)) for label, ids in groups]) for title, groups in spec["panels"]]
-            return charts.scaled(charts.vgrouped(panels, list(zip(spec["series"], SERIES)), CHART_W, 520 * len(panels)), SCALE)
+            height = spec.get("panel_height", 520) * len(panels)
+            return charts.scaled(charts.vgrouped(panels, self.series(spec), CHART_W, height, unit=unit), SCALE)
         if kind == "dumbbell":
             rows = [(label, self.values(ids[1:]), self.fig.number(ids[0])) for label, ids in spec["rows"]]
-            series = list(zip(spec["series"][1:], SERIES))
+            series = self.series(spec, spec["series"][1:])
             return charts.scaled(charts.dumbbell(rows, series, CHART_W, 112 + 62 * len(rows), spec["series"][0]), SCALE)
         if kind == "map":
             return self.map(spec)
@@ -186,7 +199,7 @@ class Report:
             import pymupdf
             page = self.source_pdf()[spec["page"]]
             png = page.get_pixmap(matrix=pymupdf.Matrix(4, 4), clip=pymupdf.Rect(*spec["clip"])).tobytes("png")
-            return f'<img class="original" src="data:image/png;base64,{base64.b64encode(png).decode()}" alt="">'
+            return f'<img class="original" style="width:{spec.get("width", 780)}px" src="data:image/png;base64,{base64.b64encode(png).decode()}" alt="">'
         raise ValueError(kind)
 
     def map(self, spec):
@@ -316,6 +329,9 @@ class Report:
         for section in self.sections:
             if section["kind"] == "chapter":
                 chapter += 1
+                self.chapter = chapter
+                if self.meta.get("numbering") == "chapter":
+                    self.counts = {"Chart": 0, "Table": 0}
                 numbering = "main"
                 anchor = self.anchor()
                 toc.append(("chapter", f"Chapter {chapter}", section["title"], anchor))
@@ -362,7 +378,9 @@ class Report:
         if m.get("numbering") == "sequential" and m.get("renumber"):
             pairs = "; ".join(f"‘{old.strip()}n’ in the original is ‘{new.strip()} n’ here" for old, new in m["renumber"].items())
             out.append(f"<p><b>Numbering.</b> Charts and tables are numbered in one sequence for this report ({len(charts_)} charts, "
-                       f"{self.counts['Table']} table): {pairs}. References keep the numbers of the original footnotes.</p>")
+                       f"{self.counts['Table']} table): {pairs}. {m.get('references', 'References keep the numbers of the original footnotes.')}</p>")
+        elif m.get("numbering_note"):
+            out.append(f"<p><b>Numbering.</b> {self.inline(m['numbering_note'])}</p>")
         if m.get("edits"):
             out.append("<p><b>Wording and headings.</b></p><ul>" + "".join(f"<li>{self.inline(e)}</li>" for e in m["edits"]) + "</ul>")
         out.append("<p><b>Charts.</b> Charts are redrawn from the values printed in the original, in the chart style of the World Risk Poll 2026 reports. "

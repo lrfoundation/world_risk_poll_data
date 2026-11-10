@@ -39,6 +39,14 @@ def climate_very_serious_2019():
     return _share(2019, "L5", [1])
 
 
+def gov_food_not_good_2019():
+    return _share(2019, "L16A", [2])
+
+
+def gov_water_not_good_2019():
+    return _share(2019, "L16B", [2])
+
+
 def internet_use_2019():
     return _share(2019, "L26", [1])
 
@@ -113,6 +121,8 @@ CHECKS = [
     ("injured_at_work_2019", "SLE", "WRP_2019/core_world_risk_poll_2019", "X5_14"),
     ("climate_very_serious_2019", "CHN", "WRP_2019/core_world_risk_poll_2019", "X6_04"),
     ("less_safe_2019", "LBN", "WRP_2019/core_world_risk_poll_2019", "T1_1_LBN_less"),
+    ("gov_food_not_good_2019", "LBN", "WRP_2019/core_world_risk_poll_2019", "C9_6_LBN"),
+    ("gov_water_not_good_2019", "LBN", "WRP_2019/core_world_risk_poll_2019", "C9_8_LBN"),
     ("burns_waste_2023", "IDN", "WRP_2023/core_a_world_of_waste", "X16"),
     ("impacted_by_disaster_2025", "PHL", "WRP_2025/core_from_alert_to_agency", "X023"),
     ("impacted_by_disaster_2025", "ISR", "WRP_2025/core_from_alert_to_agency", "X024"),

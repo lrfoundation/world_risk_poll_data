@@ -157,7 +157,7 @@ def grouped(rows, series, width, height, unit="%", decimals=0):
     return _frame(width, height, "".join(out))
 
 
-def stacked(rows, segments, width, height, unit="%"):
+def stacked(rows, segments, width, height, unit="%", label_all=False):
     """Bars that add to 100. rows: [(label, [values])]; segments: [(name, colour)]."""
     wrapped, label_w = _labels(rows, FS, width * 0.3)
     x0, x1 = label_w + 22, width - 30
@@ -177,7 +177,7 @@ def stacked(rows, segments, width, height, unit="%"):
                 out.append(_bar(x, y_mid - thick / 2, w, thick, colour))
             else:
                 out.append(f'<rect x="{x:.1f}" y="{y_mid - thick / 2:.1f}" width="{max(w - 2, 0.5):.1f}" height="{thick:.1f}" fill="{colour}"/>')
-            if w >= 58 and colour.upper() != GRID:
+            if w >= 58 and (label_all or colour.upper() != GRID):
                 out.append(_txt(x + w / 2, y_mid + 9, f"{value:g}{unit}", FS_VALUE, 900, "middle", text_on(colour)))
             x += w
         out.append(_category(lines, x0 - 16, y_mid))
@@ -227,7 +227,8 @@ def vgrouped(panels, series, width, height, unit="%"):
     out = [_key(series, x0 - 14, 4, width)]
     for p, (title, groups) in enumerate(panels):
         y_top = top + p * (panel_h + gap) + (34 if title else 0)
-        y_bottom = top + p * (panel_h + gap) + panel_h - 44
+        lines = [wrap(label, FS, (x1 - x0) / len(groups) - 14) for label, _ in groups]
+        y_bottom = top + p * (panel_h + gap) + panel_h - 18 - 26 * max(len(l) for l in lines)
         if title:
             out.append(_txt(x0, y_top - 14, title, FS, 800))
         v = 0
@@ -250,7 +251,8 @@ def vgrouped(panels, series, width, height, unit="%"):
                 size = FS_VALUE if bar >= 54 else FS_VALUE - 5
                 out.append(_txt(x + bar / 2, y_bottom - h - 9, f"{value:g}", size, 900, "middle", label_colour(colour)))
                 x += bar + 2
-            out.append(_txt(x0 + slot * (g + 0.5), y_bottom + 32, label, FS, 600, "middle"))
+            for k, line in enumerate(lines[g]):
+                out.append(_txt(x0 + slot * (g + 0.5), y_bottom + 32 + 26 * k, line, FS, 600, "middle"))
         out.append(f'<line x1="{x0}" y1="{y_top}" x2="{x0}" y2="{y_bottom}" stroke="{INK}" stroke-width="1.5"/>')
         out.append(f'<line x1="{x0}" y1="{y_bottom}" x2="{x1}" y2="{y_bottom}" stroke="{INK}" stroke-width="1.5"/>')
     return _frame(width, height, "".join(out))

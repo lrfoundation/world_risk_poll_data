@@ -1203,7 +1203,7 @@ As illustrated in Chart 5.13, workers who said they experienced specific occupat
  "id": "5.13",
  "title": "Percentage of workers who have experienced mental health issues, by type of workplace hazard",
  "kind": "grouped",
- "question": "Have you or has anyone you work with experienced injury or harm from any of the following while working in the past two years?",
+ "question": "Have you, or has anyone you work with, experienced injury or harm from any of the following while working in the past two years?",
  "series": [
   "Experienced harm from this hazard",
   "Did not"
@@ -1312,7 +1312,7 @@ However, many of the people most vulnerable to a serious workplace injury were a
  "id": "5.15",
  "title": "Percentage of workers who said safety rules at work are a good thing, by gender and education level",
  "kind": "grouped",
- "question": "Do you think the safety rules at your place of work are a good thing to have or do they make your job more difficult to do?",
+ "question": "Do you think the safety rules at your place of work are a good thing to have, or do they make your job more difficult to do?",
  "series": [
   "All workers",
   "Women",
