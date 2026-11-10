@@ -114,18 +114,20 @@ def _category(lines, x, y_mid):
     return "".join(_txt(x, y + i * 26, line, FS, 600, "end") for i, line in enumerate(lines))
 
 
-def hbar(rows, width, height, colour, unit="%", decimals=0, highlight=None, highlight_colour="#0D2240"):
-    """One bar per row. rows: [(label, value)]."""
+def hbar(rows, width, height, colour, unit="%", decimals=0, highlight=None, highlight_colour="#0D2240", colours=None, key=None):
+    """One bar per row. rows: [(label, value)]. colours gives a colour per row, with a key above."""
     wrapped, label_w = _labels(rows, FS, width * 0.34)
     x0, x1 = label_w + 22, width - 96
-    top, bottom = 10, height - 48
+    top, bottom = (64 if key else 10), height - 48
     vmax, step = nice_max(max(v for _, v in rows), unit == "%")
     band = (bottom - top) / len(rows)
     thick = min(80, band * 0.64)
     out = [_value_axis(x0, x1, top, bottom, vmax, step, unit)]
+    if key:
+        out.append(_key(key, x0 - 14, 4, width))
     for i, ((label, value), lines) in enumerate(zip(rows, wrapped)):
         y_mid = top + band * (i + 0.5)
-        fill = highlight_colour if label == highlight else colour
+        fill = colours[i] if colours else (highlight_colour if label == highlight else colour)
         w = (x1 - x0) * value / vmax
         out.append(_bar(x0 + 0.75, y_mid - thick / 2, w, thick, fill))
         out.append(_txt(x0 + w + 12, y_mid + 9, fmt(value, decimals) + unit, FS_VALUE, 900, fill=label_colour(fill)))
@@ -210,3 +212,82 @@ def line(years, series, width, height, unit="%"):
             out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="10" fill="{colour}" stroke="#FFFFFF" stroke-width="3"/>')
             out.append(_txt(x, y - 22, f"{value:g}{unit}", FS_VALUE, 900, "middle", label_colour(colour)))
     return _frame(width, height, "".join(out))
+
+
+def vgrouped(panels, series, width, height, unit="%"):
+    """Upright bars in groups, one panel above another.
+
+    panels: [(panel title, [(group label, [values])])]; series: [(name, colour)].
+    """
+    x0, x1 = 86, width - 20
+    top = 70
+    gap = 34
+    panel_h = (height - top - gap * (len(panels) - 1)) / len(panels)
+    vmax, step = nice_max(max(v for _, groups in panels for _, vs in groups for v in vs), unit == "%")
+    out = [_key(series, x0 - 14, 4, width)]
+    for p, (title, groups) in enumerate(panels):
+        y_top = top + p * (panel_h + gap) + (34 if title else 0)
+        y_bottom = top + p * (panel_h + gap) + panel_h - 44
+        if title:
+            out.append(_txt(x0, y_top - 14, title, FS, 800))
+        v = 0
+        while v <= vmax + 1e-9:
+            y = y_bottom - (y_bottom - y_top) * v / vmax
+            if v:
+                out.append(f'<line x1="{x0}" y1="{y:.1f}" x2="{x1}" y2="{y:.1f}" stroke="{GRID}" stroke-width="1" stroke-dasharray="1 5" stroke-linecap="round"/>')
+            out.append(f'<line x1="{x0 - 7}" y1="{y:.1f}" x2="{x0}" y2="{y:.1f}" stroke="{INK}" stroke-width="1.5"/>')
+            out.append(_txt(x0 - 14, y + 7, f"{v:g}{unit}", FS_AXIS, anchor="end"))
+            v += step
+        slot = (x1 - x0) / len(groups)
+        n = len(series)
+        bar = min(64, slot * 0.84 / n)
+        for g, (label, values) in enumerate(groups):
+            x = x0 + slot * (g + 0.5) - (n * bar + (n - 1) * 2) / 2
+            for value, (_, colour) in zip(values, series):
+                h = (y_bottom - y_top) * value / vmax
+                r = min(7, bar / 2, max(h, 0.1))
+                out.append(f'<path d="M{x:.1f},{y_bottom:.1f}v-{h - r:.1f}a{r},{r} 0 0 1 {r},-{r}h{bar - 2 * r:.1f}a{r},{r} 0 0 1 {r},{r}v{h - r:.1f}z" fill="{colour}"/>')
+                size = FS_VALUE if bar >= 54 else FS_VALUE - 5
+                out.append(_txt(x + bar / 2, y_bottom - h - 9, f"{value:g}", size, 900, "middle", label_colour(colour)))
+                x += bar + 2
+            out.append(_txt(x0 + slot * (g + 0.5), y_bottom + 32, label, FS, 600, "middle"))
+        out.append(f'<line x1="{x0}" y1="{y_top}" x2="{x0}" y2="{y_bottom}" stroke="{INK}" stroke-width="1.5"/>')
+        out.append(f'<line x1="{x0}" y1="{y_bottom}" x2="{x1}" y2="{y_bottom}" stroke="{INK}" stroke-width="1.5"/>')
+    return _frame(width, height, "".join(out))
+
+
+def dumbbell(rows, series, width, height, total=None, unit="%"):
+    """Two values per row as dots joined by a line, with an optional total column.
+
+    rows: [(label, [first, second], total value or None)]; series: [(name, colour)] for the two dots.
+    """
+    wrapped, label_w = _labels([(r[0], 0) for r in rows], FS, width * 0.3)
+    column = 150 if total else 0
+    x0, x1 = label_w + 22, width - 60 - column
+    top, bottom = 64, height - 48
+    vmax, step = nice_max(max(v for r in rows for v in r[1]), unit == "%")
+    band = (bottom - top) / len(rows)
+    out = [_key(series, x0 - 14, 4, width), _value_axis(x0, x1, top, bottom, vmax, step, unit)]
+    if total:
+        out.append(_txt(width - 4, 22, total, FS, 700, "end"))
+    for i, (row, lines) in enumerate(zip(rows, wrapped)):
+        y = top + band * (i + 0.5)
+        xs = [x0 + (x1 - x0) * v / vmax for v in row[1]]
+        out.append(f'<line x1="{min(xs):.1f}" y1="{y:.1f}" x2="{max(xs):.1f}" y2="{y:.1f}" stroke="{GRID}" stroke-width="5" stroke-linecap="round"/>')
+        low = 0 if xs[0] <= xs[1] else 1
+        for j, (x, value, (_, colour)) in enumerate(zip(xs, row[1], series)):
+            out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="11" fill="{colour}" stroke="#FFFFFF" stroke-width="2.5"/>')
+            left = j == low and xs[0] != xs[1]
+            out.append(_txt(x - 18 if left else x + 18, y + 8, f"{value:g}{unit}", FS_VALUE - 3, 900, "end" if left else "start", label_colour(colour)))
+        if total and len(row) > 2 and row[2] is not None:
+            out.append(_txt(width - 4, y + 8, f"{row[2]:g}{unit}", FS_VALUE - 3, 900, "end"))
+        out.append(_category(lines, x0 - 16, y))
+    return _frame(width, height, "".join(out))
+
+
+def scaled(svg, k):
+    """The same drawing at k times the size (charts are drawn large, then placed smaller)."""
+    import re
+    head = re.match(r'<svg [^>]*viewBox="0 0 ([\d.]+) ([\d.]+)" width="[\d.]+" height="[\d.]+"', svg)
+    w, h = float(head.group(1)), float(head.group(2))
+    return svg.replace(f'width="{head.group(1)}" height="{head.group(2)}"', f'width="{w * k:.1f}" height="{h * k:.1f}"', 1)

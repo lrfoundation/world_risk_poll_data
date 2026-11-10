@@ -1,0 +1,134 @@
+/* The page format of the World Risk Poll 2026 reports, measured from the published PDFs.
+   One CSS pixel is one point of the 1920 by 1080 page. */
+
+@page { size: 1920px 1080px; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: "DM Sans", sans-serif; font-size: 17px; line-height: 26px; color: #000; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+:root { --fuchsia: #E3076E; --navy: #0E2240; --lime: #C9F200; --green: #00775B; --grey: #BDBCBC; }
+
+.page { position: relative; width: 1920px; height: 1080px; overflow: hidden; break-after: page; background: #fff; }
+
+/* ---- furniture: rules, credit lines, page number */
+.rule { position: absolute; height: 0; border-top: 1px solid var(--fuchsia); opacity: 0.55; }
+.rule.top { left: 60px; right: 60px; top: 40px; }
+.rule.bottom { left: 90px; right: 90px; top: 1040px; }
+.credit { position: absolute; left: 90px; top: 1045px; font-size: 9px; line-height: 11px; letter-spacing: 0.09em; text-transform: uppercase; white-space: pre; color: #1a1a1a; }
+.pn { position: absolute; left: 1852px; top: 1042px; min-width: 46px; height: 21px; padding: 0 8px; border: 1px solid rgba(227, 7, 110, 0.35); border-radius: 7px;
+      background: rgba(227, 7, 110, 0.05); color: var(--fuchsia); font-size: 12px; line-height: 19px; font-weight: 700; font-style: italic; text-align: center; }
+
+/* ---- the two-column flow */
+.window { position: absolute; left: 90px; top: 70px; width: 1728px; height: 950px; overflow: hidden; }
+.flow { --fit: 1; height: 950px; column-width: 818px; column-gap: 92px; column-fill: auto; line-height: calc(26px * var(--fit)); }
+.flow > * { position: relative; }
+
+.flow h1 { font-size: 48px; line-height: 54px; font-weight: 700; letter-spacing: -0.02em; color: var(--navy); margin: 0 0 18px; padding: 0 0 2px 20px; break-after: avoid; }
+.flow h2 { font-size: 30px; line-height: 36px; font-weight: 700; letter-spacing: -0.01em; color: var(--navy); margin: 30px 0 14px; padding: 0 18px 1px 20px; break-after: avoid; }
+.flow h1::before, .flow h2::before, .fig h4::before, .fig .sub::before, .flow .lead::before {
+  content: ""; position: absolute; left: 0; top: 3px; bottom: 3px; width: 10px; border-radius: 5px; background: var(--fuchsia); }
+.flow h2::before { background: var(--lime); }
+.flow h1 { break-before: column; }
+.flow h1:first-child { break-before: auto; }
+.colbreak { break-before: column; height: 0; }
+.flow .colbreak + h2 { margin-top: 8px; }
+
+.flow p { margin: 0 0 calc(26px * var(--fit)); padding: 0 18px 0 20px; orphans: 2; widows: 2; }
+.flow .lead { font-size: 21px; line-height: 29px; font-style: italic; font-weight: 600; color: var(--navy); margin: 4px 0 24px; break-inside: avoid; break-after: avoid; }
+.flow .lead::before { background: var(--green); top: 2px; bottom: 2px; }
+.flow strong { font-weight: 700; }
+sup.ref { font-size: 10px; line-height: 0; font-weight: 600; color: var(--fuchsia); vertical-align: 7px; margin-left: 1px; }
+.url { color: var(--fuchsia); font-style: italic; overflow-wrap: anywhere; }
+
+.flow ul { list-style: none; margin: 0 0 calc(26px * var(--fit)); padding: 0 18px 0 20px; }
+.flow ul li { position: relative; padding-left: 24px; margin-bottom: calc(12px * var(--fit)); break-inside: avoid; }
+.flow ul li::before { content: ""; position: absolute; left: 3px; top: 9px; width: 8px; height: 8px; border-radius: 50%; background: var(--fuchsia); }
+.options { display: block; margin: 6px 0 2px; font-size: 15px; line-height: 22px; color: #333; }
+.options > span { display: block; padding-left: 4px; }
+
+.flow ol.findings { list-style: none; counter-reset: finding; margin: 0 0 26px; padding: 0 18px 0 20px; }
+.flow ol.findings li { counter-increment: finding; position: relative; padding-left: 44px; margin-bottom: calc(16px * var(--fit) * var(--fit)); break-inside: avoid; }
+.flow ol.findings li::before { content: counter(finding); position: absolute; left: 0; top: -1px; width: 30px; font-size: 26px; font-weight: 800; color: var(--fuchsia); text-align: left; }
+
+.newtag { display: inline-block; margin: -4px 0 18px 20px; padding: 2px 10px 3px; border: 1px solid var(--fuchsia); border-radius: 6px; color: var(--fuchsia);
+          font-size: 11px; line-height: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* ---- figures */
+.fig { margin: 4px 0 30px; padding: 0; break-inside: avoid; }
+.fig h4 { position: relative; font-size: 22px; line-height: 27px; font-weight: 700; color: var(--fuchsia); margin: 0 0 8px; padding: 0 18px 1px 20px; }
+.fig .sub { position: relative; font-size: 18px; line-height: 23px; font-style: italic; margin: 0 0 10px; padding: 0 18px 0 20px; }
+.fig .sub::before { background: var(--green); }
+.fig .art { padding: 8px 0 0 20px; }
+.fig .art svg { display: block; }
+.fig .notes { margin: 8px 0 0 20px; padding-top: 8px; border-top: 1px solid rgba(227, 7, 110, 0.55); }
+.fig .notes p { font-size: 14px; line-height: 18px; font-style: italic; margin: 0 0 4px; padding: 0; }
+.fig .notes b { font-weight: 600; }
+.fig img.original { display: block; width: 780px; }
+
+table.data { border-collapse: collapse; width: 780px; font-size: 16px; line-height: 22px; }
+table.data th { text-align: left; font-weight: 700; color: #fff; background: var(--navy); padding: 7px 14px; }
+table.data td { padding: 6px 14px; border-bottom: 1px solid #E3E3E3; }
+table.data td:last-child, table.data th:last-child { text-align: right; font-weight: 700; width: 240px; }
+table.data tr:nth-child(even) td { background: #FBF3F7; }
+
+.mapkey { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 13px; line-height: 18px; margin-bottom: 6px; }
+.mapkey span { display: inline-flex; align-items: center; gap: 6px; }
+.mapkey i { width: 12px; height: 12px; border-radius: 3px 0 0 3px; display: inline-block; }
+.ranks { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; width: 780px; margin-top: 8px; }
+.rank h6 { margin: 0 0 4px; font-size: 13px; line-height: 18px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); }
+.rank div { display: flex; justify-content: space-between; font-size: 15px; line-height: 24px; border-bottom: 1px solid #E3E3E3; }
+.rank b { font-weight: 900; color: var(--fuchsia); }
+
+/* ---- contents and list of figures */
+.toc { margin: 0 18px 0 20px; }
+.toc .row { display: flex; justify-content: space-between; gap: 24px; font-size: 14px; line-height: 19px; font-style: italic; padding: 3px 0 3px; border-bottom: 1px solid rgba(227, 7, 110, 0.18); break-inside: avoid; }
+.toc .row.chapter { font-style: normal; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-top: 16px; border-bottom: 0; }
+.toc .row.top { font-weight: 600; }
+.toc .row.sub { padding-left: 0; }
+.toc .row .n { flex: none; font-weight: 700; color: var(--green); }
+.toc .row.figrow b { font-weight: 700; }
+
+/* ---- references */
+ol.refs { list-style: none; margin: 0; padding: 0 18px 0 20px; }
+ol.refs li { position: relative; font-size: 13px; line-height: calc(17.5px * var(--fit)); margin-bottom: calc(7px * var(--fit)); padding-left: 34px; break-inside: avoid; }
+ol.refs li::before { content: attr(value) "."; position: absolute; left: 0; font-weight: 700; color: var(--fuchsia); }
+
+/* ---- chapter opener */
+.opener .block { position: absolute; left: 60px; top: 55px; width: 1800px; height: 970px; background: var(--fuchsia); }
+.opener .logo { position: absolute; left: 110px; top: 55px; width: 78px; }
+.opener .logo svg { display: block; width: 78px; height: auto; }
+.opener .left { position: absolute; left: 110px; top: 262px; width: 800px; color: #fff; }
+.opener .chap { font-size: 100px; line-height: 110px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap; }
+.opener h1 { margin: 6px 0 26px; font-size: 48px; line-height: 57px; font-weight: 700; letter-spacing: -0.01em; }
+.opener .text p { margin: 0 0 26px; }
+.opener .text sup.ref { color: #fff; }
+.opener .big { position: absolute; left: 980px; top: 80px; width: 850px; height: 760px; color: #fff; font-weight: 800; }
+.opener .big span { position: absolute; line-height: 0.8; letter-spacing: -0.04em; }
+.opener .big span:first-child { left: 0; top: 40px; }
+.opener .big span:last-child { right: 0; bottom: 0; }
+.opener .big i { position: absolute; font-style: normal; line-height: 1; }
+.opener .big.two span { font-size: 620px; }
+.opener .big.two i { left: 320px; top: 380px; font-size: 150px; }
+.opener .big.three span { font-size: 470px; }
+.opener .big.three span:first-child { top: 20px; left: 10px; }
+.opener .big.three i { left: 300px; top: 250px; font-size: 130px; }
+.opener .big.single span { position: static; display: block; margin-top: 170px; font-size: 370px; line-height: 1; text-align: right; letter-spacing: -0.05em; }
+.opener .cap { position: absolute; left: 1380px; top: 880px; width: 440px; color: #fff; font-size: 22px; line-height: 30px; font-weight: 600; }
+
+/* ---- cover */
+.cover { background: #fff; }
+.cover .photo { position: absolute; left: 56px; top: 56px; width: 1808px; height: 968px; overflow: hidden; background: #7B1548; }
+.cover .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cover .panel { position: absolute; left: 56px; top: 56px; width: 860px; height: 968px; background: var(--navy); clip-path: polygon(0 0, 66% 0, 100% 100%, 0 100%); }
+.cover .edge { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+.cover .logo { position: absolute; left: 142px; top: 262px; width: 144px; }
+.cover .logo svg { display: block; width: 144px; height: auto; }
+.cover .wrp { position: absolute; left: 142px; top: 488px; font-size: 138px; line-height: 140px; font-weight: 700; letter-spacing: 0.115em; text-transform: uppercase; color: #fff; white-space: nowrap; }
+.cover .rep { position: absolute; left: 142px; top: 622px; font-size: 68px; line-height: 76px; font-weight: 700; letter-spacing: 0.05em; color: #fff; }
+.cover .name { position: absolute; left: 142px; top: 716px; width: 660px; font-size: 34px; line-height: 44px; font-weight: 700; color: #fff; }
+.cover .name b { font-weight: 800; }
+.cover .wrp::before { content: ""; position: absolute; left: -32px; top: 18px; width: 12px; height: 330px; border-radius: 6px; background: var(--fuchsia); }
+.cover .series { position: absolute; left: 142px; top: 86px; font-size: 15px; line-height: 20px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #fff; }
+.cover .gallup { position: absolute; left: 138px; top: 908px; padding-left: 0; font-size: 22px; line-height: 26px; color: #fff; }
+.cover .gallup b { display: block; font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: 44px; line-height: 46px; letter-spacing: 0.02em; }
+.cover .gallup::before { content: ""; position: absolute; left: -30px; top: 2px; bottom: 2px; width: 12px; border-radius: 6px; background: #00A651; }

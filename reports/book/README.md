@@ -17,6 +17,15 @@ Earth 1:110m country outlines into `.cache/`. The PDF is printed by a Chrome, Ch
 that is already installed. Without one, leave off `--pdf`, open `output/book.html` in a browser
 and print to PDF with no margins and background graphics switched on.
 
+## The other two books in this folder
+
+- [`redesign/`](redesign/README.md) re-sets the published reports themselves, full text and
+  every chart, in the format of the 2026 reports, for one bound book with a report to a chapter.
+  Work in progress: the pilot is the second of the four 2019 reports, "Risk at work".
+- `bound.py` binds the published PDFs as they are into one landscape volume
+  (`python reports/book/bound.py`), with the 2019 report cut into its four parts. It downloads
+  the PDFs listed in `../report_inventory.csv` into `.cache/pdfs/`.
+
 ## Which reports are in it
 
 | Poll | Reports |

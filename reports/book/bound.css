@@ -1,0 +1,51 @@
+
+/* Bound volume (bound.py): the same templates on a page with the proportions of
+   A4 landscape plus 3 mm bleed. 19 px here is 3 mm on the page. */
+
+@page { size: 1920px 1369px; margin: 0; }
+.page { height: 1369px; }
+
+.foot { left: 115px; right: 115px; bottom: 78px; }
+.pad { inset: 125px 115px 150px 115px; }
+
+.cover .map, .end .map { top: 350px; left: 110px; }
+.cover .logo, .end .logo { left: 115px; top: 115px; }
+.cover .years { right: 115px; top: 125px; }
+.cover h1 { left: 115px; bottom: 330px; }
+.cover h2 { left: 123px; bottom: 228px; }
+.cover p { left: 123px; bottom: 140px; max-width: 1300px; }
+.end p { left: 115px; bottom: 125px; }
+
+.wave .left { left: 115px; top: 125px; bottom: 150px; }
+.wave .maplabel { right: 115px; top: 129px; }
+.wave .map { top: 400px; }
+
+.opener .panel { padding: 125px 70px 125px 115px; }
+.opener .hero { margin-top: 250px; }
+.opener .count { left: 115px; bottom: 125px; }
+.opener .main { top: 125px; right: 115px; bottom: 150px; }
+.opener .meta { flex-wrap: wrap; gap: 6px 44px; }
+
+/* More room on the taller page: larger type for the front matter. */
+.about { grid-template-columns: 1060px 1fr; gap: 120px; }
+.about h1 { font-size: 104px; margin-bottom: 60px; }
+.about p { font-size: 31px; line-height: 1.52; margin-bottom: 32px; max-width: 1060px; }
+.wavelist { margin-top: 220px; }
+.wavelist .row { padding: 28px 0 40px; }
+.wavelist .what { font-size: 24px; }
+.wavelist .what b { font-size: 27px; }
+
+.contents h1 { font-size: 104px; margin: 22px 0 54px; }
+.contents .col h2 { font-size: 84px; }
+.contents .col .brand { font-size: 21px; margin: 8px 0 28px; }
+.contents .item { font-size: 25px; padding: 15px 0 17px; grid-template-columns: 1fr 58px; }
+.contents .item small { font-size: 16px; margin-bottom: 5px; }
+
+.opener .lede { font-size: 33px; margin-bottom: 56px; }
+.opener .herocap { font-size: 33px; }
+.opener .meta { font-size: 19px; }
+.about h1 { font-size: 96px; white-space: nowrap; }
+.about p { font-size: 28px; margin-bottom: 28px; }
+.wavelist .row { grid-template-columns: 230px 1fr; }
+.wavelist .what, .wavelist .what b { font-size: 23px; }
+.contents .item { font-size: 23px; }
