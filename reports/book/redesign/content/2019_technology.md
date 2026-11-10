@@ -24,7 +24,7 @@
   "Table 8.": "Table 2.",
   "table 8.": "table 2."
  },
- "numbering_note": "Chapters 7 and 8 of the 2019 volume are Chapters 1 and 2 here, and charts are numbered to match: ‘Chart 7.n’ in the original is ‘Chart 1.n’; ‘Chart 8.n’ in the original is ‘Chart 2.n’. References are numbered in one sequence: notes 1 to 27 are those of Chapter 7; notes 28 to 46 are those of Chapter 8.",
+ "numbering_note": "Chapters 7 and 8 of the 2019 volume are Chapters 1 and 2 here, and charts and tables are numbered to match: ‘Chart 7.n’ in the original is ‘Chart 1.n’; ‘Chart 8.n’ in the original is ‘Chart 2.n’. References are numbered in one sequence: notes 1 to 27 are those of Chapter 7; notes 28 to 46 are those of Chapter 8.",
  "edits": [
   "The heading ‘Introduction’ at the start of each chapter is new. The paragraphs under it are the opening pages of the original chapter; its first paragraph is on the chapter's opening page.",
   "In the executive summary, the two ‘Key findings’ headings carry the name of their chapter, and the two ‘Insight into action’ sections are set one after the other under one heading.",

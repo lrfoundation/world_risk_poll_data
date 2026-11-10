@@ -40,7 +40,7 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | `# Heading`, `## Heading` | Section heading (starts a column) and sub-heading |
 | `> text` | A highlighted statement of the original |
 | `- text`, `1. **Lead.** text` | Bullets and numbered findings |
-| ```` ```chart ```` + JSON | A figure: `hbar`, `grouped`, `stacked`, `vgrouped`, `dumbbell`, `map`, `table` or `original` |
+| ```` ```chart ```` + JSON | A figure: `hbar`, `grouped`, `stacked`, `vgrouped`, `dumbbell`, `matrix` (a table of shaded values), `map`, `table`, `heading` (a table that is only a title over the text that follows) or `original` |
 | `[^n]: text` | A footnote of the original, listed under References |
 
 ## Files
@@ -69,6 +69,24 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | `2019_technology` | 7 and 8 | 126 to 140, 141 to 152 |
 
 `2019_risk_at_work` was the pilot and its content file was written by hand; the
-others come from `assemble_2019.py`. The check reports the headings and the
+others come from `assemble_2019.py`. A plan there lists, for each report, its
+chapters, a specification for every chart and table, the new writing, and the
+repairs the PDF's reading order needs: wording changes (`replace`), chart
+furniture to leave out of the text (`drop`), small print to put back (`insert`,
+`note_from`) and headings to move (`move`). The assembler also rejoins
+paragraphs that a chart or a column break splits, and numbers the footnotes of
+a report's chapters in one sequence from 1.
+
+Three conventions for charts that the published figures cannot fully supply:
+
+- A segment that the original draws without a figure has no finding ID. It is
+  drawn as part of one pale segment, without a number (`"rest"` in the
+  specification), and segments too narrow for their figure carry a note.
+- A chart that plots the poll against another source, or values that were never
+  printed, is placed as a picture of the original (`original`), and the notes
+  at the back of the report say why.
+- Map shading is computed from the public data by `../maps.py` and checked
+  against the country figures the report prints; the countries named beside a
+  map are the published figures. The check reports the headings and the
 cross-references that were changed on purpose ("Chapter 3 of the 2019 volume"),
 which are also listed in each report's "Notes on this edition".

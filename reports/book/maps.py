@@ -60,6 +60,24 @@ def worried_fraud_2019():
     return _share(2019, "L27C", [1])
 
 
+def _top_two_2019(codes):
+    """Share who named one of these answers as the greatest or the second greatest risk to their safety (L3_A, L3_B)."""
+    d = load_wave(2019, ["COUNTRY_ISO3", "PROJWT", "L3_A", "L3_B"])
+    d = d[d.L3_A.notna()].assign(named=lambda x: np.where(x.L3_A.isin(codes) | x.L3_B.isin(codes), 1, 2))
+    n = d.groupby("COUNTRY_ISO3").size()
+    values = pct(d, "named", [1], by="COUNTRY_ISO3")
+    return values[n.reindex(values.index) >= MIN_N]
+
+
+def crime_top_two_2019():
+    return _top_two_2019([3])
+
+
+def health_top_two_2019():
+    """Personal health condition or illness; drugs, alcohol, smoking."""
+    return _top_two_2019([9, 10])
+
+
 def less_safe_2021():
     return _share(2021, "WP20711", [2])
 
@@ -134,6 +152,8 @@ CHECKS = [
     ("gov_water_not_good_2019", "LBN", "WRP_2019/core_world_risk_poll_2019", "C9_8_LBN"),
     ("worried_false_info_2019", "MWI", "WRP_2019/core_world_risk_poll_2019", "C8_4_MWI"),
     ("worried_fraud_2019", "MUS", "WRP_2019/core_world_risk_poll_2019", "C8_8_MUS"),
+    ("crime_top_two_2019", "AFG", "WRP_2019/core_world_risk_poll_2019", "C2_5_AFG"),
+    ("health_top_two_2019", "SRB", "WRP_2019/core_world_risk_poll_2019", "C2_8_SRB"),
     ("burns_waste_2023", "IDN", "WRP_2023/core_a_world_of_waste", "X16"),
     ("impacted_by_disaster_2025", "PHL", "WRP_2025/core_from_alert_to_agency", "X023"),
     ("impacted_by_disaster_2025", "ISR", "WRP_2025/core_from_alert_to_agency", "X024"),

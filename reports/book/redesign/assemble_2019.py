@@ -29,7 +29,7 @@ import extract  # noqa: E402
 FOLDER = "WRP_2019/core_world_risk_poll_2019"
 PDF = "core_world_risk_poll_2019.pdf"
 VOLUME = "The Lloyd's Register Foundation World Risk Poll: Full report and analysis of the 2019 poll (2020)"
-CHAPTERS = {1: (17, 30), 2: (31, 53), 3: (54, 71), 4: (72, 86), 5: (87, 111), 6: (112, 125), 7: (126, 140), 8: (141, 152), 9: (153, 170), 10: (171, 182)}
+CHAPTERS = {1: (17, 30), 2: (31, 53), 3: (54, 71), 4: (72, 86), 5: (87, 111), 6: (112, 125), 7: (126, 140), 8: (141, 152), 9: (153, 170), 10: (171, 181)}
 FOUR = [
     ("2019_feeling_safe", "Feeling safe and the sources of risk",
      "Chapters 1 to 4 and 10 of the 2019 volume: How safe do we feel?; The sources of greatest risk in people’s lives; The risk perception gap; "
@@ -47,6 +47,12 @@ REGIONS = {
     "southeastern_asia": "Southeastern Asia", "middle_east": "Middle East", "southern_asia": "Southern Asia", "central_asia": "Central Asia",
     "eastern_asia": "Eastern Asia", "northern_africa": "Northern Africa",
 }
+REGIONS.update({
+    "east_africa": "Eastern Africa", "central_west_africa": "Central/Western Africa", "north_africa": "Northern Africa", "south_europe": "Southern Europe",
+    "south_asia": "Southern Asia", "north_west_europe": "Northern/Western Europe", "northwest_europe": "Northern/Western Europe",
+    "north_america": "Northern America", "aus_nz": "Australia & New Zealand", "east_europe": "Eastern Europe", "southeast_asia": "Southeastern Asia",
+    "east_asia": "Eastern Asia",
+})
 INCOME = {"low": "Low income", "lower_middle": "Lower-middle income", "upper_middle": "Upper-middle income", "high": "High income"}
 EDUCATION = {"edu_0_8": "0-8 years education", "edu_9_15": "9-15 years education", "edu_16plus": "16+ years education"}
 AGES = {"age_15_29": "Age 15-29", "age_30_49": "Age 30-49", "age_50_64": "Age 50-64", "age_65plus": "Age 65+"}
@@ -79,6 +85,20 @@ def by_region(prefix, suffixes):
 
 def groups(prefix, names, suffixes):
     return [[name, [f"{prefix}{key}_{s}" for s in suffixes]] for key, name in names.items()]
+
+
+def known(rows):
+    """Ids the CSV does not hold (segments the original draws without a figure) become null."""
+    return [[label, [i if i in IDS else None for i in ids]] for label, ids in rows]
+
+
+def countries(prefix, names):
+    return [[name, f"{prefix}{iso}"] for iso, name in names.items()]
+
+
+def and_list(items):
+    items = [str(i) for i in items]
+    return items[0] if len(items) == 1 else ", ".join(items[:-1]) + " and " + items[-1]
 
 
 THREAT3 = dict(series=["Very serious threat", "Somewhat serious threat", "Not a threat at all"], colours=["fuchsia", "green", "teal"])
@@ -255,6 +275,187 @@ PLANS["2019_technology"] = dict(
 )
 
 
+SAFE3 = dict(series=["More safe", "About as safe", "Less safe"], colours=["green", "teal", "fuchsia"])
+RISK5 = dict(series=["Opportunity", "Danger", "Both", "Neither", "Do not know/refused"], colours=["green", "fuchsia", "teal", "orange", "grey"])
+RISK5_SUFFIXES = ["opp", "danger", "both", "neither", "dk"]
+AGES4 = {"15_29": "Age 15-29", "30_49": "Age 30-49", "50_64": "Age 50-64", "65plus": "Age 65+"}
+WORLD_INCOME = {"world": "World", **INCOME}
+INCOME_COLOURS = ["fuchsia", "green", "teal", "orange"]
+SOURCES = {"family": "Family and friends", "labels": "Food labels", "medical": "Medical professionals", "news": "Newspapers, television or radio",
+           "authority": "Food safety authority", "internet": "Internet/social media", "famous": "A famous person", "religious": "A local religious leader"}
+HAZARDS = {"traffic": "Traffic accident", "attacked": "Physically attacked", "lightning": "Struck by lightning", "drowning": "Drowning",
+           "aeroplane": "Aeroplane accident"}
+NOT_PUBLIC = "the figures from other sources that are plotted against the poll's are not in the poll's public data"
+FORECAST = "the forecast values for 2020 and 2021 are not in the poll's public data"
+REST = "Not labelled in the original"
+
+PLANS["2019_feeling_safe"] = dict(
+    number=1,
+    subtitle="How people judge risk, and whom they trust",
+    cover_image=[32, 0],
+    insight_by_chapter=True,
+    queries=["Chapter 10 of the original refers to ‘Table 10.3’, which the 2019 volume does not contain. The reference is kept, with the chapter's new number, "
+             "as ‘Table 5.3’."],
+    chapters=[
+        dict(source=1, big="25%", caption="of people worldwide said they felt less safe in 2019 than they did five years before"),
+        dict(source=2, big="23%", caption="of people worldwide named road-related accidents or injuries as the first or second greatest risk to their safety"),
+        dict(source=3, big="40%", caption="of people worldwide correctly answered a question about percentages and proportions"),
+        dict(source=4, big="77%", caption="of people worldwide reported wearing a seat belt when one is available"),
+        dict(source=10, big="60%", caption="of people in Latin America and the Caribbean were expected to feel ‘less safe’ in 2020 than five years before"),
+    ],
+    replace={
+        "over the next 20 years (see Chapter 6), no": "over the next 20 years (see Chapter 6 of the 2019 volume), no",
+        "is safe (see Chapter 9). While": "is safe (see Chapter 9 of the 2019 volume). While",
+        "Please see Chapters 1, 3 and 5 for more details": "Please see Chapters 1 and 3, and Chapter 5 of the 2019 volume, for more details",
+    },
+    move={4: [("# Regulations and safety", "Regulation is often used as a mechanism")]},
+    insert={4: [("# Regulations and safety", 83, ["*Previously explored in Chapter 3", "**The National Institutions Index"])]},
+    drop=["Results by standard of living", "Results by confidence in local police", "Results by education level", "Results by feelings about household income",
+          "Top 5", "Bottom 5", "Total", "Gender", "Education", "Average ratings", "2019 2020 2021", *SOURCES.values()],
+    chart_note=("Where the 2026 style has no equivalent for the form of an original chart, the same values are shown in the nearest form it does have: bars in "
+                "place of rings and circles, and a table of shaded values in place of a grid of circles or small charts."),
+    about=[
+        "The body of this report is Chapters 1 to 4 and Chapter 10 of the 2019 volume, reproduced word for word and set here as Chapters 1 to 5. Their "
+        "charts have been redrawn from the published values in the current World Risk Poll chart style, and their footnotes are gathered as numbered "
+        "references at the back. Three things are new: this page, the heading ‘Introduction’ at the start of each chapter, and the conclusion. Charts "
+        "are numbered by chapter. Chapters 1 to 4 keep their numbers, so only the charts of the last chapter change: Chart 10.2 of the 2019 volume is "
+        "Chart 5.2 here.",
+        "These are the general chapters of the 2019 volume. The first four ask how safe people feel, what they see as the greatest risks in their daily "
+        "lives, how far those perceptions match the harm they have experienced, and whom they trust for information about safety. None of them is tied "
+        "to a single hazard, which is what separates them from the chapters on work, climate, food and technology in the other three reports.",
+        "The fifth is the forecasting chapter that closed the 2019 volume. It is placed here because four of the five measures it projects forward "
+        "(feelings of safety, the Worry Index, the Experience of Harm Index and the gap between the two) are the ones that Chapters 1 and 3 introduce. "
+        "It was written in 2020 and should be read as a record of what was expected then.",
+    ],
+    conclusion=[
+        "In 2019 most people felt no less safe than they had five years earlier: 36% said they felt safer and a further 36% about as safe, whilst one "
+        "in four (25%) felt less safe. The global figure hides a wide spread. In Lebanon, 81% felt less safe; in Rwanda, 67% felt safer. Feelings of "
+        "safety also tracked with people's own circumstances. Among those who said their standard of living was getting worse, 41% felt less safe, "
+        "compared with 18% of those who said it was getting better.",
+        "Asked to name the greatest risks to their safety in daily life, people pointed most often to the roads (23% named road-related accidents or "
+        "injuries first or second), ahead of crime and violence (19%) and their own health (18%). However, 19% said at the first time of asking that "
+        "they faced no risk at all. Where people live changed the answer sharply: crime or violence was among the top two threats for 59% of people in "
+        "Latin America and the Caribbean and 58% in Southern Africa, compared with 4% in Eastern Asia.",
+        "Worry and experience did not line up. One in three people (34%) were very worried about serious harm from severe weather and 32% about "
+        "violent crime, whilst 22% and 18% respectively said that they, or someone they know, had experienced such harm in the past two years. Part of "
+        "the gap may lie in how people handle numbers: only 40% worldwide correctly answered a question about percentages and proportions. It is "
+        "important to note that worry is not simply a failure of arithmetic. Women worried more than men even where their experience of harm was "
+        "similar, and people struggling on their income worried more than those living comfortably.",
+        "Whom people trust matters for anyone hoping to close that gap. For information about food safety, 31% said they would trust family and "
+        "friends most and 22% medical professionals, compared with 15% for the food safety authority. Rules, by contrast, appear to carry weight: 93% "
+        "of people reported wearing a seat belt in countries with a full seat belt law, against 58% in countries with none.",
+        "The final chapter tried to say what would happen next. Written as the pandemic took hold, its worst-case scenario had the share of people "
+        "feeling less safe rising from 24% in 2019 to as much as 40% in 2020. These are forecasts, not findings, and the 2021 poll, which asked the "
+        "same question again, is where they can be checked.",
+    ],
+    charts={
+        "1.1": dict(kind="stacked", series=SAFE3["series"] + ["Do not know/refused"], colours=SAFE3["colours"] + ["grey"],
+                    rows=[["Global", ["C1_1_more", "C1_1_same", "C1_1_less", "C1_1_dk"]]]),
+        "1.2": dict(kind="vgrouped", panels=[["", groups("C1_2_", INCOME, ["more", "same", "less"])]], **SAFE3),
+        "1.3": dict(kind="stacked", tall=True, rows=by_region("C1_3_", ["more", "same", "less"]), **SAFE3),
+        "1.4": dict(kind="map", fn="less_safe_2019", top=[["Lebanon", "C1_4_LBN"], ["Hong Kong", "C1_4_HKG"], ["Afghanistan", "C1_4_AFG"]],
+                    bottom=[["Cambodia", "C1_4_KHM"], ["United Arab Emirates", "C1_4_ARE"], ["China", "C1_4_CHN"]]),
+        "T1.1": dict(kind="table", columns=["", "% More safe", "% About as safe", "% Less safe"],
+                     rows=[[name, [f"T1_1_{iso}_{k}" for k in ("more", "same", "less")]]
+                           for iso, name in {"LBN": "Lebanon", "HKG": "Hong Kong, S.A.R. of China", "AFG": "Afghanistan", "VEN": "Venezuela"}.items()]),
+        "T1.2": dict(kind="table", columns=["", "% More safe", "% About as safe", "% Less safe"],
+                     rows=[[name, [f"T1_2_{iso}_{k}" for k in ("more", "same", "less")]]
+                           for iso, name in {"RWA": "Rwanda", "CHN": "China", "LAO": "Laos", "ARE": "United Arab Emirates", "ETH": "Ethiopia"}.items()]),
+        "1.5": dict(kind="vgrouped", series=["Women", "Men"], panels=[["", groups("C1_5_", WORLD_INCOME, ["women", "men"])]]),
+        "1.6": dict(kind="stacked", **SAFE3, rows=[
+            ["People who feel their standard of living is getting better", [f"C1_6_living_better_{k}" for k in ("more", "same", "less")]],
+            ["People who feel their standard of living is getting worse", [f"C1_6_living_worse_{k}" for k in ("more", "same", "less")]],
+            ["People who have confidence in their local police", [f"C1_6_police_yes_{k}" for k in ("more", "same", "less")]],
+            ["People who do not have confidence in their local police", [f"C1_6_police_no_{k}" for k in ("more", "same", "less")]]],
+                    note_from=[26, "Do not know/refused percentages not shown."]),
+        "1.7": dict(kind="stacked", tall=True, rest=REST, rows=known(by_region("C1_7_", RISK5_SUFFIXES)), **RISK5),
+        "1.8": dict(kind="stacked", rest=REST, **RISK5, rows=known(groups("C1_8_", {
+            "english": "English [“risk”]", "russian": "Russian [“риск”]", "chinese": "Chinese [“风险”]", "arabic": "Arabic [“مخاطرة”]",
+            "french": "French [“risque”]", "spanish": "Spanish [“riesgo”]"}, RISK5_SUFFIXES))),
+        "1.9": dict(kind="vgrouped", series=list(INCOME.values()), colours=INCOME_COLOURS,
+                    panels=[["", groups("C1_9_", {"world": "World", "women": "Women", "men": "Men"}, list(INCOME))]]),
+        "1.10": dict(kind="stacked", **RISK5, rows=groups("C1_10_", {
+            "educ_0_8": "0-8 years education", "educ_9_15": "9-15 years education", "educ_16plus": "16+ years education",
+            "comfortable": "Living comfortably on current income", "getting_by": "Getting by on current income",
+            "difficult": "Finding it difficult on current income", "very_difficult": "Finding it very difficult on current income"}, RISK5_SUFFIXES)),
+        "2.1": dict(kind="hbar", tall=True, label_width=0.5, subtitle="Percentage worldwide who name each as their first or second response",
+                    query="The original prints the figure for drowning as ‘<.5’; it is drawn here as 0%.",
+                    rows=countries("C2_1_", {
+                        "none": "Nothing/no risks", "road": "Road-related accidents/injuries", "crime": "Crime/violence/terrorism",
+                        "health": "Health: personal health condition/illness", "other": "Other", "economy": "Economy-related, such as unemployment, high prices",
+                        "financial": "Financial: not having enough money", "climate": "Climate change/natural disasters/weather-related events",
+                        "cooking": "Cooking or other household accidents/injuries", "other_transport": "Other transportation-related accidents/injuries",
+                        "work": "Work-related accidents: physical injuries", "politics": "Politics/political situation/corruption",
+                        "food": "Food-related: eating unsafe contaminated food", "drugs": "Health: drugs, alcohol, smoking", "pollution": "Pollution",
+                        "mental": "Mental stress/exhaustion", "water": "Water supply or drinking unclean water", "internet": "Internet/technology-related risks",
+                        "drowning": "Drowning"})),
+        "2.2": dict(kind="matrix", tall=True, subtitle="Percentage worldwide who name each as their first or second response",
+                    columns=["Road/transport-related", "Health/illness", "Crime/violence", "Financial/economic problems", "Environment/natural disasters/weather",
+                             "Food- or water-related", "Political/institutional problems"],
+                    rows=by_region("C2_2_", ["road", "health", "crime", "financial", "environment", "food_water", "political"])),
+        "2.3": dict(kind="original", page=36, clip=[55, 418, 500, 662], width=700, why=NOT_PUBLIC),
+        "2.4": dict(kind="vgrouped", series=["Women", "Men"], panels=[["", by_gender("C2_4_", AGES4)]]),
+        "2.5": dict(kind="map", fn="crime_top_two_2019", top=[["Afghanistan", "C2_5_AFG"], ["Brazil", "C2_5_BRA"], ["Venezuela", "C2_5_VEN"]],
+                    bottom=[["China", "C2_5_CHN"], ["Turkmenistan", "C2_5_TKM"], ["Uzbekistan", "C2_5_UZB"]]),
+        "2.6": dict(kind="dumbbell", tall=True, series=["Total", "Women", "Men"], rows=by_region("C2_6_", ["total", "women", "men"])),
+        "2.7": dict(kind="original", page=42, clip=[55, 254, 470, 626], width=640, why=NOT_PUBLIC),
+        "2.8": dict(kind="map", fn="health_top_two_2019", top=[["Serbia", "C2_8_SRB"], ["Poland", "C2_8_POL"], ["Croatia", "C2_8_HRV"]],
+                    bottom=[["Afghanistan", "C2_8_AFG"], ["Libya", "C2_8_LBY"], ["Myanmar", "C2_8_MMR"]]),
+        "2.9": dict(kind="original", page=44, clip=[55, 400, 470, 740], width=640, why=NOT_PUBLIC),
+        "2.10": dict(kind="original", page=46, clip=[55, 514, 480, 734], width=700, why=NOT_PUBLIC, note_from=[46, "*Source: World Bank"]),
+        "2.11": dict(kind="hbar", rows=countries("C2_11_", {"NPL": "Nepal", "SEN": "Senegal", "PHL": "Philippines", "ITA": "Italy", "JPN": "Japan", "ROU": "Romania",
+                                                         "TWN": "Taiwan", "AZE": "Azerbaijan", "XKX": "Kosovo", "LBN": "Lebanon"})),
+        "2.12": dict(kind="hbar", rows=countries("C2_12_", {"LBN": "Lebanon", "HKG": "Hong Kong", "IRQ": "Iraq", "KOR": "South Korea", "ETH": "Ethiopia", "LBY": "Libya",
+                                                         "BEL": "Belgium", "USA": "United States", "ESP": "Spain", "CYP": "Cyprus"})),
+        "2.13": dict(kind="hbar", rows=countries("C2_13_", {"MWI": "Malawi", "AZE": "Azerbaijan", "LSO": "Lesotho", "MRT": "Mauritania", "TCD": "Chad", "LUX": "Luxembourg",
+                                                         "KEN": "Kenya", "ZWE": "Zimbabwe", "TZA": "Tanzania", "TJK": "Tajikistan", "FRA": "France"})),
+        "2.14": dict(kind="hbar", subtitle="Percentage worldwide who responded ‘no risk’ as their first or second response",
+                     rows=countries("C2_14_", {"MMR": "Myanmar", "LKA": "Sri Lanka", "UZB": "Uzbekistan", "LBY": "Libya", "TKM": "Turkmenistan", "MAR": "Morocco",
+                                               "BGD": "Bangladesh", "PHL": "Philippines", "KWT": "Kuwait", "THA": "Thailand"})),
+        "3.1": dict(kind="vgrouped", subtitle="Percentage who answered 10% is the same as 1 out of 10", series=["Women", "Men"], panels=[["", by_gender("C3_1_", EDUCATION)]]),
+        "3.2": dict(kind="stacked", tall=True, subtitle="Percentage who responded ...",
+                    series=["10% is the same as 1 out of 10", "10% is bigger than 1 out of 10", "10% is smaller than 1 out of 10", "Do not know/refused"],
+                    colours=["green", "fuchsia", "teal", "grey"], rows=by_region("C3_2_", ["same", "bigger", "smaller", "dk"])),
+        "3.3": dict(kind="stacked", colours=["#F9D7E6", "#F2A5C8", "#EA6FA8", "#E3076E", "#8F0546"],
+                    series=["Not likely at all (rating of 0)", "Somewhat unlikely (1-4)", "About as likely as unlikely (5)", "Somewhat likely (6-9)", "Very likely (10)"],
+                    rows=[[f"{name} (average rating {{C3_3_{key}_mean}})", [f"C3_3_{key}_{r}" for r in ("r0", "r1_4", "r5", "r6_9", "r10")]] for key, name in HAZARDS.items()]),
+        "3.4": dict(kind="matrix", tall=True, unit="", decimals=1, subtitle="Average score results", columns=list(HAZARDS.values()),
+                    rows=[["World", [f"C3_4_world_{k}" for k in HAZARDS]]] + by_region("C3_4_", list(HAZARDS))),
+        "3.5": dict(kind="dumbbell", series=["Gap", "Very worried", "Have experienced"], total_unit="",
+                    note="Gap: % 'Very worried' minus % 'Experienced'.",
+                    rows=groups("C3_5_", {"food": "The food you eat", "water": "The water you drink", "crime": "Violent crime", "weather": "Severe weather events",
+                                          "power": "Electrical powerlines", "appliances": "Household appliances", "mental": "Mental health issues"},
+                                ["gap", "worried", "experienced"])),
+        "3.6": dict(kind="dumbbell", tall=True, unit="", series=["Gap", "Very worried", "Have experienced"],
+                    note="Gap: % 'Very worried' minus % 'Experienced'.", rows=by_region("C3_6_", ["gap", "worry", "experience"])),
+        "3.7": dict(kind="original", page=69, clip=[55, 290, 470, 608], width=640, why="the original does not print the score of each country"),
+        "4.1": dict(kind="vgrouped", panel_height=440, series=list(WORLD_INCOME.values()), colours=["navy"] + INCOME_COLOURS,
+                    panels=[["", [[name, [f"C4_1_{key}_{g}" for g in WORLD_INCOME]] for key, name in list(SOURCES.items())[:4]]],
+                            ["", [[name, [f"C4_1_{key}_{g}" for g in WORLD_INCOME]] for key, name in list(SOURCES.items())[4:]]]]),
+        "4.2": dict(kind="matrix", tall=True, columns=list(SOURCES.values()), rows=by_region("C4_2_", list(SOURCES))),
+        "4.3": dict(kind="vgrouped", subtitle="Results among adults who answered ‘yes’ they would use a source of information",
+                    series=["Yes, would use", "Would trust this source the most"], panels=[["", groups("C4_3_", SOURCES, ["use", "trust"])]]),
+        "4.4": dict(kind="stacked", rest="Other", subtitle="Results among adults who answered ‘yes’ they would use a source of information",
+                    series=["Family and friends", "Medical professionals", "Food safety authority"], colours=["fuchsia", "green", "teal"],
+                    rows=groups("C4_4_", {"world": "World", "women": "Women", "men": "Men", **EDUCATION}, ["family", "medical", "authority"])),
+        "4.5": dict(kind="original", page=82, clip=[80, 216, 480, 515], width=640, why=NOT_PUBLIC),
+        "4.6": dict(kind="vgrouped", series=["Who wear a seatbelt when available", "Of countries with seatbelt law"],
+                    panels=[["", [[name, [f"C4_6_wear_{key}", f"C4_6_law_{key}"]] for key, name in WORLD_INCOME.items()]]]),
+        "4.7": dict(kind="matrix", subtitle="Percentage who wear a seat belt when available",
+                    columns=["Women", "Men", "0-8 years education", "9-15 years education", "16+ years education"],
+                    rows=groups("C4_7_", INCOME, ["women", "men", "edu_0_8", "edu_9_15", "edu_16plus"])),
+        "4.8": dict(kind="hbar", rows=countries("C4_8_", {"none": "Countries with NO seatbelt law", "partial": "Countries with PARTIAL seatbelt law",
+                                                       "full": "Countries with FULL seatbelt law"})),
+        "T10.1": dict(kind="heading", table=True),
+        "10.1": dict(kind="original", page=177, clip=[55, 118, 500, 540], width=640, why=FORECAST),
+        "10.2": dict(kind="original", page=179, clip=[55, 113, 440, 338], width=700, why=FORECAST, note_from=[179, "Please see Chapters 1, 3 and 5"]),
+        "10.3": dict(kind="original", page=180, clip=[55, 117, 470, 277], width=700, why=FORECAST),
+        "10.4": dict(kind="original", page=181, clip=[55, 127, 455, 715], width=460, why=FORECAST,
+                     subtitle="Percentage who feel ‘less safe’ compared to five years prior – central scenario"),
+    },
+)
+
+
 # ---------------------------------------------------------------- reading a chapter's draft
 
 def join_urls(text):
@@ -275,8 +476,9 @@ def join_urls(text):
 def chapter(doc, number, offset):
     """A chapter's draft in parts. Footnote numbers are raised by offset so two chapters can share one list."""
     first, last = CHAPTERS[number]
-    parts = dict(title=None, intro=[], findings=[], insight=[], questions=[], body=[], notes={})
-    state = "intro"
+    parts = dict(title=None, intro=[], insight=[], questions=[], body=[], notes={}, findings_title="Key findings", insight_title="Insight into action")
+    found = {}                  # the numbered findings, which the PDF's reading order scatters around the next heading
+    state, current = "intro", None
     for line in extract.draft(doc, first, last).split("\n"):
         if not line.strip() or line.startswith("<!-- page"):
             continue
@@ -285,23 +487,52 @@ def chapter(doc, number, offset):
             parts["notes"][int(note.group(1)) + offset] = join_urls(note.group(2))
             continue
         line = re.sub(r"\[\^(\d+)\]", lambda m: f"[^{int(m.group(1)) + offset}]", line)
+        line = re.sub(r"(\[\^\d+\])(?=[A-Za-z])", r"\1 ", line)
         if line.startswith("<!-- title:"):
-            parts["title"] = line[len("<!-- title:"):-len("-->")].strip().split(": ", 1)[1]
+            title = line[len("<!-- title:"):-len("-->")].strip()
+            if parts["title"] is None:
+                parts["title"] = title.split(": ", 1)[1]
+            else:               # a large title inside the chapter: a section heading here
+                state = "body"
+                parts["body"].append("# " + title)
             continue
-        if line.startswith("Key findings 1 "):
-            state, line = "findings", line[len("Key findings "):]
-        elif line == "## Insight into action":
-            state = "insight"
+        opening = re.match(r"(Key findings|Key predictions) (?=1 )", line)
+        if opening and state == "intro":
+            state, line, parts["findings_title"] = "findings", line[opening.end():], opening.group(1)
+        elif line in ("## Insight into action", "## Insights into the next two years"):
+            state, current, parts["insight_title"] = "insight", None, line[3:]
             continue
-        elif line.startswith("## Main research questions"):
+        elif line.startswith("## ") and state in ("findings", "insight"):
             state = "questions"
         elif line.startswith("# ") and state != "body":
             state = "body"
-        if state == "insight" and re.match(rf"{len(parts['findings']) + 1} [A-Z]", line):
-            parts["findings"].append(line)      # the list of findings runs on past the next heading in the PDF's reading order
-            continue
-        parts[state].append(line)
+        if state in ("findings", "insight"):
+            pieces = re.split(r"(?:^|(?<=[.’'”]) )(?=[1-9] [A-Z‘'“][A-Za-z])", line)
+            kept = []
+            for piece in filter(None, pieces):
+                number_ = int(piece[0]) if re.match(r"[1-9] [A-Z‘'“][A-Za-z]", piece) else None
+                if number_ and number_ not in found and number_ <= len(found) + 2:
+                    found[number_] = current = [piece]
+                elif state == "findings" and current is not None:
+                    current.append(piece)          # a finding the PDF broke into two blocks
+                else:
+                    kept.append(piece)
+            if not kept:
+                continue
+            line = " ".join(kept)
+        parts[state if state != "findings" else "insight"].append(line)
+    parts["findings"] = [" ".join(found[n]) for n in sorted(found)]
+    assert sorted(found) == list(range(1, len(found) + 1)), (number, sorted(found))
     return parts
+
+
+def printed(doc, page, start):
+    """The block of small print on a page of the PDF that begins with these words, as one line."""
+    for block in doc[page].get_text("blocks"):
+        text = " ".join(block[4].split())
+        if text.startswith(start):
+            return text.replace("ﬀ", "ff").replace("ﬁ", "fi")
+    raise ValueError(f"page {page}: no block begins {start!r}")
 
 
 def finding(line):
@@ -310,13 +541,20 @@ def finding(line):
     return f"**{lead}** {rest}"
 
 
-def blocks(lines, charts, offset, seen):
+def open_ended(text):
+    """True for a paragraph that stops without closing punctuation, so the PDF must have broken it there."""
+    return not re.search(r"([.!?:’”'\"]|[.!?]\))(\[\^\d+\])*$", text)
+
+
+def blocks(lines, charts, offset, seen, drop=()):
     """Draft lines as content blocks: charts get their specification, questions their options."""
     out, chart = [], None
-    furniture = {spec["subtitle"] for spec in charts.values() if spec.get("subtitle")}
+    furniture = {spec["subtitle"] for spec in charts.values() if spec.get("subtitle")} | set(drop)
     for line in lines:
         if line in furniture:
             continue
+        if chart is not None and chart["kind"] == "table" and re.fullmatch(r"(% [A-Za-z ]+)+|.{1,40}( \d+){2,}", line):
+            continue                                # the cells of a table, which the specification draws
         if line.startswith("<!-- note:"):
             if chart is not None:
                 question = re.sub(r"^Survey question: ", "", line[len("<!-- note:"):-len("-->")].strip())
@@ -327,28 +565,45 @@ def blocks(lines, charts, offset, seen):
             continue
         label = re.match(r"\[(chart|table) ([\d.]+)\]\s*(.*)", line)
         if label:
-            ident, title = label.group(2), label.group(3)
+            ident, title = ("T" if label.group(1) == "table" else "") + label.group(2), label.group(3)
             trimmed = ident
             while trimmed not in charts and len(trimmed) > 3:
                 trimmed = trimmed[:-1]          # "9.116" is Chart 9.1 with footnote 16 set against it
             if trimmed != ident:
                 title += f"[^{int(ident[len(trimmed):]) + offset}]"
-            chart = dict(id=trimmed, title=title)
+            chart = dict(id=trimmed, title=title[0].upper() + title[1:])
             chart.update(charts[trimmed])
             seen.add(trimmed)
             out.append(chart)
             continue
-        if line[:1].islower():
-            # A paragraph that a chart interrupted in the original: put it back together.
+        plain = not line.startswith(("#", ">", "-", " ", "<")) and not re.match(r"\d+\) |[A-Z]\. ", line)
+        if plain:
+            # A paragraph that a chart, a box or a column break interrupted in the original: put it back together.
             for k in range(len(out) - 1, -1, -1):
                 if isinstance(out[k], str) and not out[k].startswith(("#", ">", "-", " ")):
-                    if not re.search(r"[.!?:’”'\")](\[\^\d+\])*$", out[k]):
+                    if (line.lstrip("‘“'\"")[:1].islower() and open_ended(out[k])) or (out[k].endswith(",") and len(out[k]) > 80):
                         out[k] += " " + line
                         line = None
                     break
             if line is None:
                 continue
+            listed = [part for part in re.split(r"(?:^|(?<=[.:\]]) )(?=[1-9] [A-Z][^.:]{2,40}: )", line) if part]
+            if len(listed) > 1 or re.match(r"[1-9] [A-Z][^.:]{2,40}: ", line):
+                # a numbered list that the PDF runs into the paragraphs around it
+                out += [re.sub(r"^(\d) ([^:]+:) ", r"\1. **\2** ", item) for item in listed]
+                continue
         out.append(("  " + line) if re.match(r"A\. ", line) else line)
+    # A continuation that the PDF's reading order put before the paragraph it continues: move it down to that paragraph.
+    k = 0
+    while k < len(out):
+        if isinstance(out[k], str) and out[k].lstrip("‘“'\"")[:1].islower():
+            later = next((j for j in range(k + 1, min(k + 12, len(out))) if isinstance(out[j], str) and len(out[j]) > 80
+                          and not out[j].startswith(("#", ">", "-", " ")) and open_ended(out[j])), None)
+            if later is not None:
+                moved = out.pop(k)
+                out[later - 1] += " " + moved
+                continue
+        k += 1
     return ["```chart\n" + json.dumps(b, ensure_ascii=False, indent=1) + "\n```" if isinstance(b, dict) else b for b in out]
 
 
@@ -358,33 +613,50 @@ def assemble(key):
     doc = pymupdf.open(HERE.parent / ".cache" / "pdfs" / PDF)
     chapters, offset = [], 0
     for spec in plan["chapters"]:
-        parts = chapter(doc, spec["source"], offset)
+        # Footnotes are numbered in one sequence from 1. (Chapter 1's start at 13 in the original, after those of the introduction.)
+        first, last = (lambda notes: (min(notes), max(notes)))(chapter(doc, spec["source"], 0)["notes"])
+        parts = chapter(doc, spec["source"], offset - (first - 1))
+        parts["offset"], parts["original_notes"] = offset - (first - 1), (first, last)
         offset = max(parts["notes"], default=offset)
         chapters.append((spec, parts))
+    for spec in plan["charts"].values():
+        if spec.get("note_from"):
+            spec["note"] = printed(doc, *spec.pop("note_from"))
     sources = [spec["source"] for spec, _ in chapters]
     renumber, edits = {}, []
     for new, old in enumerate(sources, 1):
         for word in ("Chart", "chart", "Table", "table"):
             renumber[f"{word} {old}."] = f"{word} {new}."
-    listed = " and ".join(str(n) for n in sources)
+    listed = and_list(sources)
     edits.append("The heading ‘Introduction’ at the start of each chapter is new. The paragraphs under it are the opening pages of the original chapter; "
                  "its first paragraph is on the chapter's opening page.")
-    edits.append("In the executive summary, the two ‘Key findings’ headings carry the name of their chapter, and the two ‘Insight into action’ sections "
-                 "are set one after the other under one heading.")
+    if plan.get("insight_by_chapter"):
+        edits.append("In the executive summary, the ‘Key findings’ and ‘Insight into action’ headings carry the name of their chapter. Those of the last "
+                     "chapter are ‘Key predictions’ and ‘Insights into the next two years’, as in the original.")
+        edits.append("The large titles inside Chapter 1 (‘Perceptions of safety’ and ‘Risk: Opportunity or danger?’) are set as section headings.")
+    else:
+        edits.append("In the executive summary, the two ‘Key findings’ headings carry the name of their chapter, and the two ‘Insight into action’ sections "
+                     "are set one after the other under one heading.")
     for old, new in plan.get("replace", {}).items():
         edits.append(f"‘{old}’ now reads ‘{new}’.")
     edits.append("The statements set in italics beside a green bar are the highlighted statements of the original, in their original places.")
     edits.append("Web addresses that the original footnotes broke across lines have been joined up.")
-    notes_text = "; ".join(f"notes {min(p['notes'])} to {max(p['notes'])} are those of Chapter {s['source']}" for s, p in chapters)
+    notes_text = "; ".join(f"notes {min(p['notes'])} to {max(p['notes'])} are those of Chapter {s['source']}"
+                           + ("" if p["original_notes"][0] == 1 else f" (numbered {p['original_notes'][0]} to {p['original_notes'][1]} in the original)")
+                           for s, p in chapters)
     meta = dict(
         key=key, wave=2019, folder=FOLDER, pdf=PDF, title=title, subtitle=plan["subtitle"],
         series=f"Report {plan['number']} of 4 from the 2019 poll", source=f"Chapters {listed} of {VOLUME}",
         copyright="Copyright © 2020 Lloyd's Register Foundation. All rights reserved.", cover_image=plan["cover_image"],
         numbering="chapter", renumber=renumber,
-        numbering_note=("Chapters " + listed + " of the 2019 volume are Chapters " + " and ".join(str(i) for i in range(1, len(sources) + 1))
-                        + " here, and charts are numbered to match: " + "; ".join(f"‘Chart {old}.n’ in the original is ‘Chart {new}.n’" for new, old in enumerate(sources, 1))
+        numbering_note=("Chapters " + listed + " of the 2019 volume are Chapters " + and_list(range(1, len(sources) + 1))
+                        + " here, and charts and tables are numbered to match: "
+                        + "; ".join(f"‘Chart {old}.n’ in the original is ‘Chart {new}.n’" for new, old in enumerate(sources, 1) if new != old)
                         + ". References are numbered in one sequence: " + notes_text + "."),
         edits=edits)
+    for extra in ("chart_note", "queries"):
+        if plan.get(extra):
+            meta[extra] = plan[extra]
 
     out = ["---\n" + json.dumps(meta, ensure_ascii=False, indent=1) + "\n---"]
     out += ["::front About this report", "::new",
@@ -401,20 +673,31 @@ def assemble(key):
 
     out.append("::front Executive summary")
     for _, parts in chapters:
-        out.append(f"## Key findings: {parts['title']}")
+        out.append(f"## {parts['findings_title']}: {parts['title']}")
         out += [f"{i}. {finding(line)}" for i, line in enumerate(parts["findings"], 1)]
-    out.append("## Insight into action")
-    for _, parts in chapters:
-        out += parts["insight"]
+        if plan.get("insight_by_chapter"):
+            out += [f"## {parts['insight_title']}: {parts['title']}"] + parts["insight"]
+    if not plan.get("insight_by_chapter"):
+        out.append("## Insight into action")
+        for _, parts in chapters:
+            out += parts["insight"]
 
     seen, notes = set(), {}
     for spec, parts in chapters:
-        base = min(parts["notes"]) - 1
+        base = parts["offset"]
         out.append(f"::chapter {parts['title']} | {spec['big']} | {spec['caption']}")
         out.append(parts["intro"][0])
         out.append("# Introduction")
-        out += blocks(parts["intro"][1:] + parts["questions"], plan["charts"], base, seen)
-        out += blocks(parts["body"], plan["charts"], base, seen)
+        lines = parts["intro"][1:] + parts["questions"] + parts["body"]
+        for heading, before in plan.get("move", {}).get(spec["source"], []):
+            # a heading that the PDF's reading order puts in the middle of the text before it
+            lines.remove(heading)
+            lines.insert(next(i for i, line in enumerate(lines) if line.startswith(before)), heading)
+        for before, page, starts in plan.get("insert", {}).get(spec["source"], []):
+            # small print of a box that the draft leaves out, put back at the end of the box
+            at = lines.index(before)
+            lines[at:at] = [printed(doc, page, start) for start in starts]
+        out += blocks(lines, plan["charts"], base, seen, plan.get("drop", ()))
         notes.update(parts["notes"])
     missing = set(plan["charts"]) - seen
     assert not missing, f"charts in the plan that the draft never reached: {sorted(missing)}"

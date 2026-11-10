@@ -4,7 +4,7 @@
 @page { size: 1920px 1080px; margin: 0; }
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
-body { font-family: "DM Sans", sans-serif; font-size: 17px; line-height: 26px; color: #000; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: "DM Sans", "WRP Scripts", sans-serif; font-size: 17px; line-height: 26px; color: #000; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
 :root { --fuchsia: #E3076E; --navy: #0E2240; --lime: #C9F200; --green: #00775B; --grey: #BDBCBC; }
 
@@ -69,6 +69,9 @@ table.data { border-collapse: collapse; width: 780px; font-size: 16px; line-heig
 table.data th { text-align: left; font-weight: 700; color: #fff; background: var(--navy); padding: 7px 14px; }
 table.data td { padding: 6px 14px; border-bottom: 1px solid #E3E3E3; }
 table.data td:last-child, table.data th:last-child { text-align: right; font-weight: 700; width: 240px; }
+table.data.wide td:not(:first-child), table.data.wide th:not(:first-child) { text-align: right; font-weight: 700; width: 150px; }
+.fig.head { margin-bottom: 12px; break-after: avoid; }
+.fig.head .art, .fig.head .notes { display: none; }
 table.data tr:nth-child(even) td { background: #FBF3F7; }
 
 .mapkey { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 13px; line-height: 18px; margin-bottom: 6px; }

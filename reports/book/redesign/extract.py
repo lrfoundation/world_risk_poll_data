@@ -29,6 +29,10 @@ def classify_2019(font, size, colour):
         return "lead"
     if font.startswith("SourceSansPro-Bold") and 10.5 <= size < 13:
         return "h2"
+    if font.startswith("Calmetta") and 10.5 < size < 13:
+        return "h2"             # the heading of a box: "In their own words: ...", "Spotlight on: ..."
+    if font.startswith("SourceSansPro-It") and size >= 11:
+        return "lead"           # a respondent's words, quoted in a box
     if font.startswith("Calmetta") and 8.5 <= size <= 10.5:
         return "chart"
     if font.startswith("SourceSansPro") and "Itali" in font and size <= 8.5:

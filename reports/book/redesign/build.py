@@ -38,6 +38,8 @@ SERIES = [FUCHSIA, GREEN, TEAL, ORANGE, PURPLE, LIME]
 NAMED = dict(fuchsia=FUCHSIA, green=GREEN, teal=TEAL, orange=ORANGE, purple=PURPLE, lime=LIME, grey=GREY, navy="#1A3D6D")
 FONT_CSS = ("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;"
             "1,9..40,400;1,9..40,600;1,9..40,700")
+EXTRA_CSS = ("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&family=Noto+Sans+SC:wght@600&family=Noto+Sans+Arabic:wght@600"
+             "&text=%D1%80%D0%B8%D1%81%D0%BA%E9%A3%8E%E9%99%A9%D9%85%D8%AE%D8%A7%D8%B7%D8%B1%D8%A9")
 SCALE = 0.6          # charts are drawn at the coffee table book's size and placed at this scale
 CHART_W = 1300       # which makes them 780 px wide, the width of a text column
 NO_DATA = "#EFEFEF"
@@ -52,6 +54,12 @@ def font_faces():
         url = re.search(r"url\((https://[^)]+\.ttf)\)", block).group(1)
         path = fetch(url, CACHE / f"DMSans-{style}-{weight}.ttf")
         faces.append(f'@font-face {{ font-family: "DM Sans"; font-style: {style}; font-weight: {weight}; src: url("{path.as_uri()}") format("truetype"); }}')
+    # The few words of other scripts that the reports print (chart labels in Russian, Chinese and Arabic): only those glyphs are fetched.
+    extra = fetch(EXTRA_CSS, CACHE / "extra-scripts.css").read_text(encoding="utf-8")
+    for i, block in enumerate(re.findall(r"@font-face\s*{(.*?)}", extra, flags=re.S)):
+        url = re.search(r"url\((https://[^)]+)\)", block).group(1)
+        path = fetch(url, CACHE / f"extra-scripts-{i}.ttf")
+        faces.append(f'@font-face {{ font-family: "WRP Scripts"; font-weight: 100 900; src: url("{path.as_uri()}") format("truetype"); }}')
     return "\n".join(faces)
 
 
@@ -113,6 +121,7 @@ class Report:
         self.world = World(fetch(GEOJSON, CACHE / "ne_110m_admin_0_countries.geojson"))
         self.logo = (BOOK / "assets" / "lrf-logo.svg").read_text(encoding="utf-8")
         self.figures = []        # (label, title, anchor)
+        self.why, self.small, self.renumbering = {}, None, True
         self.queries = []
         self.originals = set()
         self.counts = {"Chart": 0, "Table": 0}
@@ -123,7 +132,8 @@ class Report:
     # -- text
 
     def inline(self, text):
-        for old, new in self.meta.get("renumber", {}).items():
+        # Chart and table numbers of the original become this report's numbers, except in text written for this edition.
+        for old, new in (self.meta.get("renumber", {}).items() if self.renumbering else ()):
             text = text.replace(old, new)
         text = escape(text, quote=False)
         text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", text)
@@ -144,7 +154,7 @@ class Report:
     # -- figures
 
     def number(self, spec):
-        kind = "Table" if spec["kind"] == "table" else "Chart"
+        kind = "Table" if spec["kind"] == "table" or spec.get("table") else "Chart"
         self.counts[kind] += 1
         if self.meta.get("numbering") == "chapter":
             return f"{kind} {self.chapter}.{self.counts[kind]}"
@@ -153,10 +163,14 @@ class Report:
     def series(self, spec, names=None):
         """(name, colour) for each series: the spec's named colours, or the palette in order."""
         names = spec["series"] if names is None else names
-        return list(zip(names, [NAMED[c] for c in spec["colours"]] if spec.get("colours") else SERIES))
+        return list(zip(names, [NAMED.get(c, c) for c in spec["colours"]] if spec.get("colours") else SERIES))
 
     def values(self, ids):
         return [self.fig.number(i) for i in ids]
+
+    def label(self, text):
+        """A row label; {finding_id} in it is replaced by that published value."""
+        return re.sub(r"\{(\w+)\}", lambda m: self.fig.text(m.group(1)), text)
 
     def drawing(self, spec):
         kind = spec["kind"]
@@ -172,15 +186,34 @@ class Report:
                 height += 54
             elif spec.get("grey"):
                 colours = [GREY if r[0] in spec["grey"] else FUCHSIA for r in spec["rows"]]
-            return charts.scaled(charts.hbar(rows, CHART_W, height, FUCHSIA, unit=unit, colours=colours, key=key), SCALE)
+            return charts.scaled(charts.hbar(rows, CHART_W, height, FUCHSIA, unit=unit, colours=colours, key=key, label_width=spec.get("label_width", 0.34)), SCALE)
         if kind == "grouped":
             rows = [(label, self.values(ids)) for label, ids in spec["rows"]]
             series = self.series(spec)
             height = min(1260, 120 + len(rows) * (len(series) * 46 + 40))
             return charts.scaled(charts.grouped(rows, series, CHART_W, height, unit=unit), SCALE)
         if kind == "stacked":
+            # An id of null is a segment the original draws but does not label. With "rest", what is left of 100 is drawn
+            # as one pale segment under that name, without a figure.
+            series, rows = self.series(spec), []
+            for label, ids in spec["rows"]:
+                values = [self.fig.number(i) if i else 0 for i in ids]
+                rows.append((self.label(label), values + ([max(0, 100 - sum(values))] if spec.get("rest") else [])))
+            if spec.get("rest"):
+                series.append((spec["rest"], "#E9E9E9"))
+            n = len(rows)
+            height = 130 + (120 if n <= 6 else 88 if n <= 9 else 66) * n
+            mute = (len(series) - 1,) if spec.get("rest") else ()
+            svg = charts.scaled(charts.stacked(rows, series, CHART_W, height, unit=unit, label_all=True, mute=mute), SCALE)
+            if charts.stacked.unlabelled:
+                self.small = f"Segments of {max(charts.stacked.unlabelled):g}{unit} or less are too narrow to label."
+            return svg
+        if kind == "matrix":
             rows = [(label, self.values(ids)) for label, ids in spec["rows"]]
-            return charts.scaled(charts.stacked(rows, self.series(spec), CHART_W, 130 + 120 * len(rows), unit=unit, label_all=True), SCALE)
+            row_height = 74 if len(rows) <= 6 else 58
+            return charts.scaled(charts.matrix(rows, spec["columns"], CHART_W, row_height, unit=unit, decimals=spec.get("decimals", 0)), SCALE)
+        if kind == "heading":
+            return ""
         if kind == "vgrouped":
             panels = [(title, [(label, self.values(ids)) for label, ids in groups]) for title, groups in spec["panels"]]
             height = spec.get("panel_height", 520) * len(panels)
@@ -188,13 +221,16 @@ class Report:
         if kind == "dumbbell":
             rows = [(label, self.values(ids[1:]), self.fig.number(ids[0])) for label, ids in spec["rows"]]
             series = self.series(spec, spec["series"][1:])
-            return charts.scaled(charts.dumbbell(rows, series, CHART_W, 112 + 62 * len(rows), spec["series"][0]), SCALE)
+            return charts.scaled(charts.dumbbell(rows, series, CHART_W, 112 + 62 * len(rows), spec["series"][0], unit=unit,
+                                                 total_unit=spec.get("total_unit")), SCALE)
         if kind == "map":
             return self.map(spec)
         if kind == "table":
             head = "".join(f"<th>{escape(c)}</th>" for c in spec["columns"])
-            body = "".join(f"<tr><td>{escape(label)}</td><td>{self.fig.text(fid)}%</td></tr>" for label, fid in spec["rows"])
-            return f'<table class="data"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table>'
+            body = "".join(f"<tr><td>{escape(label)}</td>" + "".join(f"<td>{self.fig.text(f)}%</td>" for f in ([fid] if isinstance(fid, str) else fid)) + "</tr>"
+                           for label, fid in spec["rows"])
+            wide = " wide" if len(spec["columns"]) > 2 else ""
+            return f'<table class="data{wide}"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table>'
         if kind == "original":
             import pymupdf
             page = self.source_pdf()[spec["page"]]
@@ -226,6 +262,9 @@ class Report:
         self.figures.append((label, title, anchor))
         if spec["kind"] == "original":
             self.originals.add(label)
+            self.why[label] = spec.get("why", "the data behind the original is not in the public files")
+        self.small = None
+        art = self.drawing(spec)
         if spec.get("query"):
             self.queries.append(f"{label}. {spec['query']}")
         notes = []
@@ -233,13 +272,15 @@ class Report:
             notes.append(f'<p><b>Question text:</b> {self.inline(spec["question"])}</p>')
         if spec.get("note"):
             notes.append(f'<p><b>Note:</b> {self.inline(spec["note"])}</p>')
+        if self.small:
+            notes.append(f"<p><b>Note:</b> {self.small}</p>")
         if spec["kind"] == "map":
             notes.append("<p><b>Note:</b> Country shading was computed for this edition from the public 2019 data, in five groups of about equal size. "
                          "The countries named are the published figures.</p>")
         subtitle = f'<p class="sub">{self.inline(spec["subtitle"])}</p>' if spec.get("subtitle") else ""
-        cls = "fig" + (" tall" if spec.get("tall") else "") + (" inline" if spec["kind"] == "table" else "")
+        cls = "fig" + (" tall" if spec.get("tall") else "") + (" inline" if spec["kind"] == "table" else "") + (" head" if spec["kind"] == "heading" else "")
         return (f'<figure class="{cls}" id="{anchor}"><h4>{label}. {self.inline(title)}</h4>{subtitle}'
-                f'<div class="art">{self.drawing(spec)}</div><div class="notes">{"".join(notes)}</div></figure>')
+                f'<div class="art">{art}</div><div class="notes">{"".join(notes)}</div></figure>')
 
     # -- blocks
 
@@ -267,11 +308,11 @@ class Report:
                 out.append("<ul>" + "".join(f"<li>{item}</li>" for item in items) + "</ul>")
                 continue
             elif re.match(r"\d+\. ", chunk):
-                items = []
+                items, first = [], int(chunk.split(". ", 1)[0])
                 while i < len(chunks) and re.match(r"\d+\. ", chunks[i]):
                     items.append(self.inline(chunks[i].split(". ", 1)[1]))
                     i += 1
-                out.append('<ol class="findings">' + "".join(f"<li>{item}</li>" for item in items) + "</ol>")
+                out.append(f'<ol class="findings" style="counter-reset: finding {first - 1}">' + "".join(f"<li>{item}</li>" for item in items) + "</ol>")
                 continue
             else:
                 out.append(f"<p>{self.inline(chunk)}</p>")
@@ -342,7 +383,9 @@ class Report:
                 new = tag if section["new"] and index == 0 else ""
                 level = "sub" if section["kind"] == "chapter" else "top"
                 toc.append((level, "", flow["title"], anchor))
+                self.renumbering = not section["new"]
                 html += f'<h1 id="{anchor}">{self.inline(flow["title"])}</h1>{new}' + self.blocks(flow["blocks"])
+                self.renumbering = True
             body.append(self.flow_page(html, numbering if section["kind"] != "back" else "main"))
         # Back matter made here: references, then notes on this edition.
         if self.notes:
@@ -372,6 +415,7 @@ class Report:
 
     def edition_notes(self, tag, anchor):
         m = self.meta
+        self.renumbering = False
         charts_ = [label for label, _, _ in self.figures if label.startswith("Chart")]
         out = [f'<h1 id="{anchor}">Notes on this edition</h1>{tag}',
                f"<p><b>Source.</b> {escape(m['source'])}. The text is reproduced word for word, apart from the changes listed here.</p>"]
@@ -385,11 +429,20 @@ class Report:
             out.append("<p><b>Wording and headings.</b></p><ul>" + "".join(f"<li>{self.inline(e)}</li>" for e in m["edits"]) + "</ul>")
         out.append("<p><b>Charts.</b> Charts are redrawn from the values printed in the original, in the chart style of the World Risk Poll 2026 reports. "
                    "Chart titles and question texts are the original ones.</p>")
-        for label, title, _ in self.figures:
+        if m.get("chart_note"):
+            out.append(f"<p>{self.inline(m['chart_note'])}</p>")
+        reasons = {}
+        for label, _, _ in self.figures:
             if label in self.originals:
-                out.append(f"<p><b>{label}</b> is placed as a picture of the original, because the data behind it is not in the public files.</p>")
-        for query in self.queries:
+                reasons.setdefault(self.why[label], []).append(label)
+        for why, labels in reasons.items():
+            numbers = [label.replace("Chart ", "") for label in labels]
+            names = labels[0] if len(labels) == 1 else "Charts " + ", ".join(numbers[:-1]) + " and " + numbers[-1]
+            verb = "is placed as a picture" if len(labels) == 1 else "are placed as pictures"
+            out.append(f"<p><b>{names}</b> {verb} of the original, because {why}.</p>")
+        for query in self.queries + m.get("queries", []):
             out.append(f"<p><b>Query.</b> {self.inline(query)}</p>")
+        self.renumbering = True
         return "".join(out)
 
     def html(self):
