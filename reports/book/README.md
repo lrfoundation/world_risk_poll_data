@@ -104,6 +104,7 @@ four to six numbers, one or two charts and, for a core report, a function in `ma
 
     python reports/book/indesign.py                                          # the coffee table book
     python reports/book/indesign.py reports/book/output/redesign/2019_risk_at_work.html
+    python reports/book/redesign/bind.py --indesign                          # the bound book, as a set of documents
 
 writes `output/indesign/<name>/` with an IDML document, a `Links` folder and the
 DM Sans files, and zips the folder. IDML is InDesign's interchange format;
@@ -113,20 +114,44 @@ The script opens the built HTML in Chrome three times: once to read where every
 block of text and every chart sits, once to print each page without that text
 and those charts (the page's artwork), and once to print each chart on its own.
 In the IDML each page has its artwork as one placed PDF at the back, each chart
-or map as a placed PDF of its own, and the text as live text frames. Paragraph
-styles are made from the type in use and named after it ("27 on 41 Regular
-231F20"), blocks that follow one another down a column share a frame, and
-frames grow with their text.
+or map as a placed PDF of its own, and the text as live text frames:
+
+- Paragraph styles are made from the type in use and named after it ("27 on 41
+  Regular 231F20").
+- Blocks that follow one another down a column share a frame, and frames grow
+  with their text.
+- In a re-set report the text runs through two columns a page. A block that
+  breaks over a column or a page gets a frame in each, and the frames are
+  threaded.
+- The numbers of a numbered list are text, with a tab and a hanging indent.
+- Text that is not fully opaque keeps its colour, and its frame carries the
+  opacity.
+- No live text is left in the artwork, so nothing is in the file twice.
+
+`bind.py --indesign` writes the bound book as one IDML for each part of it, in
+one folder and numbered in the order they are bound: the front pages, an
+opening page for each poll, and each report. The pages of each document are
+numbered from their place in the book, and the book's page number is a frame
+with a page number marker on a layer of its own ("Book page numbers"), which
+can be hidden to use a report alone. The reports of the 2025 poll are placed
+whole from their published PDFs, one file for each page. An InDesign book file
+(`.indb`) can only be made in InDesign: File > New > Book, then add the
+documents in order.
 
 What to expect on opening:
 
 - Links are relative paths. If InDesign reports them missing, Links > Relink to
   Folder and the `Links` folder puts all of them back at once.
-- The text needs DM Sans. The files are in `Document fonts`.
+- The text needs DM Sans. The files are in `Document fonts`. The word GALLUP on
+  a cover is set in Georgia, which Windows and macOS carry.
 - InDesign breaks lines a little differently from a browser, so a line may turn
   at a different word.
 - Text inside a chart is part of the chart's PDF, not live text.
 
-The file was test-opened in Scribus, which reads IDML, and its pages compared
-with the PDF. It has not been opened in InDesign itself.
+How the files were checked. The words of every IDML and of its charts were
+counted against the words of the PDF it was made from, and none is missing. The
+files were test-opened in Scribus, which reads IDML, and pages compared with
+the PDF. Scribus sets its own line spacing and ignores letter-spacing, forced
+line breaks, tab stops and the start of page numbering, so those were checked
+in the IDML itself, not on a page. The files have not been opened in InDesign.
 

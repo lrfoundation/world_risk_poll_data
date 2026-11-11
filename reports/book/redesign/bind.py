@@ -2,6 +2,7 @@
 
     python reports/book/redesign/bind.py            # writes output/redesign/World_Risk_Poll_reports_2019_to_2025.pdf
     python reports/book/redesign/bind.py --screen   # also writes a smaller copy for reading on screen
+    python reports/book/redesign/bind.py --indesign # also writes the book as a set of InDesign documents
 
 The book is a title page, a page about the book, the contents, and then the four
 polls in order. Each poll opens with a page of its own and each report follows
@@ -13,12 +14,20 @@ Every report keeps its own page numbers. The book's page number is added at
 the foot of each page, in the middle, where every report leaves the footer
 empty; covers carry none. The PDF has a bookmark for each poll and report.
 
+With --indesign the book is also written to output/indesign/<name>/ as one IDML
+for each part of it, numbered in the order they are bound: the front pages, an
+opening page for each poll, and each report. indesign.py makes them, so the
+text of the re-set reports is live; the reports of the 2025 poll are placed a
+page to a page from their PDFs. Each document's pages are numbered from their
+place in the book, and the book's page number sits on a layer of its own.
+
 Needs PyMuPDF, a Chrome or Chromium, and the DM Sans files that build.py downloads.
 """
 
 import argparse
 import importlib.util
 import json
+import shutil
 import sys
 from html import escape
 from pathlib import Path
@@ -175,9 +184,59 @@ def folio(page, number, font):
         x += font.text_length(c, size) + track
 
 
+READ_ME = """World Risk Poll: the reports, 2019 to 2025, as InDesign documents (IDML, InDesign 2020 or later).
+
+The documents are numbered in the order they are bound: the front pages, then for each poll an opening page and
+its reports. To work on them as one book, make an InDesign book (File > New > Book) and add them in that order.
+
+Page numbers. Each document's pages are numbered from their place in the book: the first page of each starts
+at the number listed at the end of this file (Layout > Numbering & Section Options > Start Page Numbering at).
+The book's page number at the foot of each page is live (BOOK PAGE and a current page number marker) and sits
+on a layer called Book page numbers. Hide that layer to use a report on its own. Covers carry no number.
+The contents page lists the same numbers as text.
+
+Text. In the re-set reports of the 2019, 2021 and 2023 polls the text is live and carries paragraph styles
+named after the type they set; text that runs from one column or page to the next is threaded. Each page's
+grounds, rules and blocks are one placed PDF at the back of the page, and each chart is a placed PDF of its own.
+The five reports of the 2025 poll are placed whole from their published PDFs, one file for each page.
+
+Links. Every placed file is in Links, in a folder named after its document. If InDesign reports missing links,
+choose Links > Relink to Folder and pick that folder. The text is set in DM Sans; the files are in Document fonts.
+"""
+
+
+def indesign_set(polls):
+    """The book as InDesign documents in one folder, in the order they are bound."""
+    import indesign
+    folder = OUT / "indesign" / NAME
+    if folder.exists():
+        shutil.rmtree(folder)
+    folder.mkdir(parents=True)
+    own = OUT / "redesign" / "_book_pages.html"
+    parts = [("front_pages", own, {0, 1, 2}, 1, True)]            # name, source, pages of the source, book page, opens with a cover
+    for n, poll in enumerate(polls):
+        parts.append((f"part_{n + 1}_the_{poll['year']}_poll", own, {3 + n}, poll["page"], False))
+        for key, report in zip(BOOK[poll["year"]], poll["reports"]):
+            if poll["year"] == 2025:
+                parts.append((f"2025_{key}", CACHE / "pdfs" / f"core_{key}.pdf", None, report["page"], True))
+            else:
+                parts.append((key, OUT / "redesign" / f"{key}.html", None, report["page"], True))
+    listing = []
+    for k, (name, source, only, page, cover) in enumerate(parts):
+        name = f"{k:02d}_{name}"
+        line = indesign.export(source, name, folder, links=f"Links/{name}", only=only, folio=page, cover=cover)
+        print(line.replace(str(OUT) + "/", ""))
+        listing.append(f"    {name + '.idml':52s} {line.split(',')[0].replace('1 pages', '1 page'):>9s}, from book page {page}")
+    indesign.fonts_folder(folder)
+    (folder / "READ ME.txt").write_text(READ_ME + "\nThe documents, and the book page each one starts on:\n\n" + "\n".join(listing) + "\n", encoding="utf-8")
+    archive = shutil.make_archive(str(OUT / "indesign" / f"{NAME}_indesign"), "zip", folder.parent, folder.name)
+    print(f"{len(parts)} InDesign documents -> {archive} ({Path(archive).stat().st_size / 1e6:.0f} MB)")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--screen", action="store_true", help="also write a smaller copy with images at 110 dpi")
+    parser.add_argument("--indesign", action="store_true", help="also write the book as a set of InDesign documents (IDML)")
     args = parser.parse_args()
     pages, polls = plan()
     own = designed(polls, len(pages))
@@ -213,6 +272,8 @@ def main():
         small = OUT / "redesign" / f"{NAME}_screen.pdf"
         out.save(small, garbage=3, deflate=True)
         print(f"screen copy -> {small} ({small.stat().st_size / 1e6:.0f} MB)")
+    if args.indesign:
+        indesign_set(polls)
 
 
 if __name__ == "__main__":

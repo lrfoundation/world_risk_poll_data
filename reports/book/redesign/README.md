@@ -277,6 +277,10 @@ foot of every page but the covers, where all the reports leave the footer
 empty; this is the only mark made on the pages of the 2025 poll's reports. The
 PDF has a bookmark for each part and report.
 
+With `--indesign` the book is also written as a set of InDesign documents, one
+for each part of it (see "An InDesign file of a book or report" in the README
+one folder up).
+
 The pages have no bleed and no trim marks, and parts and reports start on the
 next page whichever side it falls on. Both are for the printer's specification
 to settle.
