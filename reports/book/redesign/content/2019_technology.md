@@ -30,7 +30,8 @@
   "In the executive summary, the two ‘Key findings’ headings carry the name of their chapter, and the two ‘Insight into action’ sections are set one after the other under one heading.",
   "The statements set in italics beside a green bar are the highlighted statements of the original, in their original places.",
   "Web addresses that the original footnotes broke across lines have been joined up."
- ]
+ ],
+ "appendix_note": "The three appendices of the 2019 volume are set after the conclusion, word for word, and serve all four reports: the questionnaire, the references and the regions. In Appendix 2 the references stand under the chapter numbers of the 2019 volume, not those of the four reports: Chapters 1 to 4 and 10 are in *Feeling safe and the sources of risk*, Chapter 5 is *Risk at work*, Chapters 6 and 9 are in *Climate change, food and water*, and Chapters 7 and 8 are the two chapters of this report. The references listed under ‘Introduction’ belong to the introduction of the 2019 volume, which the four reports do not carry."
 }
 ---
 
@@ -56,7 +57,7 @@ The two chapters are paired because both are about technology, although they ask
 
 4. **Technology and the internet.** Chapters 7 and 8: Technology-related risk perceptions; Internet-related risk perceptions. This is the report in your hands.
 
-The appendices of the 2019 volume, which set out the methodology and the questionnaire, apply to all four reports. They are set once, after the fourth.
+The appendices of the 2019 volume (the questionnaire, the references by chapter and the regions) apply to all four reports. They are set once, at the end of the fourth.
 
 ::endnew
 
@@ -1406,6 +1407,782 @@ The second chapter turns from technologies people judge at a distance to one tha
 It is important to note when these questions were asked: in 2019, before the pandemic moved much of daily life online and before generative AI reached the public. The figures are therefore best read as a baseline. The 2021 poll returned to artificial intelligence and to the risks of being online, and what changed can only be measured because the 2019 questions came first.
 
 ::endnew
+
+::back Appendix 1: Lloyd’s Register Foundation World Risk Poll Questionnaire
+
+?1. When you hear the word RISK, do you think more about opportunity or danger?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Opportunity", "1"], ["Danger", "2"], ["(Both)", "3"], ["(Neither)", "4"], ["(DK)", "98"], ["(Refused)", "99"]]}
+```
+
+?2. Overall, compared to five years ago, do you feel more safe, less safe, or about as safe as you did five years ago?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["More safe", "1"], ["Less safe", "2"], ["About as safe", "3"], ["(DK)", "98"], ["(Refused)", "99"]]}
+```
+
+(READ:) Now, I have a few questions about risk. By RISK, I mean something that may be dangerous or that could cause harm or the loss of something. Risk could also result in a reward or something good.
+
+?3.1A. In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?
+
+?> (INTERVIEWER: Capture verbatim response) (Allow ONE response)
+
+?> Write in:
+
+?3.1B (Code respondent’s verbatim response using the list of pre-coded options below. Refer to previous screen for verbatim.)
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Road-related accidents/injuries (such as using a bicycle, car, motorbike, truck, van, bus, etc.)", "1"], ["Other transportation-related accidents/injuries (such as subway, train, plane, etc.)", "2"], ["Crime/violence/terrorism", "3"], ["Cooking or other household accidents/injuries", "4"], ["Financial: not having enough money to pay for the things you need", "5"], ["Economy-related, such as unemployment, high prices", "6"], ["Politics/political situation/corruption", "7"], ["Internet/technology-related risks", "8"], ["Health: personal health condition/illness", "9"], ["Health: drugs, alcohol, smoking", "10"], ["Water supply or drinking unclean water", "11"], ["Food-related: eating unsafe, contaminated food", "12"], ["Pollution", "13"], ["Work-related accidents: physical injuries", "14"], ["Mental stress/exhaustion", "15"], ["Climate change, natural disasters or weather-related events (such as floods, drought, wildfires, etc.)", "16"], ["Drowning", "17"], ["Other", "18"], ["Nothing/no risks", "19"], ["Don’t know", "98"], ["Refused", "99"]]}
+```
+
+?3.2A Other than what you just mentioned, in your own words, what is another MAJOR source of RISK TO YOUR SAFETY in your daily life?
+
+?> (INTERVIEWER: Capture verbatim response) (Allow ONE response)
+
+?> Write in:
+
+?3.2B (Please code respondent’s verbatim response using the list of pre-coded options below. Refer to previous screen for verbatim.)
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Road-related accidents/injuries (such as using a bicycle, car, motorbike, truck, van, bus, etc.)", "1"], ["Other transportation-related accidents/injuries (such as subway, train, plane, etc.)", "2"], ["Crime/violence/terrorism", "3"], ["Cooking or other household accidents/injuries", "4"], ["Financial: not having enough money to pay for the things you need", "5"], ["Economy-related, such as unemployment, high prices", "6"], ["Politics/political situation/corruption", "7"], ["Internet/technology-related risks", "8"], ["Health: personal health condition/illness", "9"], ["Health: drugs, alcohol, smoking", "10"], ["Water supply or drinking unclean water", "11"], ["Food-related: eating unsafe, contaminated food", "12"], ["Pollution", "13"], ["Work-related accidents: physical injuries", "14"], ["Mental stress/exhaustion", "15"], ["Climate change, natural disasters or weather-related events (such as floods, drought, wildfires, etc.)", "16"], ["Drowning", "17"], ["Other", "18"], ["Nothing/no risks", "19"], ["Don’t know", "98"], ["Refused", "99"]]}
+```
+
+?4. Please tell me whether you think each of the following will mostly HELP or mostly HARM people in this country in the next 20 years. If you don’t have an opinion about this, please just say so.
+
+?> (Interviewer: If respondent asks, 'What do you mean by — ,' then please say, 'Please think about how you understand this issue. If you don’t have an opinion about this, please just say so.')
+
+```grid
+{"columns": ["", "", "Mostly help", "Mostly harm", "Don’t have opinion", "(Neither)", "(DK)", "(Refused)"], "rows": [["L4A", "Genetically-modified food", "1", "2", "3", "4", "98", "99"], ["L4B", "The use of nuclear power for electricity", "1", "2", "3", "4", "98", "99"], ["L4C", "Machines or robots that can think and make decisions, often known as artificial intelligence", "1", "2", "3", "4", "98", "99"]]}
+```
+
+?5. Do you think that climate change is a very serious threat, a somewhat serious threat, or not a threat at all to the people in this country in the next 20 years? If you don’t know, please just say so.
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Very serious threat", "1"], ["Somewhat serious threat", "2"], ["Not a threat at all", "3"], ["(DK)", "98"], ["(Refused)", "99"]]}
+```
+
+?6. In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried?
+
+```grid
+{"columns": ["", "", "Very worried", "Somewhat worried", "Not worried", "(DK)", "(Refused)"], "rows": [["L6A", "The food you eat", "1", "2", "3", "98", "99"], ["L6B", "The water you drink", "1", "2", "3", "98", "99"], ["L6C", "Violent crime", "1", "2", "3", "98", "99"], ["L6D", "Severe weather events, such as floods or violent storms", "1", "2", "3", "98", "99"], ["L6E", "Electrical power lines", "1", "2", "3", "98", "99"], ["L6F", "Household appliances, such as a washing machine, dryer or refrigerator", "1", "2", "3", "98", "99"], ["L6G", "Mental health issues", "1", "2", "3", "98", "99"]]}
+```
+
+?7. How LIKELY do you think it is that each of the following things COULD cause you serious harm in the next TWO years? Is it very likely, somewhat likely, or not likely at all?
+
+```grid
+{"columns": ["", "", "Very likely", "Somewhat likely", "Not likely at all", "(DK)", "(Refused)"], "rows": [["L7A", "The food you eat", "1", "2", "3", "98", "99"], ["L7B", "The water you drink", "1", "2", "3", "98", "99"], ["L7C", "Violent crime", "1", "2", "3", "98", "99"], ["L7D", "Severe weather events, such as floods or violent storms", "1", "2", "3", "98", "99"], ["L7E", "Electrical power lines", "1", "2", "3", "98", "99"], ["L7F", "Household appliances, such as a washing machine, dryer or refrigerator", "1", "2", "3", "98", "99"], ["L7G", "Mental health issues", "1", "2", "3", "98", "99"]]}
+```
+
+?8. Have you or someone you PERSONALLY know EXPERIENCED serious harm from any of the following things in the past TWO years?
+
+```grid
+{"columns": ["", "", "Yes", "No", "(DK)", "(Refused)"], "rows": [["L8A", "Eating food", "1", "2", "98", "99"], ["L8B", "Drinking water", "1", "2", "98", "99"], ["L8C", "Violent crime", "1", "2", "98", "99"], ["L8D", "Severe weather events, such as floods or violent storms", "1", "2", "98", "99"], ["L8E", "Electrical power lines", "1", "2", "98", "99"], ["L8F", "Household appliances, such as a washing machine, dryer or refrigerator", "1", "2", "98", "99"], ["L8G", "Mental health issues", "1", "2", "98", "99"]]}
+```
+
+?9. How likely do you think it is that any of the following things could happen to you in the next TWO years? Please use a scale from 0 to 10, where 0 means it is 'not likely at all' and 10 means it is 'very likely.' You can use any number from 0 to 10.
+
+```grid
+{"columns": ["", "", "Not likely at all", "", "", "", "", "", "", "", "", "", "Very likely", "(DK)", "(Refused)"], "rows": [["L9A", "Being in a traffic accident (If necessary, READ: This includes any roadside accident that could occur while being on a bike, walking by a road, or being in a car, bus, etc.)", "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "98", "99"], ["L9B", "Being physically attacked by someone", "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "98", "99"], ["L9C", "Being in an airplane accident", "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "98", "99"], ["L9D", "Drowning", "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "98", "99"], ["L9E", "Being struck by lightning", "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "98", "99"]], "tight": true}
+```
+
+(READ:) Now, on a different topic …
+
+?10. In general, do you wear a seatbelt if you are in a motorized vehicle and one is available?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Yes", "1"], ["No", "2"], ["(DK)", "98"], ["(Refused)", "99"]]}
+```
+
+?11. Are you able to swim without any assistance at all?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Yes", "1"], ["No", "2"], ["(DK)", "98"], ["(Refused)", "99"]]}
+```
+
+?12. Do you think that 10% is bigger than 1 out of 10, smaller than 1 out of 10, or the same as 1 out of 10? If you do not know, please just say so.
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["10% is bigger than 1 out of 10", "1"], ["10% is smaller than 1 out of 10", "2"], ["10% is the same as 1 out of 10", "3"], ["(DK)", "98"], ["(Refused)", "99"]]}
+```
+
+(READ:) Now, on a different topic …
+
+?13. Suppose you wanted to find out if the food you eat is safe. Would you look to any of the following sources for information, or not?
+
+```grid
+{"columns": ["", "", "Yes", "No", "(Does not apply)", "(DK)", "(Refused)"], "rows": [["L13A", "Friends or family", "1", "2", "97", "98", "99"], ["L13B", "Medical professionals, such as your local doctor or nurse", "1", "2", "97", "98", "99"], ["L13C", "Newspapers, television or radio", "1", "2", "97", "98", "99"], ["L13D", "The internet/social media", "1", "2", "97", "98", "99"], ["L13E", "Agency for Food, Environmental and Occupational Health and Safety", "1", "2", "97", "98", "99"], ["L13F", "The packaging or label on the food", "1", "2", "97", "98", "99"], ["L13G", "A famous person you like", "1", "2", "97", "98", "99"], ["L13H", "Local religious leaders", "1", "2", "97", "98", "99"]]}
+```
+
+?> (If code 1 'yes' to ANY in L13A-L13H, continue; otherwise, skip to L15)
+
+?14. Considering the sources of information you would access, which one would you trust MOST to provide information about food safety?
+
+?> (INTERVIEWER: Do NOT read response options) (Open-ended and code using pre-codes below) (Allow ONE response)
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Friends or family", "1"], ["Medical professionals, such as your local doctor or nurse", "2"], ["Newspapers, television or radio", "3"], ["The internet/social media", "4"], ["Agency for Food, Environmental and Occupational Health and Safety", "5"], ["The packaging or label on the food", "6"], ["A famous person you like", "7"], ["Local religious leaders", "8"], ["Would trust none of them", "9"], ["Some other source", "10"], ["Don’t know", "98"], ["Refused", "99"]]}
+```
+
+?15. In general, do you think the government should require businesses to adopt safety procedures and rules, or not?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Yes", "1"], ["No", "2"], ["(DK)", "98"], ["(Refused)", "99"]]}
+```
+
+?16. In general, in your opinion does the government do a good job ensuring that the following are safe, or not?
+
+```grid
+{"columns": ["", "", "Yes", "No", "(DK)", "(Refused)"], "rows": [["L16A", "The food you buy", "1", "2", "98", "99"], ["L16B", "The water you drink", "1", "2", "98", "99"], ["L16C", "Powerlines in the city or area where you live", "1", "2", "98", "99"]]}
+```
+
+?17. Suppose you lost a small bag that contained items of great financial value to you that had your name and address written on it. If it were found by each of the following people, in general, how likely is it that it would be returned to you with all of its contents? (Read 1-3)
+
+```grid
+{"columns": ["", "", "Very likely", "Somewhat likely", "Not likely at all", "(DK)", "(Refused)"], "rows": [["L17A", "A neighbor", "1", "2", "3", "98", "99"], ["L17B", "A stranger", "1", "2", "3", "98", "99"], ["L17C", "The police", "1", "2", "3", "98", "99"]]}
+```
+
+?> (If respondent works for an employer OR is self-employed, continue; otherwise, skip to 'READ' before L26)
+
+?18. How likely do you think it is that you could be injured while working in the next TWO years?
+
+```grid
+{"columns": ["Not likely at all", "", "", "", "", "", "", "", "", "", "Very likely", "(DK)", "(Refused)"], "rows": [["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "98", "99"]], "tight": true}
+```
+
+?19. Have you EVER been seriously injured while working?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Yes", "1"], ["No", "2"], ["(DK)", "98"], ["(Refused)", "99"]]}
+```
+
+?20. Are any of the following a source of risk to your personal safety WHILE YOU ARE WORKING?
+
+```grid
+{"columns": ["", "", "Yes", "No", "(DK)", "(Refused)"], "rows": [["L20A", "Operating equipment or heavy machinery", "1", "2", "98", "99"], ["L20B", "Fire", "1", "2", "98", "99"], ["L20C", "Exposure to chemicals or biological substances", "1", "2", "98", "99"], ["L20D", "Physical harassment or violence", "1", "2", "98", "99"], ["L20E", "Tripping or falling", "1", "2", "98", "99"]]}
+```
+
+?21. Have you or has anyone you work with experienced injury or harm from any of the following WHILE WORKING in the past TWO years?
+
+```grid
+{"columns": ["", "", "Yes", "No", "(DK)", "(Refused)"], "rows": [["L21A", "Operating equipment or heavy machinery", "1", "2", "98", "99"], ["L21B", "Fire", "1", "2", "98", "99"], ["L21C", "Exposure to chemicals or biological substances", "1", "2", "98", "99"], ["L21D", "Physical harassment or violence", "1", "2", "98", "99"], ["L21E", "Tripping or falling", "1", "2", "98", "99"]]}
+```
+
+?> (If respondent is employed by an employer, continue; otherwise, skip to 'READ' before L26)
+
+?22. Do you agree or disagree with the following statement? You are free to report any safety problems you notice to your employer without fear of punishment.
+
+```grid
+{"columns": ["Agree", "Disagree", "(DK)", "(Refused)"], "rows": [["1", "2", "98", "99"]]}
+```
+
+?23. Other than yourself, who do you feel is MOST responsible for your safety while you are working? (Read 1-3)
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Your employer", "1"], ["The trade or labour union", "2"], ["The government", "3"], ["(No one else is responsible)", "4"], ["(DK)", "98"], ["(Refused)", "99"]]}
+```
+
+?24. Do you think each of the following CARE about your safety while you are working, yes or no? If the person or group does not apply to you, please say so.
+
+```grid
+{"columns": ["", "", "Yes", "No", "Does not apply", "(DK)", "(Refused)"], "rows": [["L24A", "Your co-workers", "1", "2", "97", "98", "99"], ["L24B", "Your boss or supervisor", "1", "2", "97", "98", "99"], ["L24C", "The trade or labour union", "1", "2", "97", "98", "99"]]}
+```
+
+?25. Do you think the safety rules at your place of work are a good thing to have or do they make your job more difficult to do?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["A good thing", "1"], ["Make your job more difficult to do", "2"], ["(Both)", "3"], ["(Does not apply/No safety rules at work)", "97"], ["(DK)", "98"], ["(Refused)", "99"]]}
+```
+
+(READ:) Now, on a different topic …
+
+?26. Have you used the internet, including social media, in the past 30 days?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Yes", "1"], ["No", "2"], ["(DK)", "98"], ["(Refused)", "99"]]}
+```
+
+?> (If respondent has used the internet or social media in the past 30 days [code 1 in L26], continue; otherwise, skip – module complete.)
+
+?27. When using the internet or social media, do you worry about any of the following things happening to you?
+
+```grid
+{"columns": ["", "", "Yes", "No", "(DK)", "(Refused)"], "rows": [["L27A", "Online bullying, such as someone sending you a hateful message or comment through social media", "1", "2", "98", "99"], ["L27B", "Receiving false information, such as news or information which is not true", "1", "2", "98", "99"], ["L27C", "Fraud, such as someone stealing your bank information or your money", "1", "2", "98", "99"]]}
+```
+
+::back Appendix 2: References
+
+## Introduction
+
+Balsari, S., Buckee, C., & Khanna, T. (2020). Which COVID-19 data can you trust? *Harvard Business Review*. https://hbr.org/2020/05/which-covid-19-data-can-you-trust
+
+Cardew, G. (2017). Why the public understanding of risk matters. *The Royal Institution.* Retrieved April 21, 2020, from https://www.rigb.org/blog/2017/july/public-understanding-of-risk
+
+Cohen, J., & Kupferschmidt, K. (2020, March 18). Mass testing, school closings, lockdowns: Countries pick tactics in ‘war’ against coronavirus. *Science*. https://www.sciencemag.org/news/2020/03/mass-testing-school-closings-lockdowns-countries-pick-tactics-war-against-coronavirus#
+
+Engdahl E., & Lidskog, R. (2014). Risk, communication and trust: Towards an emotional understanding of trust. *Public Understanding of Science, 23*(6):703-17. https://journals.sagepub.com/doi/10.1177/0963662512460953
+
+Fisher, M. (2020). Coronavirus ‘hits all the hot buttons’ for how we misjudge risk. *The New York Times.* https://www.nytimes.com/2020/02/13/world/asia/coronavirus-risk-interpreter.html
+
+Flournoy, M., & Morell, M. (2020, April 19). The 6 factors that determine coronavirus containment or devastation. *The Washington Post.* https://www.washingtonpost.com/opinions/2020/04/19/6-factors-that-determine-coronavirus-containment-or-devastation/
+
+Health and Safety Executive. (n.d.). *Consulting your employees.* Retrieved April 21, 2020, from https://www.hse.gov.uk/toolbox/managing/consulting.htm
+
+Kahneman, D., & Tversky, A. (1979). Prospect theory: An analysis of decision under risk. *Econometrica, 47*(2): 263.
+
+Krizan, Z., & Windschitl, P. (2007). The influence of outcome desirability on optimism. *Psychological Bulletin, 133*(1), 95-121. https://web.archive.org/web/20141217083929/http://public.psych.iastate.edu/zkrizan/pdf/krizan_windschitl_06db.pdf
+
+Lloyd’s Register Foundation. (2017, July). *Foresight review on the public understanding of risk.* (Lloyd’s Register Foundation Report Series No. 2017.3). https://www.lrfoundation.org.uk/en/publications/foresight-review-on-the-public-understanding-of-risk/
+
+Lloyd’s Register Foundation & Gallup, Inc. (2019, September). *Mapping risk: A review of global data sources on safety and risk.* https://www.https://www.lrfoundation.org.uk/en/news/mapping-risk-report/
+
+Lohiniva, A., Sane, J., Sibenberg, K., Puumalainen, T., & Salminen, M. (2020).Understanding coronavirus disease (COVID-19) risk perceptions among the public to enhance risk communication efforts: A practical approach for outbreaks, Finland. *Eurosurveillance, 25*(13). https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7140598/
+
+Marris, C., Langford, I. H., & O’Riordan, T. (1998). A quantitative test of the cultural theory of risk perceptions: Comparison with the psychometric paradigm. *Risk Analysis 18*(5), 635-647. https://doi.org/10.1111/j.1539-6924.1998.tb00376.x
+
+Slovic, P. (2010). *The feeling of risk: New perspectives on risk perception.* Earthscan.
+
+## Chapter 1
+
+Chauvin, B. (2018). Individual differences in the judgment of risks: Sociodemographic characteristics, cultural orientation, and level of expertise. In M. Raue, E. Lermer, & B. Streicher (Eds). *Psychological perspectives on risk and risk analysis* (pp. 37-61). Springer.
+
+China’s economic growth hits 30-year low. (2020, January 17). *BBC News.* https://www.bbc.com/news/business-51144892
+
+Congressional Research Service. (2019). *Rwanda: In Brief* [Report prepared for members and committees in Congress]. (Summary p. 2). Retrieved April 28, 2020, from https://fas.org/sgp/crs/row/R44402.pdf
+
+Courbage, C., Montoliu-Montes, G., & Rey, B. (2018). How vulnerable is risk aversion to wealth, health and other risks? An empirical analysis for Europe. *Working Papers,* halshs-01935846, HAL.
+
+*GINI Index (World Bank estimate) | Data.* (n.d.). The World Bank. Retrieved August 19, 2020, from https://data.worldbank.org/indicator/SI.POV.GINI
+
+Ibarra, A. B., & Byanyima, W. (2016). *Latin America is the world’s most unequal region. Here’s how to fix it.* World Economic Forum. https://www.weforum.org/agenda/2016/01/inequality-is-getting-worse-in-latin-america-here-s-how-to-fix-it/
+
+*Intentional homicides (per 100,000 people) | Data.* (n.d.). The World Bank. Retrieved August 19, 2020, from https://data.worldbank.org/indicator/VC.IHR.PSRC.P5
+
+Keating, E., & Reinhart, R. (2020, February 20). *Hong Kongers' confidence in institutions damaged in unrest.* Gallup.com. https://news.gallup.com/poll/284189/hong-kongersconfidence-institutions-damaged-unrest.aspx
+
+Kurmanaev, A. (2019, May 17). Venezuela’s collapse is the worst outside of war in decades, economists say. *The New York Times.* https://www.nytimes.com/2019/05/17/world/americas/venezuela-economy.html
+
+Ponsonby, W. (2017). Global occupational health. *Occupational Medicine, 67*(5),331–333. https://academic.oup.com/occmed/article/67/5/331/3975228
+
+*OECD employment outlook 2019: The future of work.* (n.d.). OECD Library. Retrieved April 20, 2020, from https://www.oecd-ilibrary.org/employment/oecd-employment-outlook-2019_9ee00155-en
+
+Reinhart, R., & Ray, J. (2019, August 19). *Inside Afghanistan: Law and order becomes a casualty of war.* Gallup.com. https://news.gallup.com/poll/265427/inside-afghanistan-law-order-becomes-casualty-war.aspx
+
+Roser, M., & Ritchie, H. (2019). *Homicides.* Our World in Data*.* Retrieved April 20, 2020, from https://ourworldindata.org/homicides
+
+Satterfield, T. A., Mertz, C. K., & Slovic, P. (2004). Discrimination, vulnerability, and justice in the face of risk. *Risk Analysis, 24*(1), 115-129.
+
+UNICEF. (2019). *Levels & trends in child mortality.* https://childmortality.org/wp-content/uploads/2019/10/UN-IGME-Child-Mortality-Report-2019.pdf
+
+United Nations Department of Economic and Social Affairs, (2020). *World social report 2020: Inequality in a rapidly changing world.* https://www.un.org/development/desa/dspd/world-social-report/2020-2.html
+
+*Venezuelan migration: The 4,500-kilometer gap between desperation and opportunity.* (2019, November 26). The World Bank. Retrieved April 28, 2020, from https://www.worldbank.org/en/news/feature/2019/11/26/migracion-venezolana-4500-kilometros-entre-el-abandono-y-la-oportunidad
+
+Why Afghanistan is more dangerous than ever. (2018, September 14). *BBC News.* https://www.bbc.com/news/world-asia-45507560
+
+*World Bank country and lending groups.* (n.d.). World Bank Data Help Desk. https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
+
+*World economic outlook database, April 2020.* (n.d.). The International Monetary Fund. Retrieved June 23, 2020, from https://www.imf.org/external/pubs/ft/weo/2020/01/weodata/index.aspx
+
+World Health Organization. (2019). *Maternal mortality.* https://www.who.int/news-room/fact-sheets/detail/maternal-mortality
+
+Yee, V. (2019, October 23). Lebanon protests unite sects in demanding new government. *The New York Times.* https://www.nytimes.com/2019/10/23/world/middleeast/lebanon-protests.html
+
+Yee, V. (2020, March 7). Lebanon will default on foreign debt payment amid deepening economic crisis. *The New York Times.* https://www.nytimes.com/2020/03/07/world/middleeast/lebanon-debt-financial-crisis.html
+
+Yeung, J. (2019, December 19). From an extradition bill to a political crisis: A guide to the Hong Kong protests. *CNN.* Retrieved April 28, 2020, from https://www.cnn.com/2019/11/15/asia/hong-kong-protests-explainer-intl-hnk-scli/index.html
+
+## Chapter 2
+
+*10 Facts about road safety.* (2018). World Health Organization. Retrieved July 27, 2020, from https://www.who.int/news-room/facts-in-pictures/detail/road-safety
+
+Afghanistan profile – Timeline. (2019, September 9). *BBC News.* https://www.bbc.com/news/world-south-asia-12024253
+
+Australia fires: A visual guide to the bushfire crisis. (2020, January 31). *BBC News.* https://www.bbc.com.uk/news/worldaustralia-50951043
+
+Azamoush, S. (2019). *Iran’s economy plummets under weight of sanctions.* DW.com. https://www.dw.com/en/irans-economy-plummets-under-weight-ofsanctions/a-50950471
+
+Birnbaum, M. (2019, December 20). Without a government for a year, Belgium shows what happens to politics without politicians. *The Washington Post.* https://www.washingtonpost.com/world/europe/without-a-government-for-a-year-belgium-shows-what-happens-to-politics-without-politicians/2019/12/19/5c13cb48-20de-11ea-b034-de7dc2b5199b_story.html
+
+Brown, V. (2014). Risk perception: It’s personal. *Environmental Health Perspectives, 122*(10), pp. A276-A279.
+
+Bustillo, I., & Velloso, H. (2015). Insecurity and development in Latin America and the Caribbean. *Prism: A Journal of the Center for Complex Operations, 5*(4), 48.
+
+*Cause of death, by injury (% of total) | Data.* (n.d.). World Health Organization. Retrieved April 25, 2020, from https://data.worldbank.org/indicator/SH.DTH.INJR.ZS
+
+Chioda, L. (2017). *Stop the violence in Latin America: A look at prevention from cradle to adulthood.* The World Bank, Latin American Development Forum Series, p. 257. https://elibrary.worldbank.org/doi/book/10.1596/978-1-4648-0664-3
+
+Congressional Research Service. (2019). *Rwanda: In brief* [Report prepared for members and committees in Congress]. (Summary, p. 2). Retrieved April 28, 2020, from https://fas.org/sgp/crs/row/R44402.pdf
+
+*Countries and territories.* (n.d.) Freedom House. Retrieved May 14, 2020, from https://freedomhouse.org/countries/freedom-world/scores
+
+Dagli, I. (2017). *The Cyprus problem: Why solve a comfortable conflict?* Oxford Research Group. https://www.oxfordresearchgroup.org.uk/blog/the-cyprus-problem-why-solve-a-comfortable-conflict
+
+*Death rate, crude (per 1,000 people).* (n.d.). The World Bank. Retrieved April 25, 2020, from https://data.worldbank.org/indicator/SP.DYN.CDRT.IN
+
+*Drinking-water: Key facts.* (2019, June). World Health Organization. Retrieved May 14, 2020, from https://www.who.int/news-room/fact-sheets/detail/drinking-water
+
+*Droughts, floods, extreme temperatures (% of population, average 1990-2009) | Data.* (n.d.). The World Bank. Retrieved April 26, 2020, from https://data.worldbank.org/indicator/EN.CLC.MDAT.ZS
+
+Enamorado, T., López-Calva, L., Rodríguez-Castelán, C., & Winkler, H. (2014). *Income inequality and violent crime: Evidence from Mexico’s drug war.* The World Bank Group, Policy Research Working Paper 6935. http://documents.worldbank.org/curated/en/236161468299090847/pdf/WPS6935.pdf
+
+Fajnzylber, P., Lederman, D., & Loayza, N. (2002). Inequality and violent crime. *The Journal of Law & Economics, 45*(1), 1-39. doi:10.1086/338347.
+
+*Food safety: Key facts.* (n.d.). World Health Organization. Retrieved June 10, 2020, from https://www.who.int/news-room/fact-sheets/detail/food-safety
+
+Fröhlich, S. (2019, September 21). *South Africa struggles to combat its problems with violence.* DW.com. https://www.dw.com/en/south-africa-struggles-to-combat-its-problems-withviolence/a-50500195
+
+Fukuyama, F. (2020). The pandemic and political order. *Foreign Affairs, 99*(4), 26-32.
+
+Gardiner, D. (2020). Lebanon's economic crisis requires an urgent decision on IMF aid. *Financial Times.* https://www.ft.com/content/60c1896e-57d9-11eaa528-dd0f971febbc
+
+*GDP per capita, ppp (current international $) | Data.* (n.d.). World Bank estimate using U.S. dollars. Retrieved April 26, 2020, from https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD
+
+*GINI Index (World Bank estimate) | Data.* (n.d.). The World Bank. Retrieved April 25, 2020, from https://data.worldbank.org/indicator/SI.POV.GINI
+
+Hervey, G. (2017). The EU exodus: When doctors and nurses follow the money. *POLITICO.* https://www.politico.eu/article/doctors-nurses-migration-health-care-crisis-workers-follow-the-money-european-commission-data/
+
+*Intentional homicides (Per 100,000 people) | Data.* (n.d.). The World Bank. Retrieved September 1, 2020, from https://data.worldbank.org/indicator/VC.IHR.PSRC.P5?most_recent_value_desc=true
+
+Lebanon. Why the country is in crisis. (2020, August 5). *BBC News.* https://www.bbc.com/news/world-middle-east-53390108
+
+Lee, J., & Kong, K. (2019, October 15). South Korean President Moon Jae-in faces crisis with echoes of predecessor Park’s downfall. *The Japan Times.* https://www.japantimes.co.jp/news/2019/10/15/asia-pacific/politics-diplomacy-asia-pacific/south-korean-president-moon-jae-faces-crisis-echoes-predecessor-parks-downfall/#.XrBwcahKiUk
+
+Mao, F. (2019). How dangerous is Australia for women? *BBC News.* https://www.bbc.com/news/world-australia-46913913
+
+*Mapped: The world’s oldest democracies.* (n.d.). World Economic Forum. https://www.weforum.org/agenda/2019/08/countries-are-the-worlds-oldest-democracies
+
+Mills, A. (2014). Health care systems in low- and middle-income countries. *New England Journal of Medicine, 370*(6), 552-557. https://www.nejm.org/doi/full/10.1056/nejmra1110897
+
+Newport, F. (2019). *The impact of increased political polarization.* Gallup.com. https://news.gallup.com/opinion/polling-matters/268982/impact-increased-political-polarization.aspx
+
+Orach, C. (2009). Health equity: Challenges in low-income countries. *African Health Sciences,* S49-S51. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2877288/
+
+*People using at least basic drinking water services (% of population) | Data.* (n.d.). The World Bank. Retrieved April 26, 2020, from https://data.worldbank.org/indicator/SH.H2O.BASW.ZS
+
+*Poverty | Data.* (n.d.). The World Bank. Retrieved June 22, 2020, from https://data.worldbank.org/topic/poverty
+
+*Proportion of women subjected to physical and/or sexual violence in the last 12 months (% of women age 15-49) | Data.* (n.d.). The World Bank. Retrieved June 25, 2020, from https://data.worldbank.org/indicator/SG.VAW.1549.ZS
+
+*Regional economic outlook, Middle East and Central Asia: Learning to live with cheaper oil amid weaker demand.* (2015, January 21). International Monetary Fund. https://www.imf.org/en/Publications/REO/MECA/Issues/2016/04/05/Learning-to-Live-With-Cheaper-Oil-Amid-Weaker-Demand1
+
+*Road traffic deaths | Data by country.* (n.d.). World Health Organization. Retrieved April 29, 2020, from https://apps.who.int/gho/data/node.main.A997
+
+*Road traffic injuries: Key facts.* (n.d.). World Health Organization. Retrieved April 30, 2020, from https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries
+
+Sang-Hun, C. (2019, October 12). In Seoul, crowds denounce a divisive politician. Days later, others defend him. *The New York Times.* https://www.nytimes.com/2019/10/12/world/asia/south-korea-protests.html
+
+Saud, B., & Paudel, G. (2018). The threat of ambient air pollution in Kathmandu, Nepal. *Journal of Environmental and Public Health, 2018,* 1-7. https://doi.org/10.1155/2018/1504591
+
+Shining light on Latin America’s homicide epidemic. (2018, April 5). *The Economist.* https://www.economist.com/briefing/2018/04/05/shining-light-on-latin-americas-homicide-epidemic
+
+Slovic P. (1999). Trust, emotion, sex, politics, and science: Surveying the risk-assessment battlefield. *Risk Analysis, 19*(4), pp. 689-701.
+
+Socialists win repeat Spanish election, Vox becomes third biggest force in Congress. (2019, November 11). *El País.* Retrieved May 14, 2020, from https://www.bbc.co.uk/news/world-europe-50315459?intlink_from_url=https://www.bbc.co.uk/news/topics/cv3151g9wp0t/spain-generalelections-2019&link_location=live-reporting-story
+
+Statistica. (2019). *South Africa: Urbanization from 2008 to 2018.* Retrieved May 13, 2020, from https://www.statista.com/statistics/455931/urbanization-in-south-africa/
+
+Taylor, A. (2016). Nepal’s earthquakes: One year later. *The Atlantic.* https://www.theatlantic.com/photo/2016/04/nepals-earthquakesone-year-later/479772/
+
+*Violence against women in Australia.* (2017, January 20). Australian Human Rights Commission. https://humanrights.gov.au/our-work/legal/submission/violence-against-women-australia-2017
+
+Why life expectancy is lower in Eastern Europe. (2018). *The Economist.* https://www.economist.com/europe/2018/09/20/why-life-expectancy-is-lower-in-eastern-europe
+
+*World population prospects – population dynamics.* (n.d.). United Nations Department of Economic and Social Affairs. Retrieved May 11, 2020, from https://population.un.org/wpp/DataQuery/
+
+*World report 2019: Rights trends in Cameroon.* (2018, December 11). Human Rights Watch. https://www.hrw.org/world-report/2019/country-chapters/cameroon
+
+Yeung, J., Sidhu, S., & Wright, R. (2019, August 26). A gun shot, petrol bombs, and water cannons mark violent escalation in Hong Kong protest. *CNN.* https://www.cnn.com/2019/08/25/asia/hong-kong-protest-aug-25-intl-hnk/index.html
+
+Zhang, T., & Klyuev, V. (2017, January 12). *Roads to stronger growth in low-income countries.* IMF Blog. Retrieved June 22, 2020, from https://blogs.imf.org/2017/01/12/roads-to-stronger-growth-in-low-income-countries/
+
+## Chapter 3
+
+*Accident statistics.* (n.d.). International Civil Aviation Organization. Retrieved August 4, 2020, from https://www.icao.int/safety/iStars/Pages/Accident-Statistics.aspx
+
+Bostrom, A. (1997). Risk perceptions: “Experts” vs. “lay people”. *Duke Environmental Law & Policy Forum, 8*(1), 101-103.
+
+Centers for Disease Control and Prevention. (n.d.). *If the material uses numeric probabilityto describe risk, is the probability also explained with words or a visual?* https://www.cdc.gov/ccindex/tool/page-20.html
+
+Corrigan, P., Druss, B., & Perlick, D. (2014). The impact of mental illness stigma on seeking and participating in mental health care. *Psychological Science in the Public Interest, 15*(2), 37-70. https://www.psychologicalscience.org/publications/mental-illness-stigma.html
+
+*Drowning.* (n.d.). World Health Organization. Retrieved August 6, 2020, from https://www.who.int/news-room/fact-sheets/detail/drowning
+
+Finucane, M. L., Slovlic, P., Mertz, C. K., Flynn, J., & Satterfield, T. (2000). Gender, race, and perceived risk: The 'white male' effect. *Health, Risk & Society, 2*(2), pp. 159-172.
+
+Fischhoff, B., & Kadvany, J. (2011). *Risk: A very short introduction.* Oxford University Press.
+
+Fox-Glassman, K. T., & Weber, E. U. (2016). What makes risk acceptable? Revisiting the 1978 psychological dimensions of perceptions of technological risks. *Journal of Mathematical Psychology, 75,* 157-169. https://doi.org/10.1016/j.jmp.2016.05.003
+
+*Global burden of disease results tool.* (n.d.). Institute for Health Metrics and Evaluation Global Health Data Exchange. Retrieved August 4, 2020, from http://ghdx.healthdata.org/gbd-results-tool
+
+Hawkins, A. J. (2019, March 22). *Everything you need to know about the Boeing 737 Max airplane crashes.* The Verge. https://www.theverge.com/2019/3/22/18275736/boeing-737-max-plane-crashes-grounded-problems-info-details-explained-reasons
+
+Holle, R. (2008). Annual rates of lightning fatalities by country.
+
+Li, C.-W., Phun, V. K., Suzuki, M., & Yai, T. (2015). The effects of aviation accidents on public perception toward an airline. *Journal of the Eastern Asia Society for Transportation Studies, 11*(2347-2362). https://doi.org/10.11175/easts.11.2347
+
+Lloyd’s Register Foundation. (2017, July). *Foresight review on the public understanding of risk.* (Lloyd’s Register Foundation Report Series No. 2017.3). https://www.lrfoundation.org.uk/en/publications/foresight-review-on-the-public-understanding-of-risk/
+
+Lloyd’s Register Foundation & Gallup, Inc. (2019). *Mapping risk: A review of global data sources on safety and risk.* https://www.lrfoundation.org.uk/en/news/mapping-risk-report/
+
+Mauboussin, A., & Mauboussin, M. J. (2018, July 3). If you say something is “likely,” how likely do people think it is? *Harvard Business Review.* https://hbr.org/2018/07/if-you-say-something-is-likely-how-likely-do-people-think-it-is
+
+McNeil, B. J., Pauker, S. G., Sox, H. C., & Tversky, A. (1982). On the elicitation of preferences for alternative therapies. *The New England Journal of Medicine, 306*(1259-1262). https://doi.org/10.1056/NEJM198205273062103
+
+Patt, A. G., & Schrag, D. P. (2003). *Using specific language to describe risk and probability.* Kluwer Academic Publishers.
+
+Reyna, V. F., & Brainerd, C. J. (2007). The importance of mathematics in health and human judgment: Numeracy, risk communication, and medical decision making. *Learning and Individual Differences, 17*(2), 147- 159. https://doi.org/10.1016/j.lindif.2007.03.010
+
+Ritchie H., & Roser, M. (2018). Causes of death. *Our World in Data.* https://ourworldindata.org/causes-of-death
+
+*Road traffic injuries: Key facts.* (n.d.). World Health Organization. Retrieved August 4, 2020, from https://www.who.int/news-room/factsheets/detail/road-traffic-injuries
+
+Satterfield, T. A., Mertz C. K., & Slovic, P. (2004). Discrimination, vulnerability and justice in the face of risk. *Risk Analysis, 24*(1), pp. 115-129.
+
+Shermer, M. (2008, September 1). Why our brains do not intuitively grasp probabilities: Part one of a series of articles on the neuroscience of chance. *Scientific American.* https://www.scientificamerican.com/article/why-our-brains-do-not-intuitively-grasp-probabilities/
+
+Slovic, P., Fischhoff, B., & Lichtenstein, S. (1981). Perceived risk: Psychological factors and social implications. In *Proceedings of the Royal Society series A: Mathematical and physical sciences 376*(1764), 17-34. Royal Society.
+
+Slovic, P., Fischhoff, B., & Lichtenstein, S. (1982). Facts versus fears: Understanding perceived risk. In D. Kahneman, P. Slovic, & A. Tversky (Eds.), *Judgement under uncertainty: Heuristics and biases* (pp. 463-492). Cambridge University Press.
+
+Slovic, P., Fischhoff, B., & Lichtenstein, S. (1985). Characterizing perceived risk. In R. W. Kates, C. Hohenemser, & J. X. Kasperson (Eds.). (1985). *Perilous progress: Managing the hazards of technology,* pp. 91-125. Westview.
+
+Slovic, P., Fischhoff, B., & Lichtenstein, S. (1986). *Risk evaluation and management: The psychometric study of risk perception,* pp. 3-24. Springer.
+
+Slovic, P., Finucane, M., Peters, E., & MacGregor, D. (2004). Risk as analysis and risk as feelings: Some thoughts about affect, reason, risk, and rationality. *Risk Analysis, 24*(2), 311–322. https://doi.org/10.1111/j.0272-4332.2004.00433.x
+
+Slovic, P. (1992). Perception of risk: Reflections on the psychometric paradigm. In S. Krimsky & D. Golding (Eds.), *Social theories of risk* (pp. 117-152). Praeger.
+
+Slovic, P. (2000). *The perception of risk. Risk, society, and policy series.* Earthscan.
+
+Slovic, P. (2010). *The feeling of risk: New perspectives on risk perception.* Earthscan.
+
+Slovic, P., & Weber, E. U. (2002, April 12-13). *Perception of risk posed by extreme events* [Paper presentation]. Risk Management Strategies in an Uncertain World, Palisades, NY, USA. https://www.ldeo.columbia.edu/chrr/documents/meetings/roundtable/white_papers/slovic_wp.pdf
+
+Spiegelhalter, D., & Gage, J. (2015). What can education learn from real-world communication of risk and uncertainty? *Mathematics Enthusiast, 12*(1-3), 4-10.
+
+*Stigma and discrimination.* (2015, August 7). Mental Health Foundation. https://www.mentalhealth.org.uk/a-to-z/s/stigma-and-discrimination
+
+*Traffic injuries, drowning and violence data from: The top 10 causes of death.* (n.d.). World Health Organization. Retrieved August 4, 2020, from https://ourworldindata.org/causes-of-death
+
+Tversky, A., & Kahneman, D. (1974). Judgment under uncertainty: Heuristics and biases. *Science, 185*(4157), 1124–1131. https://doi.org/10.1126/science.185.4157.1124
+
+Weber, E. U. (2017). *Understanding public risk perception and responses to changes in perceived risk.* http://elke-u-weber.com/media/2017_balleisenbook_weber.pdf
+
+*WHO mortality database.* (n.d.). World Health Organization. Retrieved June 25, 2020, from https://apps.who.int/healthinfo/statistics/mortality/whodpms/
+
+## Chapter 4
+
+Booth, S. (1933). Clearing the fog: Changing perceptions of the public regulation of risk. *Journal of Contingencies & Crisis Management,1*(3):164.
+
+Chernov, D., & Sornette, D. (2016). Man-made catastrophes and risk information concealment: Case studies of major disasters and human fallibility. Springer.
+
+*Coronavirus disease 2019 (COVID-19).* (2019). World Health Organization, Situation update 86. Retrieved April 21, 2020, from https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200415-sitrep-86-covid-19.pdf?sfvrsn=c615ea20_4
+
+*Coronavirus disease 2019.* (2020, February 18). U.S. Centers for Disease Control and Prevention. https://www.cdc.gov/media/releases/2020/p0130-coronavirus-spread.html
+
+Coronavirus: Five Trump claims fact-checked. (2020, March 26). *BBC News.* https://www.bbc.com/news/world-us-canada-51818627
+
+*Estimating the burden of foodborne diseases.* (n.d.). World Health Organization. Retrieved April 21, 2020, from https://www.who.int/activities/estimating-the-burden-of-foodborne-diseases
+
+*Food-borne illnesses cost US $100 billion per year in low- and middle-income countries.* (2018, October 23). The World Bank. Retrieved April 21, 2020, from https://www.worldbank.org/en/news/press-release/2018/10/23/food-borne-illnesses-cost-us-110-billion-per-year-in-low-and-middle-income-countries
+
+*Food safety: Key facts | Data.* (2020). World Health Organization. Retrieved April 21, 2020, from https://www.who.int/news-room/fact-sheets/detail/food-safety
+
+*Global status report on road safety.* (2018). World Health Organization.
+
+Helliwell, J. F., & Wang, S. (2011). Trust and wellbeing. *International Journal of Wellbeing, 1(*1), 42-78.
+
+Jaffee, S., Henson, S., Unnevehr, L., Grace, D., & Cassou, E. (2019). *The safe food imperative: Accelerating progress in low-and middle-income countries.* The World Bank. https://doi.org/10.1596/978-1-4648-1345-0
+
+*Literacy of adults in developing countries: New data from a skills survey.* (n.d.). Center for Global Development. Retrieved September 1, 2020, from https://www.cgdev.org/blog/literacy-adults-developing-countries-new-data-skills-survey
+
+Lloyd’s Register Foundation. (2017, July). *Foresight review on the public understanding of risk.* (Lloyd’s Register Foundation Report Series No. 2017.3). https://www.lrfoundation.org.uk/en/publications/foresight-review-on-the-public-understanding-of-risk/
+
+Mfueni, E., Gama, A. P., Kabambe, P., Chimbaza, M., Matita, G., & Matumba, L. (2018). Food allergen labeling in developing countries: Insights based on current allergen labeling practices in Malawi. *Food Control, 84,* 263–267. https://doi.org/10.1016/j.foodcont.2017.08.007
+
+Newton, K. (n.d.). *Social and political trust* [Chapter 1: Social trust and its origin]. European Social Survey. Retrieved September 1, 2020, from http://essedunet.nsd.uib.no/cms/topics/2/1/
+
+*Road traffic injuries: Key facts | Data.* (2020). World Health Organization. Retrieved April 23, 2020, from https://www.who.int/newsroom/fact-sheets/detail/road-traffic-injuries
+
+*Seat-belt law, enforcement and wearing rates by country/area | Data.* (n.d.). World Health Organization. Retrieved April 23, 2020, from https://www.who.int/violence_injury_prevention/road_safety_status/2018/Table_A7_Seat-belt.pdf?ua=1
+
+Watson, K. (2020, March 29). Coronavirus, Brazil’s Bolsonaro in denial and out on a limb. *BBC News.* https://www.bbc.com/news/world-latin-america-52080830
+
+World Health Organization. (2001). Water quality: guidelines, standards and health. In S. Lang, L. Fewtrell, & J. Bartraum (Eds.). *Risk Communication* (Chapter 14). https://www.who.int/water_sanitation_health/dwq/iwachap14.pdf
+
+## Chapter 5
+
+Abdalla, S., Apramian, S. S., Cantley, L. F., & Cullen, M. R. (2017). Occupation and risk for injuries. In C. N. Mock, R. Nugent, O. Kobusingye, & K. R. Smith (Eds.), *Injury prevention and environmental health* (3rd ed.). The International Bank for Reconstruction and Development/The World Bank. http://www.ncbi.nlm.nih.gov/books/NBK525209/
+
+*Agriculture: A hazardous work.* (2009). International Labour Organization. https://www.ilo.org/safework/areasofwork/hazardous-work/WCMS_110188/lang--en/index.htm
+
+*Agriculture, forestry, and fishing, value added (% of gdp) | Data.* (n.d.). The World Bank. Retrieved September 1, 2020, from https://data.worldbank.org/indicator/NV.AGR.TOTL.ZS
+
+Banerji, A. (2019, December 10). Factbox: Grief and neglect – 10 factory disasters in South Asia. *Reuters.* https://www.reuters.com/article/us-india-fire-workers-factbox/factbox-grief-and-neglect-10-factory-disasters-in-south-asia-idUSKBN1YE1PT
+
+Bentley, T., Forsyth, D., Tappin, D., & Catley, B. (2011). *Report on the 2011 New Zealand Workplace Violence Survey.* Massey University School of Management. https://www.massey.ac.nz/massey/fms/Colleges/College%20of%20Business/Management/Workplace%20violence%20in%20New%20Zealand%202011%20Report%20FINAL%20for%20SOM.pdf?0A 7A323C5323D43EC907515424A9621A
+
+*Decent work country programme: The Gambia 2015-2017.* (2018). International Labour Organization.
+
+*Decent work country programme: Sri Lanka 2018-2022.* (2018). International Labour Organization. https://www.ilo.org.wcmsp5/groups/public/---asia/---ro-bangkok/---ilo-colombo/documents/genericdocument/wcms_632743.pdf
+
+Dorman, P. (2012). *Estimating the economic costs of occupational injuries and illnesses in developing countries: Essential information for decision-makers.* ILO: Geneva. https://www.ilo.org/safework/info/publications/WCMS_207690/lang--en/index.htm
+
+*European working conditions survey 2010.* (2012). European Foundation for the Improvement of Living and Working Conditions. https://www.eurofound.europa.eu/data/european-working-conditions-survey-2010
+
+Hämäläinen, P., Takala, J., & Kiat, T. B. (2017). *Global estimates of occupational accidents and work-related illnesses 2017.* Workplace Safety and Health Institute, Ministry of Social Affairs and Health. Finland. http://www.icohweb.org/site/images/news/pdf/Report%20Global%20Estimates%20of%20Occupational%20Accidents%20and%20Work-related%20Illnesses%202017%20rev1.pdf
+
+*Health and safety at work: Summary statistics for Great Britain in 2018.* (2018). Health and Safety Executive. Retrieved May 13, 2020, from https://www.hse.gov.uk/statistics/overall/hssh1718.pdf
+
+Improving the safety and health of young workers. (2018). International Labour Organization. https://www.ilo.org/global/topics/safety-and-health-at-work/resources-library/publications/WCMS_625223/lang--en/index.htm
+
+International Labour Organization. (2009). *Gender Equality at the Heart of Decent Work* [Paper presentation, pp. 92]. International Labour Conference, 98th Session, Geneva.
+
+Lin, Y. H., Chen, C. Y., & Luo, J. L. (2008). Gender and age distribution of occupational fatalities in Taiwan. *Accident Analysis and Prevention, 40*(4), 1604-10.
+
+Lloyd’s Register Foundation. (2017, July). *Foresight review on the public understanding of risk.* (Lloyd’s Register Foundation Report Series No. 2017.3). https://www.lrfoundation.org.uk/en/news/mapping-risk-report/
+
+Lloyd’s Register Foundation & Gallup, Inc. (2019). *Mapping risk: A review of global data sources on safety and risk.* https://www.lrfoundation.org.uk/en/news/mapping-riskreport/
+
+*Myanmar – Occupational safety and health law, 2019 | Data.* (n.d.). International Labour Organization. Retrieved May 12, 2020, from https://www.ilo.org/dyn/natlex/natlex4.detail?p_lang=en&p_isn=108180&p_count=2&p_classification=14
+
+*Mental health in the workplace information sheet | Data.* (2019, May). World Health Organization. Retrieved May 13, 2020, from https://www.who.int/mental_health/in_the_workplace/en/
+
+*Number of nonfatal occupational injuries and illnesses involving days away from work by industry and selected events or exposures leading to injury or illness, private industry.* (2017). U.S. Bureau of Labor Statistics. Retrieved May 12, 2020, from https://www.bls.gov/iif/oshwc/osh/case/cd_r4_2017.htm
+
+*Occupational safety and health: World statistic.* (n.d.). International Labour Organization. Retrieved May 5, 2020, from https://www.ilo.org/moscow/areas-of-work/occupational-safety-and-health/WCMS_249278/lang--en/index.htm
+
+*OSH in figures: Young workers - Facts and figures [European Risk Observatory report].* (2007). Office for Official Publications of the European Communities. https://osha.europa.eu/en/publications/report-osh-figures-young-workers-facts-and-figures
+
+Posner, M. (2020, April 22). Seven years later, what the Rana Plaza factory collapse teaches us about COVID-19. *Forbes.* https://www.forbes.com/sites/michaelposner/2020/04/22/seven-years-later-what-the-rana-plaza-factory-collapse-teaches-us-about-covid-19/#5aa95aa3488a
+
+Potter, R. E., Dollard, M. F., & Tuckey, M. R. (2016). *Bullying & harassment in Australian workplaces: Results from the Australian Workplace Barometer Project 2014/15.* Safe Work Australia. https://www.safeworkaustralia.gov.au/system/files/documents/1705/bullying-and-harassment-in-australian-workplaces-australian-workplace-barometer-results.pdf
+
+*Progress of the world’s women 2015-2016.* (2017). UN Women [Chapter 2, pp. 71]. Retrieved May 17, 2020, from https://www.unwomen.org/en/news/in-focus/csw61/women-in-informal-economy
+
+Rushton, L. (2017). The global burden of occupational disease. *Current Environmental Health Reports, 4*(3),340–348.
+
+Schulte, P. A., Pandalai, S., Wulsin, V., & Chun, H. (2012). Interaction of occupational and personal risk factors in workforce health and safety. *American Journal of Public Health, 102*(3), 434–48.
+
+*Slips and trips | Data.* (n.d.). International Labour Organization. Retrieved May 12, 2020, from https://www.ilo.org/global/topics/labour-administration-inspection/resources-library/publications/guide-for-labour-inspectors/slips-and-trips/lang--en/index.htm
+
+Sorenson, S. (2013). *How employee engagement drives growth.* Gallup.com. https://www.gallup.com/workplace/236927/employee-engagement-drives-growth.aspx
+
+*Statistics – Non-fatal injuries at work in Great Britain.* (n.d.). Home and Safety Executive. Retrieved May 21, 2020, from https://www.hse.gov.uk/slips/statistics.htm
+
+Underwriters Laboratories Safety Index. (n.d.). *UL Safety Index.* https://www.ul.com/news/underwriters-laboratories-inc-discontinues-ul-safety-index
+
+Wilson, R. (2005). Spiraling out of control: 5 ways to reduce workers' compensation claims. *EHS Today.* https://www.ehstoday.com/safety/article/21912687/spiraling-out-ofcontrol-5-ways-to-reduce-workers-compensation-claims
+
+*Workplace violence and harassment: A European picture.* (2011). European Agency for Safety and Health at Work. https://osha.europa.eu/en/publications/workplace-violence-and-harassment-european-picture/view
+
+*World’s most hazardous occupations.* (2014, April). PECB. https://pecb.com/article/worlds-most-hazardous-occupations
+
+Wroth, D., & Han, A. (2016). 205 The UL Safety Index: Quantifying safety around the world. *Injury Prevention, 22* (Sppl 2), A75.1-A75. https://injuryprevention.bmj.com/content/injuryprev/22/Suppl_2/A75.1.full.pdf
+
+## Chapter 6
+
+*Attributing extreme weather to climate change | Data.* (n.d.). Carbon Brief. Retrieved August 5, 2020, from https://www.carbonbrief.org/mapped-how-climate-change-affects-extreme-weather-around-the-world
+
+*Climate change.* (n.d.). United Nations. Retrieved August 5, 2020, from https://www.un.org/en/sections/issues-depth/climate-change/
+
+*Climate change | Data.* (n.d.). World Health Organization. Retrieved August 5, 2020, from https://www.who.int/heli/risks/climate/climatechange/en/
+
+*Climate change and energy: Public opinions and views.* (2015, July 1). Pew Research Center. https://www.pewresearch.org/science/2015/07/01/chapter-2-climate-change-and-energy-issues/
+
+*Climate change performance index | Data.* (n.d.). Climate Change Performance Index. Retrieved August 5, 2020, from https://www.climate-change-performance-index.org/
+
+*Each country’s share of CO2 emissions.* (2020, August 12). Union of Concerned Scientists. https://ucsusa.org/resources/each-countrys-share-co2-emissions
+
+Eckstain, D., Kunzel, V., Schafer, L., & Winges, M. (2020). *Global Climate Risk Index 2020*. Germanwatch. https://germanwatch.org/en/17307
+
+Fagan, M., & Huang, C. (2019, April 18). *A look at how people around the world view climate change*. Pew Research Center. https://www.pewresearch.org/fact-tank/2019/04/18/a-look-at-how-people-around-the-world-view-climate-change/
+
+Goulder, L., Kolstad, C., Long, X., Nunn, R., O’Donnell, J., & Shambaugh, J. (2019, October). *Ten facts about the economics of climate change and climate policy.* Stanford Institute for Economic Policy Research and the Hamilton Project. https://siepr.stanford.edu/research/publications/ten-facts-about-economicsclimate-change-and-climate-policy
+
+Hamilton, L. C. (2010, December 14). *Education, politics and opinions about climate change evidence for interaction effects.* Springer Link. https://link.springer.com/article/10.1007/s10584-010-9957-8
+
+Intergovernmental Panel on Climate Change. (2007). *Climate change 2007: Impacts, adaptation and vulnerability* [Summary for policymakers, pp. 18]. https://www.ipcc.ch/site/assets/uploads/2018/03/ar4_wg2_full_report.pdf
+
+Moser, S. C. (2010). Communicating climate change: History, challenges, process and future directions. *Wiley Interdisciplinary Reviews: Climate Change, 1*(1), 31-53. https://onlinelibrary.wiley.com/doi/abs/10.1002/wcc.11
+
+NASA. (n.d.). *The effects of climate change.* Retrieved August 5, 2020, from https://climate.nasa.gov/effects/
+
+*National climate change policy.* (n.d.). The Ministry of the Environment, Finland. https://ym.fi/en/carbon-neutral-finland-2035
+
+Newport, F. (2019, December 5). *The impact of increased political polarization.* Gallup.com. https://news.gallup.com/opinion/polling-matters/268982/impact-increased-political-polarization.aspx
+
+*The effects of climate change.* (n.d.). WWF-UK. Retrieved August 5, 2020, from https://www.wwf.org.uk/learn/effects-of/climate-change
+
+Tvinnereim, E., Lægreid, O. M., Liu, X., Shaw, D., Borick, C., & Lachapelle, E. (2020). Climate change risk perceptions and the problem of scale: Evidence from cross-national survey experiments. *Environmental Politics,* 1-21*.* https://doi.org/10.1080/09644016.2019.1708538
+
+Vu, H. T., Liu, Y., & Tran, D. V. (2019). Nationalizing a global phenomenon: A study of how the press in 45 countries and territories portrays climate change. *Global Environmental Change, 58,* 101942. https://www.sciencedirect.com/science/article/pii/S0959378019304108?via%3Dihub
+
+Watts, N., Amann, M., Arnell, N., Ayeb-Karlsson, S., Belesova, K., Berry, H., Bouley, T., Boykoff, M., Byass, P., Cai, W., Campbell-Lendrum, D., Chambers, J., Daly, M., Dasandi, N., Davies, M., Depoux, A., Dominguez-Salas, P., Drummond, P., Ebi, K. L., … Costello, A. (2018). The 2018 report of the Lancet countdown on health and climate change: Shaping the health of nations for centuries to come. *The Lancet, 392*(10163), 2479–2514. https://doi.org/10.1016/S0140-6736(18)32594-7
+
+## Chapter 7
+
+*About genetically engineered foods.* (2020). Center for Food Safety. Retrieved May 21, 2020, from https://www.centerforfoodsafety.org/issues/311/ge-foods/about-ge-foods
+
+A glowing future: China wants its nuclear industry to grow dauntingly fast. (2016, September 22). *The Economist*. https://www.economist.com/china/2016/09/22/a-glowing-future
+
+Araya, D. (2019, January 1). Who will lead in the age of artificial intelligence? *Forbes.* https://www.forbes.com/sites/danielaraya/2019/01/01/who-will-lead-in-the-age-of-artificial-intelligence/#13314c756f95
+
+Coghlan, A. (2015). More than half of EU officially bans genetically modified crops. *New Scientist.* https://www.newscientist.com/article/dn28283-more-than-half-of-european-union-votes-to-ban-growing-gm-crops/
+
+Davidson, D., & Freudenburg, W. (1996). Gender and environmental risk concerns: A review and analysis of available research. *Environment and Behavior, 28*(3), 302-339.
+
+Freedman, D. H. (2013, September 1). The truth about genetically modified food. *Scientific American.* https://www.scientificamerican.com/article/the-truth-about-genetically-modified-food/
+
+Gently modified: The EU lifts its ban on GM crops*.* (2015, January 15). *The Economist.* https://www.economist.com/europe/2015/01/15/gently-modified
+
+Hitchcock, J. (2001). Gender differences in risk perception: Broadening the contexts. *Risk: Health, Safety & Environment, 3*(3/4), Fall 2001. https://scholars.unh.edu/cgi/viewcontent.cgi?article=1469&context=risk
+
+Hu, X., Neupane, B., Flores-Echaiz, L., Sibal, P., & Rivera Lam, M. (2019). *Steering AI and advanced ICTs for knowledge societies: A ROAM perspective.* UNESCO. https://en.unesco.org/system/files/unesco-steering_ai_for_knowledge_societies.pdf
+
+IAEA. (2019). *Country nuclear power profiles: Italy.* Retrieved June 25, 2020, from https://cnpp.iaea.org/countryprofiles/Italy/Italy.htm
+
+*Impacts of the Fukushima Daiichi accident on nuclear development policies.* (2017). Organisation for Economic Co-operation and Development. https://www.oecd.org/publications/impacts-of-the-fukushima-daiichi-accident-on-nuclear-development-policies-9789264276192-en.htm
+
+Kasperson, J. X., Kasperson, R. E., Pidgeon, N., & Slovic, P. (2003, January). *The social amplification of risk: Assessing fifteen years of research and theory.* The Social Amplification of Risk. https://doi.org/10.1017/CBO9780511550461.002
+
+Lynch D., & Vogel D. (2001). *The regulation of GMOs in Europe and the United States: A case-study of contemporary European regulatory politics.* Council on Foreign Relations. https://www.cfr.org/report/regulation-gmos-europe-and-united-states
+
+Morgan. S. (2018, November 15). *Spain to nix nuclear and coal power by 2030.* Euroactiv.com. https://www.euractiv.com/section/energy/news/spain-to-nix-nuclear-and-coal-power-by-2030/
+
+Newport, F. (2012). *Americans still favor nuclear power a year after Fukushima.* Gallup.com. https://news.gallup.com/poll/153452/Americans-Favor-Nuclear-Power-Year-Fukushima.aspx
+
+Renn, O., & Benighaus, C. (2013). Perception of technological risk: Insights from research and lessons for risk communication and management. *Journal of Risk Research, 16*(3-4), 293-313. https://doi.org/10.1080/13669877.2012.729522
+
+*Risks from artificial intelligence.* (n.d.). Centre for the Study of Existential Risk, Cambridge University. Retrieved May 19, 2020, from https://www.cser.ac.uk/research/risks-from-artificial-intelligence/
+
+Sherman, N. (2019, November). Is China gaining an edge in artificial intelligence? *BBC News.* https://www.bbc.com/news/business-50255191
+
+UNESCO. (2019). *Steering AI and advanced ICTs for knowledge societies: A rights, openness, access, and multi-stakeholder perspective.* https://en.unesco.org/system/files/unesco-steering_ai_for_knowledge_societies.pdf and https://en.unesco.org/courier/2018-3/ethical-risks-ai
+
+U.S. approves first new nuclear plants in decades. (2012, February). *VOA News.* https://www.voanews.com/usa/us-approves-first-new-nuclear-plants-decades
+
+Walch, K. (2020, February)*.* Why the race for AI dominance is more global than you think*. Forbes.* https://www.forbes.com/sites/cognitiveworld/2020/02/09/why-the-race-for-ai-dominance-is-more-global-than-you-think/#682781b6121f
+
+*Wellcome Global Monitor.* (2018). Wellcome. https://wellcome.ac.uk/sites/default/files/wellcome-global-monitor-2018.pdf
+
+*Why African countries maintain tight restrictions on genetically modified food.* (2019, May 28). World Politics Review. https://www.worldpoliticsreview.com/trend-lines/27892/why-african-countries-maintain-tight-restrictions-on-geneticallymodified-food
+
+## Chapter 8
+
+*30 years on, what’s next #ForTheWeb?* (2019, March 12). World Wide Web Foundation. https://webfoundation.org/2019/03/web-birthday-30/
+
+Brooker, K. (2018, July 1). ‘I was devastated’: Tim Berners-Lee, the man who created the world wide web, has some regrets. *Vanity Fair.* https://www.vanityfair.com/news/2018/07/the-man-who-created-the-world-wide-web-has-some-regrets
+
+Burns, W. J., Slovic, P., Kasperson, R. E., Kasperson, J. X., Renn, O., & Emani, S. (1993). Incorporating structural models into research on social amplification of risk: Implications for theory construction and decision making. *Risk Analysis, 13*(6), 611–623. https://doi.org/10.1111/j.1539-6924.1993.tb01323.x
+
+Carothers, T., & O’Donohue, A. (Eds.) (2019). Democracies divided: The global challenge of political polarization. Brookings Institution Press.
+
+*Disinformation and propaganda — impact on the functioning of the rule of law in the EU and its member states.* (2019, February). Policy Department for Citizens' Rights and Constitutional Affairs [PE 608.864]. http://aei.pitt.edu/97042/1/disinformation_and_propaganda.pdf
+
+Duggan, M. (2017). *Online harassment 2017.* Pew Research Center. http://assets.pewresearch.org/wp-content/uploads/sites/14/2017/07/10151519/PI_2017.07.11_Online-Harassment_FINAL.pdf
+
+*During this coronavirus pandemic, ‘fake news’ is putting lives at risk: UNESCO.* (2020, April). UN News. https://news.un.org/en/story/2020/04/1061592
+
+*GINI Index (World Bank estimate) | Data.* (n.d.). The World Bank. Retrieved May 23, 2020, from https://data.worldbank.org/indicator/SI.POV.GINI
+
+*History of the web.* (n.d.). World Wide Web Foundation. Retrieved September 2, 2020, from https://webfoundation.org/about/vision/history-of-the-web/
+
+Knack, J. M., Iyer-Eimerbrink P., & Young R. (2016). Anonymity of cyberbullying. In V. Weekes-Shackelford, T. K. Shackelford, & V. A. Weekes-Shackelford (Eds.), *Encyclopedia of Evolutionary Psychological Science* (pp. 1-4). Springer International Publishing. https://link.springer.com/referenceworkentry/10.1007%2F978-3-319-16999-6_2496-1
+
+Lewis, J. (2018). *Economic impact of cybercrime — no slowing down.* Center for Strategic and International Studies. https://assets.website-files.com/5bd672d1924b9893a632c807/5c171d5e85ed62697a79e351_economic-impact-cybercrime.pdf
+
+Lindert, J. (2017). Cyber-bullying and it its impact on mental health. *European Journal of Public Health, 27*(suppl_3). https://doi.org/10.1093/eurpub/ckx187.581
+
+Rizza, C., & Guimarães Pereira, Â. (2013). *Social networks and cyber-bullying among teenagers.* JRC Scientific and Policy Reports, European Commission. https://www.researchgate.net/publication/264310203_Social_networks_and_Cyber-bullying_among_teenagers_EU_Scientific_e_political_report
+
+Schackmuth, A. (2018). Extremism, fake news and hate: Effects of social media in the post-truth era [Thesis]. *DePaul University College of Liberal Arts & Social Sciences Theses and Dissertations.* https://via.library.depaul.edu/etd/245
+
+Singer, P., & Brooking, E. (2018). *LikeWar: The weaponization of social media.* Mariner Books.
+
+Tatham, M. (2018). You may be surprised who is getting scammed most. *Experian.* Retrieved August 6, 2020, from https://www.experian.com/blogs/ask-experian/you-may-be-surprised-whos-getting-scammed-the-most/
+
+Vandoninck, S., d'Haenens, L., & Roe, K. (2013). Online risks. *Journal of Children and Media, 7*(1), 60-78. https://www.tandfonline.com/doi/abs/10.1080/17482798.2012.739780
+
+World Health Organization. (2020). *Coronavirus disease (COVID-19) advice for the public: Mythbusters.* Retrieved August 6, 2020, from https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters
+
+*World population prospects—Population division—United Nations.* (n.d.). United Nations. Retrieved September 2, 2020, from https://population.un.org/wpp/
+
+## Chapter 9
+
+Anthem, P. (2020, April 16). *Risk of hunger pandemic as coronavirus set to almost double acute hunger by end of 2020.* World Food Programme Insight. https://insight.wfp.org/covid-19-will-almost-double-people-in-acutehunger-by-end-of-2020-59df0c4a8072
+
+*Aquastat – FAO’s information system on water and agriculture.* (n.d.). Food and Agricultural Organization of the United Nations. Retrieved May 26, 2020, from http://www.fao.org/nr/water/aquastat/countries_regions/profile_segments/EuropeEastern-EnvHea_eng.stm
+
+*Drinking-water: Key facts.* (2019, June). World Health Organization. Retrieved June 11, 2020, from https://www.who.int/news-room/fact-sheets/detail/drinking-water
+
+*Estimating the burden of foodborne diseases.* (n.d.). World Health Organization. Retrieved June 10, 2020, from https://www.who.int/activities/estimating-the-burden-of-foodborne-diseases
+
+*Food safety: Key facts.* (n.d.). World Health Organization. Retrieved June 10, 2020, from https://www.who.int/news-room/fact-sheets/detail/food-safety
+
+*Frenchman gets 6-month prison term over horsemeat fraud.* (2019, April 16). France 24. https://www.france24.com/en/20190416-frenchman-gets-6-month-prison-term-over-horsemeat-fraud
+
+Goodman, M. T. (2018). Water pressure: *Water, protest, and state legitimacy in the Maghreb*. Center for Strategic and International Studies. https://www.csis.org/analysis/water-pressure-water-protest-and-statelegitimacy-maghreb-0
+
+Havelaar, A. H., Kirk, M. D., Torgerson, P. R., Gibb, H. J., Hald, T., Lake, R. J., Praet, N., Bellinger, D. C., de Silva, N. R., Gargouri, N., Speybroeck, N., Cawthorne, A., Mathers, C., Stein, C., Angulo, F. J., Devleesschauwer, B., and on behalf of World Health Organization Foodborne Disease Burden Epidemiology Reference Group. (2015). World Health Organization global estimates and regional comparisons of the burden of foodborne disease in 2010. *PLOS Medicine, 12*(12), e1001923. https://doi.org/10.1371/journal.pmed.1001923
+
+*Growing at a slower pace, world population is expected to reach 9.7 billion in 2050 and could peak at nearly 11 billion around 2100.* (2019, June 17). UN DESA | United Nations Department of Economic and Social Affairs. https://www.un.org/development/desa/en/news/population/world-population-prospects-2019.html
+
+*If it isn’t safe, it isn’t food.* (n.d.) Food and Agriculture Organization of the United Nations. Retrieved June 10, 2020, from http://www.fao.org/fao-stories/article/en/c/1179647/
+
+Jaffee, S., Henson, S., Unnevehr, L., Grace, D., & Cassou, E. (2018). *The safe food imperative: Accelerating progress in low-and middle-income countries.* The World Bank. https://doi.org/10.1596/978-1-4648-1345-0
+
+Lough, R. (2019, February 1). French food law will not squeeze household budgets: Minister. *Reuters.* https://www.reuters.com/article/us-france-food/frenchfood-law-will-not-squeeze-household-budgets-ministeridUSKCN1PQ42Y
+
+*New partnership to help Ukraine close gaps in food safety*. (2018, February 27). United Nations. http://www.un.org.ua/en/information-centre/news/4297-new-partnership-to-help-ukraine-close-gaps-in-food-safety
+
+The World Bank (2017). *Beyond scarcity: Water security in the Middle East and North Africa* [Overview booklet]. https://openknowledge.worldbank.org/bitstream/handle/10986/27659/211144ov.pdf
+
+*Universal declaration of human rights.* (2015, October 6). United Nations. http://www.un.org.ua/en/information-centre/news/4297-new-partnership-to-help-ukraine-close-gaps-in-food-safety
+
+*Water: Mapping, measuring, and mitigating global water challenges.* (n.d.). World Resources Institute. Retrieved May 27, 2020, from https://www.wri.org/our-work/topics/water
+
+*WHO estimates of the global burden of foodborne diseases: Foodborne disease burden epidemiology reference group 2007-2015* (pp. 30). (2015). World Health Organization. https://apps.who.int/iris/bitstream/handle/10665/199350/9789241565165_eng.pdf?sequence=1
+
+*World Health Organization food safety collaborative platform: Contamination.* (n.d.). World Health Organization. Retrieved August 18, 2020, from https://apps.who.int/foscollab/Download/DownloadConta
+
+*World Health Organization food safety collaborative platform: Consumption.* (n.d.). World Health Organization. Retrieved August 18, 2020, from https://apps.who.int/foscollab/Download/DownloadConso
+
+## Chapter 10
+
+Balzer, D. (2020, April). Mitigating risk of hand injuries during COVID-19. *Mayo Clinic News Network.* https://newsnetwork.mayoclinic.org/discussion/mitigating-risk-of-hand-injuries-during-covid-19/
+
+Brooks, S., Webster, R., Smith, L., Woodland, L., Wessley, S., Greenberg, N., & Rubin, G. (2020, February 26). The psychological impact of quarantine and how to reduce it: Rapid review of the evidence. *The Lancet, 395*(10227). https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30460-8/fulltext
+
+*Coronavirus (COVID-19) deaths-Statistics and research.* (n.d.). Our World in Data. Retrieved June 25, 2020, from https://ourworldindata.org/covid-deaths
+
+De Walque, D. (2020, March). *Projecting the trajectory of the COVID-19 pandemic: A review of available tools.* World Bank Blogs. Retrieved June 25, 2020, from https://blogs.worldbank.org/developmenttalk/projecting-trajectory-covid-19-pandemic-review-available-tools
+
+*New cases of COVID-19 in world countries.* (n.d.). Johns Hopkins University Coronavirus Resource Centre. Retrieved June 25, 2020, from https://coronavirus.jhu.edu/data/new-cases
+
+*OECD economic outlook, interim report March 2020.* (n.d.). Organisation for Economic Co-Operation and Development. https://doi.org/10.1787/7969896b-en
+
+*The world economic outlook, April 2020: The great lockdown.* (n.d.). The International Monetary Fund. Retrieved June 25, 2020, from https://www.imf.org/en/Publications/WEO/Issues/2020/04/14/weo-april-2020
+
+Tracking COVID-19 excess deaths across countries. (n.d.). *The Economist.* https://www.economist.com/graphic-detail/2020/04/16/tracking-covid-19-excess-deaths-across-countries
+
+United Nations. (2020, April). *A UN framework for the immediate socio-economic response to COVID-19.* https://unsdg.un.org/sites/default/files/2020-04/UN-framework-for-the-immediate-socio-economic-response-to-COVID-19.pdf
+
+::back Appendix 3: Regions
+
+## World Health Organization (WHO) Member States, by sub-region
+
+```grid
+{"columns": null, "rows": [["AFR D", "Algeria; Angola; Benin; Burkina Faso; Cameroon; Cape Verde; Chad; Comoros; Equatorial Guinea; Gabon; Gambia; Ghana; Guinea; Guinea-Bissau; Liberia; Madagascar; Mali; Mauritania; Mauritius; Niger; Nigeria; Sao Tome and Principe; Senegal; Seychelles; Sierra Leone; Togo"], ["AFR E", "Botswana; Burundi; Central African Republic; Congo; Côte d'Ivoire; Democratic Republic of the Congo; Eritrea; Ethiopia; Kenya; Lesotho; Malawi; Mozambique; Namibia; Rwanda; South Africa; Swaziland; Uganda; United Republic of Tanzania; Zambia; Zimbabwe"], ["AMR A", "Canada; Cuba; United States of America"], ["AMR B", "Antigua and Barbuda; Argentina; Bahamas; Barbados; Belize; Brazil; Chile; Colombia; Costa Rica; Dominica; Dominican Republic; El Salvador; Grenada; Guyana; Honduras; Jamaica; Mexico; Panama; Paraguay; Saint Kitts and Nevis; Saint Lucia; Saint Vincent and the Grenadines; Suriname; Trinidad and Tobago; Uruguay; Venezuela (Bolivarian Republic of)"], ["AMR D", "Bolivia (Plurinational State of); Ecuador; Guatemala; Haiti; Nicaragua; Peru"], ["EMR B", "Bahrain; Cyprus; Iran (Islamic Republic of); Jordan; Kuwait; Lebanon; Libyan Arab Jamahiriya; Oman; Qatar; Saudi Arabia; Syrian Arab Republic; Tunisia; United Arab Emirates"], ["EMR D", "Afghanistan; Djibouti; Egypt; Iraq; Morocco; Pakistan; Somalia; South Sudan; Sudan; Yemen"], ["EUR A", "Andorra; Austria; Belgium; Croatia; Czech Republic; Denmark; Finland; France; Germany; Greece; Iceland; Ireland; Israel; Italy; Luxembourg; Malta; Monaco; Netherlands; Norway; Portugal; San Marino; Slovenia; Spain; Sweden; Switzerland; United Kingdom"], ["EUR B", "Albania; Armenia; Azerbaijan; Bosnia and Herzegovina; Bulgaria; Georgia; Kyrgyzstan; Montenegro; Poland; Romania; Serbia; Slovakia; Tajikistan; The Former Yugoslav Republic of Macedonia; Turkey; Turkmenistan; Uzbekistan"], ["EUR C", "Belarus; Estonia; Hungary; Kazakhstan; Latvia; Lithuania; Republic of Moldova; Russian Federation; Ukraine"], ["SEAR B", "Indonesia; Sri Lanka; Thailand"], ["SEAR D", "Bangladesh; Bhutan; Democratic People's Republic of Korea; India; Maldives; Myanmar; Nepal; Timor-Leste"], ["WPR A", "Australia; Brunei Darussalam; Japan; New Zealand; Singapore"], ["WPR B", "Cambodia; China; Cook Islands; Fiji; Kiribati; Lao People's Democratic Republic; Malaysia; Marshall Islands; Micronesia (Federated States of); Mongolia; Nauru; Niue; Palau; Papua New Guinea; Philippines; Republic of Korea; Samoa; Solomon Islands; Tonga; Tuvalu; Vanuatu; Viet Nam"]]}
+```
+
+## World Risk Poll Report, by region
+
+```grid
+{"columns": null, "rows": [["Australia & New Zealand", "Australia; New Zealand"], ["Central Asia", "Armenia; Azerbaijan; Georgia; Kazakhstan; Kyrgyzstan; Tajikistan; Turkmenistan; Uzbekistan"], ["Central/Western Africa", "Benin; Burkina Faso; Cameroon; Chad; Congo Brazzaville; Gabon; Ghana; Guinea; Ivory Coast; Liberia; Mali; Mauritania; Niger; Nigeria; Senegal; Sierra Leone; Gambia; Togo"], ["Eastern Asia", "China; Hong Kong SAR of China; Japan; Mongolia; South Korea; Taiwan"], ["Eastern Africa", "Ethiopia; Kenya; Madagascar; Malawi; Mauritius; Mozambique; Rwanda; Tanzania; Uganda; Zambia; Zimbabwe"], ["Eastern Europe", "Belarus; Bulgaria; Hungary; Kosovo; Moldova; Poland; Romania; Russia; Slovakia; Ukraine"], ["Latin America & Caribbean", "Argentina; Bolivia; Brazil; Chile; Colombia; Costa Rica; Dominican Republic; Ecuador; El Salvador; Guatemala; Honduras; Jamaica; Mexico; Nicaragua; Panama; Paraguay; Peru; Uruguay; Venezuela"], ["Middle East", "Bahrain; Iran; Iraq; Israel; Jordan; Kuwait; Lebanon; Palestine; Saudi Arabia; Turkey; United Arab Emirates; Yemen"], ["Northern/Western Europe", "Austria; Belgium; Denmark; Estonia; Finland; France; Germany; Ireland; Latvia; Lithuania; Luxembourg; Netherlands; Norway; Sweden; Switzerland; United Kingdom"], ["Northern Africa", "Algeria; Egypt; Libya; Morocco; Tunisia"], ["Northern America", "Canada; United States"], ["Southeastern Asia", "Cambodia; Indonesia; Laos; Malaysia; Myanmar; Philippines; Singapore; Thailand; Vietnam"], ["Southern Asia", "Afghanistan; Bangladesh; India; Nepal; Pakistan; Sri Lanka"], ["Southern Africa", "Botswana; Lesotho; Namibia; South Africa; Eswatini"], ["Southern Europe", "Albania; Bosnia Herzegovina; Croatia; Cyprus; Greece; Italy; North Macedonia; Malta; Montenegro; Portugal; Serbia; Slovenia; Spain"]]}
+```
 
 [^1]: Impacts of the Fukushima Daiichi accident on nuclear development policies. (2017). Organisation for Economic Co-operation and Development. https://www.oecd-nea.org/ndd/pubs/2017/7212-impacts-fukushima-policies.pdf
 

@@ -44,7 +44,7 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | `>> text`, `>-- source` | A sentence or quotation the original sets large, and the line that names its source |
 | `^ text` | A note the original sets at the foot of a column, placed under its paragraph |
 | `?1. text`, `?> text` | A question of a questionnaire with its number, and an instruction to the interviewer |
-| ```` ```grid ```` + JSON | A table of words (`columns`, `rows`, an optional `title`; `tight` for a table of many columns): answer codes, a list of regions, a scoring table |
+| ```` ```grid ```` + JSON | A table of words (`columns`, `rows`, an optional `title`; `tight` for a table of many columns, `keep` for columns that stay on one line): answer codes, a list of regions, a scoring table |
 | ```` ```roll ```` + JSON | A list of names in columns, coloured by status, with a key |
 | `- text`, `-- text`, `1. **Lead.** text` | Bullets, points under a bullet, and numbered findings |
 | ```` ```chart ```` + JSON | A figure: `hbar`, `grouped`, `stacked`, `stacked_pair` (two sets of stacked bars side by side), `vgrouped`, `dumbbell`, `diverging` (differences either side of nought), `parts` (several drawings under one title), `matrix` (a table of shaded values), `lists` (ranked lists side by side), `line` (values over the years of the poll), `map`, `region_map` (part of the world, a few countries shaded), `table`, `heading` (a table that is only a title over the text that follows) or `original` |
@@ -59,6 +59,7 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | `paginate.js` | Runs in the page: turns the column flow into pages, numbers them, fills in the contents |
 | `extract.py` | Published PDF to draft markup |
 | `assemble_2019.py` | Draft markup of the 2019 chapters, plus a plan per report (chapters, chart specifications, new writing), to a content file |
+| `appendix_2019.py` | Reads the three appendices of the 2019 volume: the questionnaire with its tables of answer codes, the references by chapter, the regions |
 | `core_2021.py` | Reads the typed items (headings, paragraphs, chart labels, small print, footnotes) of a core report of the 2021 poll from its PDF |
 | `assemble_2021.py` | Those items, plus a plan per report (opener figures, chart specifications), to a content file |
 | `focus_2021.py` | The same two steps for the Focus On reports of the 2021 poll, which share another design |
@@ -74,7 +75,7 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 ## The four reports of the 2019 volume
 
     python reports/book/redesign/assemble_2019.py 2019_technology
-    python reports/book/redesign/check.py 2019_technology 126 140 141 152
+    python reports/book/redesign/check.py 2019_technology 126 140 141 152 183 213
     python reports/book/redesign/build.py 2019_technology
 
 | Report | Chapters of the 2019 volume | Pages of the PDF (from 0) |
@@ -82,7 +83,7 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | `2019_feeling_safe` | 1 to 4 and 10 | 17 to 86, 171 to 182 |
 | `2019_risk_at_work` | 5 | 87 to 111 |
 | `2019_climate_food_water` | 6 and 9 | 112 to 125, 153 to 170 |
-| `2019_technology` | 7 and 8 | 126 to 140, 141 to 152 |
+| `2019_technology` | 7 and 8, and the appendices | 126 to 140, 141 to 152, appendices 183 to 213 |
 
 `2019_risk_at_work` was the pilot and its content file was written by hand; the
 others come from `assemble_2019.py`. A plan there lists, for each report, its
@@ -92,6 +93,17 @@ furniture to leave out of the text (`drop`), small print to put back (`insert`,
 `note_from`) and headings to move (`move`). The assembler also rejoins
 paragraphs that a chart or a column break splits, and numbers the footnotes of
 a report's chapters in one sequence from 1.
+
+The three appendices of the volume (the questionnaire, the references by
+chapter and the regions) serve all four reports, so they are set once, at the
+end of the fourth (`appendices=True` in its plan); each report's "About this
+report" says where they are. `appendix_2019.py` reads them. They are set in a
+design of their own, in one column on upright pages: a table's rows come from
+its rules across and its columns from the rules between them, and what the
+rules alone do not say is put right afterwards (a row's code and name set as
+one line, a deep last row, the two ends of a scale from 00 to 10). The
+references keep the chapter numbers of the volume, and the report's notes say
+which report each chapter is in.
 
 Three conventions for charts that the published figures cannot fully supply:
 

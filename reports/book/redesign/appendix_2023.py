@@ -98,7 +98,7 @@ def values(doc):
             for cells in found:
                 rows.append([" ".join(w[4] for line in lines(cell) for w in line) for cell in cells])
     assert all(all(row) for row in rows), [row for row in rows if not all(row)]
-    return dict(columns=VALUE_COLUMNS, rows=rows, tight=True)
+    return dict(columns=VALUE_COLUMNS, rows=rows, tight=True, keep=[1])       # (a date stays on one line)
 
 
 def grid(spec):

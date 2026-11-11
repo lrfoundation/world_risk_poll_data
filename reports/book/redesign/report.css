@@ -205,4 +205,4 @@ table.grid td:not(.c) { min-width: 150px; }
 .gridwrap.tight table.grid { font-size: 13px; line-height: 18px; }
 .gridwrap.tight table.grid th { font-size: 12px; line-height: 15px; padding: 6px 5px; }
 .gridwrap.tight table.grid td { padding: 4px 5px; min-width: 0; }
-.gridwrap.tight table.grid td:nth-child(2) { white-space: nowrap; }
+table.grid td.k { white-space: nowrap; }

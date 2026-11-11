@@ -78,7 +78,7 @@ The fifth is the forecasting chapter that closed the 2019 volume. It is placed h
 
 4. **Technology and the internet.** Chapters 7 and 8: Technology-related risk perceptions; Internet-related risk perceptions.
 
-The appendices of the 2019 volume, which set out the methodology and the questionnaire, apply to all four reports. They are set once, after the fourth.
+The appendices of the 2019 volume (the questionnaire, the references by chapter and the regions) apply to all four reports. They are set once, at the end of the fourth.
 
 ::endnew
 

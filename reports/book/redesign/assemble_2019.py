@@ -25,6 +25,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
 import extract  # noqa: E402
+import appendix_2019  # noqa: E402
 
 FOLDER = "WRP_2019/core_world_risk_poll_2019"
 PDF = "core_world_risk_poll_2019.pdf"
@@ -39,6 +40,15 @@ FOUR = [
     ("2019_technology", "Technology and the internet", "Chapters 7 and 8: Technology-related risk perceptions; Internet-related risk perceptions."),
 ]
 ORDINAL = ["first", "second", "third", "fourth"]
+# (the same sentence stands in 2019_risk_at_work.md, which was written by hand)
+APPENDICES = ("The appendices of the 2019 volume (the questionnaire, the references by chapter and the regions) apply to all four reports. "
+              "They are set once, at the end of the fourth.")
+APPENDIX_NOTE = (
+    "The three appendices of the 2019 volume are set after the conclusion, word for word, and serve all four reports: the questionnaire, the "
+    "references and the regions. In Appendix 2 the references stand under the chapter numbers of the 2019 volume, not those of the four reports: "
+    "Chapters 1 to 4 and 10 are in *Feeling safe and the sources of risk*, Chapter 5 is *Risk at work*, Chapters 6 and 9 are in *Climate change, "
+    "food and water*, and Chapters 7 and 8 are the two chapters of this report. The references listed under ‘Introduction’ belong to the "
+    "introduction of the 2019 volume, which the four reports do not carry.")
 
 REGIONS = {
     "southern_europe": "Southern Europe", "latin_america": "Latin America & Caribbean", "southern_africa": "Southern Africa",
@@ -202,7 +212,7 @@ def by_gender(prefix, names):
 
 
 PLANS["2019_technology"] = dict(
-    number=4,
+    number=4, appendices=True,
     subtitle="New technologies and the risks of being online",
     cover_image=[141, 0],
     chapters=[
@@ -657,6 +667,8 @@ def assemble(key):
     for extra in ("chart_note", "queries"):
         if plan.get(extra):
             meta[extra] = plan[extra]
+    if plan.get("appendices"):
+        meta["appendix_note"] = APPENDIX_NOTE
 
     out = ["---\n" + json.dumps(meta, ensure_ascii=False, indent=1) + "\n---"]
     out += ["::front About this report", "::new",
@@ -668,7 +680,7 @@ def assemble(key):
     out += ["::column", "## The 2019 poll in four reports"]
     for index, (k, name, what) in enumerate(FOUR, 1):
         out.append(f"{index}. **{name}.** {what}" + (" This is the report in your hands." if k == key else ""))
-    out += ["The appendices of the 2019 volume, which set out the methodology and the questionnaire, apply to all four reports. They are set once, after the fourth.",
+    out += [APPENDICES,
             "::endnew"]
 
     out.append("::front Executive summary")
@@ -708,6 +720,8 @@ def assemble(key):
         assert text.count(old) == 1, old
         text = text.replace(old, new)
     text = out[0] + "\n\n" + text
+    if plan.get("appendices"):
+        text += "\n\n" + "\n\n".join(appendix_2019.read(doc))
     text += "\n\n" + "\n\n".join(f"[^{n}]: {body}" for n, body in sorted(notes.items())) + "\n"
     path = HERE / "content" / f"{key}.md"
     path.write_text(text, encoding="utf-8")

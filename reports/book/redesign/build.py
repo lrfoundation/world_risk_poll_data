@@ -413,10 +413,13 @@ class Report:
         """A table of words (a questionnaire's answer codes, a list of regions): columns of short cells are centred.
 
         tight: a table of many columns, set smaller so that it fits the column of text.
+        keep: the columns (counted from 0) whose cells stay on one line.
         """
         rows, width = spec["rows"], max(len(row) for row in spec["rows"])
         short = [all(len(row[k]) <= (12 if k else 4) for row in rows if k < len(row)) for k in range(width)]
-        cell = lambda tag, k, text: f'<{tag}{" class=" + chr(34) + "c" + chr(34) if short[k] else ""}>{self.inline(text)}</{tag}>'
+        keep = set(spec.get("keep", ()))
+        names = lambda k: " ".join(name for name, on in (("c", short[k]), ("k", k in keep)) if on)
+        cell = lambda tag, k, text: f'<{tag}{" class=" + chr(34) + names(k) + chr(34) if names(k) else ""}>{self.inline(text)}</{tag}>'
         head = ""
         if spec.get("columns"):
             head = "<thead><tr>" + "".join(cell("th", k, text) for k, text in enumerate(spec["columns"])) + "</tr></thead>"

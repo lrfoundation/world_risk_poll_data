@@ -43,14 +43,17 @@ def merge(values, by=1.5):
     return out
 
 
-def tables(page):
-    """The tables of a page: dict(x=[column edges], y=[row edges], head=(top, bottom) or None), from the drawn rules."""
+def tables(page, rule=RULE, band=BAND):
+    """The tables of a page: dict(x=[column edges], y=[row edges], head=(top, bottom) or None), from the drawn rules.
+
+    rule, band: the colours of the rules and of the band over the columns (the 2019 volume draws both in blue).
+    """
     across, bands = [], []
     for g in page.get_drawings():
         r = g["rect"]
-        if near(g.get("color"), RULE) and r.height < 1 and r.width > 8:
+        if near(g.get("color"), rule) and r.height < 1 and r.width > 8:
             across.append((r.y0, r.x0, r.x1))
-        elif near(g.get("fill"), BAND) and r.width > 60 and 8 < r.height < 80 and r.y0 > 60:
+        elif near(g.get("fill"), band) and r.width > 60 and 8 < r.height < 80 and r.y0 > 60:
             bands.append((r.y0, r.y1, r.x0, r.x1))
     across.sort()
     groups = []                     # runs of rules that follow one another closely and overlap sideways
@@ -66,12 +69,12 @@ def tables(page):
     out = []
     for group in groups:
         ys, xs = merge(group["y"]), merge(group["xs"], 4)
-        band = next((b for b in bands if abs(b[1] - ys[0]) < 6 or (b[0] < ys[0] and ys[0] - b[1] < 30 and b[2] < group["x1"] and b[3] > group["x0"])), None)
+        over = next((b for b in bands if abs(b[1] - ys[0]) < 6 or (b[0] < ys[0] and ys[0] - b[1] < 30 and b[2] < group["x1"] and b[3] > group["x0"])), None)
         head = None
-        if band:
-            head = (band[0], min(band[1], ys[0]) if band[1] - ys[0] < 6 else band[1])
-            if ys[0] - band[1] > 6:
-                ys.insert(0, band[1])
+        if over:
+            head = (over[0], min(over[1], ys[0]) if over[1] - ys[0] < 6 else over[1])
+            if ys[0] - over[1] > 6:
+                ys.insert(0, over[1])
         else:
             # no band: the first row starts a line's height above the first rule
             ys.insert(0, ys[0] - (ys[1] - ys[0] if len(ys) > 1 else 20))
@@ -113,7 +116,7 @@ def grid(table, lines):
             continue
         r = max(0, min(len(rows) - 1, sum(1 for edge in table["y"][1:-1] if y > edge)))
         rows[r][c].append(text)
-    join = lambda parts: re.sub(r"(\w)- (\w)", r"\1-\2", " ".join(parts))
+    join = lambda parts: re.sub(r"(\w)- (\w)", r"\1-\2", " ".join(parts).replace("\xad ", "").replace("\xad", ""))
     body = [[join(cell) for cell in row] for row in rows]
     body = [row for row in body if any(row)]
     spec = dict(columns=[join(cell) for cell in head] if table["head"] else None, rows=body)
