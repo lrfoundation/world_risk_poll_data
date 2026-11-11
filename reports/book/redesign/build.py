@@ -30,7 +30,7 @@ sys.path.insert(0, str(BOOK.parent))
 import charts  # noqa: E402
 import maps  # noqa: E402
 from build import CACHE, GEOJSON, OUT, fetch  # noqa: E402
-from figures import Figures  # noqa: E402
+from figures import Figures, Sources  # noqa: E402
 from worldmap import World, class_of, classes  # noqa: E402
 
 FUCHSIA, GREEN, TEAL, ORANGE, PURPLE, LIME, GREY, NAVY = "#E3076E", "#00785C", "#00A7B3", "#F07800", "#7B50DE", "#8CAB00", "#BDBDBD", "#0D2240"
@@ -118,7 +118,8 @@ def parse(path):
 class Report:
     def __init__(self, key):
         self.meta, self.sections, self.notes = parse(HERE / "content" / f"{key}.md")
-        self.fig = Figures(self.meta["folder"], {})
+        # The figures are those of one report; writing that reads across the reports names each finding "report:ID".
+        self.fig = Sources(self.meta["folders"], {}) if self.meta.get("folders") else Figures(self.meta["folder"], {})
         self.world = World(fetch(GEOJSON, CACHE / "ne_110m_admin_0_countries.geojson"))
         self.logo = (BOOK / "assets" / "lrf-logo.svg").read_text(encoding="utf-8")
         self.figures = []        # (label, title, anchor)
@@ -137,6 +138,8 @@ class Report:
         # Chart and table numbers of the original become this report's numbers, except in text written for this edition.
         for old, new in (self.meta.get("renumber", {}).items() if self.renumbering else ()):
             text = text.replace(old, new)
+        if self.meta.get("folders"):
+            text = self.fig.fill(text)          # {report:ID} is that published value; an unknown finding stops the build
         text = escape(text, quote=False).replace("\\*", "&#42;")          # "\*" is an asterisk that prints
         text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", text)
         text = re.sub(r"(?<![\w*])\*(?!\s)(.+?)(?<!\s)\*(?![\w*])", r"<em>\1</em>", text)
@@ -175,7 +178,7 @@ class Report:
 
     def label(self, text):
         """A row label; {finding_id} in it is replaced by that published value."""
-        return re.sub(r"\{(\w+)\}", lambda m: self.fig.text(m.group(1)), text)
+        return re.sub(r"\{([\w:]+)\}", lambda m: self.fig.text(m.group(1)), text)
 
     def drawing(self, spec):
         charts.ZERO = spec.get("zero")          # "<0.5" where the original prints that for a value that rounds to nought
@@ -581,9 +584,10 @@ class Report:
             toc.append(("top", "", name, anchor))
             refs = "".join(f'<li value="{n}">{self.inline(text)}</li>' for n, text in self.notes.items())
             body.append(self.flow_page(f'<h1 id="{anchor}">{escape(name)}</h1><ol class="refs">{refs}</ol>', "main"))
-        anchor = self.anchor()
-        toc.append(("top", "", "Notes on this edition", anchor))
-        body.append(self.flow_page(self.edition_notes(tag, anchor), "main"))
+        if self.meta.get("edition_notes", True):
+            anchor = self.anchor()
+            toc.append(("top", "", "Notes on this edition", anchor))
+            body.append(self.flow_page(self.edition_notes(tag, anchor), "main"))
 
         rows = ""
         for level, label, title, anchor in toc:
@@ -599,8 +603,10 @@ class Report:
         front = [p for p in body if 'data-num="front"' in p]
         rest = [p for p in body if 'data-num="front"' not in p]
         lead = 0 if self.meta.get("contents_first") else 1
-        pages = [self.cover()] + front[:lead] + [self.flow_page(contents, "front")] + front[lead:] + rest
-        return pages
+        if self.meta.get("chapter_of_book"):
+            # A chapter of the bound book, not a report: no cover and no contents of its own.
+            return front + rest
+        return [self.cover()] + front[:lead] + [self.flow_page(contents, "front")] + front[lead:] + rest
 
     def edition_notes(self, tag, anchor):
         m = self.meta
@@ -675,6 +681,15 @@ def main():
     html_path, pdf_path = out / f"{key}.html", out / f"{key}.pdf"
     html_path.write_text(report.html(), encoding="utf-8")
     print_pdf(html_path, pdf_path)
+    if report.meta.get("folders"):
+        # every published figure the text and the charts use, for checking
+        import csv
+        with open(out / f"{key}_figures.csv", "w", encoding="utf-8", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow(["report", "finding_id", "page", "description", "published_value", "unit"])
+            for (folder, fid), row in sorted(report.fig.used.items()):
+                writer.writerow([folder, fid, row["page"], row["description"], row["published_value"], row["unit"]])
+        print(f"{len(report.fig.used)} published figures used -> {out / (key + '_figures.csv')}")
     print(f"{len(report.figures)} figures -> {pdf_path}")
 
 

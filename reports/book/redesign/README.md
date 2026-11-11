@@ -70,7 +70,7 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | `plans_2023.py` | A plan per report of the 2023 poll: pages, opener figures, chart specifications, edits and queries |
 | `check.py` | Compares a content file with its pages of the PDF, both ways: every sentence set must be in the original, and every block of running text in the original must be set |
 | `bind.py` | The re-set reports and the published reports of the 2025 poll, bound as one book |
-| `content/` | One file per re-set report |
+| `content/` | One file per re-set report, and `across_the_waves.md`, the book's opening chapter |
 
 ## The four reports of the 2019 volume
 
@@ -292,22 +292,50 @@ Conventions added for these reports:
 the charts that are pictures, and one or two blocks of chart lettering (a note
 set between two charts in the ocean workers report). None is missing text.
 
+## The opening chapter of the book
+
+`content/across_the_waves.md` is not a re-set report. It is a chapter written
+for this edition, "The poll across four waves", which reads across the four
+polls: what has held, what has moved, what each poll added and what has been
+learned. Every sentence of it is new writing, so it carries the "New for this
+edition" tag throughout.
+
+    python reports/book/redesign/build.py across_the_waves
+
+It differs from a report's content file in three ways, all set in its header.
+
+- `"folders"` names the reports it draws on (a short name for each folder), and
+  a finding is written `report:ID` in a chart specification, for example
+  `qh:C2_2_traffic_2021`.
+- In the text, `{report:ID}` is replaced by that published value when the
+  chapter is built, so no number in it is typed by hand and an unknown finding
+  stops the build. `{report:ID:abs}` drops a minus sign, `{report:ID:word}`
+  writes a small count as a word and `{report:ID:rank}` as "fourth".
+- `"chapter_of_book"` leaves out the cover and the contents, and
+  `"edition_notes": false` leaves out the notes that a re-set report ends with;
+  the chapter ends with its own "Sources and notes".
+
+The build also writes `output/redesign/across_the_waves_figures.csv`, a list of
+every published figure the chapter uses (167 of them, from 14 reports), for
+checking. Where two reports print different values for the same poll the
+chapter uses the later report and its notes list the differences.
+
 ## Binding the book
 
     python reports/book/redesign/bind.py --screen
 
-writes `output/redesign/World_Risk_Poll_reports_2019_to_2025.pdf` (854 pages of
+writes `output/redesign/World_Risk_Poll_reports_2019_to_2025.pdf` (862 pages of
 1920 by 1080 points) and, with `--screen`, a copy with its pictures at 110 dpi.
-Build every report first; the five reports of the 2025 poll come from
+Build every report and the opening chapter first; the five reports of the 2025 poll come from
 `.cache/pdfs/` as published and are placed page for page.
 
-The book is a title page, "About this book", the contents, and four parts, one
-for each poll. A part opens with a page of its own and its reports follow whole,
+The book is a title page, "About this book", the contents, the opening chapter
+(`OPENING` in `bind.py`), and four parts, one for each poll. A part opens with a page of its own and its reports follow whole,
 cover first, in the order of `BOOK` in `bind.py`. Each report keeps its own page
 numbers. The book's page number ("Book page 123") is added in the middle of the
 foot of every page but the covers, where all the reports leave the footer
 empty; this is the only mark made on the pages of the 2025 poll's reports. The
-PDF has a bookmark for each part and report.
+PDF has a bookmark for the opening chapter and for each part and report.
 
 With `--indesign` the book is also written as a set of InDesign documents, one
 for each part of it (see "An InDesign file of a book or report" in the README

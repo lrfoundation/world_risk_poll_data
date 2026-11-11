@@ -4,9 +4,10 @@
     python reports/book/redesign/bind.py --screen   # also writes a smaller copy for reading on screen
     python reports/book/redesign/bind.py --indesign # also writes the book as a set of InDesign documents
 
-The book is a title page, a page about the book, the contents, and then the four
-polls in order. Each poll opens with a page of its own and each report follows
-whole, cover first, so a report is a chapter. The reports of the 2019, 2021 and
+The book is a title page, a page about the book, the contents, an opening chapter
+that reads across the polls (content/across_the_waves.md, written for this
+edition), and then the four polls in order. Each poll opens with a page of its
+own and each report follows whole, cover first, so a report is a chapter. The reports of the 2019, 2021 and
 2023 polls are the re-set ones (build each with build.py first); the five
 reports of the 2025 poll are the published PDFs, placed as they are.
 
@@ -15,8 +16,8 @@ the foot of each page, in the middle, where every report leaves the footer
 empty; covers carry none. The PDF has a bookmark for each poll and report.
 
 With --indesign the book is also written to output/indesign/<name>/ as one IDML
-for each part of it, numbered in the order they are bound: the front pages, an
-opening page for each poll, and each report. indesign.py makes them, so the
+for each part of it, numbered in the order they are bound: the front pages, the
+opening chapter, an opening page for each poll, and each report. indesign.py makes them, so the
 text of the re-set reports is live; the reports of the 2025 poll are placed a
 page to a page from their PDFs. Each document's pages are numbered from their
 place in the book, and the book's page number sits on a layer of its own.
@@ -50,6 +51,8 @@ TITLE = "World Risk Poll: the reports, 2019 to 2025"
 NAME = "World_Risk_Poll_reports_2019_to_2025"
 NAVY = (0x0E / 255, 0x22 / 255, 0x40 / 255)
 
+OPENING = "across_the_waves"         # the chapter that reads across the polls, bound before the first of them
+
 # The reports of each poll, in the order they were published. The 2025 poll's are keys of content.REPORTS.
 BOOK = {
     2019: ["2019_feeling_safe", "2019_risk_at_work", "2019_climate_food_water", "2019_technology"],
@@ -61,7 +64,8 @@ BOOK = {
 }
 ABOUT = [
     "This volume brings together the reports of the Lloyd’s Register Foundation World Risk Poll, from the first poll in 2019 "
-    "to the poll of 2025: {reports} reports from four polls, each one a chapter.",
+    "to the poll of 2025: {reports} reports from four polls, each one a chapter. An opening chapter, written for this "
+    "edition from the figures the reports publish, reads across the four polls.",
     "The reports were published over six years in four different designs. Here the reports of the 2019, 2021 and 2023 polls "
     "are re-set in the format of the World Risk Poll 2026 reports, so that the volume reads as one book. Their text is the "
     "published text, word for word, and their charts are redrawn from the published values in the 2026 chart style. Where a "
@@ -100,6 +104,14 @@ def label(title, subtitle):
 def plan():
     """The book as a list of pages, and where each poll and report starts (page numbers from 1)."""
     pages = [dict(kind="designed", what="cover"), dict(kind="designed", what="about"), dict(kind="designed", what="contents")]
+    path = OUT / "redesign" / f"{OPENING}.pdf"
+    if not path.exists():
+        sys.exit(f"missing {path}: build the opening chapter first (build.py {OPENING})")
+    meta = json.loads((HERE / "content" / f"{OPENING}.md").read_text(encoding="utf-8").split("---")[1])
+    doc = pymupdf.open(path)
+    opening = dict(title=meta["title"], subtitle=meta["subtitle"], page=len(pages) + 1, length=len(doc))
+    pages += [dict(kind="report", path=path, index=k, cover=False) for k in range(len(doc))]
+    doc.close()
     polls = []
     for year in BOOK:
         pages.append(dict(kind="designed", what="poll", year=year))
@@ -112,7 +124,7 @@ def plan():
             pages += [dict(kind="report", path=path, index=k) for k in range(len(doc))]
             doc.close()
         polls.append(poll)
-    return pages, polls
+    return pages, polls, opening
 
 
 def chrome():
@@ -121,7 +133,7 @@ def chrome():
             f'<div class="credit">Copyright © 2026 Lloyd’s Register Foundation. All rights reserved.<br>{line}</div>')
 
 
-def designed(polls, total):
+def designed(polls, opening):
     """The book's own pages as HTML: title page, about, contents, and an opening page for each poll."""
     logo = (HERE.parent / "assets" / "lrf-logo.svg").read_text(encoding="utf-8").replace("#e5006e", "#FFFFFF")
     count = sum(len(p["reports"]) for p in polls)
@@ -133,7 +145,8 @@ def designed(polls, total):
              '<div class="series">Lloyd’s Register Foundation</div><div class="gallup">Powered by <b>GALLUP</b></div></section>')
     about = "".join(f"<p>{escape(p.format(reports=count))}</p>" for p in ABOUT)
     about = f'<section class="page body">{chrome()}<div class="window"><div class="flow"><h1>About this book</h1>{about}</div></div></section>'
-    rows = ""
+    rows = (f'<div class="row top bookrow first"><span><b>{escape(opening["title"])}:</b> {escape(opening["subtitle"])}</span>'
+            f'<span class="n">{opening["page"]}</span></div>')
     for n, poll in enumerate(polls, 1):
         brand = WAVES[poll["year"]]["brand"]
         poll_of = "" if brand.endswith(str(poll["year"])) else f', the {poll["year"]} poll'
@@ -158,6 +171,7 @@ def designed(polls, total):
     css = (HERE / "report.css").read_text(encoding="utf-8")
     extra = (".toc .row.bookrow { font-size: 17px; line-height: 27px; font-style: normal; } .toc .row.bookrow b { font-weight: 700; }"
              ".toc .row.chapter { font-size: 17px; line-height: 27px; margin-top: 26px; color: var(--fuchsia); }"
+             ".toc .row.bookrow.first { margin-top: 26px; }"
              ".opener .text p.in { margin: 0 0 6px; font-weight: 700; }"
              ".cover .years { position: absolute; right: 116px; top: 896px; white-space: nowrap; color: #fff; opacity: 0.3;"
              " font-size: 76px; line-height: 84px; font-weight: 800; letter-spacing: -0.03em; } .cover .years span { margin-left: 36px; }")
@@ -186,8 +200,9 @@ def folio(page, number, font):
 
 READ_ME = """World Risk Poll: the reports, 2019 to 2025, as InDesign documents (IDML, InDesign 2020 or later).
 
-The documents are numbered in the order they are bound: the front pages, then for each poll an opening page and
-its reports. To work on them as one book, make an InDesign book (File > New > Book) and add them in that order.
+The documents are numbered in the order they are bound: the front pages, the opening chapter that reads across
+the polls, then for each poll an opening page and its reports. To work on them as one book, make an InDesign
+book (File > New > Book) and add them in that order.
 
 Page numbers. Each document's pages are numbered from their place in the book: the first page of each starts
 at the number listed at the end of this file (Layout > Numbering & Section Options > Start Page Numbering at).
@@ -205,7 +220,7 @@ choose Links > Relink to Folder and pick that folder. The text is set in DM Sans
 """
 
 
-def indesign_set(polls):
+def indesign_set(polls, opening):
     """The book as InDesign documents in one folder, in the order they are bound."""
     import indesign
     folder = OUT / "indesign" / NAME
@@ -213,7 +228,8 @@ def indesign_set(polls):
         shutil.rmtree(folder)
     folder.mkdir(parents=True)
     own = OUT / "redesign" / "_book_pages.html"
-    parts = [("front_pages", own, {0, 1, 2}, 1, True)]            # name, source, pages of the source, book page, opens with a cover
+    parts = [("front_pages", own, {0, 1, 2}, 1, True),            # name, source, pages of the source, book page, opens with a cover
+             (OPENING, OUT / "redesign" / f"{OPENING}.html", None, opening["page"], False)]
     for n, poll in enumerate(polls):
         parts.append((f"part_{n + 1}_the_{poll['year']}_poll", own, {3 + n}, poll["page"], False))
         for key, report in zip(BOOK[poll["year"]], poll["reports"]):
@@ -238,8 +254,8 @@ def main():
     parser.add_argument("--screen", action="store_true", help="also write a smaller copy with images at 110 dpi")
     parser.add_argument("--indesign", action="store_true", help="also write the book as a set of InDesign documents (IDML)")
     args = parser.parse_args()
-    pages, polls = plan()
-    own = designed(polls, len(pages))
+    pages, polls, opening = plan()
+    own = designed(polls, opening)
     font_file = CACHE / "DMSans-600.ttf"
     font = pymupdf.Font(fontfile=str(font_file))
     out, drawn, sources = pymupdf.open(), 0, {}
@@ -252,11 +268,11 @@ def main():
         else:
             src = sources.setdefault(spec["path"], pymupdf.open(spec["path"]))
             page.show_pdf_page(page.rect, src, spec["index"])
-            covered = spec["index"] == 0
+            covered = spec["index"] == 0 and spec.get("cover", True)
         if not covered:
             page.insert_font(fontname="dmfolio", fontfile=str(font_file))
             folio(page, number, font)
-    toc = []
+    toc = [[1, opening["title"], opening["page"]]]
     for n, poll in enumerate(polls, 1):
         toc.append([1, f'Part {n}: {WAVES[poll["year"]]["brand"]}', poll["page"]])
         toc += [[2, label(r["title"], r["subtitle"]), r["page"]] for r in poll["reports"]]
@@ -273,7 +289,7 @@ def main():
         out.save(small, garbage=3, deflate=True)
         print(f"screen copy -> {small} ({small.stat().st_size / 1e6:.0f} MB)")
     if args.indesign:
-        indesign_set(polls)
+        indesign_set(polls, opening)
 
 
 if __name__ == "__main__":

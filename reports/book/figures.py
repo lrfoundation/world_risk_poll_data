@@ -7,6 +7,9 @@ from pathlib import Path
 
 REPORTS_DIR = Path(__file__).resolve().parents[1]
 REF = re.compile(r"\{([A-Za-z0-9_]+)(?::(words|abs))?\}")
+ACROSS = re.compile(r"\{(\w+:\w+)(?::(words|abs|rank|word))?\}")      # a finding of one of several reports: {report:ID}
+NUMBERS = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
+RANKS = ["first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth"]
 
 
 @lru_cache(maxsize=None)
@@ -51,6 +54,10 @@ class Figures:
             return raw
         if style == "abs":
             value, raw = abs(value), raw.lstrip("-")
+        if style == "rank":
+            return RANKS[int(value) - 1]
+        if style == "word":
+            return NUMBERS[int(value) - 1]
         if style == "words" and abs(value) >= 1e6:
             for size, word in ((1e9, "billion"), (1e6, "million")):
                 if abs(value) >= size:
@@ -62,3 +69,32 @@ class Figures:
     def fill(self, text):
         """Replace every {ID} in text with its published value."""
         return REF.sub(lambda m: self.text(m.group(1), m.group(2)), text)
+
+
+class Sources:
+    """The figures of several reports, for writing that reads across them.
+
+    A finding is named "report:ID", where report is a key of `folders` (short name -> report folder).
+    """
+
+    def __init__(self, folders, used):
+        self.used = used
+        self.reports = {name: Figures(folder, used) for name, folder in folders.items()}
+
+    def of(self, ref):
+        name, _, fid = ref.partition(":")
+        if name not in self.reports:
+            raise KeyError(f"{ref}: no report is called {name!r} (the reports are {', '.join(self.reports)})")
+        return self.reports[name], fid
+
+    def number(self, ref):
+        report, fid = self.of(ref)
+        return report.number(fid)
+
+    def text(self, ref, style=None):
+        report, fid = self.of(ref)
+        return report.text(fid, style)
+
+    def fill(self, text):
+        """Replace every {report:ID} in text with its published value."""
+        return ACROSS.sub(lambda m: self.text(m.group(1), m.group(2)), text)
