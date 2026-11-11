@@ -111,7 +111,7 @@ table.data tr:nth-child(even) td { background: #FBF3F7; }
 .flow .foot::before { content: ""; position: absolute; left: 20px; top: 0; width: 120px; border-top: 1px solid #1a1a1a; }
 .roll { margin: 0 18px 26px 20px; break-inside: avoid; }
 .roll .mapkey { margin-bottom: 12px; font-size: 14px; }
-.roll .names { column-count: 5; column-gap: 14px; font-size: 12.5px; line-height: 17px; }
+.roll .names { display: grid; grid-template-columns: repeat(5, 1fr); column-gap: 14px; font-size: 12.5px; line-height: 17px; }
 .roll .names span { display: block; color: #333; }
 .roll .names span[class] { font-weight: 800; color: var(--c); }
 

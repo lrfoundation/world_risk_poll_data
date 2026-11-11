@@ -470,8 +470,10 @@ class Report:
                 roll = json.loads(chunk.split("\n", 1)[1].rsplit("```", 1)[0])
                 colours = [NAMED.get(c, c) for _, c in roll["key"]]
                 key = "".join(f'<span><i style="background:{c}"></i>{escape(name)}</span>' for (name, _), c in zip(roll["key"], colours))
-                names = "".join(f'<span class="s{status}" style="--c:{colours[status]}">{escape(name)}</span>' if status is not None else f"<span>{escape(name)}</span>"
-                                for name, status in roll["names"])
+                # (the columns are made here, each as long as the next: a browser balances columns of its own a line differently on screen and in print)
+                spans = [f'<span class="s{status}" style="--c:{colours[status]}">{escape(name)}</span>' if status is not None else f"<span>{escape(name)}</span>" for name, status in roll["names"]]
+                deep = -(-len(spans) // 5)
+                names = "".join("<div>" + "".join(spans[k:k + deep]) + "</div>" for k in range(0, len(spans), deep))
                 out.append(f'<div class="roll"><div class="mapkey">{key}</div><div class="names">{names}</div></div>')
             elif chunk.startswith("> "):
                 out.append(f'<p class="lead">{self.inline(chunk[2:])}</p>')
