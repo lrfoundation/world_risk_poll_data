@@ -27,7 +27,7 @@
   "Map 1.1 is a map of the world shaded by region in the original; its fifteen ratios are drawn here as bars. Chart 1.7 is a ring in the original and is drawn as a bar.",
   "In the charts of views on artificial intelligence the original draws segments under 5% without a figure. Where a bar has one such segment it is drawn in its place, at what is left of 100%, also without a figure; where it has two, the space they take is drawn in pale grey at the end of the bar."
  ],
- "pending": "The three appendices of the original (the questionnaire, the list of regions and the references listed again by chapter) are not in this draft."
+ "appendix_note": "The three appendices of the original (the questionnaire, the list of regions and the references by chapter) follow the conclusion, as in the original. Tables of answer codes and lists are set as tables of words; nothing in them is redrawn from data."
 }
 ---
 
@@ -1915,6 +1915,164 @@ In many countries and territories, marginalised populations face both discrimina
 The 2021 World Risk Poll highlights a number of factors that may make some social and economic groups in countries and territories around the world more hesitant than others to use internet- or AI-based technologies. Some factors — including fear that they will be discriminated against or that their personal information will be used against them — are particularly relevant to low-income or marginalised groups in many countries.
 
 Policymakers must address such concerns if they are to close the digital divides that threaten to increase and perpetuate income inequality. People and groups who are hesitant to engage with digital technologies — either because they fear negative consequences or because using such technologies seems inconsistent with their beliefs — risk falling further behind people and groups who feel secure in using them to pursue educational and economic opportunities and improve their quality of life.
+
+::back Appendix 1: Lloyd’s Register Foundation World Risk Poll questionnaire
+
+?1. Have you used the internet, including social media, in the past 30 days on any device, such as a mobile phone, a computer or any other device?
+
+```grid
+{"columns": ["Yes", "No", "(DK)", "(Refused)"], "rows": [["1", "2", "98", "99"]]}
+```
+
+?> (If code 1 in Q1, Continue; Otherwise, Skip to Q3)
+
+?2. When you use the internet or social media, how worried are you that the following things could happen to your personal information - very worried, somewhat worried, or not worried? How about your personal information…?
+
+?> (Read Items) (Programmer: Randomize Items)
+
+```grid
+{"columns": ["", "", "Very worried", "Somewhat worried", "Not worried", "(DK)", "(Refused)"], "rows": [["2A", "Being stolen", "1", "2", "3", "98", "99"], ["2B", "Being used by the government without your permission", "1", "2", "3", "98", "99"], ["2C", "Being used by companies for marketing purposes without your permission", "1", "2", "3", "98", "99"]]}
+```
+
+?3. Suppose that in the next few years we have cars that can drive themselves using a computer system in the car, without a human driving them. Would you feel safe being driven in a car without a human driver, or not?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Yes, would feel safe", "1"], ["No, would not feel safe", "2"], ["(DK)", "98"], ["(Refused)", "99"]]}
+```
+
+?4. These days, there are machines or robots that can think and make decisions on their own, often known as artificial intelligence. Do you think artificial intelligence will mostly HELP or mostly HARM people in this country in the next 20 years? If you don't have an opinion about this, please just say so.
+
+```grid
+{"columns": ["Mostly help", "Mostly harm", "Don’t have opinion", "(Neither)", "(DK)", "(Refused)"], "rows": [["1", "2", "3", "4", "98", "99"]]}
+```
+
+::back Appendix 2: Regions
+
+### 2021 World Risk Poll regions and countries
+
+```grid
+{"columns": null, "rows": [["Australia & New Zealand", "Australia; New Zealand"], ["Central Asia", "Armenia; Georgia; Kazakhstan; Kyrgyzstan; Tajikistan; Uzbekistan"], ["Central/Western Africa", "Benin; Burkina Faso; Cameroon; Congo Brazzaville; Gabon; Ghana; Guinea; Ivory Coast; Mali; Nigeria; Senegal; Sierra Leone; Togo"], ["Eastern Asia", "China; Hong Kong SAR of China; Japan; Mongolia; South Korea; Taiwan"], ["Eastern Africa", "Kenya; Mauritius; Mozambique; Tanzania; Uganda; Zambia; Zimbabwe"], ["Eastern Europe", "Bulgaria; Czech Republic; Hungary; Kosovo; Moldova; Poland; Romania; Russia; Slovakia; Ukraine"], ["Latin America & Caribbean", "Argentina; Bolivia; Brazil; Chile; Colombia; Costa Rica; Dominican Republic; Ecuador; El Salvador; Honduras; Jamaica; Mexico; Nicaragua; Panama; Paraguay; Peru; Uruguay; Venezuela"], ["Middle East", "Iran; Iraq; Israel; Jordan; Lebanon; Saudi Arabia; Türkiye; United Arab Emirates"], ["Northern/Western Europe", "Austria; Belgium; Denmark; Estonia; Finland; France; Germany; Iceland; Ireland; Latvia; Lithuania; Netherlands; Norway; Sweden; Switzerland; United Kingdom"], ["Northern Africa", "Algeria; Egypt; Morocco; Tunisia"], ["Northern America", "Canada; United States"], ["Southern Asia", "Afghanistan; Bangladesh; India; Nepal; Pakistan; Sri Lanka"], ["Southeastern Asia", "Cambodia; Indonesia; Laos; Malaysia; Myanmar; Philippines; Singapore; Thailand; Vietnam"], ["Southern Africa", "Namibia; South Africa"], ["Southern Europe", "Albania; Bosnia Herzegovina; Croatia; Cyprus; Greece; Italy; Malta; North Macedonia; Portugal; Serbia; Slovenia; Spain"]]}
+```
+
+::back Appendix 3: References
+
+### Introduction
+
+Broughel, J., & Thierer, A. (2019, March 4). *Technological innovation and economic growth: A brief report on the evidence.* Mercatus Center at George Mason University. https://www.mercatus.org/publications/entrepreneurship/technological-innovation-and-economic-growth
+
+Fick, M., & Akwagyiram, A. (2018, April 4). In Africa, scant data protection leaves internet users exposed. *Reuters.* https://www.reuters.com/article/us-facebook-africa/in-africa-scant-data-protection-leaves-internet-users-exposed-idUSKCN1HB1SZ
+
+Gray, A. (2017, January 11). *What new technologies carry the biggest risks?* World Economic Forum. https://www.weforum.org/agenda/2017/01/what-emerging-technologies-have-the-biggest-negative-consequences/
+
+Kavanagh, C. (2019, August 28). *New tech, new threats, and new governance challenges: An opportunity to craft smarter responses?* Carnegie Endowment for International Peace. https://carnegieendowment.org/2019/08/28/new-tech-new-threats-and-new-governance-challenges-opportunity-to-craft-smarter-responses-pub-79736
+
+Kröger, J. L., Miceli, M., & Müller, F. (2021). How data can be used against people: A classification of personal data misuses. *SSRN Electronic Journal.* https://www.researchgate.net/publication/357431331_How_Data_Can_Be_Used_Against_People_A_Classification_of_Personal_Data_Misuses
+
+Labrique, A. B., Wadhwani, C., Williams, K. A., Lamptey, P., Hesp, C., Luk, R., & Aerts, A. (2018). Best practices in scaling digital health in low and middle income countries. *Globalization and Health, 14*(1), 103. https://globalizationandhealth.biomedcentral.com/articles/10.1186/s12992-018-0424-z
+
+Lopez, M., & Aminu, Z. R. (2021, March 26). *The World Bank in partnership with EQUALS launches new program to support digital skills development.* World Bank Blogs. https://blogs.worldbank.org/digital-development/world-bank-partnership-equals-launches-new-program-support-digital-skills
+
+Madden, M. (2019, April 25). Opinion | The devastating consequences of being poor in the digital age. *The New York Times.* https://www.nytimes.com/2019/04/25/opinion/privacy-poverty.html
+
+Manyika, J., Silberg, J., & Presten, B. (2019, October 25). What do we do about the biases in AI? *Harvard Business Review.* https://hbr.org/2019/10/what-do-we-do-about-the-biases-in-ai
+
+Tay, L.-Y., Tai, H.-T., & Tan, G.-S. (2022). Digital financial inclusion: A gateway to sustainable development. *Heliyon, 8*(6), e09766. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9240988/
+
+Trucano, M. (2014, July 22). *Promising uses of technology in education in poor, rural and isolated communities around the world.* World Bank Blogs. https://blogs.worldbank.org/edutech/education-technology-poor-rural
+
+Turner Lee, N., Resnick, P., & Barton, G. (2019, May 22). Algorithmic bias detection and mitigation: Best practices and policies to reduce consumer harms. The Brookings. https://www.brookings.edu/research/algorithmic-bias-detection-and-mitigation-best-practices-and-policies-to-reduce-consumer-harms/
+
+### Chapter 1
+
+Allum, N., Allansdottir, A., Gaskell, G., Hampel, J., Jackson, J., Moldovan, A., Priest, S., Stares, S., & Stoneman, P. (2017). Religion and the public ethics of stem-cell research: Attitudes in Europe, Canada and the United States. *PLOS ONE, 12*(4), e0176274. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5398703/
+
+*Artificial intelligence index report 2022.* (2022). Stanford University. https://aiindex.stanford.edu/report/
+
+*Artificial intelligence risks to privacy demand urgent action – Bachelet.* (2021, September 15). United Nations Human Rights Office of the High Commissioner. https://www.ohchr.org/en/2021/09/artificial-intelligence-risks-privacy-demand-urgent-action-bachelet
+
+*Barriers to autonomous vehicle adoption.* (2021, August 31). Autocrypt. https://autocrypt.io/barriers-to-autonomous-vehicle-adoption/
+
+Bauman, M. (2017, November 7). *Why waiting for perfect autonomous vehicles may cost lives.* Rand Corporation. https://www.rand.org/blog/articles/2017/11/why-waiting-for-perfect-autonomous-vehicles-may-cost-lives.html
+
+Bellingreri, M., & Mamo, A. (2019, August 22). Kabul: ‘I want to break the tradition that women can’t drive.’ *Aljazeera.* https://www.aljazeera.com/gallery/2019/8/22/kabul-i-want-to-break-the-tradition-that-women-cant-drive
+
+Biswal, A. (2022, August 11). *AI applications: Top 14 artificial intelligence applications in 2022.* Simplilearn. https://www.simplilearn.com/tutorials/artificial-intelligence-tutorial/artificial-intelligence-applications
+
+Data Centers by Sweden. (2018, September 4). Sweden set to become global leader in artificial intelligence. *The Local SE.* https://www.thelocal.se/20180904/swede-set-to-become-global-leader-in-artificial-intelligence-dcbs-tlccu/
+
+Davies, N. (2021, November 10). *Index shows US is winning the AI race – but for how long?* Investment Monitor https://www.investmentmonitor.ai/ai/ai-index-us-china-artificial-intelligence
+
+*Definitions | artificial intelligence*. (n.d.). United Kingdom Information Commissioner’s Office. Retrieved 11 October 2022 from https://ico.org.uk/for-organisations/guide-to-data-protection/key-dp-themes/explaining-decisions-made-with-artificial-intelligence/part-1-the-basics-of-explaining-ai/definitions/
+
+Engler, A. (2022, February 1). *The EU and U.S. are starting to align on AI regulation.* The Brookings Institution https://www.brookings.edu/blog/techtank/2022/02/01/the-eu-and-u-s-are-starting-to-align-on-ai-regulation/
+
+Heaven, W. D. (2022, May 27). The big new idea for making self-driving cars that can go anywhere. *MIT Technology Review.* https://www.technologyreview.com/2022/05/27/1052826/ai-reinforcement-learning-self-driving-cars-autonomous-vehicles-wayve-waabi-cruise/
+
+Kaličanin, K., Čolović, M., Njeguš, A., & Mitić, V. (2019). Benefits of artificial intelligence and machine learning in marketing. *Proceedings of the International Scientific Conference - Sinteza 2019*, 472-477. https://www.researchgate.net/publication/333292012_Benefits_of_Artificial_Intelligence_and_Machine_Learning_in_Marketing
+
+Lloyd’s Register Foundation & Gallup, Inc. (2020). *The Lloyd’s Register Foundation world risk poll: Full report and analysis of the 2019 poll.* https://wrp.lrfoundation.org.uk/LRF_WorldRiskReport_Book.pdf
+
+Makortoff, K. (2022, August 7). ‘Risks posed by AI are real’: EU moves to beat the algorithms that ruin lives. *The Guardian.* https://www.theguardian.com/technology/2022/aug/07/ai-eu-moves-to-beat-the-algorithms-that-ruin-lives
+
+*National strategy for artificial intelligence.* (2019, March). The Danish Government Ministry of Finance and Ministry of Industry, Business and Financial Affairs. https://en.digst.dk/media/19337/305755_gb_version_final-a.pdf
+
+Omobowale, E. B., Singer, P. A., & Daar, A. S. (2009). The three main monotheistic religions and GM food technology: An overview of perspectives. *BMC International Health and Human Rights, 9*(1), 18. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2741429/
+
+*Research and development expenditure | Data.* (2022, June). The World Bank. https://data.worldbank.org/indicator/GB.XPD.RSDV.GD.ZS?most_recent_value_desc=true
+
+Sahu, A. (2021, April 13). *8 applications of artificial intelligence in education.* West Agile Labs Blog. https://www.westagilelabs.com/blog/8-applications-of-artificial-intelligence-in-education/#:~:text=Personalized %20learning,learners%20from%20preschool%20to%20college
+
+Shladover, S. E. (2021, September 25). ‘Self-driving’ cars begin to emerge from a cloud of hype. *Scientific American.* https://www.scientificamerican.com/article/self-driving-cars-begin-to-emerge-from-a-cloud-of-hype/?amp=true&gclid=CjwKCAjw1ICZBhAzEiwAFfvFhFk86Qmh3MpMEQrBTrlUoz_4_dXqboF7koEqhohch2Yf4gVnYhhynRoC1uUQAvD_BwE
+
+Snow, J. (2019, July 18). How artificial intelligence can tackle climate change. *National Geographic.* https://www.nationalgeographic.com/environment/article/artificial-intelligence-climate-change
+
+Telford, T. (2019, November 11). Apple card algorithm sparks gender bias allegations against Goldman Sachs. *The Washington Post.* https://www.washingtonpost.com/business/2019/11/11/apple-card-algorithm-sparks-gender-bias-allegations-against-goldman-sachs/
+
+*The Artificial Intelligence Act.* (n.d.) Future of Life Institute. Retrieved 14 September 2022 from https://artificialintelligenceact.eu/#:~:text=What%20is%20the%20EU%20AI,AI%20to%20three%20risk%20categories
+
+*The national strategy for artificial intelligence.* (n.d.) Government.no. Retrieved 14 September 2022 from https://www.regjeringen.no/en/dokumenter/nasjonal-strategi-for-kunstig-intelligens/id2685594/?ch=6
+
+*The role of natural language processing in AI.* (2021, October 12). University of York. https://online.york.ac.uk/the-role-of-natural-language-processing-in-ai/#:~:text=What%20is%20natural%20language%20processing,a%20lot%20of%20unstructured%20data
+
+Vigdor, N. (2019, November 10). Apple card investigated after gender discrimination complaints. *The New York Times.* https://www.nytimes.com/2019/11/10/business/Apple-credit-card-investigation.html
+
+Wike, R., & Stokes, B. (2018, September 13). In advanced and emerging economies alike, worries about job automation. *Pew Research Center.* https://www.pewresearch.org/global/2018/09/13/in-advanced-and-emerging-economies-alike-worries-about-job-automation/
+
+### Chapter 2
+
+Haase, K. R., Cosco, T., Kervin, L., Riadi, I., & O’Connell, M. E. (2021). Older adults’ experiences with using technology for socialization during the Covid-19 pandemic: Cross-sectional survey study. *JMIR Aging, 4*(2), e28010. https://aging.jmir.org/2021/2/e28010/
+
+*Measuring digital development: Facts and figures 2021.* (2021). International Telecommunications Union. https://www.itu.int/en/ITU-D/Statistics/Documents/facts/FactsFigures2021.pdf
+
+*Tech usage among older adults skyrockets during pandemic.* (2021, April 21). Cision PR Newswire. https://www.prnewswire.com/news-releases/tech-usage-among-older-adults-skyrockets-during-pandemic-301273924.html
+
+### Chapter 3
+
+*2020 Elder fraud report.* (2020). Federal Bureau of Investigation Internet Crime Complaint Center. https://www.ic3.gov/Media/PDF/AnnualReport/2020_IC3ElderFraudReport.pdf
+
+Auxier, B., Lee, R., Anderson, M., Perrin, A., Kumar, M., & Turner, E. (2019, November 15). Americans concerned, feel lack of control over personal data collected by both companies and the government. *Pew Research Center.* https://www.pewresearch.org/internet/2019/11/15/americans-concerned-feel-lack-of-control-over-personal-data-collected-by-both-companies-and-the-government/
+
+Babington, C. (2021). Partisan views affect trust in government. *Pew Research Center*. https://www.pewtrusts.org/en/trust/archive/summer-2021/partisan-views-affect-trust-in-government
+
+Byrne, C. (2019, March 18). *Trading privacy for survival is another tax on the poor.* Fast Company. https://www.fastcompany.com/90317495/another-tax-on-the-poor-surrendering-privacy-for-survival
+
+*Companies are misusing our data and there’s little we can do.* (2019, November 27). The University of Sydney. https://www.sydney.edu.au/news-opinion/news/2019/11/27/companies-are-misusing-our-data-and-there-s-little-we-can-do.html
+
+*Data protection and privacy legislation worldwide.* (2021, December 14). UNCTAD. https://unctad.org/page/data-protection-and-privacy-legislation-worldwide
+
+Dranoff, S. (2014, December 15). *Identity theft: A low-income issue*. American Bar Association. https://www.americanbar.org/groups/legal_services/publications/dialogue/volume/17/winter-2014/identity-theft--a-lowincome-issue/
+
+Kouilas, C. (n.d.). *Promote the rule of law to protect citizens and businesses.* United Nations Global Compact. Retrieved 12 October 2022 from https://www.unglobalcompact.org/what-is-gc/our-work/governance/rule-law
+
+Madden, M. (2019, April 25). Opinion | The devastating consequences of being poor in the digital age. *The New York Times.* https://www.nytimes.com/2019/04/25/opinion/privacy-poverty.html
+
+Polls show Hong Kong residents’ distrust of Chinese vaccines. (2021, January 28). *Reuters.* https://www.reuters.com/article/us-health-coronavirus-hongkong/polls-shows-hong-kong-residents-distrust-of-chinese-vaccines-idUSKBN29X10P
+
+*Rule of law and human rights.* (n.d.). United Nations and the Rule of Law. Retrieved 12 October 2022 from https://www.un.org/ruleoflaw/rule-of-law-and-human-rights/
+
+*Rule of law index* | Data. (2021). World Justice Project. https://worldjusticeproject.org/rule-of-law-index/
+
+*UN recognition of the least developed countries.* (n.d.). UNCTAD. Retrieved 16 September 2022 from https://unctad.org/topic/least-developed-countries/recognition
 
 [^1]: Many of the findings in this report are based on all people in the 121 countries and territories studied or on the total populations of individual regions, countries or territories. However, the analysis attempts to identify and address areas where there were notable differences by demographic categories such as sex, education or age.
 

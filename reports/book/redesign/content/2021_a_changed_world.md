@@ -26,7 +26,7 @@
   "The name under the portrait in the preface is set as a line at the end of the preface.",
   "Footnotes are gathered as numbered references at the back, with their original numbers. Web addresses that the original broke across lines have been joined up."
  ],
- "pending": "The three appendices of the original (the questionnaire, the references listed again by chapter, and the list of regions) are not in this draft."
+ "appendix_note": "The three appendices of the original (the questionnaire, the references by chapter and the list of regions) follow the conclusion, as in the original. Tables of answer codes and lists are set as tables of words; nothing in them is redrawn from data."
 }
 ---
 
@@ -2961,6 +2961,150 @@ Covid-19 undeniably changed the world’s risk landscape in ways that are likely
 However, the 2021 World Risk Poll also demonstrates the primacy of other types of risks in most people’s lives. As efforts to combat Covid-19 were gaining ground in 2021, just a fraction of the global population named it as their greatest risk source. Threats like violent crime, chronic health issues, road-related injuries and financial deprivation require constant attention, while the risk posed by Covid-19 was more variable in 2021 as cases surged and receded. An increase in harm experienced from severe weather events since the 2019 World Risk Poll also underscores the growing threat of climate change and the need to focus on building resilience to its effects in vulnerable communities.
 
 Covid-19 has profoundly affected people’s lives, and there were many lessons learned — often the hard way — to improve responses to future pandemics. However, the seriousness of the pandemic's effects should not distract from the importance of mitigation initiatives surrounding other risks people experience in their daily lives. As the 2021 World Risk Poll highlights, most people remained focused on the other formidable risks they already faced and continue to face. Indeed, efforts to help people manage day-to-day risks like chronic health conditions and economic uncertainty will be more important than ever in the post-pandemic world.
+
+::back Appendix 1: Lloyd’s Register Foundation World Risk Poll Questionnaire
+
+?1. Overall, compared to five years ago, do you feel more safe, less safe, or about as safe as you did five years ago?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["More safe", "1"], ["Less safe", "2"], ["About as safe", "3"], ["(DK)", "98"], ["(Refused)", "99"]]}
+```
+
+*(READ:) Now, I have a few questions about risk. By RISK, I mean something that may be dangerous or that could cause harm or the loss of something. Risk could also result in a reward or something good*
+
+?2. In your own words, what is the greatest source of RISK TO YOUR SAFETY in your daily life?
+
+?> (INTERVIEWER: Capture verbatim response) (Allow ONE response) (INTERVIEWER: If the respondent says "nothing", that they have no risks or that they don't know, PROBE: "If you had to pick one big risk to your safety, what would it be?")
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Write in:", ""], ["(DK)", "98"], ["(Refused)", "99"]]}
+```
+
+?2.1. *(INTERVIEWER: Do NOT read response options. Code respondent's verbatim response using the list of pre-coded options below. Refer to previous screen for verbatim.)*
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["TRANSPORTATION: road-related accidents/injuries (such as using a bicycle, car, motorbike, truck, van, bus, etc.)", "1"], ["TRANSPORTATION: other transportation-related accidents/injuries (such as subway, train, plane, etc.)", "2"], ["CRIME/VIOLENCE", "3"], ["WAR/TERRORISM", "4"], ["HEALTH: personal health condition/illness", "5"], ["HEALTH: drugs, alcohol, smoking", "6"], ["HEALTH: COVID-19/Coronavirus related", "7"], ["HEALTH: mental stress/exhaustion", "8"], ["FINANCIAL: not having enough money to pay for the things you need", "9"], ["ECONOMY: economy-related, such as unemployment, high prices", "10"], ["POLITICS: politics/political situation/corruption", "11"], ["TECHNOLOGY: internet/technology related risks", "12"], ["WATER: water supply or drinking unclean water", "13"], ["FOOD-RELATED: eating unsafe or contaminated food", "14"], ["FOOD-RELATED: insufficient or lack of food (hunger)", "15"], ["COOKING or other household accidents/injuries", "16"], ["WORK: work-related accidents: physical injuries", "17"], ["ENVIRONMENT: pollution", "18"], ["ENVIRONMENT: climate change or severe weather-related events, such as floods, drought, wildfires, etc.", "19"], ["ENVIRONMENT: non-weather-related disasters, such as earthquakes or volcanoes", "20"], ["DROWNING", "21"], ["Other", "22"], ["Nothing/No risks", "23"], ["Don’t know", "98"], ["Refused", "99"]]}
+```
+
+*(READ:) Now, on a different topic…*
+
+?3. Do you think that climate change is a very serious threat, a somewhat serious threat, or not a threat at all to the people in this country in the next 20 years? If you don't know, please just say so.
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Very serious threat", "1"], ["Somewhat serious threat", "2"], ["Not a threat at all", "3"], ["Don't know", "98"], ["(Refused)", "99"]]}
+```
+
+?4. In general, how WORRIED are you that each of the following things could cause you serious harm? Are you very worried, somewhat worried, or not worried?
+
+?> (Read Items)
+
+```grid
+{"columns": ["", "", "Very worried", "Somewhat worried", "Not worried", "(DK)", "(Refused)"], "rows": [["4A", "The food you eat", "1", "2", "3", "98", "99"], ["4B", "The water you drink", "1", "2", "3", "98", "99"], ["4C", "Violent crime", "1", "2", "3", "98", "99"], ["4D", "Severe weather events, such as floods or violent storms", "1", "2", "3", "98", "99"], ["4E", "Being in a traffic or roadside accident", "1", "2", "3", "98", "99"], ["4F", "Mental health issues", "1", "2", "3", "98", "99"], ["4G", "The work you do", "1", "2", "3", "98", "99"]]}
+```
+
+?5. Have you or someone you PERSONALLY know, EXPERIENCED serious harm from any of the following things in the past TWO years? *(Read Items)*
+
+?> (INTERVIEWER: If respondent says, "yes" to any, READ: Did this happen to you, someone you personally know or both in the past TWO years?)
+
+```grid
+{"columns": ["", "", "Yes, personally experienced", "Yes, know someone who has experienced", "Both", "No", "(DK)", "(Refused)"], "rows": [["5A", "Eating food", "1", "2", "3", "4", "98", "99"], ["5B", "Drinking water", "1", "2", "3", "4", "98", "99"], ["5C", "Violent crime", "1", "2", "3", "4", "98", "99"], ["5D", "Severe weather events, such as floods or violent storms", "1", "2", "3", "4", "98", "99"], ["5E", "Being in a traffic or roadside accident", "1", "2", "3", "4", "98", "99"], ["5F", "Mental health issues", "1", "2", "3", "4", "98", "99"], ["5G", "Work", "1", "2", "3", "4", "98", "99"]]}
+```
+
+::back Appendix 2: References
+
+### Chapter 1
+
+COVID-19: Southeast Asia battles world's highest deaths. (n.d.). *IFRC*. Retrieved 22 June 2022 from https://www.ifrc.org/press-release/covid-19-southeast-asia-battles-worlds-highest-deaths
+
+Covid map: Coronavirus cases, deaths, vaccinations by country (2022, June 1). *BBC News.* https://www.bbc.com/news/world-51235105
+
+Feuer, W., & Rattner, N. (2021, January 27). *U.S. reports record number of Covid deaths in January as new strains threaten progress.* CNBC. https://www.cnbc.com/2021/01/27/us-reports-record-number-of-covid-deaths-in-january.html
+
+*Intentional homicides (per 100,000 people*) | *Data*. (n.d.). The World Bank. Retrieved 20 June 2022 from https://data.worldbank.org/indicator/VC.IHR.PSRC.P5
+
+*Stopping crime and violence in Latin America: A look at prevention from cradle to adulthood*. (2018, May 17). The World Bank. https://www.worldbank.org/en/results/2018/05/17/fin-a-la-violencia-en-america-latina-una-mirada-a-la-prevencion-desde-la-infancia-hasta-la-edad-adulta
+
+Tanko, A. (2021, July 19). Nigeria’s security crisis – five different threats. *BBC News*. https://www.bbc.com/news/world-africa-57860993
+
+### Chapter 2
+
+Dorman, P., & Boden, L. (2021, April 19). Risk without reward: The myth of wage compensation for hazardous work. *Economic Policy Institute*. https://www.epi.org/unequalpower/publications/risk-without-reward-the-myth-of-wage-compensation-for-hazardous-work/
+
+*Drinking-water: Key facts*. (n.d.). World Health Organization. Retrieved 10 June 2022 from https://www.who.int/news-room/fact-sheets/detail/drinking-water
+
+Fischhoff, B., & Kadvany, J. (2011). Risk: *A very short introduction*. Oxford University Press.
+
+*Food safety: Key facts*. (n.d.). World Health Organization. Retrieved 10 June 2022 from https://www.who.int/news-room/fact-sheets/detail/food-safety
+
+Giuffrida, A. (2021, September 29). Spotlight on workplace safety in Italy amid spate of fatal accidents. *The Guardian*. https://www.theguardian.com/world/2021/sep/29/spotlight-on-workplace-safety-in-italy-amid-spate-of-fatal-accidents
+
+*Media portrayals of crime create problems*. (2019, January 7). The John Howard Society of Canada. https://johnhoward.ca/blog/media-portrayals-crime-create-problems/
+
+Slovic, P. (2000). *The perception of risk. Risk, society, and policy series*. Earthscan.
+
+*WHO/ILO: Almost 2 million people die from work-related causes each year.* (2021, September 17). World Health Organization. https://www.who.int/news/item/17-09-2021-who-ilo-almost-2-million-people-die-from-work-related-causes-each-year
+
+*Workplace safety, PM Draghi issues statement*. (2021, October 18). Italian Government Presidency of the Council of Ministries. https://www.governo.it/en/articolo/workplace-safety-pm-draghi-issues-statement/18272
+
+*World Bank approves $500 million program to protect India’s informal sector workers*. (2021, June 29). The World Bank. https://www.worldbank.org/en/news/press-release/2021/06/29/world-bank-approves-500-million-program-to-protect-india-s-informal-sector-workers
+
+### Chapter 3
+
+*14.9 million excess deaths associated with the COVID-19 pandemic in 2020 and 2021*. (2022, May 5). World Health Organization. https://www.who.int/news/item/05-05-2022-14.9-million-excess-deaths-were-associated-with-the-covid-19-pandemic-in-2020-and-2021
+
+In Algeria, the health system is overwhelmed by the delta variant. (2021, July 29). *The Maghreb Times*. https://themaghrebtimes.com/in-algeria-the-health-system-is-overwhelmed-by-the-delta-variant/
+
+Leonhardt, D., & Yar, S. (2021, October 14). Lebanon’s Crisis. *The New York Times*. https://www.nytimes.com/2021/10/14/briefing/lebanon-financial-crisis-lira.html
+
+*Outbreak: 10 of the worst pandemics in history*. (n.d.). MPH Online. Retrieved 10 June 2022 from https://www.mphonline.org/worst-pandemics-in-history/
+
+Slovic, P., & Weber, E. U. (2002, April 12-13). *Perception of risk posed by extreme events* [Paper presentation]. Risk Management Strategies in an Uncertain World, Palisades, NY, United States. https://www.ldeo.columbia.edu/chrr/documents/meetings/roundtable/white_papers/slovic_wp.pdf
+
+Udoakang, A., Oboh, M., Henry-Ajala, A., Anyigba, C., Omoleke, S., Amambua-Ngwa, A., Paemka, L., Awandare, G., & Quashie, P. (2021, October 7). *Low COVID-19 impact in Africa: The multifactorial Nexus* [version 1]. Open Research Africa. https://openresearchafrica.org/articles/4-47
+
+Uribe, J. P. (2021, December 15). *Supporting vaccine rollout in developing countries*. World Bank Blogs. https://blogs.worldbank.org/health/supporting-vaccine-rollout-developing-countries
+
+Venezuela crisis: How the political situation escalated. (2021, August 12). *BBC News*. https://www.bbc.com/news/world-latin-america-36319877
+
+*War in Afghanistan*. (n.d.). Global Conflict Tracker. Retrieved 14 June 2022 from https://www.cfr.org/global-conflict-tracker/conflict/war-afghanistan
+
+### Chapter 4
+
+Alloush, M., & Bloem, J. R. (2020, February 19). *Neighborhood violence, poverty, and psychological well-being*. https://arefiles.ucdavis.edu/uploads/filer_public/1a/30/1a300656-db08-46ec-a81d-b9e7cc8bab69/alloush_violencesouthafrica.pdf
+
+Bruine de Bruin, W., Rabinovich, L., Weber, K., Babboni, M., Dean, M., & Ignon, L. (2021). Public understanding of climate change terminology. *Climatic Change 167*(3-4), 37. https://doi.org/10.1007/s10584-021-03183-0
+
+China faces worst crop conditions ever due to climate change. (2022, March 22). *Bloomberg News*. https://www.bloomberg.com/news/articles/2022-03-23/climate-change-threatens-china-s-crop-yield-food-security
+
+*COVID-19 pandemic triggers 25% increase in prevalence of anxiety and depression worldwide*. (2022, March 2). World Health Organization. https://www.who.int/news/item/02-03-2022-covid-19-pandemic-triggers-25-increase-in-prevalence-of-anxiety-and-depression-worldwide
+
+Rathod, S., Pinninti, N., Irfan, M., Gorczynski, P., Rathod, P., Gega, L., & Naeem, F. (2017). Mental health service provision in low- and middle-income countries. *Health Services Insights*, *10*, 117863291769435. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5398308/
+
+*State of the global climate report* 2021 [WMO-No. 1290]. (2022). World Meteorological Organization. https://library.wmo.int/doc_num.php?explnum_id=11178
+
+Textor, C. (2021, November 25). *Regional disparities in China – statistics & facts*. Statista. https://www.statista.com/topics/7157/regional-disparities-in-china/#dossierKeyfigures
+
+Wellcome Foundation & Gallup, Inc. (2020). *The role of science in mental health: Insights from the Wellcome Global Monitor*. https://cms.wellcome.org/sites/default/files/2021-10/wellcome-global-monitor-mental-health.pdf
+
+### Chapter 5
+
+ALLEA – All European Academies. (2020, May). *A snapshot of climate change education initiatives in Europe: Initial findings and implications for future climate change education*. https://allea.org/wp-content/uploads/2020/05/ALLEA_Climate_Science_Education_2020-1.pdf *Education is key to addressing climate change*. (n.d.). United Nations. Retrieved 14 June 2022 from https://www.un.org/en/climatechange/climate-solutions/education-key-addressing-climate-change
+
+Horowitz, J. (2019, November 5). Italy’s students will get a lesson in climate change. Many lessons, in fact. *The New York Times*. https://www.nytimes.com/2019/11/05/world/europe/italy-schools-climate-change.html
+
+Lloyd’s Register Foundation & Gallup, Inc. (2020). *The Lloyd’s Register Foundation World Risk Poll: Full report and analysis of the 2019 poll*. https://wrp.lrfoundation.org.uk/LRF_WorldRiskReport_Book.pdf
+
+Sommer, L. (2021, September 7). Climate change is the greatest threat to public health, top medical journals warn. *NPR*. https://www.npr.org/2021/09/07/1034670549/climate-change-is-the-greatest-threat-to-public-health-top-medical-journals-warn
+
+Taylor, A., Bruine de Bruin, W., & Dessia, S. (2014). Climate change beliefs and perceptions of weather-related changes in the United Kingdom. *Risk Analysis*, *34*(11), 1995-2004. https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/risa.12234
+
+::back Appendix 3: Regions
+
+### 2021 World Risk Poll regions and countries
+
+```grid
+{"columns": null, "rows": [["Australia & New Zealand", "Australia; New Zealand"], ["Central Asia", "Armenia; Georgia; Kazakhstan; Kyrgyzstan; Tajikistan; Uzbekistan"], ["Central/Western Africa", "Benin; Burkina Faso; Cameroon; Congo Brazzaville; Gabon; Ghana; Guinea; Ivory Coast; Mali; Nigeria; Senegal; Sierra Leone; Togo"], ["Eastern Asia", "China; Hong Kong SAR of China; Japan; Mongolia; South Korea; Taiwan"], ["Eastern Africa", "Kenya; Mauritius; Mozambique; Tanzania; Uganda; Zambia; Zimbabwe"], ["Eastern Europe", "Bulgaria; Czech Republic; Hungary; Kosovo; Moldova; Poland; Romania; Russia; Slovakia; Ukraine"], ["Latin America & Caribbean", "Argentina; Bolivia; Brazil; Chile; Colombia; Costa Rica; Dominican Republic; Ecuador; El Salvador; Honduras; Jamaica; Mexico; Nicaragua; Panama; Paraguay; Peru; Uruguay; Venezuela"], ["Middle East", "Iran; Iraq; Israel; Jordan; Lebanon; Saudi Arabia; Turkey; United Arab Emirates"], ["Northern/Western Europe", "Austria; Belgium; Denmark; Estonia; Finland; France; Germany; Iceland; Ireland; Latvia; Lithuania; Netherlands; Norway; Sweden; Switzerland; United Kingdom"], ["Northern Africa", "Algeria; Egypt; Morocco; Tunisia"], ["Northern America", "Canada; United States"], ["Southern Asia", "Afghanistan; Bangladesh; India; Nepal; Pakistan; Sri Lanka"], ["Southeastern Asia", "Cambodia; Indonesia; Laos; Malaysia; Myanmar; Philippines; Singapore; Thailand; Vietnam"], ["Southern Africa", "Namibia; South Africa"], ["Southern Europe", "Albania; Bosnia Herzegovina; Croatia; Cyprus; Greece; Italy; Malta; North Macedonia; Portugal; Serbia; Slovenia; Spain"]]}
+```
 
 [^1]: Feuer, W., & Rattner, N. (2021, January 27). U.S. reports record number of Covid deaths in January as new strains threaten progress. CNBC. https://www.cnbc.com/2021/01/27/us-reports-record-number-of-covid-deaths-in-january.html
 

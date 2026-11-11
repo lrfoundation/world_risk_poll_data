@@ -21,6 +21,7 @@ import pymupdf
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
+import appendix_2021  # noqa: E402
 import core_2021  # noqa: E402
 from assemble_2019 import REGIONS as REGIONS_2019, join_urls, open_ended  # noqa: E402
 
@@ -310,7 +311,7 @@ def assemble(key):
         series=f"Core report of the 2021 poll, first published {p['published']}",
         source=p["source"], copyright=p["copyright"], running=f"Re-set in 2026 from the report of {p['published']}",
         cover_image=p["cover_image"], numbering="chapter", contents_first=True, margins=[55, 800], edits=edits)
-    for extra in ("chart_note", "queries", "pending"):
+    for extra in ("chart_note", "queries", "pending", "appendix_note"):
         if p.get(extra):
             meta[extra] = p[extra]
 
@@ -334,6 +335,14 @@ def assemble(key):
         out += dump(blocks)
     missing = set(p["charts"]) - seen
     assert not missing, f"charts in the plan that the PDF never reached: {sorted(missing)}"
+    if p.get("appendices"):
+        # the appendices: questionnaire, regions, references by chapter and any methodology, read by appendix_2021.py
+        blocks, small = appendix_2021.read(doc, *p["appendices"], pictures=p.get("appendix_pictures"))
+        out += [block if block.startswith("```") else urls(block) for block in blocks]
+        for note in small:
+            numbered = re.match(r"(\d+)\s+(.*)", note, flags=re.S)
+            if numbered:
+                notes[int(numbered.group(1))] = numbered.group(2)
 
     text = "\n\n".join(out)
     for old, new in p.get("replace", {}).items():
@@ -349,7 +358,7 @@ def assemble(key):
 
 plan(
     "2021_a_changed_world",
-    folder="WRP_2021/core_a_changed_world", pdf="core_a_changed_world.pdf", pages=(3, 50),
+    folder="WRP_2021/core_a_changed_world", pdf="core_a_changed_world.pdf", pages=(3, 50), appendices=(51, 57),
     title="A Changed World?", subtitle="Perceptions and experiences of risk in the Covid age", published="July 2022",
     source="World Risk Poll 2021: A Changed World? Perceptions and experiences of risk in the Covid age (Lloyd's Register Foundation, July 2022)",
     copyright="Copyright © 2022 Lloyd's Register Foundation. All rights reserved.",
@@ -368,7 +377,7 @@ plan(
         "The name under the portrait in the preface is set as a line at the end of the preface.",
         "Footnotes are gathered as numbered references at the back, with their original numbers. Web addresses that the original broke across lines have been joined up.",
     ],
-    pending="The three appendices of the original (the questionnaire, the references listed again by chapter, and the list of regions) are not in this draft.",
+    appendix_note="The three appendices of the original (the questionnaire, the references by chapter and the list of regions) follow the conclusion, as in the original. Tables of answer codes and lists are set as tables of words; nothing in them is redrawn from data.",
     charts=lambda ids: {
         "1.1": dict(kind="stacked", rows=[[y, [f"C1_1_{y}_{k}" for k in ("more", "same", "less", "dk")]] for y in ("2019", "2021")], **SAFE4),
         "1.2": dict(kind="stacked_pair", panels=["2019", "2021"], extra="‘Less safe’ difference", extra_unit=" pts",
@@ -441,7 +450,7 @@ def countries(ids, prefix, suffix=""):
 
 plan(
     "2021_a_resilient_world",
-    folder="WRP_2021/core_a_resilient_world", pdf="core_a_resilient_world.pdf", pages=(3, 46),
+    folder="WRP_2021/core_a_resilient_world", pdf="core_a_resilient_world.pdf", pages=(3, 46), appendices=(47, 70),
     title="A Resilient World?", subtitle="Understanding vulnerability in a changing climate", published="September 2022",
     source="World Risk Poll 2021: A Resilient World? Understanding vulnerability in a changing climate (Lloyd's Register Foundation, September 2022)",
     copyright="Copyright © 2022 Lloyd's Register Foundation. All rights reserved.",
@@ -461,8 +470,17 @@ plan(
         "set here as a table of the same values.",
         "In Charts 1.3 and 2.6 the original leaves out segments under 5%. The space they take is drawn in pale grey at the end of the bar, without a figure.",
     ],
-    pending="The four appendices of the original (the questionnaire, the list of regions, the Resilience Index methodology and the references listed again by chapter) "
-            "are not in this draft.",
+    appendix_note="The four appendices of the original (the questionnaire, the list of regions, the Resilience Index methodology and the references by chapter) follow the "
+                  "conclusion, as in the original. Tables of answer codes and lists are set as tables of words; nothing in them is redrawn from data. In the methodology, Tables 1, 2 and 3, the chart of the distribution of index scores and the scoring table "
+                  "‘Cover Basic Needs’ are placed as pictures of the original: the first two tables are grids of marks under headings set on their side, the third "
+                  "is a table of questions set in two tints, the chart's values are not printed, and the scoring table sets two tables side by side.",
+    appendix_pictures={
+        55: [((47, 115, 522, 795), dict(number="1", title="Correspondence between resilience conceptual frameworks and World Risk Poll items", quiet=True, **{"as": "Table"}))],
+        56: [((80, 115, 552, 735), dict(number="2", title="Correspondence between resilience conceptual frameworks and GWP items", quiet=True, **{"as": "Table"}))],
+        57: [((47, 115, 516, 668), dict(number="3", title="Dimensions and indicators in the World Risk Poll Resilience Index", quiet=True, **{"as": "Table"}))],
+        60: [((80, 425, 548, 745), dict(bare=True))],
+        61: [((50, 472, 514, 772), dict(bare=True))],
+    },
     charts=lambda ids: {
         "1.1": dict(kind="stacked", rows=[["World", [f"C1_1_{k}" for k in ("yes", "no", "depends", "dk")]]],
                     series=["Yes", "No", "It depends", "Don’t know"], colours=["teal", "fuchsia", "navy", "grey"]),
@@ -557,7 +575,7 @@ def ai_rows(ids, prefix, names):
 
 plan(
     "2021_a_digital_world",
-    folder="WRP_2021/core_a_digital_world", pdf="core_a_digital_world.pdf", pages=(3, 35),
+    folder="WRP_2021/core_a_digital_world", pdf="core_a_digital_world.pdf", pages=(3, 35), appendices=(36, 42),
     title="A Digital World", subtitle="Perceptions of risk from AI and misuse of personal data", published="November 2022",
     source="World Risk Poll 2021: A Digital World. Perceptions of risk from AI and misuse of personal data (Lloyd's Register Foundation, November 2022)",
     copyright="Copyright © 2022 Lloyd's Register Foundation. All rights reserved.",
@@ -576,7 +594,7 @@ plan(
         "In the charts of views on artificial intelligence the original draws segments under 5% without a figure. Where a bar has one such segment it is drawn in its place, "
         "at what is left of 100%, also without a figure; where it has two, the space they take is drawn in pale grey at the end of the bar.",
     ],
-    pending="The three appendices of the original (the questionnaire, the list of regions and the references listed again by chapter) are not in this draft.",
+    appendix_note="The three appendices of the original (the questionnaire, the list of regions and the references by chapter) follow the conclusion, as in the original. Tables of answer codes and lists are set as tables of words; nothing in them is redrawn from data.",
     charts=lambda ids: {
         "1.1": dict(kind="grouped", series=["World", "Women", "Men"], colours=["teal", "fuchsia", "navy"],
                     rows=[[label, [f"C1_1_{g}_{k}" for g in ("world", "women", "men")]] for k, label in zip(AI5_KEYS, AI5["series"])]),
@@ -660,7 +678,7 @@ def published_text(folder):
 
 plan(
     "2021_safe_at_work",
-    folder="WRP_2021/core_safe_at_work", pdf="core_safe_at_work.pdf", pages=(3, 37), flat=True,
+    folder="WRP_2021/core_safe_at_work", pdf="core_safe_at_work.pdf", pages=(3, 37), appendices=(38, 48), flat=True,
     title="Safe at Work?", subtitle="Global experiences of violence and harassment", published="January 2023",
     source="World Risk Poll 2021: Safe at Work? Global experiences of violence and harassment (Lloyd's Register Foundation, January 2023)",
     copyright="Copyright © 2023 Lloyd's Register Foundation. All rights reserved.",
@@ -683,7 +701,11 @@ plan(
         "Chart 1.7. The key of the original reads ‘No experience of violence and harassment’ and ‘Experience of violence and harassment’, but both bars are the percentage who "
         "experienced it: the shorter one among people who had not experienced that type of discrimination, the longer one among people who had. The key is kept as printed.",
     ],
-    pending="The four appendices of the original (the questionnaire, the list of regions, the methodology note and the references listed again by chapter) are not in this draft.",
+    appendix_note="The four appendices of the original (the questionnaire, the list of regions, the methodology note and the references by chapter) follow the concluding "
+                  "remarks, as in the original. Tables of answer codes and lists are set as tables of words; nothing in them is redrawn from data. Table 1 of the methodology note is placed as a picture of the original.",
+    appendix_pictures={
+        45: [((47, 122, 548, 318), dict(number="1", title="Number of respondents who volunteered they have never worked when asked about violence and harassment at work, by when the respondent offered this response", quiet=True, **{"as": "Table"}))],
+    },
     charts=lambda ids: {
         "1.1": dict(kind="stacked", gaps=NOT_PRINTED, rows=[["World", ["C1_1_no", "C1_1_last_year", "C1_1_two_five", "C1_1_five_plus", None]]],
                     series=["No", "Yes, last year", "Yes, 2-5 years ago", "Yes, 5+ years ago", "Yes, do not know"], colours=["teal", "fuchsia", "navy", "grey", "purple"]),

@@ -65,6 +65,9 @@ def main():
             ours += [row[0] for row in spec.get("rows", []) if spec.get("kind") == "line"]
             lists = [rows for _, rows in spec.get("lists", [])]         # ranked lists side by side: the original sets them row by row
             ours.append(" ".join(rows[k][0] for k in range(max(map(len, lists), default=0)) for rows in lists if k < len(rows)))
+        elif chunk.startswith("```grid"):
+            table = json.loads(chunk.split("\n", 1)[1].rsplit("```", 1)[0])
+            ours.append(" ".join([table.get("title", "")] + (table.get("columns") or []) + [cell for row in table["rows"] for cell in row]))
         elif chunk.startswith("```roll"):
             ours.append(" ".join(name for name, _ in json.loads(chunk.split("\n", 1)[1].rsplit("```", 1)[0])["names"]))
         elif chunk.startswith(("::chapter ", "::front ", "::back ", "::box ")):
@@ -73,7 +76,7 @@ def main():
             ours.append(re.sub(r"\[\^[ivx]+\]", "", chunk))         # (without the marks of page notes, which the PDF's text is read without)
             if chunk.startswith("[^"):
                 continue
-            text = re.sub(r"^(#+ |>> |>-- |> |\^ |-- |- |\d+\. )", "", re.sub(r"\[\^\w+\]", "", chunk)).replace("**", "")
+            text = re.sub(r"^(#+ |>> |>-- |> |\^ |-- |- |\d+\. |\?> |\?[\w.]+ )", "", re.sub(r"\[\^\w+\]", "", chunk)).replace("**", "")
             for sentence in re.split(r"(?<=[.?!])\s+(?=[A-Z‘“])", text):
                 sentences += 1
                 if letters(sentence) and letters(sentence) not in source:

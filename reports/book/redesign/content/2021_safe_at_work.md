@@ -30,7 +30,7 @@
  "queries": [
   "Chart 1.7. The key of the original reads ‘No experience of violence and harassment’ and ‘Experience of violence and harassment’, but both bars are the percentage who experienced it: the shorter one among people who had not experienced that type of discrimination, the longer one among people who had. The key is kept as printed."
  ],
- "pending": "The four appendices of the original (the questionnaire, the list of regions, the methodology note and the references listed again by chapter) are not in this draft."
+ "appendix_note": "The four appendices of the original (the questionnaire, the list of regions, the methodology note and the references by chapter) follow the concluding remarks, as in the original. Tables of answer codes and lists are set as tables of words; nothing in them is redrawn from data. Table 1 of the methodology note is placed as a picture of the original."
 }
 ---
 
@@ -1802,6 +1802,206 @@ Violence and harassment in the workplace is endemic, and for those who do experi
 
 Regardless, it is clear that the current state of violence and harassment in the workplace is untenable and there is an urgent need for action globally. In the most general form these interventions should raise awareness of violence and harassment in the workplace, the significant harm it causes to employees, and the economic impact to employers and at the national level; a process that should go hand in hand with ratification of Convention No. 190.
 
+::back Appendix 1: Lloyd’s Register Foundation World Risk Poll questionnaire
+
+?1. Have you, personally, EVER experienced PHYSICAL violence and/or harassment AT WORK, such as hitting, restraining, or spitting?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Yes", "1"], ["No", "2"], ["(Respondent has never worked)", "7"], ["(DK)", "8"], ["(Refused)", "9"]]}
+```
+
+*(If code 1, Continue; Otherwise, Skip to Q4)*
+
+?2. How many times have you experienced this?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Once or twice", "1"], ["Three to five times", "2"], ["More than five times", "3"], ["(DK)", "8"], ["(Refused)", "9"]]}
+```
+
+?3. Approximately, WHEN was the last time this happened to you – was it within the last two years, three to five years ago, or more than five years ago?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Within the last two years", "1"], ["Three to five years ago", "2"], ["More than five years ago", "3"], ["(DK)", "8"], ["(Refused)", "9"]]}
+```
+
+?4. Have you, personally, EVER experienced PSYCHOLOGICAL violence and/or harassment, such as insults, threats, bullying, or intimidation AT WORK?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Yes", "1"], ["No", "2"], ["(Respondent has never worked)", "7"], ["(DK)", "8"], ["(Refused)", "9"]]}
+```
+
+*(If code 1, Continue; Otherwise, Skip to Q7)*
+
+?5. How many times have you experienced this?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Once or twice", "1"], ["Three to five times", "2"], ["More than five times", "3"], ["(DK)", "8"], ["(Refused)", "9"]]}
+```
+
+?6. Approximately, WHEN was the last time this happened to you – was it within the last two years, three to five years ago, or more than five years ago?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Within the last two years", "1"], ["Three to five years ago", "2"], ["More than five years ago", "3"], ["(DK)", "8"], ["(Refused)", "9"]]}
+```
+
+?7. Have you, personally, EVER experienced any type of SEXUAL violence and/or harassment AT WORK, such as unwanted sexual touching, comments, pictures, emails, or sexual requests while at WORK?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Yes", "1"], ["No", "2"], ["(Respondent has never worked)", "7"], ["(DK)", "8"], ["(Refused)", "9"]]}
+```
+
+*(If code 1, Continue; Otherwise, Skip to Q10)*
+
+?8. How many times have you experienced this?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Once or twice", "1"], ["Three to five times", "2"], ["More than five times", "3"], ["(DK)", "8"], ["(Refused)", "9"]]}
+```
+
+?9. Approximately, WHEN was the last time this happened to you – was it within the last two years, three to five years ago, or more than five years ago?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Within the last two years", "1"], ["Three to five years ago", "2"], ["More than five years ago", "3"], ["(DK)", "8"], ["(Refused)", "9"]]}
+```
+
+*(If code 1 in Q1, Q2, or Q3, Continue; Otherwise, Skip to Q10)*
+
+?10. Did you ever tell anyone about the violence and/or harassment that you experienced AT WORK?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Yes", "1"], ["No", "2"], ["(DK)", "8"], ["(Refused)", "9"]]}
+```
+
+*(If code 1, Continue; If code2 Skip to Q12)*
+
+?11. Whom did you tell about your experiences? Was it…?
+
+```grid
+{"columns": ["", "Yes", "No", "(DK)", "(Refused)"], "rows": [["Your employer or supervisor", "1", "2", "8", "9"], ["A co-worker", "1", "2", "8", "9"], ["A friend or family member", "1", "2", "8", "9"], ["A trade union representative", "1", "2", "8", "9"], ["A [insert country specific example, such as a labor inspector], police, or community leader", "1", "2", "8", "9"], ["Social services or a not-for-profit organization", "1", "2", "8", "9"]]}
+```
+
+?12. Please tell me if each of the following is a reason why you did not tell anybody about your experience. Was it because…?
+
+```grid
+{"columns": ["", "Yes", "No", "(DK)", "(Refused)"], "rows": [["You thought it was a waste of time", "1", "2", "8", "9"], ["You did not know what to do", "1", "2", "8", "9"], ["Procedures at work were unclear", "1", "2", "8", "9"], ["You were worried people would find out about it at work", "1", "2", "8", "9"], ["Fear of punishment", "1", "2", "8", "9"], ["Fear for your reputation", "1", "2", "8", "9"], ["Lack of trust in [insert country specific example, such as a labor inspector], police, or community leaders", "1", "2", "8", "9"]]}
+```
+
+?13. Have you, PERSONALLY, ever EXPERIENCED any discrimination because of any of the following?
+
+```grid
+{"columns": ["", "Yes", "No", "Does not apply", "(DK)", "(Refused)"], "rows": [["The color of your skin", "1", "2", "7", "8", "9"], ["Your religion", "1", "2", "7", "8", "9"], ["Your nationality/ethnic group/ race", "1", "2", "7", "8", "9"], ["Your gender", "1", "2", "7", "8", "9"], ["A disability, if you have one", "1", "2", "7", "8", "9"]]}
+```
+
+::back Appendix 2: Regions
+
+### 2021 World Risk Poll regions and countries
+
+```grid
+{"columns": null, "rows": [["Australia & New Zealand", "Australia; New Zealand"], ["Central Asia", "Armenia; Georgia; Kazakhstan; Kyrgyzstan; Tajikistan; Uzbekistan"], ["Central/Western Africa", "Benin; Burkina Faso; Cameroon; Congo Brazzaville; Gabon; Ghana; Guinea; Ivory Coast; Mali; Nigeria; Senegal; Sierra Leone; Togo"], ["Eastern Asia", "China; Hong Kong SAR of China; Japan; Mongolia; South Korea; Taiwan"], ["Eastern Africa", "Kenya; Mauritius; Mozambique; Tanzania; Uganda; Zambia; Zimbabwe"], ["Eastern Europe", "Bulgaria; Czech Republic; Hungary; Kosovo; Moldova; Poland; Romania; Russia; Slovakia; Ukraine"], ["Latin America & Caribbean", "Argentina; Bolivia; Brazil; Chile; Colombia; Costa Rica; Dominican Republic; Ecuador; El Salvador; Honduras; Jamaica; Mexico; Nicaragua; Panama; Paraguay; Peru; Uruguay; Venezuela"], ["Middle East", "Iran; Iraq; Israel; Jordan; Lebanon; Saudi Arabia; Turkey; United Arab Emirates"], ["Northern/Western Europe", "Austria; Belgium; Denmark; Estonia; Finland; France; Germany; Iceland; Ireland; Latvia; Lithuania; Netherlands; Norway; Sweden; Switzerland; United Kingdom"], ["Northern Africa", "Algeria; Egypt; Morocco; Tunisia"], ["Northern America", "Canada; United States"], ["Southern Asia", "Afghanistan; Bangladesh; India; Nepal; Pakistan; Sri Lanka"], ["Southeastern Asia", "Cambodia; Indonesia; Laos; Malaysia; Myanmar; Philippines; Singapore; Thailand; Vietnam"], ["Southern Africa", "Namibia; South Africa"], ["Southern Europe", "Albania; Bosnia Herzegovina; Croatia; Cyprus; Greece; Italy; Malta; North Macedonia; Portugal; Serbia; Slovenia; Spain"]]}
+```
+
+::back Appendix 3: Methodology - Data filtering
+
+As briefly discussed in the main report the Lloyd’s Register Foundation World Risk Poll is a significant data set, and part of the wider Gallup World Poll. The approach taken with the data is detailed here to ensure that the analysis can be understood and replicated independently.
+
+The World Risk Poll module dedicated to violence and harassment in the workplace opens with three broad questions asking about experience of physical, psychological or sexual harassment – asked in that order – in the workplace. In each question, respondents could independently state that they have never worked[^37]. At this point the following questions relating to that experience would be skipped.
+
+For those who had experienced violence and harassment at work it is also possible to split the data by both the time frame of experience – within the last year, two to five years ago, or more than five years ago – and also by the number of times they had experienced it. Additionally, outside of this module and as part of the broader Gallup World Poll dataset, it is possible to group and filter the data based on current employment status.
+
+Based on these interactions there are multiple ways to split the data. For this report we included experiences of violence and harassment from any time in the respondents' life in order to extract meaningful findings in the most objective manner.
+
+For each question, respondents were asked if they worked. If they stated in the context of any of the three questions that they did not work, they were excluded from the analysis. In total, 12,038 respondents said that they have never worked in their lives, while 113,873 people did not say this – and this latter group are the focus of this report.
+
+One outcome of providing respondents with the opportunity to state that they have never worked in relation to each type of violence and harassment is that it identifies a small group of respondents whose answers were inconsistent. Put another way: while 12,038 individuals said, at some point during the interview, that they have never worked, not all of them did so when asked the first question in the module[^38] for all three questions. In fact, 780 people who would eventually say they have never worked answered the first question of the module; 45 of these individuals answered in the affirmative to this initial query, meaning they said that they had experienced the form of violence and harassment they were asked about. Another 716 said "no," to this initial question about their experience with violence and harassment at work, while the remainder were unsure.
+
+Still, this means 11,258 of the people who said they have never worked mentioned this at the onset of the module; these respondents were asked no further questions about violence and harassment at work. In the following question about personal experience with violence and harassment at work (psychological for all respondents except people in China, who were asked a modified form of the question about sexual violence and harassment), 469 people said they have never worked. In the final question of this type – which focuses on sexual violence and harassment for 1,295 respondents, with all respondents (or a modified form of the question) – another 311 individuals said they have never worked. Notably, 63% of people who said they have never worked when asked about sexual violence and harassment (or the modified form of the question) were women.
+
+```chart
+{
+ "number": "1",
+ "title": "Number of respondents who volunteered they have never worked when asked about violence and harassment at work, by when the respondent offered this response",
+ "quiet": true,
+ "as": "Table",
+ "kind": "original",
+ "page": 45,
+ "clip": [
+  47,
+  122,
+  548,
+  318
+ ],
+ "width": 780
+}
+```
+
+Perhaps most striking is the fact that 99 respondents who eventually said they have never worked first admitted to experiencing some form of violence and harassment. While there is no way to know why this happened, the sensitive nature of the questions – and the troubled memories they may evoke – may be one reason why some respondents answered in an inconsistent manner. These respondents were excluded from the analysis, despite having answered at least one of the three questions about experience with violence and harassment in the affirmative.
+
+This thorny issue is good way to highlight both the strengths and weaknesses of the World Risk Poll dataset and start a discussion around what some readers may consider surprising results, especially when looking at country and regional level differences.
+
+Therefore, it is worth recalling that the World Risk Poll surveys individuals and because of this and despite the conceptual anchoring provided by the survey in terms of what constitutes violence and harassment in the workplace (either physical, psychological, or sexual), there are important limitations and considerations to keep in mind when comparing results across countries, territories, or areas, or even by subgroups within the same territory. A number of these limitations are explored here.
+
+Attitudes or willingness to talk about violence and harassment at work will differ on an individual basis and may be shaped by larger forces such as individual (for example, personality traits), organisational (for example, quality of work environment and leadership) and socio-cultural factors (for example, national cultures and social norms).
+
+An important consideration relates to the sensitivity of the subject. The survey asks about an inherently sensitive issue, and respondents asked sensitive questions may not always be entirely forthcoming in terms of their responses. The reasons for this reticence may depend on macroenvironmental factors (national politics, institutional norms, historic traditions, or cultural norms), microenvironmental factors (such as interviewing mode, place of interview, or presence of others in the interview setting) and personal characteristics and attitudes of respondents. While the Gallup World Poll has extensive experience asking about sensitive topics in ways that aim to minimise this type of effect, it is not possible to eliminate it entirely.
+
+The definitions of and examples given for physical, psychological and sexual violence and harassment at work provided to the respondents may not always resonate with all respondents nor clarify how they understand these concepts.
+
+In a few countries, it was necessary for Gallup to ask some of the questions in a slightly different manner due to political sensitivities. In addition, in some countries, Gallup was not allowed to ask at least one survey question (relating to sexual violence and harassment) at all.
+
+This theme of sensitivity, personal interpretation and societal norms influencing responses runs throughout the report and opens the door to many different interpretations.
+
+::back Appendix 4: References
+
+### Introduction
+
+Ahmad, S., Sohal, A., & Wolfram Cox, J. (2021). Bullying in the workplace: a cross-cultural and methodological perspective. *International Studies of Management & Organization*, 51:1, 26-46, DOI: https://www.tandfonline.com/doi/full/10.1080/00208825.2021.1898099
+
+Andrijauskaitė, U.M. (2020). Sexual harassment and violence against women in the workplace in 1920s–1930s Lithuania. *History*: A Collection of Lithuanian Universities’ Research Papers / Istorija: Lietuvos Aukstuju Mokyklu Mokslo Darbai 115 (3): 52–65. https://ejournals.vdu.lt/index.php/istorijoszurnalas/article/view/1246
+
+ILO. (2021). *Violence and harassment in the world of work: A guide on Convention No. 190 and Recommendation No. 206*. International Labour Office, Geneva. https://www.ilo.org/wcmsp5/groups/public/---dgreports/---gender/documents/publication/wcms_814507.pdf
+
+### Chapter 1
+
+Australian Unions (ACTU). (2018). *Sexual harassment in Australian workplaces: Survey results*. Melbourne. https://www.australianunions.org.au/wp-content/uploads/2020/12/A4_sexual-harassment-survey-results_web.pdf
+
+Eurofound. (2015). *Violence and harassment in European workplaces: Causes, impacts and policies*. Dublin. https://www.eurofound.europa.eu/sites/default/files/ef_comparative_analytical_report/field_ef_documents/ef1473en.pdf
+
+Fitzgerald, L. F., & Cortina, L. M. (2018). Sexual harassment in work organizations: A view from the 21st century. In C. B Travis, J. W. White, A. Rutherford, W. S. Williams, S. L. Cook, & K. F. Wyche (Eds.), *APA handbook of the psychology of women: Perspectives on women's private and public lives* (pp. 215–234). American Psychological Association. https://doi.org/10.1037/0000060-012
+
+Helliwell, J. F., Layard, R., Sachs, J. D., De Neve, J.-E., Aknin, L. B., & Wang, S. (Eds.). (2022). World Happiness Report 2022. New York: Sustainable Development Solutions Network. https://worldhappiness.report/ed/2022/
+
+ILO. (2022). *World Employment and Social Outlook: Trends 2022*. International Labour Office, Geneva. https://www.ilo.org/wcmsp5/groups/public/---dgreports/---dcomm/---publ/documents/publication/wcms_834081.pdf
+
+ILO. (27 October 2021). Monitor: COVID-19 and the world of work. Eight edition. International Labour Office, Geneva. https://www.ilo.org/wcmsp5/groups/public/---dgreports/---dcomm/documents/briefingnote/wcms_824092.pdf
+
+ILO. (2019). *A quantum leap for gender equality: for a better future of work for all.* International Labour Office, Geneva. https://www.ilo.org/wcmsp5/groups/public/---dgreports/---dcomm/---publ/documents/publication/wcms_674831.pdf
+
+ILO. (2016). *Final report, Meeting of experts on violence against women and men in the world of work* (Geneva, 3–6 October 2016). International Labour Office, Geneva. https://www.ilo.org/wcmsp5/groups/public/---dgreports/---gender/documents/meetingdocument/wcms_546303.pdf
+
+Palermo, T., Bleck, J., & Peterman, A. (2014). Tip of the iceberg: reporting and gender-based violence in developing countries. *American Journal of Epidemiology*, 179(5), 602–612. https://doi.org/10.1093/aje/kwt295
+
+### Chapter 2
+
+Equality and Human Rights Commission. (2011). Hidden in plain sight Inquiry into disability-related harassment. https://www.equalityhumanrights.com/en/publication-download/hidden-plain-sight-inquiry-disability-related-harassment
+
+MacIntosh, J., Wuest, J., Ford-Gilboe, M., & Varcoe, C. (2015). Cumulative effects of multiple forms of violence and abuse on women. *Violence and Victims*, 30(3), 502–521. https://doi.org/10.1891/0886-6708.vv-d-13-00095
+
+Quinlan, E., Robertson, S., Carr, T., & Gerrard, A. (2020). Workplace harassment interventions and labour process theory: A critical realist synthesis of the literature. *Sociological Research Online,* 25(1), 3–22. https://doi.org/10.1177/1360780419846507
+
+### Chapter 3
+
+Branch, S., Ramsay, S., & Barker, M. (2013). Workplace bullying, mobbing and general harassment: a review. *International Journal of Management Reviews*, 15(3), 280–299. https://doi.org/10.1111/j.1468-2370.2012.00339.x
+
+Global Compact for Migration. (n.d.). International Organization for Migration. https://www.iom.int/global-compact-migration
+
+Helliwell, J. F., Layard, R., Sachs, J. D. (Eds.). (2018). World Happiness Report 2018. New York: Sustainable Development Solutions Network. https://worldhappiness.report/ed/2018/
+
+ILO. (2019). *A quantum leap for gender equality: for a better future of work for all*. International Labour Office, Geneva. https://www.ilo.org/wcmsp5/groups/public/---dgreports/---dcomm/---publ/documents/publication/wcms_674831.pdf
+
+ILO. (April 2020). Protecting migrant workers during the COVID-19 pandemic: Recommendations for policy-makers and constituents. ILO Policy Brief. International Labour Office, Geneva. https://www.ilo.org/wcmsp5/groups/public/---ed_protect/---protrav/---migrant/documents/publication/wcms_743268.pdf
+
+Secretary-General, U.N. (1995). *Violence against women migrant workers: report of the Secretary-General*. UN. https://digitallibrary.un.org/record/186985
+
 [^1]: Andrijauskaitė, U.M. (2020). Sexual harassment and violence against women in the workplace in 1920s–1930s Lithuania. History: A Collection of Lithuanian Universities’ Research Papers / Istorija: Lietuvos Aukstuju Mokyklu Mokslo Darbai 115 (3): 52–65.
 
 [^2]: ILO. (2021). Violence and harassment in the world of work: A guide on Convention No. 190 and Recommendation No. 206.
@@ -1873,3 +2073,7 @@ Regardless, it is clear that the current state of violence and harassment in the
 [^35]: Ibid.
 
 [^36]: Global Compact for Migration. (n.d.). International Organization for Migration. https://www.iom.int/global-compact-migration (Accessed 16 January 2023).
+
+[^37]: This was a volunteered response, meaning it was not explicitly read as a response option by the interviewer, but an individual could offer this as answer to any of the questions about experience of violence and harassment at work. Volunteered responses are not uncommon in survey questions – for instance, “do not know,” is a volunteered response for most of the questions asked on the Gallup World Poll; interviewers do not read this response option to respondents (except in rare cases), but if an individual indicates he or she is unsure, this is accepted as a response.
+
+[^38]: Except for respondents in China, the first question on this module was: “Have you, personally, EVER experienced PHYSICAL violence and/or harassment AT WORK, such as hitting, restraining, or spitting?” In China, this question was not asked, so the first question asked of respondents in that country was about experience of psychological violence and harassment at work (the second question of this type for all other countries).

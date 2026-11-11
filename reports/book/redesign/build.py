@@ -377,11 +377,14 @@ class Report:
         return f'<div class="regionmap">{"".join(out)}<div class="rank">{items}</div></div>'
 
     def figure(self, spec):
+        if spec.get("bare"):
+            # a drawing the original sets without a number or a title (a chart inside an appendix)
+            return f'<figure class="fig bare"><div class="art">{self.drawing(spec)}</div></figure>'
         label = self.number(spec)
         anchor = self.anchor()
         title = spec["title"]
         self.figures.append((label, title, anchor))
-        if spec["kind"] == "original":
+        if spec["kind"] == "original" and not spec.get("quiet"):     # (quiet: the report's notes account for it in their own words)
             self.originals.add(label)
             self.why[label] = spec.get("why", "the data behind the original is not in the public files")
         self.small = None
@@ -405,6 +408,19 @@ class Report:
             # Too wide for a column: the figure takes the next whole page (paginate.js brings text forward to fill the page before it).
             return f'<figure class="fig plate" id="{anchor}"><div class="sheet">{inner}</div></figure><div class="platefill"></div>'
         return f'<figure class="{cls}" id="{anchor}">{inner}</figure>'
+
+    def grid(self, spec):
+        """A table of words (a questionnaire's answer codes, a list of regions): columns of short cells are centred."""
+        rows, width = spec["rows"], max(len(row) for row in spec["rows"])
+        short = [all(len(row[k]) <= (12 if k else 4) for row in rows if k < len(row)) for k in range(width)]
+        cell = lambda tag, k, text: f'<{tag}{" class=" + chr(34) + "c" + chr(34) if short[k] else ""}>{self.inline(text)}</{tag}>'
+        head = ""
+        if spec.get("columns"):
+            head = "<thead><tr>" + "".join(cell("th", k, text) for k, text in enumerate(spec["columns"])) + "</tr></thead>"
+        body = "".join("<tr>" + "".join(cell("td", k, text) for k, text in enumerate(row)) + "</tr>" for row in rows)
+        title = f'<p class="gridtitle">{self.inline(spec["title"])}</p>' if spec.get("title") else ""
+        cls = "gridwrap" + (" whole" if len(rows) <= 14 else "") + ("" if spec.get("columns") else " plain")
+        return f'<div class="{cls}">{title}<table class="grid">{head}<tbody>{body}</tbody></table></div>'
 
     # -- blocks
 
@@ -437,6 +453,13 @@ class Report:
                 out.append(f'<p class="cite">{self.inline(chunk[4:])}</p>')
             elif chunk.startswith("^ "):
                 out.append(f'<p class="foot">{self.inline(chunk[2:])}</p>')
+            elif chunk.startswith("```grid"):
+                out.append(self.grid(json.loads(chunk.split("\n", 1)[1].rsplit("```", 1)[0])))
+            elif chunk.startswith("?> "):
+                out.append(f'<p class="qi">{self.inline(chunk[3:])}</p>')
+            elif re.match(r"\?[\w.]+ ", chunk):
+                number, text = chunk[1:].split(" ", 1)
+                out.append(f'<p class="q"><b class="qn">{escape(number)}</b>{self.inline(text)}</p>')
             elif chunk.startswith("```roll"):
                 roll = json.loads(chunk.split("\n", 1)[1].rsplit("```", 1)[0])
                 colours = [NAMED.get(c, c) for _, c in roll["key"]]
@@ -602,6 +625,8 @@ class Report:
             names = labels[0] if len(labels) == 1 else "Charts " + ", ".join(numbers[:-1]) + " and " + numbers[-1]
             verb = "is placed as a picture" if len(labels) == 1 else "are placed as pictures"
             out.append(f"<p><b>{names}</b> {verb} of the original, because {why}.</p>")
+        if m.get("appendix_note"):
+            out.append(f"<p><b>Appendices.</b> {self.inline(m['appendix_note'])}</p>")
         if m.get("pending"):
             out.append(f"<p><b>Not yet set.</b> {self.inline(m['pending'])}</p>")
         for query in self.queries + m.get("queries", []):

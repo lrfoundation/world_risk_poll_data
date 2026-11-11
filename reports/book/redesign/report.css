@@ -184,3 +184,21 @@ table.data.words td:first-child, table.data.words th:first-child { width: 70px; 
 table.data tr.group th { background: #fff; color: var(--fuchsia); border-bottom: 2px solid var(--fuchsia); padding: 12px 14px 4px; font-size: 15px; letter-spacing: 0.04em; text-transform: uppercase; }
 table.data tr.group th, table.data.words tr.group th { text-align: left; }
 .opener .left p.foot { font-size: 13px; line-height: 18px; opacity: 0.9; }
+
+/* appendices: the questions of a questionnaire and tables of words */
+.flow p.q { position: relative; margin: 24px 0 8px; padding: 0 18px 0 64px; font-weight: 700; break-after: avoid; }
+.flow p.q b.qn { position: absolute; left: 20px; top: 0; color: var(--fuchsia); font-weight: 800; }
+.flow p.q em { font-weight: 400; color: var(--fuchsia); }
+.flow p.qi { margin: 0 0 8px; padding: 0 18px 0 64px; font-style: italic; color: var(--fuchsia); break-after: avoid; }
+.gridwrap { margin: 8px 18px 26px 20px; }
+.gridwrap.whole { break-inside: avoid; }
+.flow p.gridtitle { margin: 0; padding: 7px 12px; background: var(--fuchsia); color: #fff; font-size: 15px; line-height: 20px; font-weight: 700; break-after: avoid; }
+table.grid { border-collapse: collapse; width: 100%; font-size: 15px; line-height: 20px; }
+table.grid tr { break-inside: avoid; }
+table.grid th { background: var(--fuchsia); color: #fff; font-weight: 700; padding: 7px 12px; text-align: left; vertical-align: bottom; }
+.gridtitle + table.grid th { background: #FBE6F0; color: var(--navy); }
+table.grid td { padding: 6px 12px; border-bottom: 1px solid #F3C4DA; text-align: left; vertical-align: top; }
+table.grid .c { text-align: center; }
+table.grid td.c { white-space: nowrap; }
+table.grid td:not(.c) { min-width: 150px; }
+.gridwrap.plain table.grid td:first-child { font-weight: 700; width: 250px; }

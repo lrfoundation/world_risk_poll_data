@@ -27,7 +27,7 @@
   "Chart 1.1 is a ring in the original and Chart 2.4 a row of five rings; both are drawn here as bars. Chart 4.2 is fifteen small bar charts in the original and is set here as a table of the same values.",
   "In Charts 1.3 and 2.6 the original leaves out segments under 5%. The space they take is drawn in pale grey at the end of the bar, without a figure."
  ],
- "pending": "The four appendices of the original (the questionnaire, the list of regions, the Resilience Index methodology and the references listed again by chapter) are not in this draft."
+ "appendix_note": "The four appendices of the original (the questionnaire, the list of regions, the Resilience Index methodology and the references by chapter) follow the conclusion, as in the original. Tables of answer codes and lists are set as tables of words; nothing in them is redrawn from data. In the methodology, Tables 1, 2 and 3, the chart of the distribution of index scores and the scoring table ‘Cover Basic Needs’ are placed as pictures of the original: the first two tables are grids of marks under headings set on their side, the third is a table of questions set in two tints, the chart's values are not printed, and the scoring table sets two tables side by side."
 }
 ---
 
@@ -2709,6 +2709,646 @@ The 2021 World Risk Poll provides a vital new measure of resilience from the per
 
 Such findings demonstrate a particular strength of the 2021 World Risk Poll resilience indicators. While they offer data on factors central to other resilience frameworks, such as people’s financial security and access to critical infrastructure, they also include measures of less tangible considerations that may be equally important in withstanding adversity, such as social trust, confidence in institutions and people’s likelihood to have a household plan for disaster response. With a diverse set of measures showing the perspective of target populations and social groups, policymakers and development organisations can develop better-informed strategies and interventions for closing 'resilience gaps' and making the future safer for everyone.
 
+::back Appendix 1: Lloyd’s Register Foundation World Risk Poll questionnaire
+
+?1. Suppose your household suddenly lost all income and had to survive only on savings and things that could be sold. How long would your household be able to cover all the basic needs, such as food, housing, and transportation? Would you say less than a month or a month or more?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Less than a month", "1"], ["A month or more", "2"], ["(DK)", "98"], ["(Refused)", "99"]]}
+```
+
+*(If code 1, Continue; If code 2, Skip to Q3; Otherwise, Skip to Read before Q4)*
+
+?2. Again, suppose you lost all of your household income and had to survive only on your savings or things you could sell. Would you be able to cover all of your basic needs, like food, housing, and transportation for less than a week, between one and two weeks, or between two and four weeks?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Less than a week", "1"], ["Between one and two weeks", "2"], ["Between two and four weeks", "3"], ["(DK)", "98"], ["(Refused)", "99"]]}
+```
+
+*(All in Q3, Skip to Read before Q4)*
+
+?3. Again, suppose you lost all of your household income and had to survive only on your savings or things you could sell. Would you be able to cover all of your basic needs, like food, housing, and transportation for around a month, two months, three months, or four months or more?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Around a month", "1"], ["Two months", "2"], ["Three months", "3"], ["Four months or more", "4"], ["(DK)", "98"], ["(Refused)", "99"]]}
+```
+
+*(READ:) Now, on a different topic …*
+
+?4. How much do you think the government of [COUNTRY] cares about you and your wellbeing? A lot, somewhat or not at all?
+
+```grid
+{"columns": ["A lot", "Somewhat", "Not at all", "(DK)", "(Refused)"], "rows": [["1", "2", "3", "98", "99"]]}
+```
+
+?5. How much do you think most of your neighbours care about you and your wellbeing? A lot, somewhat or not at all?
+
+```grid
+{"columns": ["A lot", "Somewhat", "Not at all", "(DK)", "(Refused)"], "rows": [["1", "2", "3", "98", "99"]]}
+```
+
+*(READ:) Now I will ask you some questions about disasters, such as floods or violent storms. Please do not think of coronavirus for this question.*
+
+?6. Suppose you needed information about a possible disaster in the city or area where you live, such as floods or violent storms. Would you look to any of the following for information, or not?
+
+```grid
+{"columns": ["", "", "Yes", "No", "(Does not apply)", "(DK)", "(Refused)"], "rows": [["6A", "The national weather service [Insert local country agency]", "1", "2", "97", "98", "99"], ["6B", "The national disaster management agency, such as [Insert local agencies]", "1", "2", "97", "98", "99"], ["6C", "Local news through newspapers, television or radio", "1", "2", "97", "98", "99"], ["6D", "Local religious leaders", "1", "2", "97", "98", "99"], ["6E", "A famous or influential person you like", "1", "2", "97", "98", "99"], ["6F", "Emergency services, such as the fire department, the police and medical services", "1", "2", "97", "98", "99"], ["6G", "Internet/Social media", "1", "2", "97", "98", "99"]]}
+```
+
+*(If code 1 ["Yes"] to TWO or more items in Q6, Continue; Otherwise, Skip to Q8)*
+
+?7. Considering the sources of information you would access, which one would you trust MOST to provide information about a possible disaster in the city or area where you live?
+
+?> (INTERVIEWER: Do NOT read response options) (Open-ended and code using pre-codes below)
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["The national weather service", "1"], ["The national disaster management agency", "2"], ["Local news through newspapers, television or radio", "3"], ["Local religious leaders", "4"], ["A famous or influential person you like", "5"], ["Emergency services, such as the fire department, the police and medical services", "6"], ["Internet/Social media", "7"], ["Would trust none of them", "8"], ["Some other source", "9"], ["Don’t know", "98"], ["Refused", "99"]]}
+```
+
+?8. Do you think each of the following are well prepared to deal with a disaster in [COUNTRY], or not?
+
+?> (Read Items) (Programmer: Randomize Items)
+
+```grid
+{"columns": ["", "", "Yes, well prepared", "No, not well prepared", "(It depends)", "(DK)", "(Refused)"], "rows": [["8A", "The national government", "1", "2", "3", "98", "99"], ["8B", "Hospitals in the city or area where you live", "1", "2", "3", "98", "99"], ["8C", "You and your family", "1", "2", "3", "98", "99"], ["8D", "Local government", "1", "2", "3", "98", "99"]]}
+```
+
+?9. In the past 5 years, have you personally experienced a disaster, such as floods or violent storms? Please do not think of coronavirus for this question.
+
+```grid
+{"columns": ["Yes", "No", "(DK)", "(Refused)"], "rows": [["1", "2", "98", "99"]]}
+```
+
+*(If code 1 in Q9, Continue; Otherwise, Skip to Q12)*
+
+?10. Thinking about the last disaster you experienced, what type of event was it?
+
+?> (INTERVIEWER: Capture verbatim response) (Allow ONE response)
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Write in:", ""], ["(DK)", "98"], ["(Refused)", "99"]]}
+```
+
+?10.1 *(INTERVIEWER: Do NOT read response options. Code respondent's verbatim response using the list of pre-coded options below. Refer to previous screen for verbatim. If respondent said more than one type of event or disaster, select the code below that describes the most extreme event, if known.)*
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Flood/Heavy rain", "1"], ["Hurricane/Cyclone", "2"], ["Tornado", "3"], ["Thunder or lightning storm", "4"], ["Tsunami", "5"], ["Mudslide", "6"], ["Earthquake", "7"], ["Wildfire", "8"], ["Volcano eruption", "9"], ["Blizzard or snowstorm", "10"], ["Other", "11"], ["Don’t know", "98"], ["Refused", "99"]]}
+```
+
+?11. Still thinking about the last disaster you experienced, did you receive any advance warning about the event from any of the following, or not? *(Read Items)*
+
+```grid
+{"columns": ["", "", "Yes", "No", "(Does not apply)", "(DK)", "(Refused)"], "rows": [["11A", "Internet or social media", "1", "2", "97", "98", "99"], ["11B", "Local government agency, such as the Met Office, or the police", "1", "2", "97", "98", "99"], ["11C", "Radio, TV, or newspapers", "1", "2", "97", "98", "99"], ["11D", "Local community organization", "1", "2", "97", "98", "99"]]}
+```
+
+?12. If a disaster were to occur near you in the future, do you think there is ANYTHING you could do to protect yourself or your family from its impact?
+
+```grid
+{"columns": ["", "CIRCLE ONE RESPONSE:"], "rows": [["Yes", "1"], ["No", "2"], ["(It depends)", "3"], ["(DK)", "98"], ["(Refused)", "99"]]}
+```
+
+?13. If a disaster were to occur near you in the future, do you have a plan for what to do that all members of your household know about?
+
+?> (INTERVIEWER: If respondent says they are the only person in their household, READ: "Do you have a plan for what you would do if a disaster were to occur near you in the future?")
+
+```grid
+{"columns": ["Yes", "No", "(DK)", "(Refused)"], "rows": [["1", "2", "98", "99"]]}
+```
+
+?14. Have any of the following happened to you in the past 12 months, or not? Have you…?
+
+?> (Read Items)
+
+```grid
+{"columns": ["", "", "Yes", "No", "(Does not apply)", "(DK)", "(Refused)"], "rows": [["14A", "Gone without electricity for more than a day", "1", "2", "97", "98", "99"], ["14B", "Been without clean drinking water for more than a day", "1", "2", "97", "98", "99"], ["14C", "Been unable to obtain food BECAUSE of shortages for more than a day", "1", "2", "97", "98", "99"], ["14D", "Been unable to obtain medical assistance or medicine for more than a day", "1", "2", "97", "98", "99"], ["14E", "Been unable to access a telephone for more than a day", "1", "2", "97", "98", "99"]]}
+```
+
+*(READ:) Now, on a different topic …*
+
+?15. Have you, PERSONALLY, ever EXPERIENCED any discrimination because of any of the following?
+
+?> (Read Items) (Programmer: Randomize Items)
+
+```grid
+{"columns": ["", "", "Yes", "No", "(Does not apply)", "(DK)", "(Refused)"], "rows": [["15A", "The colour of your skin", "1", "2", "97", "98", "99"], ["15B", "Your religion", "1", "2", "97", "98", "99"], ["15C", "Your ethnic group", "1", "2", "97", "98", "99"], ["15D", "Your gender", "1", "2", "97", "98", "99"], ["15E", "A disability, if you have one", "1", "2", "97", "98", "99"]]}
+```
+
+::back Appendix 2: Regions
+
+### 2021 World Risk Poll regions and countries
+
+```grid
+{"columns": null, "rows": [["Australia & New Zealand", "Australia; New Zealand"], ["Central Asia", "Armenia; Georgia; Kazakhstan; Kyrgyzstan; Tajikistan; Uzbekistan"], ["Central/Western Africa", "Benin; Burkina Faso; Cameroon; Congo Brazzaville; Gabon; Ghana; Guinea; Ivory Coast; Mali; Nigeria; Senegal; Sierra Leone; Togo"], ["Eastern Asia", "China; Hong Kong SAR of China; Japan; Mongolia; South Korea; Taiwan"], ["Eastern Africa", "Kenya; Mauritius; Mozambique; Tanzania; Uganda; Zambia; Zimbabwe"], ["Eastern Europe", "Bulgaria; Czech Republic; Hungary; Kosovo; Moldova; Poland; Romania; Russia; Slovakia; Ukraine"], ["Latin America & Caribbean", "Argentina; Bolivia; Brazil; Chile; Colombia; Costa Rica; Dominican Republic; Ecuador; El Salvador; Honduras; Jamaica; Mexico; Nicaragua; Panama; Paraguay; Peru; Uruguay; Venezuela"], ["Middle East", "Iran; Iraq; Israel; Jordan; Lebanon; Saudi Arabia; Turkey; United Arab Emirates"], ["Northern/Western Europe", "Austria; Belgium; Denmark; Estonia; Finland; France; Germany; Iceland; Ireland; Latvia; Lithuania; Netherlands; Norway; Sweden; Switzerland; United Kingdom"], ["Northern Africa", "Algeria; Egypt; Morocco; Tunisia"], ["Northern America", "Canada; United States"], ["Southern Asia", "Afghanistan; Bangladesh; India; Nepal; Pakistan; Sri Lanka"], ["Southeastern Asia", "Cambodia; Indonesia; Laos; Malaysia; Myanmar; Philippines; Singapore; Thailand; Vietnam"], ["Southern Africa", "Namibia; South Africa"], ["Southern Europe", "Albania; Bosnia Herzegovina; Croatia; Cyprus; Greece; Italy; Malta; North Macedonia; Portugal; Serbia; Slovenia; Spain"]]}
+```
+
+::back Appendix 3: Resilience Index methodology
+
+Building on the existing body of literature and different measures of resilience, the 2021 World Risk Poll included several questions on the topic. The questions, or items, were drafted in close consultation with Lloyd’s Register Foundation and its subject matter expert partners[^69]. While the data and insights from each individual item in the survey have value in themselves, the research team decided also to construct a composite measure of resilience: the Resilience Index.
+
+Given the multiple ways resilience is defined and measured in the literature (see the next sections below), with different models and approaches, the 2021 World Risk Poll survey items were mapped to dimensions informed by the literature. The resulting Resilience Index is a first pilot measure that uses the World Risk Poll to add value by creating a summary tool useful for policy analysis and communication, where country-level trends and patterns could be highlighted and analysed before diving into the many constituent variables from which the index is constructed. Lloyd’s Register Foundation hopes this index generates further thought and research into the topic and contributes to the knowledge base on resilience and its measurement.
+
+The Resilience Index was developed to summarise and facilitate the analysis of a complex construct — resilience. The development of an index starts by carefully defining the construct and its composition, including the construct structure and its dimensions. The composition of the construct is then mapped to measurable indicators, which are finally aggregated and summarised into a single index score. Each of these steps is described in more detail below.
+
+### Construct definition
+
+In its broadest sense, resilience is the capacity to handle and recover from adversity and difficulties. For risk management experts, that generally means how well individuals or groups manage and recover from ‘shocks’ — instances when risks evolve into disruptive events that threaten safety.
+
+In some cases, resilience refers to the ability to return relatively quickly to the pre-shock state; this recalls how physicists use the term to describe a system’s capacity to return to equilibrium after being exposed to a stressor. The European Union’s definition reflects this view of resilience as ‘the ability of an individual, a household, a community, a country or a region to withstand, to adapt, and to quickly recover from stressors and shocks[^70].’
+
+In the context of risk and safety, however, resilience often refers not just to the ability to recover from specific shocks as they occur but also to adapt to changes in the risk landscape to make shocks less likely or less harmful when they do occur. The Rockefeller Foundation’s definition, for example, emphasises this adaptive aspect of resilience: ‘The capacity of individuals, communities, and systems to survive, adapt, and grow in the face of stress and shocks, and even transform, when conditions require it[^71].’
+
+Summarising these different conceptions, Béné et al.’s 2014 review of the literature concluded that resilience can consist of **absorptive**, **adaptive** or **transformative** capacities and that the need for each capacity varies with the intensity and costs of the shocks involved[^72]. Truly resilient systems have all three capacities to deal with a wide range of potential shocks.
+
+### Construct composition
+
+The Lloyd’s Register Foundation report, *Foresight Review on Resilience Engineering*, notes that standards and processes for measuring resilience are still emerging, citing the need for ‘assessment and predictive capabilities that do not presently exist, including identification, collection and analysis of relevant data[^73].’ In recent years, researchers and development practitioners have developed a number of frameworks for measuring resilience, several of which were summarised in a 2016 report from the United Kingdom’s Department for International Development (DFID), now the Foreign, Commonwealth and Development Office[^74]. The report lists several common methods for quantifying resilience, including the following:
+
+1) **Household or community characteristics:** includes income, access to safety nets and social capital
+
+2) **Functionality:** includes measures of infrastructure resilience — for example, the presence of a system to measure structures’ resilience to earthquakes
+
+3) **Access to food**
+
+4) **Activities:** attempts to put a monetary value on interventions designed to improve resilience
+
+5) **Subjective perceptions:** includes individuals’ self-evaluation of their household’s capacities in responding to risk
+
+6) **Costs of resilience:** includes the costs of anticipation, impact and recovery
+
+Another review of existing resilience studies conducted by Serfilippi and Ramnath in 2018 classified 76 indicators into three categories[^75]:
+
+1) **Social:** includes coping strategies, access to safety nets, inclusion, education, living conditions, access to information, access to basic services and infrastructure
+
+2) **Environmental:** includes soil and water conservation measures, land use change and fertiliser use
+
+3) **Economic:** Includes diversification of livelihoods, access to credit and productive assets
+
+In his 2013 review of resilience measures, Béné wrote about the need for indicators that are not only generic enough to measure resilience to different types of shocks but also ‘multi-scale’ in that they assess resilience at different levels — including the household, community and societal levels — to capture the full range of risk mitigation factors in their environment[^76].
+
+### Indicator mapping
+
+In the process of designing the Resilience Index, the conceptual frameworks described above were reviewed to identify unique, measurable variables. Each of these variables was then compared to data available from the World Risk Poll (Table 1) and the Gallup World Poll (GWP) more broadly (Table 2). Matching indicators were then mapped to the existing resilience frameworks. As Table 1 and Table 2 show, there was not a perfect match between the variables available in the World Risk Poll/GWP and any specific resilience frameworks; however, all frameworks were at least partially covered.
+
+```chart
+{
+ "number": "1",
+ "title": "Correspondence between resilience conceptual frameworks and World Risk Poll items",
+ "quiet": true,
+ "as": "Table",
+ "kind": "original",
+ "page": 55,
+ "clip": [
+  47,
+  115,
+  522,
+  795
+ ],
+ "width": 531
+}
+```
+
+```chart
+{
+ "number": "2",
+ "title": "Correspondence between resilience conceptual frameworks and GWP items",
+ "quiet": true,
+ "as": "Table",
+ "kind": "original",
+ "page": 56,
+ "clip": [
+  80,
+  115,
+  552,
+  735
+ ],
+ "width": 579
+}
+```
+
+Following Béné’s recommendation that resilience be assessed at different levels of individuals’ social setting, the World Risk Poll Resilience Index was structured to combine indicators of resilience at the individual, household, community and society levels.
+
+```chart
+{
+ "number": "3",
+ "title": "Dimensions and indicators in the World Risk Poll Resilience Index",
+ "quiet": true,
+ "as": "Table",
+ "kind": "original",
+ "page": 57,
+ "clip": [
+  47,
+  115,
+  516,
+  668
+ ],
+ "width": 645
+}
+```
+
+Total scores for each of the four index dimensions (listed in Table 3) were derived by averaging the scores of the individual items in each dimension. The final overall Resilience Index score is computed as the arithmetic mean of the scores of the four dimensions. Section 1 below discusses how overall index and dimension scores varied by region and demographic grouping, while Section 2 takes a more detailed look at the results for each index component.
+
+It is important to note that the Resilience Index was designed to measure each of the four dimensions of resilience using multiple, conceptually inter-related, items. Doing so enhances the robustness of the measure in the event of missing, or otherwise uninformative, responses (e.g., ‘Don’t know/refused’). However, eight countries in the sample (Algeria, Cambodia, Laos, Morocco, Pakistan, Tajikistan, United Arab Emirates and Vietnam) were systematically missing data for one or more items in the ‘society’ dimension (see list below for items by country). An indicative resilience score can be computed for those countries, since they still have at least one item within all four dimensions of the index, but overall resilience scores for these countries are not strictly comparable to the other countries in the sample. Therefore, resilience scores for these eight countries are presented in the report as an indicative measure of resilience but are not included in the resilience rankings due to the lack of strict cross-country comparability. Additionally, two countries (China and Saudi Arabia) were lacking all items in the society dimension, which prevented them from receiving a score for the Resilience Index.
+
+The following list details the indicators for the eight countries that were systematically missing data for one or more items in the ‘society’ dimension:
+
+**Algeria:** Gallup Confidence in National Institution Index, Government cares about you and your wellbeing
+
+**Cambodia:** Gallup Confidence in National Institution Index
+
+**China:** Gallup Confidence in National Institution Index, Government cares about you and your wellbeing, Experience of discrimination
+
+**Laos:** Gallup Confidence in National Institution Index
+
+**Morocco:** Gallup Confidence in National Institution Index
+
+**Pakistan:** Gallup Confidence in National Institution Index
+
+**Saudi Arabia:** Gallup Confidence in National Institution Index, Government cares about you and your wellbeing, Experience of discrimination
+
+**Tajikistan:** Gallup Confidence in National Institution Index, Government cares about you and your wellbeing
+
+**United Arab Emirates:** Gallup Confidence in National Institution Index, Experience of discrimination
+
+**Vietnam:** Gallup Confidence in National Institution Index
+
+### Standardisation and aggregation
+
+Standardisation and aggregation involve translating survey responses into numerical values that can be averaged into a quantitative index. This step is critical but also involves judgement calls regarding the numerical value of survey responses that are either nominal or, at best, ordinal in nature, and their relative weight in the final index.
+
+Guided by the principles of transparency, simplicity and parsimony, each item identified by the resilience frameworks in the review was scored using a numerical equivalence ranging from 0 to 1, with a scaling approach corresponding to their response format:
+
+- **Binary items:** Items where valid response options (i.e., excluding 'Don't know/refused') only included two options were coded as binary values:
+
+-- Yes = 1
+
+-- No = 0
+
+-- DK or Refused = Missing
+
+- **Ordinal items:** Items where valid response options (i.e., excluding 'Don't know/refused') included more than two ordered options were coded as rank order values e.g.:
+
+-- A lot = 1
+
+-- Somewhat = 0.5
+
+-- Not at all = 0
+
+-- DK or Refused = Missing
+
+- **Continuous items:** Items that could be expressed as continuous values were scaled to the 0-1 range. For example, household financial preparedness was expressed in terms of the number of weeks that the household could cover their basic needs using just their savings.
+
+Besides these general approaches, some variables required multiple levels of standardisation and aggregation, including household-level access to communications, community-level social capital and local infrastructure and society-level discrimination.
+
+- **Access to communications:** average of two binary variables
+
+-- Household access to the internet (0, 1)
+
+-- Household cell phone access (0, 1)
+
+- **Social capital:** average of three ordinal and binary variables
+
+-- Neighbours care about you (0, 0.5, 1)
+
+-- Feel safe walking alone at night (0, 1)
+
+-- Helped a stranger (0, 1)
+
+- **Local infrastructure:** average of three binary variables
+
+-- Satisfaction with local roads and highways (0, 1)
+
+-- Satisfaction with local education system (0, 1)
+
+-- Satisfaction with local healthcare system (0, 1)
+
+- **Discrimination:** five binary variables of experienced discrimination were aggregated non-linearly using the following approach:
+
+-- If someone experiences 0 discriminatory practices, they are given a score of 1.0
+
+-- If someone experiences 1 discriminatory practice, they are given a score of 0.5
+
+-- If someone experiences 2 discriminatory practice, they are given a score of 0.375
+
+-- If someone experiences 3 discriminatory practice, they are given a score of 0.250
+
+-- If someone experiences 4 discriminatory practice, they are given a score of 0.125
+
+-- If someone experiences 5 discriminatory practice, they are given a score of 0
+
+The rationale, based on literature supporting the cumulative impact of intersectional discrimination is that the effects of intersectional discrimination are cumulative but not linear. One form of discrimination causes a person to feel disconnected from society, and any additional forms of discrimination add to their feelings of ‘non-cohesion’ but not at the same rate. A person would feel aggrieved from one form of discrimination and would not feel ‘doubly so’ from a second, ‘triple’ from a third and so on, with a finite ‘worst’ score of 0 if someone experienced five forms of discrimination.
+
+The details of item scoring for each item and dimension are provided below. The resulting variables were finally aggregated into four dimensions of resilience by averaging the variables in each dimension with equal weighting. To minimise missing data, dimension scores were computed even if one or more of the underlying variables was missing. In those cases, the dimension score was calculated as the average of any of the underlying variables containing valid data. Only individuals with missing data in all variables within a given dimension were given a missing score.
+
+1) **Individual Dimension**
+
+- Individual Agency (0-1)
+
+- Education (0-1)
+
+2) **Household Dimension**
+
+- Preparedness (0-1)
+
+- Financial (0-1)
+
+- Access to Communications (0-1)
+
+3) **Community Dimension**
+
+- Social Capital (0-1)
+
+- Local Infrastructure (0-1)
+
+4) **Society Dimension**
+
+- Discrimination (0-1)
+
+- Safety Net (0-1)
+
+- Trust in Institutions (0-1)
+
+The final Resilience Index is computed as the arithmetic mean of the four dimensions. The index was only calculated for individuals with valued values in all four dimensions.
+
+```chart
+{
+ "bare": true,
+ "kind": "original",
+ "page": 60,
+ "clip": [
+  80,
+  425,
+  548,
+  745
+ ],
+ "width": 780
+}
+```
+
+### Item scoring for the Resilience Index and its dimensions
+
+### Individual Dimension
+
+```grid
+{"title": "WP22252: Individual Agency", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["3", "It depends", "0.5"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP3117: Educational Attainment", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Primary (0-8 years)", "0"], ["2", "Secondary (9-15 years)", "0.5"], ["3", "Tertiary (16 years or more)", "1"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+### Household Dimension
+
+```chart
+{
+ "bare": true,
+ "kind": "original",
+ "page": 61,
+ "clip": [
+  50,
+  472,
+  514,
+  772
+ ],
+ "width": 780
+}
+```
+
+```grid
+{"title": "WP22253: HH Planning", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP16056: Internet Access", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP17626: Cellphone Access", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["98", "Don't Know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+### Community Dimension
+
+```grid
+{"title": "WP22232: Neighbours Care", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "A lot", "1"], ["2", "Somewhat", "0.5"], ["3", "Not at all", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP113: Safe Walking Alone", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP110: Helped a Stranger", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP92: Roads and Highways", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Satisfied", "1"], ["2", "Dissatisfied", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP93: Educational System", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Satisfied", "1"], ["2", "Dissatisfied", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP97: Quality Healthcare", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Satisfied", "1"], ["2", "Dissatisfied", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+### Society Dimension
+
+```grid
+{"title": "WP22259: Experienced Racial Discrimination", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP22260: Experienced Religious Discrimination", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP22261: Experienced Ethnic Discrimination", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP22262: Experienced Gender Discrimination", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP22263: Experienced Disability Discrimination", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP22231: Government Cares (Safety Net)", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "A lot", "1"], ["2", "Somewhat", "0.5"], ["3", "Not at all", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "National Institutions Index", "columns": ["Value", "Score"], "rows": [["0", "0"], ["25", "0.25"], ["33.3", "0.333"], ["50", "0.5"], ["66.6", "0.666"], ["75", "0.75"], ["100", "1"], ["Missing", "Missing"]]}
+```
+
+::back Appendix 4: References
+
+### Introduction
+
+Alicke, K., Bayazit, C., Beckhoff, T., Foster, T., & Mysore, M. (2022, May 23). *Supply chains: To build resilience, manage proactively.* McKinsey & Company. https://www.mckinsey.com/business-functions/operations/our-insights/supply-chains-to-build-resilience-manage-proactively
+
+Béné, C. (2013). Towards a quantifiable measure of resilience. *IDS Working Papers, 434,* 1-27.
+
+Burton, M. S., Cooper, A. A., Feeny, N. C., & Zoellner, L. A. (2015). The enhancement of natural resilience in trauma interventions. *Journal of Contemporary Psychotherapy, 45*(4), 193-204. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4689312/
+
+*Everyone included: Social impact of COVID-19.* (n.d.). United Nations Department of Economic and Social Affairs. Retrieved 9 August 2022 from https://www.un.org/development/desa/dspd/everyone-included-covid-19.html
+
+Harrison, C. G., & Williams, P. R. (2016). A systems approach to natural disaster resilience. *Simulation Modelling Practice and Theory, 65*, 11-31. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7118455/
+
+Intergovernmental Panel on Climate Change (2022). *Sixth assessment report: Impacts, adaptation and vulnerability*. https://www.ipcc.ch/report/ar6/wg2/
+
+Lloyd’s Register Foundation. (2015). *Foresight review of resilience engineering*. https://www.lrfoundation.org.uk/en/publications/resilience-engineering/
+
+*Safety nets.* (2019, March). The World Bank. Retrieved 8 August 2022 from https://www.worldbank.org/en/topic/safetynets#:~:text=Social%20safety%20nets%20have%20positive,positive%20effects%20in%20local%20economies
+
+Serfilippi, E., & Ramnath, G. (2018). Resilience measurement and conceptual frameworks: A review of the literature. *Annals of Public and Cooperative Economics, 89*(4), 645-664. https://doi.org/10.1111/apce.12202
+
+Strubenhoff, H. (2022, June 14). *The war in Ukraine triggered a global food shortage.* The Brookings Institution. https://www.brookings.edu/blog/future-development/2022/06/14/the-war-in-ukraine-triggered-a-global-food-shortage/
+
+Sturgess, P. (2016). *Measuring resilience.* United Kingdom Department for International Development. https://assets.publishing.service.gov.uk/media/57a08956e5274a27b200002f/EoD_Topic_Guide_Measuring_Resilience_May_2016.pdf
+
+Whiting, K. (2020, March 4). *Coronavirus isn’t an outlier, it’s part of our interconnected viral age*. World Economic Forum. https://www.weforum.org/agenda/2020/03/coronavirus-global-epidemics-health-pandemic-covid-19/
+
+### Chapter 1
+
+*Building resilience in Southeast Asia*. (2019, July). The World Bank. https://thedocs.worldbank.org/en/doc/808321571360961550-0090022019/original/BuildingResilienceinSoutheastAsiadrmhubtokyo.pdf
+
+Granryd, M. (2017, August 22). *Five ways mobile technology can help in humanitarian emergencies*. World Economic Forum. https://www.weforum.org/agenda/2017/08/mobile-technology-humanitarian-crisis
+
+Matthews, N. (2018, December 11). *We can’t rid Asia of natural disasters. But we can prepare for them*. World Economic Forum. https://www.weforum.org/agenda/2018/12/we-can-t-rid-asia-of-natural-disasters-but-we-can-prepare-for-them/
+
+Raikes, J., Smith, T., Jacobson, C., & Baldwin, C. (2019). Pre-disaster planning and preparedness for floods and droughts: A systematic review. *International Journal of Disaster Risk Reduction*, Vol. 38. https://doi.org/10.1016/j.ijdrr.2019.101207
+
+*Ring of fire*. (n.d.). National Geographic Society. https://education.nationalgeographic.org/resource/ring-fire
+
+*Six ways Southeast Asia strengthened disaster risk management.* (2021, May 4). Asian Development Bank. https://www.adb.org/news/features/six-ways-southeast-asia-strengthened-disaster-risk-management
+
+*Southeast Asian countries enhance capacity to anticipate climate related hazards.* (2022, May 26). ReliefWeb. https://reliefweb.int/report/cambodia/southeast-asian-countries-enhance-capacity-anticipate-climate-related-hazards
+
+Sullivan, M. (2022, June 9). *Bolstering regional approaches to disaster management for the future in Southeast Asia.* Center for Strategic & International Studies. https://www.csis.org/blogs/new-perspectives-asia/bolstering-regional-approaches-disaster-management-future-southeast-asia
+
+*The impact of COVID-19 on employment and jobs.* (n.d.). Organisation for Economic Co-operation Development. https://www.oecd.org/employment/covid-19.htm
+
+Torti, J. (2012). Floods in southeast Asia: A health priority. *Journal of Global Health, 2*(2). https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3529313/
+
+United Nations Office for Disaster Risk Reduction. (2015). *Sendai Framework for Disaster Risk Reduction 2015-2030*. https://www.undrr.org/publication/sendai-framework-disaster-risk-reduction-2015-2030
+
+*Working on a warmer planet: The impact of heat stress on labour productivity and decent work.* (2019). International Labour Organization. https://www.ilo.org/wcmsp5/groups/public/---dgreports/---dcomm/---publ/documents/publication/wcms_711919.pdf
+
+*World Bank country and lending groups | Data.* (n.d.) The World Bank. Retrieved 12 August 2022 from https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups
+
+### Chapter 2
+
+Aldrich, D. P. (2012). *Building resilience: Social capital in post-disaster recovery.* The University of Chicago Press.
+
+Chemnick, J. (2019, February 18). Where climate change fits into Venezuela’s ongoing crisis. *Scientific American*. https://www.scientificamerican.com/article/where-climate-change-fits-into-venezuela-rsquo-s-ongoing-crisis/
+
+Claridge, T. (2004). *Social capital and natural resource management: An important role for social capital?* [Unpublished Thesis]. University of Queensland, Brisbane, Australia. https://www.socialcapitalresearch.com/literature/definition/
+
+Dent, F. M. (1997). *Ethnicity: An American predicament*. The Brookings Institution. https://www.brookings.edu/articles/ethnicity-an-african-predicament/
+
+*Flooding, massive mudflow affect thousands in Venezuela’s Aragua state.* (2020, September 17). World Vision International. https://www.wvi.org/newsroom/venezuela-crisis/flooding-massive-mudflows-affect-thousands-venezuelas-aragua-state
+
+Fujii, R., Konno, Y., Tateishi, S., Hino, A., Tsuji, M., Ikegami, K., Nagata, M., Yoshimura, R., Matsuda, S., & Fujino, Y. (2021). Association between time spent with family and loneliness among Japanese workers during the C-19 pandemic: A cross-sectional study. *Frontiers in Psychiatry, 12*, 786400. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8692760/
+
+*GDP per capita (current US$).* (n.d.). The World Bank. Retrieved 12 August 2022 from https://data.worldbank.org/indicator/NY.GDP.PCAP.CD
+
+Green, E. (2021). The politics of ethnic identity in sub-Saharan Africa. *Comparative Political Studies, 54*(7), 1197-1226. https://journals.sagepub.com/doi/10.1177/0010414020970223
+
+*Helping behavior.* (2016, January 12). Iresearchnet. http://psychology.iresearchnet.com/social-psychology/prosocial-behavior/helping-behavior/
+
+Human Rights Watch. (2021). *Venezuela: Events of 2021*. https://www.hrw.org/world-report/2022/country-chapters/venezuela
+
+*Lebanon’s crisis: Great denial in the deliberate depression.* (2022, January 25). The World Bank. https://www.worldbank.org/en/news/press-release/2022/01/24/lebanon-s-crisis-great-denial-in-the-deliberate-depression
+
+Lloyd’s Register Foundation. (2015). *Foresight review of resilience engineering.* https://www.lrfoundation.org.uk/en/publications/resilience-engineering/
+
+Mitsunori, I. (2021, December 27). *A society with no one to turn to.* Nippon. https://www.nippon.com/en/in-depth/d00763/
+
+Mutsaka, F. (2021, August 9). Zambian president warns of growing tensions ahead of polls. *AP News.* https://apnews.com/article/africa-zambia-ffcf20ac1f6af3e0013b8f9648dc7617
+
+*Nearly 2.4 billion women globally don’t have same economic rights as men*. (2022). The World Bank. https://www.worldbank.org/en/news/press-release/2022/03/01/nearly-2-4-billion-women-globally-don-t-have-same-economic-rights-as-men
+
+Office of the United Nations High Commissioner for Human Rights. (2014). *New global development goals must fight inequality and discrimination*. February 13, 2014. https://www.ohchr.org/en/stories/2014/02/new-global-development-goals-must-fight-inequality-and-discrimination
+
+Pradhan, B. (2022, May 29). Modi government’s popularity at highest since start of pandemic. *Bloomberg.* https://www.bloomberg.com/news/articles/2022-05-30/modi-government-s-popularity-at-highest-since-start-of-pandemic
+
+Rapolienė, G., & Aartsen, M. (2021). Lonely societies: Low trust societies? Further explanations for national variations in loneliness among older Europeans. *European Journal of Ageing*. https://psycnet.apa.org/record/2021-87118-001
+
+*Resilience Rising.* (n.d.). Retrieved 10 August 2022 from https://www.resiliencerisingglobal.org
+
+The UN Refugee Agency. (n.d.). *Venezuela situation.* Retrieved 9 August 2022 from https://www.unhcr.org/en-us/venezuela-emergency.html
+
+United Nations Department of Economic and Social Affairs. (2018). *Prejudice and discrimination: Barriers to social inclusion* [Social Development Brief #4]. https://www.un.org/development/desa/dspd/wp-content/uploads/sites/22/2018/02/RWSS-Policy-Brief-Option-4_6Feb.pdf
+
+### Chapter 3
+
+*Gini index—United States | Data.* (n.d.). The World Bank. Retrieved 10 August 2022 from https://data.worldbank.org/indicator/SI.POV.GINI?locations=US
+
+Goldbaum, C. (2021, December 4). Facing economic collapse, Afghanistan is gripped by starvation. *The New York Times.* https://www.nytimes.com/2021/12/04/world/asia/afghanistan-starvation-crisis.html
+
+How the Taliban are ‘eliminating women’ in Afghanistan. (2022, May 9). *Deutsche Welle.* https://www.dw.com/en/how-the-taliban-are-eliminating-women-in-afghanistan/a-61736998
+
+Lloyd’s Register Foundation & Gallup, Inc. (2022). *World Risk Poll 2021: A changed world? Perceptions and experiences of risk in the Covid age.* https://wrp.lrfoundation.org.uk/LRF_2022_report_risk-in-the-covid-age_online_version.pdf
+
+*Poverty in a rising Africa.* (2016). The World Bank. https://www.worldbank.org/en/region/afr/publication/poverty-rising-africa-poverty-report
+
+Tanko, A. (2021, July 19). Nigeria’s security crisis – five different threats. *BBC News.* https://www.bbc.com/news/world-africa-57860993
+
+*Top 25 largest and fastest growing cities in Africa.* (n.d.). Istanbul Africa Trading Company. Retrieved 11 August 2022 from https://www.istanbulafrica.com/top-25-largest-and-fastest-growing-cities-in-africa/
+
+### Chapter 4
+
+Acevedo, S., & Novta, N. (2017, November 16). *Climate change will bring more frequent natural disasters & weigh on economic growth.* International Monetary Fund. https://blogs.imf.org/2017/11/16/climate-change-will-bring-more-frequent-natural-disasters-weigh-on-economic-growth/
+
+Agence France-Presse. (2021, December 20). Iceland’s volcanic eruption outside Reykjavik officially over. The *Guardian*. https://www.theguardian.com/world/2021/dec/20/iceland-volcanic-eruption-outside-reykjavik-officially-over#:~:text=Authorities%20in%20Iceland%20have%20officially,to%20witness%20its%20lava%20flows
+
+Ahmadian, J., Murata, M., Nadimi, A., Ozawa, H., & Kozai, T. (2014, February). Active tectonics of Iran deduced from earthquakes, active faulting and GPS evidences. *Bulletin of Center for Collaboration in Community Naruto University of Education, 28*, 11-22. https://www.researchgate.net/publication/301230362_Active_tectonics_of_Iran_deduced_from_earthquakes_active_faulting_and_GPS_evidences
+
+Dehghan, S. K. (2017, November 14). Officials raise Iran-Iraq earthquake death toll to at least 530. *The Guardian.* https://www.theguardian.com/world/2017/nov/14/officials-raise-iran-iraq-earthquake-death-toll-to-at-least-530
+
+*Everything you need to know about floods and climate change.* (2022, February 3). Climate Council. https://www.climatecouncil.org.au/resources/climate-change-floods/
+
+Gökkaya, K. (2016). Geographic analysis of earthquake damage in Turkey between 1900 and 2012. *Geomatics, Natural Hazards and Risk, 7*(6), 1948-1961. https://www.researchgate.net/figure/The-tectonic-map-of-Turkey-showing-the-plates-and-their-direction-of-movement-responsible_fig1_301625930
+
+IPCC. (2022). Summary for policymakers [H.-O. Pörtner, D.C. Roberts, E.S. Poloczanska, K. Mintenbeck, M. Tignor, A. Alegría, M. Craig, S. Langsdorf, S. Löschke, V. Möller, A. Okem (eds.)]. In: *Climate change 2022: Impacts, adaptation and vulnerability. Contribution of Working Group II to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change* [H.-O. Pörtner, D.C. Roberts, M. Tignor, E.S. Poloczanska, K. Mintenbeck, A. Alegría, M. Craig, S. Langsdorf, S. Löschke, V. Möller, A. Okem, B. Rama (eds.)]. Cambridge University Press. https://www.ipcc.ch/report/ar6/wg2/downloads/report/IPCC_AR6_WGII_SummaryForPolicymakers.pdf
+
+Knutson, T. R., Chung, M. V., Sun, J., Hsieh, T-L., Smith, A. J. P. (2021, March). Science brief review: Climate change is probably increasing the intensity of tropical cyclones. *Science Brief.* https://sciencebrief.org/uploads/reviews/ScienceBrief_Review_CYCLONES_Mar2021.pdf
+
+Miller, J. (2021, November 11). *In the Philippines, a shared ‘disaster imagination’ supports resilience.* ESRI. https://www.esri.com/about/newsroom/blog/philippines-shared-disaster-imagination-supports-resilience/#:~:text=Situated%20as%20one%20of%20the,center%20of%20a%20typhoon%20belt
+
+*Past earthquakes in Iceland: 2021 – list, stats and map*. (2022). Volcano Discovery. Retrieved 11 August 2022 from https://www.volcanodiscovery.com/earthquakes/iceland/archive/2021.html
+
+Peltier, E. (2021, March 4). In Iceland, 18,000 earthquakes over days signal possible eruption on the horizon. *The New York Times.* https://www.nytimes.com/2021/03/04/world/europe/earthquakes-eruption-iceland.html
+
+*Public opinion monitoring at a glance.* (2021, June). European Parliament. https://www.europarl.europa.eu/at-your-service/files/be-heard/eurobarometer/2020/covid19/en-public-opinion-in-the-time-of-covid19-202106.pdf
+
+Tyson, A., & Funk, C. (2022, February 9). *Increasing public criticism, confusion over COVID-19 response in U.S.* Pew Research Center. https://www.pewresearch.org/science/2022/02/09/increasing-public-criticism-confusion-over-covid-19-response-in-u-s/
+
+*West and Central Africa: Flooding situation overview (January – December 2021) – as of 10 March 2022.* (2022, March 18). ReliefWeb. https://reliefweb.int/report/democratic-republic-congo/west-and-central-africa-flooding-situation-overview-january
+
+Wilks, A. (2020, November 4). Death toll from Turkey earthquake rises to 116 as rescuers finish searches. *PBS News Hour.* https://www.pbs.org/newshour/world/death-toll-from-turkey-earthquake-rises-to-116-as-rescuers-finish-searches
+
+### Conclusion
+
+Fuentes-Nieva, R., & Galasso, N. (2014, January). *Working for the few* [178 Oxfam Briefing Paper]. Oxfam International. https://oi-files-d8-prod.s3.eu-west-2.amazonaws.com/s3fs-public/file_attachments/bp-working-for-few-political-capture-economic-inequality-200114-en_3.pdf
+
+### Appendices
+
+Béné, C. (2013). Towards a quantifiable measure of resilience. *IDS Working Papers, 434*, 1-27.
+
+Béné, C., Newsham, A., Davies, M., Ulrichs, M., & Godfrey-Wood, R. (2014). Resilience, poverty and development. *Journal of International Development, 26*(5), 598-623.
+
+European Commission. (2016). *Building resilience: The EU’s approach.* https://ec.europa.eu/echo/files/aid/countries/factsheets/thematic/EU_building_resilience_en.pdf
+
+Lloyd’s Register Foundation. (2015). *Foresight review of resilience engineering*. https://www.lrfoundation.org.uk/en/publications/resilience-engineering/
+
+Rockefeller Foundation. (2017). *Introducing Zilient: A global resilience network.* https://www.rockefellerfoundation.org/blog/introducing-zilient-global-resilience-network/
+
+Serfilippi, E., & Ramnath, G. (2018). Resilience measurement and conceptual frameworks: A review of the literature. *Annals of Public and Cooperative Economics, 89*(4), 645-664. https://doi.org/10.1111/apce.12202
+
+Sturgess, P. (2016). *Measuring resilience*. United Kingdom Department for International Development. https://assets.publishing.service.gov.uk/media/57a08956e5274a27b200002f/EoD_Topic_Guide_Measuring_Resilience_May_2016.pdf
+
 [^1]: Safety nets. (2019, March). The World Bank. Retrieved 8 August 2022 from https://www.worldbank.org/en/topic/safetynets#:~:text=Social%20safety%20nets%20have%20positive,positive%20effects%20in%20local%20economies
 
 [^2]: Burton, M. S., Cooper, A. A., Feeny, N. C., & Zoellner, L. A. (2015). The enhancement of natural resilience in trauma interventions. Journal of Contemporary Psychotherapy, 45(4), 193-204. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4689312/
@@ -2844,3 +3484,19 @@ Such findings demonstrate a particular strength of the 2021 World Risk Poll resi
 [^67]: Knutson, T. R., Chung, M. V., Sun, J., Hsieh, T-L., Smith, A. J. P. (2021, March). Science brief review: Climate change is probably increasing the intensity of tropical cyclones. Science Brief. https://sciencebrief.org/uploads/reviews/ScienceBrief_Review_CYCLONES_Mar2021. pdf; IPCC. (2022). Summary for policymakers [H.-O. Pörtner, D.C. Roberts, E.S. Poloczanska, K. Mintenbeck, M. Tignor, A. Alegría, M. Craig, S. Langsdorf, S. Löschke, V. Möller, A. Okem (eds.)]. In: Climate change 2022: Impacts, adaptation and vulnerability. Contribution of Working Group II to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [H.-O. Pörtner, D.C. Roberts, M. Tignor, E.S. Poloczanska, K. Mintenbeck, A. Alegría, M. Craig, S. Langsdorf, S. Löschke, V. Möller, A. Okem, B. Rama (eds.)]. Cambridge University Press. https://www.ipcc.ch/report/ar6/wg2/downloads/report/IPCC_AR6_WGII_SummaryForPolicymakers.pdf
 
 [^68]: Fuentes-Nieva, R., & Galasso, N. (2014, January). Working for the few [178 Oxfam Briefing Paper]. Oxfam International. https://oi-files-d8-prod.s3.eu-west-2.amazonaws.com/s3fs-public/file_attachments/bp-working-for-few-political-capture-economic-inequality-200114-en_3.pdf
+
+[^69]: The foundation’s partners included Resilience Rising, the UNDRR and the World Bank.
+
+[^70]: European Commission. (2016). Building resilience: The EU’s approach. https://ec.europa.eu/echo/files/aid/countries/factsheets/thematic/EU_building_resilience_en.pdf
+
+[^71]: Rockefeller Foundation. (2017). Introducing Zilient: A global resilience network. https://www.rockefellerfoundation.org/blog/introducing-zilient-global-resilience-network/
+
+[^72]: Béné, C., Newsham, A., Davies, M., Ulrichs, M., & Godfrey-Wood, R. (2014). Resilience, poverty and development. Journal of International Development, 26(5), 598-623.
+
+[^73]: Lloyd’s Register Foundation. (2015). Foresight review of resilience engineering. https://www.lrfoundation.org.uk/en/publications/resilience-engineering/
+
+[^74]: Sturgess, P. (2016). Measuring resilience. United Kingdom Department for International Development. https://assets.publishing.service.gov.uk/media/57a08956e5274a27b200002f/EoD_Topic_Guide_Measuring_Resilience_May_2016.pdf
+
+[^75]: Serfilippi, E., & Ramnath, G. (2018). Resilience measurement and conceptual frameworks: A review of the literature. Annals of Public and Cooperative Economics, 89(4), 645-664. https://doi.org/10.1111/apce.12202
+
+[^76]: Béné, C. (2013). Towards a quantifiable measure of resilience. IDS Working Papers, 434, 1-27.

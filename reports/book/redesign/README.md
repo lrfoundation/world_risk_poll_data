@@ -43,6 +43,8 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | `::box Title` … `::endbox` | Text the original sets in a box on a grey ground |
 | `>> text`, `>-- source` | A sentence or quotation the original sets large, and the line that names its source |
 | `^ text` | A note the original sets at the foot of a column, placed under its paragraph |
+| `?1. text`, `?> text` | A question of a questionnaire with its number, and an instruction to the interviewer |
+| ```` ```grid ```` + JSON | A table of words (`columns`, `rows`, an optional `title`): answer codes, a list of regions, a scoring table |
 | ```` ```roll ```` + JSON | A list of names in columns, coloured by status, with a key |
 | `- text`, `-- text`, `1. **Lead.** text` | Bullets, points under a bullet, and numbered findings |
 | ```` ```chart ```` + JSON | A figure: `hbar`, `grouped`, `stacked`, `stacked_pair` (two sets of stacked bars side by side), `vgrouped`, `dumbbell`, `diverging` (differences either side of nought), `parts` (several drawings under one title), `matrix` (a table of shaded values), `lists` (ranked lists side by side), `line` (values over the years of the poll), `map`, `region_map` (part of the world, a few countries shaded), `table`, `heading` (a table that is only a title over the text that follows) or `original` |
@@ -60,6 +62,7 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | `core_2021.py` | Reads the typed items (headings, paragraphs, chart labels, small print, footnotes) of a core report of the 2021 poll from its PDF |
 | `assemble_2021.py` | Those items, plus a plan per report (opener figures, chart specifications), to a content file |
 | `focus_2021.py` | The same two steps for the Focus On reports of the 2021 poll, which share another design |
+| `appendix_2021.py` | Reads the appendices of a core report of the 2021 poll: questions, tables of answer codes, regions, references by chapter, methodology |
 | `core_2023.py` | Reads the typed items of a report of the 2023 poll (core or Focus On) from its PDF |
 | `assemble_2023.py` | Those items, plus the report's plan in `plans_2023.py`, to a content file |
 | `plans_2023.py` | A plan per report of the 2023 poll: pages, opener figures, chart specifications, edits and queries |
@@ -111,10 +114,10 @@ which are also listed in each report's "Notes on this edition".
 
 | Report | Pages of the PDF (from 0) | Charts and tables |
 | --- | --- | --- |
-| `2021_a_changed_world` | 3 to 50 | 26, of which 4 are pictures of the original |
-| `2021_a_resilient_world` | 3 to 46 | 29, of which 4 are pictures of the original |
-| `2021_a_digital_world` | 3 to 35 | 23, of which 1 is a picture of the original |
-| `2021_safe_at_work` | 3 to 37 | 25 |
+| `2021_a_changed_world` | 3 to 50, appendices 51 to 57 | 26, of which 4 are pictures of the original |
+| `2021_a_resilient_world` | 3 to 46, appendices 47 to 70 | 29, of which 4 are pictures of the original |
+| `2021_a_digital_world` | 3 to 35, appendices 36 to 42 | 23, of which 1 is a picture of the original |
+| `2021_safe_at_work` | 3 to 37, appendices 38 to 48 | 25 |
 
 These four share one design, so nothing in their content files is written by
 hand. `core_2021.py` tells a block's role from its type (the report's fonts and
@@ -140,9 +143,17 @@ Conventions added for these reports:
 - Type that the PDF holds in white inside a paragraph (a leftover chart label)
   is dropped, since it does not print.
 
-The appendices (questionnaires, lists of regions, the Resilience Index
-methodology, references listed again by chapter) are not set yet; each draft
-says so in its "Notes on this edition".
+The appendices follow the conclusion, as in the originals: the questionnaire,
+the list of regions, the references by chapter, and in two reports a
+methodology. `appendix_2021.py` reads them (`appendices=(first, last)` in a
+plan). Their tables are drawn as grids of pale rules under a pink band, so a
+table is read from its rules: the rules give the rows and columns, and the type
+that falls in a cell is the cell's text. Questions, instructions to the
+interviewer and paragraphs are told apart by their type. A table or chart that
+cannot be set as a table of words is placed as a picture of the original
+(`appendix_pictures` in the plan: a page, a rectangle and a specification;
+`bare` for one the original sets without a number or title), and the report's
+"Notes on this edition" names each one.
 
 ## The Focus On reports of the 2021 poll
 
