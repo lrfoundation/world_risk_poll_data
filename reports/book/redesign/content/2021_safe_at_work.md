@@ -6,7 +6,7 @@
  "pdf": "core_safe_at_work.pdf",
  "title": "Safe at Work?",
  "subtitle": "Global experiences of violence and harassment",
- "series": "Core report of the 2021 poll, first published January 2023",
+ "series": "Core report of the 2021 Poll, first published January 2023",
  "source": "World Risk Poll 2021: Safe at Work? Global experiences of violence and harassment (Lloyd's Register Foundation, January 2023)",
  "copyright": "Copyright © 2023 Lloyd's Register Foundation. All rights reserved.",
  "running": "Re-set in 2026 from the report of January 2023",

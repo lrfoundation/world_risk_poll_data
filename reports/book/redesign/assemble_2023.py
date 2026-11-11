@@ -266,7 +266,7 @@ def assemble(key):
     kind = "Focus On report" if focus else "Core report"
     meta = dict(
         key=key, wave=2023, edition=2024, brand="World Risk Poll 2024", folder=p["folder"], pdf=p["pdf"], title=p["title"], subtitle=p.get("subtitle", ""),
-        series=f"{kind} of the 2023 poll, first published {p['published']}",
+        series=f"{kind} of the 2023 Poll, first published {p['published']}",
         source=p["source"], copyright=p["copyright"], running=f"Re-set in 2026 from the report of {p['published']}",
         cover_image=p["cover_image"], numbering="chapter", contents_first=True, margins=[core_2023.TOP, core_2023.BOTTOM], edits=list(p.get("edits", [])))
     for extra in ("chart_note", "queries", "pending", "appendix_note", "running_title", "numbering_note", "plain_opener", "contents_h2"):       # ("edits" is set above)

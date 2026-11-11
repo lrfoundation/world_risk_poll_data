@@ -6,7 +6,7 @@
  "pdf": "core_a_resilient_world.pdf",
  "title": "A Resilient World?",
  "subtitle": "Understanding vulnerability in a changing climate",
- "series": "Core report of the 2021 poll, first published September 2022",
+ "series": "Core report of the 2021 Poll, first published September 2022",
  "source": "World Risk Poll 2021: A Resilient World? Understanding vulnerability in a changing climate (Lloyd's Register Foundation, September 2022)",
  "copyright": "Copyright © 2022 Lloyd's Register Foundation. All rights reserved.",
  "running": "Re-set in 2026 from the report of September 2022",

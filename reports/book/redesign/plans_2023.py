@@ -11,7 +11,7 @@ APPENDICES = (
     "The appendices of the original are set in full after the last chapter: the Resilience Index methodology, the scoring of each item and the table of "
     "index values for 142 countries. Appendix Tables 1, 2 and 3 and the scoring table for Cover Basic Needs are pictures of the original: the "
     "first two set their headings on their side, the third holds lists inside its cells and the fourth sets two tables side by side, none of "
-    "which the tables of this edition can hold. In the table of index values the original marks China with an asterisk and gives no note for it.")
+    "which the tables of this version can hold. In the table of index values the original marks China with an asterisk and gives no note for it.")
 
 
 REGIONS = {
@@ -424,7 +424,7 @@ def worries(ids):
         "2.9": by_experience("C2_9_"),
         "2.10": by_experience("C2_10_"),
         "2.11": dict(kind="original", why=PLOT.format("country")),
-        "3.1": dict(kind="original", why="it plots temperature records that are not part of the poll"),
+        "3.1": dict(kind="original", why="it plots temperature records that are not part of the Poll"),
         "3.2": dict(kind="line", years=polls, colours=["fuchsia", "teal", "navy", "grey"],
                     rows=[[name, [f"C3_2_{k}_{y}" for y in polls]] for k, name in (("very", "Very serious threat"), ("somewhat", "Somewhat serious threat"), ("not", "Not a threat at all"),
                                                                                     ("dk", "Don’t know/Refused"))]),
@@ -499,7 +499,7 @@ def ocean(ids):
         return dict(kind="hbar", rows=[[name, f"{prefix}{k}"] for k, name in two])
 
     return {
-        "F1.1": dict(kind="original", clip=[18, 262, 600, 506], blank=[], why="it plots records of cyclones and sea temperature that are not part of the poll"),
+        "F1.1": dict(kind="original", clip=[18, 262, 600, 506], blank=[], why="it plots records of cyclones and sea temperature that are not part of the Poll"),
         "1.1": pair("C1_1_"),
         "1.2": dict(kind="stacked", series=["Very serious threat", "Somewhat serious threat", "Don’t know/Refused", "Not a threat at all"], colours=["fuchsia", "teal", "grey", "navy"],
                     rows=[[name, [f"C1_2_{k}_{t}" for t in ("very", "somewhat", "dk", "not")]] for k, name in two]),

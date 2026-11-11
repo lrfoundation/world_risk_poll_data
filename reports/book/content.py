@@ -22,9 +22,9 @@ WAVES = {
     2019: dict(
         colour=NAVY, text=NAVY, on="#FFFFFF", respondents="154,195", countries=142,
         brand="World Risk Poll 2019",
-        blurb="The first poll. One full report covered every theme, from feeling safe to food, work, "
+        blurb="The first edition. One full report covered every theme, from feeling safe to food, work, "
               "climate and technology. It appears here as four parts, so that it sits alongside the "
-              "four core reports of each later poll.",
+              "four core reports of each later edition.",
     ),
     2021: dict(
         colour=FUCHSIA, text=FUCHSIA, on="#FFFFFF", respondents="125,911", countries=121,
@@ -169,7 +169,7 @@ REPORTS = [
         key="2019_technology", wave=2019, type="core", folder=F2019, published="2020",
         title="Technology and the internet",
         subtitle="Part 4 of 4 of the 2019 full report: chapters 7 and 8",
-        lede="The 2019 poll asked whether three technologies would mostly help or mostly harm people over "
+        lede="The 2019 Poll asked whether three technologies would mostly help or mostly harm people over "
              "the next 20 years. Opinion on artificial intelligence and nuclear power leaned towards help. "
              "Genetically modified food was the exception: {X7_01}% expected harm and {X7_02}% expected help. "
              "Online, {X8_08}% of people had used the internet in the past month, and {X8_01}% of those users "
@@ -199,7 +199,7 @@ REPORTS = [
     dict(
         key="a_changed_world", wave=2021, type="core", folder="WRP_2021/core_a_changed_world", published="July 2022",
         title="A Changed World?", subtitle="Perceptions and experiences of risk in the Covid age",
-        lede="The second poll went into the field during the pandemic. Among the countries surveyed in both "
+        lede="The second edition of the Poll went into the field during the pandemic. Among the countries surveyed in both "
              "years, {X06_less_2021}% of people felt less safe than five years earlier, up from "
              "{X06_less_2019}% in 2019. Covid-19 itself was only the fourth most commonly named risk "
              "({X07_covid}%), behind road accidents, crime and violence, and personal health. Concern about "
@@ -214,7 +214,7 @@ REPORTS = [
             ("X12_dk_primary", "of people with primary education or less did not know whether climate change was a threat"),
         ],
         charts=[
-            dict(kind="grouped", title="The share of people who felt less safe rose between the first two polls",
+            dict(kind="grouped", title="The share of people who felt less safe rose between the first two editions",
                  question="Compared to five years ago, do you feel more safe, less safe or about as safe?",
                  note="Chart 1.1 of the report. Countries surveyed in both years.",
                  series=[("2019", NAVY), ("2021", FUCHSIA)],
@@ -268,8 +268,8 @@ REPORTS = [
         lede="Asked whether artificial intelligence would mostly help or mostly harm people in their country "
              "over the next 20 years, {X03}% said help and {X04}% said harm; {X05}% had no opinion or did not "
              "know. Confidence thinned once the technology took the wheel: {C1_7_no}% would not feel safe in "
-             "a car driven by a computer. Internet use rose from {X37_2019}% to {X37_2021}% between the "
-             "polls, though only {X41_central_west_africa}% of people in Central and Western Africa were online.",
+             "a car driven by a computer. Internet use rose from {X37_2019}% to {X37_2021}% between the two "
+             "editions, though only {X41_central_west_africa}% of people in Central and Western Africa were online.",
         hero=("C1_7_no", "of people would not feel safe in a car without a human driver"),
         stats=[
             ("X03", "thought artificial intelligence would mostly help people in their country in the next 20 years"),
@@ -503,7 +503,7 @@ REPORTS = [
             ("X10", "felt less safe"),
         ],
         charts=[
-            dict(kind="line", title="Worry about mental health rose at each poll, whilst road accidents stayed the most commonly named risk",
+            dict(kind="line", title="Worry about mental health rose in each edition, whilst road accidents stayed the most commonly named risk",
                  question="In general, how worried are you that mental health issues could cause you serious harm? "
                           "In your own words, what is the greatest source of risk to your safety in your daily life?",
                  note="Figures from the report's executive summary.",
@@ -545,7 +545,7 @@ REPORTS = [
         key="fo_migration", wave=2023, type="focus_on",
         folder="WRP_2023/focus_on_migration_in_a_warming_world", published="May 2026",
         title="Migration in a warming world", subtitle="Focus On",
-        lede="Do people who fear climate change want to leave? Combining the 2021 and 2023 polls, {X29}% of "
+        lede="Do people who fear climate change want to leave? Combining the 2021 and 2023 editions, {X29}% of "
              "those who saw climate change as a very serious threat said they would like to move "
              "permanently to another country, against {X30}% of those who saw a lesser threat or none. "
              "Money matters alongside the weather: {X33}% of people whose household could not cover a month "
@@ -555,13 +555,13 @@ REPORTS = [
         stats=[
             ("X02", "of households could not cover their basic needs for a month without income"),
             ("X17", "named not having enough money or the general economy as their greatest risk in 2023"),
-            ("X03", "named climate change or severe weather as their greatest risk in 2023, the highest of the three polls"),
+            ("X03", "named climate change or severe weather as their greatest risk in 2023, the highest of the three editions"),
         ],
         charts=[
             dict(kind="grouped", title="A thin financial cushion raised the wish to migrate most among people who saw no climate threat",
                  question="Ideally, if you had the opportunity, would you like to move permanently to another country, "
                           "or would you prefer to continue living in this country?",
-                 note="2021 and 2023 polls combined. The migration question comes from the Gallup World Poll and is not in the public data.",
+                 note="2021 and 2023 editions combined. The migration question comes from the Gallup World Poll and is not in the public data.",
                  series=[("Could cover a month or more without income", GREEN), ("Less than a month", FUCHSIA)],
                  rows=[("Climate change a very serious threat", ["X34", "X35"]),
                        ("Climate change not a threat", ["X36", "X37"])]),
@@ -602,7 +602,7 @@ REPORTS = [
         key="the_quiet_hazards", wave=2025, type="core", folder="WRP_2025/core_the_quiet_hazards", published="June 2026",
         title="The Quiet Hazards", subtitle="How everyday risk shapes daily life",
         doi="10.60743/9djc-t718",
-        lede="The 2025 poll widened its list of everyday hazards to take in heat, drought, wildfire and the "
+        lede="The 2025 Poll widened its list of everyday hazards to take in heat, drought, wildfire and the "
              "air people breathe. {X13}% of adults had been personally harmed by prolonged severe weather "
              "such as droughts and heatwaves in the past two years, and {X14}% by floods or storms. Harm "
              "from food ({X06}%) and drinking water ({X07}%) reached the highest levels the Poll has "
@@ -716,7 +716,7 @@ REPORTS = [
                  rows=[("Earthquake regions", ["X024", "X025"]), ("Rest of Türkiye", ["X026", "X027"])]),
         ],
         map=dict(kind="locator", title="The seven case studies",
-                 sub="Each case compares the regions hit by a disaster with the rest of the country, across the 2021, 2023 and 2025 polls.",
+                 sub="Each case compares the regions hit by a disaster with the rest of the country, across the 2021, 2023 and 2025 editions.",
                  places=[("MAR", "Morocco", "Marrakech-Safi", FUCHSIA), ("TUR", "Türkiye", "Mediterranean and Central East Anatolia", GREEN),
                          ("NZL", "New Zealand", "Northland and Auckland", TEAL), ("ZAF", "South Africa", "KwaZulu-Natal", ORANGE),
                          ("MOZ", "Mozambique", "Zambezia, Sofala and Manica", PURPLE), ("PAK", "Pakistan", "Sindh", LIME),

@@ -6,7 +6,7 @@
  "pdf": "core_world_risk_poll_2019.pdf",
  "title": "Climate change, food and water",
  "subtitle": "How people see the threat of a changing climate and the safety of what they eat and drink",
- "series": "Report 3 of 4 from the 2019 poll",
+ "series": "Report 3 of 4 from the 2019 Poll",
  "source": "Chapters 6 and 9 of The Lloyd's Register Foundation World Risk Poll: Full report and analysis of the 2019 poll (2020)",
  "copyright": "Copyright © 2020 Lloyd's Register Foundation. All rights reserved.",
  "cover_image": [
@@ -42,7 +42,7 @@
 
 ::new
 
-The first World Risk Poll went into the field in 2019. Gallup interviewed about 150,000 people in 142 countries and territories, and the findings were published in 2020 as a single volume of ten chapters. This edition re-sets that volume as four shorter reports, one for each of its main themes, so that the 2019 poll can be read alongside the core reports of the polls that followed. *Climate change, food and water* is the third of the four.
+The first World Risk Poll went into the field in 2019. Gallup interviewed about 150,000 people in 142 countries and territories, and the findings were published in 2020 as a single volume of ten chapters. This book re-sets that volume as four shorter reports, one for each of its main themes, so that the 2019 Poll can be read alongside the core reports of the editions that followed. *Climate change, food and water* is the third of the four.
 
 The body of this report is Chapters 6 and 9 of the 2019 volume, reproduced word for word and set here as Chapters 1 and 2. Their charts have been redrawn from the published values in the current World Risk Poll chart style, and their footnotes are gathered as numbered references at the back. Three things are new: this page, the heading ‘Introduction’ at the start of each chapter, and the conclusion. Charts are numbered by chapter, so Chart 6.3 of the 2019 volume is Chart 1.3 here and Chart 9.3 is Chart 2.3.
 
@@ -50,7 +50,7 @@ The two chapters are paired because they ask about the same kind of risk from op
 
 ::column
 
-## The 2019 poll in four reports
+## The 2019 Poll in four reports
 
 1. **Feeling safe and the sources of risk.** Chapters 1 to 4 and 10 of the 2019 volume: How safe do we feel?; The sources of greatest risk in people’s lives; The risk perception gap; Influencing understanding of risk; Forecasting risk.
 

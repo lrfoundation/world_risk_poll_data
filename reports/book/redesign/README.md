@@ -22,8 +22,8 @@ downloads them all), Chrome or Chromium, `pymupdf` and `Pillow`.
   this repository is placed as a picture of the original and says so.
 - **New writing.** Only what a stand-alone report needs and the original lacks:
   for the four 2019 reports an "About this report" page, chapter groupings and a
-  conclusion. Each new section carries a "New for this edition" tag.
-- **Notes on this edition.** Generated at the back of each report: the source,
+  conclusion. Each new section carries a "New for this book" tag.
+- **Notes on this version.** Generated at the back of each report: the source,
   the chart renumbering, every wording change, and any query about the original.
 
 ## Markup of a content file
@@ -70,7 +70,7 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | `plans_2023.py` | A plan per report of the 2023 poll: pages, opener figures, chart specifications, edits and queries |
 | `check.py` | Compares a content file with its pages of the PDF, both ways: every sentence set must be in the original, and every block of running text in the original must be set |
 | `bind.py` | The re-set reports and the published reports of the 2025 poll, bound as one book |
-| `content/` | One file per re-set report, and `across_the_waves.md`, the book's opening chapter |
+| `content/` | One file per re-set report, and `across_the_editions.md`, the book's opening chapter |
 
 ## The four reports of the 2019 volume
 
@@ -117,7 +117,7 @@ Three conventions for charts that the published figures cannot fully supply:
   against the country figures the report prints; the countries named beside a
   map are the published figures. The check reports the headings and the
 cross-references that were changed on purpose ("Chapter 3 of the 2019 volume"),
-which are also listed in each report's "Notes on this edition".
+which are also listed in each report's "Notes on this version".
 
 ## The four core reports of the 2021 poll
 
@@ -166,7 +166,7 @@ interviewer and paragraphs are told apart by their type. A table or chart that
 cannot be set as a table of words is placed as a picture of the original
 (`appendix_pictures` in the plan: a page, a rectangle and a specification;
 `bare` for one the original sets without a number or title), and the report's
-"Notes on this edition" names each one.
+"Notes on this version" names each one.
 
 ## The Focus On reports of the 2021 poll
 
@@ -211,7 +211,7 @@ Conventions added for these reports:
   which group is higher, is drawn on that group's side (`"signless"`, and a
   fourth entry of -1 in the row).
 - A map of regions or a pie chart whose values are printed is drawn as bars;
-  each report's "Notes on this edition" says where.
+  each report's "Notes on this version" says where.
 - The charts of the fossil fuels report plot a value for every country against
   figures from Our World in Data and the World Bank, and print none of them.
   All eight are pictures of the original until those values are in the repository.
@@ -271,7 +271,7 @@ A plan in `plans_2023.py` gives, for each report:
 - `replace`, `drop`, `after`, `inside`, `as_chapters`: corrections to the
   reading order where the page design departs from the two columns;
 - `edits` and `queries`: every change to the wording and every doubt about the
-  original, both printed in the "Notes on this edition".
+  original, both printed in the "Notes on this version".
 
 Conventions added for these reports:
 
@@ -292,15 +292,27 @@ Conventions added for these reports:
 the charts that are pictures, and one or two blocks of chart lettering (a note
 set between two charts in the ocean workers report). None is missing text.
 
+## Terms in writing done for this book
+
+Lloyd's Register Foundation's preferred terms are "Poll" (with a capital, after
+the first use of "World Risk Poll") and "editions" for its 2019, 2021, 2023 and
+2025 rounds. Everything written for this book follows them: the opening
+chapter, the book's own pages, the new introductions and conclusions of the
+2019 reports and the notes at the back of each report. Because "edition" now
+means an edition of the Poll, the book calls itself "this book" or "this
+version". The published text of the reports is not changed; where a report
+says "poll" or "wave", so does its re-set text. Code and file names keep
+`wave` as a field name.
+
 ## The opening chapter of the book
 
-`content/across_the_waves.md` is not a re-set report. It is a chapter written
-for this edition, "The poll across four waves", which reads across the four
-polls: what has held, what has moved, what each poll added and what has been
-learned. Every sentence of it is new writing, so it carries the "New for this
-edition" tag throughout.
+`content/across_the_editions.md` is not a re-set report. It is a chapter written
+for this book, "The World Risk Poll across four editions", which reads across
+the four editions of the Poll: what has held, what has moved, what each edition
+added and what has been learned. Every sentence of it is new writing, so it
+carries the "New for this book" tag throughout.
 
-    python reports/book/redesign/build.py across_the_waves
+    python reports/book/redesign/build.py across_the_editions
 
 It differs from a report's content file in three ways, all set in its header.
 
@@ -315,7 +327,7 @@ It differs from a report's content file in three ways, all set in its header.
   `"edition_notes": false` leaves out the notes that a re-set report ends with;
   the chapter ends with its own "Sources and notes".
 
-The build also writes `output/redesign/across_the_waves_figures.csv`, a list of
+The build also writes `output/redesign/across_the_editions_figures.csv`, a list of
 every published figure the chapter uses (167 of them, from 14 reports), for
 checking. Where two reports print different values for the same poll the
 chapter uses the later report and its notes list the differences.

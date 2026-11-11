@@ -6,7 +6,7 @@
  "pdf": "core_world_risk_poll_2019.pdf",
  "title": "Technology and the internet",
  "subtitle": "New technologies and the risks of being online",
- "series": "Report 4 of 4 from the 2019 poll",
+ "series": "Report 4 of 4 from the 2019 Poll",
  "source": "Chapters 7 and 8 of The Lloyd's Register Foundation World Risk Poll: Full report and analysis of the 2019 poll (2020)",
  "copyright": "Copyright © 2020 Lloyd's Register Foundation. All rights reserved.",
  "cover_image": [
@@ -39,7 +39,7 @@
 
 ::new
 
-The first World Risk Poll went into the field in 2019. Gallup interviewed about 150,000 people in 142 countries and territories, and the findings were published in 2020 as a single volume of ten chapters. This edition re-sets that volume as four shorter reports, one for each of its main themes, so that the 2019 poll can be read alongside the core reports of the polls that followed. *Technology and the internet* is the fourth of the four.
+The first World Risk Poll went into the field in 2019. Gallup interviewed about 150,000 people in 142 countries and territories, and the findings were published in 2020 as a single volume of ten chapters. This book re-sets that volume as four shorter reports, one for each of its main themes, so that the 2019 Poll can be read alongside the core reports of the editions that followed. *Technology and the internet* is the fourth of the four.
 
 The body of this report is Chapters 7 and 8 of the 2019 volume, reproduced word for word and set here as Chapters 1 and 2. Their charts have been redrawn from the published values in the current World Risk Poll chart style, and their footnotes are gathered as numbered references at the back. Three things are new: this page, the heading ‘Introduction’ at the start of each chapter, and the conclusion. Charts are numbered by chapter, so Chart 7.2 of the 2019 volume is Chart 1.2 here and Chart 8.2 is Chart 2.2.
 
@@ -47,7 +47,7 @@ The two chapters are paired because both are about technology, although they ask
 
 ::column
 
-## The 2019 poll in four reports
+## The 2019 Poll in four reports
 
 1. **Feeling safe and the sources of risk.** Chapters 1 to 4 and 10 of the 2019 volume: How safe do we feel?; The sources of greatest risk in people’s lives; The risk perception gap; Influencing understanding of risk; Forecasting risk.
 
@@ -821,7 +821,7 @@ Comparing country-level results on this index against people’s perceptions of 
   564
  ],
  "width": 640,
- "note": "Reproduced from the 2019 report. The Trust in Scientists Index comes from the Wellcome Global Monitor, which is not in the public files of the poll, so this chart could not be redrawn.",
+ "note": "Reproduced from the 2019 report. The Trust in Scientists Index comes from the Wellcome Global Monitor, which is not in the public files of the Poll, so this chart could not be redrawn.",
  "question": "Do you think the use of artificial intelligence will mostly help or mostly harm people in your country in the next 20 years?"
 }
 ```
@@ -1398,13 +1398,13 @@ Given the scale and cost of internet-related fraud worldwide, the World Risk Pol
 
 ::new
 
-Of the three technologies the 2019 poll asked about, only one was met with clear suspicion. Nearly half of adults worldwide (48%) said genetically modified foods would mostly harm people in their country over the next 20 years, more than twice the share who said they would mostly help (21%). Nuclear power and artificial intelligence drew the opposite balance: 40% and 41% respectively expected them to mostly help, against 29% and 30% who expected harm. In all three cases about three in 10 people offered no view either way, which is a finding in its own right.
+Of the three technologies the 2019 Poll asked about, only one was met with clear suspicion. Nearly half of adults worldwide (48%) said genetically modified foods would mostly harm people in their country over the next 20 years, more than twice the share who said they would mostly help (21%). Nuclear power and artificial intelligence drew the opposite balance: 40% and 41% respectively expected them to mostly help, against 29% and 30% who expected harm. In all three cases about three in 10 people offered no view either way, which is a finding in its own right.
 
 Where people live shaped these views as much as the technology in question. People in low-income countries were almost twice as likely as those in higher-income countries to see genetically modified foods as helpful (43% compared with 22%). Optimism about artificial intelligence was concentrated in Eastern Asia, where 59% expected it to mostly help and only 11% to mostly harm; in Southern Europe and in Latin America and the Caribbean, by contrast, about half expected it to do harm (51% and 49%).
 
 The second chapter turns from technologies people judge at a distance to one that many use every day, although far from all: the share of people who had used the internet in the past 30 days ranged from 96% in Bahrain to 8% in Chad. Among those who were online, false information was the most common worry (57%), ahead of fraud (45%) and bullying (30%). The worries also fell differently by age. Concern about bullying was highest among users aged 15 to 29 (34%, compared with 21% of those aged 65 and over), whilst concern about fraud rose with age, from 42% to 55% across the same two groups.
 
-It is important to note when these questions were asked: in 2019, before the pandemic moved much of daily life online and before generative AI reached the public. The figures are therefore best read as a baseline. The 2021 poll returned to artificial intelligence and to the risks of being online, and what changed can only be measured because the 2019 questions came first.
+It is important to note when these questions were asked: in 2019, before the pandemic moved much of daily life online and before generative AI reached the public. The figures are therefore best read as a baseline. The 2021 Poll returned to artificial intelligence and to the risks of being online, and what changed can only be measured because the 2019 questions came first.
 
 ::endnew
 

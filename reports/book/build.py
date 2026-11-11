@@ -130,9 +130,9 @@ class Book:
             f'{w["countries"]} countries and territories</b>{sum(r["wave"] == y for r in REPORTS)} reports in this book</div></div>'
             for y, w in WAVES.items())
         self.add(f'''<div class="pad about"><div><span class="eyebrow dot">About this book</span>
-<h1>Four polls, 22 reports<span class="dot">.</span></h1>
+<h1>Four editions, 22 reports<span class="dot">.</span></h1>
 <p>The Lloyd's Register Foundation World Risk Poll asks people around the world about the risks they worry about and the harm they have experienced. It is fielded by Gallup as part of the Gallup World Poll and has run four times, in 2019, 2021, 2023 and 2025, in between 121 and 142 countries and territories each time.</p>
-<p>This book gathers the findings of 22 reports drawn from those four polls: 17 core reports and five Focus On reports. Each report has a few pages here: its headline finding, the numbers behind it, a chart or two and, for the core reports, a map. The 2019 poll was published as one full report. It appears here in four parts, so that it can be read alongside the four or five core reports of each later poll. The Focus On report on risk and gender is not included.</p>
+<p>This book gathers the findings of 22 reports drawn from those four editions: 17 core reports and five Focus On reports. Each report has a few pages here: its headline finding, the numbers behind it, a chart or two and, for the core reports, a map. The 2019 Poll was published as one full report. It appears here in four parts, so that it can be read alongside the four or five core reports of each later edition. The Focus On report on risk and gender is not included.</p>
 <p>Every number in the text and charts is a figure from the published report, drawn from the reproduction files in the World Risk Poll data repository. The maps are the exception: they were computed for this book from the public data, with the same weights and bases as the reports.</p>
 </div><div class="wavelist">{rows}</div></div>{foot("{PAGE}")}''', "w2021")
 
@@ -160,7 +160,7 @@ class Book:
 <div class="facts"><div><b class="num">{wave["respondents"]}</b><span>People</span></div>
 <div><b class="num">{wave["countries"]}</b><span>Countries and territories</span></div>
 <div><b class="num">{n}</b><span>Reports in this book</span></div></div></div>
-<div class="maplabel"><span class="eyebrow">Where the poll was fielded</span></div><div class="map">{art}</div>{foot("{PAGE}")}''', "wave", year)
+<div class="maplabel"><span class="eyebrow">Where the Poll was fielded</span></div><div class="map">{art}</div>{foot("{PAGE}")}''', "wave", year)
 
     def opener(self, r, fig, index):
         wave = WAVES[r["wave"]]
@@ -175,7 +175,7 @@ class Book:
 <div class="count">Report {index} of {len(REPORTS)}</div></div>
 <div class="main"><span class="eyebrow kind">{kind}</span><h1 class="{size}"{gap}>{title_html(r["title"])}</h1>{subtitle}
 <p class="lede">{escape(fig.fill(r["lede"]))}</p>
-<div class="meta"><span><b>Published</b> {escape(r["published"])}</span><span><b>Data</b> {r["wave"]} poll, {wave["respondents"]} people in {wave["countries"]} countries and territories</span>{doi}</div></div>
+<div class="meta"><span><b>Published</b> {escape(r["published"])}</span><span><b>Data</b> {r["wave"]} Poll, {wave["respondents"]} people in {wave["countries"]} countries and territories</span>{doi}</div></div>
 {foot("{PAGE}", "")}''', "opener", r["wave"])
 
     def stat(self, fig, s):
@@ -274,7 +274,7 @@ class Book:
         self.add(f'''<div class="pad back"><h1><span class="eyebrow dot" style="display:block;margin-bottom:26px">About the numbers</span>How to read this book<span class="dot">.</span></h1>
 <div><h4>Published figures</h4><p>The numbers in the text and charts are the figures printed in each report. They are read from the reports' reproduction files, which list every published figure with its page and compare it with the value computed from the public data. The file FIGURES.md beside this book lists each figure used here and how closely the data reproduces it.</p>
 <h4>Weights and bases</h4><p>Figures are weighted to each country's adult population, so global and regional figures count people, not countries. People who were not asked a question are left out. Those who answered don't know or refused stay in the base, which is why some shares do not add to 100.</p>
-<h4>Comparing polls</h4><p>The number of countries differs between polls: 142, 121, 142 and 140. Where a report compares two polls, it uses the countries surveyed in both, so a trend figure can differ from the single-poll figure for the same question.</p></div>
+<h4>Comparing editions</h4><p>The number of countries differs between editions of the Poll: 142, 121, 142 and 140. Where a report compares two editions, it uses the countries surveyed in both, so a trend figure can differ from the single-edition figure for the same question.</p></div>
 <div><h4>Maps</h4><p>The maps were computed for this book from the public data files and are not published figures. A country is left blank where it was not surveyed, the question was not asked there, or fewer than {maps.MIN_N} people answered. Each map's key splits the countries into five roughly equal groups.</p>
 <h4>Gallup World Poll items</h4><p>Some findings combine World Risk Poll questions with Gallup World Poll items that are not part of the public data, such as country of birth, life evaluation and the wish to migrate. Those figures are shown as published and cannot be recomputed from the public files.</p>
 <h4>Where to find the data</h4><p>The data, the methodology reports and the scripts that reproduce every report are at github.com/lrfoundation/world_risk_poll_data. The World Risk Poll Data Explorer is at tools.gsec.org.uk/wrp-explorer.html, and the reports are at wrp.lrfoundation.org.uk.</p></div>
@@ -297,7 +297,7 @@ class Book:
             items.append(f'<div class="src w{r["wave"]}"><div class="pg num">{self.starts[r["key"]]}</div><div><b>{escape(title)}</b><span>{escape(detail)}</span></div></div>')
         self.add(f'''<div class="pad"><span class="eyebrow dot">Sources</span>
 <h1 style="font-size:64px;font-weight:800;letter-spacing:-.035em;margin:22px 0 0">The 22 reports<span class="dot">.</span></h1>
-<p class="srcnote">The 2019 poll was published as one report, The Lloyd's Register Foundation World Risk Poll: Full report and analysis of the 2019 poll. Numbers on the left are pages of this book.</p>
+<p class="srcnote">The 2019 Poll was published as one report, The Lloyd's Register Foundation World Risk Poll: Full report and analysis of the 2019 poll. Numbers on the left are pages of this book.</p>
 <div class="sources">{"".join(items)}</div></div>{foot("{PAGE}")}''', "w2021")
 
     def end(self):

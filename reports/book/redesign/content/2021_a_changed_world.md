@@ -6,7 +6,7 @@
  "pdf": "core_a_changed_world.pdf",
  "title": "A Changed World?",
  "subtitle": "Perceptions and experiences of risk in the Covid age",
- "series": "Core report of the 2021 poll, first published July 2022",
+ "series": "Core report of the 2021 Poll, first published July 2022",
  "source": "World Risk Poll 2021: A Changed World? Perceptions and experiences of risk in the Covid age (Lloyd's Register Foundation, July 2022)",
  "copyright": "Copyright © 2022 Lloyd's Register Foundation. All rights reserved.",
  "running": "Re-set in 2026 from the report of July 2022",

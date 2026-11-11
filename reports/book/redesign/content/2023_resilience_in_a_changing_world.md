@@ -8,7 +8,7 @@
  "pdf": "core_resilience_in_a_changing_world.pdf",
  "title": "Resilience in a Changing World",
  "subtitle": "",
- "series": "Core report of the 2023 poll, first published June 2024",
+ "series": "Core report of the 2023 Poll, first published June 2024",
  "source": "World Risk Poll 2024 Report: Resilience in a Changing World (Lloyd's Register Foundation, June 2024)",
  "copyright": "Copyright © 2024 Lloyd's Register Foundation. All rights reserved.",
  "running": "Re-set in 2026 from the report of June 2024",
@@ -24,7 +24,7 @@
  ],
  "edits": [],
  "chart_note": "Charts 2.3, 2.4 and 2.7 to 2.10 of the original also draw the global medians of 2021 and 2023 as dotted lines, without printing their values; the lines are not redrawn.",
- "appendix_note": "The appendices of the original are set in full after the last chapter: the Resilience Index methodology, the scoring of each item and the table of index values for 142 countries. Appendix Tables 1, 2 and 3 and the scoring table for Cover Basic Needs are pictures of the original: the first two set their headings on their side, the third holds lists inside its cells and the fourth sets two tables side by side, none of which the tables of this edition can hold. In the table of index values the original marks China with an asterisk and gives no note for it."
+ "appendix_note": "The appendices of the original are set in full after the last chapter: the Resilience Index methodology, the scoring of each item and the table of index values for 142 countries. Appendix Tables 1, 2 and 3 and the scoring table for Cover Basic Needs are pictures of the original: the first two set their headings on their side, the third holds lists inside its cells and the fourth sets two tables side by side, none of which the tables of this version can hold. In the table of index values the original marks China with an asterisk and gives no note for it."
 }
 ---
 

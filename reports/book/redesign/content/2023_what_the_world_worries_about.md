@@ -8,7 +8,7 @@
  "pdf": "core_what_the_world_worries_about.pdf",
  "title": "What the World Worries About",
  "subtitle": "Global perceptions and experiences of risk and harm",
- "series": "Core report of the 2023 poll, first published November 2024",
+ "series": "Core report of the 2023 Poll, first published November 2024",
  "source": "World Risk Poll 2024 Report: What the World Worries About: Global perceptions and experiences of risk and harm (Lloyd's Register Foundation, November 2024)",
  "copyright": "Copyright © 2024 Lloyd's Register Foundation. All rights reserved.",
  "running": "Re-set in 2026 from the report of November 2024",
@@ -889,7 +889,7 @@ The ‘Safe System’ approach to road safety — which seeks a world free from 
   549
  ],
  "kind": "original",
- "why": "it plots temperature records that are not part of the poll",
+ "why": "it plots temperature records that are not part of the Poll",
  "blank": [
   [
    437,

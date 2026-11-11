@@ -8,7 +8,7 @@
  "pdf": "core_engineering_safer_workplaces.pdf",
  "title": "Engineering Safer Workplaces",
  "subtitle": "Global trends in occupational safety and health",
- "series": "Core report of the 2023 poll, first published October 2024",
+ "series": "Core report of the 2023 Poll, first published October 2024",
  "source": "World Risk Poll 2024 Report: Engineering Safer Workplaces: Global trends in occupational safety and health (Lloyd's Register Foundation, October 2024)",
  "copyright": "Copyright © 2024 Lloyd's Register Foundation. All rights reserved.",
  "running": "Re-set in 2026 from the report of October 2024",

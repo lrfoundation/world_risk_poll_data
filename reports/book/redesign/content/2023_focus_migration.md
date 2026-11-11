@@ -8,7 +8,7 @@
  "pdf": "focus_on_migration_in_a_warming_world.pdf",
  "title": "Focus On",
  "subtitle": "Migration in a warming world",
- "series": "Focus On report of the 2023 poll, first published May 2026",
+ "series": "Focus On report of the 2023 Poll, first published May 2026",
  "source": "World Risk Poll 2024 Focus On: Migration in a warming world (Lloyd's Register Foundation Global Safety Evidence Centre, May 2026), https://doi.org/10.60743/5ppn-nc25",
  "copyright": "Copyright © 2026 Lloyd's Register Foundation. All rights reserved.",
  "running": "Re-set in 2026 from the report of May 2026",

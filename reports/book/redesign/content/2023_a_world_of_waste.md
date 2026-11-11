@@ -8,7 +8,7 @@
  "pdf": "core_a_world_of_waste.pdf",
  "title": "A World of Waste",
  "subtitle": "Risks and opportunities in household waste management",
- "series": "Core report of the 2023 poll, first published September 2024",
+ "series": "Core report of the 2023 Poll, first published September 2024",
  "source": "World Risk Poll 2024 Report: A World of Waste: Risks and opportunities in household waste management (Lloyd's Register Foundation, September 2024)",
  "copyright": "Copyright © 2024 Lloyd's Register Foundation. All rights reserved.",
  "running": "Re-set in 2026 from the report of September 2024",

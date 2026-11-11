@@ -361,7 +361,7 @@ def assemble(key):
     title = f"Focus On: {p['title']}"
     meta = dict(
         key=key, wave=2021, folder=p["folder"], pdf=p["pdf"], title="Focus On", subtitle=p["title"], running_title=title,
-        series=f"Focus On report of the 2021 poll, first published {p['published']}",
+        series=f"Focus On report of the 2021 Poll, first published {p['published']}",
         source=f"World Risk Poll 2021 {title} (Lloyd's Register Foundation, {p['published']})",
         copyright="Copyright © 2023 Lloyd's Register Foundation. All rights reserved.", running=f"Re-set in 2026 from the report of {p['published']}",
         cover_image=p["cover_image"], contents_first=True, plain_opener=True, contents_h2=True, references_title="References and endnotes",
@@ -473,7 +473,7 @@ plan(
         "The two notes marked with an asterisk are set under the paragraphs they belong to.",
         "Charts 1, 3 and 4 run across the whole page in the original, so each has a page of its own here, after the text that discusses it.",
     ],
-    pending="The charts of this report plot values for every country that the original does not print (the poll's own figures, with emissions, energy and export "
+    pending="The charts of this report plot values for every country that the original does not print (the Poll's own figures, with emissions, energy and export "
             "figures from Our World in Data and the World Bank). They can be redrawn in the 2026 style once those country values are added to the public files.",
     replace_notes={"www.canada. ca/": "www.canada.ca/"},
     charts={

@@ -6,7 +6,7 @@
  "pdf": "core_world_risk_poll_2019.pdf",
  "title": "Risk at work",
  "subtitle": "Injuries, hazards and safety cultures in the world's workplaces",
- "series": "Report 2 of 4 from the 2019 poll",
+ "series": "Report 2 of 4 from the 2019 Poll",
  "source": "Chapter 5 of The Lloyd's Register Foundation World Risk Poll: Full report and analysis of the 2019 poll (2020)",
  "copyright": "Copyright © 2020 Lloyd's Register Foundation. All rights reserved.",
  "cover_image": [
@@ -32,7 +32,7 @@
 
 ::new
 
-The first World Risk Poll went into the field in 2019. Gallup interviewed about 150,000 people in 142 countries and territories, and the findings were published in 2020 as a single volume of ten chapters. This edition re-sets that volume as four shorter reports, one for each of its main themes, so that the 2019 poll can be read alongside the core reports of the polls that followed. *Risk at work* is the second of the four.
+The first World Risk Poll went into the field in 2019. Gallup interviewed about 150,000 people in 142 countries and territories, and the findings were published in 2020 as a single volume of ten chapters. This book re-sets that volume as four shorter reports, one for each of its main themes, so that the 2019 Poll can be read alongside the core reports of the editions that followed. *Risk at work* is the second of the four.
 
 The body of this report is Chapter 5 of the 2019 volume, reproduced word for word. Its charts have been redrawn from the published values in the current World Risk Poll chart style, and its footnotes are gathered as numbered references at the back. Three things are new: this page, the grouping of the chapter's sections under three chapter headings, and the conclusion. Charts and tables are numbered afresh, so Chart 5.3 of the 2019 volume is Chart 3 here.
 
@@ -40,7 +40,7 @@ One point of method matters throughout. The questions on work were put only to p
 
 ::column
 
-## The 2019 poll in four reports
+## The 2019 Poll in four reports
 
 1. **Feeling safe and the sources of risk.** Chapters 1 to 4 and 10 of the 2019 volume: How safe do we feel?; The sources of greatest risk in people’s lives; The risk perception gap; Influencing understanding of risk; Forecasting risk.
 
@@ -1417,7 +1417,7 @@ The hazards behind those injuries differ from place to place. Tripping or fallin
 
 The foundations of a safety culture are already in place in most countries. More than eight in 10 workers who work for an employer felt free to report safety problems without fear of punishment, 81% said the safety rules at their workplace were a good thing, and two in three (68%) held their employer most responsible for their safety. However, the workers least likely to share those views are often the ones most exposed: those in lower-income countries, in rural areas, with fewer years of education, or struggling on their household income. Among workers who found it difficult to get by, 72% felt able to report a safety problem, compared with 87% of those living comfortably, a gap of 15 percentage points.
 
-It is important to note that these figures rest on what workers reported themselves, and that the question on serious injury covers a whole working life rather than the job a person held when interviewed. They are not a substitute for official injury statistics. In much of the world, however, such statistics do not exist, and the 2019 poll offers a comparable baseline, collected before the COVID-19 pandemic changed what safety at work meant for many people. Later World Risk Poll reports return to the same ground, on harm at work, on safety training, and on violence and harassment, and show how far that baseline has moved.
+It is important to note that these figures rest on what workers reported themselves, and that the question on serious injury covers a whole working life rather than the job a person held when interviewed. They are not a substitute for official injury statistics. In much of the world, however, such statistics do not exist, and the 2019 Poll offers a comparable baseline, collected before the COVID-19 pandemic changed what safety at work meant for many people. Later World Risk Poll reports return to the same ground, on harm at work, on safety training, and on violence and harassment, and show how far that baseline has moved.
 
 ::endnew
 

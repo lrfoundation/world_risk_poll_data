@@ -6,7 +6,7 @@
  "pdf": "core_a_digital_world.pdf",
  "title": "A Digital World",
  "subtitle": "Perceptions of risk from AI and misuse of personal data",
- "series": "Core report of the 2021 poll, first published November 2022",
+ "series": "Core report of the 2021 Poll, first published November 2022",
  "source": "World Risk Poll 2021: A Digital World. Perceptions of risk from AI and misuse of personal data (Lloyd's Register Foundation, November 2022)",
  "copyright": "Copyright © 2022 Lloyd's Register Foundation. All rights reserved.",
  "running": "Re-set in 2026 from the report of November 2022",

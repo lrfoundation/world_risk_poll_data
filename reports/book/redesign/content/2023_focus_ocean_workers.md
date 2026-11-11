@@ -8,7 +8,7 @@
  "pdf": "focus_on_ocean_workers.pdf",
  "title": "Focus On",
  "subtitle": "Risk perceptions and experiences of ocean workers",
- "series": "Focus On report of the 2023 poll, first published June 2025",
+ "series": "Focus On report of the 2023 Poll, first published June 2025",
  "source": "World Risk Poll 2024 Focus On: Risk perceptions and experiences of ocean workers (Lloyd's Register Foundation, June 2025), doi:10.60743/xjn7-9x64",
  "copyright": "Copyright © 2025 Lloyd's Register Foundation. All rights reserved.",
  "running": "Re-set in 2026 from the report of June 2025",
@@ -79,7 +79,7 @@ This discrepancy highlights the challenge of understanding climate change as som
  ],
  "kind": "original",
  "blank": [],
- "why": "it plots records of cyclones and sea temperature that are not part of the poll",
+ "why": "it plots records of cyclones and sea temperature that are not part of the Poll",
  "plate": true
 }
 ```

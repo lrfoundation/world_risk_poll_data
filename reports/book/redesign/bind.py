@@ -5,8 +5,8 @@
     python reports/book/redesign/bind.py --indesign # also writes the book as a set of InDesign documents
 
 The book is a title page, a page about the book, the contents, an opening chapter
-that reads across the polls (content/across_the_waves.md, written for this
-edition), and then the four polls in order. Each poll opens with a page of its
+that reads across the editions of the Poll (content/across_the_editions.md,
+written for this book), and then the four polls in order. Each poll opens with a page of its
 own and each report follows whole, cover first, so a report is a chapter. The reports of the 2019, 2021 and
 2023 polls are the re-set ones (build each with build.py first); the five
 reports of the 2025 poll are the published PDFs, placed as they are.
@@ -51,7 +51,7 @@ TITLE = "World Risk Poll: the reports, 2019 to 2025"
 NAME = "World_Risk_Poll_reports_2019_to_2025"
 NAVY = (0x0E / 255, 0x22 / 255, 0x40 / 255)
 
-OPENING = "across_the_waves"         # the chapter that reads across the polls, bound before the first of them
+OPENING = "across_the_editions"      # the chapter that reads across the editions of the Poll, bound before the first of them
 
 # The reports of each poll, in the order they were published. The 2025 poll's are keys of content.REPORTS.
 BOOK = {
@@ -63,16 +63,16 @@ BOOK = {
     2025: ["alone_together", "the_quiet_hazards", "a_resilient_life", "from_alert_to_agency", "after_the_storm"],
 }
 ABOUT = [
-    "This volume brings together the reports of the Lloyd’s Register Foundation World Risk Poll, from the first poll in 2019 "
-    "to the poll of 2025: {reports} reports from four polls, each one a chapter. An opening chapter, written for this "
-    "edition from the figures the reports publish, reads across the four polls.",
-    "The reports were published over six years in four different designs. Here the reports of the 2019, 2021 and 2023 polls "
+    "This volume brings together the reports of the Lloyd’s Register Foundation World Risk Poll, from the first edition in 2019 "
+    "to the edition of 2025: {reports} reports from four editions of the Poll, each report a chapter. An opening chapter, written "
+    "for this book from the figures the reports publish, reads across the four editions.",
+    "The reports were published over six years in four different designs. Here the reports of the 2019, 2021 and 2023 editions "
     "are re-set in the format of the World Risk Poll 2026 reports, so that the volume reads as one book. Their text is the "
     "published text, word for word, and their charts are redrawn from the published values in the 2026 chart style. Where a "
     "chart could not be redrawn from published values it is placed as a picture of the original. The notes at the back of each "
     "report record every change, and every query about the original.",
-    "The 2019 poll was published as a single volume. It appears here as four reports, each with an introduction and a "
-    "conclusion written for this edition and marked as such. The five reports of the 2025 poll are reproduced as published.",
+    "The 2019 Poll was published as a single volume. It appears here as four reports, each with an introduction and a "
+    "conclusion written for this book and marked as such. The five reports of the 2025 Poll are reproduced as published.",
     "Each report keeps its own contents, page numbers and references. The page numbers in the contents of this book are the "
     "book’s own, printed in the middle of the foot of each page.",
 ]
@@ -141,7 +141,7 @@ def designed(polls, opening):
     cover = (f'<section class="page cover"><div class="photo"></div><div class="years">{years}</div><div class="panel"></div>'
              '<svg class="edge" viewBox="0 0 1920 1080"><line x1="606.7" y1="0" x2="932.9" y2="1080" stroke="#E3076E" stroke-width="3"/></svg>'
              f'<div class="logo">{logo}</div><div class="wrp">World Risk Poll</div><div class="rep">Reports 2019 to 2025</div>'
-             f'<div class="name"><b>The reports of four polls</b><br>{count} reports in one volume</div>'
+             f'<div class="name"><b>The reports of four editions</b><br>{count} reports in one volume</div>'
              '<div class="series">Lloyd’s Register Foundation</div><div class="gallup">Powered by <b>GALLUP</b></div></section>')
     about = "".join(f"<p>{escape(p.format(reports=count))}</p>" for p in ABOUT)
     about = f'<section class="page body">{chrome()}<div class="window"><div class="flow"><h1>About this book</h1>{about}</div></div></section>'
@@ -149,7 +149,7 @@ def designed(polls, opening):
             f'<span class="n">{opening["page"]}</span></div>')
     for n, poll in enumerate(polls, 1):
         brand = WAVES[poll["year"]]["brand"]
-        poll_of = "" if brand.endswith(str(poll["year"])) else f', the {poll["year"]} poll'
+        poll_of = "" if brand.endswith(str(poll["year"])) else f', the {poll["year"]} Poll'
         rows += (f'<div class="row chapter"><span>Part {n}: {escape(brand)}{poll_of}</span>'
                  f'<span class="n">{poll["page"]}</span></div>')
         for r in poll["reports"]:
@@ -166,7 +166,7 @@ def designed(polls, opening):
             f'<div class="left"><div class="chap">Part {n}</div><h1>{escape(wave["brand"])}</h1>'
             f'<div class="text"><p>{escape(NOTES[poll["year"]])}, from page {poll["reports"][0]["page"]} of this book.</p>{listing}</div></div>'
             f'<div class="big single"><span>{poll["year"]}</span></div>'
-            f'<div class="cap">the year of the poll: <strong>{wave["respondents"]}</strong> people interviewed in '
+            f'<div class="cap">the year of the Poll: <strong>{wave["respondents"]}</strong> people interviewed in '
             f'<strong>{wave["countries"]}</strong> countries</div></section>')
     css = (HERE / "report.css").read_text(encoding="utf-8")
     extra = (".toc .row.bookrow { font-size: 17px; line-height: 27px; font-style: normal; } .toc .row.bookrow b { font-weight: 700; }"
@@ -201,7 +201,7 @@ def folio(page, number, font):
 READ_ME = """World Risk Poll: the reports, 2019 to 2025, as InDesign documents (IDML, InDesign 2020 or later).
 
 The documents are numbered in the order they are bound: the front pages, the opening chapter that reads across
-the polls, then for each poll an opening page and its reports. To work on them as one book, make an InDesign
+the editions of the Poll, then for each edition an opening page and its reports. To work on them as one book, make an InDesign
 book (File > New > Book) and add them in that order.
 
 Page numbers. Each document's pages are numbered from their place in the book: the first page of each starts
@@ -210,10 +210,10 @@ The book's page number at the foot of each page is live (BOOK PAGE and a current
 on a layer called Book page numbers. Hide that layer to use a report on its own. Covers carry no number.
 The contents page lists the same numbers as text.
 
-Text. In the re-set reports of the 2019, 2021 and 2023 polls the text is live and carries paragraph styles
+Text. In the re-set reports of the 2019, 2021 and 2023 editions the text is live and carries paragraph styles
 named after the type they set; text that runs from one column or page to the next is threaded. Each page's
 grounds, rules and blocks are one placed PDF at the back of the page, and each chart is a placed PDF of its own.
-The five reports of the 2025 poll are placed whole from their published PDFs, one file for each page.
+The five reports of the 2025 Poll are placed whole from their published PDFs, one file for each page.
 
 Links. Every placed file is in Links, in a folder named after its document. If InDesign reports missing links,
 choose Links > Relink to Folder and pick that folder. The text is set in DM Sans; the files are in Document fonts.

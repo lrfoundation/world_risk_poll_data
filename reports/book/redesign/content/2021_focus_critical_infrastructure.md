@@ -7,7 +7,7 @@
  "title": "Focus On",
  "subtitle": "Critical infrastructure resilience and perceptions of disaster preparedness",
  "running_title": "Focus On: Critical infrastructure resilience and perceptions of disaster preparedness",
- "series": "Focus On report of the 2021 poll, first published October 2023",
+ "series": "Focus On report of the 2021 Poll, first published October 2023",
  "source": "World Risk Poll 2021 Focus On: Critical infrastructure resilience and perceptions of disaster preparedness (Lloyd's Register Foundation, October 2023)",
  "copyright": "Copyright © 2023 Lloyd's Register Foundation. All rights reserved.",
  "running": "Re-set in 2026 from the report of October 2023",

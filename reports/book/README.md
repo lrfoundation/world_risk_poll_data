@@ -1,6 +1,6 @@
 # World Risk Poll coffee table book
 
-A designed, landscape book of the World Risk Poll reports: 22 reports from the four polls
+A designed, landscape book of the World Risk Poll reports: 22 reports from the four editions of the Poll
 (2019, 2021, 2023 and 2025), each with its headline finding, a page of numbers, a chart or two
 and, for the core reports, a world map. It is built from the files in this repository, so every
 number in it can be traced.

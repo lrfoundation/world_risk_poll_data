@@ -7,7 +7,7 @@
  "title": "Focus On",
  "subtitle": "The impact of income and migration on violence and harassment at work",
  "running_title": "Focus On: The impact of income and migration on violence and harassment at work",
- "series": "Focus On report of the 2021 poll, first published April 2023",
+ "series": "Focus On report of the 2021 Poll, first published April 2023",
  "source": "World Risk Poll 2021 Focus On: The impact of income and migration on violence and harassment at work (Lloyd's Register Foundation, April 2023)",
  "copyright": "Copyright © 2023 Lloyd's Register Foundation. All rights reserved.",
  "running": "Re-set in 2026 from the report of April 2023",

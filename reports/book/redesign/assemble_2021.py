@@ -308,7 +308,7 @@ def assemble(key):
     edits = list(p.get("edits", []))
     meta = dict(
         key=key, wave=2021, folder=p["folder"], pdf=p["pdf"], title=p["title"], subtitle=p["subtitle"],
-        series=f"Core report of the 2021 poll, first published {p['published']}",
+        series=f"Core report of the 2021 Poll, first published {p['published']}",
         source=p["source"], copyright=p["copyright"], running=f"Re-set in 2026 from the report of {p['published']}",
         cover_image=p["cover_image"], numbering="chapter", contents_first=True, margins=[55, 800], edits=edits)
     for extra in ("chart_note", "queries", "pending", "appendix_note"):

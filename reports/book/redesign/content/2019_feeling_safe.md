@@ -6,7 +6,7 @@
  "pdf": "core_world_risk_poll_2019.pdf",
  "title": "Feeling safe and the sources of risk",
  "subtitle": "How people judge risk, and whom they trust",
- "series": "Report 1 of 4 from the 2019 poll",
+ "series": "Report 1 of 4 from the 2019 Poll",
  "source": "Chapters 1, 2, 3, 4 and 10 of The Lloyd's Register Foundation World Risk Poll: Full report and analysis of the 2019 poll (2020)",
  "copyright": "Copyright © 2020 Lloyd's Register Foundation. All rights reserved.",
  "cover_image": [
@@ -58,7 +58,7 @@
 
 ::new
 
-The first World Risk Poll went into the field in 2019. Gallup interviewed about 150,000 people in 142 countries and territories, and the findings were published in 2020 as a single volume of ten chapters. This edition re-sets that volume as four shorter reports, one for each of its main themes, so that the 2019 poll can be read alongside the core reports of the polls that followed. *Feeling safe and the sources of risk* is the first of the four.
+The first World Risk Poll went into the field in 2019. Gallup interviewed about 150,000 people in 142 countries and territories, and the findings were published in 2020 as a single volume of ten chapters. This book re-sets that volume as four shorter reports, one for each of its main themes, so that the 2019 Poll can be read alongside the core reports of the editions that followed. *Feeling safe and the sources of risk* is the first of the four.
 
 The body of this report is Chapters 1 to 4 and Chapter 10 of the 2019 volume, reproduced word for word and set here as Chapters 1 to 5. Their charts have been redrawn from the published values in the current World Risk Poll chart style, and their footnotes are gathered as numbered references at the back. Three things are new: this page, the heading ‘Introduction’ at the start of each chapter, and the conclusion. Charts are numbered by chapter. Chapters 1 to 4 keep their numbers, so only the charts of the last chapter change: Chart 10.2 of the 2019 volume is Chart 5.2 here.
 
@@ -68,7 +68,7 @@ The fifth is the forecasting chapter that closed the 2019 volume. It is placed h
 
 ::column
 
-## The 2019 poll in four reports
+## The 2019 Poll in four reports
 
 1. **Feeling safe and the sources of risk.** Chapters 1 to 4 and 10 of the 2019 volume: How safe do we feel?; The sources of greatest risk in people’s lives; The risk perception gap; Influencing understanding of risk; Forecasting risk. This is the report in your hands.
 
@@ -1570,7 +1570,7 @@ When the World Risk Poll was conducted in 2019, road- and transportation-related
   662
  ],
  "width": 700,
- "why": "the figures from other sources that are plotted against the poll's are not in the poll's public data",
+ "why": "the figures from other sources that are plotted against the Poll's are not in the Poll's public data",
  "question": "What is the greatest source of risk to your safety in your daily life? Other than what you just mentioned, what is another major source of risk to your safety in your daily life?"
 }
 ```
@@ -1883,7 +1883,7 @@ Countries in Southern Africa and Latin America/Caribbean have some of the world�
   626
  ],
  "width": 640,
- "why": "the figures from other sources that are plotted against the poll's are not in the poll's public data",
+ "why": "the figures from other sources that are plotted against the Poll's are not in the Poll's public data",
  "question": "What is the greatest source of risk to your safety in your daily life? Other than what you just mentioned, what is another major source of risk to your safety in your daily life?"
 }
 ```
@@ -1951,7 +1951,7 @@ Notably, while people’s likelihood to name health problems as a top threat is 
   740
  ],
  "width": 640,
- "why": "the figures from other sources that are plotted against the poll's are not in the poll's public data",
+ "why": "the figures from other sources that are plotted against the Poll's are not in the Poll's public data",
  "question": "What is the greatest source of risk to your safety in your daily life? Other than what you just mentioned, what is another major source of risk to your safety in your daily life?"
 }
 ```
@@ -1987,7 +1987,7 @@ Many countries and territories where people were most likely to name financial o
   734
  ],
  "width": 700,
- "why": "the figures from other sources that are plotted against the poll's are not in the poll's public data",
+ "why": "the figures from other sources that are plotted against the Poll's are not in the Poll's public data",
  "note": "*Source: World Bank National Accounts data. GDP per capita is gross domestic product divided by midyear population. Data are in current U.S. dollars. Where available (for all countries except Iran and Yemen), the 2019 GDP per capita estimate was used. If the 2019 estimate was not available, the most recently available estimate was used, including 2017 for Iran and 2018 for Yemen.",
  "question": "What is the greatest source of risk to your safety in your daily life? Other than what you just mentioned, what is another major source of risk to your safety in your daily life?"
 }
@@ -3758,7 +3758,7 @@ Chart 4.5 examines the relationship between this social trust measure and trust 
   515
  ],
  "width": 640,
- "why": "the figures from other sources that are plotted against the poll's are not in the poll's public data",
+ "why": "the figures from other sources that are plotted against the Poll's are not in the Poll's public data",
  "question": "Considering the sources of information you would access, which one would you trust MOST to provide information about food safety? Suppose you lost a small bag that contained items of great financial value to you that had your name and address written on it. If it were found by each of the following people, in general, how likely is it that it would be returned to you with all its contents?"
 }
 ```
@@ -4092,7 +4092,7 @@ These scenarios are summarised in Chart 10.1.
   540
  ],
  "width": 640,
- "why": "the forecast values for 2020 and 2021 are not in the poll's public data"
+ "why": "the forecast values for 2020 and 2021 are not in the Poll's public data"
 }
 ```
 
@@ -4129,7 +4129,7 @@ The effects of the COVID-19 crisis would be relatively smaller under an optimist
   338
  ],
  "width": 700,
- "why": "the forecast values for 2020 and 2021 are not in the poll's public data",
+ "why": "the forecast values for 2020 and 2021 are not in the Poll's public data",
  "note": "Please see Chapters 1 and 3, and Chapter 5 of the 2019 volume, for more details on the questions used."
 }
 ```
@@ -4155,7 +4155,7 @@ People in high-income economies are more likely to see a larger increase in the 
   277
  ],
  "width": 700,
- "why": "the forecast values for 2020 and 2021 are not in the poll's public data",
+ "why": "the forecast values for 2020 and 2021 are not in the Poll's public data",
  "question": "Overall, compared to five years ago, do you feel more safe, less safe, or about as safe as you did five years ago?"
 }
 ```
@@ -4185,7 +4185,7 @@ In absolute terms, the region with the highest expected percentage of people who
   715
  ],
  "width": 460,
- "why": "the forecast values for 2020 and 2021 are not in the poll's public data",
+ "why": "the forecast values for 2020 and 2021 are not in the Poll's public data",
  "subtitle": "Percentage who feel ‘less safe’ compared to five years prior – central scenario",
  "question": "Overall, compared to five years ago, do you feel more safe, less safe, or about as safe as you did five years ago?"
 }
@@ -4205,7 +4205,7 @@ Worry and experience did not line up. One in three people (34%) were very worrie
 
 Whom people trust matters for anyone hoping to close that gap. For information about food safety, 31% said they would trust family and friends most and 22% medical professionals, compared with 15% for the food safety authority. Rules, by contrast, appear to carry weight: 93% of people reported wearing a seat belt in countries with a full seat belt law, against 58% in countries with none.
 
-The final chapter tried to say what would happen next. Written as the pandemic took hold, its worst-case scenario had the share of people feeling less safe rising from 24% in 2019 to as much as 40% in 2020. These are forecasts, not findings, and the 2021 poll, which asked the same question again, is where they can be checked.
+The final chapter tried to say what would happen next. Written as the pandemic took hold, its worst-case scenario had the share of people feeling less safe rising from 24% in 2019 to as much as 40% in 2020. These are forecasts, not findings, and the 2021 Poll, which asked the same question again, is where they can be checked.
 
 ::endnew
 

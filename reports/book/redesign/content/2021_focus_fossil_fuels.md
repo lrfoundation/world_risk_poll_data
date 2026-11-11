@@ -7,7 +7,7 @@
  "title": "Focus On",
  "subtitle": "Fossil fuel dependency and perceptions of climate change",
  "running_title": "Focus On: Fossil fuel dependency and perceptions of climate change",
- "series": "Focus On report of the 2021 poll, first published June 2023",
+ "series": "Focus On report of the 2021 Poll, first published June 2023",
  "source": "World Risk Poll 2021 Focus On: Fossil fuel dependency and perceptions of climate change (Lloyd's Register Foundation, June 2023)",
  "copyright": "Copyright © 2023 Lloyd's Register Foundation. All rights reserved.",
  "running": "Re-set in 2026 from the report of June 2023",
@@ -32,7 +32,7 @@
   "The two notes marked with an asterisk are set under the paragraphs they belong to.",
   "Charts 1, 3 and 4 run across the whole page in the original, so each has a page of its own here, after the text that discusses it."
  ],
- "pending": "The charts of this report plot values for every country that the original does not print (the poll's own figures, with emissions, energy and export figures from Our World in Data and the World Bank). They can be redrawn in the 2026 style once those country values are added to the public files."
+ "pending": "The charts of this report plot values for every country that the original does not print (the Poll's own figures, with emissions, energy and export figures from Our World in Data and the World Bank). They can be redrawn in the 2026 style once those country values are added to the public files."
 }
 ---
 

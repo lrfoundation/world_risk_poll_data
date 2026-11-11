@@ -11,7 +11,7 @@ them into pages, numbers them and fills in the contents list.
 Charts are drawn from the report's published_figures.csv by finding ID, as in
 the coffee table book. A chart that cannot be redrawn from the files in this
 repository is placed as a picture of the original and listed in the report's
-"Notes on this edition".
+"Notes on this version".
 """
 
 import base64
@@ -135,7 +135,7 @@ class Report:
     # -- text
 
     def inline(self, text):
-        # Chart and table numbers of the original become this report's numbers, except in text written for this edition.
+        # Chart and table numbers of the original become this report's numbers, except in text written for this version.
         for old, new in (self.meta.get("renumber", {}).items() if self.renumbering else ()):
             text = text.replace(old, new)
         if self.meta.get("folders"):
@@ -402,7 +402,7 @@ class Report:
         if self.small:
             notes.append(f"<p><b>Note:</b> {self.small}</p>")
         if spec["kind"] == "map":
-            notes.append("<p><b>Note:</b> Country shading was computed for this edition from the public " + str(self.meta["wave"]) + " data, in five groups of about equal size. "
+            notes.append("<p><b>Note:</b> Country shading was computed for this version from the public " + str(self.meta["wave"]) + " data, in five groups of about equal size. "
                          "The countries named are the published figures.</p>")
         subtitle = f'<p class="sub">{self.inline(spec["subtitle"])}</p>' if spec.get("subtitle") else ""
         cls = "fig" + (" tall" if spec.get("tall") else "") + (" inline" if spec["kind"] == "table" else "") + (" head" if spec["kind"] == "heading" else "")
@@ -510,7 +510,7 @@ class Report:
 
     def chrome(self):
         m = self.meta
-        line = f'{m["brand"]}  ||  {m.get("running_title", m["title"])}  ||  {m.get("running", "Re-set in 2026 from the full report of the 2019 poll")}'
+        line = f'{m["brand"]}  ||  {m.get("running_title", m["title"])}  ||  {m.get("running", "Re-set in 2026 from the full report of the 2019 Poll")}'
         return (f'<div class="rule top"></div><div class="rule bottom"></div><div class="credit">{escape(m["copyright"])}<br>{escape(line)}</div>'
                 '<div class="pn"></div>')
 
@@ -553,7 +553,7 @@ class Report:
     def build(self):
         pages, toc = [], []
         self.toc = toc
-        tag = '<span class="newtag">New for this edition</span>'
+        tag = '<span class="newtag">New for this book</span>'
         body, chapter, numbering = [], 0, "front"
         for section in self.sections:
             if section["kind"] == "chapter":
@@ -577,7 +577,7 @@ class Report:
                 html += (f'<h1 id="{anchor}">{self.inline(flow["title"])}</h1>{new}' if flow["title"] else "") + self.blocks(flow["blocks"])
                 self.renumbering = True
             body.append(self.flow_page(html, numbering if section["kind"] != "back" else "main"))
-        # Back matter made here: references, then notes on this edition.
+        # Back matter made here: references, then notes on this version.
         if self.notes:
             anchor = self.anchor()
             name = self.meta.get("references_title", "References")
@@ -586,7 +586,7 @@ class Report:
             body.append(self.flow_page(f'<h1 id="{anchor}">{escape(name)}</h1><ol class="refs">{refs}</ol>', "main"))
         if self.meta.get("edition_notes", True):
             anchor = self.anchor()
-            toc.append(("top", "", "Notes on this edition", anchor))
+            toc.append(("top", "", "Notes on this version", anchor))
             body.append(self.flow_page(self.edition_notes(tag, anchor), "main"))
 
         rows = ""
@@ -612,7 +612,7 @@ class Report:
         m = self.meta
         self.renumbering = False
         charts_ = [label for label, _, _ in self.figures if label.startswith("Chart")]
-        out = [f'<h1 id="{anchor}">Notes on this edition</h1>{tag}',
+        out = [f'<h1 id="{anchor}">Notes on this version</h1>{tag}',
                f"<p><b>Source.</b> {escape(m['source'])}. The text is reproduced word for word, apart from the changes listed here.</p>"]
         if m.get("numbering") == "sequential" and m.get("renumber"):
             pairs = "; ".join(f"‘{old.strip()}n’ in the original is ‘{new.strip()} n’ here" for old, new in m["renumber"].items())

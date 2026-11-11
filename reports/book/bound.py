@@ -127,10 +127,10 @@ class Bound(Book):
             f'{w["countries"]} countries and territories</b>{sum(r["wave"] == y for r in REPORTS)} chapters in this book</div></div>'
             for y, w in WAVES.items())
         self.add(f'''<div class="pad about"><div><span class="eyebrow dot">About this book</span>
-<h1>Four polls, {len(REPORTS)} chapters<span class="dot">.</span></h1>
+<h1>Four editions, {len(REPORTS)} chapters<span class="dot">.</span></h1>
 <p>The Lloyd's Register Foundation World Risk Poll asks people around the world about the risks they worry about and the harm they have experienced. It is fielded by Gallup as part of the Gallup World Poll and has run four times, in 2019, 2021, 2023 and 2025, in between 121 and 142 countries and territories each time.</p>
-<p>This volume binds together the reports published from those four polls, in {len(REPORTS)} chapters. Each chapter opens with a page written for this volume and is followed by the report as it was published, page for page. The reports were designed in different shapes over the years. Landscape reports are reproduced one page to a sheet. The portrait reports of 2019 and 2021 are reproduced two pages to a sheet, as the pages face each other in print.</p>
-<p>The 2019 poll was published as one full report. Its ten chapters are grouped here into four, by theme, so that 2019 sits alongside the four or five core reports of each later poll. The report's own page numbers show where each page came from, and its appendices follow the fourth chapter. The Focus On report on risk and gender is not included.</p>
+<p>This volume binds together the reports published from those four editions, in {len(REPORTS)} chapters. Each chapter opens with a page written for this volume and is followed by the report as it was published, page for page. The reports were designed in different shapes over the years. Landscape reports are reproduced one page to a sheet. The portrait reports of 2019 and 2021 are reproduced two pages to a sheet, as the pages face each other in print.</p>
+<p>The 2019 Poll was published as one full report. Its ten chapters are grouped here into four, by theme, so that 2019 sits alongside the four or five core reports of each later edition. The report's own page numbers show where each page came from, and its appendices follow the fourth chapter. The Focus On report on risk and gender is not included.</p>
 </div><div class="wavelist">{rows}</div></div>{foot("{PAGE}", TITLE)}''', "w2021")
 
     def contents_page(self, chapters, extras):

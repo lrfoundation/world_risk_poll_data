@@ -230,7 +230,7 @@ PLANS["2019_technology"] = dict(
         "first is a judgement about the future, made largely at a distance; the second is a report from daily use.",
     ],
     conclusion=[
-        "Of the three technologies the 2019 poll asked about, only one was met with clear suspicion. Nearly half of adults worldwide (48%) said "
+        "Of the three technologies the 2019 Poll asked about, only one was met with clear suspicion. Nearly half of adults worldwide (48%) said "
         "genetically modified foods would mostly harm people in their country over the next 20 years, more than twice the share who said they "
         "would mostly help (21%). Nuclear power and artificial intelligence drew the opposite balance: 40% and 41% respectively expected them "
         "to mostly help, against 29% and 30% who expected harm. In all three cases about three in 10 people offered no view either way, which "
@@ -245,7 +245,7 @@ PLANS["2019_technology"] = dict(
         "Concern about bullying was highest among users aged 15 to 29 (34%, compared with 21% of those aged 65 and over), whilst concern about "
         "fraud rose with age, from 42% to 55% across the same two groups.",
         "It is important to note when these questions were asked: in 2019, before the pandemic moved much of daily life online and before "
-        "generative AI reached the public. The figures are therefore best read as a baseline. The 2021 poll returned to artificial "
+        "generative AI reached the public. The figures are therefore best read as a baseline. The 2021 Poll returned to artificial "
         "intelligence and to the risks of being online, and what changed can only be measured because the 2019 questions came first.",
     ],
     charts={
@@ -264,7 +264,7 @@ PLANS["2019_technology"] = dict(
         "7.8": dict(kind="grouped", tall=True, rows=by_region("C7_8_", ["help", "harm"]), **HELP),
         "7.9": dict(kind="original", page=139, clip=[80, 299, 466, 564], width=640,
                     note="Reproduced from the 2019 report. The Trust in Scientists Index comes from the Wellcome Global Monitor, which is not in the "
-                         "public files of the poll, so this chart could not be redrawn."),
+                         "public files of the Poll, so this chart could not be redrawn."),
         "7.10": dict(kind="vgrouped", panel_height=440, note="Due to rounding, percentages may sum to 100% +/- 1%.", **HELP3,
                      panels=[["Women", groups("C7_10_women_", AGES, ["help", "harm", "none"])], ["Men", groups("C7_10_men_", AGES, ["help", "harm", "none"])]]),
         "8.1": dict(kind="map", fn="internet_use_2019", top=[["Bahrain", "C8_1_BHR"], ["Kuwait", "C8_1_KWT"], ["Ireland", "C8_1_IRL"]],
@@ -295,8 +295,8 @@ SOURCES = {"family": "Family and friends", "labels": "Food labels", "medical": "
            "authority": "Food safety authority", "internet": "Internet/social media", "famous": "A famous person", "religious": "A local religious leader"}
 HAZARDS = {"traffic": "Traffic accident", "attacked": "Physically attacked", "lightning": "Struck by lightning", "drowning": "Drowning",
            "aeroplane": "Aeroplane accident"}
-NOT_PUBLIC = "the figures from other sources that are plotted against the poll's are not in the poll's public data"
-FORECAST = "the forecast values for 2020 and 2021 are not in the poll's public data"
+NOT_PUBLIC = "the figures from other sources that are plotted against the Poll's are not in the Poll's public data"
+FORECAST = "the forecast values for 2020 and 2021 are not in the Poll's public data"
 REST = "Not labelled in the original"
 
 PLANS["2019_feeling_safe"] = dict(
@@ -355,7 +355,7 @@ PLANS["2019_feeling_safe"] = dict(
         "friends most and 22% medical professionals, compared with 15% for the food safety authority. Rules, by contrast, appear to carry weight: 93% "
         "of people reported wearing a seat belt in countries with a full seat belt law, against 58% in countries with none.",
         "The final chapter tried to say what would happen next. Written as the pandemic took hold, its worst-case scenario had the share of people "
-        "feeling less safe rising from 24% in 2019 to as much as 40% in 2020. These are forecasts, not findings, and the 2021 poll, which asked the "
+        "feeling less safe rising from 24% in 2019 to as much as 40% in 2020. These are forecasts, not findings, and the 2021 Poll, which asked the "
         "same question again, is where they can be checked.",
     ],
     charts={
@@ -656,7 +656,7 @@ def assemble(key):
                            for s, p in chapters)
     meta = dict(
         key=key, wave=2019, folder=FOLDER, pdf=PDF, title=title, subtitle=plan["subtitle"],
-        series=f"Report {plan['number']} of 4 from the 2019 poll", source=f"Chapters {listed} of {VOLUME}",
+        series=f"Report {plan['number']} of 4 from the 2019 Poll", source=f"Chapters {listed} of {VOLUME}",
         copyright="Copyright © 2020 Lloyd's Register Foundation. All rights reserved.", cover_image=plan["cover_image"],
         numbering="chapter", renumber=renumber,
         numbering_note=("Chapters " + listed + " of the 2019 volume are Chapters " + and_list(range(1, len(sources) + 1))
@@ -673,11 +673,11 @@ def assemble(key):
     out = ["---\n" + json.dumps(meta, ensure_ascii=False, indent=1) + "\n---"]
     out += ["::front About this report", "::new",
             "The first World Risk Poll went into the field in 2019. Gallup interviewed about 150,000 people in 142 countries and territories, and the "
-            "findings were published in 2020 as a single volume of ten chapters. This edition re-sets that volume as four shorter reports, one for each "
-            "of its main themes, so that the 2019 poll can be read alongside the core reports of the polls that followed. "
+            "findings were published in 2020 as a single volume of ten chapters. This book re-sets that volume as four shorter reports, one for each "
+            "of its main themes, so that the 2019 Poll can be read alongside the core reports of the editions that followed. "
             f"*{title}* is the {ORDINAL[plan['number'] - 1]} of the four."]
     out += plan["about"]
-    out += ["::column", "## The 2019 poll in four reports"]
+    out += ["::column", "## The 2019 Poll in four reports"]
     for index, (k, name, what) in enumerate(FOUR, 1):
         out.append(f"{index}. **{name}.** {what}" + (" This is the report in your hands." if k == key else ""))
     out += [APPENDICES,
