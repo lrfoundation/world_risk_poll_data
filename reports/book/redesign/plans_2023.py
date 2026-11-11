@@ -3,10 +3,15 @@
 assemble_2023.py reads these. A chart that has no specification here is placed as a picture of the original.
 """
 
+import appendix_2023
 from assemble_2023 import plan
 
 COPYRIGHT = "Copyright © 2024 Lloyd's Register Foundation. All rights reserved."
-APPENDICES = ("The appendices of the original (the Resilience Index methodology and the table of index values by country) are not set yet.")
+APPENDICES = (
+    "The appendices of the original are set in full after the last chapter: the Resilience Index methodology, the scoring of each item and the table of "
+    "index values for 142 countries. Appendix Tables 1, 2 and 3 and the scoring table for Cover Basic Needs are pictures of the original: the "
+    "first two set their headings on their side, the third holds lists inside its cells and the fourth sets two tables side by side, none of "
+    "which the tables of this edition can hold. In the table of index values the original marks China with an asterisk and gives no note for it.")
 
 
 REGIONS = {
@@ -141,7 +146,7 @@ plan(
     folder="WRP_2023/core_resilience_in_a_changing_world", pdf="core_resilience_in_a_changing_world.pdf",
     title="Resilience in a Changing World", published="June 2024",
     source="World Risk Poll 2024 Report: Resilience in a Changing World (Lloyd's Register Foundation, June 2024)",
-    copyright=COPYRIGHT, cover_image=[0, 0], pages=[(1, 34), (44, 44)],
+    copyright=COPYRIGHT, cover_image=[0, 0], pages=[(1, 43), (44, 44)], small_text=(38, 39), appendix=appendix_2023.place,
     chapters=[
         dict(big="142", caption="countries and territories were surveyed for the 2023 World Risk Poll, **120** of them also measured in 2021"),
         dict(big="57", caption="is the world's score on the Resilience Index in 2023, largely similar to **55** in 2021"),
@@ -151,7 +156,7 @@ plan(
         dict(big="20", caption="countries saw significant declines of four points or more in resilience; **eight** saw significant increases"),
     ],
     charts=resilience, chart_note=MEDIANS, drop=("Powered by",),
-    pending=APPENDICES,
+    appendix_note=APPENDICES,
 )
 
 

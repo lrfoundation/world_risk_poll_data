@@ -24,7 +24,7 @@
  ],
  "edits": [],
  "chart_note": "Charts 2.3, 2.4 and 2.7 to 2.10 of the original also draw the global medians of 2021 and 2023 as dotted lines, without printing their values; the lines are not redrawn.",
- "pending": "The appendices of the original (the Resilience Index methodology and the table of index values by country) are not set yet."
+ "appendix_note": "The appendices of the original are set in full after the last chapter: the Resilience Index methodology, the scoring of each item and the table of index values for 142 countries. Appendix Tables 1, 2 and 3 and the scoring table for Cover Basic Needs are pictures of the original: the first two set their headings on their side, the third holds lists inside its cells and the fourth sets two tables side by side, none of which the tables of this edition can hold. In the table of index values the original marks China with an asterisk and gives no note for it."
 }
 ---
 
@@ -3219,6 +3219,352 @@ The diverse set of measures contained in the World Risk Poll, when measured over
 While two point-in-time measurements (in 2021 and 2023) help build a picture of change, they do not yet indicate broader, longer-term trends in people’s perceptions of risk, resilience and safety. The 2025 iteration of the World Risk Poll Resilience Index will help fill in these knowledge gaps and provide an even clearer indication of how the world’s resilience is changing in these uncertain times.
 
 > This dataset can help policymakers and development organisations target interventions that will have the greatest impact on closing resilience gaps.
+
+::back Appendices
+
+## Appendix i: Resilience Index methodology
+
+First introduced in the 2022 World Risk Poll report ‘*A Resilient World? Understanding vulnerability in a changing climate*’, the Resilience Index quantifies people’s capacity for resilience and ability to deal with adversity based on their personal circumstances and perceptions[^i]. The overall score ranges between 0 and 100, with higher values equating to higher resilience[^ii]. The Resilience Index is a composite score based on four underlying dimensions: individual, household, community and societal resilience. By measuring resilience at these four levels, the index provides a holistic assessment of resilience.
+
+^ [^i] A Resilient World? Understanding vulnerability in a changing climate. (2022). World Risk Poll. https://wrp.lrfoundation.org.uk/publications/a-resilient-world-understanding-vulnerability-in-a-changing-climate
+
+^ [^ii] In the 2022 report, the index score was originally reported on a 0 to 1 scale as is discussed below.
+
+The Resilience Index is calculated by evaluating how respondents answered over a dozen different survey questions, drawing from questions originally designed for the 2021 World Risk Poll to measure some aspects of resilience as well as some items from the larger Gallup World Poll that were deemed relevant to understanding this topic.
+
+The motivation and methodology behind the original Resilience Index was described in the methodology report for the 2021 Poll[^iii], though this section will also provide a brief recap of this process. Importantly, Gallup and Lloyd’s Register Foundation researchers applied the same conceptual framework – including the selection of which survey questions map to each sub-dimension of the index – as in the previous analysis.
+
+^ [^iii] 2021 Lloyd’s Register Foundation World Risk Poll methodology. (2021). Lloyd’s Register Foundation. https://wrp.lrfoundation.org.uk/sites/default/files/2024-06/lrf_wrp_2021_full_methods.pdf
+
+Similarly, the calculation process used to derive an individual’s final index score did not change, however researchers transformed the scale of the final score to fall between 0 and 100, with higher values denoting greater resilience. By comparison, the 2022 report reported Resilience Index results using a 0-1 scale[^iv].
+
+^ [^iv] A Resilient World? Understanding vulnerability in a changing climate. (2022). World Risk Poll. https://wrp.lrfoundation.org.uk/publications/a-resilient-world-understanding-vulnerability-in-a-changing-climate
+
+This change was made to help readers more easily interpret the results, especially when comparing scores between the two waves.
+
+The subsequent sections recap how the Resilience Index was developed and calculated.
+
+### Construct definition
+
+In its broadest sense, resilience is the capacity to handle and recover from adversity and difficulties. For risk management experts, that generally means how well individuals or groups manage and recover from ‘shocks’ – instances when risks evolve into disruptive events that threaten safety.
+
+In some cases, resilience refers to the ability to return relatively quickly to the pre-shock state; this recalls how physicists use the term to describe a system’s capacity to return to equilibrium after being exposed to a stressor. The European Union’s definition reflects this view of resilience as ‘the ability of an individual, a household, a community, a country or a region to withstand, to adapt, and to quickly recover from stressors and shocks’[^v].
+
+^ [^v] European Commission. (2016). Building resilience: The EU’s approach. https://ec.europa.eu/echo/files/aid/countries/factsheets/thematic/EU_building_ resilience_en.pdf
+
+In the context of risk and safety, however, resilience often refers not just to the ability to recover from specific shocks as they occur, but also to adapt to changes in the risk landscape to make shocks less likely or less harmful when they do occur. The Rockefeller Foundation’s definition, for example, emphasises this adaptive aspect of resilience: ‘The capacity of individuals, communities, and systems to survive, adapt, and grow in the face of stress and shocks, and even transform, when conditions require it’[^vi].
+
+^ [^vi] Rockefeller Foundation. (2017). Introducing Zilient: A global resilience network. https://www.rockefellerfoundation.org/blog/introducing-zilient-global-resilience-network/
+
+Summarising these different conceptions, Béné et al.’s 2014 review of the literature concluded that resilience can consist of absorptive, adaptive or transformative capacities and that the need for each capacity varies with the intensity and costs of the shocks involved[^vii]. Truly resilient systems have all three capacities to deal with a wide range of potential shocks.
+
+^ [^vii] Béné, C., Newsham, A., Davies, M., Ulrichs, M., & Godfrey-Wood, R. (2014). Resilience, poverty and development. Journal of International Development, 26(5), 598-623.
+
+### Construct composition
+
+The Lloyd’s Register Foundation report, Foresight Review on Resilience Engineering, notes that standards and processes for measuring resilience are still emerging, citing the need for ‘assessment and predictive capabilities that do not presently exist, including identification, collection and analysis of relevant data’.
+
+In recent years, researchers and development practitioners have developed a number of frameworks for measuring resilience, several of which were summarised in a 2016 report from the United Kingdom’s Department for International Development (DFID), now the Foreign, Commonwealth and Development Office[^i]. The report lists several common methods for quantifying resilience, including the following:
+
+^ [^i] Lloyd’s Register Foundation. (2015). Foresight review of resilience engineering. https://www.lrfoundation.org.uk/en/publications/resilience-engineering/
+
+1. Household or community characteristics: Includes income, access to safety nets and social capital
+
+2. Functionality: Includes measures of infrastructure resilience – for example, the presence of a system to measure structures’ resilience to earthquakes
+
+3. Access to food
+
+4. Activities: Attempts to put a monetary value on interventions designed to improve resilience
+
+5. Subjective perceptions: Includes individuals’ self-evaluation of their household’s capacities in responding to risk
+
+6. Costs of resilience: Includes the costs of anticipation, impact and recovery
+
+Another review of existing resilience studies conducted by Serfilippi and Ramnath in 2018 classified 76 indicators into three categories[^ii]:
+
+^ [^ii] Serfilippi, E., & Ramnath, G. (2018). Resilience measurement and conceptual frameworks: A review of the literature. Annals of Public and Cooperative Economics, 89(4), 645-664. https://doi.org/10.1111/apce.12202
+
+1. Social: Includes coping strategies, access to safety nets, inclusion, education, living conditions, access to information, access to basic services and infrastructure
+
+2. Environmental: Includes soil and water conservation measures, land use change and fertiliser use
+
+3. Economic: Includes diversification of livelihoods, access to credit and productive assets
+
+In his 2013 review of resilience measures, Béné wrote about the need for indicators that are not only generic enough to measure resilience to different types of shocks, but also ‘multi-scale’ in that they assess resilience at different levels – including the household, community and societal levels – to capture the full range of risk mitigation factors in their environment[^iii].
+
+^ [^iii] Béné, C. (2013). Towards a quantifiable measure of resilience. IDS Working Papers, 434, 1-27.
+
+### Indicator mapping
+
+In the process of designing the Resilience Index, the conceptual frameworks described above were reviewed to identify unique, measurable variables. Each of these variables was then compared to data available from the World Risk Poll (Appendix Table 1) and the Gallup World Poll (GWP) more broadly (Appendix Table 2).
+
+Matching indicators were then mapped to the existing resilience frameworks. As Appendix Table 1 and Appenedix Table 2 show, there was not a perfect match between the variables available in the World Risk Poll/GWP and any specific resilience frameworks; however, all frameworks were at least partially covered.
+
+### Appendix Table 1. Correspondence between resilience conceptual frameworks and World Risk Poll items
+
+```chart
+{
+ "kind": "original",
+ "page": 36,
+ "clip": [
+  431,
+  217,
+  802,
+  551
+ ],
+ "width": 780,
+ "bare": true
+}
+```
+
+### Appendix Table 2. Correspondence between resilience conceptual frameworks and GWP items
+
+```chart
+{
+ "kind": "original",
+ "page": 37,
+ "clip": [
+  40,
+  75,
+  411,
+  489
+ ],
+ "width": 681,
+ "bare": true
+}
+```
+
+The World Risk Poll Resilience Index was structured to combine indicators at the individual, household, community and societal levels.
+
+### Appendix Table 3. Dimensions and indicators in the World Risk Poll Resilience Index
+
+```chart
+{
+ "kind": "original",
+ "page": 37,
+ "clip": [
+  431,
+  109,
+  802,
+  482
+ ],
+ "width": 756,
+ "bare": true
+}
+```
+
+Total scores for each of the four index dimensions (listed in Appendix Table 3) were derived by averaging the scores of the individual items in each dimension. The final overall Resilience Index score is computed as the arithmetic mean of the scores of the four dimensions. The section immediately following discusses how overall index and dimension scores varied by region and demographic grouping. The discussion then takes a more detailed look at the results for each index component.
+
+It is important to note that the Resilience Index was designed to measure each of the four dimensions of resilience using multiple, conceptually inter-related, items. Doing so enhances the robustness of the measure in the event of missing, or otherwise uninformative, responses (e.g., ‘Don’t know/Refused’).
+
+In the 2023 Poll, however, 17 countries in the sample (Afghanistan, Algeria, Bahrain, Cambodia, China, Egypt, Ethiopia, Gabon, Kuwait, Laos, Morocco, Niger, Pakistan, Tajikistan, United Arab Emirates, Vietnam and Yemen) were systematically missing data for one or more items in the ‘societal’ dimension. An indicative resilience score can be computed for those countries, since they still have at least one item within all four dimensions of the index, but overall resilience scores for these countries are not strictly comparable to the other countries in the sample. Therefore, resilience scores for these 17 countries are presented in the report as an indicative measure of resilience, though their scores should be viewed with caution when comparing against other countries.
+
+Additionally, one country (Saudi Arabia) was lacking all items in the societal dimension, which prevented it from receiving a score for the Resilience Index.
+
+### Standardisation and aggregation
+
+As previously noted, the scale of the 2023 Resilience Index was updated to fall on a scale between 0 and 100 rather than 0 and 1.
+
+However, the standardisation and aggregation process – or how the survey responses were converted into numerical values which can averaged into a quantitative index – did not change, other than multiplying the final sub-index (averaged) scores by 100.
+
+Survey items were standardised using a 0 to 1 scale. How this was accomplished depended on the type of survey question being used.
+
+**Binary items:** Items where valid response options (i.e., excluding ‘Don’t know/Refused’) only included two options were coded as binary values:
+
+- Yes = 1
+
+- No = 0
+
+- DK or Refused = Missing
+
+**Ordinal items:** Items where valid response options (i.e., excluding ‘Don’t know/Refused’) included more than two ordered options were coded as rank order values:
+
+- A lot = 1
+
+- Somewhat = 0.5
+
+- Not at all = 0
+
+- DK or Refused = Missing
+
+**Continuous items:** Items that could be expressed as continuous values were scaled to the 0 to 1 range. For example, household financial preparedness was expressed in terms of the number of weeks that the household could cover their basic needs using just their savings.
+
+Besides these general approaches, some variables required multiple levels of standardisation and aggregation, including household-level access to communications, community-level social capital, and local infrastructure and society-level discrimination
+
+**Access to communications:** Average of two binary variables
+
+- Household access to the internet (0, 1)
+
+- Household cell phone access (0, 1)
+
+**Social capital:** Average of three ordinal and binary variables
+
+- Neighbours care about you (0, 0.5, 1)
+
+- Feel safe walking alone at night (0, 1)
+
+- Helped a stranger (0, 1)
+
+**Local infrastructure:** Average of three binary variables
+
+- Satisfaction with local roads and highways (0, 1)
+
+- Satisfaction with local education system (0, 1)
+
+- Satisfaction with local healthcare system (0, 1)
+
+**Discrimination:** Five binary variables of experienced discrimination were aggregated non-linearly using the following approach:
+
+- If someone experiences 0 discriminatory practices, they are given a score of 1.0
+
+- If someone experiences 1 discriminatory practice, they are given a score of 0.5
+
+- If someone experiences 2 discriminatory practices, they are given a score of 0.375
+
+- If someone experiences 3 discriminatory practices, they are given a score of 0.250
+
+- If someone experiences 4 discriminatory practices, they are given a score of 0.125
+
+- If someone experiences 5 discriminatory practices, they are given a score of 0
+
+The rationale, based on literature supporting the cumulative impact of intersectional discrimination, is that the effects of intersectional discrimination are cumulative but not linear. One form of discrimination causes a person to feel disconnected from society, and any additional forms of discrimination add to their feelings of ‘non-cohesion’ but not at the same rate. A person would feel aggrieved from one form of discrimination and would not feel ‘doubly so’ from a second, ‘triple’ from a third and so on, with a finite ‘worst’ score of 0 if someone experienced five forms of discrimination.
+
+The details of item scoring for each item and dimension are provided in the next section. The resulting variables were finally aggregated into four dimensions of resilience by averaging the variables in each dimension with equal weighting. In the analysis of the 2023 Poll data, this process was updated to multiply each dimension average by 100 (meaning the final index average will fall between 0 and 100).
+
+To minimise missing data, dimension scores were computed even if one or more of the underlying variables was missing. In those cases, the dimension score was calculated as the average of any of the underlying variables containing valid data. Only individuals with missing data in all variables within a given dimension were given a missing score.
+
+**Individual dimension**
+
+- Individual agency (0-1)
+
+- Education (0-1)
+
+**Household dimension**
+
+- Preparedness (0-1)
+
+- Financial (0-1)
+
+- Access to communications (0-1)
+
+**Community dimension**
+
+- Social capital (0-1)
+
+- Local infrastructure (0-1)
+
+**Societal dimension**
+
+- Discrimination (0-1)
+
+- Safety net (0-1)
+
+- Trust in institutions (0-1)
+
+The final Resilience Index is computed as the arithmetic mean of the four dimensions. The index was only calculated for individuals with valid values in all four dimensions.
+
+### Item scoring for the Resilience Index
+
+### Individual Dimension
+
+```grid
+{"title": "WP22252: Individual Agency", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["3", "It depends", "0.5"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP3117: Educational Attainment", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Primary (0-8 years)", "0"], ["2", "Secondary (9-15 years)", "0.5"], ["3", "Tertiary (16 years or more)", "1"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+### Household Dimension
+
+```chart
+{
+ "kind": "original",
+ "page": 40,
+ "clip": [
+  40,
+  59,
+  411,
+  222
+ ],
+ "width": 780,
+ "bare": true
+}
+```
+
+```grid
+{"title": "WP22253: HH Planning", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP16056: Internet Access", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP17626: Cellphone Access", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["98", "Don't Know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+### Community Dimension
+
+```grid
+{"title": "WP22232: Neighbours Care", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "A lot", "1"], ["2", "Somewhat", "0.5"], ["3", "Not at all", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP113: Safe Walking Alone", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP110: Helped a Stranger", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP92: Roads and Highways", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Satisfied", "1"], ["2", "Dissatisfied", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP93: Educational System", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Satisfied", "1"], ["2", "Dissatisfied", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP97: Quality Healthcare", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Satisfied", "1"], ["2", "Dissatisfied", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+### Societal Dimension
+
+```grid
+{"title": "WP22259: Experienced Racial Discrimination", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP22260: Experienced Religious Discrimination", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP22261: Experienced Ethnic Discrimination", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP22262: Experienced Gender Discrimination", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP22263: Experienced Disability Discrimination", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "Yes", "1"], ["2", "No", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "WP22231: Government Cares (Safety Net)", "columns": ["Value", "Value Label", "Score"], "rows": [["1", "A lot", "1"], ["2", "Somewhat", "0.5"], ["3", "Not at all", "0"], ["98", "Don't know", "Missing"], ["99", "Refused", "Missing"]]}
+```
+
+```grid
+{"title": "National Institutions Index", "columns": ["Value", "Score"], "rows": [["0", "0"], ["25", "0.25"], ["33.3", "0.333"], ["50", "0.5"], ["66.6", "0.666"], ["75", "0.75"], ["100", "1"], ["Missing", "Missing"]]}
+```
+
+## Appendix ii: Resilience Index and sub-index values
+
+```grid
+{"columns": ["Country", "Data Collection Date", "Margin of Error", "Resilience Index", "Individual sub-index", "Household sub-index", "Community sub-index", "Societal sub-index"], "rows": [["Afghanistan", "Jul 1 – Jul 19, 2023", "3.5", "29", "16", "30", "27", "44"], ["Albania", "Jul 28 – Nov 12, 2023", "4.4", "48", "31", "49", "58", "53"], ["Algeria", "Oct 16 – Nov 14, 2023", "4.5", "63", "43", "62", "56", "91"], ["Argentina", "Aug 5 – Oct 12, 2023", "3.8", "46", "41", "50", "49", "44"], ["Armenia", "Jul 7 – Aug 21, 2023", "4.0", "57", "57", "55", "60", "56"], ["Australia", "Jul 2 – Sep 12, 2023", "3.9", "64", "63", "70", "64", "58"], ["Austria", "Jul 10 – Aug 5, 2023", "4.1", "68", "59", "76", "73", "66"], ["Azerbaijan", "Aug 7 – Oct 12, 2023", "3.5", "55", "39", "49", "59", "73"], ["Bahrain", "Sep 9 – Oct 4, 2023", "3.5", "68", "54", "58", "77", "84"], ["Bangladesh", "Aug 5 – Sep 18, 2023", "3.4", "57", "44", "36", "76", "71"], ["Belgium", "Jul 10 – Aug 31, 2023", "3.7", "60", "52", "61", "67", "60"], ["Benin", "Aug 19 – Sep 4, 2023", "4.1", "44", "28", "37", "46", "64"], ["Bolivia", "Aug 5 – Oct 12, 2023", "3.7", "48", "47", "57", "48", "39"], ["Bosnia and Herzegovina", "May 11 – Jul 4, 2023", "3.7", "53", "46", "62", "57", "46"], ["Botswana", "Sep 4 – Sep 29, 2023", "3.9", "44", "28", "42", "46", "59"], ["Brazil", "Sep 11 – Nov 3, 2023", "3.6", "48", "39", "52", "52", "51"], ["Bulgaria", "Jul 20 – Oct 8, 2023", "3.6", "46", "41", "52", "47", "45"], ["Burkina Faso", "Oct 2 – Nov 8, 2023", "4.0", "47", "24", "38", "54", "72"], ["Cambodia", "Sep 20 – Oct 23, 2023", "4.1", "60", "37", "69", "65", "70"], ["Cameroon", "Jun 3 – Jul 1, 2023", "3.7", "46", "39", "41", "50", "53"], ["Canada", "Aug 2 – Sep 18, 2023", "3.7", "63", "63", "71", "61", "58"], ["Chad", "Oct 4 – Oct 30, 2023", "4.0", "40", "26", "35", "50", "51"], ["Chile", "Aug 12 – Dec 19, 2023", "3.9", "52", "51", "58", "48", "50"], ["China*", "Dec 21, 2023 – Feb 13, 2024", "2.5", "66", "48", "71", "72", "74"], ["Colombia", "Sep 9 – Nov 15, 2023", "3.7", "45", "42", "47", "47", "44"], ["Comoros", "Sep 20 – Nov 23, 2023", "4.2", "41", "31", "48", "47", "38"], ["Congo", "Jun 29 – Aug 18, 2023", "4.2", "43", "41", "36", "46", "50"], ["Congo (the Democratic Republic of the)", "Aug 3 – Sep 26, 2023", "4.5", "41", "42", "33", "42", "46"], ["Costa Rica", "Sep 27 – Dec 28, 2023", "3.8", "54", "50", "58", "54", "53"], ["Cote D'Ivoire", "Jul 8 – Aug 3, 2023", "4.5", "43", "25", "39", "50", "60"], ["Croatia", "Sep 14 – Nov 14, 2023", "4.3", "53", "39", "60", "54", "59"], ["Cyprus", "Jun 30 – Oct 31, 2023", "4.2", "54", "50", "57", "56", "52"], ["Czech Republic", "Aug 30 – Oct 31, 2023", "3.7", "63", "58", "66", "65", "61"], ["Denmark", "Aug 7 - Sep 13, 2023", "4.3", "66", "61", "64", "74", "66"], ["Dominican Republic", "Jul 19 – Aug 9, 2023", "3.9", "55", "49", "58", "60", "52"], ["Ecuador", "Jul 26 – Sep 1, 2023", "4.0", "42", "38", "49", "40", "40"], ["Egypt", "Sep 11 – Sep 26, 2023", "3.6", "45", "25", "32", "56", "66"], ["El Salvador", "Oct 4 – Dec 22, 2023", "4.2", "58", "39", "56", "68", "71"], ["Estonia", "Aug 16 – Oct 1, 2023", "3.7", "65", "64", "69", "66", "61"], ["Eswatini", "Oct 13 – Dec 24, 2023", "4.5", "50", "35", "47", "56", "61"], ["Ethiopia", "Jun 26 – Aug 10, 2023", "3.8", "43", "18", "29", "55", "72"], ["Finland", "Aug 10 – Sep 18, 2023", "3.8", "66", "58", "68", "68", "71"], ["France", "Jul 3 – Oct 9, 2023", "4.3", "55", "48", "58", "59", "57"], ["Gabon", "Oct 20 – Nov 18, 2023", "4.0", "48", "36", "40", "38", "76"], ["Gambia", "Oct 16 – Nov 27, 2023", "3.5", "42", "26", "38", "49", "57"], ["Georgia", "Jul 14 – Oct 28, 2023", "3.8", "58", "50", "52", "66", "63"], ["Germany", "Jul 10 – Aug 12, 2023", "4.9", "67", "63", "73", "69", "65"], ["Ghana", "Jun 29 – Jul 21, 2023", "4.0", "46", "28", "42", "57", "56"], ["Greece", "Oct 16 – Nov 16, 2023", "4.7", "53", "55", "64", "41", "51"], ["Guatemala", "Aug 16 – Dec 22, 2023", "4.2", "47", "36", "47", "57", "46"], ["Guinea", "Sep 21 – Oct 12, 2023", "4.1", "45", "30", "42", "52", "54"], ["Honduras", "Sep 4 – Dec 4, 2023", "4.1", "45", "36", "48", "52", "45"], ["Hong Kong, S.A.R. of China", "Aug 26 –Oct 30, 2023", "3.6", "57", "48", "62", "58", "61"], ["Hungary", "Aug 28 – Oct 10, 2023", "4.4", "52", "44", "64", "50", "51"], ["Iceland", "Sep 1 – Oct 2, 2023", "4.8", "63", "54", "69", "66", "64"], ["India", "Sep 16 – Nov 8, 2023", "2.1", "54", "36", "40", "67", "73"], ["Indonesia", "Aug 23 – Sep 30, 2023", "3.5", "65", "52", "57", "77", "76"], ["Iran", "Oct 23 – Oct 27, 2023", "3.5", "58", "51", "55", "57", "71"], ["Iraq", "Oct 3 – Nov 19, 2023", "3.3", "49", "36", "50", "59", "51"], ["Ireland", "Jul 10 – Aug 7, 2023", "4.5", "64", "60", "62", "69", "67"], ["Israel", "Oct 17 – Dec 3, 2023", "3.3", "57", "48", "55", "67", "58"], ["Italy", "Sep 4 – Oct 5, 2023", "4.9", "51", "38", "62", "50", "55"], ["Japan", "Sep 22 – Nov 15, 2023", "3.5", "59", "60", "60", "59", "59"], ["Jordan", "Aug 19 – Sep 10, 2023", "3.5", "56", "49", "48", "60", "69"], ["Kazakhstan", "Aug 6 – Sep 29, 2023", "3.7", "55", "46", "51", "56", "67"], ["Kenya", "Oct 16 – Nov 10, 2023", "3.6", "51", "38", "53", "56", "56"], ["Kosovo", "Jul 27 – Oct 13, 2023", "4.0", "52", "25", "51", "68", "64"], ["Kuwait", "Sep 8 – Oct 20, 2023", "3.8", "74", "66", "67", "80", "85"], ["Kyrgyzstan", "Aug 6 – Sep 19, 2023", "3.6", "55", "40", "56", "61", "63"], ["Lao People's Democratic Republic", "Oct 2 – Oct 28, 2023", "3.9", "55", "32", "57", "63", "65"], ["Latvia", "Aug 21 – Sep 24, 2023", "3.6", "57", "57", "64", "52", "56"], ["Lebanon", "Aug 3 – Sep 9, 2023", "3.3", "44", "37", "50", "44", "45"], ["Liberia", "Aug 3 – Sep 11, 2023", "3.6", "46", "37", "55", "43", "51"], ["Libya", "Oct 27 – Dec 13, 2023", "3.5", "55", "44", "54", "62", "58"], ["Lithuania", "Jul 12 – Nov 10, 2023", "3.7", "56", "44", "60", "56", "63"], ["Luxembourg", "Jul 10 – Aug 10, 2023", "4.2", "68", "59", "67", "73", "71"], ["Madagascar", "Jun 25 – Aug 13, 2023", "3.8", "36", "28", "28", "42", "45"], ["Malawi", "Oct 2 – Oct 17, 2023", "3.6", "45", "25", "53", "48", "56"], ["Malaysia", "Aug 21 – Nov 10, 2023", "4.0", "64", "50", "59", "74", "71"], ["Mali", "Aug 28 - Sep 17, 2023", "3.7", "48", "31", "38", "52", "73"], ["Malta", "Jul 8 – Aug 25, 2023", "3.5", "56", "45", "60", "59", "61"], ["Mauritania", "Jul 27 – Aug 22, 2023", "3.7", "43", "29", "47", "47", "48"], ["Mauritius", "Jul 7 – Sep 11, 2023", "4.0", "59", "54", "57", "62", "62"], ["Mexico", "Aug 4 – Nov 7, 2023", "3.8", "51", "47", "49", "52", "57"], ["Moldova (the Republic of)", "Jul 6 – Sep 25, 2023", "4.4", "51", "43", "51", "58", "50"], ["Mongolia", "Jul 31 – Sep 22, 2023", "3.5", "49", "50", "54", "44", "47"], ["Montenegro", "Aug 31 – Nov 16, 2023", "3.6", "53", "35", "51", "65", "61"], ["Morocco", "Sep 14 – Oct 18, 2023", "3.5", "44", "24", "41", "52", "61"], ["Mozambique", "Jun 17 – Sep 8, 2023", "4.6", "50", "31", "44", "56", "71"], ["Myanmar", "Sep 5 – Oct 7, 2023", "4.8", "52", "42", "54", "59", "54"], ["Namibia", "Sep 17 – Oct 18, 2023", "3.9", "52", "40", "57", "55", "57"], ["Nepal", "Jun 11 – Jul 19, 2023", "3.6", "50", "44", "40", "58", "58"], ["Netherlands", "Jul 10 – Aug 13, 2023", "3.8", "65", "58", "64", "73", "63"], ["New Zealand", "Jul 20 – Sep 12, 2023", "3.9", "63", "63", "72", "58", "58"], ["Nicaragua", "Sep 23 – Nov 1, 2023", "3.9", "57", "46", "57", "63", "64"], ["Niger", "Aug 15 – Sep 12, 2023", "3.8", "48", "24", "29", "60", "77"], ["Nigeria", "Sep 13 – Oct 12, 2023", "4.7", "44", "31", "46", "51", "48"], ["North Macedonia", "Jul 13 – Sep 30, 2023", "3.8", "46", "37", "52", "45", "48"], ["Norway", "Aug 3 – Sep 18, 2023", "4.4", "71", "65", "73", "73", "75"], ["Pakistan", "Sep 22 – Oct 25, 2023", "4.0", "41", "25", "31", "52", "55"], ["State of Palestine", "Jul 16 – Sep 28, 2023", "3.4", "51", "47", "48", "57", "52"], ["Panama", "Oct 4, 2023 – Jan 11, 2024", "4.2", "50", "46", "53", "55", "45"], ["Paraguay", "Sep 11 – Oct 9, 2023", "3.7", "52", "48", "51", "56", "53"], ["Peru", "Aug 9 – Oct 9, 2023", "3.5", "48", "54", "57", "43", "39"], ["Philippines", "Oct 9 – Dec 7, 2023", "3.8", "67", "60", "66", "70", "71"], ["Poland", "Aug 28 – Oct 29, 2023", "3.5", "52", "41", "56", "54", "58"], ["Portugal", "Jul 26 – Sep 18, 2023", "3.9", "57", "51", "62", "59", "55"], ["Romania", "Sep 10 – Dec 10, 2023", "3.7", "51", "44", "54", "57", "48"], ["Russian Federation", "Jun 27, – Oct 4, 2023", "2.8", "60", "59", "63", "54", "65"], ["Saudi Arabia", "Jul 9 – Aug 3, 2023", "3.5", "~", "64", "64", "79", "~"], ["Senegal", "Sep 30 – Oct 24, 2023", "3.8", "48", "34", "44", "60", "56"], ["Serbia", "Jun 1 – Sep 3, 2023", "3.5", "52", "41", "51", "56", "59"], ["Sierra Leone", "Dec 2 – Dec 25, 2023", "3.5", "43", "30", "44", "44", "55"], ["Singapore", "Nov 21 – Dec 27, 2023", "4.0", "71", "60", "70", "77", "77"], ["Slovakia", "Jun 13 – Aug 3, 2023", "3.5", "54", "48", "61", "55", "54"], ["Slovenia", "Aug 16 – Oct 1, 2023", "4.0", "62", "57", "66", "64", "59"], ["Somalia", "Oct 4 – Dec 27, 2023", "3.5", "49", "22", "35", "70", "67"], ["South Africa", "Oct 19, 2023 – Feb 1, 2024", "3.9", "47", "37", "50", "51", "51"], ["South Korea", "Sep 6 – Nov 1, 2023", "3.7", "58", "52", "61", "64", "55"], ["Spain", "Jul 10 – Aug 7, 2023", "4.0", "59", "54", "62", "63", "59"], ["Sri Lanka", "Sep 23 – Nov 19, 2023", "3.7", "52", "44", "47", "58", "60"], ["Sweden", "Aug 16 – Sep 26, 2023", "3.9", "71", "72", "76", "69", "68"], ["Switzerland", "Jul 10 – Aug 12, 2023", "4.3", "71", "63", "70", "76", "76"], ["Taiwan, Province of China", "Jun 21 – Jul 16, 2023", "4.1", "64", "57", "75", "70", "53"], ["Tajikistan", "Oct 7 – Nov 15, 2023", "3.6", "65", "41", "49", "78", "96"], ["Tanzania", "Dec 7 – Dec 23, 2023", "3.8", "53", "26", "50", "57", "79"], ["Thailand", "Sep 4 –Nov 19, 2023", "3.9", "61", "37", "68", "72", "66"], ["Togo", "Oct 5 – Oct 26, 2023", "4.3", "41", "27", "38", "42", "56"], ["Tunisia", "Jul 28 – Aug 24, 2023", "3.6", "43", "33", "40", "41", "58"], ["Türkiye", "Sep 7 – Dec 7, 2023", "3.5", "51", "34", "55", "54", "61"], ["Uganda", "Dec 27, 2023 – Feb 6, 2024", "3.7", "44", "29", "38", "50", "60"], ["Ukraine", "Aug 11 – Aug 19, 2023", "4.1", "59", "57", "61", "56", "62"], ["United Arab Emirates", "Sep 5 – Sep 27, 2023", "3.5", "69", "58", "61", "81", "74"], ["United Kingdom of Great Britain & Northern Ireland", "Jul 10 – Aug 7, 2023", "4.1", "61", "56", "64", "64", "60"], ["United States of America", "Jul 22 – Sep 23, 2023", "4.0", "63", "68", "74", "62", "47"], ["Uruguay", "Aug 30 – Oct 28, 2023", "3.7", "55", "41", "57", "61", "60"], ["Uzbekistan", "Jul 26 – Nov 5, 2023", "3.7", "68", "55", "65", "72", "81"], ["Venezuela", "Aug 3 – Aug 30, 2023", "3.8", "43", "46", "47", "37", "43"], ["Vietnam", "May 29 – Jul 28, 2023", "3.6", "73", "66", "79", "73", "75"], ["Yemen", "Aug 26 – Oct 10, 2023", "4.3", "31", "25", "30", "45", "24"], ["Zambia", "Dec 28, 2023 – Jan 31, 2024", "4.0", "47", "35", "41", "50", "63"], ["Zimbabwe", "Jul 19 – Aug 10, 2023", "3.8", "45", "28", "36", "48", "66"]], "tight": true}
+```
 
 ::back Additional information
 

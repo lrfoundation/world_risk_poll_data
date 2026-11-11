@@ -142,6 +142,9 @@ def blocks(section, charts, feet, heads, doc, wide_at=470):
             level = ("h1", "h2", "h3").index(kind)
             out.append([f"**{text}**" if box else heads[min(level, len(heads) - 1)] + text, notes])
             running = None
+        elif kind == "raw":
+            out.append([item["block"], []])         # a block that is ready: a table of an appendix
+            running = None
         elif kind == "quote":
             (held if box else out).append(["> " + text, []])
         elif kind == "small":
@@ -252,6 +255,8 @@ def assemble(key):
         got, notes = core_2023.read(doc, first, last, p.get("numbers"), p.get("small_text", ()), p.get("box_gap", 12.3))
         items += [i for i in got if i["text"] not in p.get("drop", ())]
         feet.update(notes)
+    if p.get("appendix"):
+        items = p["appendix"](items, doc)       # the tables of the appendices, which the reader leaves out
     for item in items:
         if item["kind"] == "title" and item["text"] in p.get("inside", ()):
             item["kind"] = "h1"                 # a title set as large as a section's, inside a section
@@ -264,7 +269,7 @@ def assemble(key):
         series=f"{kind} of the 2023 poll, first published {p['published']}",
         source=p["source"], copyright=p["copyright"], running=f"Re-set in 2026 from the report of {p['published']}",
         cover_image=p["cover_image"], numbering="chapter", contents_first=True, margins=[core_2023.TOP, core_2023.BOTTOM], edits=list(p.get("edits", [])))
-    for extra in ("chart_note", "queries", "pending", "running_title", "numbering_note", "plain_opener", "contents_h2"):       # ("edits" is set above)
+    for extra in ("chart_note", "queries", "pending", "appendix_note", "running_title", "numbering_note", "plain_opener", "contents_h2"):       # ("edits" is set above)
         if p.get(extra):
             meta[extra] = p[extra]
 

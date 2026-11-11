@@ -44,7 +44,7 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | `>> text`, `>-- source` | A sentence or quotation the original sets large, and the line that names its source |
 | `^ text` | A note the original sets at the foot of a column, placed under its paragraph |
 | `?1. text`, `?> text` | A question of a questionnaire with its number, and an instruction to the interviewer |
-| ```` ```grid ```` + JSON | A table of words (`columns`, `rows`, an optional `title`): answer codes, a list of regions, a scoring table |
+| ```` ```grid ```` + JSON | A table of words (`columns`, `rows`, an optional `title`; `tight` for a table of many columns): answer codes, a list of regions, a scoring table |
 | ```` ```roll ```` + JSON | A list of names in columns, coloured by status, with a key |
 | `- text`, `-- text`, `1. **Lead.** text` | Bullets, points under a bullet, and numbered findings |
 | ```` ```chart ```` + JSON | A figure: `hbar`, `grouped`, `stacked`, `stacked_pair` (two sets of stacked bars side by side), `vgrouped`, `dumbbell`, `diverging` (differences either side of nought), `parts` (several drawings under one title), `matrix` (a table of shaded values), `lists` (ranked lists side by side), `line` (values over the years of the poll), `map`, `region_map` (part of the world, a few countries shaded), `table`, `heading` (a table that is only a title over the text that follows) or `original` |
@@ -63,6 +63,7 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | `assemble_2021.py` | Those items, plus a plan per report (opener figures, chart specifications), to a content file |
 | `focus_2021.py` | The same two steps for the Focus On reports of the 2021 poll, which share another design |
 | `appendix_2021.py` | Reads the appendices of a core report of the 2021 poll: questions, tables of answer codes, regions, references by chapter, methodology |
+| `appendix_2023.py` | Adds the tables of the appendices of *Resilience in a Changing World*: scoring tables and the index values by country read from the page, four tables kept as pictures |
 | `core_2023.py` | Reads the typed items of a report of the 2023 poll (core or Focus On) from its PDF |
 | `assemble_2023.py` | Those items, plus the report's plan in `plans_2023.py`, to a content file |
 | `plans_2023.py` | A plan per report of the 2023 poll: pages, opener figures, chart specifications, edits and queries |
@@ -216,16 +217,24 @@ inside a picture of the original is also reported, since it is not set as text.
 
 | Report | Pages of the PDF (from 0) | Charts and tables | Pages re-set |
 | --- | --- | --- | --- |
-| `2023_resilience_in_a_changing_world` | 1 to 34, 44 | 33, of which 4 are pictures of the original | 52 |
+| `2023_resilience_in_a_changing_world` | 1 to 34, appendices 35 to 43, 44 | 33, of which 4 are pictures of the original | 63 |
 | `2023_a_world_of_waste` | 1 to 40, 41 | 35, of which 2 are pictures | 51 |
 | `2023_engineering_safer_workplaces` | 1 to 29, 30 | 25, of which 4 are pictures | 38 |
 | `2023_what_the_world_worries_about` | 1 to 34, 35 | 29, of which 4 are pictures | 43 |
 | `2023_focus_ocean_workers` | 1 to 10 | 10, of which 1 is a picture | 18 |
 | `2023_focus_migration` | 1 to 18 | 17, of which 4 are pictures | 30 |
 
-The appendices of the core reports (questionnaire, regions, the method of the
-Resilience Index) are not re-set yet; each report's "Notes on this edition"
-says so.
+Only *Resilience in a Changing World* has appendices: the method of the
+Resilience Index, the scoring of each item and the index values of 142
+countries. Their text is in the report's own design and `core_2023.py` reads
+it (the lists in 7 point need `small_text` for their pages). The plan's
+`appendix=appendix_2023.place` then adds the tables, which that reader leaves
+out as lettering: eighteen scoring tables and the table of index values are
+read from where their words sit and set as tables of words (the second one
+`tight`, in smaller type, because it has eight columns), and four are placed
+as pictures of the original because they set headings on their side, hold
+lists inside cells or set two tables side by side. The report's "Notes on this
+edition" names them.
 
 All six are designed as landscape pages of 842 by 595 points in two columns,
 set in DM Sans. `core_2023.py` types each line by size and face: text in 8

@@ -410,7 +410,10 @@ class Report:
         return f'<figure class="{cls}" id="{anchor}">{inner}</figure>'
 
     def grid(self, spec):
-        """A table of words (a questionnaire's answer codes, a list of regions): columns of short cells are centred."""
+        """A table of words (a questionnaire's answer codes, a list of regions): columns of short cells are centred.
+
+        tight: a table of many columns, set smaller so that it fits the column of text.
+        """
         rows, width = spec["rows"], max(len(row) for row in spec["rows"])
         short = [all(len(row[k]) <= (12 if k else 4) for row in rows if k < len(row)) for k in range(width)]
         cell = lambda tag, k, text: f'<{tag}{" class=" + chr(34) + "c" + chr(34) if short[k] else ""}>{self.inline(text)}</{tag}>'
@@ -419,7 +422,7 @@ class Report:
             head = "<thead><tr>" + "".join(cell("th", k, text) for k, text in enumerate(spec["columns"])) + "</tr></thead>"
         body = "".join("<tr>" + "".join(cell("td", k, text) for k, text in enumerate(row)) + "</tr>" for row in rows)
         title = f'<p class="gridtitle">{self.inline(spec["title"])}</p>' if spec.get("title") else ""
-        cls = "gridwrap" + (" whole" if len(rows) <= 14 else "") + ("" if spec.get("columns") else " plain")
+        cls = "gridwrap" + (" whole" if len(rows) <= 14 else "") + ("" if spec.get("columns") else " plain") + (" tight" if spec.get("tight") else "")
         return f'<div class="{cls}">{title}<table class="grid">{head}<tbody>{body}</tbody></table></div>'
 
     # -- blocks
