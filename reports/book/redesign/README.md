@@ -56,7 +56,7 @@ renumbering rule, the list of wording edits), then blocks separated by blank lin
 | --- | --- |
 | `build.py` | Content file to HTML to PDF |
 | `report.css` | The page format, measured from the 2026 report PDFs |
-| `paginate.js` | Runs in the page: turns the column flow into pages, numbers them, fills in the contents |
+| `paginate.js` | Runs in the page: turns the column flow into pages, numbers them, fills in the contents, and cuts a table where its column ends (each further part gets the head again; the browser would repeat a head only in print, so screen and print would differ) |
 | `extract.py` | Published PDF to draft markup |
 | `assemble_2019.py` | Draft markup of the 2019 chapters, plus a plan per report (chapters, chart specifications, new writing), to a content file |
 | `appendix_2019.py` | Reads the three appendices of the 2019 volume: the questionnaire with its tables of answer codes, the references by chapter, the regions |
@@ -296,7 +296,7 @@ set between two charts in the ocean workers report). None is missing text.
 
     python reports/book/redesign/bind.py --screen
 
-writes `output/redesign/World_Risk_Poll_reports_2019_to_2025.pdf` (782 pages of
+writes `output/redesign/World_Risk_Poll_reports_2019_to_2025.pdf` (854 pages of
 1920 by 1080 points) and, with `--screen`, a copy with its pictures at 110 dpi.
 Build every report first; the five reports of the 2025 poll come from
 `.cache/pdfs/` as published and are placed page for page.
