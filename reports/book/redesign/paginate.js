@@ -45,8 +45,39 @@
     }
   };
 
+  // A table that runs on into the next column gets its head again there. The browser repeats a head only in
+  // print, which would make the printed columns differ from the ones measured here (and from the ones the
+  // InDesign export reads). So the stylesheet stops the browser repeating it, and the table is cut where its
+  // column ends: each further part is a table of its own, with a copy of the head and the same column widths.
+  const splitTables = (flow) => {
+    const queue = [...flow.querySelectorAll("table.grid")].filter((table) => table.tHead);
+    while (queue.length) {
+      const table = queue.shift();
+      const rows = [...table.tBodies[0].rows];
+      const left = rows[0].getBoundingClientRect().left;
+      const cut = rows.findIndex((row) => row.getBoundingClientRect().left > left + 1);
+      if (cut < 1) continue;
+      if (!table.querySelector("colgroup")) {
+        const widths = [...table.tHead.rows[0].cells].map((cell) => cell.getBoundingClientRect().width);
+        const group = document.createElement("colgroup");
+        for (const width of widths) group.appendChild(document.createElement("col")).style.width = `${width}px`;
+        table.prepend(group);
+        table.style.tableLayout = "fixed";
+      }
+      const wrap = table.closest(".gridwrap");
+      const more = wrap.cloneNode(false);
+      const part = table.cloneNode(false);
+      part.append(table.querySelector("colgroup").cloneNode(true), table.tHead.cloneNode(true), document.createElement("tbody"));
+      part.tBodies[0].append(...rows.slice(cut));
+      more.appendChild(part);
+      wrap.after(more);
+      queue.unshift(part);
+    }
+  };
+
   for (const page of [...document.querySelectorAll("section.page.body")]) {
     const flow = page.querySelector(".flow");
+    splitTables(flow);
     placePlates(flow);
     let { columns, fill } = measure(flow);
     // A few lines alone on a new page or at the top of a column: close up the leading a little to bring them back.

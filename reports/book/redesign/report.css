@@ -195,6 +195,7 @@ table.data tr.group th, table.data.words tr.group th { text-align: left; }
 .flow p.gridtitle { margin: 0; padding: 7px 12px; background: var(--fuchsia); color: #fff; font-size: 15px; line-height: 20px; font-weight: 700; break-after: avoid; }
 table.grid { border-collapse: collapse; width: 100%; font-size: 15px; line-height: 20px; }
 table.grid tr { break-inside: avoid; }
+table.grid thead { display: table-row-group; }      /* the browser must not repeat a head in print: paginate.js sets it again */
 table.grid th { background: var(--fuchsia); color: #fff; font-weight: 700; padding: 7px 12px; text-align: left; vertical-align: bottom; }
 .gridtitle + table.grid th { background: #FBE6F0; color: var(--navy); }
 table.grid td { padding: 6px 12px; border-bottom: 1px solid #F3C4DA; text-align: left; vertical-align: top; }
