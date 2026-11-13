@@ -43,6 +43,10 @@ Per folder (`YYYY` = 2019, 2021, 2023, 2025):
 
 Note on trends: country coverage differs by wave, and some questions and published indices are not comparable across waves. See any wave's `_README.txt` for details before combining waves.
 
+### Build script
+
+[`build/`](build/README.md) holds `build_wrp_waves.py`, the script that built the four wave files from the source SPSS files, with notes on what it reads and how to run it. The source files themselves are not published here.
+
 ## Getting started
 
 - [`WRP_2025/RELEASE_NOTES.md`](WRP_2025/RELEASE_NOTES.md) — the final release of the 2025 wave: what is in the data, the five *World Risk Poll 2026* reports with their links and DOIs, and how to cite them.
