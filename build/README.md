@@ -42,7 +42,7 @@ output/WRP_<year>/WRP_<year>_README.txt
 output/WRP_<year>.zip
 ```
 
-`WRP_2025/RELEASE_NOTES.md` is written by hand, not by the script.
+`WRP_2025/RELEASE_NOTES.md` and the `README.md` in each wave folder are written by hand, not by the script. Check them against the new `_README.txt` files after a rebuild.
 
 **Each run deletes the whole `output/` folder before it starts.** Move anything
 you want to keep out of it first.

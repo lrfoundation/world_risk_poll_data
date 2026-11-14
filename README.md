@@ -12,14 +12,14 @@ With over 20 million datapoints, the World Risk Poll dataset can be challenging 
 
 ### Poll data
 
-Each wave has its own folder containing the harmonised single-wave file in three identical formats (SPSS `.sav` with labels, Apache Parquet, and CSV of numeric codes), a data dictionary, a per-wave README, and a `.zip` bundling all of the above. The first 37 variables in every wave are a harmonised block with matching names, codes and labels, so the waves stack directly.
+Each wave has its own folder containing the harmonised single-wave file in three identical formats (SPSS `.sav` with labels, Apache Parquet, and CSV of numeric codes), a data dictionary, a per-wave README, and a `.zip` bundling all of the above. Each folder's page on GitHub also shows a short guide to its wave. The first 37 variables in every wave are a harmonised block with matching names, codes and labels, so the waves stack directly.
 
 | Folder | Wave | Fieldwork | Respondents | Countries and areas |
 | --- | --- | --- | --- | --- |
-| `WRP_2019/` | Wave 1 | 2019 | 154,195 | 142 |
-| `WRP_2021/` | Wave 2 | 2021 | 125,911 | 121 |
-| `WRP_2023/` | Wave 3 | 2023 | 146,910 | 142 |
-| `WRP_2025/` | Wave 4 | 2025 | 143,459 | 140 |
+| [`WRP_2019/`](WRP_2019/) | Wave 1 | 2019 | 154,195 | 142 |
+| [`WRP_2021/`](WRP_2021/) | Wave 2 | 2021 | 125,911 | 121 |
+| [`WRP_2023/`](WRP_2023/) | Wave 3 | 2023 | 146,910 | 142 |
+| [`WRP_2025/`](WRP_2025/) | Wave 4 | 2025 | 143,459 | 140 |
 
 Per folder (`YYYY` = 2019, 2021, 2023, 2025):
 
@@ -31,6 +31,7 @@ Per folder (`YYYY` = 2019, 2021, 2023, 2025):
 | `WRP_YYYY_data_dictionary.csv` | One row per variable: label, codes, coverage, derivation |
 | `WRP_YYYY_README.txt` | Notes on the wave and cross-wave comparability |
 | `WRP_YYYY.zip` | The five files above, bundled |
+| `README.md` | A short guide to the wave: the numbers, what to know before analysing it, and the reports built on it. GitHub shows it on the folder's page. Not in the zip |
 
 ### Methodology reports
 
